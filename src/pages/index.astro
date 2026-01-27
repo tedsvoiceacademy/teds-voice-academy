@@ -2,6 +2,7 @@
 /**
  * Homepage - Ted's Voice Academy
  * Content source: TVA_Homepage_Copy_Forward_Light_v3.md
+ * All copy is EXACT from approved document
  */
 
 import BaseLayout from '@layouts/BaseLayout.astro';
@@ -9,25 +10,26 @@ import BaseLayout from '@layouts/BaseLayout.astro';
 
 <BaseLayout 
   title="Ted's Voice Academy"
-  description="Voice coaching for singers, speakers, and ensembles. With 40 years of experience, Ted helps you discover your authentic voice through personalized coaching in Lacey, WA or virtually anywhere."
+  description="Helping singers and speakers develop a voice that is reliable, expressive, and authentically theirs. Voice coaching in Lacey, WA and virtually worldwide."
 >
-  <!-- Hero Section -->
+  <!-- HERO SECTION -->
   <section class="hero bg-navy">
     <div class="hero__container container">
       <div class="hero__content">
+        <p class="hero__tagline">Master Your Voice</p>
         <h1 class="hero__title">
-          Your Voice Has Something to Say
+          Your voice already has something to say. I help you say it clearly.
         </h1>
         <p class="hero__subtitle">
-          I help singers, speakers, and ensembles discover what makes their voice uniquely powerful.
+          Helping singers and speakers develop a voice that is reliable, expressive, and authentically theirs.
         </p>
         <div class="hero__cta">
-          <a href="/contact" class="btn btn--primary">Start Your Journey</a>
-          <a href="/about" class="btn btn--secondary">Learn More About Ted</a>
+          <a href="/contact" class="btn btn--primary">Get Started</a>
+          <a href="/about" class="btn btn--secondary">Learn more about my approach</a>
         </div>
       </div>
       <div class="hero__image">
-        <!-- Placeholder for Ted's hero photo -->
+        <!-- Ted's hero photo -->
         <div class="hero__image-placeholder">
           <span>Ted's Photo</span>
         </div>
@@ -35,39 +37,52 @@ import BaseLayout from '@layouts/BaseLayout.astro';
     </div>
   </section>
   
-  <!-- Intro Section -->
-  <section class="intro bg-light">
-    <div class="container intro__container">
-      <h2 class="intro__title">Voice Coaching That Meets You Where You Are</h2>
-      <p class="intro__text">
-        Whether you're preparing for a keynote, finding your singing voice, or building ensemble unity, 
-        I bring four decades of experience to help you achieve your goals. My approach is simple: 
-        we work together to discover what your voice can do, then build the skills to do it consistently.
+  <!-- CREDENTIALS BAR -->
+  <section class="credentials">
+    <div class="container">
+      <p class="credentials__text">
+        Four decades of teaching • Award-winning performer • Recognized among Washington's top vocal instructors
       </p>
     </div>
   </section>
   
-  <!-- Services Section -->
-  <section class="services bg-cream">
+  <!-- VALUE PROPOSITION SECTION -->
+  <section class="value-prop bg-light">
+    <div class="container value-prop__container">
+      <h2 class="value-prop__title">Voice coaching that starts with you</h2>
+      <p class="value-prop__text">
+        Voice coaching is personal. I take time to understand where you are, where you want to go, and what's getting in the way. When you understand how your voice works, everything else falls into place. That's what I help you build—skills that last.
+      </p>
+    </div>
+  </section>
+  
+  <!-- THREE PATHS SECTION -->
+  <section class="paths bg-cream">
     <div class="container">
-      <h2 class="services__title text-center">How I Can Help</h2>
-      <div class="services__grid">
-        <!-- Singing Card -->
-        <article class="service-card">
-          <div class="service-card__icon">
+      <h2 class="paths__title text-center">How can I help?</h2>
+      <p class="paths__intro text-center">
+        I work with individuals and groups at every level. Choose the path that fits your goals.
+      </p>
+      
+      <div class="paths__grid">
+        <!-- SINGING -->
+        <article class="path-card">
+          <div class="path-card__icon">
             <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
               <path d="M9 18V5l12-2v13"/>
               <circle cx="6" cy="18" r="3"/>
               <circle cx="18" cy="16" r="3"/>
             </svg>
           </div>
-          <h3 class="service-card__title">Singing</h3>
-          <p class="service-card__text">
-            Build a voice that's free, powerful, and authentically yours. From beginners to professionals, 
-            we'll work on technique that serves your unique artistic expression.
+          <h3 class="path-card__title">Singing</h3>
+          <p class="path-card__description">
+            Vocal and performance coaching for singers, typically ages 14 and up.
           </p>
-          <a href="/singing" class="service-card__link">
-            Explore Singing Coaching
+          <p class="path-card__body">
+            Every singer arrives with different goals. Some want to build technique from the ground up. Others are working through a specific challenge or preparing for something important. I meet you where you are and design lessons around what matters most to you—your style, your experience, your voice.
+          </p>
+          <a href="/singing" class="path-card__link">
+            Explore Singing Lessons
             <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
               <line x1="5" y1="12" x2="19" y2="12"/>
               <polyline points="12 5 19 12 12 19"/>
@@ -75,19 +90,21 @@ import BaseLayout from '@layouts/BaseLayout.astro';
           </a>
         </article>
         
-        <!-- Speaking Card -->
-        <article class="service-card">
-          <div class="service-card__icon">
+        <!-- SPEAKING -->
+        <article class="path-card">
+          <div class="path-card__icon">
             <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
               <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/>
             </svg>
           </div>
-          <h3 class="service-card__title">Speaking</h3>
-          <p class="service-card__text">
-            Communicate with confidence and impact. Whether it's presentations, meetings, or everyday 
-            conversations, develop a speaking voice that commands attention.
+          <h3 class="path-card__title">Speaking</h3>
+          <p class="path-card__description">
+            Voice and performance coaching for clear, confident, authentic communication.
           </p>
-          <a href="/speaking" class="service-card__link">
+          <p class="path-card__body">
+            The way you speak shapes how your ideas land. I work with professionals, educators, and leaders who want to communicate with greater clarity and presence. Together, we address the physical foundations of voice—breath support, resonance, pacing, and projection—so your message comes through with the impact it deserves.
+          </p>
+          <a href="/speaking" class="path-card__link">
             Explore Speaking Coaching
             <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
               <line x1="5" y1="12" x2="19" y2="12"/>
@@ -96,9 +113,9 @@ import BaseLayout from '@layouts/BaseLayout.astro';
           </a>
         </article>
         
-        <!-- Ensembles Card -->
-        <article class="service-card">
-          <div class="service-card__icon">
+        <!-- ENSEMBLES -->
+        <article class="path-card">
+          <div class="path-card__icon">
             <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
               <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/>
               <circle cx="9" cy="7" r="4"/>
@@ -106,12 +123,14 @@ import BaseLayout from '@layouts/BaseLayout.astro';
               <path d="M16 3.13a4 4 0 0 1 0 7.75"/>
             </svg>
           </div>
-          <h3 class="service-card__title">Ensembles</h3>
-          <p class="service-card__text">
-            Create a unified sound that's greater than the sum of its parts. I work with choirs, 
-            vocal groups, and worship teams to build blend, balance, and musical connection.
+          <h3 class="path-card__title">Ensembles</h3>
+          <p class="path-card__description">
+            Vocal and performance coaching for groups seeking unity, efficiency, and expressive sound.
           </p>
-          <a href="/ensembles" class="service-card__link">
+          <p class="path-card__body">
+            Strong ensemble singing starts with strong individual skills. I work with choirs, quartets, and vocal groups to develop tuning, unity, and authentic performance presence. Whether you're preparing for competition or simply want to connect more deeply as an ensemble, I can help your group find its voice.
+          </p>
+          <a href="/ensembles" class="path-card__link">
             Explore Ensemble Coaching
             <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
               <line x1="5" y1="12" x2="19" y2="12"/>
@@ -123,65 +142,137 @@ import BaseLayout from '@layouts/BaseLayout.astro';
     </div>
   </section>
   
-  <!-- Authority Section (AVF & PASS) -->
-  <section class="authority bg-navy">
+  <!-- ECOSYSTEM SHOWCASE SECTION -->
+  <section class="ecosystem bg-navy">
     <div class="container">
-      <h2 class="authority__title text-center">Beyond Coaching</h2>
-      <p class="authority__subtitle text-center">
-        Four decades of teaching have taught me that great voice work goes beyond lessons. 
-        These tools help you understand and develop your voice on a deeper level.
+      <h2 class="ecosystem__title text-center">Voice mastery, many paths</h2>
+      <p class="ecosystem__intro text-center">
+        Personal coaching is the heart of what I do. It's also part of a larger picture — a complete approach to voice mastery that includes frameworks, tools, education, and community.
       </p>
       
-      <div class="authority__grid">
-        <!-- AVF Card -->
-        <article class="authority-card authority-card--avf">
-          <div class="authority-card__content">
-            <h3 class="authority-card__title">The Adaptive Voice Framework</h3>
-            <p class="authority-card__text">
-              My book synthesizes everything I've learned about voice into a practical framework. 
-              It's an owner's manual for your voice—useful for singers, speakers, teachers, and anyone 
-              who relies on their voice.
-            </p>
-            <a href="/avf" class="btn btn--avf">Learn About AVF</a>
-          </div>
-          <div class="authority-card__image">
-            <!-- Book cover placeholder -->
-            <div class="authority-card__image-placeholder">AVF Book</div>
-          </div>
+      <div class="ecosystem__grid">
+        <!-- AVF -->
+        <article class="ecosystem-card ecosystem-card--avf">
+          <h3 class="ecosystem-card__title">The Adaptive Voice Framework</h3>
+          <p class="ecosystem-card__text">
+            The teaching framework behind everything I do — now available as a nearly 700-page book. AVF organizes how voices work into a clear, practical system any singer or speaker can use.
+          </p>
+          <a href="/avf" class="ecosystem-card__link">
+            Learn about AVF
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <line x1="5" y1="12" x2="19" y2="12"/>
+              <polyline points="12 5 19 12 12 19"/>
+            </svg>
+          </a>
         </article>
         
-        <!-- PASS Card -->
-        <article class="authority-card authority-card--pass">
-          <div class="authority-card__content">
-            <h3 class="authority-card__title">PASS Profile</h3>
-            <p class="authority-card__text">
-              Discover your communication style with this assessment tool I developed. 
-              Understand how you naturally communicate and how to adapt when needed.
-            </p>
-            <a href="/pass-profile" class="btn btn--pass">Explore PASS Profile</a>
-          </div>
-          <div class="authority-card__image">
-            <!-- PASS logo placeholder -->
-            <div class="authority-card__image-placeholder">PASS Logo</div>
-          </div>
+        <!-- PASS -->
+        <article class="ecosystem-card ecosystem-card--pass">
+          <h3 class="ecosystem-card__title">PASS Profile</h3>
+          <p class="ecosystem-card__text">
+            A professional communication assessment I created to help people understand how they naturally communicate. Discover your unique patterns, strengths, and style — then use that knowledge with purpose.
+          </p>
+          <a href="/pass-profile" class="ecosystem-card__link">
+            Take the PASS Profile
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <line x1="5" y1="12" x2="19" y2="12"/>
+              <polyline points="12 5 19 12 12 19"/>
+            </svg>
+          </a>
+        </article>
+        
+        <!-- VOCAL HEALTH -->
+        <article class="ecosystem-card">
+          <h3 class="ecosystem-card__title">Vocal Health</h3>
+          <p class="ecosystem-card__text">
+            Your voice is an instrument that deserves good care. I share what I've learned about keeping voices healthy — from daily habits and home remedies to conditioning exercises and knowing when to seek help.
+          </p>
+          <a href="/vocal-health" class="ecosystem-card__link">
+            Explore Vocal Health
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <line x1="5" y1="12" x2="19" y2="12"/>
+              <polyline points="12 5 19 12 12 19"/>
+            </svg>
+          </a>
+        </article>
+        
+        <!-- WORKSHOPS -->
+        <article class="ecosystem-card">
+          <h3 class="ecosystem-card__title">Workshops & Presentations</h3>
+          <p class="ecosystem-card__text">
+            Group learning experiences for singers, speakers, and organizations. From my signature AVF Workshop Series to conference sessions and custom events — I bring voice education to groups of all sizes.
+          </p>
+          <a href="/workshops" class="ecosystem-card__link">
+            View Workshop Options
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <line x1="5" y1="12" x2="19" y2="12"/>
+              <polyline points="12 5 19 12 12 19"/>
+            </svg>
+          </a>
+        </article>
+        
+        <!-- BLOG -->
+        <article class="ecosystem-card">
+          <h3 class="ecosystem-card__title">Blog</h3>
+          <p class="ecosystem-card__text">
+            Ideas, insights, and practical guidance on vocal technique, performance, health, and the mindset behind lasting growth. New posts regularly.
+          </p>
+          <a href="/blog" class="ecosystem-card__link">
+            Read the Blog
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <line x1="5" y1="12" x2="19" y2="12"/>
+              <polyline points="12 5 19 12 12 19"/>
+            </svg>
+          </a>
         </article>
       </div>
     </div>
   </section>
   
-  <!-- Testimonials Section -->
-  <section class="testimonials bg-light">
+  <!-- ABOUT PREVIEW SECTION -->
+  <section class="about-preview bg-light">
+    <div class="container about-preview__container">
+      <div class="about-preview__content">
+        <h2 class="about-preview__title">A bit about me</h2>
+        <p class="about-preview__text">
+          I'm Ted Chamberlain. I've spent my career studying voices—how they work, why they struggle, and what helps them grow. I've taught in classrooms, rehearsal halls, and private studios. I've coached beginners and professionals, soloists and ensembles.
+        </p>
+        <p class="about-preview__text">
+          What I've learned is this: every voice is different, and every voice can improve. The path forward depends on understanding what's actually happening when you sing or speak—and then making small, specific changes that add up over time.
+        </p>
+        <p class="about-preview__text">
+          That's the kind of work I love. If you're ready to understand your voice better, I'd be glad to help.
+        </p>
+        <a href="/about" class="about-preview__link">
+          Read my full story
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <line x1="5" y1="12" x2="19" y2="12"/>
+            <polyline points="12 5 19 12 12 19"/>
+          </svg>
+        </a>
+      </div>
+      <div class="about-preview__image">
+        <!-- Ted's about photo placeholder -->
+        <div class="about-preview__image-placeholder">
+          <span>Ted's Photo</span>
+        </div>
+      </div>
+    </div>
+  </section>
+  
+  <!-- TESTIMONIALS SECTION -->
+  <section class="testimonials bg-cream">
     <div class="container">
-      <h2 class="testimonials__title text-center">What Students Say</h2>
+      <h2 class="testimonials__title text-center">What students say</h2>
       <div class="testimonials__grid">
-        <!-- Placeholder testimonials -->
+        <!-- Placeholder testimonials - real quotes to be added -->
         <blockquote class="testimonial">
           <p class="testimonial__text">
             "Testimonial placeholder — real student quotes will be added here."
           </p>
           <footer class="testimonial__footer">
             <cite class="testimonial__author">— Student Name</cite>
-            <span class="testimonial__role">Singing Student</span>
+            <span class="testimonial__role">Voice student, 2 years</span>
           </footer>
         </blockquote>
         
@@ -191,19 +282,19 @@ import BaseLayout from '@layouts/BaseLayout.astro';
           </p>
           <footer class="testimonial__footer">
             <cite class="testimonial__author">— Student Name</cite>
-            <span class="testimonial__role">Speaking Client</span>
+            <span class="testimonial__role">Choir director</span>
           </footer>
         </blockquote>
       </div>
     </div>
   </section>
   
-  <!-- CTA Section -->
-  <section class="cta bg-navy">
-    <div class="container cta__container">
-      <h2 class="cta__title">Ready to Discover What Your Voice Can Do?</h2>
-      <p class="cta__text">
-        Let's start with a conversation. Tell me about your goals, and we'll explore how we might work together.
+  <!-- FINAL CTA SECTION -->
+  <section class="final-cta bg-navy">
+    <div class="container final-cta__container">
+      <h2 class="final-cta__title">Ready to get started?</h2>
+      <p class="final-cta__text">
+        The first step is telling me a bit about yourself. Fill out the form below and I'll be in touch to schedule a conversation.
       </p>
       <a href="/contact" class="btn btn--primary btn--large">Get Started</a>
     </div>
@@ -217,7 +308,7 @@ import BaseLayout from '@layouts/BaseLayout.astro';
   
   .hero {
     padding-block: var(--space-16) var(--space-20);
-    min-height: 70vh;
+    min-height: 80vh;
     display: flex;
     align-items: center;
   }
@@ -235,10 +326,21 @@ import BaseLayout from '@layouts/BaseLayout.astro';
     }
   }
   
+  .hero__tagline {
+    font-family: var(--font-body);
+    font-size: var(--text-sm);
+    font-weight: var(--font-semibold);
+    color: var(--color-gold-bright);
+    text-transform: uppercase;
+    letter-spacing: var(--tracking-wider);
+    margin-bottom: var(--space-4);
+  }
+  
   .hero__title {
     font-size: var(--heading-hero);
     color: var(--color-white);
-    margin-bottom: var(--space-4);
+    margin-bottom: var(--space-6);
+    line-height: var(--leading-tight);
   }
   
   .hero__subtitle {
@@ -247,6 +349,7 @@ import BaseLayout from '@layouts/BaseLayout.astro';
     opacity: 0.9;
     margin-bottom: var(--space-8);
     max-width: 540px;
+    line-height: var(--leading-relaxed);
   }
   
   .hero__cta {
@@ -267,6 +370,25 @@ import BaseLayout from '@layouts/BaseLayout.astro';
     color: var(--color-cream);
     font-size: var(--text-sm);
     opacity: 0.6;
+  }
+  
+  /* ==========================================================================
+     CREDENTIALS BAR
+     ========================================================================== */
+  
+  .credentials {
+    background-color: var(--color-navy-medium);
+    padding-block: var(--space-4);
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  }
+  
+  .credentials__text {
+    text-align: center;
+    color: var(--color-cream);
+    font-size: var(--text-sm);
+    opacity: 0.8;
+    margin: 0;
   }
   
   /* ==========================================================================
@@ -311,75 +433,65 @@ import BaseLayout from '@layouts/BaseLayout.astro';
     border-color: var(--color-gold-bright);
   }
   
-  .btn--avf {
-    background-color: var(--color-avf-amber);
-    color: var(--color-navy-deep);
-  }
-  
-  .btn--avf:hover {
-    background-color: var(--color-avf-amber-hover);
-  }
-  
-  .btn--pass {
-    background-color: var(--color-pass-green);
-    color: var(--color-navy-deep);
-  }
-  
-  .btn--pass:hover {
-    background-color: var(--color-pass-green-hover);
-  }
-  
   .btn--large {
     padding: var(--space-4) var(--space-8);
     font-size: var(--text-lg);
   }
   
   /* ==========================================================================
-     INTRO SECTION
+     VALUE PROPOSITION SECTION
      ========================================================================== */
   
-  .intro {
+  .value-prop {
     padding-block: var(--section-padding-y);
   }
   
-  .intro__container {
+  .value-prop__container {
     max-width: var(--container-narrow);
     text-align: center;
   }
   
-  .intro__title {
+  .value-prop__title {
     margin-bottom: var(--space-6);
   }
   
-  .intro__text {
+  .value-prop__text {
     font-size: var(--text-lg);
     color: var(--color-charcoal-light);
+    line-height: var(--leading-relaxed);
   }
   
   /* ==========================================================================
-     SERVICES SECTION
+     THREE PATHS SECTION
      ========================================================================== */
   
-  .services {
+  .paths {
     padding-block: var(--section-padding-y);
   }
   
-  .services__title {
+  .paths__title {
+    margin-bottom: var(--space-4);
+  }
+  
+  .paths__intro {
+    color: var(--color-charcoal-light);
+    max-width: 600px;
+    margin-inline: auto;
     margin-bottom: var(--space-12);
   }
   
-  .services__grid {
+  .paths__grid {
     display: grid;
     gap: var(--space-8);
   }
   
   @media (min-width: 768px) {
-    .services__grid {
+    .paths__grid {
       grid-template-columns: repeat(3, 1fr);
     }
   }
   
-  .service-card {
+  .path-card {
     background: var(--color-white);
     padding: var(--space-8);
     border-radius: var(--radius-lg);
@@ -387,26 +499,34 @@ import BaseLayout from '@layouts/BaseLayout.astro';
     transition: transform var(--transition-base), box-shadow var(--transition-base);
   }
   
-  .service-card:hover {
+  .path-card:hover {
     transform: translateY(-4px);
     box-shadow: var(--shadow-card-hover);
   }
   
-  .service-card__icon {
+  .path-card__icon {
     color: var(--color-gold-bright);
     margin-bottom: var(--space-4);
   }
   
-  .service-card__title {
-    margin-bottom: var(--space-3);
+  .path-card__title {
+    margin-bottom: var(--space-2);
   }
   
-  .service-card__text {
-    color: var(--color-charcoal-light);
+  .path-card__description {
+    font-size: var(--text-sm);
+    color: var(--color-gray-medium);
+    font-style: italic;
     margin-bottom: var(--space-4);
   }
   
-  .service-card__link {
+  .path-card__body {
+    color: var(--color-charcoal-light);
+    margin-bottom: var(--space-6);
+    line-height: var(--leading-relaxed);
+  }
+  
+  .path-card__link {
     display: inline-flex;
     align-items: center;
     gap: var(--space-2);
@@ -416,88 +536,179 @@ import BaseLayout from '@layouts/BaseLayout.astro';
     transition: color var(--transition-fast), gap var(--transition-fast);
   }
   
-  .service-card__link:hover {
+  .path-card__link:hover {
     color: var(--color-gold-bright);
     gap: var(--space-3);
   }
   
   /* ==========================================================================
-     AUTHORITY SECTION
+     ECOSYSTEM SECTION
      ========================================================================== */
   
-  .authority {
+  .ecosystem {
     padding-block: var(--section-padding-y);
   }
   
-  .authority__title {
+  .ecosystem__title {
     color: var(--color-white);
     margin-bottom: var(--space-4);
   }
   
-  .authority__subtitle {
+  .ecosystem__intro {
     color: var(--color-cream);
-    max-width: 600px;
+    max-width: 700px;
     margin-inline: auto;
     margin-bottom: var(--space-12);
     opacity: 0.9;
   }
   
-  .authority__grid {
+  .ecosystem__grid {
     display: grid;
-    gap: var(--space-8);
+    gap: var(--space-6);
   }
   
-  @media (min-width: 768px) {
-    .authority__grid {
+  @media (min-width: 640px) {
+    .ecosystem__grid {
       grid-template-columns: repeat(2, 1fr);
     }
   }
   
-  .authority-card {
-    display: grid;
-    gap: var(--space-6);
-    padding: var(--space-8);
-    border-radius: var(--radius-lg);
-  }
-  
-  @media (min-width: 640px) {
-    .authority-card {
-      grid-template-columns: 1fr auto;
-      align-items: center;
+  @media (min-width: 1024px) {
+    .ecosystem__grid {
+      grid-template-columns: repeat(3, 1fr);
+    }
+    
+    /* Last two cards span to center them */
+    .ecosystem__grid .ecosystem-card:nth-child(4) {
+      grid-column: 1 / 2;
+      justify-self: end;
+      max-width: 380px;
+    }
+    
+    .ecosystem__grid .ecosystem-card:nth-child(5) {
+      grid-column: 2 / 4;
+      justify-self: start;
+      max-width: 380px;
     }
   }
   
-  .authority-card--avf {
-    background-color: var(--color-avf-teal);
+  .ecosystem-card {
+    background: rgba(255, 255, 255, 0.08);
+    padding: var(--space-6);
+    border-radius: var(--radius-lg);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    transition: background-color var(--transition-fast), border-color var(--transition-fast);
   }
   
-  .authority-card--avf .authority-card__title {
+  .ecosystem-card:hover {
+    background: rgba(255, 255, 255, 0.12);
+    border-color: rgba(255, 255, 255, 0.2);
+  }
+  
+  .ecosystem-card__title {
+    color: var(--color-gold-bright);
+    font-size: var(--heading-card);
+    margin-bottom: var(--space-3);
+  }
+  
+  .ecosystem-card--avf .ecosystem-card__title {
     color: var(--color-avf-amber);
   }
   
-  .authority-card--pass {
-    background-color: var(--color-pass-teal);
-  }
-  
-  .authority-card--pass .authority-card__title {
+  .ecosystem-card--pass .ecosystem-card__title {
     color: var(--color-pass-green);
   }
   
-  .authority-card__text {
+  .ecosystem-card__text {
     color: var(--color-cream);
     opacity: 0.9;
     margin-bottom: var(--space-4);
+    line-height: var(--leading-relaxed);
   }
   
-  .authority-card__image-placeholder {
-    width: 120px;
-    height: 160px;
-    background: rgba(255, 255, 255, 0.1);
-    border-radius: var(--radius-md);
+  .ecosystem-card__link {
+    display: inline-flex;
+    align-items: center;
+    gap: var(--space-2);
+    color: var(--color-gold-bright);
+    font-weight: var(--font-semibold);
+    text-decoration: none;
+    font-size: var(--text-sm);
+    transition: gap var(--transition-fast);
+  }
+  
+  .ecosystem-card--avf .ecosystem-card__link {
+    color: var(--color-avf-amber);
+  }
+  
+  .ecosystem-card--pass .ecosystem-card__link {
+    color: var(--color-pass-green);
+  }
+  
+  .ecosystem-card__link:hover {
+    gap: var(--space-3);
+  }
+  
+  /* ==========================================================================
+     ABOUT PREVIEW SECTION
+     ========================================================================== */
+  
+  .about-preview {
+    padding-block: var(--section-padding-y);
+  }
+  
+  .about-preview__container {
+    display: grid;
+    gap: var(--space-10);
+    align-items: center;
+  }
+  
+  @media (min-width: 1024px) {
+    .about-preview__container {
+      grid-template-columns: 1.2fr 0.8fr;
+      gap: var(--space-16);
+    }
+  }
+  
+  .about-preview__title {
+    margin-bottom: var(--space-6);
+  }
+  
+  .about-preview__text {
+    color: var(--color-charcoal-light);
+    line-height: var(--leading-relaxed);
+    margin-bottom: var(--space-4);
+  }
+  
+  .about-preview__text:last-of-type {
+    margin-bottom: var(--space-6);
+  }
+  
+  .about-preview__link {
+    display: inline-flex;
+    align-items: center;
+    gap: var(--space-2);
+    color: var(--color-gold-muted);
+    font-weight: var(--font-semibold);
+    text-decoration: none;
+    transition: color var(--transition-fast), gap var(--transition-fast);
+  }
+  
+  .about-preview__link:hover {
+    color: var(--color-gold-bright);
+    gap: var(--space-3);
+  }
+  
+  .about-preview__image-placeholder {
+    aspect-ratio: 4 / 5;
+    max-width: 350px;
+    margin-inline: auto;
+    background: linear-gradient(135deg, var(--color-gray-light), #e0e0e0);
+    border-radius: var(--radius-lg);
     display: flex;
     align-items: center;
     justify-content: center;
-    color: var(--color-cream);
+    color: var(--color-charcoal-light);
     font-size: var(--text-sm);
     opacity: 0.6;
   }
@@ -538,6 +749,7 @@ import BaseLayout from '@layouts/BaseLayout.astro';
     font-style: italic;
     color: var(--color-charcoal-light);
     margin-bottom: var(--space-4);
+    line-height: var(--leading-relaxed);
   }
   
   .testimonial__footer {
@@ -558,24 +770,24 @@ import BaseLayout from '@layouts/BaseLayout.astro';
   }
   
   /* ==========================================================================
-     CTA SECTION
+     FINAL CTA SECTION
      ========================================================================== */
   
-  .cta {
+  .final-cta {
     padding-block: var(--section-padding-y);
     text-align: center;
   }
   
-  .cta__container {
+  .final-cta__container {
     max-width: var(--container-narrow);
   }
   
-  .cta__title {
+  .final-cta__title {
     color: var(--color-white);
     margin-bottom: var(--space-4);
   }
   
-  .cta__text {
+  .final-cta__text {
     color: var(--color-cream);
     font-size: var(--text-lg);
     margin-bottom: var(--space-8);
