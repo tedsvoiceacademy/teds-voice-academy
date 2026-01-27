@@ -190,8 +190,14 @@ function hasActiveDropdown(items: Array<{href: string}>): boolean {
   }
   
   .header__logo img {
-    height: 50px;
+    height: 70px;
     width: auto;
+  }
+  
+  @media (min-width: 1024px) {
+    .header__logo img {
+      height: 90px;
+    }
   }
   
   /* Desktop Navigation */
