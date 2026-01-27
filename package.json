@@ -1,0 +1,16 @@
+{
+  "name": "teds-voice-academy",
+  "type": "module",
+  "version": "1.0.0",
+  "description": "Ted's Voice Academy - Voice coaching for singers, speakers, and ensembles",
+  "scripts": {
+    "dev": "astro dev",
+    "start": "astro dev",
+    "build": "astro build",
+    "preview": "astro preview",
+    "astro": "astro"
+  },
+  "dependencies": {
+    "astro": "^4.0.0"
+  }
+}

@@ -1,0 +1,403 @@
+---
+/**
+ * Footer.astro
+ * Site footer with contact info, navigation links, and newsletter signup
+ * Consistent across ALL pages (including AVF and PASS sections)
+ */
+
+const currentYear = new Date().getFullYear();
+
+// Footer navigation columns
+const footerLinks = {
+  coaching: {
+    title: 'Coaching',
+    links: [
+      { label: 'Singing', href: '/singing' },
+      { label: 'Speaking', href: '/speaking' },
+      { label: 'Ensembles', href: '/ensembles' },
+      { label: 'Pricing', href: '/pricing' },
+    ]
+  },
+  resources: {
+    title: 'Resources',
+    links: [
+      { label: 'AVF Book', href: '/avf' },
+      { label: 'PASS Profile', href: '/pass-profile' },
+      { label: 'Vocal Health', href: '/vocal-health' },
+      { label: 'Blog', href: '/blog' },
+    ]
+  },
+  connect: {
+    title: 'Connect',
+    links: [
+      { label: 'About Ted', href: '/about' },
+      { label: 'Workshops', href: '/workshops' },
+      { label: 'Contact', href: '/contact' },
+    ]
+  }
+};
+---
+
+<footer class="footer">
+  <!-- Main Footer Content -->
+  <div class="footer__main">
+    <div class="container footer__grid">
+      <!-- Brand Column -->
+      <div class="footer__brand">
+        <a href="/" class="footer__logo" aria-label="Ted's Voice Academy - Home">
+          <img 
+            src="/images/tva-logo.png" 
+            alt="Ted's Voice Academy" 
+            width="180" 
+            height="54"
+            loading="lazy"
+          />
+        </a>
+        <p class="footer__tagline">
+          Helping singers, speakers, and ensembles find their authentic voice.
+        </p>
+        
+        <!-- Contact Info -->
+        <div class="footer__contact">
+          <a href="mailto:ted@tedsvoiceacademy.com" class="footer__contact-link">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+              <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/>
+              <polyline points="22,6 12,13 2,6"/>
+            </svg>
+            ted@tedsvoiceacademy.com
+          </a>
+          <a href="tel:+12534142267" class="footer__contact-link">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+              <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/>
+            </svg>
+            (253) 414-2267
+          </a>
+          <address class="footer__address">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+              <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/>
+              <circle cx="12" cy="10" r="3"/>
+            </svg>
+            <span>
+              4204 Lorna Ct SE<br/>
+              Lacey, WA 98503
+            </span>
+          </address>
+        </div>
+      </div>
+      
+      <!-- Navigation Columns -->
+      <nav class="footer__nav" aria-label="Footer navigation">
+        {Object.values(footerLinks).map((column) => (
+          <div class="footer__nav-column">
+            <h3 class="footer__nav-title">{column.title}</h3>
+            <ul class="footer__nav-list">
+              {column.links.map((link) => (
+                <li>
+                  <a href={link.href} class="footer__nav-link">{link.label}</a>
+                </li>
+              ))}
+            </ul>
+          </div>
+        ))}
+      </nav>
+      
+      <!-- Newsletter Signup -->
+      <div class="footer__newsletter">
+        <h3 class="footer__newsletter-title">Stay Connected</h3>
+        <p class="footer__newsletter-text">
+          Get voice tips and updates delivered to your inbox.
+        </p>
+        <form 
+          class="footer__form" 
+          name="newsletter-footer" 
+          method="POST" 
+          data-netlify="true"
+          netlify-honeypot="bot-field"
+        >
+          <!-- Honeypot field for spam protection -->
+          <p class="hidden" aria-hidden="true">
+            <label>Don't fill this out: <input name="bot-field" /></label>
+          </p>
+          <input type="hidden" name="form-name" value="newsletter-footer" />
+          <input type="hidden" name="source_form" value="newsletter-footer" />
+          <input type="hidden" name="lead_type" value="subscriber" />
+          
+          <div class="footer__form-group">
+            <label for="footer-email" class="sr-only">Email address</label>
+            <input 
+              type="email" 
+              id="footer-email" 
+              name="email" 
+              placeholder="Your email" 
+              required
+              class="footer__input"
+            />
+            <button type="submit" class="footer__submit">
+              Subscribe
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+                <line x1="5" y1="12" x2="19" y2="12"/>
+                <polyline points="12 5 19 12 12 19"/>
+              </svg>
+            </button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+  
+  <!-- Footer Bottom -->
+  <div class="footer__bottom">
+    <div class="container footer__bottom-content">
+      <p class="footer__copyright">
+        &copy; {currentYear} Ted's Voice Academy. All rights reserved.
+      </p>
+      <div class="footer__legal">
+        <a href="/privacy" class="footer__legal-link">Privacy Policy</a>
+        <a href="/terms" class="footer__legal-link">Terms of Service</a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<style>
+  .footer {
+    background-color: var(--color-navy-deep);
+    color: var(--color-cream);
+    margin-top: auto;
+  }
+  
+  .footer__main {
+    padding-block: var(--space-16);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  }
+  
+  .footer__grid {
+    display: grid;
+    gap: var(--space-10);
+  }
+  
+  @media (min-width: 768px) {
+    .footer__grid {
+      grid-template-columns: 1.5fr 2fr 1.2fr;
+      gap: var(--space-12);
+    }
+  }
+  
+  /* Brand Column */
+  .footer__brand {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-4);
+  }
+  
+  .footer__logo img {
+    height: 45px;
+    width: auto;
+  }
+  
+  .footer__tagline {
+    font-size: var(--text-sm);
+    color: rgba(245, 240, 225, 0.8);
+    margin-bottom: 0;
+    max-width: 280px;
+  }
+  
+  .footer__contact {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-2);
+    margin-top: var(--space-2);
+  }
+  
+  .footer__contact-link,
+  .footer__address {
+    display: flex;
+    align-items: flex-start;
+    gap: var(--space-2);
+    font-size: var(--text-sm);
+    color: rgba(245, 240, 225, 0.8);
+    text-decoration: none;
+    font-style: normal;
+    transition: color var(--transition-fast);
+  }
+  
+  .footer__contact-link:hover {
+    color: var(--color-gold-bright);
+  }
+  
+  .footer__contact-link svg,
+  .footer__address svg {
+    flex-shrink: 0;
+    margin-top: 2px;
+  }
+  
+  /* Navigation */
+  .footer__nav {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: var(--space-6);
+  }
+  
+  @media (max-width: 767px) {
+    .footer__nav {
+      grid-template-columns: repeat(2, 1fr);
+    }
+    
+    .footer__nav-column:nth-child(3) {
+      grid-column: span 2;
+    }
+  }
+  
+  .footer__nav-title {
+    font-family: var(--font-body);
+    font-size: var(--text-sm);
+    font-weight: var(--font-semibold);
+    color: var(--color-gold-bright);
+    text-transform: uppercase;
+    letter-spacing: var(--tracking-wider);
+    margin-bottom: var(--space-4);
+  }
+  
+  .footer__nav-list {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-2);
+  }
+  
+  .footer__nav-link {
+    font-size: var(--text-sm);
+    color: rgba(245, 240, 225, 0.8);
+    text-decoration: none;
+    transition: color var(--transition-fast);
+  }
+  
+  .footer__nav-link:hover {
+    color: var(--color-gold-bright);
+  }
+  
+  /* Newsletter */
+  .footer__newsletter {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-3);
+  }
+  
+  .footer__newsletter-title {
+    font-family: var(--font-body);
+    font-size: var(--text-sm);
+    font-weight: var(--font-semibold);
+    color: var(--color-gold-bright);
+    text-transform: uppercase;
+    letter-spacing: var(--tracking-wider);
+  }
+  
+  .footer__newsletter-text {
+    font-size: var(--text-sm);
+    color: rgba(245, 240, 225, 0.8);
+    margin-bottom: 0;
+  }
+  
+  .footer__form {
+    margin-top: var(--space-2);
+  }
+  
+  .footer__form-group {
+    display: flex;
+    gap: var(--space-2);
+  }
+  
+  .footer__input {
+    flex: 1;
+    padding: var(--space-3) var(--space-4);
+    background-color: rgba(255, 255, 255, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: var(--radius-md);
+    color: var(--color-white);
+    font-size: var(--text-sm);
+    transition: border-color var(--transition-fast), background-color var(--transition-fast);
+  }
+  
+  .footer__input::placeholder {
+    color: rgba(255, 255, 255, 0.5);
+  }
+  
+  .footer__input:focus {
+    outline: none;
+    border-color: var(--color-gold-bright);
+    background-color: rgba(255, 255, 255, 0.15);
+  }
+  
+  .footer__submit {
+    display: flex;
+    align-items: center;
+    gap: var(--space-2);
+    padding: var(--space-3) var(--space-4);
+    background-color: var(--color-gold-bright);
+    color: var(--color-navy-deep);
+    font-size: var(--text-sm);
+    font-weight: var(--font-semibold);
+    border: none;
+    border-radius: var(--radius-md);
+    cursor: pointer;
+    transition: background-color var(--transition-fast), transform var(--transition-fast);
+    white-space: nowrap;
+  }
+  
+  .footer__submit:hover {
+    background-color: var(--color-gold-hover);
+    transform: translateY(-1px);
+  }
+  
+  .footer__submit:active {
+    transform: translateY(0);
+  }
+  
+  /* Footer Bottom */
+  .footer__bottom {
+    padding-block: var(--space-6);
+  }
+  
+  .footer__bottom-content {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-3);
+    align-items: center;
+    text-align: center;
+  }
+  
+  @media (min-width: 640px) {
+    .footer__bottom-content {
+      flex-direction: row;
+      justify-content: space-between;
+      text-align: left;
+    }
+  }
+  
+  .footer__copyright {
+    font-size: var(--text-xs);
+    color: rgba(245, 240, 225, 0.6);
+    margin-bottom: 0;
+  }
+  
+  .footer__legal {
+    display: flex;
+    gap: var(--space-6);
+  }
+  
+  .footer__legal-link {
+    font-size: var(--text-xs);
+    color: rgba(245, 240, 225, 0.6);
+    text-decoration: none;
+    transition: color var(--transition-fast);
+  }
+  
+  .footer__legal-link:hover {
+    color: var(--color-gold-bright);
+  }
+  
+  /* Utility */
+  .hidden {
+    display: none !important;
+  }
+</style>
