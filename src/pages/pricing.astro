@@ -9,7 +9,7 @@ const pageDescription = "Flexible voice coaching options for singers, speakers, 
   <!-- Hero Section -->
   <section class="hero">
     <div class="container">
-      <p class="eyebrow">Pricing & Packages</p>
+      <span class="hero-eyebrow">Pricing & Packages</span>
       <h1>Flexible options for every voice</h1>
       <p class="hero-subhead">Whether you're building a long-term practice, preparing for a specific goal, or exploring what coaching can offer, there's a path that fits.</p>
     </div>
@@ -266,25 +266,29 @@ const pageDescription = "Flexible voice coaching options for singers, speakers, 
     margin: 0 auto;
   }
 
-  .eyebrow {
-    font-size: 0.875rem;
+  .hero-eyebrow {
+    display: block;
+    font-size: 1rem;
     font-weight: 600;
-    letter-spacing: 0.15em;
     text-transform: uppercase;
+    letter-spacing: 0.15em;
     color: var(--color-gold-bright);
-    margin-bottom: 1rem;
+    margin-bottom: 0.75rem;
   }
 
   .hero h1 {
-    font-size: clamp(2rem, 5vw, 3rem);
+    font-family: var(--font-heading);
+    font-size: clamp(2rem, 4vw + 1rem, 3rem);
     font-weight: 700;
-    margin-bottom: 1.5rem;
+    color: var(--color-white);
+    margin: 0 0 1.5rem 0;
     line-height: 1.2;
   }
 
   .hero-subhead {
-    font-size: 1.25rem;
+    font-size: 1.125rem;
     line-height: 1.6;
+    color: var(--color-off-white);
     opacity: 0.95;
     max-width: 650px;
     margin: 0 auto;
