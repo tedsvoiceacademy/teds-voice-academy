@@ -1,0 +1,805 @@
+---
+import Layout from '../layouts/BaseLayout.astro';
+
+const pageTitle = "Pricing & Packages | Ted's Voice Academy";
+const pageDescription = "Flexible voice coaching options for singers, speakers, and ensembles. Monthly plans, lesson packages, flagship series, and single sessions available.";
+---
+
+<Layout title={pageTitle} description={pageDescription}>
+  <!-- Hero Section -->
+  <section class="hero">
+    <div class="container">
+      <p class="eyebrow">Pricing & Packages</p>
+      <h1>Flexible options for every voice</h1>
+      <p class="hero-subhead">Whether you're building a long-term practice, preparing for a specific goal, or exploring what coaching can offer, there's a path that fits.</p>
+    </div>
+  </section>
+
+  <!-- Intro Section -->
+  <section class="intro-section">
+    <div class="container">
+      <p class="intro-text">Every voice is different, and so is every coaching journey. Some clients thrive with weekly lessons and consistent momentum. Others prefer focused, short-term work around a specific goal. I've designed my offerings to meet you where you are and support the kind of progress you're seeking.</p>
+      <p class="session-note">All sessions are 60 minutes and fully customized to your voice and goals.</p>
+    </div>
+  </section>
+
+  <!-- Singing Coaching Section -->
+  <section class="pricing-section singing-section">
+    <div class="container">
+      <h2 class="section-title">Singing Coaching</h2>
+      <p class="section-intro">Vocal and performance coaching for singers, typically ages 14 and up. Whether you're preparing for an audition, working through a technical challenge, or building a sustainable singing practice, these options give you the structure and flexibility to move forward.</p>
+      
+      <div class="pricing-grid">
+        <!-- Monthly Plan - Recommended -->
+        <div class="pricing-card recommended">
+          <span class="badge">Recommended</span>
+          <h3>Monthly Plan</h3>
+          <div class="price">$320<span>/month</span></div>
+          <p class="description">For singers committed to steady progress, the monthly plan offers the best value and consistency. You receive one 60-minute lesson per week, scheduled on a recurring day and time. This secures your lesson slot and gives you priority rescheduling when life happens.</p>
+          <p class="description">The monthly rate accounts for holiday closures and a few floating weeks throughout the year. When possible, make-up sessions are offered for missed lessons due to illness or travel.</p>
+          <p class="effective-rate">Effective rate: $80 per lesson</p>
+          <p class="best-for"><strong>Best for:</strong> Singers building long-term skills, working toward auditions, or wanting consistent guidance</p>
+        </div>
+
+        <!-- Lesson Packages -->
+        <div class="pricing-card packages">
+          <h3>Lesson Packages</h3>
+          <p class="description">Packages offer flexibility for clients who want to prepay for a set of lessons without committing to a weekly schedule. Sessions can be scheduled as frequently as twice a week or as occasionally as every few weeks. Packages are also available as gifts.</p>
+          <table class="package-table">
+            <thead>
+              <tr>
+                <th>Package</th>
+                <th>Price</th>
+                <th>Per Lesson</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>5 Lessons</td>
+                <td>$425</td>
+                <td>$85</td>
+              </tr>
+              <tr>
+                <td>10 Lessons</td>
+                <td>$800</td>
+                <td>$80</td>
+              </tr>
+              <tr class="best-value">
+                <td>20 Lessons</td>
+                <td>$1,500</td>
+                <td>$75 — Best Value</td>
+              </tr>
+            </tbody>
+          </table>
+          <p class="best-for"><strong>Best for:</strong> Flexible schedules, gift purchases, short-term goals, or seasonal availability</p>
+        </div>
+
+        <!-- Single Sessions -->
+        <div class="pricing-card single">
+          <h3>Single Sessions</h3>
+          <div class="price">$100<span>/session</span></div>
+          <p class="description">Single sessions work well for occasional check-ins, audition prep, or trying out a first lesson before committing to a package or plan.</p>
+          <p class="best-for"><strong>Best for:</strong> New students exploring coaching, one-time performance preparation, occasional tune-ups</p>
+        </div>
+      </div>
+
+      <!-- Flagship Singing Series -->
+      <div class="flagship-series">
+        <div class="flagship-card">
+          <span class="flagship-label">Flagship Series</span>
+          <h3>The Sound of Confidence</h3>
+          <div class="price">$400<span> total (4 sessions)</span></div>
+          <p class="description">A focused 4-session series for singers ready to build real confidence in their voice. This track is designed for singers who have some experience but still hold back—whether from pitch uncertainty, vocal tension, or self-doubt.</p>
+          <p class="description">Over four sessions, we work on breath support, tone development, pitch stability, and emotional connection to the music. You'll leave with a voice that feels more consistent, expressive, and trustworthy—and the understanding to keep growing on your own.</p>
+          <div class="included">
+            <h4>What's included:</h4>
+            <ul>
+              <li>4 private one-hour coaching sessions</li>
+              <li>Personalized instruction for breath, tone, pitch, and presence</li>
+              <li>Work on a song of your choice with expert guidance</li>
+              <li>Tools and exercises for continued progress</li>
+            </ul>
+          </div>
+          <p class="best-for"><strong>Best for:</strong> Singers who want rapid, focused progress and a deeper understanding of their voice</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Speaking Coaching Section -->
+  <section class="pricing-section speaking-section">
+    <div class="container">
+      <h2 class="section-title">Speaking Coaching</h2>
+      <p class="section-intro">Voice and performance coaching for clear, confident, authentic communication. Speaking coaching often centers on a specific objective—an upcoming presentation, building vocal resilience, or developing executive presence.</p>
+      
+      <!-- Flagship Speaking Series -->
+      <div class="flagship-series">
+        <div class="flagship-card featured">
+          <span class="flagship-label">Flagship Series</span>
+          <h3>The Voice of Impact</h3>
+          <div class="price">$400<span> total (4 sessions)</span></div>
+          <p class="description">A focused 4-session series for professionals who want their voice to match the strength of their ideas. Whether you're preparing for high-stakes presentations, leading meetings, or simply tired of second-guessing how you sound, this series helps you speak with clarity, presence, and credibility.</p>
+          <p class="description">Over four sessions, we work on vocal tone, projection, pacing, and authentic delivery. You'll develop a voice that feels grounded, expressive, and fully aligned with your message and identity.</p>
+          <div class="included">
+            <h4>What's included:</h4>
+            <ul>
+              <li>4 private one-hour coaching sessions</li>
+              <li>One PASS Profile assessment (my professional communication tool that reveals your natural communication style)</li>
+              <li>Personalized coaching on breath, tone, clarity, and presence</li>
+              <li>Application to real-world materials: meetings, pitches, presentations, or scripts</li>
+              <li>Tools for continued development</li>
+            </ul>
+          </div>
+          <p class="best-for"><strong>Best for:</strong> Professionals, leaders, and speakers who want a voice that commands attention and communicates with impact</p>
+          <a href="/pass-profile" class="learn-more-link">Learn more about PASS Profile →</a>
+        </div>
+      </div>
+
+      <div class="pricing-grid two-col">
+        <!-- Lesson Packages -->
+        <div class="pricing-card packages">
+          <h3>Lesson Packages</h3>
+          <p class="description">Packages offer flexibility for speaking clients who want to continue beyond a Flagship Series or prefer an open-ended coaching relationship. Sessions can be scheduled around your availability and professional demands.</p>
+          <table class="package-table">
+            <thead>
+              <tr>
+                <th>Package</th>
+                <th>Price</th>
+                <th>Per Lesson</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>5 Lessons</td>
+                <td>$425</td>
+                <td>$85</td>
+              </tr>
+              <tr>
+                <td>10 Lessons</td>
+                <td>$800</td>
+                <td>$80</td>
+              </tr>
+              <tr class="best-value">
+                <td>20 Lessons</td>
+                <td>$1,500</td>
+                <td>$75 — Best Value</td>
+              </tr>
+            </tbody>
+          </table>
+          <p class="best-for"><strong>Best for:</strong> Ongoing development, follow-up after Flagship Series, or flexible professional schedules</p>
+        </div>
+
+        <!-- Single Sessions -->
+        <div class="pricing-card single">
+          <h3>Single Sessions</h3>
+          <div class="price">$100<span>/session</span></div>
+          <p class="description">Single sessions are available for speaking clients who prefer flexibility or want to explore the work before committing to a series or package.</p>
+          <p class="best-for"><strong>Best for:</strong> Exploratory sessions, occasional coaching, or follow-up work</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Hybrid Coaching Section -->
+  <section class="pricing-section hybrid-section">
+    <div class="container">
+      <h2 class="section-title">For Voices That Do Both</h2>
+      <p class="section-intro">Some voices don't fit neatly into "singing" or "speaking." If you're a worship leader, educator, coach, singer-songwriter, or anyone who uses your voice across multiple contexts, this track is designed for you.</p>
+      
+      <!-- Flagship Hybrid Series -->
+      <div class="flagship-series">
+        <div class="flagship-card">
+          <span class="flagship-label">Flagship Series</span>
+          <h3>Singers Who Speak, Speakers Who Sing</h3>
+          <div class="price">$400<span> total (4 sessions)</span></div>
+          <p class="description">A focused 4-session series for people who use their voice in both musical and spoken settings. Whether you're a singer who teaches, a speaker who performs, or someone who moves fluidly between the two, this series helps you build one integrated voice with ease, clarity, and presence across everything you do.</p>
+          <p class="description">Over four sessions, we work on breath coordination that serves both modes, resonance tuning for clarity and projection, and strategies for switching between speaking and singing without strain or fatigue.</p>
+          <div class="included">
+            <h4>What's included:</h4>
+            <ul>
+              <li>4 private one-hour coaching sessions</li>
+              <li>Personalized instruction for vocal integration across speaking and singing</li>
+              <li>Work on both a spoken piece and a song you use regularly</li>
+              <li>Tools for vocal stamina and consistency</li>
+            </ul>
+          </div>
+          <p class="best-for"><strong>Best for:</strong> Worship leaders, music ministers, educators, coaches, singer-songwriters, podcasters, and anyone whose voice serves multiple purposes</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Ensemble Coaching Section -->
+  <section class="pricing-section ensemble-section">
+    <div class="container">
+      <h2 class="section-title">Ensemble Coaching</h2>
+      <p class="section-intro">Vocal and performance coaching for groups seeking unity, efficiency, and expressive sound. I work with barbershop quartets, contemporary a cappella groups, community choruses, and ensembles of all kinds.</p>
+      
+      <div class="custom-engagement">
+        <h3>Custom Engagements</h3>
+        <p class="description">Ensemble coaching is tailored to your group's size, goals, and timeline. Options include one-time sessions, sectional intensives, show preparation, and multi-day retreat formats.</p>
+        <p class="description">Each session is customized to your ensemble's priorities: tuning, vowel matching, performance delivery, interpretation, or stage presence. Both in-person and virtual options are available.</p>
+        
+        <div class="retreat-info">
+          <h4>Retreat Coaching</h4>
+          <p>Planning a weekend retreat or special coaching event? I offer half-day, full-day, and multi-day engagements that bring clarity and cohesion to your ensemble's sound.</p>
+        </div>
+        
+        <p class="pricing-note"><strong>Pricing:</strong> Custom rates based on duration, location, group size, and scope. Contact me directly to discuss your ensemble's needs.</p>
+        <p class="best-for"><strong>Best for:</strong> Quartets, choruses, a cappella groups, vocal ensembles preparing for competition or performance</p>
+        <a href="/contact" class="cta-button">Contact Ted to Discuss Your Ensemble</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Gift Certificates Section -->
+  <section class="gift-section">
+    <div class="container">
+      <h2 class="section-title">Gift Certificates</h2>
+      <p class="description">Gift certificates are available in any amount and can be applied toward any coaching service—singing lessons, speaking sessions, ensemble work, or Flagship Series tracks. A thoughtful gift for the singer or speaker in your life.</p>
+      <a href="/contact" class="cta-button secondary">Purchase a Gift Certificate</a>
+    </div>
+  </section>
+
+  <!-- CTA Section -->
+  <section class="cta-section">
+    <div class="container">
+      <h2>Ready to get started?</h2>
+      <p>The first step is a conversation. Tell me a bit about your goals, and we'll find the right fit together.</p>
+      <a href="/contact" class="cta-button">Book a Free Discovery Call</a>
+      <p class="contact-alt">Questions first? Reach out anytime: <a href="mailto:ted@tedsvoiceacademy.com">ted@tedsvoiceacademy.com</a> | <a href="tel:+12534142267">(253) 414-2267</a></p>
+    </div>
+  </section>
+</Layout>
+
+<style>
+  /* Hero Section */
+  .hero {
+    background: linear-gradient(135deg, var(--color-navy-deep) 0%, var(--color-navy-medium) 100%);
+    color: var(--color-white);
+    padding: 5rem 2rem 4rem;
+    text-align: center;
+  }
+
+  .hero .container {
+    max-width: 800px;
+    margin: 0 auto;
+  }
+
+  .eyebrow {
+    font-size: 0.875rem;
+    font-weight: 600;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    color: var(--color-gold-bright);
+    margin-bottom: 1rem;
+  }
+
+  .hero h1 {
+    font-size: clamp(2rem, 5vw, 3rem);
+    font-weight: 700;
+    margin-bottom: 1.5rem;
+    line-height: 1.2;
+  }
+
+  .hero-subhead {
+    font-size: 1.25rem;
+    line-height: 1.6;
+    opacity: 0.95;
+    max-width: 650px;
+    margin: 0 auto;
+  }
+
+  /* Container */
+  .container {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 0 1.5rem;
+  }
+
+  /* Intro Section */
+  .intro-section {
+    padding: 4rem 2rem;
+    background: var(--color-off-white);
+    text-align: center;
+  }
+
+  .intro-text {
+    font-size: 1.125rem;
+    line-height: 1.8;
+    color: var(--color-charcoal);
+    max-width: 800px;
+    margin: 0 auto 1.5rem;
+  }
+
+  .session-note {
+    font-size: 1rem;
+    font-weight: 600;
+    color: var(--color-navy-deep);
+  }
+
+  /* Pricing Sections */
+  .pricing-section {
+    padding: 4rem 2rem;
+  }
+
+  .singing-section {
+    background: var(--color-white);
+  }
+
+  .speaking-section {
+    background: var(--color-off-white);
+  }
+
+  .hybrid-section {
+    background: var(--color-white);
+  }
+
+  .ensemble-section {
+    background: var(--color-off-white);
+  }
+
+  .section-title {
+    font-size: 2rem;
+    font-weight: 700;
+    color: var(--color-navy-deep);
+    text-align: center;
+    margin-bottom: 1rem;
+  }
+
+  .section-intro {
+    font-size: 1.125rem;
+    line-height: 1.7;
+    color: var(--color-charcoal);
+    text-align: center;
+    max-width: 750px;
+    margin: 0 auto 3rem;
+  }
+
+  /* Pricing Grid */
+  .pricing-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    margin-bottom: 3rem;
+  }
+
+  .pricing-grid.two-col {
+    max-width: 750px;
+    margin: 0 auto;
+  }
+
+  /* Pricing Cards */
+  .pricing-card {
+    background: var(--color-white);
+    border-radius: 12px;
+    padding: 2rem;
+    box-shadow: 0 2px 12px rgba(0, 0, 0, 0.08);
+    position: relative;
+    border: 1px solid rgba(0, 0, 0, 0.06);
+  }
+
+  .speaking-section .pricing-card {
+    background: var(--color-white);
+  }
+
+  .pricing-card.recommended {
+    border: 2px solid var(--color-gold-bright);
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.12);
+  }
+
+  .badge {
+    position: absolute;
+    top: -12px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: var(--color-gold-bright);
+    color: var(--color-navy-deep);
+    font-size: 0.75rem;
+    font-weight: 700;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+    padding: 0.35rem 1rem;
+    border-radius: 20px;
+  }
+
+  .pricing-card h3 {
+    font-size: 1.35rem;
+    font-weight: 700;
+    color: var(--color-navy-deep);
+    margin-bottom: 1rem;
+  }
+
+  .price {
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: var(--color-navy-deep);
+    margin-bottom: 1.5rem;
+  }
+
+  .price span {
+    font-size: 1rem;
+    font-weight: 400;
+    color: var(--color-charcoal);
+  }
+
+  .pricing-card .description {
+    font-size: 1rem;
+    line-height: 1.7;
+    color: var(--color-charcoal);
+    margin-bottom: 1rem;
+  }
+
+  .effective-rate {
+    font-size: 0.9rem;
+    font-weight: 600;
+    color: var(--color-gold-hover);
+    margin-bottom: 1rem;
+    padding: 0.5rem 0;
+    border-top: 1px solid rgba(0, 0, 0, 0.08);
+  }
+
+  .best-for {
+    font-size: 0.95rem;
+    color: var(--color-charcoal);
+    line-height: 1.6;
+  }
+
+  .best-for strong {
+    color: var(--color-navy-deep);
+  }
+
+  /* Package Tables */
+  .package-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 1.5rem 0;
+    font-size: 0.95rem;
+  }
+
+  .package-table th {
+    text-align: left;
+    padding: 0.75rem;
+    border-bottom: 2px solid var(--color-navy-deep);
+    color: var(--color-navy-deep);
+    font-weight: 600;
+  }
+
+  .package-table td {
+    padding: 0.75rem;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.08);
+    color: var(--color-charcoal);
+  }
+
+  .package-table tr.best-value td {
+    background: rgba(212, 160, 57, 0.1);
+    font-weight: 600;
+  }
+
+  .package-table tr.best-value td:last-child {
+    color: var(--color-gold-hover);
+  }
+
+  /* Flagship Series */
+  .flagship-series {
+    margin: 2rem 0;
+  }
+
+  .flagship-card {
+    background: linear-gradient(135deg, var(--color-navy-deep) 0%, var(--color-navy-medium) 100%);
+    color: var(--color-white);
+    border-radius: 16px;
+    padding: 2.5rem;
+    position: relative;
+    max-width: 800px;
+    margin: 0 auto;
+  }
+
+  .flagship-label {
+    display: inline-block;
+    background: var(--color-gold-bright);
+    color: var(--color-navy-deep);
+    font-size: 0.75rem;
+    font-weight: 700;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    padding: 0.4rem 1rem;
+    border-radius: 20px;
+    margin-bottom: 1rem;
+  }
+
+  .flagship-card h3 {
+    font-size: 1.75rem;
+    font-weight: 700;
+    margin-bottom: 0.75rem;
+    color: var(--color-white);
+  }
+
+  .flagship-card .price {
+    color: var(--color-gold-bright);
+    margin-bottom: 1.5rem;
+  }
+
+  .flagship-card .price span {
+    color: rgba(255, 255, 255, 0.8);
+  }
+
+  .flagship-card .description {
+    color: rgba(255, 255, 255, 0.95);
+    margin-bottom: 1rem;
+  }
+
+  .flagship-card .included {
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 8px;
+    padding: 1.5rem;
+    margin: 1.5rem 0;
+  }
+
+  .flagship-card .included h4 {
+    font-size: 1rem;
+    font-weight: 600;
+    margin-bottom: 1rem;
+    color: var(--color-gold-bright);
+  }
+
+  .flagship-card .included ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+
+  .flagship-card .included li {
+    padding: 0.5rem 0;
+    padding-left: 1.5rem;
+    position: relative;
+    font-size: 0.95rem;
+    line-height: 1.5;
+  }
+
+  .flagship-card .included li::before {
+    content: "✓";
+    position: absolute;
+    left: 0;
+    color: var(--color-gold-bright);
+    font-weight: bold;
+  }
+
+  .flagship-card .best-for {
+    color: rgba(255, 255, 255, 0.9);
+    margin-top: 1rem;
+  }
+
+  .flagship-card .best-for strong {
+    color: var(--color-white);
+  }
+
+  .learn-more-link {
+    display: inline-block;
+    margin-top: 1.5rem;
+    color: var(--color-gold-bright);
+    font-weight: 600;
+    text-decoration: none;
+    transition: opacity 0.2s ease;
+  }
+
+  .learn-more-link:hover {
+    opacity: 0.85;
+    text-decoration: underline;
+  }
+
+  /* Custom Engagement Card */
+  .custom-engagement {
+    background: var(--color-white);
+    border-radius: 12px;
+    padding: 2.5rem;
+    max-width: 800px;
+    margin: 0 auto;
+    box-shadow: 0 2px 12px rgba(0, 0, 0, 0.08);
+  }
+
+  .custom-engagement h3 {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: var(--color-navy-deep);
+    margin-bottom: 1.5rem;
+    text-align: center;
+  }
+
+  .custom-engagement .description {
+    font-size: 1rem;
+    line-height: 1.7;
+    color: var(--color-charcoal);
+    margin-bottom: 1rem;
+  }
+
+  .retreat-info {
+    background: var(--color-off-white);
+    border-left: 4px solid var(--color-gold-bright);
+    padding: 1.25rem;
+    margin: 1.5rem 0;
+    border-radius: 0 8px 8px 0;
+  }
+
+  .retreat-info h4 {
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: var(--color-navy-deep);
+    margin-bottom: 0.5rem;
+  }
+
+  .retreat-info p {
+    font-size: 0.95rem;
+    line-height: 1.6;
+    color: var(--color-charcoal);
+    margin: 0;
+  }
+
+  .pricing-note {
+    font-size: 1rem;
+    color: var(--color-charcoal);
+    margin: 1.5rem 0 1rem;
+  }
+
+  .pricing-note strong {
+    color: var(--color-navy-deep);
+  }
+
+  .custom-engagement .cta-button {
+    display: inline-block;
+    margin-top: 1.5rem;
+  }
+
+  /* Gift Section */
+  .gift-section {
+    padding: 4rem 2rem;
+    background: var(--color-cream);
+    text-align: center;
+  }
+
+  .gift-section .section-title {
+    margin-bottom: 1.5rem;
+  }
+
+  .gift-section .description {
+    font-size: 1.1rem;
+    line-height: 1.7;
+    color: var(--color-charcoal);
+    max-width: 650px;
+    margin: 0 auto 2rem;
+  }
+
+  /* CTA Section */
+  .cta-section {
+    padding: 5rem 2rem;
+    background: linear-gradient(135deg, var(--color-navy-deep) 0%, var(--color-navy-medium) 100%);
+    color: var(--color-white);
+    text-align: center;
+  }
+
+  .cta-section h2 {
+    font-size: 2rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+  }
+
+  .cta-section p {
+    font-size: 1.125rem;
+    line-height: 1.7;
+    max-width: 550px;
+    margin: 0 auto 2rem;
+    opacity: 0.95;
+  }
+
+  .contact-alt {
+    margin-top: 1.5rem;
+    font-size: 0.95rem;
+    opacity: 0.9;
+  }
+
+  .contact-alt a {
+    color: var(--color-gold-bright);
+    text-decoration: none;
+  }
+
+  .contact-alt a:hover {
+    text-decoration: underline;
+  }
+
+  /* CTA Buttons */
+  .cta-button {
+    display: inline-block;
+    background: var(--color-gold-bright);
+    color: var(--color-navy-deep);
+    font-size: 1rem;
+    font-weight: 600;
+    padding: 1rem 2rem;
+    border-radius: 8px;
+    text-decoration: none;
+    transition: background 0.2s ease, transform 0.2s ease;
+  }
+
+  .cta-button:hover {
+    background: var(--color-gold-hover);
+    transform: translateY(-2px);
+  }
+
+  .cta-button.secondary {
+    background: transparent;
+    border: 2px solid var(--color-navy-deep);
+    color: var(--color-navy-deep);
+  }
+
+  .cta-button.secondary:hover {
+    background: var(--color-navy-deep);
+    color: var(--color-white);
+  }
+
+  /* Responsive */
+  @media (max-width: 768px) {
+    .hero {
+      padding: 4rem 1.5rem 3rem;
+    }
+
+    .hero h1 {
+      font-size: 1.75rem;
+    }
+
+    .hero-subhead {
+      font-size: 1.1rem;
+    }
+
+    .pricing-section {
+      padding: 3rem 1rem;
+    }
+
+    .section-title {
+      font-size: 1.5rem;
+    }
+
+    .section-intro {
+      font-size: 1rem;
+    }
+
+    .pricing-grid {
+      grid-template-columns: 1fr;
+    }
+
+    .pricing-card {
+      padding: 1.5rem;
+    }
+
+    .price {
+      font-size: 2rem;
+    }
+
+    .flagship-card {
+      padding: 2rem 1.5rem;
+    }
+
+    .flagship-card h3 {
+      font-size: 1.4rem;
+    }
+
+    .package-table {
+      font-size: 0.85rem;
+    }
+
+    .package-table th,
+    .package-table td {
+      padding: 0.5rem;
+    }
+
+    .custom-engagement {
+      padding: 1.5rem;
+    }
+
+    .cta-section {
+      padding: 3rem 1.5rem;
+    }
+
+    .cta-section h2 {
+      font-size: 1.5rem;
+    }
+  }
+</style>
