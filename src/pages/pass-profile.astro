@@ -19,24 +19,7 @@ import Layout from '../layouts/BaseLayout.astro';
         </div>
       </div>
       <div class="hero-visual">
-        <div class="fingerprint-container">
-          <svg class="fingerprint-svg" viewBox="0 0 200 240" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <!-- Fingerprint lines -->
-            <g stroke="var(--pass-accent)" stroke-width="2" fill="none" opacity="0.7">
-              <path d="M100 20 C60 20, 30 60, 30 120 C30 180, 60 220, 100 220 C140 220, 170 180, 170 120 C170 60, 140 20, 100 20" />
-              <path d="M100 35 C70 35, 45 70, 45 120 C45 170, 70 205, 100 205 C130 205, 155 170, 155 120 C155 70, 130 35, 100 35" />
-              <path d="M100 50 C80 50, 60 80, 60 120 C60 160, 80 190, 100 190 C120 190, 140 160, 140 120 C140 80, 120 50, 100 50" />
-              <path d="M100 65 C88 65, 75 90, 75 120 C75 150, 88 175, 100 175 C112 175, 125 150, 125 120 C125 90, 112 65, 100 65" />
-              <path d="M100 80 C94 80, 88 100, 88 120 C88 140, 94 160, 100 160 C106 160, 112 140, 112 120 C112 100, 106 80, 100 80" />
-              <ellipse cx="100" cy="120" rx="6" ry="20" />
-            </g>
-            <!-- Speech bubble with 3.0 -->
-            <g transform="translate(130, 30)">
-              <path d="M0 25 C0 10, 10 0, 25 0 L45 0 C60 0, 70 10, 70 25 L70 45 C70 60, 60 70, 45 70 L30 70 L20 85 L20 70 L25 70 C10 70, 0 60, 0 45 Z" fill="var(--pass-accent)" />
-              <text x="35" y="45" text-anchor="middle" fill="white" font-family="var(--font-heading)" font-size="18" font-weight="700">3.0</text>
-            </g>
-          </svg>
-        </div>
+        <img src="/images/pass-bubble.png" alt="PASS Profile 3.0 - fingerprint inside speech bubble" class="hero-fingerprint" />
       </div>
     </div>
   </section>
@@ -458,14 +441,11 @@ import Layout from '../layouts/BaseLayout.astro';
     align-items: center;
   }
 
-  .fingerprint-container {
-    position: relative;
-  }
-
-  .fingerprint-svg {
-    width: 280px;
-    height: 340px;
-    filter: drop-shadow(0 10px 30px rgba(0,0,0,0.2));
+  .hero-fingerprint {
+    max-width: 320px;
+    width: 100%;
+    height: auto;
+    filter: drop-shadow(0 10px 30px rgba(0,0,0,0.3));
   }
 
   /* Buttons */
@@ -1047,9 +1027,8 @@ import Layout from '../layouts/BaseLayout.astro';
       margin-bottom: 1rem;
     }
 
-    .fingerprint-svg {
-      width: 200px;
-      height: 240px;
+    .hero-fingerprint {
+      max-width: 240px;
     }
 
     .logo-card {
@@ -1091,9 +1070,8 @@ import Layout from '../layouts/BaseLayout.astro';
       gap: 1.5rem;
     }
 
-    .fingerprint-svg {
-      width: 160px;
-      height: 190px;
+    .hero-fingerprint {
+      max-width: 180px;
     }
   }
 </style>
