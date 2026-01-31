@@ -1,802 +1,680 @@
 ---
-/**
- * Homepage - Ted's Voice Academy
- * Content source: TVA_Homepage_Copy_Forward_Light_v3.md
- * All copy is EXACT from approved document
- */
-
-import BaseLayout from '@layouts/BaseLayout.astro';
+import Layout from '../layouts/BaseLayout.astro';
 ---
 
-<BaseLayout 
-  title="Ted's Voice Academy"
-  description="Helping singers and speakers develop a voice that is reliable, expressive, and authentically theirs. Voice coaching in Lacey, WA and virtually worldwide."
+<Layout 
+  title="Ted's Voice Academy | Voice Coaching in Lacey, WA" 
+  description="Helping singers and speakers develop a voice that is reliable, expressive, and authentically theirs. Four decades of teaching experience."
 >
-  <!-- HERO SECTION -->
-  <section class="hero bg-navy">
-    <div class="hero__container container">
-      <div class="hero__content">
-        <p class="hero__tagline">Master Your Voice</p>
-        <h1 class="hero__title">
-          Your voice already has something to say. I help you say it clearly.
-        </h1>
-        <p class="hero__subtitle">
-          Helping singers and speakers develop a voice that is reliable, expressive, and authentically theirs.
-        </p>
-        <div class="hero__cta">
-          <a href="/contact" class="btn btn--primary">Get Started</a>
-          <a href="/about" class="btn btn--secondary">Learn more about my approach</a>
+  <!-- Hero Section -->
+  <section class="hero">
+    <div class="container">
+      <div class="hero-grid">
+        <div class="hero-content">
+          <span class="hero-eyebrow">Master Your Voice</span>
+          <h1>Your voice already has something to say. I help you say it clearly.</h1>
+          <p class="hero-promise">Helping singers and speakers develop a voice that is reliable, expressive, and authentically theirs.</p>
+          <div class="hero-cta">
+            <a href="/contact" class="btn btn-primary">Get Started</a>
+            <a href="/about" class="btn-link">Learn more about my approach →</a>
+          </div>
         </div>
-      </div>
-      <div class="hero__image">
-        <!-- Ted's hero photo -->
-        <div class="hero__image-placeholder">
-          <span>Ted's Photo</span>
+        <div class="hero-image">
+          <img src="/images/hero-ted.png" alt="Ted Chamberlain, voice coach" class="hero-photo" />
         </div>
       </div>
     </div>
   </section>
-  
-  <!-- CREDENTIALS BAR -->
-  <section class="credentials">
+
+  <!-- Credentials Bar -->
+  <section class="credentials-bar">
     <div class="container">
-      <p class="credentials__text">
-        Four decades of teaching • Award-winning performer • Recognized among Washington's top vocal instructors
-      </p>
+      <p>Four decades of teaching • Award-winning performer • Recognized among Washington's top vocal instructors</p>
     </div>
   </section>
-  
-  <!-- VALUE PROPOSITION SECTION -->
-  <section class="value-prop bg-light">
-    <div class="container value-prop__container">
-      <h2 class="value-prop__title">Voice coaching that starts with you</h2>
-      <p class="value-prop__text">
-        Voice coaching is personal. I take time to understand where you are, where you want to go, and what's getting in the way. When you understand how your voice works, everything else falls into place. That's what I help you build—skills that last.
-      </p>
+
+  <!-- Value Proposition Section -->
+  <section class="value-section">
+    <div class="container container-narrow">
+      <h2>Voice coaching that starts with you</h2>
+      <p>Voice coaching is personal. I take time to understand where you are, where you want to go, and what's getting in the way. When you understand how your voice works, everything else falls into place. That's what I help you build—skills that last.</p>
     </div>
   </section>
-  
-  <!-- THREE PATHS SECTION -->
-  <section class="paths bg-cream">
+
+  <!-- Three Paths Section -->
+  <section class="paths-section">
     <div class="container">
-      <h2 class="paths__title text-center">How can I help?</h2>
-      <p class="paths__intro text-center">
-        I work with individuals and groups at every level. Choose the path that fits your goals.
-      </p>
+      <h2>How can I help?</h2>
+      <p class="section-intro">I work with individuals and groups at every level. Choose the path that fits your goals.</p>
       
-      <div class="paths__grid">
-        <!-- SINGING -->
-        <article class="path-card">
-          <div class="path-card__icon">
-            <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
-              <path d="M9 18V5l12-2v13"/>
-              <circle cx="6" cy="18" r="3"/>
-              <circle cx="18" cy="16" r="3"/>
-            </svg>
-          </div>
-          <h3 class="path-card__title">Singing</h3>
-          <p class="path-card__description">
-            Vocal and performance coaching for singers, typically ages 14 and up.
-          </p>
-          <p class="path-card__body">
-            Every singer arrives with different goals. Some want to build technique from the ground up. Others are working through a specific challenge or preparing for something important. I meet you where you are and design lessons around what matters most to you—your style, your experience, your voice.
-          </p>
-          <a href="/singing" class="path-card__link">
-            Explore Singing Lessons
-            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-              <line x1="5" y1="12" x2="19" y2="12"/>
-              <polyline points="12 5 19 12 12 19"/>
-            </svg>
-          </a>
-        </article>
+      <div class="paths-grid">
+        <div class="path-card">
+          <h3>Singing</h3>
+          <p class="path-subtitle">Vocal and performance coaching for singers, typically ages 14 and up.</p>
+          <p>Every singer arrives with different goals. Some want to build technique from the ground up. Others are working through a specific challenge or preparing for something important. I meet you where you are and design lessons around what matters most to you—your style, your experience, your voice.</p>
+          <a href="/singing" class="path-link">Explore Singing Lessons →</a>
+        </div>
         
-        <!-- SPEAKING -->
-        <article class="path-card">
-          <div class="path-card__icon">
-            <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
-              <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/>
-            </svg>
-          </div>
-          <h3 class="path-card__title">Speaking</h3>
-          <p class="path-card__description">
-            Voice and performance coaching for clear, confident, authentic communication.
-          </p>
-          <p class="path-card__body">
-            The way you speak shapes how your ideas land. I work with professionals, educators, and leaders who want to communicate with greater clarity and presence. Together, we address the physical foundations of voice—breath support, resonance, pacing, and projection—so your message comes through with the impact it deserves.
-          </p>
-          <a href="/speaking" class="path-card__link">
-            Explore Speaking Coaching
-            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-              <line x1="5" y1="12" x2="19" y2="12"/>
-              <polyline points="12 5 19 12 12 19"/>
-            </svg>
-          </a>
-        </article>
+        <div class="path-card">
+          <h3>Speaking</h3>
+          <p class="path-subtitle">Voice and performance coaching for clear, confident, authentic communication.</p>
+          <p>The way you speak shapes how your ideas land. I work with professionals, educators, and leaders who want to communicate with greater clarity and presence. Together, we address the physical foundations of voice—breath support, resonance, pacing, and projection—so your message comes through with the impact it deserves.</p>
+          <a href="/speaking" class="path-link">Explore Speaking Coaching →</a>
+        </div>
         
-        <!-- ENSEMBLES -->
-        <article class="path-card">
-          <div class="path-card__icon">
-            <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
-              <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/>
-              <circle cx="9" cy="7" r="4"/>
-              <path d="M23 21v-2a4 4 0 0 0-3-3.87"/>
-              <path d="M16 3.13a4 4 0 0 1 0 7.75"/>
-            </svg>
-          </div>
-          <h3 class="path-card__title">Ensembles</h3>
-          <p class="path-card__description">
-            Vocal and performance coaching for groups seeking unity, efficiency, and expressive sound.
-          </p>
-          <p class="path-card__body">
-            Strong ensemble singing starts with strong individual skills. I work with choirs, quartets, and vocal groups to develop tuning, unity, and authentic performance presence. Whether you're preparing for competition or simply want to connect more deeply as an ensemble, I can help your group find its voice.
-          </p>
-          <a href="/ensembles" class="path-card__link">
-            Explore Ensemble Coaching
-            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-              <line x1="5" y1="12" x2="19" y2="12"/>
-              <polyline points="12 5 19 12 12 19"/>
-            </svg>
-          </a>
-        </article>
-      </div>
-    </div>
-  </section>
-  
-  <!-- ECOSYSTEM SHOWCASE SECTION -->
-  <section class="ecosystem bg-navy">
-    <div class="container">
-      <h2 class="ecosystem__title text-center">Voice mastery, many paths</h2>
-      <p class="ecosystem__intro text-center">
-        Personal coaching is the heart of what I do. It's also part of a larger picture — a complete approach to voice mastery that includes frameworks, tools, education, and community.
-      </p>
-      
-      <div class="ecosystem__grid">
-        <!-- AVF -->
-        <article class="ecosystem-card ecosystem-card--avf">
-          <h3 class="ecosystem-card__title">The Adaptive Voice Framework</h3>
-          <p class="ecosystem-card__text">
-            The teaching framework behind everything I do — now available as a nearly 700-page book. AVF organizes how voices work into a clear, practical system any singer or speaker can use.
-          </p>
-          <a href="/avf" class="ecosystem-card__link">
-            Learn about AVF
-            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-              <line x1="5" y1="12" x2="19" y2="12"/>
-              <polyline points="12 5 19 12 12 19"/>
-            </svg>
-          </a>
-        </article>
-        
-        <!-- PASS -->
-        <article class="ecosystem-card ecosystem-card--pass">
-          <h3 class="ecosystem-card__title">PASS Profile</h3>
-          <p class="ecosystem-card__text">
-            A professional communication assessment I created to help people understand how they naturally communicate. Discover your unique patterns, strengths, and style — then use that knowledge with purpose.
-          </p>
-          <a href="/pass-profile" class="ecosystem-card__link">
-            Take the PASS Profile
-            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-              <line x1="5" y1="12" x2="19" y2="12"/>
-              <polyline points="12 5 19 12 12 19"/>
-            </svg>
-          </a>
-        </article>
-        
-        <!-- VOCAL HEALTH -->
-        <article class="ecosystem-card">
-          <h3 class="ecosystem-card__title">Vocal Health</h3>
-          <p class="ecosystem-card__text">
-            Your voice is an instrument that deserves good care. I share what I've learned about keeping voices healthy — from daily habits and home remedies to conditioning exercises and knowing when to seek help.
-          </p>
-          <a href="/vocal-health" class="ecosystem-card__link">
-            Explore Vocal Health
-            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-              <line x1="5" y1="12" x2="19" y2="12"/>
-              <polyline points="12 5 19 12 12 19"/>
-            </svg>
-          </a>
-        </article>
-        
-        <!-- WORKSHOPS -->
-        <article class="ecosystem-card">
-          <h3 class="ecosystem-card__title">Workshops & Presentations</h3>
-          <p class="ecosystem-card__text">
-            Group learning experiences for singers, speakers, and organizations. From my signature AVF Workshop Series to conference sessions and custom events — I bring voice education to groups of all sizes.
-          </p>
-          <a href="/workshops" class="ecosystem-card__link">
-            View Workshop Options
-            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-              <line x1="5" y1="12" x2="19" y2="12"/>
-              <polyline points="12 5 19 12 12 19"/>
-            </svg>
-          </a>
-        </article>
-        
-        <!-- BLOG -->
-        <article class="ecosystem-card">
-          <h3 class="ecosystem-card__title">Blog</h3>
-          <p class="ecosystem-card__text">
-            Ideas, insights, and practical guidance on vocal technique, performance, health, and the mindset behind lasting growth. New posts regularly.
-          </p>
-          <a href="/blog" class="ecosystem-card__link">
-            Read the Blog
-            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-              <line x1="5" y1="12" x2="19" y2="12"/>
-              <polyline points="12 5 19 12 12 19"/>
-            </svg>
-          </a>
-        </article>
-      </div>
-    </div>
-  </section>
-  
-  <!-- ABOUT PREVIEW SECTION -->
-  <section class="about-preview bg-light">
-    <div class="container about-preview__container">
-      <div class="about-preview__content">
-        <h2 class="about-preview__title">A bit about me</h2>
-        <p class="about-preview__text">
-          I'm Ted Chamberlain. I've spent my career studying voices—how they work, why they struggle, and what helps them grow. I've taught in classrooms, rehearsal halls, and private studios. I've coached beginners and professionals, soloists and ensembles.
-        </p>
-        <p class="about-preview__text">
-          What I've learned is this: every voice is different, and every voice can improve. The path forward depends on understanding what's actually happening when you sing or speak—and then making small, specific changes that add up over time.
-        </p>
-        <p class="about-preview__text">
-          That's the kind of work I love. If you're ready to understand your voice better, I'd be glad to help.
-        </p>
-        <a href="/about" class="about-preview__link">
-          Read my full story
-          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-            <line x1="5" y1="12" x2="19" y2="12"/>
-            <polyline points="12 5 19 12 12 19"/>
-          </svg>
-        </a>
-      </div>
-      <div class="about-preview__image">
-        <!-- Ted's about photo placeholder -->
-        <div class="about-preview__image-placeholder">
-          <span>Ted's Photo</span>
+        <div class="path-card">
+          <h3>Ensembles</h3>
+          <p class="path-subtitle">Vocal and performance coaching for groups seeking unity, efficiency, and expressive sound.</p>
+          <p>Strong ensemble singing starts with strong individual skills. I work with choirs, quartets, and vocal groups to develop tuning, unity, and authentic performance presence. Whether you're preparing for competition or simply want to connect more deeply as an ensemble, I can help your group find its voice.</p>
+          <a href="/ensembles" class="path-link">Explore Ensemble Coaching →</a>
         </div>
       </div>
     </div>
   </section>
-  
-  <!-- TESTIMONIALS SECTION -->
-  <section class="testimonials bg-cream">
+
+  <!-- Ecosystem Showcase Section -->
+  <section class="ecosystem-section">
     <div class="container">
-      <h2 class="testimonials__title text-center">What students say</h2>
-      <div class="testimonials__grid">
-        <!-- Placeholder testimonials - real quotes to be added -->
-        <blockquote class="testimonial">
-          <p class="testimonial__text">
-            "Testimonial placeholder — real student quotes will be added here."
-          </p>
-          <footer class="testimonial__footer">
-            <cite class="testimonial__author">— Student Name</cite>
-            <span class="testimonial__role">Voice student, 2 years</span>
-          </footer>
-        </blockquote>
+      <h2>Voice mastery, many paths</h2>
+      <p class="section-intro">Personal coaching is the heart of what I do. It's also part of a larger picture — a complete approach to voice mastery that includes frameworks, tools, education, and community.</p>
+      
+      <div class="ecosystem-grid">
+        <div class="eco-card eco-avf">
+          <h3>The Adaptive Voice Framework</h3>
+          <p>The teaching framework behind everything I do — now available as a nearly 700-page book. AVF organizes how voices work into a clear, practical system any singer or speaker can use.</p>
+          <a href="/avf" class="eco-link avf-link">Learn about AVF →</a>
+        </div>
         
-        <blockquote class="testimonial">
-          <p class="testimonial__text">
-            "Testimonial placeholder — real student quotes will be added here."
-          </p>
-          <footer class="testimonial__footer">
-            <cite class="testimonial__author">— Student Name</cite>
-            <span class="testimonial__role">Choir director</span>
-          </footer>
-        </blockquote>
+        <div class="eco-card eco-pass">
+          <h3>PASS Profile</h3>
+          <p>A professional communication assessment I created to help people understand how they naturally communicate. Discover your unique patterns, strengths, and style — then use that knowledge with purpose.</p>
+          <a href="/pass-profile" class="eco-link pass-link">Take the PASS Profile →</a>
+        </div>
+        
+        <div class="eco-card eco-health">
+          <h3>Vocal Health</h3>
+          <p>Your voice is an instrument that deserves good care. I share what I've learned about keeping voices healthy — from daily habits and home remedies to conditioning exercises and knowing when to seek help.</p>
+          <a href="/vocal-health" class="eco-link">Explore Vocal Health →</a>
+        </div>
+        
+        <div class="eco-card eco-workshops">
+          <h3>Workshops & Presentations</h3>
+          <p>Group learning experiences for singers, speakers, and organizations. From my signature AVF Workshop Series to conference sessions and custom events — I bring voice education to groups of all sizes.</p>
+          <a href="/workshops" class="eco-link">View Workshop Options →</a>
+        </div>
+        
+        <div class="eco-card eco-blog">
+          <h3>Blog</h3>
+          <p>Ideas, insights, and practical guidance on vocal technique, performance, health, and the mindset behind lasting growth. New posts regularly.</p>
+          <a href="/blog" class="eco-link">Read the Blog →</a>
+        </div>
       </div>
     </div>
   </section>
-  
-  <!-- FINAL CTA SECTION -->
-  <section class="final-cta bg-navy">
-    <div class="container final-cta__container">
-      <h2 class="final-cta__title">Ready to get started?</h2>
-      <p class="final-cta__text">
-        The first step is telling me a bit about yourself. Fill out the form below and I'll be in touch to schedule a conversation.
-      </p>
-      <a href="/contact" class="btn btn--primary btn--large">Get Started</a>
+
+  <!-- About Preview Section -->
+  <section class="about-section">
+    <div class="container">
+      <div class="about-grid">
+        <div class="about-image">
+          <img src="/images/ted-headshot.png" alt="Ted Chamberlain" class="about-photo" />
+        </div>
+        <div class="about-content">
+          <h2>A bit about me</h2>
+          <p>I'm Ted Chamberlain. I've spent my career studying voices—how they work, why they struggle, and what helps them grow. I've taught in classrooms, rehearsal halls, and private studios. I've coached beginners and professionals, soloists and ensembles.</p>
+          <p>What I've learned is this: every voice is different, and every voice can improve. The path forward depends on understanding what's actually happening when you sing or speak—and then making small, specific changes that add up over time.</p>
+          <p>That's the kind of work I love. If you're ready to understand your voice better, I'd be glad to help.</p>
+          <a href="/about" class="about-link">Read my full story →</a>
+        </div>
+      </div>
     </div>
   </section>
-</BaseLayout>
+
+  <!-- Testimonials Section -->
+  <section class="testimonials-section">
+    <div class="container">
+      <h2>What students say</h2>
+      
+      <div class="testimonials-grid">
+        <div class="testimonial-card">
+          <p class="testimonial-quote">"Testimonial placeholder — real quotes coming soon."</p>
+          <p class="testimonial-author">— Student Name</p>
+          <p class="testimonial-context">Voice student</p>
+        </div>
+        
+        <div class="testimonial-card">
+          <p class="testimonial-quote">"Testimonial placeholder — real quotes coming soon."</p>
+          <p class="testimonial-author">— Student Name</p>
+          <p class="testimonial-context">Speaking client</p>
+        </div>
+        
+        <div class="testimonial-card">
+          <p class="testimonial-quote">"Testimonial placeholder — real quotes coming soon."</p>
+          <p class="testimonial-author">— Student Name</p>
+          <p class="testimonial-context">Choir director</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Final CTA Section -->
+  <section class="cta-section">
+    <div class="container">
+      <h2>Ready to get started?</h2>
+      <p>The first step is telling me a bit about yourself. Fill out the form below and I'll be in touch to schedule a conversation.</p>
+      <a href="/contact" class="btn btn-primary">Get Started</a>
+    </div>
+  </section>
+</Layout>
 
 <style>
-  /* ==========================================================================
-     HERO SECTION
-     ========================================================================== */
-  
+  /* Hero Section */
   .hero {
-    padding-block: var(--space-16) var(--space-20);
-    min-height: 80vh;
-    display: flex;
-    align-items: center;
+    background: linear-gradient(135deg, var(--color-navy-deep) 0%, var(--color-navy-medium) 100%);
+    padding: 5rem 0 4rem;
   }
-  
-  .hero__container {
+
+  .hero-grid {
     display: grid;
-    gap: var(--space-10);
+    grid-template-columns: 1fr;
+    gap: 2.5rem;
     align-items: center;
   }
-  
-  @media (min-width: 1024px) {
-    .hero__container {
-      grid-template-columns: 1fr 1fr;
-      gap: var(--space-16);
+
+  @media (min-width: 900px) {
+    .hero-grid {
+      grid-template-columns: 1.1fr 1fr;
+      gap: 4rem;
     }
   }
-  
-  .hero__tagline {
-    font-family: var(--font-body);
-    font-size: var(--text-sm);
-    font-weight: var(--font-semibold);
-    color: var(--color-gold-bright);
+
+  .hero-eyebrow {
+    display: block;
+    font-size: 1rem;
+    font-weight: 600;
     text-transform: uppercase;
-    letter-spacing: var(--tracking-wider);
-    margin-bottom: var(--space-4);
+    letter-spacing: 0.15em;
+    color: var(--color-gold-bright);
+    margin-bottom: 0.75rem;
   }
-  
-  .hero__title {
-    font-size: var(--heading-hero);
+
+  .hero h1 {
+    font-family: var(--font-heading);
+    font-size: clamp(2rem, 4vw + 1rem, 3rem);
+    font-weight: 700;
     color: var(--color-white);
-    margin-bottom: var(--space-6);
-    line-height: var(--leading-tight);
+    margin: 0 0 1.5rem 0;
+    line-height: 1.2;
   }
-  
-  .hero__subtitle {
-    font-size: var(--text-xl);
+
+  .hero-promise {
+    font-size: 1.25rem;
     color: var(--color-cream);
-    opacity: 0.9;
-    margin-bottom: var(--space-8);
-    max-width: 540px;
-    line-height: var(--leading-relaxed);
+    line-height: 1.6;
+    margin-bottom: 2rem;
   }
-  
-  .hero__cta {
+
+  .hero-cta {
     display: flex;
     flex-wrap: wrap;
-    gap: var(--space-4);
-  }
-  
-  .hero__image-placeholder {
-    aspect-ratio: 4 / 5;
-    max-width: 400px;
-    margin-inline: auto;
-    background: linear-gradient(135deg, var(--color-navy-medium), var(--color-navy-light));
-    border-radius: var(--radius-lg);
-    display: flex;
+    gap: 1rem;
     align-items: center;
+  }
+
+  .hero-image {
+    display: flex;
     justify-content: center;
-    color: var(--color-cream);
-    font-size: var(--text-sm);
-    opacity: 0.6;
   }
-  
-  /* ==========================================================================
-     CREDENTIALS BAR
-     ========================================================================== */
-  
-  .credentials {
-    background-color: var(--color-navy-medium);
-    padding-block: var(--space-4);
-    border-top: 1px solid rgba(255, 255, 255, 0.1);
-    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+
+  .hero-photo {
+    width: 100%;
+    max-width: 500px;
+    height: auto;
+    border-radius: 12px;
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.3);
   }
-  
-  .credentials__text {
-    text-align: center;
-    color: var(--color-cream);
-    font-size: var(--text-sm);
-    opacity: 0.8;
-    margin: 0;
-  }
-  
-  /* ==========================================================================
-     BUTTONS
-     ========================================================================== */
-  
+
+  /* Buttons */
   .btn {
     display: inline-flex;
     align-items: center;
     justify-content: center;
-    gap: var(--space-2);
-    padding: var(--space-3) var(--space-6);
-    font-size: var(--text-base);
-    font-weight: var(--font-semibold);
+    padding: 1rem 2rem;
+    font-size: 1rem;
+    font-weight: 600;
+    border-radius: 6px;
     text-decoration: none;
-    border-radius: var(--radius-md);
-    transition: all var(--transition-fast);
     cursor: pointer;
-    border: 2px solid transparent;
+    transition: all 0.2s ease;
+    border: none;
   }
-  
-  .btn--primary {
-    background-color: var(--color-gold-bright);
+
+  .btn-primary {
+    background: var(--color-gold-bright);
     color: var(--color-navy-deep);
   }
-  
-  .btn--primary:hover {
-    background-color: var(--color-gold-hover);
-    transform: translateY(-2px);
-    box-shadow: var(--shadow-lg);
+
+  .btn-primary:hover {
+    background: var(--color-gold-hover);
+    transform: translateY(-1px);
+    box-shadow: 0 4px 12px rgba(212, 168, 75, 0.3);
   }
-  
-  .btn--secondary {
-    background-color: transparent;
-    color: var(--color-white);
-    border-color: var(--color-cream);
-  }
-  
-  .btn--secondary:hover {
-    background-color: rgba(255, 255, 255, 0.1);
+
+  .btn-link {
     color: var(--color-gold-bright);
-    border-color: var(--color-gold-bright);
+    text-decoration: none;
+    font-weight: 500;
   }
-  
-  .btn--large {
-    padding: var(--space-4) var(--space-8);
-    font-size: var(--text-lg);
+
+  .btn-link:hover {
+    text-decoration: underline;
   }
-  
-  /* ==========================================================================
-     VALUE PROPOSITION SECTION
-     ========================================================================== */
-  
-  .value-prop {
-    padding-block: var(--section-padding-y);
+
+  /* Container Narrow */
+  .container-narrow {
+    max-width: 800px;
+    margin: 0 auto;
   }
-  
-  .value-prop__container {
-    max-width: var(--container-narrow);
+
+  /* Credentials Bar */
+  .credentials-bar {
+    background: var(--color-navy-medium);
+    padding: 1rem 0;
     text-align: center;
   }
-  
-  .value-prop__title {
-    margin-bottom: var(--space-6);
+
+  .credentials-bar p {
+    color: var(--color-gold-bright);
+    font-size: 0.9375rem;
+    margin: 0;
+    letter-spacing: 0.02em;
   }
-  
-  .value-prop__text {
-    font-size: var(--text-lg);
-    color: var(--color-charcoal-light);
-    line-height: var(--leading-relaxed);
+
+  /* Value Section */
+  .value-section {
+    background: var(--color-off-white);
+    padding: 4rem 0;
+    text-align: center;
   }
-  
-  /* ==========================================================================
-     THREE PATHS SECTION
-     ========================================================================== */
-  
-  .paths {
-    padding-block: var(--section-padding-y);
+
+  .value-section h2 {
+    font-family: var(--font-heading);
+    font-size: clamp(1.75rem, 3vw + 1rem, 2.5rem);
+    font-weight: 700;
+    color: var(--color-navy-deep);
+    margin: 0 0 1.5rem;
   }
-  
-  .paths__title {
-    margin-bottom: var(--space-4);
+
+  .value-section p {
+    font-size: 1.125rem;
+    line-height: 1.8;
+    color: var(--color-charcoal);
+    margin: 0;
   }
-  
-  .paths__intro {
-    color: var(--color-charcoal-light);
-    max-width: 600px;
-    margin-inline: auto;
-    margin-bottom: var(--space-12);
-  }
-  
-  .paths__grid {
-    display: grid;
-    gap: var(--space-8);
-  }
-  
-  @media (min-width: 768px) {
-    .paths__grid {
-      grid-template-columns: repeat(3, 1fr);
-    }
-  }
-  
-  .path-card {
+
+  /* Paths Section */
+  .paths-section {
     background: var(--color-white);
-    padding: var(--space-8);
-    border-radius: var(--radius-lg);
-    box-shadow: var(--shadow-card);
-    transition: transform var(--transition-base), box-shadow var(--transition-base);
+    padding: 4rem 0;
   }
-  
-  .path-card:hover {
-    transform: translateY(-4px);
-    box-shadow: var(--shadow-card-hover);
+
+  .paths-section h2 {
+    font-family: var(--font-heading);
+    font-size: clamp(1.75rem, 3vw + 1rem, 2.5rem);
+    font-weight: 700;
+    color: var(--color-navy-deep);
+    text-align: center;
+    margin: 0 0 0.75rem;
   }
-  
-  .path-card__icon {
-    color: var(--color-gold-bright);
-    margin-bottom: var(--space-4);
-  }
-  
-  .path-card__title {
-    margin-bottom: var(--space-2);
-  }
-  
-  .path-card__description {
-    font-size: var(--text-sm);
-    color: var(--color-gray-medium);
-    font-style: italic;
-    margin-bottom: var(--space-4);
-  }
-  
-  .path-card__body {
-    color: var(--color-charcoal-light);
-    margin-bottom: var(--space-6);
-    line-height: var(--leading-relaxed);
-  }
-  
-  .path-card__link {
-    display: inline-flex;
-    align-items: center;
-    gap: var(--space-2);
-    color: var(--color-gold-muted);
-    font-weight: var(--font-semibold);
-    text-decoration: none;
-    transition: color var(--transition-fast), gap var(--transition-fast);
-  }
-  
-  .path-card__link:hover {
-    color: var(--color-gold-bright);
-    gap: var(--space-3);
-  }
-  
-  /* ==========================================================================
-     ECOSYSTEM SECTION
-     ========================================================================== */
-  
-  .ecosystem {
-    padding-block: var(--section-padding-y);
-  }
-  
-  .ecosystem__title {
-    color: var(--color-white);
-    margin-bottom: var(--space-4);
-  }
-  
-  .ecosystem__intro {
-    color: var(--color-cream);
+
+  .section-intro {
+    text-align: center;
+    font-size: 1.125rem;
+    color: var(--color-charcoal);
     max-width: 700px;
-    margin-inline: auto;
-    margin-bottom: var(--space-12);
-    opacity: 0.9;
+    margin: 0 auto 2.5rem;
   }
-  
-  .ecosystem__grid {
+
+  .paths-grid {
     display: grid;
-    gap: var(--space-6);
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
   }
-  
-  @media (min-width: 640px) {
-    .ecosystem__grid {
+
+  .path-card {
+    background: var(--color-off-white);
+    padding: 2rem;
+    border-radius: 12px;
+    border-top: 4px solid var(--color-gold-bright);
+  }
+
+  .path-card h3 {
+    font-family: var(--font-heading);
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: var(--color-navy-deep);
+    margin: 0 0 0.5rem;
+  }
+
+  .path-subtitle {
+    font-size: 1rem;
+    color: var(--color-gold-bright);
+    font-weight: 500;
+    margin: 0 0 1rem;
+  }
+
+  .path-card > p:not(.path-subtitle) {
+    color: var(--color-charcoal);
+    line-height: 1.7;
+    margin: 0 0 1.25rem;
+  }
+
+  .path-link {
+    display: inline-block;
+    color: var(--color-navy-deep);
+    font-weight: 600;
+    text-decoration: none;
+    transition: color 0.2s ease;
+  }
+
+  .path-link:hover {
+    color: var(--color-gold-bright);
+  }
+
+  /* Ecosystem Section */
+  .ecosystem-section {
+    background: linear-gradient(135deg, var(--color-navy-deep) 0%, var(--color-navy-medium) 100%);
+    padding: 4rem 0;
+  }
+
+  .ecosystem-section h2 {
+    font-family: var(--font-heading);
+    font-size: clamp(1.75rem, 3vw + 1rem, 2.5rem);
+    font-weight: 700;
+    color: var(--color-white);
+    text-align: center;
+    margin: 0 0 0.75rem;
+  }
+
+  .ecosystem-section .section-intro {
+    color: var(--color-cream);
+  }
+
+  .ecosystem-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.5rem;
+  }
+
+  @media (max-width: 1024px) {
+    .ecosystem-grid {
       grid-template-columns: repeat(2, 1fr);
     }
   }
-  
-  @media (min-width: 1024px) {
-    .ecosystem__grid {
+
+  @media (max-width: 600px) {
+    .ecosystem-grid {
+      grid-template-columns: 1fr;
+    }
+  }
+
+  /* Center bottom 2 cards when 5 cards in 3-column grid */
+  .ecosystem-grid .eco-card:nth-child(4) {
+    grid-column: 1;
+  }
+
+  .ecosystem-grid .eco-card:nth-child(5) {
+    grid-column: 3;
+  }
+
+  @media (min-width: 1025px) {
+    .ecosystem-grid {
+      display: grid;
       grid-template-columns: repeat(6, 1fr);
     }
-    
-    /* First 3 cards each span 2 columns */
-    .ecosystem__grid .ecosystem-card:nth-child(1) {
-      grid-column: 1 / 3;
+
+    .ecosystem-grid .eco-card:nth-child(1),
+    .ecosystem-grid .eco-card:nth-child(2),
+    .ecosystem-grid .eco-card:nth-child(3) {
+      grid-column: span 2;
     }
-    .ecosystem__grid .ecosystem-card:nth-child(2) {
-      grid-column: 3 / 5;
+
+    .ecosystem-grid .eco-card:nth-child(4) {
+      grid-column: 2 / span 2;
     }
-    .ecosystem__grid .ecosystem-card:nth-child(3) {
-      grid-column: 5 / 7;
-    }
-    
-    /* Bottom 2 cards centered */
-    .ecosystem__grid .ecosystem-card:nth-child(4) {
-      grid-column: 2 / 4;
-    }
-    .ecosystem__grid .ecosystem-card:nth-child(5) {
-      grid-column: 4 / 6;
+
+    .ecosystem-grid .eco-card:nth-child(5) {
+      grid-column: 4 / span 2;
     }
   }
-  
-  .ecosystem-card {
+
+  .eco-card {
     background: rgba(255, 255, 255, 0.08);
-    padding: var(--space-6);
-    border-radius: var(--radius-lg);
-    border: 1px solid rgba(255, 255, 255, 0.1);
-    transition: background-color var(--transition-fast), border-color var(--transition-fast);
-  }
-  
-  .ecosystem-card:hover {
-    background: rgba(255, 255, 255, 0.12);
-    border-color: rgba(255, 255, 255, 0.2);
-  }
-  
-  .ecosystem-card__title {
-    color: var(--color-gold-bright);
-    font-size: var(--heading-card);
-    margin-bottom: var(--space-3);
-  }
-  
-  .ecosystem-card--avf .ecosystem-card__title {
-    color: var(--color-avf-amber);
-  }
-  
-  .ecosystem-card--pass .ecosystem-card__title {
-    color: var(--color-pass-green);
-  }
-  
-  .ecosystem-card__text {
-    color: var(--color-cream);
-    opacity: 0.9;
-    margin-bottom: var(--space-4);
-    line-height: var(--leading-relaxed);
-  }
-  
-  .ecosystem-card__link {
-    display: inline-flex;
-    align-items: center;
-    gap: var(--space-2);
-    color: var(--color-gold-bright);
-    font-weight: var(--font-semibold);
-    text-decoration: none;
-    font-size: var(--text-sm);
-    transition: gap var(--transition-fast);
-  }
-  
-  .ecosystem-card--avf .ecosystem-card__link {
-    color: var(--color-avf-amber);
-  }
-  
-  .ecosystem-card--pass .ecosystem-card__link {
-    color: var(--color-pass-green);
-  }
-  
-  .ecosystem-card__link:hover {
-    gap: var(--space-3);
-  }
-  
-  /* ==========================================================================
-     ABOUT PREVIEW SECTION
-     ========================================================================== */
-  
-  .about-preview {
-    padding-block: var(--section-padding-y);
-  }
-  
-  .about-preview__container {
-    display: grid;
-    gap: var(--space-10);
-    align-items: center;
-  }
-  
-  @media (min-width: 1024px) {
-    .about-preview__container {
-      grid-template-columns: 1.2fr 0.8fr;
-      gap: var(--space-16);
-    }
-  }
-  
-  .about-preview__title {
-    margin-bottom: var(--space-6);
-  }
-  
-  .about-preview__text {
-    color: var(--color-charcoal-light);
-    line-height: var(--leading-relaxed);
-    margin-bottom: var(--space-4);
-  }
-  
-  .about-preview__text:last-of-type {
-    margin-bottom: var(--space-6);
-  }
-  
-  .about-preview__link {
-    display: inline-flex;
-    align-items: center;
-    gap: var(--space-2);
-    color: var(--color-gold-muted);
-    font-weight: var(--font-semibold);
-    text-decoration: none;
-    transition: color var(--transition-fast), gap var(--transition-fast);
-  }
-  
-  .about-preview__link:hover {
-    color: var(--color-gold-bright);
-    gap: var(--space-3);
-  }
-  
-  .about-preview__image-placeholder {
-    aspect-ratio: 4 / 5;
-    max-width: 350px;
-    margin-inline: auto;
-    background: linear-gradient(135deg, var(--color-gray-light), #e0e0e0);
-    border-radius: var(--radius-lg);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    color: var(--color-charcoal-light);
-    font-size: var(--text-sm);
-    opacity: 0.6;
-  }
-  
-  /* ==========================================================================
-     TESTIMONIALS SECTION
-     ========================================================================== */
-  
-  .testimonials {
-    padding-block: var(--section-padding-y);
-  }
-  
-  .testimonials__title {
-    margin-bottom: var(--space-12);
-  }
-  
-  .testimonials__grid {
-    display: grid;
-    gap: var(--space-8);
-  }
-  
-  @media (min-width: 768px) {
-    .testimonials__grid {
-      grid-template-columns: repeat(2, 1fr);
-    }
-  }
-  
-  .testimonial {
-    background: var(--color-white);
-    padding: var(--space-8);
-    border-radius: var(--radius-lg);
-    box-shadow: var(--shadow-card);
+    padding: 1.75rem;
+    border-radius: 12px;
     border-left: 4px solid var(--color-gold-bright);
   }
-  
-  .testimonial__text {
-    font-size: var(--text-lg);
-    font-style: italic;
-    color: var(--color-charcoal-light);
-    margin-bottom: var(--space-4);
-    line-height: var(--leading-relaxed);
+
+  .eco-card h3 {
+    font-family: var(--font-heading);
+    font-size: 1.25rem;
+    font-weight: 700;
+    color: var(--color-white);
+    margin: 0 0 0.75rem;
   }
-  
-  .testimonial__footer {
+
+  .eco-card p {
+    color: var(--color-cream);
+    line-height: 1.7;
+    margin: 0 0 1rem;
+    font-size: 0.9375rem;
+  }
+
+  .eco-link {
+    display: inline-block;
+    font-weight: 600;
+    text-decoration: none;
+    font-size: 0.9375rem;
+    transition: color 0.2s ease;
+  }
+
+  /* AVF Card */
+  .eco-avf {
+    border-left-color: var(--color-avf-teal, #1a6b7c);
+  }
+
+  .eco-avf h3 {
+    color: var(--color-avf-amber, #d4a039);
+  }
+
+  .avf-link {
+    color: var(--color-avf-amber, #d4a039);
+  }
+
+  .avf-link:hover {
+    color: #e0b040;
+  }
+
+  /* PASS Card */
+  .eco-pass {
+    border-left-color: var(--color-pass-green, #3db58c);
+  }
+
+  .eco-pass h3 {
+    color: var(--color-pass-green, #3db58c);
+  }
+
+  .pass-link {
+    color: var(--color-pass-green, #3db58c);
+  }
+
+  .pass-link:hover {
+    color: #4dc99a;
+  }
+
+  /* Standard eco-link styling */
+  .eco-link:not(.avf-link):not(.pass-link) {
+    color: var(--color-gold-bright);
+  }
+
+  .eco-link:not(.avf-link):not(.pass-link):hover {
+    color: var(--color-gold-hover);
+  }
+
+  /* About Section */
+  .about-section {
+    background: var(--color-off-white);
+    padding: 4rem 0;
+  }
+
+  .about-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 2rem;
+    align-items: center;
+  }
+
+  @media (min-width: 768px) {
+    .about-grid {
+      grid-template-columns: auto 1fr;
+      gap: 3rem;
+    }
+  }
+
+  .about-image {
     display: flex;
-    flex-direction: column;
-    gap: var(--space-1);
+    justify-content: center;
   }
-  
-  .testimonial__author {
-    font-weight: var(--font-semibold);
+
+  .about-photo {
+    width: 100%;
+    max-width: 300px;
+    border-radius: 12px;
+    border: 3px solid var(--color-gold-bright);
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.15);
+  }
+
+  .about-content h2 {
+    font-family: var(--font-heading);
+    font-size: clamp(1.75rem, 3vw + 1rem, 2.5rem);
+    font-weight: 700;
+    color: var(--color-navy-deep);
+    margin: 0 0 1.25rem;
+  }
+
+  .about-content p {
     color: var(--color-charcoal);
-    font-style: normal;
+    line-height: 1.8;
+    margin-bottom: 1rem;
   }
-  
-  .testimonial__role {
-    font-size: var(--text-sm);
-    color: var(--color-gray-medium);
+
+  .about-link {
+    display: inline-block;
+    color: var(--color-navy-deep);
+    font-weight: 600;
+    text-decoration: none;
+    margin-top: 0.5rem;
   }
-  
-  /* ==========================================================================
-     FINAL CTA SECTION
-     ========================================================================== */
-  
-  .final-cta {
-    padding-block: var(--section-padding-y);
+
+  .about-link:hover {
+    color: var(--color-gold-bright);
+  }
+
+  /* Testimonials Section */
+  .testimonials-section {
+    background: var(--color-white);
+    padding: 4rem 0;
+  }
+
+  .testimonials-section h2 {
+    font-family: var(--font-heading);
+    font-size: clamp(1.75rem, 3vw + 1rem, 2.5rem);
+    font-weight: 700;
+    color: var(--color-navy-deep);
+    text-align: center;
+    margin: 0 0 2.5rem;
+  }
+
+  .testimonials-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 1.5rem;
+  }
+
+  .testimonial-card {
+    background: var(--color-off-white);
+    padding: 1.75rem;
+    border-radius: 12px;
+    border-left: 4px solid var(--color-gold-bright);
+  }
+
+  .testimonial-quote {
+    font-size: 1.0625rem;
+    font-style: italic;
+    line-height: 1.7;
+    color: var(--color-charcoal);
+    margin: 0 0 1rem;
+  }
+
+  .testimonial-author {
+    font-weight: 600;
+    color: var(--color-navy-deep);
+    margin: 0;
+  }
+
+  .testimonial-context {
+    font-size: 0.875rem;
+    color: var(--color-charcoal);
+    margin: 0.25rem 0 0;
+  }
+
+  /* CTA Section */
+  .cta-section {
+    background: linear-gradient(135deg, var(--color-navy-deep) 0%, var(--color-navy-medium) 100%);
+    padding: 4rem 0;
     text-align: center;
   }
-  
-  .final-cta__container {
-    max-width: var(--container-narrow);
-  }
-  
-  .final-cta__title {
+
+  .cta-section h2 {
+    font-family: var(--font-heading);
+    font-size: clamp(1.75rem, 3vw + 1rem, 2.5rem);
+    font-weight: 700;
     color: var(--color-white);
-    margin-bottom: var(--space-4);
+    margin: 0 0 1rem;
   }
-  
-  .final-cta__text {
+
+  .cta-section > .container > p {
+    font-size: 1.125rem;
     color: var(--color-cream);
-    font-size: var(--text-lg);
-    margin-bottom: var(--space-8);
-    opacity: 0.9;
+    max-width: 600px;
+    margin: 0 auto 2rem;
+  }
+
+  /* Mobile Adjustments */
+  @media (max-width: 768px) {
+    .hero {
+      padding: 3.5rem 0 3rem;
+    }
+
+    .hero-photo {
+      max-width: 350px;
+    }
+
+    .value-section,
+    .paths-section,
+    .ecosystem-section,
+    .about-section,
+    .testimonials-section,
+    .cta-section {
+      padding: 3rem 0;
+    }
+
+    .paths-grid {
+      grid-template-columns: 1fr;
+    }
+
+    .about-photo {
+      max-width: 250px;
+    }
   }
 </style>
