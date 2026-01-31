@@ -8,19 +8,35 @@ import Layout from '../layouts/BaseLayout.astro';
   <section class="hero">
     <div class="hero-content">
       <div class="hero-text">
-        <span class="hero-eyebrow">Professional Communication Assessment</span>
-        <h1>Your speaking style is as unique as your fingerprint</h1>
-        <p class="hero-subhead">A professional communication assessment that reveals how you naturally communicate — so you can use it with intention.</p>
-        <p class="hero-body">PASS Profile measures your communication behaviors in workplace settings. Through 60 real-world scenarios, it captures how you actually communicate and interact at work — who you already are when you're doing your best work.</p>
-        <p class="hero-body">The result is your communication fingerprint: a pattern of 40 traits across six domains that shows your natural strengths, where your style excels, and how to leverage it in any professional context.</p>
-        <p class="hero-body highlight">With more unique combinations than atoms in the observable universe, it's virtually impossible for two people to share the same exact communication style. Yours is genuinely yours.</p>
+        <div class="logo-card">
+          <img src="/images/pass-profile-logo.png" alt="PASS Profile - Personal Authentic Speaking Style" class="pass-logo" />
+        </div>
+        <h1>Discover Your Communication Fingerprint</h1>
+        <p class="hero-subhead">Your communication style is as unique as your fingerprint. PASS Profile reveals how you naturally communicate in professional settings — helping you leverage your authentic strengths.</p>
         <div class="hero-cta">
-          <a href="https://pass.tedsvoiceacademy.com" class="btn btn-primary">Get Your Profile — $49.99</a>
+          <a href="https://pass.tedsvoiceacademy.com" class="btn btn-primary">Take Assessment — $49.99</a>
           <a href="#how-it-works" class="btn btn-secondary">See How It Works ↓</a>
         </div>
       </div>
-      <div class="hero-image">
-        <img src="/images/pass-profile-logo.png" alt="PASS Profile logo featuring fingerprint inside speech bubble" />
+      <div class="hero-visual">
+        <div class="fingerprint-container">
+          <svg class="fingerprint-svg" viewBox="0 0 200 240" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <!-- Fingerprint lines -->
+            <g stroke="var(--pass-accent)" stroke-width="2" fill="none" opacity="0.7">
+              <path d="M100 20 C60 20, 30 60, 30 120 C30 180, 60 220, 100 220 C140 220, 170 180, 170 120 C170 60, 140 20, 100 20" />
+              <path d="M100 35 C70 35, 45 70, 45 120 C45 170, 70 205, 100 205 C130 205, 155 170, 155 120 C155 70, 130 35, 100 35" />
+              <path d="M100 50 C80 50, 60 80, 60 120 C60 160, 80 190, 100 190 C120 190, 140 160, 140 120 C140 80, 120 50, 100 50" />
+              <path d="M100 65 C88 65, 75 90, 75 120 C75 150, 88 175, 100 175 C112 175, 125 150, 125 120 C125 90, 112 65, 100 65" />
+              <path d="M100 80 C94 80, 88 100, 88 120 C88 140, 94 160, 100 160 C106 160, 112 140, 112 120 C112 100, 106 80, 100 80" />
+              <ellipse cx="100" cy="120" rx="6" ry="20" />
+            </g>
+            <!-- Speech bubble with 3.0 -->
+            <g transform="translate(130, 30)">
+              <path d="M0 25 C0 10, 10 0, 25 0 L45 0 C60 0, 70 10, 70 25 L70 45 C70 60, 60 70, 45 70 L30 70 L20 85 L20 70 L25 70 C10 70, 0 60, 0 45 Z" fill="var(--pass-accent)" />
+              <text x="35" y="45" text-anchor="middle" fill="white" font-family="var(--font-heading)" font-size="18" font-weight="700">3.0</text>
+            </g>
+          </svg>
+        </div>
       </div>
     </div>
   </section>
@@ -28,7 +44,7 @@ import Layout from '../layouts/BaseLayout.astro';
   <!-- What It Measures -->
   <section class="measures">
     <div class="container">
-      <h2>What it measures</h2>
+      <h2>What PASS Profile Measures</h2>
       <p class="section-intro">PASS Profile examines your communication patterns across six domains:</p>
       
       <div class="domains-grid">
@@ -65,7 +81,7 @@ import Layout from '../layouts/BaseLayout.astro';
   <!-- Understanding Your Scores -->
   <section class="scores">
     <div class="container">
-      <h2>Understanding your scores</h2>
+      <h2>Understanding Your Scores</h2>
       <p class="section-intro">Each of your 40 traits is measured on a scale from 0 to 100. These scores represent where you naturally fall on a continuum of communication tendencies.</p>
       
       <div class="score-ranges">
@@ -99,7 +115,7 @@ import Layout from '../layouts/BaseLayout.astro';
   <!-- How It's Different -->
   <section class="different">
     <div class="container">
-      <h2>How PASS Profile is different</h2>
+      <h2>How PASS Profile Is Different</h2>
       <p class="section-intro">You may have taken assessments like DISC, Myers-Briggs, or CliftonStrengths. They measure broad personality traits and sort you into types. PASS Profile offers something different.</p>
       
       <div class="differentiators">
@@ -126,7 +142,7 @@ import Layout from '../layouts/BaseLayout.astro';
   <!-- What You'll Receive -->
   <section class="receive">
     <div class="container">
-      <h2>What you'll receive</h2>
+      <h2>What You'll Receive</h2>
       <p class="section-intro">After completing the assessment (30–60 minutes), you'll receive a comprehensive PDF report — typically 46-48 pages — delivered to your email.</p>
       <p>Your report draws on all 40 of your trait scores to create a complete picture of your communication style. Every insight reflects how your full pattern works together — peaks and valleys alike.</p>
       
@@ -189,7 +205,7 @@ import Layout from '../layouts/BaseLayout.astro';
   <!-- Who It's For -->
   <section class="who">
     <div class="container">
-      <h2>Who PASS Profile is for</h2>
+      <h2>Who PASS Profile Is For</h2>
       <p class="section-intro">Communication is at the heart of all human interaction. How you communicate shapes your relationships, your effectiveness, and your experience at work. Understanding your natural patterns — and learning to leverage them — has profound implications.</p>
       
       <div class="audience-grid">
@@ -224,7 +240,7 @@ import Layout from '../layouts/BaseLayout.astro';
   <!-- How It Works -->
   <section class="how-it-works" id="how-it-works">
     <div class="container">
-      <h2>How it works</h2>
+      <h2>How It Works</h2>
       
       <div class="steps">
         <div class="step">
@@ -269,7 +285,7 @@ import Layout from '../layouts/BaseLayout.astro';
   <!-- PASS in My Coaching Practice -->
   <section class="coaching-practice">
     <div class="container">
-      <h2>How I use PASS Profile in coaching</h2>
+      <h2>How I Use PASS Profile in Coaching</h2>
       <p>PASS Profile started as a tool I developed for my speaking clients. When someone comes to me wanting to communicate with more clarity, confidence, or presence, understanding their natural communication patterns gives us a powerful starting point.</p>
       <p>The assessment reveals what they're already doing well — so we can build on it. It shows where their style naturally excels — so they can seek out those situations. And it highlights opportunities to expand their range when certain contexts call for a different approach.</p>
       <p>For professionals working on communication presence and impact, the assessment is often transformative. For clients focused on vocal technique, projection, or accent work, we may take a different path. Every client's needs are unique.</p>
@@ -279,7 +295,7 @@ import Layout from '../layouts/BaseLayout.astro';
   <!-- Beyond the Studio -->
   <section class="beyond">
     <div class="container">
-      <h2>PASS Profile beyond the studio</h2>
+      <h2>PASS Profile Beyond the Studio</h2>
       <p class="section-intro">While I developed PASS for my coaching practice, the assessment has applications well beyond one-on-one work.</p>
       
       <div class="applications-grid">
@@ -308,7 +324,7 @@ import Layout from '../layouts/BaseLayout.astro';
   <!-- Coming Soon -->
   <section class="coming-soon">
     <div class="container">
-      <h2>What's next for PASS Profile</h2>
+      <h2>What's Next for PASS Profile</h2>
       <p class="section-intro">PASS Profile continues to grow. Here's what's in development:</p>
       
       <div class="future-items">
@@ -335,7 +351,7 @@ import Layout from '../layouts/BaseLayout.astro';
     <div class="container">
       <h2>Understand how you communicate. Use it on purpose.</h2>
       <p>Your communication fingerprint reveals the patterns that shape how you connect, collaborate, and lead. When you understand these patterns, you can leverage them with intention — in any professional context, with any audience, for any purpose.</p>
-      <a href="https://pass.tedsvoiceacademy.com" class="btn btn-primary">Get Your Profile — $49.99</a>
+      <a href="https://pass.tedsvoiceacademy.com" class="btn btn-primary">Take Assessment — $49.99</a>
       <p class="contact-line">Questions about the assessment? Email <a href="mailto:PASS@tedsvoiceacademy.com">PASS@tedsvoiceacademy.com</a></p>
     </div>
   </section>
@@ -367,19 +383,25 @@ import Layout from '../layouts/BaseLayout.astro';
 </Layout>
 
 <style>
-  /* PASS Profile Sub-brand Colors */
+  /* PASS Profile Colors - Matching pass.tedsvoiceacademy.com */
   :root {
-    --pass-primary: var(--color-pass-teal, #1a4a5c);
-    --pass-accent: var(--color-pass-green, #3db58c);
-    --pass-light: #e8f4f0;
-    --pass-dark: #0f2d38;
+    --pass-dark: #0a3d4d;
+    --pass-primary: #0f4d5a;
+    --pass-mid: #1a5a6a;
+    --pass-accent: #3db58c;
+    --pass-accent-hover: #2ea077;
+    --pass-light: #e8f5f0;
+    --pass-cream: #f5f9f7;
   }
 
   /* Hero Section */
   .hero {
-    background: linear-gradient(135deg, var(--pass-primary) 0%, var(--pass-dark) 100%);
+    background: linear-gradient(160deg, var(--pass-dark) 0%, var(--pass-primary) 50%, var(--pass-mid) 100%);
     color: var(--color-white);
-    padding: 6rem 2rem 5rem;
+    padding: 5rem 2rem 4rem;
+    min-height: 80vh;
+    display: flex;
+    align-items: center;
   }
 
   .hero-content {
@@ -389,67 +411,61 @@ import Layout from '../layouts/BaseLayout.astro';
     grid-template-columns: 1fr 1fr;
     gap: 4rem;
     align-items: center;
+    width: 100%;
   }
 
-  .hero-eyebrow {
+  .logo-card {
+    background: var(--color-white);
+    padding: 1rem 1.5rem;
+    border-radius: 8px;
+    display: inline-block;
+    margin-bottom: 1.5rem;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.15);
+  }
+
+  .pass-logo {
+    height: 50px;
+    width: auto;
     display: block;
-    font-size: 1rem;
-    font-weight: 600;
-    text-transform: uppercase;
-    letter-spacing: 0.15em;
-    color: var(--pass-accent);
-    margin-bottom: 0.75rem;
   }
 
   .hero h1 {
     font-family: var(--font-heading);
-    font-size: clamp(2rem, 4vw + 1rem, 3rem);
+    font-size: clamp(2rem, 4vw + 1rem, 2.75rem);
     font-weight: 700;
     color: var(--color-white);
-    margin: 0 0 1.5rem 0;
+    margin: 0 0 1.25rem 0;
     line-height: 1.2;
   }
 
   .hero-subhead {
-    font-size: 1.25rem;
-    line-height: 1.6;
-    color: var(--color-off-white);
-    opacity: 0.95;
-    margin-bottom: 1.5rem;
-  }
-
-  .hero-body {
-    font-size: 1.0625rem;
+    font-size: 1.125rem;
     line-height: 1.7;
     color: var(--color-off-white);
-    opacity: 0.9;
-    margin-bottom: 1rem;
-  }
-
-  .hero-body.highlight {
-    font-style: italic;
-    color: var(--pass-accent);
-    opacity: 1;
+    opacity: 0.95;
+    margin-bottom: 2rem;
   }
 
   .hero-cta {
     display: flex;
     flex-wrap: wrap;
     gap: 1rem;
-    margin-top: 2rem;
   }
 
-  .hero-image {
+  .hero-visual {
     display: flex;
     justify-content: center;
     align-items: center;
   }
 
-  .hero-image img {
-    max-width: 320px;
-    width: 100%;
-    height: auto;
-    filter: drop-shadow(0 10px 30px rgba(0,0,0,0.3));
+  .fingerprint-container {
+    position: relative;
+  }
+
+  .fingerprint-svg {
+    width: 280px;
+    height: 340px;
+    filter: drop-shadow(0 10px 30px rgba(0,0,0,0.2));
   }
 
   /* Buttons */
@@ -470,8 +486,9 @@ import Layout from '../layouts/BaseLayout.astro';
   }
 
   .btn-primary:hover {
-    background: #2ea077;
+    background: var(--pass-accent-hover);
     transform: translateY(-2px);
+    box-shadow: 0 4px 15px rgba(61, 181, 140, 0.4);
   }
 
   .btn-secondary {
@@ -518,7 +535,7 @@ import Layout from '../layouts/BaseLayout.astro';
 
   /* Measures Section */
   .measures {
-    background: var(--color-off-white);
+    background: var(--pass-cream);
     padding: 5rem 2rem;
   }
 
@@ -578,12 +595,12 @@ import Layout from '../layouts/BaseLayout.astro';
   }
 
   .score-range.mid {
-    background: linear-gradient(to right, rgba(26, 74, 92, 0.1), transparent);
+    background: linear-gradient(to right, rgba(15, 77, 90, 0.1), transparent);
     border-left: 4px solid var(--pass-primary);
   }
 
   .score-range.low {
-    background: linear-gradient(to right, rgba(26, 74, 92, 0.05), transparent);
+    background: linear-gradient(to right, rgba(15, 77, 90, 0.05), transparent);
     border-left: 4px solid #7a9ba8;
   }
 
@@ -621,7 +638,7 @@ import Layout from '../layouts/BaseLayout.astro';
 
   /* Different Section */
   .different {
-    background: var(--pass-primary);
+    background: linear-gradient(160deg, var(--pass-dark) 0%, var(--pass-primary) 100%);
     color: var(--color-white);
     padding: 5rem 2rem;
   }
@@ -658,7 +675,7 @@ import Layout from '../layouts/BaseLayout.astro';
 
   /* Receive Section */
   .receive {
-    background: var(--color-off-white);
+    background: var(--pass-cream);
     padding: 5rem 2rem;
   }
 
@@ -803,7 +820,7 @@ import Layout from '../layouts/BaseLayout.astro';
     padding: 2rem;
     background: var(--color-white);
     border-radius: 8px;
-    border: 1px solid rgba(26, 74, 92, 0.15);
+    border: 1px solid rgba(15, 77, 90, 0.15);
   }
 
   .coaching-option h3 {
@@ -851,7 +868,7 @@ import Layout from '../layouts/BaseLayout.astro';
 
   /* Beyond Section */
   .beyond {
-    background: var(--color-off-white);
+    background: var(--pass-cream);
     padding: 5rem 2rem;
   }
 
@@ -939,7 +956,7 @@ import Layout from '../layouts/BaseLayout.astro';
 
   /* Final CTA Section */
   .final-cta {
-    background: linear-gradient(135deg, var(--pass-primary) 0%, var(--pass-dark) 100%);
+    background: linear-gradient(160deg, var(--pass-dark) 0%, var(--pass-primary) 100%);
     color: var(--color-white);
     padding: 5rem 2rem;
     text-align: center;
@@ -1025,12 +1042,19 @@ import Layout from '../layouts/BaseLayout.astro';
       text-align: center;
     }
 
-    .hero-image {
+    .hero-visual {
       order: -1;
+      margin-bottom: 1rem;
     }
 
-    .hero-image img {
-      max-width: 240px;
+    .fingerprint-svg {
+      width: 200px;
+      height: 240px;
+    }
+
+    .logo-card {
+      margin-left: auto;
+      margin-right: auto;
     }
 
     .hero-cta {
@@ -1041,6 +1065,7 @@ import Layout from '../layouts/BaseLayout.astro';
   @media (max-width: 600px) {
     .hero {
       padding: 4rem 1.5rem 3rem;
+      min-height: auto;
     }
 
     section {
@@ -1064,6 +1089,11 @@ import Layout from '../layouts/BaseLayout.astro';
 
     .facts-grid {
       gap: 1.5rem;
+    }
+
+    .fingerprint-svg {
+      width: 160px;
+      height: 190px;
     }
   }
 </style>
