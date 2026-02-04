@@ -120,6 +120,11 @@ const footerLinks = {
         <div class="footer__ensembles">
           <span class="footer__ensembles-label">My Ensembles:</span>
           <a href="https://www.voicesofthesound.org" target="_blank" rel="noopener" class="footer__ensemble-link">Voices of the Sound</a>
+          <a href="https://www.facebook.com/VoicesoftheSound" target="_blank" rel="noopener" aria-label="Voices of the Sound Facebook" class="footer__ensemble-fb">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+              <path d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z"/>
+            </svg>
+          </a>
           <span class="footer__ensembles-divider">·</span>
           <a href="https://www.facebook.com/hotnotesquartet" target="_blank" rel="noopener" class="footer__ensemble-link">Hot Notes Quartet</a>
         </div>
@@ -321,6 +326,17 @@ const footerLinks = {
   }
 
   .footer__ensemble-link:hover {
+    color: var(--color-gold-bright);
+  }
+
+  .footer__ensemble-fb {
+    display: flex;
+    align-items: center;
+    color: rgba(245, 240, 225, 0.5);
+    transition: color var(--transition-fast);
+  }
+
+  .footer__ensemble-fb:hover {
     color: var(--color-gold-bright);
   }
 
