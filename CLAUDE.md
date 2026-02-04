@@ -8,7 +8,7 @@ You are continuing development on the Ted's Voice Academy (TVA) website — a pr
 - `PROJECT_BACKLOG.md` — living to-do list with all open items, organized by priority tier
 - `HANDOFF_NEXT_SESSION.md` — verified current state, known bugs, what was/wasn't done last session
 
-**Live Site:** https://deft-baklava-b2eb2e.netlify.app/
+**Live Site:** https://tedsvoiceacademy.com
 **GitHub:** https://github.com/tedsvoiceacademy/teds-voice-academy
 **Framework:** Astro
 **Hosting:** Netlify (auto-deploys from GitHub)
@@ -97,7 +97,10 @@ This website has THREE brand color schemes. Do NOT collapse them:
 - **Forward Light style** — positive framing, 8th grade reading level
 - **NO contrast constructions** — never write "not X, but Y" or "it's not about X, it's about Y"
 
-### 5. Hero Section Pattern
+### 5. No Domain Redirects in netlify.toml
+**NEVER** add redirect rules between `tedsvoiceacademy.com` and `www.tedsvoiceacademy.com` in `netlify.toml`. Netlify domain settings handle this automatically. Adding manual redirects caused an infinite 301 loop in session 6.
+
+### 6. Hero Section Pattern
 ```css
 .hero-eyebrow {
   display: block;
@@ -264,7 +267,7 @@ Already implemented in Footer.astro using Netlify Forms.
 - [x] SEO foundation (robots.txt, sitemap, schemas, meta tags) — DONE (Feb 4, 2026)
 - [x] FAQ page + AVF/PASS FAQ sections — DONE (Feb 4, 2026)
 - [x] Social media links in footer — DONE (Feb 4, 2026)
-- [ ] Domain cutover (tedsvoiceacademy.com → Netlify)
+- [x] Domain cutover (tedsvoiceacademy.com → Netlify) — DONE (Feb 4, 2026). DNS managed by Netlify DNS. Custom domains + SSL configured. Redirect loop fixed (conflicting redirect in netlify.toml removed, commit `4a8b573`).
 - [x] Commit and push Feb 4 changes to GitHub — DONE (commit `bb0b04a`)
 
 **For the full project backlog, see `PROJECT_BACKLOG.md`.**
@@ -381,8 +384,10 @@ When nearing token limits (60-70% usage):
 | Feb 3, 2026 | Session 2 (Claude Code) | Verified all code in sync with GitHub. Visual review of all 12 live pages. Discovered About page em dash bug. Created PROJECT_BACKLOG.md and improved HANDOFF_NEXT_SESSION.md. |
 | Feb 4, 2026 | Session 3 (Claude Code) | SEO foundation (robots.txt, sitemap, LocalBusiness/Person/Book schemas, meta tag fixes). FAQ page + AVF/PASS FAQ sections with FAQPage schema. Social media links in footer + sameAs in schema. Title tag duplication fix across all pages. |
 | Feb 4, 2026 | Session 4 (Claude Code) | Added ensemble links: Voices of the Sound + Hot Notes to footer and About page. Person schema updated with memberOf. |
+| Feb 4, 2026 | Session 5 (Claude Code) | Domain cutover: added tedsvoiceacademy.com + www to Netlify, changed A record and www CNAME at Squarespace from Webwave to Netlify, SSL provisioned via Let's Encrypt. Old tedsvoice.com Webwave site left intact. Domain registered at Squarespace. |
+| Feb 4, 2026 | Session 6 (Claude Code) | Fixed redirect loop: removed conflicting bare→www redirect from netlify.toml (commit `4a8b573`). Updated astro.config.mjs site URL to bare domain. Ted activated Netlify DNS. Verified MX, PASS subdomain, SSL intact. Site live at tedsvoiceacademy.com. |
 
 ---
 
-*Last updated: February 4, 2026*
+*Last updated: February 4, 2026 (Session 6)*
 *Project started: January 2026*
