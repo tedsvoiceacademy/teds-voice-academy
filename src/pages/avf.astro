@@ -1,12 +1,67 @@
 ---
 import Layout from '../layouts/BaseLayout.astro';
 
-const pageTitle = "The Adaptive Voice Framework (AVF) | Ted's Voice Academy";
-const pageDescription = "AVF: The owner's manual your voice never came with. A comprehensive framework bridging science, somatics, and soul for singers, speakers, and voice teachers.";
+const pageTitle = "The Adaptive Voice Framework | Voice Training Book by Ted";
+const pageDescription = "A comprehensive guide to understanding how your voice works. The Adaptive Voice Framework distills 40 years of study into one complete owner's manual for singers.";
 const amazonLink = "https://www.amazon.com/dp/B0GD2SH8J5";
 ---
 
 <Layout title={pageTitle} description={pageDescription}>
+  <Fragment slot="head">
+    <script type="application/ld+json" set:html={JSON.stringify({
+      "@context": "https://schema.org",
+      "@type": "Book",
+      "name": "The Adaptive Voice Framework",
+      "author": {
+        "@type": "Person",
+        "name": "Ted Chamberlain"
+      },
+      "description": "A comprehensive guide to understanding how your voice works. The Adaptive Voice Framework distills four decades of study into one complete system for singers, speakers, and voice teachers.",
+      "url": amazonLink,
+      "workExample": {
+        "@type": "Book",
+        "isbn": "B0GD2SH8J5",
+        "bookFormat": "https://schema.org/Paperback"
+      }
+    })} />
+    <script type="application/ld+json" set:html={JSON.stringify({
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "Is the Adaptive Voice Framework a new vocal method?",
+          "acceptedAnswer": { "@type": "Answer", "text": "AVF is a framework, not a method. Methods offer a specific sequence of steps for training. AVF explains the underlying principles that make all methods work. It helps you understand why certain approaches are effective and how to choose the right tools for any voice, in any context." }
+        },
+        {
+          "@type": "Question",
+          "name": "Do I need to read all 700 pages?",
+          "acceptedAnswer": { "@type": "Answer", "text": "The book is designed as both a cover-to-cover read and a reference you return to. The first few chapters lay the foundation. From there, you can explore the Five Pillars and Eight Dials in whatever order fits your interests. The seven appendices offer practical diagnostic tools and lesson templates you can use immediately." }
+        },
+        {
+          "@type": "Question",
+          "name": "Is AVF only for professional singers?",
+          "acceptedAnswer": { "@type": "Answer", "text": "AVF is for anyone who uses their voice with intention. Professional singers, beginning students, voice teachers, speakers, and choir directors all find value in understanding how the voice works as a system." }
+        },
+        {
+          "@type": "Question",
+          "name": "Does AVF work for contemporary and pop styles, or just classical?",
+          "acceptedAnswer": { "@type": "Answer", "text": "AVF covers every genre. The Five Pillars are universal foundations shared by all healthy voices. The Eight Dials are what create stylistic variety — they explain how a classical sound differs from a pop sound, and how to move between them safely." }
+        },
+        {
+          "@type": "Question",
+          "name": "Can I learn AVF on my own, or do I need coaching?",
+          "acceptedAnswer": { "@type": "Answer", "text": "The book gives you the complete framework. Many readers find they can apply insights immediately just from reading. Working with Ted directly brings the framework to life through personalized coaching, hands-on application, and real-time feedback." }
+        },
+        {
+          "@type": "Question",
+          "name": "Is the book available in digital format?",
+          "acceptedAnswer": { "@type": "Answer", "text": "Yes. The Kindle edition is $9.99 on Amazon. The paperback is $42.95. Both contain the full text, diagrams, and appendices." }
+        }
+      ]
+    })} />
+  </Fragment>
+
   <!-- Hero Section -->
   <section class="avf-hero">
     <div class="container">
@@ -172,6 +227,43 @@ const amazonLink = "https://www.amazon.com/dp/B0GD2SH8J5";
       <div class="learn-ctas">
         <a href="/pricing" class="cta-button primary">Explore Coaching Options</a>
         <a href="/contact" class="cta-button secondary">Contact me about workshops</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- AVF FAQ Section -->
+  <section class="avf-section avf-faq">
+    <div class="container container-narrow">
+      <h2>Common Questions About AVF</h2>
+
+      <div class="faq-item">
+        <h3>Is the Adaptive Voice Framework a new vocal method?</h3>
+        <p>AVF is a framework, not a method. Methods offer a specific sequence of steps for training. AVF explains the underlying principles that make all methods work. It helps you understand why certain approaches are effective and how to choose the right tools for any voice, in any context.</p>
+      </div>
+
+      <div class="faq-item">
+        <h3>Do I need to read all 700 pages?</h3>
+        <p>The book is designed as both a cover-to-cover read and a reference you return to. The first few chapters lay the foundation. From there, you can explore the Five Pillars and Eight Dials in whatever order fits your interests. The seven appendices offer practical diagnostic tools and lesson templates you can use immediately.</p>
+      </div>
+
+      <div class="faq-item">
+        <h3>Is AVF only for professional singers?</h3>
+        <p>AVF is for anyone who uses their voice with intention. Professional singers, beginning students, voice teachers, speakers, and choir directors all find value in understanding how the voice works as a system. The principles are universal — how deeply you go depends on your goals.</p>
+      </div>
+
+      <div class="faq-item">
+        <h3>Does AVF work for contemporary and pop styles, or just classical?</h3>
+        <p>AVF covers every genre. The Five Pillars are universal foundations shared by all healthy voices. The Eight Dials are what create stylistic variety — they explain how a classical sound differs from a pop sound, and how to move between them safely. The book includes specific cross-genre applications.</p>
+      </div>
+
+      <div class="faq-item">
+        <h3>Can I learn AVF on my own, or do I need coaching?</h3>
+        <p>The book gives you the complete framework. Many readers find they can apply insights immediately just from reading. Working with me directly brings the framework to life through personalized coaching, hands-on application, and real-time feedback. Both paths are valuable.</p>
+      </div>
+
+      <div class="faq-item">
+        <h3>Is the book available in digital format?</h3>
+        <p>Yes. The Kindle edition is $9.99 on Amazon. The paperback is $42.95. Both contain the full text, diagrams, and appendices.</p>
       </div>
     </div>
   </section>
@@ -701,6 +793,45 @@ const amazonLink = "https://www.amazon.com/dp/B0GD2SH8J5";
 
   .contact-line a:hover {
     text-decoration: underline;
+  }
+
+  /* AVF FAQ Section */
+  .avf-faq {
+    background: linear-gradient(135deg, var(--color-avf-teal) 0%, #2d8a9b 100%);
+    color: var(--color-avf-cream);
+  }
+
+  .avf-faq h2 {
+    font-family: 'Cinzel', serif;
+    font-size: 2rem;
+    font-weight: 600;
+    color: var(--color-avf-amber);
+    margin-bottom: 2.5rem;
+    text-align: center;
+  }
+
+  .avf-faq .faq-item {
+    margin-bottom: 2rem;
+  }
+
+  .avf-faq .faq-item:last-child {
+    margin-bottom: 0;
+  }
+
+  .avf-faq .faq-item h3 {
+    font-family: 'Cinzel', serif;
+    font-size: 1.15rem;
+    font-weight: 600;
+    color: var(--color-avf-amber);
+    margin: 0 0 0.75rem;
+  }
+
+  .avf-faq .faq-item p {
+    font-size: 1.05rem;
+    line-height: 1.7;
+    margin: 0;
+    color: var(--color-avf-cream);
+    opacity: 0.95;
   }
 
   /* Responsive adjustments */

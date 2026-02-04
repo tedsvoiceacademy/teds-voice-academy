@@ -2,8 +2,46 @@
 import Layout from '../layouts/BaseLayout.astro';
 ---
 
-<Layout title="PASS Profile | Ted's Voice Academy" description="A professional communication assessment that reveals your unique communication fingerprint — 40 traits across six domains that show how you naturally communicate at work.">
-  
+<Layout title="PASS Profile | Know Your Communication Style" description="Discover your unique communication fingerprint with the PASS Profile assessment. Understand how you connect, lead, and collaborate. Used by teams worldwide.">
+  <Fragment slot="head">
+    <script type="application/ld+json" set:html={JSON.stringify({
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "How is PASS Profile different from DISC or Myers-Briggs?",
+          "acceptedAnswer": { "@type": "Answer", "text": "DISC and Myers-Briggs measure broad personality traits and sort you into types. PASS Profile focuses specifically on communication behavior in professional settings. It uses real workplace scenarios instead of abstract questions, and it generates truly individual results — more unique combinations than atoms in the observable universe." }
+        },
+        {
+          "@type": "Question",
+          "name": "How long does the PASS Profile assessment take?",
+          "acceptedAnswer": { "@type": "Answer", "text": "Most people complete it in 30 to 60 minutes. You can save your progress and return later — each scenario has a Save and Exit button." }
+        },
+        {
+          "@type": "Question",
+          "name": "Will my results match someone else's?",
+          "acceptedAnswer": { "@type": "Answer", "text": "It's virtually impossible. PASS measures 40 traits on a continuous scale, creating more unique combinations than atoms in the observable universe. Your communication fingerprint is genuinely yours." }
+        },
+        {
+          "@type": "Question",
+          "name": "Can teams take PASS Profile together?",
+          "acceptedAnswer": { "@type": "Answer", "text": "Yes. When team members understand each other's communication patterns, they collaborate more effectively. Each person takes the assessment individually and receives their own report. Team workshops and organizational applications are in development." }
+        },
+        {
+          "@type": "Question",
+          "name": "What do I do with my results after I get them?",
+          "acceptedAnswer": { "@type": "Answer", "text": "Your report includes a 90-day development roadmap, a shareable Working With Others section for colleagues, and a one-page Quick Reference Card. You can also book a coaching session to explore your results in depth and apply them to specific professional challenges." }
+        },
+        {
+          "@type": "Question",
+          "name": "How much does PASS Profile cost?",
+          "acceptedAnswer": { "@type": "Answer", "text": "The assessment is $49.99. You receive a comprehensive 46-48 page personalized PDF report, typically delivered within minutes of completion." }
+        }
+      ]
+    })} />
+  </Fragment>
+
   <!-- Hero Section -->
   <section class="hero">
     <div class="hero-content">
@@ -326,6 +364,43 @@ import Layout from '../layouts/BaseLayout.astro';
       </div>
       
       <p class="notify-text">Want to be notified when these become available? Email <a href="mailto:PASS@tedsvoiceacademy.com">PASS@tedsvoiceacademy.com</a></p>
+    </div>
+  </section>
+
+  <!-- PASS FAQ Section -->
+  <section class="pass-faq">
+    <div class="container">
+      <h2>Common Questions About PASS Profile</h2>
+
+      <div class="faq-item">
+        <h3>How is PASS Profile different from DISC or Myers-Briggs?</h3>
+        <p>DISC and Myers-Briggs measure broad personality traits and sort you into types. PASS Profile focuses specifically on communication behavior in professional settings. It uses real workplace scenarios instead of abstract questions, and it generates truly individual results — more unique combinations than atoms in the observable universe.</p>
+      </div>
+
+      <div class="faq-item">
+        <h3>How long does the assessment take?</h3>
+        <p>Most people complete it in 30 to 60 minutes. You can save your progress and return later — each scenario has a Save and Exit button.</p>
+      </div>
+
+      <div class="faq-item">
+        <h3>Will my results match someone else's?</h3>
+        <p>It's virtually impossible. PASS measures 40 traits on a continuous scale, creating more unique combinations than atoms in the observable universe. Your communication fingerprint is genuinely yours.</p>
+      </div>
+
+      <div class="faq-item">
+        <h3>Can teams take PASS Profile together?</h3>
+        <p>Yes. When team members understand each other's communication patterns, they collaborate more effectively. Each person takes the assessment individually and receives their own report. Team workshops and organizational applications are in development.</p>
+      </div>
+
+      <div class="faq-item">
+        <h3>What do I do with my results after I get them?</h3>
+        <p>Your report includes a 90-day development roadmap, a shareable "Working With Others" section for colleagues, and a one-page Quick Reference Card. You can also book a coaching session to explore your results in depth and apply them to specific professional challenges.</p>
+      </div>
+
+      <div class="faq-item">
+        <h3>How much does PASS Profile cost?</h3>
+        <p>The assessment is $49.99. You receive a comprehensive 46-48 page personalized PDF report, typically delivered within minutes of completion.</p>
+      </div>
     </div>
   </section>
 
@@ -932,6 +1007,35 @@ import Layout from '../layouts/BaseLayout.astro';
   .notify-text a {
     color: var(--pass-accent);
     font-weight: 600;
+  }
+
+  /* PASS FAQ Section */
+  .pass-faq {
+    background: var(--pass-cream);
+    padding: 5rem 2rem;
+  }
+
+  .pass-faq .faq-item {
+    margin-bottom: 2rem;
+  }
+
+  .pass-faq .faq-item:last-child {
+    margin-bottom: 0;
+  }
+
+  .pass-faq .faq-item h3 {
+    font-family: var(--font-heading);
+    font-size: 1.125rem;
+    font-weight: 600;
+    color: var(--pass-primary);
+    margin: 0 0 0.75rem;
+  }
+
+  .pass-faq .faq-item p {
+    font-size: 1.0625rem;
+    line-height: 1.7;
+    margin: 0;
+    color: var(--color-charcoal);
   }
 
   /* Final CTA Section */

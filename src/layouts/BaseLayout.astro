@@ -83,7 +83,55 @@ const fullTitle = title === siteName ? title : `${title} | ${siteName}`;
   
   <!-- Generator -->
   <meta name="generator" content={Astro.generator} />
-  
+
+  <!-- LocalBusiness Structured Data (JSON-LD) -->
+  <script type="application/ld+json" set:html={JSON.stringify({
+    "@context": "https://schema.org",
+    "@type": "LocalBusiness",
+    "name": "Ted's Voice Academy",
+    "description": "Voice coaching for singing, speaking, and ensembles in Lacey, WA",
+    "image": "https://www.tedsvoiceacademy.com/images/tva-logo.png",
+    "founder": {
+      "@type": "Person",
+      "name": "Ted Chamberlain"
+    },
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "4204 Lorna Ct SE",
+      "addressLocality": "Lacey",
+      "addressRegion": "WA",
+      "postalCode": "98503",
+      "addressCountry": "US"
+    },
+    "geo": {
+      "@type": "GeoCoordinates",
+      "latitude": "47.0343",
+      "longitude": "-122.8231"
+    },
+    "telephone": "(253) 414-2267",
+    "email": "ted@tedsvoiceacademy.com",
+    "url": "https://www.tedsvoiceacademy.com",
+    "priceRange": "$$",
+    "openingHoursSpecification": {
+      "@type": "OpeningHoursSpecification",
+      "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"],
+      "opens": "09:00",
+      "closes": "18:00"
+    },
+    "areaServed": [
+      { "@type": "City", "name": "Lacey" },
+      { "@type": "City", "name": "Olympia" },
+      { "@type": "City", "name": "Tumwater" }
+    ],
+    "sameAs": [
+      "https://www.facebook.com/TedsVoiceAcademy",
+      "https://www.instagram.com/tedsvoiceacademy/",
+      "https://www.youtube.com/channel/UCCKU_rD5-_PgsHjNYOOgsRg",
+      "https://www.linkedin.com/in/ted-chamberlain-a18484280/",
+      "https://www.alignable.com/lacey-wa/teds-voice-academy"
+    ]
+  })} />
+
   <!-- Additional head content from pages -->
   <slot name="head" />
 </head>

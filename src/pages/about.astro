@@ -2,10 +2,26 @@
 import Layout from '../layouts/BaseLayout.astro';
 ---
 
-<Layout 
-  title="About Ted | Ted's Voice Academy" 
-  description="Four decades of teaching voice. Learn about Ted's background, philosophy, and approach to helping singers and speakers find their authentic voice."
+<Layout
+  title="About Ted | 40 Years of Voice Expertise"
+  description="Ted brings four decades of teaching, award-winning performance across voice types, and a published framework to every lesson. Meet your voice coach in Lacey, WA."
 >
+  <Fragment slot="head">
+    <script type="application/ld+json" set:html={JSON.stringify({
+      "@context": "https://schema.org",
+      "@type": "Person",
+      "name": "Ted Chamberlain",
+      "jobTitle": "Voice Coach",
+      "worksFor": {
+        "@type": "LocalBusiness",
+        "name": "Ted's Voice Academy"
+      },
+      "description": "Voice coach with four decades of teaching experience, author of The Adaptive Voice Framework",
+      "knowsAbout": ["Singing", "Voice Training", "Public Speaking", "Vocal Health", "Choir Directing", "Ensemble Coaching"],
+      "url": "https://www.tedsvoiceacademy.com/about"
+    })} />
+  </Fragment>
+
   <!-- Hero Section -->
   <section class="hero">
     <div class="container">

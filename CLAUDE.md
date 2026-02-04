@@ -2,7 +2,11 @@
 
 ## Project Overview
 
-You are continuing development on the Ted's Voice Academy (TVA) website — a professional voice coaching business run by Ted Chamberlain in Lacey, Washington. The site is **already partially built** and **live on Netlify**.
+You are continuing development on the Ted's Voice Academy (TVA) website — a professional voice coaching business run by Ted Chamberlain in Lacey, Washington. The site is **fully built (13 pages)** and **live on Netlify**.
+
+**Also read these files:**
+- `PROJECT_BACKLOG.md` — living to-do list with all open items, organized by priority tier
+- `HANDOFF_NEXT_SESSION.md` — verified current state, known bugs, what was/wasn't done last session
 
 **Live Site:** https://deft-baklava-b2eb2e.netlify.app/
 **GitHub:** https://github.com/tedsvoiceacademy/teds-voice-academy
@@ -13,21 +17,37 @@ You are continuing development on the Ted's Voice Academy (TVA) website — a pr
 
 ## Current Status
 
-### All 12 Pages Complete
+### All 13 Pages Complete
 | Page | File | Status |
 |------|------|--------|
-| Homepage | `src/pages/index.astro` | ✅ Complete (may need image verification) |
-| Contact | `src/pages/contact.astro` | ✅ Complete — Google Maps embed added |
+| Homepage | `src/pages/index.astro` | ✅ Complete |
+| Contact | `src/pages/contact.astro` | ✅ Complete — Google Maps embed |
 | Singing | `src/pages/singing.astro` | ✅ Complete |
 | Speaking | `src/pages/speaking.astro` | ✅ Complete |
 | Ensembles | `src/pages/ensembles.astro` | ✅ Complete |
-| About | `src/pages/about.astro` | ✅ Complete |
+| About | `src/pages/about.astro` | ✅ Complete — Person schema |
 | Pricing | `src/pages/pricing.astro` | ✅ Complete |
-| AVF | `src/pages/avf.astro` | ✅ Complete |
-| PASS Profile | `src/pages/pass-profile.astro` | ✅ Complete |
-| Workshops | `src/pages/workshops.astro` | ✅ Complete — includes workshop inquiry form (Netlify Forms) |
-| Vocal Health Hub | `src/pages/vocal-health.astro` | ✅ Complete — Foundations and "When Things Feel Off" sections have full content; Home Care, SOVT, Vocal Fit, and Articles sections have intro copy with "coming soon" placeholders awaiting Ted's content |
-| Blog | `src/pages/blog.astro` | ✅ Complete — landing page with category cards and newsletter signup; no individual post system yet |
+| AVF | `src/pages/avf.astro` | ✅ Complete — Book schema + FAQ section |
+| PASS Profile | `src/pages/pass-profile.astro` | ✅ Complete — FAQ section |
+| Workshops | `src/pages/workshops.astro` | ✅ Complete — workshop inquiry form |
+| Vocal Health Hub | `src/pages/vocal-health.astro` | ✅ Complete — 4 sections have "coming soon" placeholders awaiting Ted's content |
+| Blog | `src/pages/blog.astro` | ✅ Complete — landing page; no individual post system yet |
+| **FAQ** | `src/pages/faq.astro` | ✅ **New Feb 4** — 15 Q&As with FAQPage schema |
+
+### SEO Infrastructure (added Feb 4, 2026)
+- `public/robots.txt` — crawler directives + sitemap reference
+- `@astrojs/sitemap` integration — auto-generates sitemap with all 13 pages
+- **LocalBusiness JSON-LD** in BaseLayout (every page) — includes sameAs social profiles
+- **Person schema** on About page, **Book schema** on AVF page
+- **FAQPage schema** on FAQ, AVF, and PASS pages
+- All meta titles/descriptions aligned with `docs/specs/TVA_SEO_Meta_Content_v1.md`
+
+### Social Media Links (in Footer)
+- Facebook: https://www.facebook.com/TedsVoiceAcademy
+- Instagram: https://www.instagram.com/tedsvoiceacademy/
+- YouTube: https://www.youtube.com/channel/UCCKU_rD5-_PgsHjNYOOgsRg
+- LinkedIn: https://www.linkedin.com/in/ted-chamberlain-a18484280/
+- Alignable: https://www.alignable.com/lacey-wa/teds-voice-academy
 
 ---
 
@@ -116,14 +136,16 @@ teds-voice-academy/
 │   │   ├── contact.astro
 │   │   ├── avf.astro
 │   │   ├── pass-profile.astro
-│   │   ├── workshops.astro       # ✅ Built Feb 3, 2026
-│   │   ├── vocal-health.astro    # ✅ Built Feb 3, 2026
-│   │   └── blog.astro            # ✅ Built Feb 3, 2026
+│   │   ├── workshops.astro
+│   │   ├── vocal-health.astro
+│   │   ├── blog.astro
+│   │   └── faq.astro             # ✅ New Feb 4, 2026
 │   └── styles/
 │       └── global.css            # Design tokens
 ├── public/
-│   └── images/                   # Image assets
-├── astro.config.mjs
+│   ├── images/                   # Image assets
+│   └── robots.txt                # ✅ New Feb 4, 2026
+├── astro.config.mjs              # Includes @astrojs/sitemap
 └── package.json
 ```
 
@@ -228,12 +250,19 @@ Already implemented in Footer.astro using Netlify Forms.
 ## Outstanding Technical Items
 
 ### Must Complete for Launch
-- [x] Add Google Maps embed to Contact page — DONE (Session Feb 3, 2026)
-- [x] Build Workshops page — DONE (Session Feb 3, 2026)
-- [x] Build Vocal Health Hub page — DONE (Session Feb 3, 2026)
-- [x] Build Blog landing page — DONE (Session Feb 3, 2026)
-- [ ] Push latest code to GitHub (local copy is ahead of remote)
+- [x] Add Google Maps embed to Contact page — DONE (Feb 3, 2026)
+- [x] Build Workshops page — DONE (Feb 3, 2026)
+- [x] Build Vocal Health Hub page — DONE (Feb 3, 2026)
+- [x] Build Blog landing page — DONE (Feb 3, 2026)
+- [x] Push latest code to GitHub — DONE (verified Feb 3, 2026)
+- [x] Fix About page em dash encoding bug — DONE (Feb 3, 2026)
+- [x] SEO foundation (robots.txt, sitemap, schemas, meta tags) — DONE (Feb 4, 2026)
+- [x] FAQ page + AVF/PASS FAQ sections — DONE (Feb 4, 2026)
+- [x] Social media links in footer — DONE (Feb 4, 2026)
 - [ ] Domain cutover (tedsvoiceacademy.com → Netlify)
+- [ ] Commit and push Feb 4 changes to GitHub
+
+**For the full project backlog, see `PROJECT_BACKLOG.md`.**
 
 ### Content Still Needed from Ted (for Vocal Health Hub)
 - [ ] Home Care & Remedies: gargle recipes, tea recommendations, lozenge guidance, supplement recommendations
@@ -344,8 +373,10 @@ When nearing token limits (60-70% usage):
 |------|---------|---------------|
 | Jan 2026 | Sessions 1-10+ | Built 9 pages, Header, Footer, BaseLayout, global.css, all docs |
 | Feb 3, 2026 | Session (Claude Code) | Built Workshops, Vocal Health Hub, Blog pages. Added Google Maps embed + Get Directions link to Contact page. All 12 pages verified locally. |
+| Feb 3, 2026 | Session 2 (Claude Code) | Verified all code in sync with GitHub. Visual review of all 12 live pages. Discovered About page em dash bug. Created PROJECT_BACKLOG.md and improved HANDOFF_NEXT_SESSION.md. |
+| Feb 4, 2026 | Session 3 (Claude Code) | SEO foundation (robots.txt, sitemap, LocalBusiness/Person/Book schemas, meta tag fixes). FAQ page + AVF/PASS FAQ sections with FAQPage schema. Social media links in footer + sameAs in schema. Title tag duplication fix across all pages. |
 
 ---
 
-*Last updated: February 3, 2026*
+*Last updated: February 4, 2026*
 *Project started: January 2026*
