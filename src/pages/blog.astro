@@ -1,0 +1,400 @@
+---
+import Layout from '../layouts/BaseLayout.astro';
+---
+
+<Layout
+  title="Voice Tips & Insights | Ted's Voice Academy Blog"
+  description="Practical advice for singers, speakers, and voice enthusiasts. Tips on technique, vocal health, and performance from a 40-year voice coaching veteran."
+>
+  <!-- Hero Section -->
+  <section class="hero">
+    <div class="container">
+      <span class="hero-eyebrow">Blog</span>
+      <h1>Ideas, insights, and practical guidance for your voice</h1>
+      <p class="hero-subtitle">Whether you sing, speak, or both — there's something here for you.</p>
+    </div>
+  </section>
+
+  <!-- Intro Section -->
+  <section class="intro-section">
+    <div class="container container-narrow">
+      <p class="intro-text">I write about the voice because I find it endlessly fascinating — and because I believe everyone deserves access to good information about how their instrument works.</p>
+      <p class="intro-text">These posts explore technique, health, performance, and the mindset behind vocal development. Some are deep dives. Some are quick tips. All of them come from four decades of teaching, performing, and learning alongside my students.</p>
+      <p class="intro-text">Browse by topic below, or scroll through the latest posts.</p>
+    </div>
+  </section>
+
+  <!-- Categories Section -->
+  <section class="categories-section">
+    <div class="container">
+      <h2>Explore by Topic</h2>
+      <div class="categories-grid">
+        <div class="category-card">
+          <h3>Vocal Health</h3>
+          <p>Taking care of your voice so it can take care of you. Warm-ups, recovery, hydration, and what to do when something feels off.</p>
+        </div>
+        <div class="category-card">
+          <h3>Technique</h3>
+          <p>The how and why behind breath support, resonance, phonation, and articulation — the physical foundations of good singing and speaking.</p>
+        </div>
+        <div class="category-card">
+          <h3>Performance</h3>
+          <p>What happens when you step in front of an audience. Stage presence, audition preparation, and connecting with listeners.</p>
+        </div>
+        <div class="category-card">
+          <h3>Mindset & Practice</h3>
+          <p>The mental and emotional side of vocal development. Confidence, consistency, and the long game of getting better.</p>
+        </div>
+        <div class="category-card">
+          <h3>For Professionals</h3>
+          <p>Guidance for those building a career with their voice — teaching, industry insights, and communication in business contexts.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Recent Posts Section -->
+  <section class="posts-section">
+    <div class="container">
+      <h2>Recent Posts</h2>
+      <div class="posts-coming-soon">
+        <h3>Posts are on the way</h3>
+        <p>I'm building out a library of articles on vocal technique, health, performance, and more. Check back soon for the first posts — or join the list below to be notified when new content is published.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Newsletter Section -->
+  <section class="newsletter-section">
+    <div class="container container-narrow">
+      <h2>Stay in the loop</h2>
+      <p class="newsletter-intro">Get notified when new articles are published — plus occasional voice tips and updates.</p>
+      <form
+        name="blog-newsletter"
+        method="POST"
+        data-netlify="true"
+        netlify-honeypot="bot-field"
+        class="newsletter-form"
+      >
+        <p class="hidden">
+          <label>Don't fill this out if you're human: <input name="bot-field" /></label>
+        </p>
+        <input type="hidden" name="form-name" value="blog-newsletter" />
+        <div class="newsletter-fields">
+          <input type="text" name="first-name" placeholder="First name" aria-label="First name" />
+          <input type="email" name="email" placeholder="Email address" aria-label="Email address" required />
+          <button type="submit" class="btn btn-primary">Subscribe</button>
+        </div>
+      </form>
+    </div>
+  </section>
+
+  <!-- CTA Section -->
+  <section class="cta-section">
+    <div class="container">
+      <h2>Want to go deeper?</h2>
+      <p>Reading is a great start. Working together is where real progress happens. If something here sparks a question or a goal, I'd love to hear about it.</p>
+      <a href="/contact" class="btn btn-primary">Book a Free Discovery Call</a>
+      <p class="cta-secondary">Or reach out anytime: <a href="mailto:ted@tedsvoiceacademy.com">ted@tedsvoiceacademy.com</a></p>
+    </div>
+  </section>
+</Layout>
+
+<style>
+  /* Hero Section */
+  .hero {
+    background: linear-gradient(135deg, var(--color-navy-deep) 0%, var(--color-navy-medium) 100%);
+    padding: 5rem 0 4rem;
+    text-align: center;
+  }
+
+  .hero-eyebrow {
+    display: block;
+    font-size: 1rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.15em;
+    color: var(--color-gold-bright);
+    margin-bottom: 0.75rem;
+  }
+
+  .hero h1 {
+    font-family: var(--font-heading);
+    font-size: clamp(2.25rem, 5vw + 1rem, 3.5rem);
+    font-weight: 700;
+    color: var(--color-white);
+    margin: 0 0 1rem;
+    line-height: 1.2;
+  }
+
+  .hero-subtitle {
+    font-size: 1.25rem;
+    color: var(--color-cream);
+    max-width: 600px;
+    margin: 0 auto;
+  }
+
+  /* Buttons */
+  .btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 1rem 2rem;
+    font-size: 1rem;
+    font-weight: 600;
+    border-radius: 6px;
+    text-decoration: none;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    border: none;
+    font-family: var(--font-body);
+  }
+
+  .btn-primary {
+    background: var(--color-gold-bright);
+    color: var(--color-navy-deep);
+  }
+
+  .btn-primary:hover {
+    background: var(--color-gold-hover);
+    transform: translateY(-1px);
+    box-shadow: 0 4px 12px rgba(212, 168, 75, 0.3);
+  }
+
+  /* Container Narrow */
+  .container-narrow {
+    max-width: 800px;
+    margin: 0 auto;
+  }
+
+  /* Intro Section */
+  .intro-section {
+    background: var(--color-off-white);
+    padding: 4rem 0;
+  }
+
+  .intro-text {
+    font-size: 1.125rem;
+    line-height: 1.8;
+    color: var(--color-charcoal);
+    margin-bottom: 1rem;
+  }
+
+  .intro-text:last-child {
+    margin-bottom: 0;
+  }
+
+  /* Categories Section */
+  .categories-section {
+    background: var(--color-white);
+    padding: 4rem 0;
+  }
+
+  .categories-section h2 {
+    font-family: var(--font-heading);
+    font-size: clamp(1.75rem, 3vw + 1rem, 2.5rem);
+    font-weight: 700;
+    color: var(--color-navy-deep);
+    text-align: center;
+    margin: 0 0 2rem;
+  }
+
+  .categories-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 1.5rem;
+  }
+
+  .category-card {
+    background: var(--color-off-white);
+    padding: 1.75rem;
+    border-radius: 12px;
+    border-left: 4px solid var(--color-gold-bright);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+  }
+
+  .category-card:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.06);
+  }
+
+  .category-card h3 {
+    font-family: var(--font-heading);
+    font-size: 1.25rem;
+    font-weight: 700;
+    color: var(--color-navy-deep);
+    margin: 0 0 0.75rem;
+  }
+
+  .category-card p {
+    color: var(--color-charcoal);
+    line-height: 1.6;
+    margin: 0;
+    font-size: 0.9375rem;
+  }
+
+  /* Posts Section */
+  .posts-section {
+    background: var(--color-off-white);
+    padding: 4rem 0;
+  }
+
+  .posts-section h2 {
+    font-family: var(--font-heading);
+    font-size: clamp(1.75rem, 3vw + 1rem, 2.5rem);
+    font-weight: 700;
+    color: var(--color-navy-deep);
+    text-align: center;
+    margin: 0 0 2rem;
+  }
+
+  .posts-coming-soon {
+    background: var(--color-white);
+    padding: 3rem;
+    border-radius: 12px;
+    text-align: center;
+    border: 2px dashed #d0cdc5;
+    max-width: 600px;
+    margin: 0 auto;
+  }
+
+  .posts-coming-soon h3 {
+    font-family: var(--font-heading);
+    font-size: 1.25rem;
+    font-weight: 700;
+    color: var(--color-gold-bright);
+    margin: 0 0 0.75rem;
+  }
+
+  .posts-coming-soon p {
+    color: var(--color-charcoal);
+    line-height: 1.7;
+    margin: 0;
+  }
+
+  /* Newsletter Section */
+  .newsletter-section {
+    background: linear-gradient(135deg, var(--color-navy-deep) 0%, var(--color-navy-medium) 100%);
+    padding: 4rem 0;
+    text-align: center;
+  }
+
+  .newsletter-section h2 {
+    font-family: var(--font-heading);
+    font-size: clamp(1.75rem, 3vw + 1rem, 2.5rem);
+    font-weight: 700;
+    color: var(--color-white);
+    margin: 0 0 1rem;
+  }
+
+  .newsletter-intro {
+    font-size: 1.125rem;
+    color: var(--color-cream);
+    margin: 0 0 2rem;
+  }
+
+  .newsletter-form {
+    max-width: 550px;
+    margin: 0 auto;
+  }
+
+  .newsletter-fields {
+    display: flex;
+    gap: 0.75rem;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .newsletter-fields input[type="text"],
+  .newsletter-fields input[type="email"] {
+    padding: 0.875rem 1rem;
+    font-size: 1rem;
+    border: 2px solid rgba(255, 255, 255, 0.2);
+    border-radius: 6px;
+    background: rgba(255, 255, 255, 0.1);
+    color: var(--color-white);
+    font-family: var(--font-body);
+    flex: 1;
+    min-width: 180px;
+  }
+
+  .newsletter-fields input::placeholder {
+    color: rgba(255, 255, 255, 0.6);
+  }
+
+  .newsletter-fields input:focus {
+    outline: none;
+    border-color: var(--color-gold-bright);
+    box-shadow: 0 0 0 3px rgba(212, 168, 75, 0.15);
+  }
+
+  .hidden {
+    display: none;
+  }
+
+  /* CTA Section */
+  .cta-section {
+    background: var(--color-white);
+    padding: 4rem 0;
+    text-align: center;
+  }
+
+  .cta-section h2 {
+    font-family: var(--font-heading);
+    font-size: clamp(1.75rem, 3vw + 1rem, 2.5rem);
+    font-weight: 700;
+    color: var(--color-navy-deep);
+    margin: 0 0 1rem;
+  }
+
+  .cta-section > .container > p {
+    font-size: 1.125rem;
+    color: var(--color-charcoal);
+    max-width: 600px;
+    margin: 0 auto 2rem;
+    line-height: 1.7;
+  }
+
+  .cta-secondary {
+    margin-top: 1.5rem;
+    font-size: 0.9375rem;
+    color: var(--color-charcoal);
+  }
+
+  .cta-secondary a {
+    color: var(--color-gold-bright);
+    text-decoration: none;
+  }
+
+  .cta-secondary a:hover {
+    text-decoration: underline;
+  }
+
+  /* Mobile Adjustments */
+  @media (max-width: 768px) {
+    .hero {
+      padding: 3.5rem 0 3rem;
+    }
+
+    .intro-section,
+    .categories-section,
+    .posts-section,
+    .newsletter-section,
+    .cta-section {
+      padding: 3rem 0;
+    }
+
+    .categories-grid {
+      grid-template-columns: 1fr;
+    }
+
+    .newsletter-fields {
+      flex-direction: column;
+    }
+
+    .newsletter-fields input[type="text"],
+    .newsletter-fields input[type="email"] {
+      min-width: auto;
+    }
+  }
+</style>
