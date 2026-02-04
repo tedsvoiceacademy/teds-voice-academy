@@ -3,7 +3,7 @@ import sitemap from '@astrojs/sitemap';
 
 // https://astro.build/config
 export default defineConfig({
-  site: 'https://www.tedsvoiceacademy.com',
+  site: 'https://tedsvoiceacademy.com',
   output: 'static',
   integrations: [sitemap()],
   build: {

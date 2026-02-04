@@ -5,12 +5,8 @@
   command = "npm run build"
   publish = "dist"
 
-# Redirect non-www to www
-[[redirects]]
-  from = "https://tedsvoiceacademy.com/*"
-  to = "https://www.tedsvoiceacademy.com/:splat"
-  status = 301
-  force = true
+# Domain redirect handled by Netlify domain settings (bare domain is primary)
+# Do NOT add manual redirects between bare and www — they conflict with Netlify's built-in redirect
 
 # Handle SPA-style routing (optional, for future use)
 [[redirects]]
