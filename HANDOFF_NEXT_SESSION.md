@@ -17,8 +17,8 @@
 
 ### Git & Deploy
 - **GitHub repo:** https://github.com/tedsvoiceacademy/teds-voice-academy
-- **Latest pushed commit:** Will be updated after push (previous: `6dc8f20`)
-- **Local changes:** Ensemble links added to footer and About page. Needs commit and push.
+- **Latest pushed commit:** `ac7003a` on `main` branch (ensemble links — Feb 4)
+- **Local changes:** In sync with remote. All changes committed and pushed.
 - **Local project path:** `teds-voice-academy-main/teds-voice-academy-main/`
 - **Netlify deploy:** Auto-deploying from commit `bb0b04a`. Should be live within 1-2 minutes.
 - **Build status:** Clean — `npm run build` succeeds, 13 pages built (12 original + new FAQ page)
