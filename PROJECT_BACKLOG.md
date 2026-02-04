@@ -18,7 +18,7 @@ This is the living project list for the TVA website. Items move between tiers as
 - [x] **FAQ sections** — Dedicated FAQ page (TVA general), plus FAQ sections on AVF and PASS pages, all with FAQPage schema markup. Done Feb 4, 2026.
 - [x] **Social media links** — Facebook, Instagram, YouTube, LinkedIn, Alignable added to footer + sameAs in schema. Done Feb 4, 2026.
 - [x] **Ensemble links** — Voices of the Sound + Hot Notes added to footer and About page. Person schema updated with memberOf. Heart of the Sound deferred (no online presence yet). Done Feb 4, 2026.
-- [ ] **Domain cutover** — Switch tedsvoiceacademy.com DNS to point to Netlify. Requires: clarifying current setup (tedsvoiceacademy.com currently redirects to tedsvoice.com on Webwave). Coordinate with Ted on registrar access and Webwave settings.
+- [ ] **Domain cutover** — Point `www.tedsvoiceacademy.com` to Netlify. **Ted clarified (Feb 4):** Keep the old `tedsvoice.com` Webwave site alive (needed for blog scraping). Just stop the redirect from `tedsvoiceacademy.com` → `tedsvoice.com` and point `.com` to Netlify instead. Need to clarify: where is the domain registered? Does Ted have registrar DNS access? Is the redirect set at DNS level or inside Webwave?
 
 ---
 
