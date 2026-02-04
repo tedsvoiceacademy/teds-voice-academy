@@ -17,10 +17,10 @@
 
 ### Git & Deploy
 - **GitHub repo:** https://github.com/tedsvoiceacademy/teds-voice-academy
-- **Latest pushed commit:** `937d63a` on `main` branch (About page encoding fix, Feb 3)
-- **Local changes:** UNCOMMITTED — significant SEO, FAQ, and social media work done Feb 4. Needs to be committed and pushed.
+- **Latest pushed commit:** `bb0b04a` on `main` branch (SEO, FAQ, social media — Feb 4)
+- **Local changes:** In sync with remote. All changes committed and pushed.
 - **Local project path:** `teds-voice-academy-main/teds-voice-academy-main/`
-- **Netlify deploy:** Last deploy was commit `937d63a`. New work not yet deployed.
+- **Netlify deploy:** Auto-deploying from commit `bb0b04a`. Should be live within 1-2 minutes.
 - **Build status:** Clean — `npm run build` succeeds, 13 pages built (12 original + new FAQ page)
 - **Git auth:** Configured — `git config` has Ted's name/email, repo access works via HTTPS
 

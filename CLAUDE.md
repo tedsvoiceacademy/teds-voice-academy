@@ -260,7 +260,7 @@ Already implemented in Footer.astro using Netlify Forms.
 - [x] FAQ page + AVF/PASS FAQ sections — DONE (Feb 4, 2026)
 - [x] Social media links in footer — DONE (Feb 4, 2026)
 - [ ] Domain cutover (tedsvoiceacademy.com → Netlify)
-- [ ] Commit and push Feb 4 changes to GitHub
+- [x] Commit and push Feb 4 changes to GitHub — DONE (commit `bb0b04a`)
 
 **For the full project backlog, see `PROJECT_BACKLOG.md`.**
 
