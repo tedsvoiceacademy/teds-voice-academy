@@ -18,6 +18,10 @@ import Layout from '../layouts/BaseLayout.astro';
       },
       "description": "Voice coach with four decades of teaching experience, author of The Adaptive Voice Framework",
       "knowsAbout": ["Singing", "Voice Training", "Public Speaking", "Vocal Health", "Choir Directing", "Ensemble Coaching"],
+      "memberOf": [
+        { "@type": "PerformingGroup", "name": "Voices of the Sound", "url": "https://www.voicesofthesound.org" },
+        { "@type": "PerformingGroup", "name": "Hot Notes Quartet" }
+      ],
       "url": "https://www.tedsvoiceacademy.com/about"
     })} />
   </Fragment>
@@ -139,6 +143,51 @@ import Layout from '../layouts/BaseLayout.astro';
       <p>When I'm not working with students, I'm probably practicing, reading about voice science, or finding new ways to explain concepts I've been teaching for decades. The voice still fascinates me. I don't think that will ever change.</p>
       
       <p>If you're curious about working together, I'd love to hear from you.</p>
+    </div>
+  </section>
+
+  <!-- Ensembles Section -->
+  <section class="ensembles-section">
+    <div class="container container-narrow">
+      <h2>On stage with my ensembles</h2>
+
+      <p>Teaching voice is my calling — and performing is where I keep that calling alive. I'm an active performer in the barbershop harmony community, and my ensemble work is one of the great joys of my life.</p>
+
+      <div class="ensemble-cards">
+        <div class="ensemble-card">
+          <h3>Voices of the Sound</h3>
+          <p>I'm the director of Voices of the Sound, a barbershop chorus based in the Pacific Northwest. Leading this group is one of the most rewarding things I do — it brings together everything I believe about voice, community, and the power of singing together.</p>
+          <div class="ensemble-links">
+            <a href="https://www.voicesofthesound.org" target="_blank" rel="noopener" class="ensemble-link">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+                <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/>
+                <polyline points="15 3 21 3 21 9"/>
+                <line x1="10" y1="14" x2="21" y2="3"/>
+              </svg>
+              Website
+            </a>
+            <a href="https://www.facebook.com/VoicesoftheSound" target="_blank" rel="noopener" class="ensemble-link">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                <path d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z"/>
+              </svg>
+              Facebook
+            </a>
+          </div>
+        </div>
+
+        <div class="ensemble-card">
+          <h3>Hot Notes Quartet</h3>
+          <p>Hot Notes is the quartet I sing with — four voices, tight harmonies, and a whole lot of energy. Quartet singing is where vocal technique meets real-time communication, and every performance is its own adventure.</p>
+          <div class="ensemble-links">
+            <a href="https://www.facebook.com/hotnotesquartet" target="_blank" rel="noopener" class="ensemble-link">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                <path d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z"/>
+              </svg>
+              Facebook
+            </a>
+          </div>
+        </div>
+      </div>
     </div>
   </section>
 
@@ -454,6 +503,76 @@ import Layout from '../layouts/BaseLayout.astro';
 
   .personal-section p:last-child {
     margin-bottom: 0;
+  }
+
+  /* Ensembles Section */
+  .ensembles-section {
+    background: var(--color-off-white);
+    padding: 4rem 0;
+  }
+
+  .ensembles-section h2 {
+    font-family: var(--font-heading);
+    font-size: clamp(1.5rem, 2.5vw + 1rem, 2rem);
+    font-weight: 700;
+    color: var(--color-navy-deep);
+    margin: 0 0 1.5rem;
+  }
+
+  .ensembles-section > .container-narrow > p {
+    font-size: 1.0625rem;
+    line-height: 1.8;
+    color: var(--color-charcoal);
+    margin-bottom: 1.5rem;
+  }
+
+  .ensemble-cards {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    margin-top: 1.5rem;
+  }
+
+  .ensemble-card {
+    padding: 1.75rem;
+    border-radius: 12px;
+    border-left: 4px solid var(--color-gold-bright);
+    background: var(--color-white);
+  }
+
+  .ensemble-card h3 {
+    font-family: var(--font-heading);
+    font-size: 1.25rem;
+    font-weight: 700;
+    color: var(--color-navy-deep);
+    margin: 0 0 0.75rem;
+  }
+
+  .ensemble-card p {
+    color: var(--color-charcoal);
+    line-height: 1.7;
+    margin: 0 0 1rem;
+  }
+
+  .ensemble-links {
+    display: flex;
+    gap: 1.25rem;
+    flex-wrap: wrap;
+  }
+
+  .ensemble-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.4rem;
+    font-size: 0.9375rem;
+    font-weight: 600;
+    color: var(--color-gold-bright);
+    text-decoration: none;
+    transition: color 0.2s ease;
+  }
+
+  .ensemble-link:hover {
+    color: var(--color-gold-hover);
   }
 
   /* CTA Section */

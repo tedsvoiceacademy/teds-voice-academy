@@ -16,7 +16,8 @@ This is the living project list for the TVA website. Items move between tiers as
 - [x] **Fix About page em dash encoding** — Fixed Feb 3, 2026. Commit `937d63a`.
 - [x] **SEO foundation** — robots.txt, sitemap (via @astrojs/sitemap), LocalBusiness schema, page-specific schemas (Person, Book, FAQ), meta tag alignment with SEO spec. Done Feb 4, 2026.
 - [x] **FAQ sections** — Dedicated FAQ page (TVA general), plus FAQ sections on AVF and PASS pages, all with FAQPage schema markup. Done Feb 4, 2026.
-- [x] **Social media links** — Facebook, Instagram, YouTube, LinkedIn, Alignable added to footer + sameAs in schema. Done Feb 4, 2026. (Voices of the Sound, Hot Notes, Heart of the Sound links still needed — see Waiting on Ted.)
+- [x] **Social media links** — Facebook, Instagram, YouTube, LinkedIn, Alignable added to footer + sameAs in schema. Done Feb 4, 2026.
+- [x] **Ensemble links** — Voices of the Sound + Hot Notes added to footer and About page. Person schema updated with memberOf. Heart of the Sound deferred (no online presence yet). Done Feb 4, 2026.
 - [ ] **Domain cutover** — Switch tedsvoiceacademy.com DNS to point to Netlify. Requires: clarifying current setup (tedsvoiceacademy.com currently redirects to tedsvoice.com on Webwave). Coordinate with Ted on registrar access and Webwave settings.
 
 ---
@@ -89,9 +90,9 @@ The page structure is built. These sections have intro copy with "coming soon" p
 - [ ] **Coaching/performance photos** — images of Ted coaching, students performing
 - [ ] **Organization logos/names** — professional organizations Ted belongs to
 - [x] **Social media profile URLs** — for footer social links (Done Feb 4: Facebook, Instagram, YouTube, LinkedIn, Alignable)
-- [ ] **Voices of the Sound URL** — Ted's chorus. Need link to add to site.
-- [ ] **Hot Notes quartet URL** — Ted's quartet. Need link to add to site.
-- [ ] **Heart of the Sound quartet URL** — Ted's new chapter quartet. Need link to add to site.
+- [x] **Voices of the Sound URL** — Done Feb 4. Website + Facebook added to footer and About page.
+- [x] **Hot Notes quartet URL** — Done Feb 4. Facebook added to footer and About page.
+- [ ] **Heart of the Sound quartet URL** — Deferred. No online presence yet. Add when available.
 
 ---
 
@@ -111,6 +112,7 @@ The page structure is built. These sections have intro copy with "coming soon" p
 - [x] Fixed title tag duplication across all pages (BaseLayout was double-appending site name) (Feb 4, 2026)
 - [x] Social media links added to footer: Facebook, Instagram, YouTube, LinkedIn, Alignable (Feb 4, 2026)
 - [x] Social profile sameAs URLs added to LocalBusiness schema for SEO (Feb 4, 2026)
+- [x] Ensemble links: Voices of the Sound + Hot Notes added to footer and About page, Person schema updated with memberOf (Feb 4, 2026)
 
 ---
 

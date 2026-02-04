@@ -17,8 +17,8 @@
 
 ### Git & Deploy
 - **GitHub repo:** https://github.com/tedsvoiceacademy/teds-voice-academy
-- **Latest pushed commit:** `bb0b04a` on `main` branch (SEO, FAQ, social media — Feb 4)
-- **Local changes:** In sync with remote. All changes committed and pushed.
+- **Latest pushed commit:** Will be updated after push (previous: `6dc8f20`)
+- **Local changes:** Ensemble links added to footer and About page. Needs commit and push.
 - **Local project path:** `teds-voice-academy-main/teds-voice-academy-main/`
 - **Netlify deploy:** Auto-deploying from commit `bb0b04a`. Should be live within 1-2 minutes.
 - **Build status:** Clean — `npm run build` succeeds, 13 pages built (12 original + new FAQ page)
@@ -33,7 +33,7 @@ All pages build cleanly. The new FAQ page is at `/faq`.
 | Singing | `/singing` | Clean — meta tags updated |
 | Speaking | `/speaking` | Clean — meta tags updated |
 | Ensembles | `/ensembles` | Clean — meta tags updated |
-| About | `/about` | Clean — meta tags updated, Person schema added |
+| About | `/about` | Clean — meta tags updated, Person schema + ensembles section + memberOf schema |
 | Pricing | `/pricing` | Clean — meta tags updated |
 | Contact | `/contact` | Clean — meta tags updated |
 | AVF | `/avf` | Clean — meta tags updated, Book schema + FAQ section + FAQ schema added |
@@ -80,16 +80,22 @@ None currently.
 13. Added social media icon links to footer (Facebook, Instagram, YouTube, LinkedIn, Alignable) with hover effects
 14. Added `sameAs` social profile URLs to LocalBusiness schema for SEO
 
+### Ensemble Links
+15. Added "My Ensembles" section to footer with Voices of the Sound (website + Facebook) and Hot Notes (Facebook)
+16. Added "On stage with my ensembles" section to About page with descriptions and links for both groups
+17. Updated Person schema on About page with `memberOf` for both ensembles
+18. Heart of the Sound deferred — no online presence yet
+
 ### Documentation
-15. Updated `PROJECT_BACKLOG.md` with all new items from Ted's Feb 4 priorities
-16. Updated this handoff document
+19. Updated `PROJECT_BACKLOG.md` with all new items from Ted's Feb 4 priorities
+20. Updated this handoff document
 
 ---
 
 ## What Was NOT Done (and Why)
 
 - **Domain cutover** — Ted wants to handle social links, SEO, and FAQ first. Also needs to clarify the current setup (tedsvoiceacademy.com redirects to tedsvoice.com via Webwave). Remains Tier 1 in backlog.
-- **Voices of the Sound / Hot Notes / Heart of the Sound links** — Ted mentioned wanting to link these groups. Need specific URLs. Noted in backlog under "Waiting on Ted."
+- **Heart of the Sound links** — No online presence yet. Will add when Ted has URLs.
 - **OG default image** — BaseLayout references `/images/og-default.jpg` but the file doesn't exist. Would need a 1200x630px branded image. Remains Tier 2.
 - **Git commit/push** — Changes are local only. Need to commit and push to trigger Netlify deploy.
 - **Visual verification** — Pages build cleanly but new FAQ page and social links haven't been visually verified in-browser on the live site (they're not deployed yet).
@@ -128,11 +134,9 @@ Files modified/created this session (need `git add`, `git commit`, `git push`):
 
 ## Suggested Next Steps
 
-1. **Commit and push** all changes to trigger Netlify deploy
-2. **Visually verify** the FAQ page, social links, and all pages on the live site
-3. **Add Voices of the Sound / Hot Notes / Heart of the Sound links** once Ted provides URLs
-4. **Domain cutover planning** — clarify Webwave/registrar setup
-5. Whatever Ted wants from the backlog (award photos, Rapid Reviews, testimonials, etc.)
+1. **Visually verify** the FAQ page, social links, ensemble links, and all pages on the live site
+2. **Domain cutover planning** — clarify Webwave/registrar setup
+3. Whatever Ted wants from the backlog (award photos, Rapid Reviews, testimonials, etc.)
 
 ---
 

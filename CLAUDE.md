@@ -49,6 +49,11 @@ You are continuing development on the Ted's Voice Academy (TVA) website — a pr
 - LinkedIn: https://www.linkedin.com/in/ted-chamberlain-a18484280/
 - Alignable: https://www.alignable.com/lacey-wa/teds-voice-academy
 
+### Ensemble Links (in Footer + About Page)
+- Voices of the Sound (chorus): https://www.voicesofthesound.org + https://www.facebook.com/VoicesoftheSound
+- Hot Notes Quartet: https://www.facebook.com/hotnotesquartet
+- Heart of the Sound (new chapter quartet): deferred — no online presence yet
+
 ---
 
 ## Critical Build Rules (MUST FOLLOW)
@@ -375,6 +380,7 @@ When nearing token limits (60-70% usage):
 | Feb 3, 2026 | Session (Claude Code) | Built Workshops, Vocal Health Hub, Blog pages. Added Google Maps embed + Get Directions link to Contact page. All 12 pages verified locally. |
 | Feb 3, 2026 | Session 2 (Claude Code) | Verified all code in sync with GitHub. Visual review of all 12 live pages. Discovered About page em dash bug. Created PROJECT_BACKLOG.md and improved HANDOFF_NEXT_SESSION.md. |
 | Feb 4, 2026 | Session 3 (Claude Code) | SEO foundation (robots.txt, sitemap, LocalBusiness/Person/Book schemas, meta tag fixes). FAQ page + AVF/PASS FAQ sections with FAQPage schema. Social media links in footer + sameAs in schema. Title tag duplication fix across all pages. |
+| Feb 4, 2026 | Session 4 (Claude Code) | Added ensemble links: Voices of the Sound + Hot Notes to footer and About page. Person schema updated with memberOf. |
 
 ---
 

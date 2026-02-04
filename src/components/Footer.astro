@@ -115,6 +115,14 @@ const footerLinks = {
             </svg>
           </a>
         </div>
+
+        <!-- Ted's Ensembles -->
+        <div class="footer__ensembles">
+          <span class="footer__ensembles-label">My Ensembles:</span>
+          <a href="https://www.voicesofthesound.org" target="_blank" rel="noopener" class="footer__ensemble-link">Voices of the Sound</a>
+          <span class="footer__ensembles-divider">·</span>
+          <a href="https://www.facebook.com/hotnotesquartet" target="_blank" rel="noopener" class="footer__ensemble-link">Hot Notes Quartet</a>
+        </div>
       </div>
 
       <!-- Navigation Columns -->
@@ -286,6 +294,39 @@ const footerLinks = {
     background-color: var(--color-gold-bright);
     color: var(--color-navy-deep);
     transform: translateY(-2px);
+  }
+
+  /* Ensembles */
+  .footer__ensembles {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: var(--space-2);
+    margin-top: var(--space-3);
+  }
+
+  .footer__ensembles-label {
+    font-size: var(--text-xs);
+    color: rgba(245, 240, 225, 0.6);
+    font-weight: var(--font-semibold);
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+  }
+
+  .footer__ensemble-link {
+    font-size: var(--text-sm);
+    color: rgba(245, 240, 225, 0.8);
+    text-decoration: none;
+    transition: color var(--transition-fast);
+  }
+
+  .footer__ensemble-link:hover {
+    color: var(--color-gold-bright);
+  }
+
+  .footer__ensembles-divider {
+    color: rgba(245, 240, 225, 0.4);
+    font-size: var(--text-sm);
   }
 
   /* Navigation */
