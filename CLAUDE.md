@@ -39,13 +39,16 @@ You are continuing development on the Ted's Voice Academy (TVA) website — a pr
 | **Privacy** | `src/pages/privacy.astro` | ✅ **New Feb 5** — Privacy policy page |
 | **Terms** | `src/pages/terms.astro` | ✅ **New Feb 5** — Terms of service page |
 
-### SEO Infrastructure (Feb 4-5, 2026)
+### SEO & Analytics Infrastructure (Feb 4-5, 2026)
 - `public/robots.txt` — crawler directives + sitemap reference (URL fixed to bare domain Feb 5)
 - `@astrojs/sitemap` integration — auto-generates sitemap with all 16 pages
 - **LocalBusiness JSON-LD** in BaseLayout (every page) — includes sameAs social profiles (URLs fixed to bare domain Feb 5)
 - **Person schema** on About page, **Book schema** on AVF page
 - **FAQPage schema** on FAQ, AVF, and PASS pages
 - All meta titles/descriptions aligned with `docs/specs/TVA_SEO_Meta_Content_v1.md`
+- **GA4 tracking** — Measurement ID `G-ZDX6WPT6CZ` in BaseLayout.astro `<head>` (scripts use `is:inline` directive)
+- **Google Search Console** — Verified for tedsvoiceacademy.com, sitemap submitted
+- **Privacy policy** updated to disclose GA4 usage (Feb 5, 2026)
 
 ### Social Media Links (in Footer)
 - Facebook: https://www.facebook.com/TedsVoiceAcademy
@@ -153,7 +156,9 @@ teds-voice-academy/
 │   │   ├── vocal-health.astro
 │   │   ├── blog.astro
 │   │   ├── faq.astro             # ✅ New Feb 4, 2026
-│   │   └── success.astro         # ✅ New Feb 5, 2026 — form thank-you page
+│   │   ├── success.astro         # ✅ New Feb 5, 2026 — form thank-you page
+│   │   ├── privacy.astro         # ✅ New Feb 5, 2026 — Privacy policy (updated for GA4)
+│   │   └── terms.astro           # ✅ New Feb 5, 2026 — Terms of service
 │   └── styles/
 │       └── global.css            # Design tokens
 ├── public/
@@ -287,7 +292,9 @@ In Footer.astro. Form name: `newsletter-footer`. Fields: email.
 - [ ] Articles & Resources: featured articles, external resource links
 
 ### Post-Launch / Phase 2
-- [ ] Analytics setup — **GA4 + Google Search Console + Looker Studio weekly email report** (Ted's decision, Feb 5 session 8)
+- [x] Analytics setup — **GA4 live** (G-ZDX6WPT6CZ), **Google Search Console verified** (Feb 5, Session 9)
+- [ ] Looker Studio weekly email report — deferred until GA4 has data
+- [ ] GEO/SEO implementation — Research done (Session 9), multiple items approved. See PROJECT_BACKLOG.md.
 - [ ] CMS for easy content updates (Decap CMS recommended)
 - [ ] Digital product delivery for Vocal Fit (Gumroad or Lemonsqueezy)
 - [ ] Email newsletter system (Buttondown recommended)
@@ -395,8 +402,9 @@ When nearing token limits (60-70% usage):
 | Feb 4, 2026 | Session 6 (Claude Code) | Fixed redirect loop: removed conflicting bare→www redirect from netlify.toml (commit `4a8b573`). Updated astro.config.mjs site URL to bare domain. Ted activated Netlify DNS. Verified MX, PASS subdomain, SSL intact. Site live at tedsvoiceacademy.com. |
 | Feb 5, 2026 | Session 7 (Claude Code) | Fixed all 4 Netlify forms (broken since launch). Created form-detect.html + success.astro. Removed catch-all redirect + deprecated config from netlify.toml. Ted enabled Form Detection in Netlify UI. Email notifications configured. Comprehensive 21-item site audit. Findings captured in PROJECT_BACKLOG.md awaiting Ted's review/approval. |
 | Feb 5, 2026 | Session 8 (Claude Code) | Fixed robots.txt + schema URLs (www→bare). Removed broken favicon PNGs. Replaced placeholder testimonials with Rapid Reviews carousel. FAQ accordion on FAQ/AVF/PASS pages. Card height fix across 5 pages. Created Privacy Policy + Terms of Service pages (16 pages total). AVF dials image updated. Ted decided: GA4 + Search Console + Looker Studio for analytics. Blog stays visible. |
+| Feb 5, 2026 | Session 9 (Claude Code) | Hero eyebrow sizing (1rem→1.25rem). GA4 tracking live (G-ZDX6WPT6CZ) + is:inline fix. Google Search Console verified, sitemap submitted. Privacy policy updated for GA4. Contact form tone softened (H1, optional fields, warmer copy). Comprehensive GEO/SEO research report (8 GEO recs, 10 SEO improvements, 12 blog topics, schema additions). Ted approved quick wins: robots.txt AI crawlers, llms.txt, image optimization, award photos. |
 
 ---
 
-*Last updated: February 5, 2026 (Session 8)*
+*Last updated: February 5, 2026 (Session 9)*
 *Project started: January 2026*

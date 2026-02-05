@@ -1,7 +1,7 @@
 # SESSION HANDOFF — Ted's Voice Academy
 
 **Date written:** February 5, 2026
-**Written by:** Claude Code session 8 (Opus 4.5)
+**Written by:** Claude Code session 9 (Opus 4.5)
 **Site status: LAUNCHED & LIVE** at https://tedsvoiceacademy.com
 
 ---
@@ -29,33 +29,88 @@ This applies to everything — quick fixes, visual changes, SEO tweaks, all of i
 
 ---
 
-## Prioritized To-Do List (ALL REQUIRE TED'S APPROVAL BEFORE WORK BEGINS)
+## Prioritized To-Do List — Session 10
 
-### Ready to Implement Next
+Ted approved these items at the end of Session 9. They are ready to implement with no further discussion needed:
 
-1. ~~**Hero eyebrow sizing**~~ — **DONE (Session 9).** "MASTER YOUR VOICE" eyebrow bumped from `1rem` (16px) to `1.25rem` (20px). H1 left unchanged. CLAUDE.md hero pattern updated to match.
+### Quick Wins (All Approved — Just Do Them)
 
-2. ~~**GA4 + Google Search Console**~~ — **DONE (Session 9).** GA4 live (G-ZDX6WPT6CZ, commit `8f1a8cd`). Search Console verified for tedsvoiceacademy.com, sitemap submitted. Privacy policy updated for GA4 disclosure. **Looker Studio weekly email** deferred — needs a few days of GA4 data first.
+1. **Update robots.txt for AI crawlers** — Add explicit Allow directives for GPTBot, ChatGPT-User, OAI-SearchBot, PerplexityBot, ClaudeBot, Google-Extended, Amazonbot. ~15 minutes.
 
-3. ~~**Contact form tone review**~~ — **DONE (Session 9).** H1 softened to "Let me know how I can help", warmer subtitle, interest/experience/goals all made optional, goals label changed to "What's on your mind?". Commit `609912d`.
+2. **Create llms.txt file** — New file at `public/llms.txt` that tells AI search engines what the site is about in clean Markdown. Ted loved this idea. ~1 hour.
 
-### Larger Projects (Discussed, Not Yet Scheduled)
+3. **Image optimization (automated batch)** — Convert all PNG images in `public/images/` to WebP format programmatically. Ted specifically asked if this could be automated (yes). The two award photos are already WebP. ~30 min.
 
-4. **Visual engagement improvements** — Site is text-heavy and visually repetitive. Ted wants it to WOW. Possible directions: icons, pull quotes, section dividers, scroll animations, background textures, varied layouts. Requires collaborative exploration — not a solo implementation.
+4. **Rename award photos** — Current names work but could be cleaner:
+   - `Business-Rate-Award-2025.webp` → `award-businessrate-top3-vocal-instructor-2025.webp`
+   - `Ted-Lacey-Entrepreneur-OTY-2025---Trophy.webp` → `award-lacey-chamber-entrepreneur-of-year-2025.webp`
+   Then add them to the About page.
 
-5. **OG default image** — BaseLayout references `/images/og-default.jpg` which doesn't exist. Need 1200x630px branded image for social sharing previews.
+5. **Add award photos to About page** — Display both awards with captions:
+   - BusinessRate Top 3 Vocal Instructor, State of Washington (Google Reviews, July 2025)
+   - Lacey South Sound Chamber Entrepreneur of the Year 2025
 
-6. **Form notification email formatting** — Ted requested this. Netlify form notification emails are plain/ugly. Explore formatting options.
+### Ready After Quick Wins
 
-7. **Image optimization** — All images are PNG. Converting to WebP/AVIF would improve load times.
+6. **Organizations & affiliations on About page** — Ted wants to scrape from tedsvoice.com "Proudly Connected With These Professional Associations" section. The old site didn't render via fetch (JavaScript-rendered). **Ted needs to provide the list of organizations.** From Session 9 context/screenshots, the known ones are:
+   - BNI (Business Network International)
+   - BRING! (Business Referrals and Interactive Networking Group)
+   - Thurston County Chamber
+   - Lacey South Sound Chamber
+   - NATS (National Association of Teachers of Singing)
+   - Barbershop Harmony Society
+   - Evergreen District (Barbershop)
+   - Mixed Barbershop (Harmony Association)
+   **Ted needs to confirm this list and provide any logo files.** Alternatively, link to their websites and use text/badges instead of logos.
 
-8. **Restructure Vocal Health Hub** — Minimize visibility of "coming soon" placeholder sections. Reorganize to lead with completed content.
+7. **Course + Service schema markup** — Add schema.org Course structured data to Singing, Speaking, Ensembles pages. Add Service schema listing each offering. Unlocks rich search results.
 
-9. **Blog system build** — Individual post template, routing, index page. Blog stays visible in nav (Ted's decision). Blocked on 24 scraped posts from old site.
+8. **OG default image** — Create a branded 1200x630px image for social media sharing previews. Currently referenced in BaseLayout but file doesn't exist. **Ted said he doesn't understand this yet — explanation was provided in Session 9:** When someone shares a link on social media/text, the platform shows a preview card with an image. That's the OG image.
 
-10. **CMS integration** — Decap CMS for Ted to update content independently. Best done alongside or after blog system.
+### GEO/SEO Research (COMPLETED — Results Ready)
 
-11. **Full visual overhaul** — Implementing the engagement improvements from item #4. Biggest project, collaborative and iterative.
+A comprehensive GEO/SEO strategy report was produced in Session 9. Key findings:
+
+**Top GEO Recommendations:**
+1. Create `llms.txt` file (approved — see quick wins above)
+2. Update robots.txt for AI crawlers (approved — see quick wins above)
+3. Write "answer capsule" summaries on key service pages (2-3 sentences AI engines can quote)
+4. Add statistics, credentials, and verifiable facts throughout the site
+5. Build multi-platform presence (YouTube, LinkedIn, Reddit)
+6. Publish original content about the AVF Framework on the blog
+7. Add publish/update dates to all content pages
+8. Track AI referral traffic in GA4
+
+**Top SEO Recommendations:**
+1. Claim/optimize Google Business Profile (THE most important local SEO action)
+2. Add Course + Service schema markup
+3. Add Review/AggregateRating schema (when reviews exist)
+4. Create OG images for social sharing
+5. Internal linking strategy across all 16 pages
+6. Voice search optimization (conversational Q&A content)
+7. Self-host fonts (eliminate external DNS lookups)
+8. Build review collection system
+9. Add breadcrumb schema + visual breadcrumbs
+10. Optimize for long-tail keywords
+
+**Blog Content Strategy (12 topics prioritized):**
+- Tier 1 (publish first): How to choose a voice teacher, Singing lessons for adults, What to expect at first lesson, Vocal health care, Voice teacher vs vocal coach
+- Tier 2 (build depth): The AVF Framework explained, Vocal warmups for beginners, Musical theatre audition prep, Can you teach yourself to sing?, Speaking with confidence
+- Tier 3 (local authority): Best performance venues in Olympia/Lacey, Singing groups in South Sound area
+
+Ted said: "I will definitely want to fully maximize SEO (and GEO if useful) potential" and wants to start blog content in the next few days.
+
+### Visual Polish (Ted Wants These ASAP)
+
+These are discussion items — need collaborative exploration before implementation:
+- Hero parallax effect
+- Background textures & visual richness
+- Section dividers, iconography
+- Pull quotes/callout boxes
+- Scroll-triggered animations
+- Varied section layouts
+
+**Approach:** Research best practices for text-heavy coaching/education sites. Show Ted reference examples. Get approval on specific design changes, then implement.
 
 ---
 
@@ -63,24 +118,33 @@ This applies to everything — quick fixes, visual changes, SEO tweaks, all of i
 
 ### Git & Deploy
 - **GitHub repo:** https://github.com/tedsvoiceacademy/teds-voice-academy
-- **Latest pushed commit:** `91591e1` on `main` branch (Privacy + Terms pages)
-- **Commits this session:** `ddc950f` (items 1-4), `61e1518` (FAQ accordion), `1aae887` (card heights), `91591e1` (privacy/terms)
-- **Local changes pending:** Updated CLAUDE.md, HANDOFF_NEXT_SESSION.md, PROJECT_BACKLOG.md + AVF dials image update — need to be committed and pushed
+- **Latest pushed commit:** `40666b6` on `main` branch
+- **Session 9 commits:** `ad66433`, `8f1a8cd`, `8de3d77`, `609912d`, `40666b6`
 - **Local project path:** `H:\OneDrive\AI Projects\TVA AI Projects\TVA Webstie 4.0\teds-voice-academy-main\teds-voice-academy-main\`
 - **Live site:** https://tedsvoiceacademy.com
 - **Netlify URL:** https://deft-baklava-b2eb2e.netlify.app/
 - **Build status:** Clean — 16 pages built
 
 ### What's Live (16 Pages)
-Homepage, Contact, Singing, Speaking, Ensembles, About, Pricing, AVF, PASS Profile, Workshops, Vocal Health Hub, Blog, FAQ, Success, **Privacy**, **Terms**
+Homepage, Contact, Singing, Speaking, Ensembles, About, Pricing, AVF, PASS Profile, Workshops, Vocal Health Hub, Blog, FAQ, Success, Privacy, Terms
+
+### Analytics (NEW — Session 9)
+- **GA4:** Live, Measurement ID `G-ZDX6WPT6CZ`. Script in BaseLayout.astro `<head>` with `is:inline` directive.
+- **Google Search Console:** Verified for tedsvoiceacademy.com (URL prefix method, auto-verified via same Google account). Sitemap submitted (`sitemap-index.xml`).
+- **Looker Studio:** Deferred — needs a few days of GA4 data first.
+- **Note:** GA4 Realtime wasn't showing Ted as active user at end of Session 9. Likely propagation delay or ad blocker. Should be working by now — verify.
 
 ### Netlify Forms — WORKING
 - **Form Detection:** Enabled in Netlify UI
 - **Forms detected:** contact, workshop-inquiry, blog-newsletter, newsletter-footer
 - **Email notifications:** Configured to ted@tedsvoiceacademy.com for all forms
 - **Success page:** `/success` — branded thank-you page with gold checkmark
-- **Key files:** `public/form-detect.html` (hidden form definitions for Netlify build bot), `src/pages/success.astro`
-- **All forms have `action="/success"`** — contact.astro, workshops.astro, blog.astro, Footer.astro
+- **Key files:** `public/form-detect.html`, `src/pages/success.astro`
+
+### Images in public/images/
+- `avf-book-cover.png`, `avf-book-photo.png`, `avf-pillars.png`, `avf-dials.png` (updated Session 8)
+- `hero-ted.png`, `pass-bubble.png`, `pass-profile-logo.png`, `ted-headshot.png`, `tva-logo.png`
+- **NEW:** `Business-Rate-Award-2025.webp`, `Ted-Lacey-Entrepreneur-OTY-2025---Trophy.webp` (Ted added, already WebP)
 
 ### Domain Setup — WORKING
 - **Domain registrar:** Squarespace (registration only)
@@ -88,86 +152,126 @@ Homepage, Contact, Singing, Speaking, Ensembles, About, Pricing, AVF, PASS Profi
 - **Primary domain:** `tedsvoiceacademy.com` (bare domain, no www)
 - **www redirect:** `www.tedsvoiceacademy.com` -> redirects to bare domain
 - **SSL:** Let's Encrypt, auto-renews
-- **Old site:** `tedsvoice.com` on Webwave still alive (Ted needs for blog scraping)
-
-### Known Issues (not bugs, just items to address)
-- OG default image referenced but doesn't exist
-- Blog page has no actual posts (stays visible per Ted's decision)
-- Vocal Health Hub has "coming soon" placeholder sections
 
 ### Environment
 - **Platform:** Windows
 - **Git:** v2.52.0
 - **GitHub CLI (`gh`):** Not installed — use standard `git` commands
 - **Node/npm:** Available (Astro project)
-- **Browser tools:** Claude in Chrome MCP available for visual testing
+- **Ted's Google account:** ted@tedsvoiceacademy.com (Google Business Standard)
 
 ---
 
-## What Session 8 Accomplished (Feb 5, 2026)
+## What Session 9 Accomplished (Feb 5, 2026)
 
-### Quick Technical Fixes (Commit `ddc950f`)
-1. **Fixed robots.txt sitemap URL** — Changed `www.tedsvoiceacademy.com` to `tedsvoiceacademy.com`
-2. **Fixed LocalBusiness schema URLs** — Changed `image` and `url` fields in BaseLayout.astro from www to bare domain
-3. **Removed broken favicon PNG references** — Deleted 3 broken link tags from BaseLayout.astro, keeping only the working SVG favicon
-4. **Replaced placeholder testimonials with Rapid Reviews carousel** — Integrated Ted's Rapid Reviews Google review widget on homepage using `<Fragment slot="scripts">` pattern. Updated CSS to match.
+### Hero Eyebrow Sizing (Commit `ad66433`)
+- "MASTER YOUR VOICE" eyebrow text bumped from `1rem` to `1.25rem`
+- H1 left unchanged at `clamp(2rem, 4vw + 1rem, 3rem)`
+- CLAUDE.md hero pattern updated to match
 
-### FAQ Accordion (Commit `61e1518`)
-5. **Converted FAQ sections to accordion pattern** — All three pages (FAQ, AVF, PASS) now use `<details>/<summary>` elements with +/- indicators, hover effects, and brand-appropriate styling. No JavaScript needed. FAQPage schema preserved.
+### GA4 Setup (Commits `ad66433`, `8f1a8cd`)
+- Added gtag.js snippet to BaseLayout.astro `<head>` section
+- Fixed missing `is:inline` directive on script tag (Astro was bundling/stripping the external src)
+- Measurement ID: `G-ZDX6WPT6CZ`
 
-### Card Height Fix (Commit `1aae887`)
-6. **Fixed card height inconsistency** — Added CSS flexbox equalization to card grids on 5 pages: singing.astro, speaking.astro, ensembles.astro, pricing.astro, index.astro. Cards now match heights within each row.
+### Google Search Console (No commit — external setup)
+- Verified tedsvoiceacademy.com via URL prefix method
+- Auto-verified due to same Google account as GA4
+- Sitemap `sitemap-index.xml` submitted
+- Search Console was processing data at end of session
 
-### Privacy & Terms Pages (Commit `91591e1`)
-7. **Created Privacy Policy page** (`/privacy`) — Comprehensive policy in Forward Light voice covering data collection, usage, third-party services, user choices
-8. **Created Terms of Service page** (`/terms`) — Full terms covering site use, coaching services, PASS Profile, IP, liability, etc.
-9. Both pages follow TVA design pattern (navy hero, gold accents, content section) and resolve the dead footer links
+### Privacy Policy Update (Commit `ad66433`)
+- Updated "Information collected automatically" section to disclose Google Analytics
+- Updated "What I Don't Do" cookies section
+- Added Google Analytics to Third-Party Services list
 
-### Ted's Decisions This Session
-- **Analytics:** GA4 + Google Search Console + Looker Studio (free weekly email report)
-- **Blog:** Stays visible in nav until blog system built
-- **AVF dials image:** Ted replaced `public/images/avf-dials.png` with updated version — will go live on next push
-- **Handoff docs:** Must be updated incrementally after each significant task, not batched at session end
+### Contact Form Tone Review (Commit `609912d`)
+- H1: "Get Started" → "Let me know how I can help"
+- Subtitle: warmed up to "I'd love to hear what you're working on..."
+- Interest checkboxes: made optional (removed required)
+- Experience level: made optional
+- Goals label: "What are you hoping to work on? *" → "What's on your mind?" (optional)
+- Kept optional "Anything else I should know?" freeform box
+- Meta title "Contact & Schedule Lessons" kept for SEO value
+
+### Handoff Doc Updates (Commits `8de3d77`, `40666b6`)
+- Incremental updates after GA4/Search Console and contact form tasks
+
+### GEO/SEO Research (No commit — research output)
+- Comprehensive strategy report produced with 8 GEO recommendations, 10 SEO improvements, schema additions, and 12-topic blog content strategy
+- Ted reviewed and approved several quick-win items for next session
 
 ---
 
 ## What Was NOT Done (and Why)
 
-- **Hero H1 sizing** — Approved by Ted but session ran long with handoff doc updates. First item for next session.
-- **GA4 / Search Console / Looker Studio** — Ted approved. Needs implementation in a future session.
-- **Visual engagement overhaul** — Requires collaborative session with Ted. Not a solo task.
-- **Contact form tone review** — Not yet discussed in detail. Still on the list.
+- **Looker Studio weekly email** — Deferred until GA4 has data (give it a few days)
+- **robots.txt AI crawler update** — Approved but ran out of session time
+- **llms.txt creation** — Approved but ran out of session time
+- **Image optimization** — Approved but ran out of session time
+- **Award photo rename + About page integration** — Approved but ran out of session time
+- **Organizations/affiliations** — Ted needs to confirm the list (couldn't scrape from old site)
+- **Visual polish items** — Need collaborative exploration session
+- **Form notification email formatting** — Acknowledged, needs Netlify serverless function
+- **Blog system** — Blocked on Ted's 24 scraped posts + blog post template build
+- **GA4 Realtime verification** — Not confirmed working at session end
 
 ---
 
 ## First Thing Next Session
 
-1. **Commit and push** the handoff doc updates + AVF dials image
-2. **Hero H1 sizing** — Show Ted 2-3 larger size options. This was the approved next task.
-3. **GA4 + Search Console setup** if Ted wants to proceed with analytics
+### Immediate (No Discussion Needed — Already Approved):
+1. **Update robots.txt** — Add AI crawler directives
+2. **Create llms.txt** — AI search engine summary file
+3. **Image optimization** — Batch convert PNGs to WebP
+4. **Rename + add award photos to About page**
+
+### After Quick Wins:
+5. **Organizations on About page** — Get Ted's confirmed list
+6. **Course + Service schema** — Add to service pages
+7. **OG default image** — Design branded 1200x630px image
+
+### Discussion Topics:
+8. **Visual polish** — Show Ted reference sites, get approval on specific changes
+9. **Google Business Profile** — Ask Ted if he has one; if not, help set up (highest-impact local SEO action)
 
 ---
 
-## Files Modified in Session 8
+## First Prompt for Session 10
+
+```
+I'm Ted Chamberlain. Read these three files first, in order:
+1. CLAUDE.md
+2. HANDOFF_NEXT_SESSION.md
+3. PROJECT_BACKLOG.md
+
+Project path: H:\OneDrive\AI Projects\TVA AI Projects\TVA Webstie 4.0\teds-voice-academy-main\teds-voice-academy-main\
+
+Then:
+1. Start with the approved quick wins: robots.txt AI crawlers, llms.txt creation, image optimization (batch PNG→WebP), and award photo rename + About page integration.
+2. After quick wins, let's work on the organizations/affiliations for the About page.
+3. Then Course + Service schema markup on the service pages.
+4. After those are done, I want to start on visual polish items — show me reference sites and specific recommendations.
+
+Important workflow reminders:
+- Present your recommendation → discuss → get my explicit approval → then implement
+- Update handoff docs after each significant task
+- Track token usage and ensure clean handoff before running out
+```
+
+---
+
+## Files Modified in Session 9
 
 | File | Change | Commit |
 |------|--------|--------|
-| `public/robots.txt` | Fixed sitemap URL (www → bare domain) | `ddc950f` |
-| `src/layouts/BaseLayout.astro` | Fixed schema URLs + removed broken favicon PNGs | `ddc950f` |
-| `src/pages/index.astro` | Replaced testimonials with Rapid Reviews carousel + card height fix | `ddc950f`, `1aae887` |
-| `src/pages/faq.astro` | Converted to accordion pattern | `61e1518` |
-| `src/pages/avf.astro` | Converted FAQ section to accordion | `61e1518` |
-| `src/pages/pass-profile.astro` | Converted FAQ section to accordion | `61e1518` |
-| `src/pages/singing.astro` | Card height fix (flexbox) | `1aae887` |
-| `src/pages/speaking.astro` | Card height fix (flexbox) | `1aae887` |
-| `src/pages/ensembles.astro` | Card height fix (flexbox) | `1aae887` |
-| `src/pages/pricing.astro` | Card height fix (flexbox) | `1aae887` |
-| `src/pages/privacy.astro` | CREATED — Privacy policy page | `91591e1` |
-| `src/pages/terms.astro` | CREATED — Terms of service page | `91591e1` |
-| `CLAUDE.md` | Updated page count, session log, post-launch items | *pending commit* |
-| `HANDOFF_NEXT_SESSION.md` | Full rewrite for session 8 | *pending commit* |
-| `PROJECT_BACKLOG.md` | Updated completed items, new items | *pending commit* |
-| `public/images/avf-dials.png` | Ted replaced with updated image | *pending commit* |
+| `src/pages/index.astro` | Hero eyebrow font-size 1rem → 1.25rem | `ad66433` |
+| `src/layouts/BaseLayout.astro` | GA4 tracking script added + is:inline fix | `ad66433`, `8f1a8cd` |
+| `src/pages/privacy.astro` | Updated for GA4 disclosure | `ad66433` |
+| `src/pages/contact.astro` | Tone softening (H1, subtitle, optional fields) | `609912d` |
+| `CLAUDE.md` | Hero eyebrow pattern updated | `ad66433` |
+| `HANDOFF_NEXT_SESSION.md` | Multiple incremental updates | `8de3d77`, `40666b6` |
+| `PROJECT_BACKLOG.md` | Multiple incremental updates | `8de3d77`, `40666b6` |
 
 ---
 
@@ -181,8 +285,8 @@ DNS is managed by Netlify, NOT Squarespace. To view/edit DNS records, go to Netl
 | `@` | A/ALIAS | (Netlify managed) | Bare domain -> Netlify site |
 | `www` | CNAME | (Netlify managed) | www -> Netlify site |
 | `pass` | CNAME | `cheery-elf-ded263.netlify.app` | PASS Profile app |
-| `@` | MX | (5 Google MX records) | Email -- DO NOT TOUCH |
-| Various | TXT | DKIM, DMARC, SPF records | Email auth -- DO NOT TOUCH |
+| `@` | MX | (5 Google MX records) | Email — DO NOT TOUCH |
+| Various | TXT | DKIM, DMARC, SPF records | Email auth — DO NOT TOUCH |
 
 **CRITICAL:** Do NOT add redirect rules in `netlify.toml` between bare and www domains. This caused an infinite redirect loop in session 6. Netlify domain settings handle this automatically.
 

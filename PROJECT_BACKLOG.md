@@ -16,115 +16,119 @@ This is the living project list for the TVA website. Items move between tiers as
 
 ---
 
-## Ready to Implement Next
+## Approved Quick Wins (Session 10 — No Discussion Needed)
 
-These items have been discussed and approved by Ted. They're ready to go when session time allows.
+These were discussed and approved by Ted at the end of Session 9. Implement immediately.
 
-- [x] **Hero eyebrow sizing** — "MASTER YOUR VOICE" bumped from `1rem` to `1.25rem` (16px→20px). H1 unchanged. (Session 9)
-- [x] **GA4 + Google Search Console** — GA4 live (G-ZDX6WPT6CZ). Search Console verified, sitemap submitted. Privacy policy updated. (Session 9)
-- [ ] **Looker Studio weekly email** — Deferred until GA4 has a few days of data. Will set up "TVA Website Weekly Performance Overview" report.
+- [ ] **Update robots.txt for AI crawlers** — Add explicit Allow directives for GPTBot, ChatGPT-User, OAI-SearchBot, PerplexityBot, ClaudeBot, Google-Extended, Amazonbot. ~15 min.
+- [ ] **Create llms.txt file** — New file at `public/llms.txt` telling AI search engines what the site is about in clean Markdown. ~1 hour.
+- [ ] **Image optimization (automated batch)** — Convert all PNG images in `public/images/` to WebP. Two award photos already WebP. ~30 min automated.
+- [ ] **Rename award photos** — Clean up file names for web-friendliness, then add to About page with captions.
+- [ ] **Add award photos to About page** — Display both awards (BusinessRate Top 3 Vocal Instructor 2025, Lacey Chamber Entrepreneur of the Year 2025).
 
 ---
 
 ## Tier 1 — High-Value Additions
 
+### GEO/SEO Implementation (Research DONE — Session 9)
+
+Full research report completed. Ted said "I will definitely want to fully maximize SEO (and GEO if useful) potential."
+
+**Quick GEO/SEO wins (approved or ready to discuss):**
+- [ ] **Course + Service schema markup** — Add to Singing, Speaking, Ensembles pages. Unlocks rich search results.
+- [ ] **Answer capsule summaries** — Add 2-3 sentence summaries at top of each service page for AI engines to quote.
+- [ ] **Add publish/update dates** — Display dates on all content pages with `<time>` tags.
+- [ ] **Track AI referral traffic in GA4** — Custom channel grouping for ChatGPT, Perplexity, etc.
+- [ ] **Google Business Profile** — Ask Ted if he has one. If not, this is THE #1 local SEO action. Set up and fully optimize.
+- [ ] **Internal linking strategy** — Every page links to 2-3 related pages contextually.
+- [ ] **Self-host fonts** — Download Inter + Playfair Display, serve from own domain. Eliminates external DNS lookups.
+- [ ] **Breadcrumb schema + visual breadcrumbs** — Add BreadcrumbList schema and breadcrumb navigation to interior pages.
+- [ ] **Review collection system** — Create process for requesting Google reviews from students.
+
+**Larger GEO/SEO efforts:**
+- [ ] **Add statistics, credentials, verifiable facts** throughout site copy (needs Ted's input — years experience, number of students, certifications)
+- [ ] **Multi-platform presence** — YouTube vocal tip videos, LinkedIn articles, Reddit answers in r/singing
+- [ ] **Voice search optimization** — Conversational Q&A content targeting "how much do voice lessons cost in Lacey WA?" etc.
+- [ ] **Long-tail keyword optimization** — Target specific queries throughout site content
+
 ### Blog System + Content (Ted's #1 post-launch priority)
 Ted is scraping 24 blog posts from the old tedsvoice.com Webwave site. Blog stays visible in nav (Ted's decision, Feb 5 session 8).
 
-- [ ] **Blog individual post system** — Build blog post template/layout, routing (`/blog/[slug]`), and index page that lists real posts. Currently only a landing page with category cards.
-- [ ] **Import 24 scraped blog posts** — Convert Ted's scraped content into publishable posts. Ensure proper formatting, meta tags, and schema markup on each.
-- [ ] **Blog post SEO** — Each post needs: unique title/description meta tags, article schema markup (or BlogPosting), OG tags for social sharing.
-- [ ] **CMS for content updates** — Ted needs to update any part of the site easily without coding. Decap CMS (formerly Netlify CMS) is the leading candidate — free, works with GitHub, visual editor. This is a critical enabler for Ted's independence. Best implemented alongside or right after blog posts.
+**Blog content strategy from GEO/SEO research (12 prioritized topics):**
+- Tier 1: How to choose a voice teacher, Singing lessons for adults, What to expect at first lesson, Vocal health care, Voice teacher vs vocal coach
+- Tier 2: The AVF Framework explained, Vocal warmups for beginners, Musical theatre audition prep, Can you teach yourself to sing?, Speaking with confidence
+- Tier 3: Best performance venues in Olympia/Lacey, Singing groups in South Sound area
 
-### SEO Enhancements (ongoing — apply with every change)
-- [ ] **OG images for social sharing** — When someone shares a TVA link on social media, it should show a branded preview image instead of nothing. Default OG image referenced in BaseLayout but file doesn't exist yet. Need 1200x630px branded image.
-- [ ] **Email newsletter system** — Buttondown recommended. Connects to the newsletter signup forms already built into Footer and Blog page. Captures leads from blog traffic.
-- [ ] **GEO (Generative Engine Optimization)** — Research and implement best practices for appearing in AI-generated search results (ChatGPT, Google AI Overview, etc.). This is an emerging field — needs research session to identify what applies to TVA. See Discussion Items.
-- [ ] **Form notification email formatting** — Ted specifically requested this (session 7). Netlify form notification emails are plain/ugly. Explore formatting options.
+Ted said he'll get to blog content "in the next few days."
+
+- [ ] **Blog individual post system** — Build blog post template/layout, routing (`/blog/[slug]`), and index page. Currently only a landing page with category cards.
+- [ ] **Import 24 scraped blog posts** — Convert Ted's scraped content into publishable posts.
+- [ ] **Blog post SEO** — Each post needs: unique title/description, BlogPosting schema, OG tags.
+- [ ] **CMS for content updates** — Decap CMS for Ted to update any part of the site independently. Critical enabler for Ted's independence.
+
+### Other Tier 1 Items
+- [ ] **OG images for social sharing** — Default + per-page branded 1200x630px images. Currently referenced in BaseLayout but file doesn't exist. Ted now understands what this is (explained in Session 9).
+- [ ] **Looker Studio weekly email** — Deferred until GA4 has data. Set up "TVA Website Weekly Performance Overview" report.
+- [ ] **Email newsletter system** — Buttondown recommended. Connects to existing newsletter signup forms.
+- [ ] **Form notification email formatting** — Netlify form emails are plain/ugly. Needs serverless function or third-party integration.
 
 ---
 
 ## Tier 2 — Important Additions
 
-- [ ] **Award photos on About page** — Photos/images of Ted's awards and recognitions.
+- [ ] **Organizations & affiliations on About page** — Display professional associations Ted belongs to. Known list (needs Ted's confirmation):
+  - BNI, BRING!, Thurston County Chamber, Lacey South Sound Chamber, NATS, Barbershop Harmony Society, Evergreen District, Mixed Barbershop
+  - Need: Ted to confirm list + provide logos or approve text-only approach
 - [ ] **Coaching & performance photos** — Photos of Ted coaching, students performing, etc. throughout the site.
-- [ ] **Organizations & affiliations** — Display professional organizations Ted belongs to (About page).
-- [ ] **Image optimization** — All images are PNG. Converting to WebP/AVIF would improve load times. (Session 7 audit finding)
-- [ ] **Restructure Vocal Health Hub** — Minimize visibility of "coming soon" placeholder sections. Reorganize to lead with completed content. (Session 7 audit finding)
+- [ ] **Restructure Vocal Health Hub** — Minimize "coming soon" placeholders. Reorganize to lead with completed content.
+- [ ] **Add Review/AggregateRating schema** — When Google reviews exist, add to LocalBusiness markup. Star ratings in search results dramatically increase CTR.
+- [ ] **Event schema on Workshops page** — When specific workshops are scheduled, add Event structured data.
 
 ---
 
-## Tier 3 — Cosmetic / Visual Polish
+## Tier 3 — Cosmetic / Visual Polish (Ted Wants ASAP)
 
-- [ ] **Hero parallax effect** — Subtle (~15%) parallax scrolling on hero sections across pages. Adds depth and visual polish.
-- [ ] **Background texture & visual richness** — Explore gradients, subtle textures, and background images to add engagement. Requires collaborative session with Ted. See Discussion Items below.
-- [ ] **Digital product delivery for Vocal Fit** — Gumroad or Lemonsqueezy for selling/delivering digital products. Blocked until Vocal Fit product is defined.
-- [ ] **Members-only section** — Approach TBD. Could be simple password-protected pages, or a full membership platform.
+Ted explicitly said he wants to get to these as soon as possible. These need collaborative exploration — not solo implementation.
+
+- [ ] **Hero parallax effect** — Subtle (~15%) parallax scrolling on hero sections across pages.
+- [ ] **Background texture & visual richness** — Gradients, subtle textures, background images.
+- [ ] **Section dividers** — Decorative lines, shapes, or transitions between sections.
+- [ ] **Iconography** — Icons for feature lists, benefits, service descriptions.
+- [ ] **Pull quotes / callout boxes** — Highlighted callout boxes for key statements.
+- [ ] **Scroll-triggered animations** — Subtle fade-ins, slide-ins as you scroll.
+- [ ] **Varied section layouts** — Move beyond always-centered text: side-by-side, offset, cards.
+- [ ] **Digital product delivery for Vocal Fit** — Gumroad or Lemonsqueezy. Blocked until product defined.
+- [ ] **Members-only section** — Approach TBD.
 
 ---
 
 ## Discussion Items
 
-These need conversation between Ted and the dev before they become concrete tasks. They may span multiple sessions to explore.
-
-**Reminder: Present options, discuss with Ted, get approval, THEN implement.**
+These need conversation between Ted and the dev before they become concrete tasks.
 
 ### 1. Visual Engagement & Page Design (HIGH PRIORITY — Ted's Session 6 Direction)
 
-**The issue:** The site is intentionally text-heavy, which is right for an information-rich coaching business. But visually, the pages can feel dry — lots of text blocks on solid color backgrounds, similar layouts page after page. Ted wants it to be **more engaging** without being gimmicky. Copy-heavy pages need visual balance.
+**The issue:** The site is intentionally text-heavy, which is right for an information-rich coaching business. But visually, the pages can feel dry — lots of text blocks on solid color backgrounds, similar layouts page after page. Ted wants it to be **more engaging** without being gimmicky.
 
-**Ted's direction (Feb 4, 2026 — Session 6):** Ted wants to explore best practices and ideas for improving the visual look. The goal is engagement and visual variety that balances the deep content — drawing attention to the right things while allowing deeper dives. This should be a collaborative exploration. Ted is open to being educated on best practices.
+**Ted's direction (Feb 4, 2026):** Ted wants to explore best practices and ideas for improving the visual look. This should be a collaborative exploration.
 
-**Possible directions to explore:**
-- Subtle background textures or gradients to break up flat color sections
-- Section dividers (decorative lines, shapes, or transitions between sections)
-- Iconography for feature lists, benefits, service descriptions
-- Pull quotes or highlighted callout boxes for key statements
-- Strategic photography — Ted teaching, studio shots, performance moments
-- Varied section layouts (not always centered text — try side-by-side, offset, cards)
-- Scroll-triggered animations (subtle fade-ins, slide-ins as you scroll down)
-- Whitespace and rhythm adjustments between sections
-- Parallax scrolling on hero images (~15%)
-- CSS texture overlays, gradient variations, subtle background patterns
+**Next step:** Research best practices for text-heavy coaching/education sites. Show Ted reference examples. Get approval on specific design changes, then implement one at a time.
 
-**Next step:** Research best practices for text-heavy coaching/education sites. Look at reference sites together. Ted evaluates what feels right for the brand, then translate into specific design changes.
+### 2. SEO / GEO Strategy (RESEARCH DONE — Session 9)
 
-### 2. Contact Form — Is It Off-Putting?
+Full research completed. See Tier 1 GEO/SEO section above for the prioritized action plan. Ted is committed to fully maximizing SEO/GEO potential.
 
-**Ted's concern:** The contact form might feel too formal or commitment-heavy for casual inquiries. Someone browsing might think "if I fill this out, I'm signing up for something" and bail.
-
-**Things to evaluate:**
-- Review the current form fields and labels — are any unnecessary for a first touch?
-- Add reassuring microcopy (e.g., "No pressure — just tell me what you're curious about" or "This is just a conversation starter")
-- Consider the CTA button text — "Submit" feels formal; "Send Message" or "Let's Talk" feels lighter
-- Look at what the form asks for vs. what's actually needed for a first inquiry
-- Compare against best practices for service-based business contact forms
-- Consider adding a "quick question" option that requires less commitment (e.g., just name + email + short message)
-
-**Status: DONE (Session 9).** H1 softened, subtitle warmed up, interest/experience/goals made optional, goals label changed. Commit `609912d`. Form email formatting still a separate backlog item.
-
-### 3. SEO / GEO Research
-
-**Ted's question:** Are there great ways to improve SEO (or GEO — Generative Engine Optimization) that haven't been considered yet?
-
-**Current SEO state (updated session 8):**
-- robots.txt with correct sitemap URL (fixed Feb 5)
-- @astrojs/sitemap integration — auto-generates sitemap with all 16 pages
-- LocalBusiness JSON-LD with correct URLs (fixed Feb 5)
-- Person schema on About page, Book schema on AVF page
-- FAQPage schema on FAQ, AVF, PASS pages
-- All meta titles/descriptions aligned
-- Privacy Policy and Terms of Service pages created (Feb 5)
-- Missing: OG images, analytics (GA4 approved), email newsletter
-
-**Areas to research:**
-- **GEO (Generative Engine Optimization)** — how to appear in AI-generated search results. Emerging best practices include clear entity definitions, structured data, authoritative content, and FAQ patterns.
-- **Local SEO** — Google Business Profile optimization, local directories, review strategy
-- **Content SEO** — Blog posts as organic traffic drivers, keyword research, internal linking strategy
-- **Technical SEO** — Core Web Vitals, page speed, accessibility audit
-- **Schema enhancements** — Review schema, Course schema for lessons, Event schema for workshops
-
-**Action:** Research session to identify highest-impact opportunities. Present findings to Ted.
+**Priority order (effort-to-impact ratio):**
+1. Google Business Profile (ask Ted if he has one)
+2. robots.txt update for AI crawlers ✅ approved
+3. llms.txt file ✅ approved
+4. Review collection system
+5. Course + Service schema
+6. Answer capsules on service pages
+7. Publish/update dates on pages
+8. AI traffic tracking in GA4
+9. Blog content (Tier 1 posts)
+10. Internal linking strategy
 
 ---
 
@@ -158,16 +162,33 @@ I'm Ted Chamberlain, owner of Ted's Voice Academy (tedsvoiceacademy.com). I need
 Let's work on one section at a time. I'll share what I know and you help me organize it into clear, web-friendly content that matches my Forward Light style. Which section should we start with?
 ```
 
-### Vocal Health Hub — What to Bring to That Chat
-- Your personal gargle recipes, tea preferences, lozenge brands
-- SOVT exercises you teach regularly and how you explain them
-- Your Vocal Fit routine structure (what exercises, what order, how long)
-- Any articles you've already written on vocal health topics
-- External resources you recommend to students
+### Blog Content Development Prompt (NEW — from GEO/SEO Research)
 
-### Other Sections That Need Content Development
+```
+I'm Ted Chamberlain, owner of Ted's Voice Academy (tedsvoiceacademy.com). I need help writing blog posts for my website. Here's what you need to know:
 
-**Workshops page** — The page structure is built, but Ted may want to develop specific workshop descriptions, pricing, and schedules as they become available.
+**My writing style:** I use my "Forward Light" voice — positive framing, 8th grade reading level, kind and direct. First person (I/me) only, never "we/us." No contrast constructions ("not X, but Y"). Specific encouragement, not vague hype. Like a trusted mentor sharing something useful.
+
+**Blog post structure:** Each post should have:
+- Clear H1 title (with target keyword)
+- An "answer capsule" in the first paragraph (2-3 sentences that directly answer the question a searcher would ask — this is what AI search engines quote)
+- H2 subheadings breaking up the content
+- Bullet points where appropriate
+- 1,000-1,500 words
+- A call-to-action linking to the relevant service page on my site
+- Publish date displayed
+
+**My business context:** I'm a voice coach in Lacey, Washington (South Sound / Olympia area). I teach singing, speaking, and ensemble coaching. I created the Adaptive Voice Framework (AVF) — a five-pillar approach to vocal development. I also created the PASS Profile, a vocal assessment tool.
+
+**Priority topics (from my SEO research):**
+1. How to Choose a Voice Teacher: What to Look For
+2. Singing Lessons for Adults: It's Never Too Late to Start
+3. What to Expect at Your First Singing Lesson
+4. Vocal Health: How to Take Care of Your Singing Voice
+5. The Difference Between a Voice Teacher and a Vocal Coach
+
+Let's start with topic [NUMBER]. I'll share my perspective and expertise, and you help me shape it into an engaging, SEO-optimized blog post in my Forward Light style.
+```
 
 ---
 
@@ -176,27 +197,27 @@ Let's work on one section at a time. I'll share what I know and you help me orga
 These items are blocked until Ted provides content, assets, or makes a decision.
 
 ### Blog Content
-- [ ] **24 scraped blog posts** — Ted is scraping these from the old tedsvoice.com Webwave site. Already working on this in separate Claude sessions.
+- [ ] **24 scraped blog posts** — Ted is scraping from old tedsvoice.com Webwave site.
 
 ### Vocal Health Hub Content
-The page structure is built. These sections have intro copy with "coming soon" placeholders:
-
-- [ ] **Home Care & Remedies** — gargle recipes, tea recommendations, lozenge guidance, supplement recommendations
-- [ ] **SOVT Tools & Techniques** — explanation of mechanics, recommended exercises with instructions, recommended tools
+The page structure is built. These sections have "coming soon" placeholders:
+- [ ] **Home Care & Remedies** — gargle recipes, tea recommendations, lozenge guidance
+- [ ] **SOVT Tools & Techniques** — exercises with instructions, recommended tools
 - [ ] **Vocal Fit** — product descriptions, format details, pricing
 - [ ] **Articles & Resources** — featured articles, external resource links
 
 ### Other Content Needed
-- [ ] **Award photos** — images of awards/recognitions for About page
-- [ ] **Coaching/performance photos** — images of Ted coaching, students performing
-- [ ] **Organization logos/names** — professional organizations Ted belongs to
-- [ ] **Heart of the Sound quartet URL** — Deferred. No online presence yet. Add when available.
+- [ ] **Organization logos/confirmation** — Professional associations for About page. Ted needs to confirm the list and provide logos or approve text-only approach.
+- [ ] **Coaching/performance photos** — Images of Ted coaching, students performing
+- [ ] **Heart of the Sound quartet URL** — Deferred. No online presence yet.
+- [ ] **Google Business Profile status** — Does Ted have one? If not, this is the #1 local SEO action.
+- [ ] **Stats & credentials for GEO** — Years of experience, number of students coached, certifications, performance milestones
 
 ---
 
 ## Completed
 
-- [x] Build all 13 pages including FAQ (Jan-Feb 2026)
+- [x] Build all 16 pages including FAQ, Privacy, Terms (Jan-Feb 2026)
 - [x] Google Maps embed on Contact page (Feb 3, 2026)
 - [x] Workshop inquiry form — Netlify Forms (Feb 3, 2026)
 - [x] Blog newsletter signup form (Feb 3, 2026)
@@ -209,23 +230,29 @@ The page structure is built. These sections have intro copy with "coming soon" p
 - [x] Footer updated with FAQ link (Feb 4, 2026)
 - [x] Fixed title tag duplication across all pages (Feb 4, 2026)
 - [x] Social media links added to footer + sameAs in schema (Feb 4, 2026)
-- [x] Ensemble links: Voices of the Sound + Hot Notes in footer and About page, Person schema memberOf (Feb 4, 2026)
-- [x] Domain cutover: tedsvoiceacademy.com pointed to Netlify, SSL provisioned (Feb 4, 2026)
-- [x] Fixed redirect loop: removed conflicting bare->www redirect from netlify.toml (Feb 4, 2026)
-- [x] **Fixed all 4 Netlify forms** — contact, workshop-inquiry, blog-newsletter, newsletter-footer. Created form-detect.html, success.astro, added action="/success" to all forms, removed catch-all redirect and deprecated processing config from netlify.toml. Form Detection enabled in Netlify UI. (Feb 5, 2026 — Session 7)
-- [x] **Email notifications configured** — All form submissions notify ted@tedsvoiceacademy.com (Feb 5, 2026 — Session 7)
-- [x] **Comprehensive site audit** — 21-item findings report covering all 13 pages, SEO, technical config, visual design. Findings captured in this backlog. (Feb 5, 2026 — Session 7)
-- [x] **Fixed robots.txt sitemap URL** — Changed www to bare domain (Feb 5, 2026 — Session 8)
-- [x] **Fixed LocalBusiness schema URLs** — Changed www to bare domain in BaseLayout.astro (Feb 5, 2026 — Session 8)
-- [x] **Removed broken favicon PNG references** — Deleted 3 broken link tags, kept working SVG (Feb 5, 2026 — Session 8)
-- [x] **Replaced placeholder testimonials with Rapid Reviews carousel** — Integrated Google Reviews widget on homepage (Feb 5, 2026 — Session 8)
-- [x] **FAQ accordion pattern** — Converted FAQ/AVF/PASS pages to `<details>/<summary>` with +/- indicators, brand-colored styling (Feb 5, 2026 — Session 8)
-- [x] **Card height fix** — CSS flexbox equalization on singing, speaking, ensembles, pricing, index pages (Feb 5, 2026 — Session 8)
-- [x] **Privacy Policy page created** — `/privacy` with comprehensive policy in Forward Light voice (Feb 5, 2026 — Session 8)
-- [x] **Terms of Service page created** — `/terms` with full terms in Forward Light voice (Feb 5, 2026 — Session 8)
-- [x] **AVF dials image updated** — Ted replaced `public/images/avf-dials.png` with new version (Feb 5, 2026 — Session 8)
-- [x] **Analytics decision made** — GA4 + Google Search Console + Looker Studio (free), weekly email report (Feb 5, 2026 — Session 8)
+- [x] Ensemble links: Voices of the Sound + Hot Notes in footer and About page (Feb 4, 2026)
+- [x] Domain cutover: tedsvoiceacademy.com → Netlify, SSL provisioned (Feb 4, 2026)
+- [x] Fixed redirect loop: removed conflicting redirect from netlify.toml (Feb 4, 2026)
+- [x] Fixed all 4 Netlify forms — form-detect.html, success.astro, action="/success" (Feb 5, 2026 — Session 7)
+- [x] Email notifications configured for all forms (Feb 5, 2026 — Session 7)
+- [x] Comprehensive 21-item site audit (Feb 5, 2026 — Session 7)
+- [x] Fixed robots.txt sitemap URL (www → bare domain) (Feb 5, 2026 — Session 8)
+- [x] Fixed LocalBusiness schema URLs (www → bare domain) (Feb 5, 2026 — Session 8)
+- [x] Removed broken favicon PNG references (Feb 5, 2026 — Session 8)
+- [x] Replaced placeholder testimonials with Rapid Reviews carousel (Feb 5, 2026 — Session 8)
+- [x] FAQ accordion pattern on FAQ/AVF/PASS pages (Feb 5, 2026 — Session 8)
+- [x] Card height fix across 5 pages (Feb 5, 2026 — Session 8)
+- [x] Privacy Policy page created (Feb 5, 2026 — Session 8)
+- [x] Terms of Service page created (Feb 5, 2026 — Session 8)
+- [x] AVF dials image updated (Feb 5, 2026 — Session 8)
+- [x] Analytics decision: GA4 + Search Console + Looker Studio (Feb 5, 2026 — Session 8)
+- [x] **Hero eyebrow sizing** — "MASTER YOUR VOICE" bumped from 1rem to 1.25rem (Feb 5, 2026 — Session 9)
+- [x] **GA4 tracking live** — Measurement ID G-ZDX6WPT6CZ in BaseLayout.astro (Feb 5, 2026 — Session 9)
+- [x] **Google Search Console** — Verified for tedsvoiceacademy.com, sitemap submitted (Feb 5, 2026 — Session 9)
+- [x] **Privacy policy updated for GA4** — Disclosed Google Analytics usage (Feb 5, 2026 — Session 9)
+- [x] **Contact form tone review** — H1 softened, fields made optional, warmer copy (Feb 5, 2026 — Session 9)
+- [x] **GEO/SEO research** — Comprehensive strategy report with 8 GEO recs, 10 SEO improvements, 12 blog topics, schema additions (Feb 5, 2026 — Session 9)
 
 ---
 
-*Last updated: February 5, 2026 (Session 8)*
+*Last updated: February 5, 2026 (Session 9)*
