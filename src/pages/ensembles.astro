@@ -2,10 +2,94 @@
 import Layout from '../layouts/BaseLayout.astro';
 ---
 
-<Layout 
+<Layout
   title="Ensemble & Choir Coaching"
   description="Expert coaching for choirs, vocal groups, and ensembles. Achieve unity without losing individual voices. Serving groups throughout the Olympia, WA region."
 >
+  <Fragment slot="head">
+    <script type="application/ld+json" set:html={JSON.stringify({
+      "@context": "https://schema.org",
+      "@type": "Course",
+      "name": "Ensemble & Choir Coaching",
+      "description": "Vocal and performance coaching for choirs, quartets, and vocal ensembles. Develop tuning, unity, vowel matching, and authentic performance presence.",
+      "url": "https://tedsvoiceacademy.com/ensembles",
+      "provider": {
+        "@type": "LocalBusiness",
+        "name": "Ted's Voice Academy",
+        "url": "https://tedsvoiceacademy.com"
+      },
+      "instructor": {
+        "@type": "Person",
+        "name": "Ted Chamberlain",
+        "url": "https://tedsvoiceacademy.com/about"
+      },
+      "courseMode": ["Blended"],
+      "availableLanguage": "English",
+      "audience": {
+        "@type": "EducationalAudience",
+        "audienceType": "Choirs, quartets, a cappella groups, and vocal ensembles"
+      },
+      "offers": {
+        "@type": "Offer",
+        "url": "https://tedsvoiceacademy.com/pricing",
+        "priceCurrency": "USD",
+        "category": "Ensemble Coaching"
+      }
+    })} />
+    <script type="application/ld+json" set:html={JSON.stringify({
+      "@context": "https://schema.org",
+      "@type": "Service",
+      "name": "Ensemble & Choir Coaching",
+      "description": "Expert coaching for church choirs, barbershop quartets and choruses, a cappella groups, school ensembles, community choirs, and competition-focused groups in the Olympia, WA region.",
+      "url": "https://tedsvoiceacademy.com/ensembles",
+      "provider": {
+        "@type": "LocalBusiness",
+        "name": "Ted's Voice Academy",
+        "url": "https://tedsvoiceacademy.com"
+      },
+      "serviceType": "Ensemble Vocal Coaching",
+      "areaServed": [
+        { "@type": "City", "name": "Lacey", "containedInPlace": { "@type": "State", "name": "Washington" } },
+        { "@type": "City", "name": "Olympia" },
+        { "@type": "City", "name": "Tumwater" }
+      ],
+      "hasOfferCatalog": {
+        "@type": "OfferCatalog",
+        "name": "Ensemble Coaching Options",
+        "itemListElement": [
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "One-Time Workshop"
+            }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Ongoing Ensemble Coaching"
+            }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Competition Preparation"
+            }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Sectional Coaching"
+            }
+          }
+        ]
+      }
+    })} />
+  </Fragment>
+
   <!-- Hero Section -->
   <section class="hero">
     <div class="container">

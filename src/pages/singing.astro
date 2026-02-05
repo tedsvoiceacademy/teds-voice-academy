@@ -2,10 +2,80 @@
 import Layout from '../layouts/BaseLayout.astro';
 ---
 
-<Layout 
+<Layout
   title="Singing Lessons in Lacey, WA"
   description="Private singing lessons for all styles and skill levels in Lacey, WA. Learn how your voice works and build lasting technique with a top-rated vocal coach."
 >
+  <Fragment slot="head">
+    <script type="application/ld+json" set:html={JSON.stringify({
+      "@context": "https://schema.org",
+      "@type": "Course",
+      "name": "Private Singing Lessons",
+      "description": "One-on-one vocal coaching for singers of all styles and skill levels. Build a well-balanced voice through body alignment, breath coordination, healthy phonation, resonance, and expressive freedom.",
+      "url": "https://tedsvoiceacademy.com/singing",
+      "provider": {
+        "@type": "LocalBusiness",
+        "name": "Ted's Voice Academy",
+        "url": "https://tedsvoiceacademy.com"
+      },
+      "instructor": {
+        "@type": "Person",
+        "name": "Ted Chamberlain",
+        "url": "https://tedsvoiceacademy.com/about"
+      },
+      "courseMode": ["Blended"],
+      "availableLanguage": "English",
+      "audience": {
+        "@type": "EducationalAudience",
+        "audienceType": "Singers ages 14 and up, all skill levels"
+      },
+      "offers": {
+        "@type": "Offer",
+        "url": "https://tedsvoiceacademy.com/pricing",
+        "priceCurrency": "USD",
+        "category": "Singing Lessons"
+      }
+    })} />
+    <script type="application/ld+json" set:html={JSON.stringify({
+      "@context": "https://schema.org",
+      "@type": "Service",
+      "name": "Singing Lessons",
+      "description": "Private singing lessons for all styles and skill levels in Lacey, WA. Classical, musical theater, pop, rock, barbershop, gospel, and more.",
+      "url": "https://tedsvoiceacademy.com/singing",
+      "provider": {
+        "@type": "LocalBusiness",
+        "name": "Ted's Voice Academy",
+        "url": "https://tedsvoiceacademy.com"
+      },
+      "serviceType": "Vocal Coaching",
+      "areaServed": [
+        { "@type": "City", "name": "Lacey", "containedInPlace": { "@type": "State", "name": "Washington" } },
+        { "@type": "City", "name": "Olympia" },
+        { "@type": "City", "name": "Tumwater" }
+      ],
+      "hasOfferCatalog": {
+        "@type": "OfferCatalog",
+        "name": "Singing Lesson Options",
+        "itemListElement": [
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "In-Person Singing Lessons"
+            }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Virtual Singing Lessons"
+            }
+          }
+        ]
+      }
+    })} />
+  </Fragment>
+
   <!-- Hero Section -->
   <section class="hero">
     <div class="container">
