@@ -157,7 +157,9 @@ import Layout from '../layouts/BaseLayout.astro';
           <a href="/pass-profile" class="btn btn-pass">Learn more about PASS Profile →</a>
         </div>
         <div class="pass-visual">
-          <img src="/images/pass-profile-logo.webp" alt="PASS Profile" class="pass-logo" />
+          <div class="pass-logo-card">
+            <img src="/images/pass-profile-logo.webp" alt="PASS Profile" class="pass-logo" />
+          </div>
         </div>
       </div>
     </div>
@@ -364,6 +366,7 @@ import Layout from '../layouts/BaseLayout.astro';
     color: var(--color-charcoal);
     line-height: 1.6;
     margin: 0;
+    flex-grow: 1;
   }
 
   /* PASS Section */
@@ -406,8 +409,18 @@ import Layout from '../layouts/BaseLayout.astro';
     align-items: center;
   }
 
+  .pass-logo-card {
+    background: var(--color-white);
+    padding: 1.5rem 2rem;
+    border-radius: 12px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
+  }
+
   .pass-logo {
-    max-width: 250px;
+    max-width: 220px;
     width: 100%;
     height: auto;
   }

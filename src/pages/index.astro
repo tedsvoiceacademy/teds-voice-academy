@@ -428,12 +428,12 @@ import Layout from '../layouts/BaseLayout.astro';
   }
 
   /* Center bottom 2 cards when 5 cards in 3-column grid */
-  .ecosystem-grid .eco-card:nth-child(4) {
-    grid-column: 1;
-  }
-
-  .ecosystem-grid .eco-card:nth-child(5) {
-    grid-column: 3;
+  @media (min-width: 601px) and (max-width: 1024px) {
+    .ecosystem-grid .eco-card:nth-child(5) {
+      grid-column: 1 / -1;
+      max-width: 50%;
+      justify-self: center;
+    }
   }
 
   @media (min-width: 1025px) {
