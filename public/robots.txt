@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://www.tedsvoiceacademy.com/sitemap-index.xml
+Sitemap: https://tedsvoiceacademy.com/sitemap-index.xml
