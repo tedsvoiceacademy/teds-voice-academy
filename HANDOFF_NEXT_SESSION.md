@@ -118,8 +118,8 @@ These are discussion items — need collaborative exploration before implementat
 
 ### Git & Deploy
 - **GitHub repo:** https://github.com/tedsvoiceacademy/teds-voice-academy
-- **Latest pushed commit:** `40666b6` on `main` branch
-- **Session 9 commits:** `ad66433`, `8f1a8cd`, `8de3d77`, `609912d`, `40666b6`
+- **Latest pushed commit:** `a854277` on `main` branch
+- **Session 9 commits:** `ad66433`, `8f1a8cd`, `8de3d77`, `609912d`, `40666b6`, `453719e`, `a854277`
 - **Local project path:** `H:\OneDrive\AI Projects\TVA AI Projects\TVA Webstie 4.0\teds-voice-academy-main\teds-voice-academy-main\`
 - **Live site:** https://tedsvoiceacademy.com
 - **Netlify URL:** https://deft-baklava-b2eb2e.netlify.app/
@@ -201,13 +201,20 @@ Homepage, Contact, Singing, Speaking, Ensembles, About, Pricing, AVF, PASS Profi
 - Comprehensive strategy report produced with 8 GEO recommendations, 10 SEO improvements, schema additions, and 12-topic blog content strategy
 - Ted reviewed and approved several quick-win items for next session
 
+### GEO Quick Wins Implemented (Commit `a854277`)
+- robots.txt updated with explicit Allow for 7 AI crawlers (GPTBot, ChatGPT-User, OAI-SearchBot, PerplexityBot, ClaudeBot, Google-Extended, Amazonbot)
+- llms.txt created at `public/llms.txt` — clean Markdown summary of TVA for AI search engines
+
+### Handoff Doc Final Update (Commit `453719e`)
+- Complete rewrite of HANDOFF_NEXT_SESSION.md, PROJECT_BACKLOG.md, CLAUDE.md for Session 9
+
 ---
 
 ## What Was NOT Done (and Why)
 
 - **Looker Studio weekly email** — Deferred until GA4 has data (give it a few days)
-- **robots.txt AI crawler update** — Approved but ran out of session time
-- **llms.txt creation** — Approved but ran out of session time
+- ~~**robots.txt AI crawler update**~~ — DONE (late Session 9, commit `a854277`)
+- ~~**llms.txt creation**~~ — DONE (late Session 9, commit `a854277`)
 - **Image optimization** — Approved but ran out of session time
 - **Award photo rename + About page integration** — Approved but ran out of session time
 - **Organizations/affiliations** — Ted needs to confirm the list (couldn't scrape from old site)
@@ -221,8 +228,8 @@ Homepage, Contact, Singing, Speaking, Ensembles, About, Pricing, AVF, PASS Profi
 ## First Thing Next Session
 
 ### Immediate (No Discussion Needed — Already Approved):
-1. **Update robots.txt** — Add AI crawler directives
-2. **Create llms.txt** — AI search engine summary file
+1. ~~**Update robots.txt**~~ — DONE (commit `a854277`)
+2. ~~**Create llms.txt**~~ — DONE (commit `a854277`)
 3. **Image optimization** — Batch convert PNGs to WebP
 4. **Rename + add award photos to About page**
 
@@ -270,8 +277,10 @@ Important workflow reminders:
 | `src/pages/privacy.astro` | Updated for GA4 disclosure | `ad66433` |
 | `src/pages/contact.astro` | Tone softening (H1, subtitle, optional fields) | `609912d` |
 | `CLAUDE.md` | Hero eyebrow pattern updated | `ad66433` |
-| `HANDOFF_NEXT_SESSION.md` | Multiple incremental updates | `8de3d77`, `40666b6` |
-| `PROJECT_BACKLOG.md` | Multiple incremental updates | `8de3d77`, `40666b6` |
+| `HANDOFF_NEXT_SESSION.md` | Multiple incremental updates | `8de3d77`, `40666b6`, `453719e` |
+| `PROJECT_BACKLOG.md` | Multiple incremental updates | `8de3d77`, `40666b6`, `453719e` |
+| `public/robots.txt` | Added AI crawler directives | `a854277` |
+| `public/llms.txt` | CREATED — AI search engine summary | `a854277` |
 
 ---
 

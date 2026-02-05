@@ -20,8 +20,8 @@ This is the living project list for the TVA website. Items move between tiers as
 
 These were discussed and approved by Ted at the end of Session 9. Implement immediately.
 
-- [ ] **Update robots.txt for AI crawlers** — Add explicit Allow directives for GPTBot, ChatGPT-User, OAI-SearchBot, PerplexityBot, ClaudeBot, Google-Extended, Amazonbot. ~15 min.
-- [ ] **Create llms.txt file** — New file at `public/llms.txt` telling AI search engines what the site is about in clean Markdown. ~1 hour.
+- [x] **Update robots.txt for AI crawlers** — DONE (Session 9, commit `a854277`). Explicit Allow for GPTBot, ChatGPT-User, OAI-SearchBot, PerplexityBot, ClaudeBot, Google-Extended, Amazonbot.
+- [x] **Create llms.txt file** — DONE (Session 9, commit `a854277`). `public/llms.txt` with full site summary for AI search engines.
 - [ ] **Image optimization (automated batch)** — Convert all PNG images in `public/images/` to WebP. Two award photos already WebP. ~30 min automated.
 - [ ] **Rename award photos** — Clean up file names for web-friendliness, then add to About page with captions.
 - [ ] **Add award photos to About page** — Display both awards (BusinessRate Top 3 Vocal Instructor 2025, Lacey Chamber Entrepreneur of the Year 2025).
