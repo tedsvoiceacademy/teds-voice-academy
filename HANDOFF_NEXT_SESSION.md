@@ -113,14 +113,34 @@ This applies to everything — quick fixes, visual changes, SEO tweaks, all of i
 - Quartet photo IS a group Ted coached ✓
 - AI images: "As you see fit" — reviewed and skipped (real photos are much stronger)
 
+### Visual Polish Tier 2 (Commit `2d6b9eb`)
+- Added SVG noise/grain texture system to `global.css`:
+  - `.has-grain` — subtle fractalNoise SVG overlay at 3.5% opacity for depth
+  - `.has-grain--light` — 5% opacity variant for cream/light backgrounds
+  - `.section-accent-top` — thin gold divider utility
+- Applied grain texture to all navy gradient sections across 7 pages:
+  - Homepage: hero, ecosystem, CTA
+  - Singing: hero, styles, CTA
+  - Speaking: hero, CTA
+  - Ensembles: hero, help section, CTA
+  - About: hero, philosophy, CTA
+  - AVF: hero, final CTA
+  - PASS Profile: hero
+- Applied pull quotes to key philosophy statements on 6 pages:
+  - Homepage: "When you understand how your voice works, everything else falls into place."
+  - Singing: "Expression drives the voice, and technique serves expression."
+  - Speaking: "Authentic expression drives impact, and technique serves authenticity."
+  - Ensembles: "Expression first, technique in service of expression."
+  - About: "When someone finds their authentic voice — they experience a sense of freedom, joy, and fulfillment that changes everything."
+  - AVF: "What seemed like contradictions were often the same principle seen from different angles."
+
 ---
 
 ## What's Next
 
 ### Ready to Implement (with Ted's approval):
-1. **Visual polish Tier 2** — Background noise textures, pull quotes applied to specific content
-2. **Visual polish Tier 3** — SVG section dividers, scroll reveal animations, Lucide icons
-3. **OG default image** — Design branded 1200x630px image for social sharing
+1. **Visual polish Tier 3** — SVG section dividers, scroll reveal animations, Lucide icons
+2. **OG default image** — Design branded 1200x630px image for social sharing
 
 ### Discussion Topics:
 4. **Google Business Profile optimization** — Ted confirmed he has one and wants to maximize it
@@ -143,8 +163,8 @@ This applies to everything — quick fixes, visual changes, SEO tweaks, all of i
 
 ### Git & Deploy
 - **GitHub repo:** https://github.com/tedsvoiceacademy/teds-voice-academy
-- **Latest pushed commit:** `f21a0ce` on `main` branch
-- **Session 10 commits:** `62def96`, `3c54db0`, `5f8d61c`, `fed84fe`, `bfb7cba`, `c55c55c`, `f21a0ce`
+- **Latest pushed commit:** `2d6b9eb` on `main` branch
+- **Session 10 commits:** `62def96`, `3c54db0`, `5f8d61c`, `fed84fe`, `bfb7cba`, `c55c55c`, `f21a0ce`, `ea48955`, `5bb3fa7`, `c0d769d`, `2d6b9eb`
 - **Local project path:** `H:\OneDrive\AI Projects\TVA AI Projects\TVA Webstie 4.0\teds-voice-academy-main\teds-voice-academy-main\`
 - **Live site:** https://tedsvoiceacademy.com
 - **Netlify URL:** https://deft-baklava-b2eb2e.netlify.app/
@@ -226,17 +246,22 @@ See PROJECT_BACKLOG.md for the full prioritized list.
 
 ---
 
-## Visual Polish (Ted Wants These ASAP)
+## Visual Polish Status
 
-Discussion items — need collaborative exploration before implementation:
+**Completed:**
+- ✅ Card hover enhancements (Tier 1)
+- ✅ Gold accent lines / decorated headings (Tier 1)
+- ✅ Drop caps on opening paragraphs (Tier 1)
+- ✅ Pull quote CSS utilities (Tier 1)
+- ✅ Background grain textures on navy sections (Tier 2)
+- ✅ Pull quotes applied to key content on 6 pages (Tier 2)
+
+**Remaining (Tier 3):**
+- SVG section dividers (SectionDivider.astro component)
+- Scroll-triggered reveal animations (IntersectionObserver)
+- Lucide icons on cards/headings
 - Hero parallax effect
-- Background textures & visual richness
-- Section dividers, iconography
-- Pull quotes/callout boxes
-- Scroll-triggered animations
-- Varied section layouts
-
-**Approach:** Research best practices for text-heavy coaching/education sites. Show Ted reference examples. Get approval on specific design changes, then implement.
+- Varied section layouts (per-page)
 
 ---
 
@@ -258,6 +283,14 @@ Discussion items — need collaborative exploration before implementation:
 | `src/pages/index.astro` | .webp, ecosystem grid tablet centering fix | `62def96`, `bfb7cba` |
 | 9 new WebP images | Converted from PNG originals | `62def96` |
 | 10 new logo WebP images | Converted from Ted's uploaded PNGs | `3c54db0` |
+| `src/styles/global.css` | Grain texture, section-accent-top utilities | `2d6b9eb` |
+| `src/pages/index.astro` | Grain on hero/ecosystem/CTA, pull quote | `2d6b9eb` |
+| `src/pages/singing.astro` | Grain on hero/styles/CTA, pull quote | `2d6b9eb` |
+| `src/pages/speaking.astro` | Grain on hero/CTA, pull quote | `2d6b9eb` |
+| `src/pages/ensembles.astro` | Grain on hero/help/CTA, pull quote | `2d6b9eb` |
+| `src/pages/about.astro` | Grain on hero/philosophy/CTA, pull quote | `2d6b9eb` |
+| `src/pages/avf.astro` | Grain on hero/final CTA, pull quote | `2d6b9eb` |
+| `src/pages/pass-profile.astro` | Grain on hero | `2d6b9eb` |
 
 ---
 

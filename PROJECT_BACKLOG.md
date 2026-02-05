@@ -91,8 +91,8 @@ Ted explicitly said he wants to get to these as soon as possible. These need col
 - [x] **Card hover enhancements** — DONE (Session 10, commit `f21a0ce`). Subtle lift + shadow on all card types.
 - [x] **Gold accent lines under headings** — DONE (Session 10, commit `f21a0ce`). `.decorated-heading` utility with `--light` and `--left` variants.
 - [x] **Drop caps on opening paragraphs** — DONE (Session 10, commit `f21a0ce`). `.drop-cap` utility with Playfair Display.
-- [x] **Pull quotes / callout boxes** — CSS utilities DONE (Session 10, commit `f21a0ce`). `.pull-quote` and `--dark` variant. Ready to apply to specific content.
-- [ ] **Background texture & visual richness** — SVG noise grain overlays on navy gradients and cream sections.
+- [x] **Pull quotes / callout boxes** — CSS utilities DONE (Session 10, commit `f21a0ce`). Applied to 6 pages (Session 10, commit `2d6b9eb`).
+- [x] **Background texture & visual richness** — DONE (Session 10, commit `2d6b9eb`). SVG noise grain overlay (.has-grain) on all navy gradient sections across 7 pages.
 - [ ] **Section dividers** — SVG wave/curve/angle shapes between sections. Create SectionDivider.astro component.
 - [ ] **Scroll-triggered animations** — Fade-up/slide-in reveals via IntersectionObserver (~20 lines JS).
 - [ ] **Iconography** — Lucide inline SVG icons on card titles and section headings.
@@ -261,6 +261,8 @@ The page structure is built. These sections have "coming soon" placeholders:
 - [x] **PASS logo visibility fix** — White card container on Speaking page for contrast against dark teal background (Feb 5, 2026 — Session 10)
 - [x] **Card symmetry fix** — flex-grow on card paragraphs across Singing, Speaking, Ensembles, Blog pages. Homepage ecosystem grid tablet centering improved (Feb 5, 2026 — Session 10)
 - [x] **Visual Polish Tier 1** — Card hovers, gold accent lines, drop caps, pull quote utilities in global.css. Applied to Homepage, Singing, Speaking, Ensembles (Feb 5, 2026 — Session 10)
+- [x] **Photos placed on service pages** — 4 photos converted to WebP. Singing, Speaking, Ensembles pages now have intro section text+image grids (Feb 5, 2026 — Session 10)
+- [x] **Visual Polish Tier 2** — SVG grain textures on navy sections (7 pages), pull quotes applied to key content (6 pages), section-accent-top utility (Feb 5, 2026 — Session 10)
 
 ---
 
