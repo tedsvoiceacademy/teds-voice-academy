@@ -95,13 +95,20 @@ import Layout from '../layouts/BaseLayout.astro';
 
   <!-- Intro Section -->
   <section class="intro-section">
-    <div class="container container-narrow">
-      <p class="intro-text drop-cap">
-        The way you speak shapes how your ideas land. Projection, pacing, resonance, confidence—these aren't abstract qualities. They're skills built on physical foundations that can be understood, practiced, and refined.
-      </p>
-      <p class="intro-text">
-        I work with professionals, educators, and leaders who want their communication to carry the impact their ideas deserve. With four decades of teaching experience and as the creator of the PASS Profile communication assessment, I bring both practical expertise and a structured framework to this work. Whether you're preparing for a significant speaking opportunity or seeking lasting improvement in how you use your voice, I can help you get there.
-      </p>
+    <div class="container">
+      <div class="intro-grid">
+        <div class="intro-content">
+          <p class="intro-text drop-cap">
+            The way you speak shapes how your ideas land. Projection, pacing, resonance, confidence—these aren't abstract qualities. They're skills built on physical foundations that can be understood, practiced, and refined.
+          </p>
+          <p class="intro-text">
+            I work with professionals, educators, and leaders who want their communication to carry the impact their ideas deserve. With four decades of teaching experience and as the creator of the PASS Profile communication assessment, I bring both practical expertise and a structured framework to this work. Whether you're preparing for a significant speaking opportunity or seeking lasting improvement in how you use your voice, I can help you get there.
+          </p>
+        </div>
+        <div class="intro-image">
+          <img src="/images/ted-portrait-casual.webp" alt="Ted Chamberlain, speaking and presentation coach" class="intro-photo" />
+        </div>
+      </div>
     </div>
   </section>
 
@@ -305,6 +312,20 @@ import Layout from '../layouts/BaseLayout.astro';
     padding: 4rem 0;
   }
 
+  .intro-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 2.5rem;
+    align-items: center;
+  }
+
+  @media (min-width: 768px) {
+    .intro-grid {
+      grid-template-columns: 1.2fr 1fr;
+      gap: 3rem;
+    }
+  }
+
   .intro-text {
     font-size: 1.125rem;
     line-height: 1.8;
@@ -314,6 +335,18 @@ import Layout from '../layouts/BaseLayout.astro';
 
   .intro-text:last-child {
     margin-bottom: 0;
+  }
+
+  .intro-image {
+    display: flex;
+    justify-content: center;
+  }
+
+  .intro-photo {
+    width: 100%;
+    max-width: 350px;
+    border-radius: 12px;
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.15);
   }
 
   /* Who Section */

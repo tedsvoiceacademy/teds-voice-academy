@@ -88,13 +88,20 @@ import Layout from '../layouts/BaseLayout.astro';
 
   <!-- Intro Section -->
   <section class="intro-section">
-    <div class="container container-narrow">
-      <p class="intro-text drop-cap">
-        Every singer arrives with different goals. Some want to strengthen their foundation. Others are working through a specific challenge. Some have been singing for years and want to go deeper. Others are just getting started.
-      </p>
-      <p class="intro-text">
-        I meet you where you are. Lessons are built around your goals, your style, and your voice.
-      </p>
+    <div class="container">
+      <div class="intro-grid">
+        <div class="intro-content">
+          <p class="intro-text drop-cap">
+            Every singer arrives with different goals. Some want to strengthen their foundation. Others are working through a specific challenge. Some have been singing for years and want to go deeper. Others are just getting started.
+          </p>
+          <p class="intro-text">
+            I meet you where you are. Lessons are built around your goals, your style, and your voice.
+          </p>
+        </div>
+        <div class="intro-image">
+          <img src="/images/ted-teaching-studio.webp" alt="Ted Chamberlain coaching a singing lesson at the piano" class="intro-photo" />
+        </div>
+      </div>
     </div>
   </section>
 
@@ -291,6 +298,20 @@ import Layout from '../layouts/BaseLayout.astro';
     padding: 4rem 0;
   }
 
+  .intro-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 2.5rem;
+    align-items: center;
+  }
+
+  @media (min-width: 768px) {
+    .intro-grid {
+      grid-template-columns: 1.2fr 1fr;
+      gap: 3rem;
+    }
+  }
+
   .intro-text {
     font-size: 1.125rem;
     line-height: 1.8;
@@ -300,6 +321,18 @@ import Layout from '../layouts/BaseLayout.astro';
 
   .intro-text:last-child {
     margin-bottom: 0;
+  }
+
+  .intro-image {
+    display: flex;
+    justify-content: center;
+  }
+
+  .intro-photo {
+    width: 100%;
+    max-width: 400px;
+    border-radius: 12px;
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.15);
   }
 
   /* Who Section */
