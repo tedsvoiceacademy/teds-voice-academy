@@ -89,24 +89,49 @@ This applies to everything — quick fixes, visual changes, SEO tweaks, all of i
 
 ---
 
+### Visual Polish Tier 1 (Commit `f21a0ce`)
+- Added global CSS utilities to `global.css`:
+  - Card hover enhancement: subtle lift + shadow on all card types
+  - `.decorated-heading` — short gold accent line under section headings (+ `--left`, `--light` variants)
+  - `.drop-cap` — large Playfair Display first letter on opening paragraphs
+  - `.pull-quote` — styled callout blocks for key philosophy statements (+ `--dark` variant)
+- Applied to Homepage: decorated headings on value, paths, ecosystem sections; drop cap on value section
+- Applied to Singing, Speaking, Ensembles pages: decorated headings on card sections, drop caps on intros
+
+---
+
 ## What's Next
 
+### Ted Has Uploaded New Photos (in public/images/):
+Photos reviewed. Key assets identified:
+- **"8 Ted Portrait Teaching"** — Ted gesturing with piano + mic behind. Best "in his element" shot.
+- **"4a relaxed casual presence"** — White background portrait. Approachable. Good for Speaking or About.
+- **"6 Ted Portrait"** — Navy blazer headshot, neutral gray. Clean professional alternative.
+- **"5 Direct Eye-Line Confidence...plaque"** — Full standing portrait with BusinessRate plaque.
+- **"Ted Lacey Entrepreneur OTY 2025 - 1" and "- 3"** — Award ceremony photos.
+- **"457506455..."** — Large group/choir photo (possibly Voices of the Sound — needs confirmation).
+- **"2018-04-2"** — Women's barbershop quartet with competition medals.
+- Several older Facebook-era photos and AI-generated/experimental images.
+
+**Needs Ted's input before placing photos:**
+1. Is "8 Ted Portrait Teaching" a recent photo?
+2. Is the large group photo (457506455...) Voices of the Sound?
+3. Is the quartet photo (2018-04-2) a group Ted coached?
+4. Are the AI-generated images (Gemini, Untitled design, AI1) for the site or experiments?
+
 ### Ready to Implement (with Ted's approval):
-1. **Visual polish exploration** — Research reference sites, present specific recommendations
-2. **OG default image** — Design branded 1200x630px image for social sharing
+1. **Convert + place photos** on appropriate pages (pending answers above)
+2. **Visual polish Tier 2** — Background noise textures, pull quotes on specific content
+3. **Visual polish Tier 3** — SVG section dividers, scroll reveal animations, icons
+4. **OG default image** — Design branded 1200x630px image for social sharing
 
 ### Discussion Topics:
-3. **Google Business Profile optimization** — Ted confirmed he has one for tedsvoiceacademy.com and wants to maximize it
+5. **Google Business Profile optimization** — Ted confirmed he has one and wants to maximize it
 
-### Photos Ted is Gathering:
+### Still Needed Photos:
 - Ted coaching a student (candid, in-studio)
-- Ted speaking/presenting (podium, workshop, coaching a speaker)
-- Ted directing an ensemble (in front of Voices of the Sound or other group)
-- Student performing (with permission)
-- Studio space shot (warm, inviting environment)
-- Ted at piano/keyboard (natural teaching moment)
-- Group/choir rehearsal shot
-- Ted receiving an award (ceremony photos)
+- Ted speaking/presenting at a podium or event
+- Studio space interior shot
 
 ---
 
@@ -114,8 +139,8 @@ This applies to everything — quick fixes, visual changes, SEO tweaks, all of i
 
 ### Git & Deploy
 - **GitHub repo:** https://github.com/tedsvoiceacademy/teds-voice-academy
-- **Latest pushed commit:** `bfb7cba` on `main` branch
-- **Session 10 commits:** `62def96`, `3c54db0`, `5f8d61c`, `fed84fe`, `bfb7cba`
+- **Latest pushed commit:** `f21a0ce` on `main` branch
+- **Session 10 commits:** `62def96`, `3c54db0`, `5f8d61c`, `fed84fe`, `bfb7cba`, `c55c55c`, `f21a0ce`
 - **Local project path:** `H:\OneDrive\AI Projects\TVA AI Projects\TVA Webstie 4.0\teds-voice-academy-main\teds-voice-academy-main\`
 - **Live site:** https://tedsvoiceacademy.com
 - **Netlify URL:** https://deft-baklava-b2eb2e.netlify.app/

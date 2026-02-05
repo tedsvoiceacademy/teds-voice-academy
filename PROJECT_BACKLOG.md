@@ -88,13 +88,16 @@ Ted said he'll get to blog content "in the next few days."
 
 Ted explicitly said he wants to get to these as soon as possible. These need collaborative exploration — not solo implementation.
 
-- [ ] **Hero parallax effect** — Subtle (~15%) parallax scrolling on hero sections across pages.
-- [ ] **Background texture & visual richness** — Gradients, subtle textures, background images.
-- [ ] **Section dividers** — Decorative lines, shapes, or transitions between sections.
-- [ ] **Iconography** — Icons for feature lists, benefits, service descriptions.
-- [ ] **Pull quotes / callout boxes** — Highlighted callout boxes for key statements.
-- [ ] **Scroll-triggered animations** — Subtle fade-ins, slide-ins as you scroll.
-- [ ] **Varied section layouts** — Move beyond always-centered text: side-by-side, offset, cards.
+- [x] **Card hover enhancements** — DONE (Session 10, commit `f21a0ce`). Subtle lift + shadow on all card types.
+- [x] **Gold accent lines under headings** — DONE (Session 10, commit `f21a0ce`). `.decorated-heading` utility with `--light` and `--left` variants.
+- [x] **Drop caps on opening paragraphs** — DONE (Session 10, commit `f21a0ce`). `.drop-cap` utility with Playfair Display.
+- [x] **Pull quotes / callout boxes** — CSS utilities DONE (Session 10, commit `f21a0ce`). `.pull-quote` and `--dark` variant. Ready to apply to specific content.
+- [ ] **Background texture & visual richness** — SVG noise grain overlays on navy gradients and cream sections.
+- [ ] **Section dividers** — SVG wave/curve/angle shapes between sections. Create SectionDivider.astro component.
+- [ ] **Scroll-triggered animations** — Fade-up/slide-in reveals via IntersectionObserver (~20 lines JS).
+- [ ] **Iconography** — Lucide inline SVG icons on card titles and section headings.
+- [ ] **Hero parallax effect** — CSS-only parallax on hero photos. Disabled on mobile.
+- [ ] **Varied section layouts** — Per-page layout diversity: numbered steps, alternating left-right, timelines.
 - [ ] **Digital product delivery for Vocal Fit** — Gumroad or Lemonsqueezy. Blocked until product defined.
 - [ ] **Members-only section** — Approach TBD.
 
@@ -257,6 +260,7 @@ The page structure is built. These sections have "coming soon" placeholders:
 - [x] **Course + Service schema** — JSON-LD on Singing, Speaking, Ensembles pages. Course + Service types with provider, instructor, offers, area served (Feb 5, 2026 — Session 10)
 - [x] **PASS logo visibility fix** — White card container on Speaking page for contrast against dark teal background (Feb 5, 2026 — Session 10)
 - [x] **Card symmetry fix** — flex-grow on card paragraphs across Singing, Speaking, Ensembles, Blog pages. Homepage ecosystem grid tablet centering improved (Feb 5, 2026 — Session 10)
+- [x] **Visual Polish Tier 1** — Card hovers, gold accent lines, drop caps, pull quote utilities in global.css. Applied to Homepage, Singing, Speaking, Ensembles (Feb 5, 2026 — Session 10)
 
 ---
 
