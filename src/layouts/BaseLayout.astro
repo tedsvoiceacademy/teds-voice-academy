@@ -82,7 +82,7 @@ const fullTitle = title === siteName ? title : `${title} | ${siteName}`;
   <meta name="generator" content={Astro.generator} />
 
   <!-- Google Analytics (GA4) -->
-  <script async src="https://www.googletagmanager.com/gtag/js?id=G-ZDX6WPT6CZ"></script>
+  <script is:inline async src="https://www.googletagmanager.com/gtag/js?id=G-ZDX6WPT6CZ"></script>
   <script is:inline>
     window.dataLayer = window.dataLayer || [];
     function gtag(){dataLayer.push(arguments);}
