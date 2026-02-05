@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head><meta charset="UTF-8"><title>Form Detection</title></head>
+<body>
+<!--
+  This file exists solely for Netlify's build bot to detect and register forms.
+  Netlify scans HTML files during deploy for data-netlify="true" attributes.
+  Astro-generated HTML sometimes isn't detected; this file guarantees registration.
+  It is not linked from anywhere and visitors will never see it.
+-->
+
+<!-- Contact Form -->
+<form name="contact" netlify netlify-honeypot="bot-field" hidden>
+  <input name="bot-field">
+  <input name="form-name" value="contact">
+  <input name="name">
+  <input name="email">
+  <input name="phone">
+  <input name="interest[]" type="checkbox" value="singing">
+  <input name="interest[]" type="checkbox" value="speaking">
+  <input name="interest[]" type="checkbox" value="ensemble">
+  <select name="experience">
+    <option value="beginner">Beginner</option>
+    <option value="some-experience">Some experience</option>
+    <option value="intermediate">Intermediate</option>
+    <option value="advanced">Advanced</option>
+  </select>
+  <textarea name="goals"></textarea>
+  <select name="referral">
+    <option value="web-search">Web search</option>
+    <option value="referral">Referral</option>
+    <option value="social-media">Social media</option>
+    <option value="other">Other</option>
+  </select>
+  <input name="format" type="radio" value="in-person">
+  <input name="format" type="radio" value="virtual">
+  <input name="format" type="radio" value="either">
+  <textarea name="additional"></textarea>
+</form>
+
+<!-- Workshop Inquiry Form -->
+<form name="workshop-inquiry" netlify netlify-honeypot="bot-field" hidden>
+  <input name="bot-field">
+  <input name="form-name" value="workshop-inquiry">
+  <input name="contact-name">
+  <input name="organization">
+  <input name="email">
+  <input name="phone">
+  <input name="workshop-interest[]" type="checkbox" value="avf-series">
+  <input name="workshop-interest[]" type="checkbox" value="conference">
+  <input name="workshop-interest[]" type="checkbox" value="custom">
+  <select name="group-size">
+    <option value="small">Small</option>
+    <option value="medium">Medium</option>
+    <option value="large">Large</option>
+  </select>
+  <input name="timeframe">
+  <textarea name="details"></textarea>
+</form>
+
+<!-- Footer Newsletter Form -->
+<form name="newsletter-footer" netlify netlify-honeypot="bot-field" hidden>
+  <input name="bot-field">
+  <input name="form-name" value="newsletter-footer">
+  <input name="source_form" value="newsletter-footer">
+  <input name="lead_type" value="subscriber">
+  <input name="email">
+</form>
+
+<!-- Blog Newsletter Form -->
+<form name="blog-newsletter" netlify netlify-honeypot="bot-field" hidden>
+  <input name="bot-field">
+  <input name="form-name" value="blog-newsletter">
+  <input name="first-name">
+  <input name="email">
+</form>
+
+</body>
+</html>

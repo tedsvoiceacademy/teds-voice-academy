@@ -1,0 +1,114 @@
+---
+import Layout from '../layouts/BaseLayout.astro';
+---
+
+<Layout
+  title="Message Received"
+  description="Thank you for reaching out to Ted's Voice Academy."
+  noIndex={true}
+>
+  <section class="success-hero">
+    <div class="container">
+      <div class="success-content">
+        <span class="success-icon" aria-hidden="true">&#10003;</span>
+        <h1>Message received!</h1>
+        <p class="success-message">
+          Thank you for reaching out. I'll review your information and get back to you within 24–48 hours.
+        </p>
+        <div class="success-actions">
+          <a href="/" class="btn btn-primary">Back to Home</a>
+          <a href="/about" class="btn-link">Learn more about my approach &rarr;</a>
+        </div>
+      </div>
+    </div>
+  </section>
+</Layout>
+
+<style>
+  .success-hero {
+    background: linear-gradient(135deg, var(--color-navy-deep) 0%, var(--color-navy-medium) 100%);
+    padding: 6rem 0;
+    text-align: center;
+    min-height: 60vh;
+    display: flex;
+    align-items: center;
+  }
+
+  .success-content {
+    max-width: 600px;
+    margin: 0 auto;
+  }
+
+  .success-icon {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    background: var(--color-gold-bright);
+    color: var(--color-navy-deep);
+    font-size: 2.5rem;
+    font-weight: 700;
+    margin-bottom: 2rem;
+  }
+
+  .success-hero h1 {
+    font-family: var(--font-heading);
+    font-size: clamp(2rem, 4vw + 1rem, 3rem);
+    font-weight: 700;
+    color: var(--color-white);
+    margin: 0 0 1.5rem;
+    line-height: 1.2;
+  }
+
+  .success-message {
+    font-size: 1.25rem;
+    color: var(--color-cream);
+    line-height: 1.7;
+    margin-bottom: 2.5rem;
+  }
+
+  .success-actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 1rem 2rem;
+    font-size: 1rem;
+    font-weight: 600;
+    border-radius: 6px;
+    text-decoration: none;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    border: none;
+  }
+
+  .btn-primary {
+    background: var(--color-gold-bright);
+    color: var(--color-navy-deep);
+  }
+
+  .btn-primary:hover {
+    background: var(--color-gold-hover);
+    transform: translateY(-1px);
+    box-shadow: 0 4px 12px rgba(212, 168, 75, 0.3);
+  }
+
+  .btn-link {
+    color: var(--color-gold-bright);
+    text-decoration: none;
+    font-weight: 500;
+  }
+
+  .btn-link:hover {
+    text-decoration: underline;
+  }
+</style>
