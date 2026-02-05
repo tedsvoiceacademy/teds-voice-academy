@@ -22,9 +22,9 @@ These were discussed and approved by Ted at the end of Session 9. Implement imme
 
 - [x] **Update robots.txt for AI crawlers** — DONE (Session 9, commit `a854277`). Explicit Allow for GPTBot, ChatGPT-User, OAI-SearchBot, PerplexityBot, ClaudeBot, Google-Extended, Amazonbot.
 - [x] **Create llms.txt file** — DONE (Session 9, commit `a854277`). `public/llms.txt` with full site summary for AI search engines.
-- [ ] **Image optimization (automated batch)** — Convert all PNG images in `public/images/` to WebP. Two award photos already WebP. ~30 min automated.
-- [ ] **Rename award photos** — Clean up file names for web-friendliness, then add to About page with captions.
-- [ ] **Add award photos to About page** — Display both awards (BusinessRate Top 3 Vocal Instructor 2025, Lacey Chamber Entrepreneur of the Year 2025).
+- [x] **Image optimization (automated batch)** — DONE (Session 10, commit `62def96`). All 9 PNGs converted to WebP. 84% size reduction (7.5MB to 1.2MB). All src references updated.
+- [x] **Rename award photos** — DONE (Session 10, commit `62def96`). SEO-friendly filenames.
+- [x] **Add award photos to About page** — DONE (Session 10, commit `62def96`). Awards grid with captions + Person schema award data.
 
 ---
 
@@ -39,7 +39,7 @@ Full research report completed. Ted said "I will definitely want to fully maximi
 - [ ] **Answer capsule summaries** — Add 2-3 sentence summaries at top of each service page for AI engines to quote.
 - [ ] **Add publish/update dates** — Display dates on all content pages with `<time>` tags.
 - [ ] **Track AI referral traffic in GA4** — Custom channel grouping for ChatGPT, Perplexity, etc.
-- [ ] **Google Business Profile** — Ask Ted if he has one. If not, this is THE #1 local SEO action. Set up and fully optimize.
+- [ ] **Google Business Profile optimization** — Ted confirmed he has one for tedsvoiceacademy.com and has done good work on it. Wants to maximize it further.
 - [ ] **Internal linking strategy** — Every page links to 2-3 related pages contextually.
 - [ ] **Self-host fonts** — Download Inter + Playfair Display, serve from own domain. Eliminates external DNS lookups.
 - [ ] **Breadcrumb schema + visual breadcrumbs** — Add BreadcrumbList schema and breadcrumb navigation to interior pages.
@@ -76,9 +76,7 @@ Ted said he'll get to blog content "in the next few days."
 
 ## Tier 2 — Important Additions
 
-- [ ] **Organizations & affiliations on About page** — Display professional associations Ted belongs to. Known list (needs Ted's confirmation):
-  - BNI, BRING!, Thurston County Chamber, Lacey South Sound Chamber, NATS, Barbershop Harmony Society, Evergreen District, Mixed Barbershop
-  - Need: Ted to confirm list + provide logos or approve text-only approach
+- [x] **Organizations & affiliations on About page** — DONE (Session 10, commit `3c54db0`). 8 org logos + 2 ensemble logos. "Proudly connected with" section. All linked to websites. Person schema updated with 10 memberOf entries.
 - [ ] **Coaching & performance photos** — Photos of Ted coaching, students performing, etc. throughout the site.
 - [ ] **Restructure Vocal Health Hub** — Minimize "coming soon" placeholders. Reorganize to lead with completed content.
 - [ ] **Add Review/AggregateRating schema** — When Google reviews exist, add to LocalBusiness markup. Star ratings in search results dramatically increase CTR.
@@ -119,11 +117,11 @@ These need conversation between Ted and the dev before they become concrete task
 Full research completed. See Tier 1 GEO/SEO section above for the prioritized action plan. Ted is committed to fully maximizing SEO/GEO potential.
 
 **Priority order (effort-to-impact ratio):**
-1. Google Business Profile (ask Ted if he has one)
-2. robots.txt update for AI crawlers ✅ approved
-3. llms.txt file ✅ approved
+1. Google Business Profile optimization (Ted has one — maximize it)
+2. robots.txt update for AI crawlers ✅ DONE
+3. llms.txt file ✅ DONE
 4. Review collection system
-5. Course + Service schema
+5. Course + Service schema (next up)
 6. Answer capsules on service pages
 7. Publish/update dates on pages
 8. AI traffic tracking in GA4
@@ -207,10 +205,10 @@ The page structure is built. These sections have "coming soon" placeholders:
 - [ ] **Articles & Resources** — featured articles, external resource links
 
 ### Other Content Needed
-- [ ] **Organization logos/confirmation** — Professional associations for About page. Ted needs to confirm the list and provide logos or approve text-only approach.
+- [x] **Organization logos/confirmation** — DONE (Session 10). Ted provided all logos. List confirmed and implemented.
 - [ ] **Coaching/performance photos** — Images of Ted coaching, students performing
 - [ ] **Heart of the Sound quartet URL** — Deferred. No online presence yet.
-- [ ] **Google Business Profile status** — Does Ted have one? If not, this is the #1 local SEO action.
+- [x] **Google Business Profile status** — Ted confirmed he has one and wants to maximize it. Discussion item for optimization.
 - [ ] **Stats & credentials for GEO** — Years of experience, number of students coached, certifications, performance milestones
 
 ---
@@ -253,6 +251,10 @@ The page structure is built. These sections have "coming soon" placeholders:
 - [x] **Contact form tone review** — H1 softened, fields made optional, warmer copy (Feb 5, 2026 — Session 9)
 - [x] **GEO/SEO research** — Comprehensive strategy report with 8 GEO recs, 10 SEO improvements, 12 blog topics, schema additions (Feb 5, 2026 — Session 9)
 
+- [x] **Image optimization** — All 9 PNGs converted to WebP, 84% size reduction (Feb 5, 2026 — Session 10)
+- [x] **Award photos on About page** — Renamed, added to Credentials section with captions, Person schema updated (Feb 5, 2026 — Session 10)
+- [x] **Professional affiliations on About page** — 8 org logos + 2 ensemble logos, linked to websites, Person schema memberOf expanded to 10 (Feb 5, 2026 — Session 10)
+
 ---
 
-*Last updated: February 5, 2026 (Session 9)*
+*Last updated: February 5, 2026 (Session 10)*
