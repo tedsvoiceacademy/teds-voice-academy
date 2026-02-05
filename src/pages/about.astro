@@ -22,7 +22,11 @@ import Layout from '../layouts/BaseLayout.astro';
         { "@type": "PerformingGroup", "name": "Voices of the Sound", "url": "https://www.voicesofthesound.org" },
         { "@type": "PerformingGroup", "name": "Hot Notes Quartet" }
       ],
-      "url": "https://www.tedsvoiceacademy.com/about"
+      "award": [
+        "Top 3 Vocal Instructor, Washington State — BusinessRate (2025)",
+        "Entrepreneur of the Year — Lacey South Sound Chamber of Commerce (2025)"
+      ],
+      "url": "https://tedsvoiceacademy.com/about"
     })} />
   </Fragment>
 
@@ -35,7 +39,7 @@ import Layout from '../layouts/BaseLayout.astro';
           <h1>Teaching voice for four decades — and still developing, learning, growing</h1>
         </div>
         <div class="hero-image">
-          <img src="/images/ted-headshot.png" alt="Ted, voice coach and founder of Ted's Voice Academy" class="ted-headshot" />
+          <img src="/images/ted-headshot.webp" alt="Ted, voice coach and founder of Ted's Voice Academy" class="ted-headshot" />
         </div>
       </div>
     </div>
@@ -108,7 +112,18 @@ import Layout from '../layouts/BaseLayout.astro';
       <p>I hold two degrees from Seattle Pacific University — one in Vocal Performance, one in K-12 Music Education. I earned National Board Certification in 2005 and hold a lifetime teaching certification in Washington State.</p>
       
       <p>In 2025, I was recognized among Washington's top vocal instructors (BusinessRate) and named Entrepreneur of the Year by the Lacey South Sound Chamber of Commerce. These recognitions mean something to me — not as trophies, but as confirmation that the work matters.</p>
-      
+
+      <div class="awards-grid">
+        <div class="award-item">
+          <img src="/images/award-businessrate-top3-vocal-instructor-2025.webp" alt="BusinessRate Top 3 Vocal Instructor in Washington State, 2025" class="award-photo" />
+          <p class="award-caption">Top 3 Vocal Instructor, Washington State<br /><span class="award-source">BusinessRate &middot; Google Reviews &middot; 2025</span></p>
+        </div>
+        <div class="award-item">
+          <img src="/images/award-lacey-chamber-entrepreneur-of-year-2025.webp" alt="Lacey South Sound Chamber Entrepreneur of the Year 2025 — Ted Chamberlain with trophy" class="award-photo" />
+          <p class="award-caption">Entrepreneur of the Year<br /><span class="award-source">Lacey South Sound Chamber of Commerce &middot; 2025</span></p>
+        </div>
+      </div>
+
       <p class="credentials-intro">Beyond individual coaching, I've developed frameworks and expertise that represent my broader approach to voice mastery:</p>
       
       <div class="framework-cards">
@@ -391,6 +406,48 @@ import Layout from '../layouts/BaseLayout.astro';
     line-height: 1.8;
     color: var(--color-charcoal);
     margin-bottom: 1.5rem;
+  }
+
+  .awards-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+    margin: 2rem 0;
+  }
+
+  .award-item {
+    text-align: center;
+  }
+
+  .award-photo {
+    width: 100%;
+    max-width: 280px;
+    border-radius: 10px;
+    border: 2px solid var(--color-gold-bright);
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
+    object-fit: cover;
+  }
+
+  .award-caption {
+    margin-top: 0.75rem;
+    font-size: 0.9375rem;
+    font-weight: 600;
+    color: var(--color-navy-deep);
+    line-height: 1.4;
+  }
+
+  .award-source {
+    font-weight: 400;
+    font-size: 0.8125rem;
+    color: var(--color-charcoal);
+    opacity: 0.75;
+  }
+
+  @media (max-width: 600px) {
+    .awards-grid {
+      grid-template-columns: 1fr;
+      gap: 1.5rem;
+    }
   }
 
   .credentials-intro {
