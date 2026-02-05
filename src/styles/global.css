@@ -551,3 +551,47 @@ button {
   color: var(--color-navy-deep);
   font-weight: var(--font-bold);
 }
+
+/* --------------------------------------------------------------------------
+   VISUAL POLISH — Background Noise / Grain Texture
+   Subtle SVG-based noise overlay for sections needing visual depth.
+   Apply .has-grain to any section for a soft paper-like texture.
+   Use .has-grain--light for cream/light sections.
+   -------------------------------------------------------------------------- */
+
+.has-grain {
+  position: relative;
+  isolation: isolate;
+}
+
+.has-grain::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  opacity: 0.035;
+  pointer-events: none;
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)'/%3E%3C/svg%3E");
+  background-repeat: repeat;
+  background-size: 256px 256px;
+}
+
+/* Ensure section content stays above the grain layer */
+.has-grain > * {
+  position: relative;
+  z-index: 1;
+}
+
+/* Light variant — slightly more visible on cream/light backgrounds */
+.has-grain--light::before {
+  opacity: 0.05;
+}
+
+/* --------------------------------------------------------------------------
+   VISUAL POLISH — Section Accent Stripe
+   Thin gold line between sections for visual separation
+   -------------------------------------------------------------------------- */
+
+.section-accent-top {
+  border-top: 2px solid var(--color-gold-bright);
+}
