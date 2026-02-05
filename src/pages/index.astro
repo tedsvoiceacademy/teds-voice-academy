@@ -291,11 +291,12 @@ import Layout from '../layouts/BaseLayout.astro';
   .credentials-bar {
     background:
       url('/images/noise-texture.png') repeat,
-      var(--color-navy-medium);
+      linear-gradient(135deg, var(--color-navy-medium) 0%, var(--color-navy-deep) 100%);
     background-size: 200px 200px, 100% 100%;
     background-blend-mode: soft-light, normal;
     padding: 1rem 0;
     text-align: center;
+    border-top: 1px solid rgba(212, 168, 75, 0.15);
   }
 
   .credentials-bar p {
