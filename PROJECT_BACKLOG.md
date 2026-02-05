@@ -92,11 +92,12 @@ Ted explicitly said he wants to get to these as soon as possible. These need col
 - [x] **Gold accent lines under headings** — DONE (Session 10, commit `f21a0ce`). `.decorated-heading` utility with `--light` and `--left` variants.
 - [x] **Drop caps on opening paragraphs** — DONE (Session 10, commit `f21a0ce`). `.drop-cap` utility with Playfair Display.
 - [x] **Pull quotes / callout boxes** — CSS utilities DONE (Session 10, commit `f21a0ce`). Applied to 6 pages (Session 10, commit `2d6b9eb`).
-- [x] **Background texture & visual richness** — DONE (Session 10, commit `2d6b9eb`). SVG noise grain overlay (.has-grain) on all navy gradient sections across 7 pages.
+- [x] **Background texture & visual richness** — DONE (Session 10 initial, **Session 11 overhaul**). Session 10's SVG approach didn't render in Astro scoped styles. Session 11: real PNG noise texture baked into CSS multiple backgrounds with `soft-light` blend. Applied to ALL dark sections on ALL 16 pages. Commit `6aae45e`.
+- [x] **Scroll-triggered animations** — DONE (Session 11, commits `3f1042e`, `6aae45e`). `.reveal`, `.reveal-left`, `.reveal-right`, `.reveal-stagger` CSS utilities + IntersectionObserver. Applied to all 16 pages. `prefers-reduced-motion` respected.
+- [x] **Hero entrance animations** — DONE (Session 11, commits `e8cee80`, `6aae45e`). CSS keyframe animations on pages with hero photos: Homepage, About, AVF, PASS Profile.
 - [ ] **Section dividers** — SVG wave/curve/angle shapes between sections. Create SectionDivider.astro component.
-- [ ] **Scroll-triggered animations** — Fade-up/slide-in reveals via IntersectionObserver (~20 lines JS).
 - [ ] **Iconography** — Lucide inline SVG icons on card titles and section headings.
-- [ ] **Hero parallax effect** — CSS-only parallax on hero photos. Disabled on mobile.
+- [ ] **Hero parallax effect** — CSS-only parallax on hero photos. Disabled on mobile. Ted interested but deferred.
 - [ ] **Varied section layouts** — Per-page layout diversity: numbered steps, alternating left-right, timelines.
 - [ ] **Digital product delivery for Vocal Fit** — Gumroad or Lemonsqueezy. Blocked until product defined.
 - [ ] **Members-only section** — Approach TBD.
@@ -264,6 +265,11 @@ The page structure is built. These sections have "coming soon" placeholders:
 - [x] **Photos placed on service pages** — 4 photos converted to WebP. Singing, Speaking, Ensembles pages now have intro section text+image grids (Feb 5, 2026 — Session 10)
 - [x] **Visual Polish Tier 2** — SVG grain textures on navy sections (7 pages), pull quotes applied to key content (6 pages), section-accent-top utility (Feb 5, 2026 — Session 10)
 
+- [x] **Grain texture overhaul** — Session 10's SVG feTurbulence approach didn't render in Astro. Session 11: real PNG noise texture baked into CSS backgrounds with soft-light blend across ALL 16 pages (Feb 5, 2026 — Session 11)
+- [x] **Credentials bar blending** — Homepage credentials bar gradient + gold hairline flows from hero (Feb 5, 2026 — Session 11)
+- [x] **Scroll-triggered reveal animations** — .reveal, .reveal-left, .reveal-right, .reveal-stagger CSS + IntersectionObserver on ALL 16 pages (Feb 5, 2026 — Session 11)
+- [x] **Hero entrance animations** — CSS keyframe animations on Homepage, About, AVF, PASS Profile hero sections (Feb 5, 2026 — Session 11)
+
 ---
 
-*Last updated: February 5, 2026 (Session 10 — continued session)*
+*Last updated: February 5, 2026 (Session 11)*

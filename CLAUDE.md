@@ -108,7 +108,27 @@ This website has THREE brand color schemes. Do NOT collapse them:
 ### 5. No Domain Redirects in netlify.toml
 **NEVER** add redirect rules between `tedsvoiceacademy.com` and `www.tedsvoiceacademy.com` in `netlify.toml`. Netlify domain settings handle this automatically. Adding manual redirects caused an infinite 301 loop in session 6.
 
-### 6. Hero Section Pattern
+### 6. Grain Texture Pattern (Session 11)
+Grain is applied per-page in scoped `<style>` blocks — NOT via the `.has-grain` class in global.css (that's dead code).
+```css
+.hero {
+  background:
+    url('/images/noise-texture.png') repeat,
+    linear-gradient(135deg, var(--color-navy-deep) 0%, var(--color-navy-medium) 100%);
+  background-size: 200px 200px, 100% 100%;
+  background-blend-mode: soft-light, normal;
+}
+```
+Only apply to dark sections (navy, teal, dark green). Never on cream/white/light sections.
+
+### 7. Scroll Reveal System (Session 11)
+CSS classes in `global.css` + IntersectionObserver in `BaseLayout.astro` (automatic on all pages).
+- `.reveal` — fade up from 30px below
+- `.reveal-left` / `.reveal-right` — slide from left/right
+- `.reveal-stagger` on parent + `.reveal` on children — staggered entrance (0.1s increments)
+- All respect `prefers-reduced-motion`
+
+### 8. Hero Section Pattern
 ```css
 .hero-eyebrow {
   display: block;
@@ -403,8 +423,10 @@ When nearing token limits (60-70% usage):
 | Feb 5, 2026 | Session 7 (Claude Code) | Fixed all 4 Netlify forms (broken since launch). Created form-detect.html + success.astro. Removed catch-all redirect + deprecated config from netlify.toml. Ted enabled Form Detection in Netlify UI. Email notifications configured. Comprehensive 21-item site audit. Findings captured in PROJECT_BACKLOG.md awaiting Ted's review/approval. |
 | Feb 5, 2026 | Session 8 (Claude Code) | Fixed robots.txt + schema URLs (www→bare). Removed broken favicon PNGs. Replaced placeholder testimonials with Rapid Reviews carousel. FAQ accordion on FAQ/AVF/PASS pages. Card height fix across 5 pages. Created Privacy Policy + Terms of Service pages (16 pages total). AVF dials image updated. Ted decided: GA4 + Search Console + Looker Studio for analytics. Blog stays visible. |
 | Feb 5, 2026 | Session 9 (Claude Code) | Hero eyebrow sizing (1rem→1.25rem). GA4 tracking live (G-ZDX6WPT6CZ) + is:inline fix. Google Search Console verified, sitemap submitted. Privacy policy updated for GA4. Contact form tone softened (H1, optional fields, warmer copy). Comprehensive GEO/SEO research report (8 GEO recs, 10 SEO improvements, 12 blog topics, schema additions). Ted approved quick wins: robots.txt AI crawlers, llms.txt, image optimization, award photos. |
+| Feb 5, 2026 | Session 10 (Claude Code) | Image optimization (PNG→WebP, 84% reduction). Award photos on About page. Professional affiliations section (10 org logos). Ensemble logos on cards. Course + Service schema on 3 pages. PASS logo visibility fix. Card symmetry fix. Visual Polish Tier 1 (card hovers, gold accent lines, drop caps, pull quotes). Photos placed on 3 service pages. Visual Polish Tier 2 (grain textures initial, pull quotes on 6 pages). |
+| Feb 5, 2026 | Session 11 (Claude Code) | Grain texture overhaul: replaced broken SVG feTurbulence with real PNG noise texture baked into CSS backgrounds (soft-light blend). Applied to ALL dark sections on ALL 16 pages. Scroll-triggered reveal animations (IntersectionObserver + CSS) on all 16 pages. Hero entrance animations on Homepage, About, AVF, PASS. Credentials bar blending on homepage. |
 
 ---
 
-*Last updated: February 5, 2026 (Session 9)*
+*Last updated: February 5, 2026 (Session 11)*
 *Project started: January 2026*

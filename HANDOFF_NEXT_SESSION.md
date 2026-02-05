@@ -1,7 +1,7 @@
 # SESSION HANDOFF — Ted's Voice Academy
 
 **Date written:** February 5, 2026
-**Written by:** Claude Code session 10 (Opus 4.5)
+**Written by:** Claude Code session 11 (Opus 4.5)
 **Site status: LAUNCHED & LIVE** at https://tedsvoiceacademy.com
 
 ---
@@ -31,140 +31,77 @@ This applies to everything — quick fixes, visual changes, SEO tweaks, all of i
 
 ---
 
-## What Session 10 Has Accomplished So Far
+## What Session 11 Has Accomplished
 
-### Image Optimization (Commit `62def96`)
-- Batch converted all 9 PNG images to WebP using sharp (84% total size reduction: 7.5MB to 1.2MB)
-- Updated all image src references across 8 source files (.png to .webp)
-- Original PNGs retained as backups in public/images/
-- Build verified clean, 16 pages
+### Grain Texture Overhaul (Commits `8be3d32` through `94f7625`)
+- **Session 10's SVG feTurbulence grain was invisible** — the `::before` pseudo-element approach doesn't render when sections use Astro's scoped `<style>` blocks
+- Generated a real PNG noise texture (`public/images/noise-texture.png`, 200x200px, ~62KB) using sharp
+- **Working approach:** Bake the noise PNG directly into each section's `background` property as a CSS multiple background layer:
+  ```css
+  background:
+    url('/images/noise-texture.png') repeat,
+    linear-gradient(135deg, var(--color-navy-deep) 0%, var(--color-navy-medium) 100%);
+  background-size: 200px 200px, 100% 100%;
+  background-blend-mode: soft-light, normal;
+  ```
+- `soft-light` is the correct blend mode — `overlay` makes dark colors invisible, `screen` is too bright
+- Grain applied to ALL dark/navy/teal sections across ALL 16 pages (including AVF teal sections and PASS dark sections)
+- The `.has-grain` class in global.css is now **dead code** — the pseudo-element approach doesn't work. Grain is applied per-page in scoped styles.
 
-### Award Photos on About Page (Commit `62def96`)
-- Renamed award photos with SEO-friendly filenames:
-  - `Business-Rate-Award-2025.webp` kept as-is (original)
-  - `award-businessrate-top3-vocal-instructor-2025.webp` (new name)
-  - `award-lacey-chamber-entrepreneur-of-year-2025.webp` (new name)
-- Added awards grid to Credentials section with responsive 2-column layout
-- Each award has photo + caption + source line
-- Added `award` array to Person schema on About page
-- Fixed Person schema URL from www to bare domain
+### Credentials Bar Blending (Commit `2ed057e`)
+- Credentials bar below homepage hero now flows from the hero with reversed gradient direction
+- Added thin gold hairline `border-top: 1px solid rgba(212, 168, 75, 0.15)` for subtle separation
 
-### Professional Affiliations on About Page (Commit `3c54db0`)
-- New "Proudly connected with" section between Credentials and Personal sections
-- 10 organization logos converted from PNG to WebP with `logo-` naming convention
-- Two labeled groups:
-  - Vocal & Music: NATS, Barbershop Harmony Society, Evergreen District, MBHA
-  - Business & Community: BNI, BRING!, Lacey Chamber, Thurston Chamber
-- Each logo links to organization website (all URLs verified)
-- 4-column responsive grid (2-column on mobile)
-- Hover effect with subtle lift + shadow
+### Scroll-Triggered Reveal Animations (Commit `3f1042e`, `6aae45e`)
+- Added CSS utilities to `global.css`: `.reveal` (fade-up), `.reveal-left` (slide-left), `.reveal-right` (slide-right), `.reveal-stagger` (staggered children)
+- `prefers-reduced-motion` respected for all animations
+- IntersectionObserver script in `BaseLayout.astro` (threshold: 0.15, rootMargin: '0px 0px -40px 0px')
+- Applied reveals to ALL 16 pages — headings, card grids (staggered), content sections, CTAs
 
-### Ensemble Logos (Commit `3c54db0`)
-- Added Voices of the Sound logo to ensemble card header
-- Added Hot Notes Quartet logo to ensemble card header
-- Logo + h3 in flex row layout
+### Hero Entrance Animations (Commit `e8cee80`, `6aae45e`)
+- CSS keyframe animations for hero sections with photos:
+  - `heroTextIn`: slide from left, 1s ease-out, 0.2s delay
+  - `heroPhotoIn`: scale from 1.06 to 1, 1.2s ease-out, 0.5s delay
+- Applied to: Homepage, About, AVF, PASS Profile hero sections
+- `prefers-reduced-motion` disables all animations
 
-### Person Schema Updated (Commit `3c54db0`)
-- `memberOf` array expanded from 2 to 10 organizations (all with URLs)
-- Includes all 8 professional orgs + 2 performing groups
-
-### Course + Service Schema (Commit `fed84fe`)
-- Added Course and Service JSON-LD schema to Singing, Speaking, and Ensembles pages
-- Each page now has 3 JSON-LD blocks (LocalBusiness from BaseLayout + Course + Service)
-- Course schema includes: name, description, provider, instructor, courseMode (Blended), audience, offers
-- Service schema includes: serviceType, areaServed (Lacey/Olympia/Tumwater), hasOfferCatalog
-- Speaking page Service catalog includes PASS Profile as a distinct offering
-- Ensembles page Service catalog includes workshops, ongoing coaching, competition prep, sectional coaching
-
-### PASS Logo Visibility Fix (Commit `bfb7cba`)
-- Speaking page: PASS Profile logo was hard to see against dark teal gradient background
-- Solution: Wrapped logo in white `.pass-logo-card` container with padding, border-radius, and box-shadow
-- Matches approach already used on PASS Profile page hero section
-
-### Card Symmetry Fix (Commit `bfb7cba`)
-- Added `flex-grow: 1` to `.card p` on Singing, Speaking, and Ensembles pages
-- Added `display: flex; flex-direction: column` and `flex-grow: 1` to Blog `.category-card` and `.category-card p`
-- Homepage ecosystem grid: improved 5th card centering at tablet widths (601-1024px)
-- Cards in the same row now match height regardless of content length
+### Full Site Rollout (Commit `6aae45e`)
+- **All 15 non-homepage pages** received grain texture + scroll reveals in a single commit
+- Pages updated: singing, speaking, ensembles, about, avf, pass-profile, pricing, contact, workshops, blog, faq, vocal-health, success, terms, privacy
+- Removed dead `has-grain` class from AVF and PASS pages
+- Build verified: all 16 pages compile cleanly
 
 ---
 
-### Visual Polish Tier 1 (Commit `f21a0ce`)
-- Added global CSS utilities to `global.css`:
-  - Card hover enhancement: subtle lift + shadow on all card types
-  - `.decorated-heading` — short gold accent line under section headings (+ `--left`, `--light` variants)
-  - `.drop-cap` — large Playfair Display first letter on opening paragraphs
-  - `.pull-quote` — styled callout blocks for key philosophy statements (+ `--dark` variant)
-- Applied to Homepage: decorated headings on value, paths, ecosystem sections; drop cap on value section
-- Applied to Singing, Speaking, Ensembles pages: decorated headings on card sections, drop caps on intros
+## Decisions Made This Session
 
----
-
-### Photos Placed on Service Pages (Commit `5bb3fa7`)
-- Converted 4 photos to WebP with SEO-friendly names
-- **Singing page**: `ted-teaching-studio.webp` — Ted gesturing at the piano. Intro section now text+image grid layout.
-- **Speaking page**: `ted-portrait-casual.webp` — Relaxed casual portrait, white background. Intro section now text+image grid layout.
-- **Ensembles page**: `ensemble-chorus-group.webp` — Community chorus group photo in intro section. `ensemble-quartet-competition.webp` — Quartet with medals as standalone showcase between sections.
-- All intro sections converted from single-column text to responsive text+image grid (stacks on mobile)
-
-### Ted's Answers on Photo Questions:
-- "8 Ted Portrait Teaching" is recent ✓
-- Large group photo is NOT Voices of the Sound — it's a chorus Ted directed and still works with some singers from
-- Quartet photo IS a group Ted coached ✓
-- AI images: "As you see fit" — reviewed and skipped (real photos are much stronger)
-
-### Visual Polish Tier 2 (Commit `2d6b9eb`)
-- Added SVG noise/grain texture system to `global.css`:
-  - `.has-grain` — subtle fractalNoise SVG overlay at 3.5% opacity for depth
-  - `.has-grain--light` — 5% opacity variant for cream/light backgrounds
-  - `.section-accent-top` — thin gold divider utility
-- Applied grain texture to all navy gradient sections across 7 pages:
-  - Homepage: hero, ecosystem, CTA
-  - Singing: hero, styles, CTA
-  - Speaking: hero, CTA
-  - Ensembles: hero, help section, CTA
-  - About: hero, philosophy, CTA
-  - AVF: hero, final CTA
-  - PASS Profile: hero
-- Applied pull quotes to key philosophy statements on 6 pages:
-  - Homepage: "When you understand how your voice works, everything else falls into place."
-  - Singing: "Expression drives the voice, and technique serves expression."
-  - Speaking: "Authentic expression drives impact, and technique serves authenticity."
-  - Ensembles: "Expression first, technique in service of expression."
-  - About: "When someone finds their authentic voice — they experience a sense of freedom, joy, and fulfillment that changes everything."
-  - AVF: "What seemed like contradictions were often the same principle seen from different angles."
+1. **Grain intensity:** Ted approved `soft-light` blend mode (~50% softer than initial `screen` attempt)
+2. **Parallax on grain:** Rejected — draws attention to the texture itself (bad UX). Bookmarked CSS parallax for hero *photos* instead.
+3. **Hero photos on pages without them:** Ted noted "those pages look less polished" — bookmarked for future discussion (Pricing, Contact, Workshops, Vocal Health, Blog, FAQ)
+4. **Google Business Profile optimization:** Deferred to a future session. Ted got a quick rundown of what to do.
 
 ---
 
 ## What's Next
 
-### Ready to Implement (with Ted's approval):
-1. **Visual polish Tier 3** — SVG section dividers, scroll reveal animations, Lucide icons
+### Ready to Implement (approved by Ted this session):
+1. **SVG section dividers** — Create `SectionDivider.astro` component with wave/curve/angle variants
 2. **OG default image** — Design branded 1200x630px image for social sharing
+3. **Answer capsule summaries** — Add 2-3 sentence summaries at top of service pages for AI search engines
 
-### Discussion Topics:
-4. **Google Business Profile optimization** — Ted confirmed he has one and wants to maximize it
-
-### Unused Photos Still in public/images/ (not committed to git):
-- **"6 Ted Portrait"** — Navy blazer headshot. Could replace or supplement existing headshot on About page.
-- **"5 Direct Eye-Line Confidence...plaque"** — Full standing portrait with BusinessRate plaque.
-- **"Ted Lacey Entrepreneur OTY 2025 - 1" and "- 3"** — Award ceremony photos.
-- Multiple older Facebook-era photos (numbered filenames)
-- AI-generated images (skipped — real photos preferred)
-
-### Still Needed Photos:
-- Voices of the Sound group/rehearsal photo (Ted still looking for one)
-- Ted speaking/presenting at a podium or event
-- Studio space interior shot
+### Bookmarked for Discussion:
+- Hero photos for pages that currently lack them (Pricing, Contact, Workshops, Vocal Health, Blog, FAQ)
+- CSS parallax effect on hero photos (subtle, disabled on mobile)
+- Clean up dead `.has-grain` pseudo-element code in global.css
 
 ---
 
-## Verified Current State (as of Session 10 continued)
+## Verified Current State (as of Session 11)
 
 ### Git & Deploy
 - **GitHub repo:** https://github.com/tedsvoiceacademy/teds-voice-academy
-- **Latest pushed commit:** `2d6b9eb` on `main` branch
-- **Session 10 commits:** `62def96`, `3c54db0`, `5f8d61c`, `fed84fe`, `bfb7cba`, `c55c55c`, `f21a0ce`, `ea48955`, `5bb3fa7`, `c0d769d`, `2d6b9eb`
+- **Latest pushed commit:** `6aae45e` on `main` branch
+- **Session 11 commits:** `8be3d32`, `dfefce0`, `674cb5d`, `94f7625`, `2ed057e`, `3f1042e`, `e8cee80`, `6aae45e`
 - **Local project path:** `H:\OneDrive\AI Projects\TVA AI Projects\TVA Webstie 4.0\teds-voice-academy-main\teds-voice-academy-main\`
 - **Live site:** https://tedsvoiceacademy.com
 - **Netlify URL:** https://deft-baklava-b2eb2e.netlify.app/
@@ -181,7 +118,7 @@ Homepage, Contact, Singing, Speaking, Ensembles, About, Pricing, AVF, PASS Profi
 ### Google Business Profile
 - Ted confirmed he has one for tedsvoiceacademy.com and has done good work on it
 - Wants to maximize/optimize it further
-- This is a discussion item for current or future session
+- Deferred to a future session
 
 ### Netlify Forms — WORKING
 - **Form Detection:** Enabled in Netlify UI
@@ -197,108 +134,54 @@ Homepage, Contact, Singing, Speaking, Ensembles, About, Pricing, AVF, PASS Profi
 - `logo-nats.webp`, `logo-barbershop-harmony-society.webp`, `logo-evergreen-district.webp`, `logo-mbha.webp`
 - `logo-bni.webp`, `logo-bring.webp`, `logo-lacey-chamber.webp`, `logo-thurston-chamber.webp`
 - `logo-voices-of-the-sound.webp`, `logo-hot-notes.webp`
+- `noise-texture.png` — **NEW in Session 11** — 200x200px tiling noise texture for grain effect
 
 **Original PNGs still present** (backups, not referenced by code):
 - All 9 original PNGs + 10 original logo PNGs + 2 original award WebPs with old names
 
-### Domain Setup — WORKING
+### Unused Photos Still in public/images/ (not committed to git):
+- **"6 Ted Portrait"** — Navy blazer headshot. Could replace or supplement existing headshot on About page.
+- **"5 Direct Eye-Line Confidence...plaque"** — Full standing portrait with BusinessRate plaque.
+- **"Ted Lacey Entrepreneur OTY 2025 - 1" and "- 3"** — Award ceremony photos.
+- Multiple older Facebook-era photos (numbered filenames)
+- AI-generated images (skipped — real photos preferred)
+
+### Still Needed Photos:
+- Voices of the Sound group/rehearsal photo (Ted still looking for one)
+- Ted speaking/presenting at a podium or event
+- Studio space interior shot
+
+---
+
+## Technical Architecture Notes
+
+### Grain Texture System (Session 11)
+- **Working approach:** CSS multiple backgrounds with `background-blend-mode: soft-light`
+- **NOT working:** `::before` pseudo-elements defined in global.css (Astro scoped styles prevent rendering)
+- **Pattern:** Each section's background property is updated in-page scoped `<style>` to include the noise PNG
+- **The `.has-grain` class in global.css is dead code** — should be cleaned up
+- **noise-texture.png** tiles seamlessly at any size; `background-size: 200px 200px` controls the grain scale
+
+### Scroll Reveal System (Session 11)
+- **CSS:** `.reveal`, `.reveal-left`, `.reveal-right`, `.reveal-stagger` in `global.css`
+- **JS:** IntersectionObserver in `BaseLayout.astro` (runs on every page automatically)
+- **One-shot:** Elements reveal once and stay visible (`observer.unobserve()` after reveal)
+- **Stagger:** Parent `.reveal-stagger` + children `.reveal` — nth-child delays from 0s to 0.5s
+
+### Hero Entrance Animations (Session 11)
+- **CSS keyframes:** Defined in each page's scoped `<style>` (not global)
+- **Applied to:** Homepage (hero-content + hero-photo), About (hero-content + ted-headshot), AVF (hero-content + hero-image), PASS (hero-text + hero-visual)
+- **Not scroll-triggered** — these fire on page load (above the fold)
+
+---
+
+## Domain Setup — WORKING
 - **Domain registrar:** Squarespace (registration only)
 - **DNS management:** Netlify DNS
 - **Primary domain:** `tedsvoiceacademy.com` (bare domain, no www)
 - **SSL:** Let's Encrypt, auto-renews
 
-### Environment
-- **Platform:** Windows
-- **Git:** v2.52.0
-- **Node/npm:** v24.12.0 (sharp available via Astro dependency)
-- **Ted's Google account:** ted@tedsvoiceacademy.com (Google Business Standard)
-
----
-
-## Organization Website URLs (Verified Session 10)
-
-| Organization | URL |
-|---|---|
-| NATS | https://www.nats.org |
-| Barbershop Harmony Society | https://www.barbershop.org |
-| Evergreen District | https://evgdistrict.com |
-| Mixed Barbershop Harmony Association | https://www.mixedbarbershop.org |
-| BNI | https://www.bni.com |
-| BRING! | https://bringnetworking.group |
-| Lacey South Sound Chamber | https://laceysschamber.com |
-| Thurston County Chamber | https://thurstonchamber.com |
-
----
-
-## GEO/SEO Research (COMPLETED — Session 9, Still Relevant)
-
-Full research report produced in Session 9. Ted said "I will definitely want to fully maximize SEO (and GEO if useful) potential."
-
-**Quick wins done:** robots.txt AI crawlers, llms.txt file
-**Next up:** Course + Service schema, answer capsules, publish dates, AI traffic tracking
-
-See PROJECT_BACKLOG.md for the full prioritized list.
-
-**Blog Content Strategy (12 topics prioritized):**
-- Tier 1: How to choose a voice teacher, Singing lessons for adults, What to expect at first lesson, Vocal health care, Voice teacher vs vocal coach
-- Tier 2: The AVF Framework explained, Vocal warmups for beginners, Musical theatre audition prep, Can you teach yourself to sing?, Speaking with confidence
-- Tier 3: Best performance venues in Olympia/Lacey, Singing groups in South Sound area
-
----
-
-## Visual Polish Status
-
-**Completed:**
-- ✅ Card hover enhancements (Tier 1)
-- ✅ Gold accent lines / decorated headings (Tier 1)
-- ✅ Drop caps on opening paragraphs (Tier 1)
-- ✅ Pull quote CSS utilities (Tier 1)
-- ✅ Background grain textures on navy sections (Tier 2)
-- ✅ Pull quotes applied to key content on 6 pages (Tier 2)
-
-**Remaining (Tier 3):**
-- SVG section dividers (SectionDivider.astro component)
-- Scroll-triggered reveal animations (IntersectionObserver)
-- Lucide icons on cards/headings
-- Hero parallax effect
-- Varied section layouts (per-page)
-
----
-
-## Files Modified in Session 10
-
-| File | Change | Commit |
-|------|--------|--------|
-| `src/components/Header.astro` | Logo .png to .webp | `62def96` |
-| `src/components/Footer.astro` | Logo .png to .webp | `62def96` |
-| `src/layouts/BaseLayout.astro` | Schema image .png to .webp | `62def96` |
-| `src/pages/index.astro` | hero-ted + ted-headshot .png to .webp | `62def96` |
-| `src/pages/about.astro` | ted-headshot .webp, awards grid, affiliations section, ensemble logos, schema updates | `62def96`, `3c54db0` |
-| `src/pages/avf.astro` | 4 images .png to .webp | `62def96` |
-| `src/pages/pass-profile.astro` | 2 images .png to .webp | `62def96` |
-| `src/pages/singing.astro` | Course + Service schema, card flex-grow fix | `fed84fe`, `bfb7cba` |
-| `src/pages/speaking.astro` | .webp, Course + Service schema, PASS logo card, card flex-grow | `62def96`, `fed84fe`, `bfb7cba` |
-| `src/pages/ensembles.astro` | Course + Service schema, card flex-grow fix | `fed84fe`, `bfb7cba` |
-| `src/pages/blog.astro` | Card flex + flex-grow fix for category cards | `bfb7cba` |
-| `src/pages/index.astro` | .webp, ecosystem grid tablet centering fix | `62def96`, `bfb7cba` |
-| 9 new WebP images | Converted from PNG originals | `62def96` |
-| 10 new logo WebP images | Converted from Ted's uploaded PNGs | `3c54db0` |
-| `src/styles/global.css` | Grain texture, section-accent-top utilities | `2d6b9eb` |
-| `src/pages/index.astro` | Grain on hero/ecosystem/CTA, pull quote | `2d6b9eb` |
-| `src/pages/singing.astro` | Grain on hero/styles/CTA, pull quote | `2d6b9eb` |
-| `src/pages/speaking.astro` | Grain on hero/CTA, pull quote | `2d6b9eb` |
-| `src/pages/ensembles.astro` | Grain on hero/help/CTA, pull quote | `2d6b9eb` |
-| `src/pages/about.astro` | Grain on hero/philosophy/CTA, pull quote | `2d6b9eb` |
-| `src/pages/avf.astro` | Grain on hero/final CTA, pull quote | `2d6b9eb` |
-| `src/pages/pass-profile.astro` | Grain on hero | `2d6b9eb` |
-
----
-
-## DNS Reference (MANAGED BY NETLIFY DNS)
-
-DNS is managed by Netlify, NOT Squarespace. To view/edit DNS records, go to Netlify DNS panel for tedsvoiceacademy.com.
-
-**Important records:**
+### DNS Reference (MANAGED BY NETLIFY DNS)
 | Host | Type | Data | Purpose |
 |------|------|------|---------|
 | `@` | A/ALIAS | (Netlify managed) | Bare domain -> Netlify site |
@@ -308,6 +191,14 @@ DNS is managed by Netlify, NOT Squarespace. To view/edit DNS records, go to Netl
 | Various | TXT | DKIM, DMARC, SPF records | Email auth — DO NOT TOUCH |
 
 **CRITICAL:** Do NOT add redirect rules in `netlify.toml` between bare and www domains. This caused an infinite redirect loop in session 6. Netlify domain settings handle this automatically.
+
+---
+
+## Environment
+- **Platform:** Windows
+- **Git:** v2.52.0
+- **Node/npm:** v24.12.0 (sharp available via Astro dependency)
+- **Ted's Google account:** ted@tedsvoiceacademy.com (Google Business Standard)
 
 ---
 
