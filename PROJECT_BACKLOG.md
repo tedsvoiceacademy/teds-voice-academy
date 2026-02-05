@@ -35,7 +35,7 @@ These were discussed and approved by Ted at the end of Session 9. Implement imme
 Full research report completed. Ted said "I will definitely want to fully maximize SEO (and GEO if useful) potential."
 
 **Quick GEO/SEO wins (approved or ready to discuss):**
-- [ ] **Course + Service schema markup** — Add to Singing, Speaking, Ensembles pages. Unlocks rich search results.
+- [x] **Course + Service schema markup** — DONE (Session 10, commit `fed84fe`). Course + Service JSON-LD on Singing, Speaking, Ensembles pages.
 - [ ] **Answer capsule summaries** — Add 2-3 sentence summaries at top of each service page for AI engines to quote.
 - [ ] **Add publish/update dates** — Display dates on all content pages with `<time>` tags.
 - [ ] **Track AI referral traffic in GA4** — Custom channel grouping for ChatGPT, Perplexity, etc.
@@ -254,7 +254,10 @@ The page structure is built. These sections have "coming soon" placeholders:
 - [x] **Image optimization** — All 9 PNGs converted to WebP, 84% size reduction (Feb 5, 2026 — Session 10)
 - [x] **Award photos on About page** — Renamed, added to Credentials section with captions, Person schema updated (Feb 5, 2026 — Session 10)
 - [x] **Professional affiliations on About page** — 8 org logos + 2 ensemble logos, linked to websites, Person schema memberOf expanded to 10 (Feb 5, 2026 — Session 10)
+- [x] **Course + Service schema** — JSON-LD on Singing, Speaking, Ensembles pages. Course + Service types with provider, instructor, offers, area served (Feb 5, 2026 — Session 10)
+- [x] **PASS logo visibility fix** — White card container on Speaking page for contrast against dark teal background (Feb 5, 2026 — Session 10)
+- [x] **Card symmetry fix** — flex-grow on card paragraphs across Singing, Speaking, Ensembles, Blog pages. Homepage ecosystem grid tablet centering improved (Feb 5, 2026 — Session 10)
 
 ---
 
-*Last updated: February 5, 2026 (Session 10)*
+*Last updated: February 5, 2026 (Session 10 — continued session)*

@@ -68,26 +68,54 @@ This applies to everything — quick fixes, visual changes, SEO tweaks, all of i
 - `memberOf` array expanded from 2 to 10 organizations (all with URLs)
 - Includes all 8 professional orgs + 2 performing groups
 
+### Course + Service Schema (Commit `fed84fe`)
+- Added Course and Service JSON-LD schema to Singing, Speaking, and Ensembles pages
+- Each page now has 3 JSON-LD blocks (LocalBusiness from BaseLayout + Course + Service)
+- Course schema includes: name, description, provider, instructor, courseMode (Blended), audience, offers
+- Service schema includes: serviceType, areaServed (Lacey/Olympia/Tumwater), hasOfferCatalog
+- Speaking page Service catalog includes PASS Profile as a distinct offering
+- Ensembles page Service catalog includes workshops, ongoing coaching, competition prep, sectional coaching
+
+### PASS Logo Visibility Fix (Commit `bfb7cba`)
+- Speaking page: PASS Profile logo was hard to see against dark teal gradient background
+- Solution: Wrapped logo in white `.pass-logo-card` container with padding, border-radius, and box-shadow
+- Matches approach already used on PASS Profile page hero section
+
+### Card Symmetry Fix (Commit `bfb7cba`)
+- Added `flex-grow: 1` to `.card p` on Singing, Speaking, and Ensembles pages
+- Added `display: flex; flex-direction: column` and `flex-grow: 1` to Blog `.category-card` and `.category-card p`
+- Homepage ecosystem grid: improved 5th card centering at tablet widths (601-1024px)
+- Cards in the same row now match height regardless of content length
+
 ---
 
-## What's Next in Session 10
+## What's Next
 
 ### Ready to Implement (with Ted's approval):
-1. **Course + Service schema markup** — Add to Singing, Speaking, Ensembles pages
-2. **Visual polish exploration** — Research reference sites, present recommendations
+1. **Visual polish exploration** — Research reference sites, present specific recommendations
+2. **OG default image** — Design branded 1200x630px image for social sharing
 
 ### Discussion Topics:
 3. **Google Business Profile optimization** — Ted confirmed he has one for tedsvoiceacademy.com and wants to maximize it
-4. **OG default image** — Design branded 1200x630px image for social sharing
+
+### Photos Ted is Gathering:
+- Ted coaching a student (candid, in-studio)
+- Ted speaking/presenting (podium, workshop, coaching a speaker)
+- Ted directing an ensemble (in front of Voices of the Sound or other group)
+- Student performing (with permission)
+- Studio space shot (warm, inviting environment)
+- Ted at piano/keyboard (natural teaching moment)
+- Group/choir rehearsal shot
+- Ted receiving an award (ceremony photos)
 
 ---
 
-## Verified Current State (as of Session 10 mid-session)
+## Verified Current State (as of Session 10 continued)
 
 ### Git & Deploy
 - **GitHub repo:** https://github.com/tedsvoiceacademy/teds-voice-academy
-- **Latest pushed commit:** `3c54db0` on `main` branch
-- **Session 10 commits:** `62def96`, `3c54db0`
+- **Latest pushed commit:** `bfb7cba` on `main` branch
+- **Session 10 commits:** `62def96`, `3c54db0`, `5f8d61c`, `fed84fe`, `bfb7cba`
 - **Local project path:** `H:\OneDrive\AI Projects\TVA AI Projects\TVA Webstie 4.0\teds-voice-academy-main\teds-voice-academy-main\`
 - **Live site:** https://tedsvoiceacademy.com
 - **Netlify URL:** https://deft-baklava-b2eb2e.netlify.app/
@@ -194,7 +222,11 @@ Discussion items — need collaborative exploration before implementation:
 | `src/pages/about.astro` | ted-headshot .webp, awards grid, affiliations section, ensemble logos, schema updates | `62def96`, `3c54db0` |
 | `src/pages/avf.astro` | 4 images .png to .webp | `62def96` |
 | `src/pages/pass-profile.astro` | 2 images .png to .webp | `62def96` |
-| `src/pages/speaking.astro` | pass-profile-logo .png to .webp | `62def96` |
+| `src/pages/singing.astro` | Course + Service schema, card flex-grow fix | `fed84fe`, `bfb7cba` |
+| `src/pages/speaking.astro` | .webp, Course + Service schema, PASS logo card, card flex-grow | `62def96`, `fed84fe`, `bfb7cba` |
+| `src/pages/ensembles.astro` | Course + Service schema, card flex-grow fix | `fed84fe`, `bfb7cba` |
+| `src/pages/blog.astro` | Card flex + flex-grow fix for category cards | `bfb7cba` |
+| `src/pages/index.astro` | .webp, ecosystem grid tablet centering fix | `62def96`, `bfb7cba` |
 | 9 new WebP images | Converted from PNG originals | `62def96` |
 | 10 new logo WebP images | Converted from Ted's uploaded PNGs | `3c54db0` |
 
