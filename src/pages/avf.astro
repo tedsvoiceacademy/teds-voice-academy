@@ -236,35 +236,35 @@ const amazonLink = "https://www.amazon.com/dp/B0GD2SH8J5";
     <div class="container container-narrow">
       <h2>Common Questions About AVF</h2>
 
-      <div class="faq-item">
-        <h3>Is the Adaptive Voice Framework a new vocal method?</h3>
+      <details class="faq-item">
+        <summary>Is the Adaptive Voice Framework a new vocal method?</summary>
         <p>AVF is a framework, not a method. Methods offer a specific sequence of steps for training. AVF explains the underlying principles that make all methods work. It helps you understand why certain approaches are effective and how to choose the right tools for any voice, in any context.</p>
-      </div>
+      </details>
 
-      <div class="faq-item">
-        <h3>Do I need to read all 700 pages?</h3>
+      <details class="faq-item">
+        <summary>Do I need to read all 700 pages?</summary>
         <p>The book is designed as both a cover-to-cover read and a reference you return to. The first few chapters lay the foundation. From there, you can explore the Five Pillars and Eight Dials in whatever order fits your interests. The seven appendices offer practical diagnostic tools and lesson templates you can use immediately.</p>
-      </div>
+      </details>
 
-      <div class="faq-item">
-        <h3>Is AVF only for professional singers?</h3>
+      <details class="faq-item">
+        <summary>Is AVF only for professional singers?</summary>
         <p>AVF is for anyone who uses their voice with intention. Professional singers, beginning students, voice teachers, speakers, and choir directors all find value in understanding how the voice works as a system. The principles are universal — how deeply you go depends on your goals.</p>
-      </div>
+      </details>
 
-      <div class="faq-item">
-        <h3>Does AVF work for contemporary and pop styles, or just classical?</h3>
+      <details class="faq-item">
+        <summary>Does AVF work for contemporary and pop styles, or just classical?</summary>
         <p>AVF covers every genre. The Five Pillars are universal foundations shared by all healthy voices. The Eight Dials are what create stylistic variety — they explain how a classical sound differs from a pop sound, and how to move between them safely. The book includes specific cross-genre applications.</p>
-      </div>
+      </details>
 
-      <div class="faq-item">
-        <h3>Can I learn AVF on my own, or do I need coaching?</h3>
+      <details class="faq-item">
+        <summary>Can I learn AVF on my own, or do I need coaching?</summary>
         <p>The book gives you the complete framework. Many readers find they can apply insights immediately just from reading. Working with me directly brings the framework to life through personalized coaching, hands-on application, and real-time feedback. Both paths are valuable.</p>
-      </div>
+      </details>
 
-      <div class="faq-item">
-        <h3>Is the book available in digital format?</h3>
+      <details class="faq-item">
+        <summary>Is the book available in digital format?</summary>
         <p>Yes. The Kindle edition is $9.99 on Amazon. The paperback is $42.95. Both contain the full text, diagrams, and appendices.</p>
-      </div>
+      </details>
     </div>
   </section>
 
@@ -811,19 +811,50 @@ const amazonLink = "https://www.amazon.com/dp/B0GD2SH8J5";
   }
 
   .avf-faq .faq-item {
-    margin-bottom: 2rem;
+    margin-bottom: 1rem;
+    border: 1px solid rgba(240, 232, 212, 0.15);
+    border-radius: 8px;
+    overflow: hidden;
   }
 
   .avf-faq .faq-item:last-child {
     margin-bottom: 0;
   }
 
-  .avf-faq .faq-item h3 {
+  .avf-faq .faq-item summary {
     font-family: 'Cinzel', serif;
     font-size: 1.15rem;
     font-weight: 600;
     color: var(--color-avf-amber);
-    margin: 0 0 0.75rem;
+    padding: 1.25rem 3rem 1.25rem 1.25rem;
+    cursor: pointer;
+    list-style: none;
+    position: relative;
+    transition: background 0.2s ease;
+  }
+
+  .avf-faq .faq-item summary::-webkit-details-marker {
+    display: none;
+  }
+
+  .avf-faq .faq-item summary::after {
+    content: "+";
+    position: absolute;
+    right: 1.25rem;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 1.5rem;
+    font-weight: 400;
+    color: var(--color-avf-amber);
+    transition: transform 0.2s ease;
+  }
+
+  .avf-faq .faq-item[open] summary::after {
+    content: "\2212";
+  }
+
+  .avf-faq .faq-item summary:hover {
+    background: rgba(212, 160, 57, 0.08);
   }
 
   .avf-faq .faq-item p {
@@ -832,6 +863,7 @@ const amazonLink = "https://www.amazon.com/dp/B0GD2SH8J5";
     margin: 0;
     color: var(--color-avf-cream);
     opacity: 0.95;
+    padding: 0 1.25rem 1.25rem;
   }
 
   /* Responsive adjustments */

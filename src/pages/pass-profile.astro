@@ -372,35 +372,35 @@ import Layout from '../layouts/BaseLayout.astro';
     <div class="container">
       <h2>Common Questions About PASS Profile</h2>
 
-      <div class="faq-item">
-        <h3>How is PASS Profile different from DISC or Myers-Briggs?</h3>
+      <details class="faq-item">
+        <summary>How is PASS Profile different from DISC or Myers-Briggs?</summary>
         <p>DISC and Myers-Briggs measure broad personality traits and sort you into types. PASS Profile focuses specifically on communication behavior in professional settings. It uses real workplace scenarios instead of abstract questions, and it generates truly individual results — more unique combinations than atoms in the observable universe.</p>
-      </div>
+      </details>
 
-      <div class="faq-item">
-        <h3>How long does the assessment take?</h3>
+      <details class="faq-item">
+        <summary>How long does the assessment take?</summary>
         <p>Most people complete it in 30 to 60 minutes. You can save your progress and return later — each scenario has a Save and Exit button.</p>
-      </div>
+      </details>
 
-      <div class="faq-item">
-        <h3>Will my results match someone else's?</h3>
+      <details class="faq-item">
+        <summary>Will my results match someone else's?</summary>
         <p>It's virtually impossible. PASS measures 40 traits on a continuous scale, creating more unique combinations than atoms in the observable universe. Your communication fingerprint is genuinely yours.</p>
-      </div>
+      </details>
 
-      <div class="faq-item">
-        <h3>Can teams take PASS Profile together?</h3>
+      <details class="faq-item">
+        <summary>Can teams take PASS Profile together?</summary>
         <p>Yes. When team members understand each other's communication patterns, they collaborate more effectively. Each person takes the assessment individually and receives their own report. Team workshops and organizational applications are in development.</p>
-      </div>
+      </details>
 
-      <div class="faq-item">
-        <h3>What do I do with my results after I get them?</h3>
+      <details class="faq-item">
+        <summary>What do I do with my results after I get them?</summary>
         <p>Your report includes a 90-day development roadmap, a shareable "Working With Others" section for colleagues, and a one-page Quick Reference Card. You can also book a coaching session to explore your results in depth and apply them to specific professional challenges.</p>
-      </div>
+      </details>
 
-      <div class="faq-item">
-        <h3>How much does PASS Profile cost?</h3>
+      <details class="faq-item">
+        <summary>How much does PASS Profile cost?</summary>
         <p>The assessment is $49.99. You receive a comprehensive 46-48 page personalized PDF report, typically delivered within minutes of completion.</p>
-      </div>
+      </details>
     </div>
   </section>
 
@@ -1016,19 +1016,50 @@ import Layout from '../layouts/BaseLayout.astro';
   }
 
   .pass-faq .faq-item {
-    margin-bottom: 2rem;
+    margin-bottom: 1rem;
+    border: 1px solid rgba(15, 77, 90, 0.15);
+    border-radius: 8px;
+    overflow: hidden;
   }
 
   .pass-faq .faq-item:last-child {
     margin-bottom: 0;
   }
 
-  .pass-faq .faq-item h3 {
+  .pass-faq .faq-item summary {
     font-family: var(--font-heading);
     font-size: 1.125rem;
     font-weight: 600;
     color: var(--pass-primary);
-    margin: 0 0 0.75rem;
+    padding: 1.25rem 3rem 1.25rem 1.25rem;
+    cursor: pointer;
+    list-style: none;
+    position: relative;
+    transition: background 0.2s ease;
+  }
+
+  .pass-faq .faq-item summary::-webkit-details-marker {
+    display: none;
+  }
+
+  .pass-faq .faq-item summary::after {
+    content: "+";
+    position: absolute;
+    right: 1.25rem;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 1.5rem;
+    font-weight: 400;
+    color: var(--pass-accent);
+    transition: transform 0.2s ease;
+  }
+
+  .pass-faq .faq-item[open] summary::after {
+    content: "\2212";
+  }
+
+  .pass-faq .faq-item summary:hover {
+    background: rgba(61, 181, 140, 0.06);
   }
 
   .pass-faq .faq-item p {
@@ -1036,6 +1067,7 @@ import Layout from '../layouts/BaseLayout.astro';
     line-height: 1.7;
     margin: 0;
     color: var(--color-charcoal);
+    padding: 0 1.25rem 1.25rem;
   }
 
   /* Final CTA Section */
