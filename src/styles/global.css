@@ -442,3 +442,112 @@ button {
    -------------------------------------------------------------------------- */
 
 /* Loaded in BaseLayout.astro head for optimal performance */
+
+/* --------------------------------------------------------------------------
+   VISUAL POLISH — Card Hover Enhancements
+   Adds subtle lift + shadow on hover for interactive feel
+   -------------------------------------------------------------------------- */
+
+.card,
+.path-card,
+.eco-card,
+.category-card,
+.how-item,
+.help-item {
+  transition: transform var(--transition-base), box-shadow var(--transition-base);
+}
+
+.card:hover,
+.path-card:hover,
+.eco-card:hover,
+.category-card:hover,
+.how-item:hover,
+.help-item:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-card-hover);
+}
+
+/* --------------------------------------------------------------------------
+   VISUAL POLISH — Gold Accent Lines Under Section Headings
+   Short decorative gold rule beneath h2 headings for visual hierarchy
+   -------------------------------------------------------------------------- */
+
+.decorated-heading::after {
+  content: '';
+  display: block;
+  width: 60px;
+  height: 3px;
+  background: var(--color-gold-bright);
+  margin: 0.75rem auto 0;
+  border-radius: 2px;
+}
+
+/* Left-aligned variant */
+.decorated-heading--left::after {
+  margin: 0.75rem 0 0;
+}
+
+/* On dark backgrounds, use cream/white line */
+.decorated-heading--light::after {
+  background: var(--color-cream);
+}
+
+/* --------------------------------------------------------------------------
+   VISUAL POLISH — Pull Quotes
+   Highlighted philosophy/key statements with decorative quotation mark
+   -------------------------------------------------------------------------- */
+
+.pull-quote {
+  position: relative;
+  padding: 1.5rem 1.5rem 1.5rem 2rem;
+  margin: 2rem 0;
+  border-left: 4px solid var(--color-gold-bright);
+  background: var(--color-cream);
+  border-radius: 0 var(--radius-lg) var(--radius-lg) 0;
+  font-family: var(--font-heading);
+  font-size: 1.25rem;
+  font-style: italic;
+  line-height: 1.6;
+  color: var(--color-navy-deep);
+}
+
+.pull-quote::before {
+  content: '\201C';
+  font-family: var(--font-heading);
+  font-size: 4rem;
+  font-style: normal;
+  color: var(--color-gold-bright);
+  position: absolute;
+  top: -0.25rem;
+  left: 0.5rem;
+  line-height: 1;
+  opacity: 0.4;
+}
+
+/* Pull quote on dark backgrounds */
+.pull-quote--dark {
+  background: rgba(255, 255, 255, 0.08);
+  border-left-color: var(--color-gold-bright);
+  color: var(--color-cream);
+}
+
+.pull-quote--dark::before {
+  color: var(--color-gold-bright);
+  opacity: 0.3;
+}
+
+/* --------------------------------------------------------------------------
+   VISUAL POLISH — Drop Caps
+   Large decorative first letter on opening paragraphs
+   -------------------------------------------------------------------------- */
+
+.drop-cap::first-letter {
+  font-family: var(--font-heading);
+  font-size: 3.5em;
+  float: left;
+  line-height: 0.8;
+  padding-right: 0.1em;
+  padding-top: 0.05em;
+  color: var(--color-navy-deep);
+  font-weight: var(--font-bold);
+}
