@@ -21,7 +21,8 @@ This is the living project list for the TVA website. Items move between tiers as
 These items have been discussed and approved by Ted. They're ready to go when session time allows.
 
 - [x] **Hero eyebrow sizing** — "MASTER YOUR VOICE" bumped from `1rem` to `1.25rem` (16px→20px). H1 unchanged. (Session 9)
-- [ ] **GA4 + Google Search Console + Looker Studio** — Ted approved. Free analytics stack with weekly "TVA Website Weekly Performance Overview" email report via Looker Studio.
+- [x] **GA4 + Google Search Console** — GA4 live (G-ZDX6WPT6CZ). Search Console verified, sitemap submitted. Privacy policy updated. (Session 9)
+- [ ] **Looker Studio weekly email** — Deferred until GA4 has a few days of data. Will set up "TVA Website Weekly Performance Overview" report.
 
 ---
 

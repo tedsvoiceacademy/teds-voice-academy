@@ -35,7 +35,7 @@ This applies to everything — quick fixes, visual changes, SEO tweaks, all of i
 
 1. ~~**Hero eyebrow sizing**~~ — **DONE (Session 9).** "MASTER YOUR VOICE" eyebrow bumped from `1rem` (16px) to `1.25rem` (20px). H1 left unchanged. CLAUDE.md hero pattern updated to match.
 
-2. **GA4 + Google Search Console + Looker Studio setup** — Ted approved GA4 (free) + Google Search Console + Looker Studio for a free weekly "TVA Website Weekly Performance Overview" email report. Needs implementation.
+2. ~~**GA4 + Google Search Console**~~ — **DONE (Session 9).** GA4 live (G-ZDX6WPT6CZ, commit `8f1a8cd`). Search Console verified for tedsvoiceacademy.com, sitemap submitted. Privacy policy updated for GA4 disclosure. **Looker Studio weekly email** deferred — needs a few days of GA4 data first.
 
 3. **Contact form tone review** — Ted concerned the form may feel too formal/committal. Review fields and microcopy, propose lighter alternatives.
 
