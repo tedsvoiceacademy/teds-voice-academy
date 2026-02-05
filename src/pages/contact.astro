@@ -10,8 +10,8 @@ import Layout from '../layouts/BaseLayout.astro';
   <section class="hero">
     <div class="container">
       <span class="hero-eyebrow">Contact</span>
-      <h1>Get Started</h1>
-      <p class="hero-subtitle">Ready to work on your voice? Here's how to begin.</p>
+      <h1>Let me know how I can help</h1>
+      <p class="hero-subtitle">I'd love to hear what you're working on — or what you're curious about.</p>
     </div>
   </section>
 
@@ -61,7 +61,7 @@ import Layout from '../layouts/BaseLayout.astro';
 
             <!-- Interest (Checkboxes) -->
             <fieldset class="form-group">
-              <legend>I'm interested in... <span class="required">*</span></legend>
+              <legend>I'm interested in...</legend>
               <div class="checkbox-group">
                 <label class="checkbox-label">
                   <input type="checkbox" name="interest[]" value="singing" />
@@ -80,8 +80,8 @@ import Layout from '../layouts/BaseLayout.astro';
 
             <!-- Experience Level -->
             <div class="form-group">
-              <label for="experience">Experience level <span class="required">*</span></label>
-              <select id="experience" name="experience" required>
+              <label for="experience">Experience level</label>
+              <select id="experience" name="experience">
                 <option value="">Select your experience level</option>
                 <option value="beginner">Beginner</option>
                 <option value="some-experience">Some experience</option>
@@ -92,8 +92,8 @@ import Layout from '../layouts/BaseLayout.astro';
 
             <!-- Goals -->
             <div class="form-group">
-              <label for="goals">What are you hoping to work on? <span class="required">*</span></label>
-              <textarea id="goals" name="goals" rows="4" required></textarea>
+              <label for="goals">What's on your mind?</label>
+              <textarea id="goals" name="goals" rows="4"></textarea>
             </div>
 
             <!-- Referral Source -->
