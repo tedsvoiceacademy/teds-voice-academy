@@ -20,7 +20,15 @@ import Layout from '../layouts/BaseLayout.astro';
       "knowsAbout": ["Singing", "Voice Training", "Public Speaking", "Vocal Health", "Choir Directing", "Ensemble Coaching"],
       "memberOf": [
         { "@type": "PerformingGroup", "name": "Voices of the Sound", "url": "https://www.voicesofthesound.org" },
-        { "@type": "PerformingGroup", "name": "Hot Notes Quartet" }
+        { "@type": "PerformingGroup", "name": "Hot Notes Quartet" },
+        { "@type": "Organization", "name": "National Association of Teachers of Singing", "url": "https://www.nats.org" },
+        { "@type": "Organization", "name": "Barbershop Harmony Society", "url": "https://www.barbershop.org" },
+        { "@type": "Organization", "name": "Evergreen District — Barbershop Harmony Society", "url": "https://evgdistrict.com" },
+        { "@type": "Organization", "name": "Mixed Barbershop Harmony Association", "url": "https://www.mixedbarbershop.org" },
+        { "@type": "Organization", "name": "BNI — Business Network International", "url": "https://www.bni.com" },
+        { "@type": "Organization", "name": "BRING! Networking Group", "url": "https://bringnetworking.group" },
+        { "@type": "Organization", "name": "Lacey South Sound Chamber of Commerce", "url": "https://laceysschamber.com" },
+        { "@type": "Organization", "name": "Thurston County Chamber", "url": "https://thurstonchamber.com" }
       ],
       "award": [
         "Top 3 Vocal Instructor, Washington State — BusinessRate (2025)",
@@ -148,6 +156,45 @@ import Layout from '../layouts/BaseLayout.astro';
     </div>
   </section>
 
+  <!-- Professional Affiliations Section -->
+  <section class="affiliations-section">
+    <div class="container">
+      <h2>Proudly connected with</h2>
+
+      <h3 class="affiliation-group-label">Vocal &amp; Music Organizations</h3>
+      <div class="affiliations-grid">
+        <a href="https://www.nats.org" target="_blank" rel="noopener" class="affiliation-item" title="National Association of Teachers of Singing">
+          <img src="/images/logo-nats.webp" alt="NATS — National Association of Teachers of Singing" class="affiliation-logo" />
+        </a>
+        <a href="https://www.barbershop.org" target="_blank" rel="noopener" class="affiliation-item" title="Barbershop Harmony Society">
+          <img src="/images/logo-barbershop-harmony-society.webp" alt="Barbershop Harmony Society" class="affiliation-logo" />
+        </a>
+        <a href="https://evgdistrict.com" target="_blank" rel="noopener" class="affiliation-item" title="Evergreen District — Barbershop Harmony Society">
+          <img src="/images/logo-evergreen-district.webp" alt="Evergreen District — Barbershop Harmony Society" class="affiliation-logo" />
+        </a>
+        <a href="https://www.mixedbarbershop.org" target="_blank" rel="noopener" class="affiliation-item" title="Mixed Barbershop Harmony Association">
+          <img src="/images/logo-mbha.webp" alt="Mixed Barbershop Harmony Association" class="affiliation-logo" />
+        </a>
+      </div>
+
+      <h3 class="affiliation-group-label">Business &amp; Community</h3>
+      <div class="affiliations-grid">
+        <a href="https://www.bni.com" target="_blank" rel="noopener" class="affiliation-item" title="BNI — Business Network International">
+          <img src="/images/logo-bni.webp" alt="BNI — Business Network International" class="affiliation-logo" />
+        </a>
+        <a href="https://bringnetworking.group" target="_blank" rel="noopener" class="affiliation-item" title="BRING! — Business Referrals and Interactive Networking Group">
+          <img src="/images/logo-bring.webp" alt="BRING! — Business Referrals and Interactive Networking Group" class="affiliation-logo" />
+        </a>
+        <a href="https://laceysschamber.com" target="_blank" rel="noopener" class="affiliation-item" title="Lacey South Sound Chamber of Commerce">
+          <img src="/images/logo-lacey-chamber.webp" alt="Lacey South Sound Chamber of Commerce" class="affiliation-logo" />
+        </a>
+        <a href="https://thurstonchamber.com" target="_blank" rel="noopener" class="affiliation-item" title="Thurston County Chamber">
+          <img src="/images/logo-thurston-chamber.webp" alt="Thurston County Chamber" class="affiliation-logo" />
+        </a>
+      </div>
+    </div>
+  </section>
+
   <!-- Personal Note Section -->
   <section class="personal-section">
     <div class="container container-narrow">
@@ -170,7 +217,10 @@ import Layout from '../layouts/BaseLayout.astro';
 
       <div class="ensemble-cards">
         <div class="ensemble-card">
-          <h3>Voices of the Sound</h3>
+          <div class="ensemble-card-header">
+            <img src="/images/logo-voices-of-the-sound.webp" alt="Voices of the Sound logo" class="ensemble-logo" />
+            <h3>Voices of the Sound</h3>
+          </div>
           <p>I'm the director of Voices of the Sound, a barbershop chorus based in the Pacific Northwest. Leading this group is one of the most rewarding things I do — it brings together everything I believe about voice, community, and the power of singing together.</p>
           <div class="ensemble-links">
             <a href="https://www.voicesofthesound.org" target="_blank" rel="noopener" class="ensemble-link">
@@ -191,7 +241,10 @@ import Layout from '../layouts/BaseLayout.astro';
         </div>
 
         <div class="ensemble-card">
-          <h3>Hot Notes Quartet</h3>
+          <div class="ensemble-card-header">
+            <img src="/images/logo-hot-notes.webp" alt="Hot Notes Quartet logo" class="ensemble-logo" />
+            <h3>Hot Notes Quartet</h3>
+          </div>
           <p>Hot Notes is the quartet I sing with — four voices, tight harmonies, and a whole lot of energy. Quartet singing is where vocal technique meets real-time communication, and every performance is its own adventure.</p>
           <div class="ensemble-links">
             <a href="https://www.facebook.com/hotnotesquartet" target="_blank" rel="noopener" class="ensemble-link">
@@ -537,6 +590,74 @@ import Layout from '../layouts/BaseLayout.astro';
     color: var(--color-gold-hover);
   }
 
+  /* Affiliations Section */
+  .affiliations-section {
+    background: var(--color-white);
+    padding: 4rem 0;
+  }
+
+  .affiliations-section h2 {
+    font-family: var(--font-heading);
+    font-size: clamp(1.75rem, 3vw + 1rem, 2.5rem);
+    font-weight: 700;
+    color: var(--color-navy-deep);
+    text-align: center;
+    margin: 0 0 2rem;
+  }
+
+  .affiliation-group-label {
+    font-family: var(--font-heading);
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: var(--color-gold-bright);
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    text-align: center;
+    margin: 2.5rem 0 1.25rem;
+  }
+
+  .affiliation-group-label:first-of-type {
+    margin-top: 0;
+  }
+
+  .affiliations-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1.5rem;
+    max-width: 800px;
+    margin: 0 auto;
+  }
+
+  .affiliation-item {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 1.25rem;
+    background: var(--color-off-white);
+    border-radius: 10px;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    text-decoration: none;
+  }
+
+  .affiliation-item:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
+  }
+
+  .affiliation-logo {
+    width: 100%;
+    max-width: 120px;
+    max-height: 80px;
+    object-fit: contain;
+  }
+
+  @media (max-width: 600px) {
+    .affiliations-grid {
+      grid-template-columns: repeat(2, 1fr);
+      gap: 1rem;
+    }
+  }
+
   /* Personal Section */
   .personal-section {
     background: var(--color-white);
@@ -597,12 +718,27 @@ import Layout from '../layouts/BaseLayout.astro';
     background: var(--color-white);
   }
 
+  .ensemble-card-header {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    margin-bottom: 0.75rem;
+  }
+
+  .ensemble-logo {
+    width: 60px;
+    height: 60px;
+    object-fit: contain;
+    border-radius: 6px;
+    flex-shrink: 0;
+  }
+
   .ensemble-card h3 {
     font-family: var(--font-heading);
     font-size: 1.25rem;
     font-weight: 700;
     color: var(--color-navy-deep);
-    margin: 0 0 0.75rem;
+    margin: 0;
   }
 
   .ensemble-card p {
