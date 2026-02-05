@@ -101,7 +101,7 @@ These need conversation between Ted and the dev before they become concrete task
 - Compare against best practices for service-based business contact forms
 - Consider adding a "quick question" option that requires less commitment (e.g., just name + email + short message)
 
-**Action:** Review form, propose specific changes, discuss with Ted before implementing.
+**Status: DONE (Session 9).** H1 softened, subtitle warmed up, interest/experience/goals made optional, goals label changed. Commit `609912d`. Form email formatting still a separate backlog item.
 
 ### 3. SEO / GEO Research
 

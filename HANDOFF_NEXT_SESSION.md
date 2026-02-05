@@ -37,7 +37,7 @@ This applies to everything — quick fixes, visual changes, SEO tweaks, all of i
 
 2. ~~**GA4 + Google Search Console**~~ — **DONE (Session 9).** GA4 live (G-ZDX6WPT6CZ, commit `8f1a8cd`). Search Console verified for tedsvoiceacademy.com, sitemap submitted. Privacy policy updated for GA4 disclosure. **Looker Studio weekly email** deferred — needs a few days of GA4 data first.
 
-3. **Contact form tone review** — Ted concerned the form may feel too formal/committal. Review fields and microcopy, propose lighter alternatives.
+3. ~~**Contact form tone review**~~ — **DONE (Session 9).** H1 softened to "Let me know how I can help", warmer subtitle, interest/experience/goals all made optional, goals label changed to "What's on your mind?". Commit `609912d`.
 
 ### Larger Projects (Discussed, Not Yet Scheduled)
 
