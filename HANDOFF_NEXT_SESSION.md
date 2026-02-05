@@ -100,36 +100,40 @@ This applies to everything — quick fixes, visual changes, SEO tweaks, all of i
 
 ---
 
+### Photos Placed on Service Pages (Commit `5bb3fa7`)
+- Converted 4 photos to WebP with SEO-friendly names
+- **Singing page**: `ted-teaching-studio.webp` — Ted gesturing at the piano. Intro section now text+image grid layout.
+- **Speaking page**: `ted-portrait-casual.webp` — Relaxed casual portrait, white background. Intro section now text+image grid layout.
+- **Ensembles page**: `ensemble-chorus-group.webp` — Community chorus group photo in intro section. `ensemble-quartet-competition.webp` — Quartet with medals as standalone showcase between sections.
+- All intro sections converted from single-column text to responsive text+image grid (stacks on mobile)
+
+### Ted's Answers on Photo Questions:
+- "8 Ted Portrait Teaching" is recent ✓
+- Large group photo is NOT Voices of the Sound — it's a chorus Ted directed and still works with some singers from
+- Quartet photo IS a group Ted coached ✓
+- AI images: "As you see fit" — reviewed and skipped (real photos are much stronger)
+
+---
+
 ## What's Next
 
-### Ted Has Uploaded New Photos (in public/images/):
-Photos reviewed. Key assets identified:
-- **"8 Ted Portrait Teaching"** — Ted gesturing with piano + mic behind. Best "in his element" shot.
-- **"4a relaxed casual presence"** — White background portrait. Approachable. Good for Speaking or About.
-- **"6 Ted Portrait"** — Navy blazer headshot, neutral gray. Clean professional alternative.
-- **"5 Direct Eye-Line Confidence...plaque"** — Full standing portrait with BusinessRate plaque.
-- **"Ted Lacey Entrepreneur OTY 2025 - 1" and "- 3"** — Award ceremony photos.
-- **"457506455..."** — Large group/choir photo (possibly Voices of the Sound — needs confirmation).
-- **"2018-04-2"** — Women's barbershop quartet with competition medals.
-- Several older Facebook-era photos and AI-generated/experimental images.
-
-**Needs Ted's input before placing photos:**
-1. Is "8 Ted Portrait Teaching" a recent photo?
-2. Is the large group photo (457506455...) Voices of the Sound?
-3. Is the quartet photo (2018-04-2) a group Ted coached?
-4. Are the AI-generated images (Gemini, Untitled design, AI1) for the site or experiments?
-
 ### Ready to Implement (with Ted's approval):
-1. **Convert + place photos** on appropriate pages (pending answers above)
-2. **Visual polish Tier 2** — Background noise textures, pull quotes on specific content
-3. **Visual polish Tier 3** — SVG section dividers, scroll reveal animations, icons
-4. **OG default image** — Design branded 1200x630px image for social sharing
+1. **Visual polish Tier 2** — Background noise textures, pull quotes applied to specific content
+2. **Visual polish Tier 3** — SVG section dividers, scroll reveal animations, Lucide icons
+3. **OG default image** — Design branded 1200x630px image for social sharing
 
 ### Discussion Topics:
-5. **Google Business Profile optimization** — Ted confirmed he has one and wants to maximize it
+4. **Google Business Profile optimization** — Ted confirmed he has one and wants to maximize it
+
+### Unused Photos Still in public/images/ (not committed to git):
+- **"6 Ted Portrait"** — Navy blazer headshot. Could replace or supplement existing headshot on About page.
+- **"5 Direct Eye-Line Confidence...plaque"** — Full standing portrait with BusinessRate plaque.
+- **"Ted Lacey Entrepreneur OTY 2025 - 1" and "- 3"** — Award ceremony photos.
+- Multiple older Facebook-era photos (numbered filenames)
+- AI-generated images (skipped — real photos preferred)
 
 ### Still Needed Photos:
-- Ted coaching a student (candid, in-studio)
+- Voices of the Sound group/rehearsal photo (Ted still looking for one)
 - Ted speaking/presenting at a podium or event
 - Studio space interior shot
 
