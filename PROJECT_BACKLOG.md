@@ -5,12 +5,26 @@
 
 This is the living project list for the TVA website. Items move between tiers as priorities shift. New items get added as Ted's vision develops.
 
+**IMPORTANT: All items require Ted's review and approval before implementation begins.** Present recommendations, discuss, get the green light, then implement. No exceptions.
+
 **How this works:**
 - **Tier 1** = High-value additions (content, SEO, functionality)
 - **Tier 2** = Important but not urgent (photos, testimonials, integrations)
 - **Tier 3** = Cosmetic / visual polish (design refinements, animations)
 - **Discussion items** = Need conversation before they become tasks
 - **Waiting on Ted** = Blocked until Ted provides content, assets, or decisions
+
+---
+
+## Quick Technical Fixes (from Session 7 Audit)
+
+These are small, high-confidence fixes found during the comprehensive site audit. Each is a few lines of code, but still needs Ted's approval before implementation.
+
+- [ ] **Fix robots.txt sitemap URL** — References `www.tedsvoiceacademy.com` but canonical domain is bare `tedsvoiceacademy.com`. One-line change.
+- [ ] **Fix LocalBusiness schema URLs** — In BaseLayout.astro, `image` and `url` fields use `www.tedsvoiceacademy.com` instead of bare domain. Two-line change.
+- [ ] **Fix broken favicon PNG references** — BaseLayout.astro links to `favicon-32x32.png`, `favicon-16x16.png`, and `apple-touch-icon.png` that don't exist. Options: generate PNGs from existing SVG, or remove the broken tags.
+- [ ] **Remove or replace placeholder testimonials** — Homepage shows three fake "coming soon" testimonial cards. Options: remove section until real quotes exist, or replace with different social proof.
+- [ ] **Fix Privacy/Terms dead links** — Footer links to Privacy Policy and Terms of Service pages that don't exist. Options: create basic pages or remove the links.
 
 ---
 
@@ -30,6 +44,7 @@ Ted is scraping 24 blog posts from the old tedsvoice.com Webwave site. He's alre
 - [ ] **Google Search Console** — Submit sitemap, monitor indexing, track search performance. Domain is now live — this should happen ASAP.
 - [ ] **Email newsletter system** — Buttondown recommended. Connects to the newsletter signup forms already built into Footer and Blog page. Captures leads from blog traffic.
 - [ ] **GEO (Generative Engine Optimization)** — Research and implement best practices for appearing in AI-generated search results (ChatGPT, Google AI Overview, etc.). This is an emerging field — needs research session to identify what applies to TVA. See Discussion Items.
+- [ ] **Form notification email formatting** — Ted specifically requested this (session 7). Netlify form notification emails are plain/ugly. Explore formatting options.
 
 ---
 
@@ -40,6 +55,9 @@ Ted is scraping 24 blog posts from the old tedsvoice.com Webwave site. He's alre
 - [ ] **Award photos on About page** — Photos/images of Ted's awards and recognitions.
 - [ ] **Coaching & performance photos** — Photos of Ted coaching, students performing, etc. throughout the site.
 - [ ] **Organizations & affiliations** — Display professional organizations Ted belongs to (About page).
+- [ ] **Image optimization** — All images are PNG. Converting to WebP/AVIF would improve load times. (Session 7 audit finding)
+- [ ] **Restructure Vocal Health Hub** — Minimize visibility of "coming soon" placeholder sections. Reorganize to lead with completed content. (Session 7 audit finding)
+- [ ] **Hide Blog from nav or build blog system** — Blog page exists but has no posts. Either temporarily hide it or wait for content. (Session 7 audit finding)
 
 ---
 
@@ -55,6 +73,8 @@ Ted is scraping 24 blog posts from the old tedsvoice.com Webwave site. He's alre
 ## Discussion Items
 
 These need conversation between Ted and the dev before they become concrete tasks. They may span multiple sessions to explore.
+
+**Reminder: Present options, discuss with Ted, get approval, THEN implement.**
 
 ### 1. Visual Engagement & Page Design (HIGH PRIORITY — Ted's Session 6 Direction)
 
@@ -141,7 +161,9 @@ These need conversation between Ted and the dev before they become concrete task
 
 **Ted's direction:** Audit the entire site for visual inconsistencies, layout issues, and opportunities to improve engagement.
 
-**Specific things to check:**
+**Status (Session 7):** A comprehensive 21-item audit was conducted covering all 13 pages. Findings are captured throughout this backlog. The audit covered: source code review, rendered output analysis, CSS patterns, asset inventory, SEO configuration, and technical setup.
+
+**Specific things still to check (visual, requires browser):**
 - Card height symmetry across all pages (Singing, Speaking, etc.)
 - Consistent spacing and visual rhythm between sections
 - Are CTAs (buttons, links) prominent enough?
@@ -150,16 +172,16 @@ These need conversation between Ted and the dev before they become concrete task
 - Mobile responsiveness of all layouts
 - Image placement opportunities (where would a photo dramatically improve the page?)
 
-**Action:** Conduct full visual audit in a dedicated session using Claude in Chrome. Document findings, prioritize fixes, implement with Ted's approval.
+**Action:** Walk through the live site with Ted using Claude in Chrome. Discuss findings and priorities together.
 
 ### 7. SEO / GEO Research
 
 **Ted's question:** Are there great ways to improve SEO (or GEO — Generative Engine Optimization) that haven't been considered yet?
 
 **Current SEO state:**
-- robots.txt, sitemap, LocalBusiness/Person/Book schemas ✅
-- FAQPage schema on FAQ, AVF, PASS pages ✅
-- Meta titles/descriptions on all 13 pages ✅
+- robots.txt, sitemap, LocalBusiness/Person/Book schemas (with known URL mismatches to fix)
+- FAQPage schema on FAQ, AVF, PASS pages
+- Meta titles/descriptions on all 14 pages
 - Missing: OG images, Google Search Console, analytics, email newsletter
 
 **Areas to research:**
@@ -260,8 +282,11 @@ The page structure is built. These sections have intro copy with "coming soon" p
 - [x] Social media links added to footer + sameAs in schema (Feb 4, 2026)
 - [x] Ensemble links: Voices of the Sound + Hot Notes in footer and About page, Person schema memberOf (Feb 4, 2026)
 - [x] Domain cutover: tedsvoiceacademy.com pointed to Netlify, SSL provisioned (Feb 4, 2026)
-- [x] Fixed redirect loop: removed conflicting bare→www redirect from netlify.toml (Feb 4, 2026)
+- [x] Fixed redirect loop: removed conflicting bare->www redirect from netlify.toml (Feb 4, 2026)
+- [x] **Fixed all 4 Netlify forms** — contact, workshop-inquiry, blog-newsletter, newsletter-footer. Created form-detect.html, success.astro, added action="/success" to all forms, removed catch-all redirect and deprecated processing config from netlify.toml. Form Detection enabled in Netlify UI. (Feb 5, 2026 — Session 7)
+- [x] **Email notifications configured** — All form submissions notify ted@tedsvoiceacademy.com (Feb 5, 2026 — Session 7)
+- [x] **Comprehensive site audit** — 21-item findings report covering all 13 pages, SEO, technical config, visual design. Findings captured in this backlog. (Feb 5, 2026 — Session 7)
 
 ---
 
-*Last updated: February 4, 2026 (Session 6)*
+*Last updated: February 5, 2026 (Session 7)*

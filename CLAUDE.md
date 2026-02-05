@@ -2,7 +2,9 @@
 
 ## Project Overview
 
-You are continuing development on the Ted's Voice Academy (TVA) website — a professional voice coaching business run by Ted Chamberlain in Lacey, Washington. The site is **fully built (13 pages)** and **live on Netlify**.
+You are continuing development on the Ted's Voice Academy (TVA) website — a professional voice coaching business run by Ted Chamberlain in Lacey, Washington. The site is **fully built (14 pages)** and **live on Netlify**.
+
+**CRITICAL WORKFLOW RULE:** Do NOT implement changes without Ted's explicit approval. Present recommendations, discuss, get the green light, then implement. This applies to everything — quick fixes, visual changes, SEO tweaks, all of it.
 
 **Also read these files:**
 - `PROJECT_BACKLOG.md` — living to-do list with all open items, organized by priority tier
@@ -17,11 +19,11 @@ You are continuing development on the Ted's Voice Academy (TVA) website — a pr
 
 ## Current Status
 
-### All 13 Pages Complete
+### All 14 Pages Complete
 | Page | File | Status |
 |------|------|--------|
 | Homepage | `src/pages/index.astro` | ✅ Complete |
-| Contact | `src/pages/contact.astro` | ✅ Complete — Google Maps embed |
+| Contact | `src/pages/contact.astro` | ✅ Complete — Google Maps embed, Netlify form |
 | Singing | `src/pages/singing.astro` | ✅ Complete |
 | Speaking | `src/pages/speaking.astro` | ✅ Complete |
 | Ensembles | `src/pages/ensembles.astro` | ✅ Complete |
@@ -29,10 +31,11 @@ You are continuing development on the Ted's Voice Academy (TVA) website — a pr
 | Pricing | `src/pages/pricing.astro` | ✅ Complete |
 | AVF | `src/pages/avf.astro` | ✅ Complete — Book schema + FAQ section |
 | PASS Profile | `src/pages/pass-profile.astro` | ✅ Complete — FAQ section |
-| Workshops | `src/pages/workshops.astro` | ✅ Complete — workshop inquiry form |
+| Workshops | `src/pages/workshops.astro` | ✅ Complete — workshop inquiry form (Netlify) |
 | Vocal Health Hub | `src/pages/vocal-health.astro` | ✅ Complete — 4 sections have "coming soon" placeholders awaiting Ted's content |
 | Blog | `src/pages/blog.astro` | ✅ Complete — landing page; no individual post system yet |
 | **FAQ** | `src/pages/faq.astro` | ✅ **New Feb 4** — 15 Q&As with FAQPage schema |
+| **Success** | `src/pages/success.astro` | ✅ **New Feb 5** — Form submission thank-you page (noIndex) |
 
 ### SEO Infrastructure (added Feb 4, 2026)
 - `public/robots.txt` — crawler directives + sitemap reference
@@ -147,12 +150,14 @@ teds-voice-academy/
 │   │   ├── workshops.astro
 │   │   ├── vocal-health.astro
 │   │   ├── blog.astro
-│   │   └── faq.astro             # ✅ New Feb 4, 2026
+│   │   ├── faq.astro             # ✅ New Feb 4, 2026
+│   │   └── success.astro         # ✅ New Feb 5, 2026 — form thank-you page
 │   └── styles/
 │       └── global.css            # Design tokens
 ├── public/
 │   ├── images/                   # Image assets
-│   └── robots.txt                # ✅ New Feb 4, 2026
+│   ├── robots.txt                # ✅ New Feb 4, 2026
+│   └── form-detect.html          # ✅ New Feb 5, 2026 — Netlify form definitions
 ├── astro.config.mjs              # Includes @astrojs/sitemap
 └── package.json
 ```
@@ -233,25 +238,23 @@ When content or visuals conflict, follow this priority:
 
 ---
 
-## Forms Implementation
+## Forms Implementation (ALL WORKING — Feb 5, 2026)
 
-### Contact Form (already built, using Netlify Forms)
-```html
-<form name="contact" method="POST" data-netlify="true" netlify-honeypot="bot-field">
-  <input type="hidden" name="form-name" value="contact" />
-  <p class="hidden"><input name="bot-field" /></p>
-  <!-- Form fields -->
-</form>
-```
+All 4 forms use Netlify Forms with `action="/success"` redirecting to a branded thank-you page. Form Detection is enabled in Netlify UI. Email notifications go to ted@tedsvoiceacademy.com.
 
-### Workshop Inquiry Form (Netlify Forms)
+**Key file:** `public/form-detect.html` — Hidden HTML file containing all 4 form definitions for Netlify's build bot to detect. This is the officially recommended workaround for Astro + Netlify Forms.
+
+### Contact Form
+On `/contact` page. Form name: `contact`. Fields: name, email, phone, interest (checkboxes), experience (select), goals (textarea), referral (select), format (radio), additional (textarea).
+
+### Workshop Inquiry Form
 On `/workshops` page. Form name: `workshop-inquiry`. Fields: contact name, organization, email, phone, workshop interest (checkboxes), group size (select), preferred timeframe, details (textarea).
 
-### Blog Newsletter Form (Netlify Forms)
+### Blog Newsletter Form
 On `/blog` page. Form name: `blog-newsletter`. Fields: first name, email.
 
-### Newsletter Signup (already in Footer)
-Already implemented in Footer.astro using Netlify Forms.
+### Footer Newsletter Signup
+In Footer.astro. Form name: `newsletter-footer`. Fields: email.
 
 ---
 
@@ -269,6 +272,9 @@ Already implemented in Footer.astro using Netlify Forms.
 - [x] Social media links in footer — DONE (Feb 4, 2026)
 - [x] Domain cutover (tedsvoiceacademy.com → Netlify) — DONE (Feb 4, 2026). DNS managed by Netlify DNS. Custom domains + SSL configured. Redirect loop fixed (conflicting redirect in netlify.toml removed, commit `4a8b573`).
 - [x] Commit and push Feb 4 changes to GitHub — DONE (commit `bb0b04a`)
+- [x] Fix all Netlify forms (contact, workshop, blog newsletter, footer newsletter) — DONE (Feb 5, 2026, commits `932439e`, `f589218`)
+- [x] Form email notifications to ted@tedsvoiceacademy.com — DONE (Feb 5, 2026)
+- [x] Comprehensive site audit (21 items) — DONE (Feb 5, 2026)
 
 **For the full project backlog, see `PROJECT_BACKLOG.md`.**
 
@@ -386,8 +392,9 @@ When nearing token limits (60-70% usage):
 | Feb 4, 2026 | Session 4 (Claude Code) | Added ensemble links: Voices of the Sound + Hot Notes to footer and About page. Person schema updated with memberOf. |
 | Feb 4, 2026 | Session 5 (Claude Code) | Domain cutover: added tedsvoiceacademy.com + www to Netlify, changed A record and www CNAME at Squarespace from Webwave to Netlify, SSL provisioned via Let's Encrypt. Old tedsvoice.com Webwave site left intact. Domain registered at Squarespace. |
 | Feb 4, 2026 | Session 6 (Claude Code) | Fixed redirect loop: removed conflicting bare→www redirect from netlify.toml (commit `4a8b573`). Updated astro.config.mjs site URL to bare domain. Ted activated Netlify DNS. Verified MX, PASS subdomain, SSL intact. Site live at tedsvoiceacademy.com. |
+| Feb 5, 2026 | Session 7 (Claude Code) | Fixed all 4 Netlify forms (broken since launch). Created form-detect.html + success.astro. Removed catch-all redirect + deprecated config from netlify.toml. Ted enabled Form Detection in Netlify UI. Email notifications configured. Comprehensive 21-item site audit. Findings captured in PROJECT_BACKLOG.md awaiting Ted's review/approval. |
 
 ---
 
-*Last updated: February 4, 2026 (Session 6)*
+*Last updated: February 5, 2026 (Session 7)*
 *Project started: January 2026*
