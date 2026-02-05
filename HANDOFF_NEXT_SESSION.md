@@ -1,7 +1,7 @@
 # SESSION HANDOFF — Ted's Voice Academy
 
 **Date written:** February 5, 2026
-**Written by:** Claude Code session 7 (Opus 4.5)
+**Written by:** Claude Code session 8 (Opus 4.5)
 **Site status: LAUNCHED & LIVE** at https://tedsvoiceacademy.com
 
 ---
@@ -25,40 +25,37 @@
 
 This applies to everything — quick fixes, visual changes, SEO tweaks, all of it. Ted wants to be on the same page before work begins. He is relying on expert recommendations but reserves the right to approve, modify, or reject any proposed change.
 
+**IMPORTANT: Update handoff docs incrementally.** After each significant task completion (not just at session end), update these handoff documents to reflect progress. This was a process correction from Ted in session 8.
+
 ---
 
 ## Prioritized To-Do List (ALL REQUIRE TED'S APPROVAL BEFORE WORK BEGINS)
 
-These items come from the comprehensive site audit conducted in session 7, Ted's session 6 feedback, and the existing project backlog. They are organized by impact, but the order is Ted's call.
+### Ready to Implement Next
 
-### Quick Technical Fixes (SEO/correctness — no visual change)
-1. **Fix robots.txt sitemap URL** — Currently references `www.tedsvoiceacademy.com` but canonical domain is bare `tedsvoiceacademy.com`. One-line fix.
-2. **Fix LocalBusiness schema URLs** — In BaseLayout.astro, `image` and `url` fields use `www.tedsvoiceacademy.com` instead of bare domain. Two-line fix.
-3. **Remove broken favicon PNG references** — BaseLayout.astro references `favicon-32x32.png`, `favicon-16x16.png`, and `apple-touch-icon.png` but none of these files exist. Options: generate the PNGs from the existing SVG, or remove the broken link tags.
-4. **Remove or replace placeholder testimonials** — Homepage shows three "Testimonial placeholder -- real quotes coming soon" cards. Options: remove the section entirely until real quotes exist, or replace with a different social proof approach.
+1. **Hero H1 sizing** — Ted approved this for session 8 but we ran out of time. Current: `clamp(2rem, 4vw + 1rem, 3rem)` (32px-48px). Need to show Ted 2-3 larger size options for comparison. Quick CSS change once decided.
 
-### Discussion Items Carried Forward from Session 6
-5. **Hero H1 sizing** — Ted felt the hero headings seem small. Current: `clamp(2rem, 4vw + 1rem, 3rem)` (32px-48px). Need to show Ted size comparison options.
-6. **Card height inconsistency** — Cards with different text lengths create uneven heights (e.g., Singing page "Singers at Every Level"). Needs global CSS fix across all pages.
-7. **FAQ accordion pattern** — Convert FAQ sections to collapsible `<details>/<summary>` elements. Applies to FAQ page, AVF FAQ, PASS FAQ. Quick implementation once approved.
-8. **Contact form tone** — Ted concerned the form may feel too formal/committal. Review fields and microcopy, propose lighter alternatives.
-9. **Visual engagement improvements** — The big one. Site is text-heavy and visually repetitive. Ted wants it to WOW people. Possible directions: icons, pull quotes, section dividers, scroll animations, background textures, varied layouts. Requires collaborative exploration — not a solo implementation.
+2. **GA4 + Google Search Console + Looker Studio setup** — Ted approved GA4 (free) + Google Search Console + Looker Studio for a free weekly "TVA Website Weekly Performance Overview" email report. Needs implementation.
 
-### SEO & Infrastructure
-10. **Create OG default image** — BaseLayout references `/images/og-default.jpg` which doesn't exist. Need 1200x630px branded image for social sharing previews.
-11. **Google Search Console setup** — Submit sitemap, monitor indexing. Domain is live — this should happen soon.
-12. **Privacy/Terms pages** — Footer links to these but the pages don't exist. Options: create basic pages, or remove the dead links.
-13. **Form notification email formatting** — Ted specifically requested this. The Netlify form notification emails are plain/ugly. Explore formatting options.
+3. **Contact form tone review** — Ted concerned the form may feel too formal/committal. Review fields and microcopy, propose lighter alternatives.
 
-### Content & Structure
-14. **Restructure Vocal Health Hub** — Minimize visibility of "coming soon" placeholder sections. Reorganize to lead with completed content.
-15. **Hide Blog from nav or build blog system** — Blog page exists but has no posts. Either hide it until content is ready, or build the post system when Ted's 24 scraped posts are available.
-16. **Image optimization** — All images are PNG. Converting to WebP/AVIF would improve load times.
+### Larger Projects (Discussed, Not Yet Scheduled)
 
-### Larger Projects (multi-session)
-17. **Blog system build** — Individual post template, routing, index page. Blocked until Ted's 24 scraped posts are ready.
-18. **CMS integration** — Decap CMS for Ted to update content independently. Best done alongside or after blog system.
-19. **Full visual overhaul** — Implementing the engagement improvements from item #9. This is the biggest project and should be a collaborative, iterative process.
+4. **Visual engagement improvements** — Site is text-heavy and visually repetitive. Ted wants it to WOW. Possible directions: icons, pull quotes, section dividers, scroll animations, background textures, varied layouts. Requires collaborative exploration — not a solo implementation.
+
+5. **OG default image** — BaseLayout references `/images/og-default.jpg` which doesn't exist. Need 1200x630px branded image for social sharing previews.
+
+6. **Form notification email formatting** — Ted requested this. Netlify form notification emails are plain/ugly. Explore formatting options.
+
+7. **Image optimization** — All images are PNG. Converting to WebP/AVIF would improve load times.
+
+8. **Restructure Vocal Health Hub** — Minimize visibility of "coming soon" placeholder sections. Reorganize to lead with completed content.
+
+9. **Blog system build** — Individual post template, routing, index page. Blog stays visible in nav (Ted's decision). Blocked on 24 scraped posts from old site.
+
+10. **CMS integration** — Decap CMS for Ted to update content independently. Best done alongside or after blog system.
+
+11. **Full visual overhaul** — Implementing the engagement improvements from item #4. Biggest project, collaborative and iterative.
 
 ---
 
@@ -66,23 +63,24 @@ These items come from the comprehensive site audit conducted in session 7, Ted's
 
 ### Git & Deploy
 - **GitHub repo:** https://github.com/tedsvoiceacademy/teds-voice-academy
-- **Latest pushed commit:** `f589218` on `main` branch (Netlify Forms fix)
-- **Local changes:** Trivial whitespace-only diffs in BaseLayout.astro and index.astro (from revert operations during session 7). Several files show as modified due to LF/CRLF line-ending differences (README.md, favicon.svg, .gitkeep, Header.astro, global.css, tsconfig.json) — these are NOT content changes.
-- **Untracked files:** .astro/, dist/, docs/, node_modules/, src/env.d.ts — all should remain untracked (build artifacts / local only)
-- **HANDOFF_NEXT_SESSION.md, PROJECT_BACKLOG.md, CLAUDE.md** — Updated locally in session 7. **Must be committed and pushed at start of next session.**
+- **Latest pushed commit:** `91591e1` on `main` branch (Privacy + Terms pages)
+- **Commits this session:** `ddc950f` (items 1-4), `61e1518` (FAQ accordion), `1aae887` (card heights), `91591e1` (privacy/terms)
+- **Local changes pending:** Updated CLAUDE.md, HANDOFF_NEXT_SESSION.md, PROJECT_BACKLOG.md + AVF dials image update — need to be committed and pushed
 - **Local project path:** `H:\OneDrive\AI Projects\TVA AI Projects\TVA Webstie 4.0\teds-voice-academy-main\teds-voice-academy-main\`
 - **Live site:** https://tedsvoiceacademy.com
 - **Netlify URL:** https://deft-baklava-b2eb2e.netlify.app/
-- **Build status:** Clean — 14 pages built (13 original + success page)
+- **Build status:** Clean — 16 pages built
+
+### What's Live (16 Pages)
+Homepage, Contact, Singing, Speaking, Ensembles, About, Pricing, AVF, PASS Profile, Workshops, Vocal Health Hub, Blog, FAQ, Success, **Privacy**, **Terms**
 
 ### Netlify Forms — WORKING
-- **Form Detection:** Enabled in Netlify UI (Ted did this in session 7)
+- **Form Detection:** Enabled in Netlify UI
 - **Forms detected:** contact, workshop-inquiry, blog-newsletter, newsletter-footer
 - **Email notifications:** Configured to ted@tedsvoiceacademy.com for all forms
 - **Success page:** `/success` — branded thank-you page with gold checkmark
 - **Key files:** `public/form-detect.html` (hidden form definitions for Netlify build bot), `src/pages/success.astro`
 - **All forms have `action="/success"`** — contact.astro, workshops.astro, blog.astro, Footer.astro
-- **Note:** Netlify notification emails take ~10 minutes to arrive (not instant)
 
 ### Domain Setup — WORKING
 - **Domain registrar:** Squarespace (registration only)
@@ -93,13 +91,9 @@ These items come from the comprehensive site audit conducted in session 7, Ted's
 - **Old site:** `tedsvoice.com` on Webwave still alive (Ted needs for blog scraping)
 
 ### Known Issues (not bugs, just items to address)
-- robots.txt sitemap URL says `www` (should be bare domain)
-- LocalBusiness schema URLs say `www` (should be bare domain)
-- Favicon PNG link tags reference non-existent files
-- Placeholder testimonials visible on homepage
 - OG default image referenced but doesn't exist
-- Privacy/Terms footer links go to non-existent pages
-- Blog page has no actual posts
+- Blog page has no actual posts (stays visible per Ted's decision)
+- Vocal Health Hub has "coming soon" placeholder sections
 
 ### Environment
 - **Platform:** Windows
@@ -110,51 +104,70 @@ These items come from the comprehensive site audit conducted in session 7, Ted's
 
 ---
 
-## What Session 7 Accomplished (Feb 5, 2026)
+## What Session 8 Accomplished (Feb 5, 2026)
 
-1. **Read all project docs** (CLAUDE.md, PROJECT_BACKLOG.md, HANDOFF_NEXT_SESSION.md) to get up to speed
-2. **Conducted comprehensive 21-item site audit** — examined all 13 pages' source code, rendered output, CSS patterns, asset inventory, SEO configuration, and technical setup
-3. **Fixed critical bug: all 4 Netlify forms were broken** (returning "Page not found" on submission)
-   - Created `public/form-detect.html` with all 4 form definitions
-   - Created `src/pages/success.astro` thank-you page
-   - Added `action="/success"` to all 4 forms (contact, workshops, blog, footer)
-   - Removed catch-all `/* -> /404` redirect from netlify.toml that was intercepting POST requests
-   - Removed deprecated `[build.processing]` config from netlify.toml
-   - **Root cause:** Netlify Form Detection was never enabled in the Netlify UI — Ted enabled it and triggered a clean deploy
-   - Commits: `932439e` (form detection + success page), `f589218` (netlify.toml fixes)
-4. **Helped Ted configure email notifications** for form submissions (ted@tedsvoiceacademy.com)
-5. **Discussed AVF/PASS email routing** — Ted decided to keep mailto: links as-is for now; all form notifications go to ted@tedsvoiceacademy.com
-6. **Attempted unauthorized implementations** — Started making code changes from audit findings without Ted's approval. Ted rightfully stopped this. All changes were reverted. **This is why the "How Ted Wants to Work" section exists at the top of this document.**
-7. **Updated all three handoff documents** to reflect session 7 work
+### Quick Technical Fixes (Commit `ddc950f`)
+1. **Fixed robots.txt sitemap URL** — Changed `www.tedsvoiceacademy.com` to `tedsvoiceacademy.com`
+2. **Fixed LocalBusiness schema URLs** — Changed `image` and `url` fields in BaseLayout.astro from www to bare domain
+3. **Removed broken favicon PNG references** — Deleted 3 broken link tags from BaseLayout.astro, keeping only the working SVG favicon
+4. **Replaced placeholder testimonials with Rapid Reviews carousel** — Integrated Ted's Rapid Reviews Google review widget on homepage using `<Fragment slot="scripts">` pattern. Updated CSS to match.
+
+### FAQ Accordion (Commit `61e1518`)
+5. **Converted FAQ sections to accordion pattern** — All three pages (FAQ, AVF, PASS) now use `<details>/<summary>` elements with +/- indicators, hover effects, and brand-appropriate styling. No JavaScript needed. FAQPage schema preserved.
+
+### Card Height Fix (Commit `1aae887`)
+6. **Fixed card height inconsistency** — Added CSS flexbox equalization to card grids on 5 pages: singing.astro, speaking.astro, ensembles.astro, pricing.astro, index.astro. Cards now match heights within each row.
+
+### Privacy & Terms Pages (Commit `91591e1`)
+7. **Created Privacy Policy page** (`/privacy`) — Comprehensive policy in Forward Light voice covering data collection, usage, third-party services, user choices
+8. **Created Terms of Service page** (`/terms`) — Full terms covering site use, coaching services, PASS Profile, IP, liability, etc.
+9. Both pages follow TVA design pattern (navy hero, gold accents, content section) and resolve the dead footer links
+
+### Ted's Decisions This Session
+- **Analytics:** GA4 + Google Search Console + Looker Studio (free weekly email report)
+- **Blog:** Stays visible in nav until blog system built
+- **AVF dials image:** Ted replaced `public/images/avf-dials.png` with updated version — will go live on next push
+- **Handoff docs:** Must be updated incrementally after each significant task, not batched at session end
+
+---
 
 ## What Was NOT Done (and Why)
 
-- **No audit items implemented** — Ted stopped premature implementation. All findings are documented in the to-do list above, awaiting Ted's review and approval before any work begins.
-- **Handoff docs not committed to Git** — Updated locally. Must be pushed next session.
-- **Google Search Console not set up** — Forms fix took priority.
-- **No visual changes** — Requires discussion with Ted first per his explicit direction.
+- **Hero H1 sizing** — Approved by Ted but session ran long with handoff doc updates. First item for next session.
+- **GA4 / Search Console / Looker Studio** — Ted approved. Needs implementation in a future session.
+- **Visual engagement overhaul** — Requires collaborative session with Ted. Not a solo task.
+- **Contact form tone review** — Not yet discussed in detail. Still on the list.
 
 ---
 
 ## First Thing Next Session
 
-1. **Commit and push handoff docs** — `git add CLAUDE.md HANDOFF_NEXT_SESSION.md PROJECT_BACKLOG.md && git commit -m "Update handoff docs: session 7 forms fix + audit findings" && git push`
-2. **Present the to-do list to Ted** — Walk through the prioritized items above. Get his input on what to tackle and in what order.
-3. **Discuss before implementing** — For each item Ted wants to work on, explain what the change involves, show options where applicable, and get approval before touching code.
+1. **Commit and push** the handoff doc updates + AVF dials image
+2. **Hero H1 sizing** — Show Ted 2-3 larger size options. This was the approved next task.
+3. **GA4 + Search Console setup** if Ted wants to proceed with analytics
 
 ---
 
-## Files Modified in Session 7
+## Files Modified in Session 8
 
 | File | Change | Commit |
 |------|--------|--------|
-| `public/form-detect.html` | CREATED — hidden form definitions for Netlify build bot | `932439e` |
-| `src/pages/success.astro` | CREATED — form submission thank-you page | `932439e` |
-| `src/pages/contact.astro` | Added `action="/success"` to form | `932439e` |
-| `src/pages/workshops.astro` | Added `action="/success"` to form | `932439e` |
-| `src/pages/blog.astro` | Added `action="/success"` to form | `932439e` |
-| `src/components/Footer.astro` | Added `action="/success"` to form | `932439e` |
-| `netlify.toml` | Removed catch-all redirect + deprecated processing config | `f589218` |
+| `public/robots.txt` | Fixed sitemap URL (www → bare domain) | `ddc950f` |
+| `src/layouts/BaseLayout.astro` | Fixed schema URLs + removed broken favicon PNGs | `ddc950f` |
+| `src/pages/index.astro` | Replaced testimonials with Rapid Reviews carousel + card height fix | `ddc950f`, `1aae887` |
+| `src/pages/faq.astro` | Converted to accordion pattern | `61e1518` |
+| `src/pages/avf.astro` | Converted FAQ section to accordion | `61e1518` |
+| `src/pages/pass-profile.astro` | Converted FAQ section to accordion | `61e1518` |
+| `src/pages/singing.astro` | Card height fix (flexbox) | `1aae887` |
+| `src/pages/speaking.astro` | Card height fix (flexbox) | `1aae887` |
+| `src/pages/ensembles.astro` | Card height fix (flexbox) | `1aae887` |
+| `src/pages/pricing.astro` | Card height fix (flexbox) | `1aae887` |
+| `src/pages/privacy.astro` | CREATED — Privacy policy page | `91591e1` |
+| `src/pages/terms.astro` | CREATED — Terms of service page | `91591e1` |
+| `CLAUDE.md` | Updated page count, session log, post-launch items | *pending commit* |
+| `HANDOFF_NEXT_SESSION.md` | Full rewrite for session 8 | *pending commit* |
+| `PROJECT_BACKLOG.md` | Updated completed items, new items | *pending commit* |
+| `public/images/avf-dials.png` | Ted replaced with updated image | *pending commit* |
 
 ---
 
@@ -187,6 +200,7 @@ When ending a session, create/update this file with:
 6. **Suggested priorities** — what makes sense to do next.
 7. **Update PROJECT_BACKLOG.md** — move completed items, add new discoveries.
 8. **Update CLAUDE.md** — if structural or status changes happened.
+9. **Update incrementally** — don't wait until session end. Update after each significant task.
 
 ---
 

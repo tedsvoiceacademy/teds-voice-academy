@@ -16,22 +16,19 @@ This is the living project list for the TVA website. Items move between tiers as
 
 ---
 
-## Quick Technical Fixes (from Session 7 Audit)
+## Ready to Implement Next
 
-These are small, high-confidence fixes found during the comprehensive site audit. Each is a few lines of code, but still needs Ted's approval before implementation.
+These items have been discussed and approved by Ted. They're ready to go when session time allows.
 
-- [ ] **Fix robots.txt sitemap URL** — References `www.tedsvoiceacademy.com` but canonical domain is bare `tedsvoiceacademy.com`. One-line change.
-- [ ] **Fix LocalBusiness schema URLs** — In BaseLayout.astro, `image` and `url` fields use `www.tedsvoiceacademy.com` instead of bare domain. Two-line change.
-- [ ] **Fix broken favicon PNG references** — BaseLayout.astro links to `favicon-32x32.png`, `favicon-16x16.png`, and `apple-touch-icon.png` that don't exist. Options: generate PNGs from existing SVG, or remove the broken tags.
-- [ ] **Remove or replace placeholder testimonials** — Homepage shows three fake "coming soon" testimonial cards. Options: remove section until real quotes exist, or replace with different social proof.
-- [ ] **Fix Privacy/Terms dead links** — Footer links to Privacy Policy and Terms of Service pages that don't exist. Options: create basic pages or remove the links.
+- [ ] **Hero H1 sizing** — Ted wants to see larger options. Current: `clamp(2rem, 4vw + 1rem, 3rem)` (32px-48px). Show 2-3 size comparisons. Quick CSS change once decided.
+- [ ] **GA4 + Google Search Console + Looker Studio** — Ted approved. Free analytics stack with weekly "TVA Website Weekly Performance Overview" email report via Looker Studio.
 
 ---
 
 ## Tier 1 — High-Value Additions
 
 ### Blog System + Content (Ted's #1 post-launch priority)
-Ted is scraping 24 blog posts from the old tedsvoice.com Webwave site. He's already working on this in separate Claude chat sessions.
+Ted is scraping 24 blog posts from the old tedsvoice.com Webwave site. Blog stays visible in nav (Ted's decision, Feb 5 session 8).
 
 - [ ] **Blog individual post system** — Build blog post template/layout, routing (`/blog/[slug]`), and index page that lists real posts. Currently only a landing page with category cards.
 - [ ] **Import 24 scraped blog posts** — Convert Ted's scraped content into publishable posts. Ensure proper formatting, meta tags, and schema markup on each.
@@ -40,8 +37,6 @@ Ted is scraping 24 blog posts from the old tedsvoice.com Webwave site. He's alre
 
 ### SEO Enhancements (ongoing — apply with every change)
 - [ ] **OG images for social sharing** — When someone shares a TVA link on social media, it should show a branded preview image instead of nothing. Default OG image referenced in BaseLayout but file doesn't exist yet. Need 1200x630px branded image.
-- [ ] **Analytics setup** — GA4 or Plausible. Need Ted's preference (Plausible is simpler/privacy-friendly; GA4 is free and more powerful). Critical for tracking what's working.
-- [ ] **Google Search Console** — Submit sitemap, monitor indexing, track search performance. Domain is now live — this should happen ASAP.
 - [ ] **Email newsletter system** — Buttondown recommended. Connects to the newsletter signup forms already built into Footer and Blog page. Captures leads from blog traffic.
 - [ ] **GEO (Generative Engine Optimization)** — Research and implement best practices for appearing in AI-generated search results (ChatGPT, Google AI Overview, etc.). This is an emerging field — needs research session to identify what applies to TVA. See Discussion Items.
 - [ ] **Form notification email formatting** — Ted specifically requested this (session 7). Netlify form notification emails are plain/ugly. Explore formatting options.
@@ -50,14 +45,11 @@ Ted is scraping 24 blog posts from the old tedsvoice.com Webwave site. He's alre
 
 ## Tier 2 — Important Additions
 
-- [ ] **Rapid Reviews carousel** — Integrate Google Reviews carousel from Rapid Reviews (Ted's review management service). Social proof for visitors.
-- [ ] **Specific testimonials** — Replace placeholder testimonials with real, named quotes from clients.
 - [ ] **Award photos on About page** — Photos/images of Ted's awards and recognitions.
 - [ ] **Coaching & performance photos** — Photos of Ted coaching, students performing, etc. throughout the site.
 - [ ] **Organizations & affiliations** — Display professional organizations Ted belongs to (About page).
 - [ ] **Image optimization** — All images are PNG. Converting to WebP/AVIF would improve load times. (Session 7 audit finding)
 - [ ] **Restructure Vocal Health Hub** — Minimize visibility of "coming soon" placeholder sections. Reorganize to lead with completed content. (Session 7 audit finding)
-- [ ] **Hide Blog from nav or build blog system** — Blog page exists but has no posts. Either temporarily hide it or wait for content. (Session 7 audit finding)
 
 ---
 
@@ -96,54 +88,7 @@ These need conversation between Ted and the dev before they become concrete task
 
 **Next step:** Research best practices for text-heavy coaching/education sites. Look at reference sites together. Ted evaluates what feels right for the brand, then translate into specific design changes.
 
-### 2. Hero Section Sizing — Are the H1s Too Small?
-
-**Ted's concern:** The "Master Your Voice" hero heading (and parallel headings on other pages) seems small. Is the current size right for best practice and TVA's needs?
-
-**Current implementation:** `font-size: clamp(2rem, 4vw + 1rem, 3rem)` — scales from 32px to 48px depending on screen width.
-
-**What to evaluate:**
-- Compare against coaching/education industry norms
-- Test larger sizes (e.g., `clamp(2.5rem, 5vw + 1rem, 4rem)`) and show Ted
-- Consider whether the hero eyebrow text above the H1 is contributing to it feeling small
-- Mobile vs desktop — does the size work well on both?
-- Relationship between hero text size and the rest of the page hierarchy
-
-**Action:** Show Ted 2-3 size options side by side. Let him pick. This is a quick change once decided.
-
-### 3. Card Symmetry / Layout Issues
-
-**Ted's observation:** On the Singing page, "Singers at Every Level" section — the 4 cards (Complete beginners, Developing singers, Experienced performers, Recovering voices) are not symmetrical and look off.
-
-**Root cause:** Cards have different amounts of text content. "Complete beginners" and "Recovering voices" have more copy than "Developing singers" and "Experienced performers," making the cards different heights.
-
-**Possible fixes:**
-- CSS `min-height` to equalize card heights
-- `display: grid` with `grid-template-rows: 1fr` to force equal height
-- Edit copy to be more uniform in length
-- Add visual elements (icons, images) to shorter cards to balance them
-- **Audit ALL card sections across ALL pages** for this same issue
-
-**Action:** This is likely a quick CSS fix. Audit all pages first, then fix globally.
-
-### 4. FAQ Display — Collapsible Accordion Pattern
-
-**Ted's idea:** Currently FAQs display with all answers visible. Would it be better to show just the questions, with answers hidden behind a click-to-expand (accordion) pattern?
-
-**Pros of accordion:**
-- Less overwhelming visually — visitors scan questions and click what's relevant
-- Common UX pattern — visitors know how it works
-- Reduces page length
-- Better mobile experience
-
-**Cons / considerations:**
-- Hidden content may be less SEO-crawlable (though Google handles `<details>` well now)
-- FAQPage schema needs to remain intact regardless
-- Need to decide: apply to main FAQ page, AVF FAQ section, PASS FAQ section, or all three?
-
-**Action:** Implement with HTML `<details>/<summary>` elements (no JS needed, accessible, SEO-friendly). Quick win — can do this in one session.
-
-### 5. Contact Form — Is It Off-Putting?
+### 2. Contact Form — Is It Off-Putting?
 
 **Ted's concern:** The contact form might feel too formal or commitment-heavy for casual inquiries. Someone browsing might think "if I fill this out, I'm signing up for something" and bail.
 
@@ -157,32 +102,19 @@ These need conversation between Ted and the dev before they become concrete task
 
 **Action:** Review form, propose specific changes, discuss with Ted before implementing.
 
-### 6. Site-Wide Visual Audit
-
-**Ted's direction:** Audit the entire site for visual inconsistencies, layout issues, and opportunities to improve engagement.
-
-**Status (Session 7):** A comprehensive 21-item audit was conducted covering all 13 pages. Findings are captured throughout this backlog. The audit covered: source code review, rendered output analysis, CSS patterns, asset inventory, SEO configuration, and technical setup.
-
-**Specific things still to check (visual, requires browser):**
-- Card height symmetry across all pages (Singing, Speaking, etc.)
-- Consistent spacing and visual rhythm between sections
-- Are CTAs (buttons, links) prominent enough?
-- Do sections that should draw attention actually draw attention?
-- Are "deeper dive" sections (like detailed descriptions) visually distinct from headlines/intros?
-- Mobile responsiveness of all layouts
-- Image placement opportunities (where would a photo dramatically improve the page?)
-
-**Action:** Walk through the live site with Ted using Claude in Chrome. Discuss findings and priorities together.
-
-### 7. SEO / GEO Research
+### 3. SEO / GEO Research
 
 **Ted's question:** Are there great ways to improve SEO (or GEO — Generative Engine Optimization) that haven't been considered yet?
 
-**Current SEO state:**
-- robots.txt, sitemap, LocalBusiness/Person/Book schemas (with known URL mismatches to fix)
+**Current SEO state (updated session 8):**
+- robots.txt with correct sitemap URL (fixed Feb 5)
+- @astrojs/sitemap integration — auto-generates sitemap with all 16 pages
+- LocalBusiness JSON-LD with correct URLs (fixed Feb 5)
+- Person schema on About page, Book schema on AVF page
 - FAQPage schema on FAQ, AVF, PASS pages
-- Meta titles/descriptions on all 14 pages
-- Missing: OG images, Google Search Console, analytics, email newsletter
+- All meta titles/descriptions aligned
+- Privacy Policy and Terms of Service pages created (Feb 5)
+- Missing: OG images, analytics (GA4 approved), email newsletter
 
 **Areas to research:**
 - **GEO (Generative Engine Optimization)** — how to appear in AI-generated search results. Emerging best practices include clear entity definitions, structured data, authoritative content, and FAQ patterns.
@@ -236,8 +168,6 @@ Let's work on one section at a time. I'll share what I know and you help me orga
 
 **Workshops page** — The page structure is built, but Ted may want to develop specific workshop descriptions, pricing, and schedules as they become available.
 
-**Testimonials** — When Ted has real client quotes with permission, these replace the current placeholders across the site. No separate Claude session needed — just provide the quotes and we'll place them.
-
 ---
 
 ## Waiting on Ted
@@ -256,12 +186,10 @@ The page structure is built. These sections have intro copy with "coming soon" p
 - [ ] **Articles & Resources** — featured articles, external resource links
 
 ### Other Content Needed
-- [ ] **Real testimonials** — actual client quotes with permission to publish
 - [ ] **Award photos** — images of awards/recognitions for About page
 - [ ] **Coaching/performance photos** — images of Ted coaching, students performing
 - [ ] **Organization logos/names** — professional organizations Ted belongs to
 - [ ] **Heart of the Sound quartet URL** — Deferred. No online presence yet. Add when available.
-- [ ] **Analytics preference** — GA4 or Plausible? (needed before setup)
 
 ---
 
@@ -286,7 +214,17 @@ The page structure is built. These sections have intro copy with "coming soon" p
 - [x] **Fixed all 4 Netlify forms** — contact, workshop-inquiry, blog-newsletter, newsletter-footer. Created form-detect.html, success.astro, added action="/success" to all forms, removed catch-all redirect and deprecated processing config from netlify.toml. Form Detection enabled in Netlify UI. (Feb 5, 2026 — Session 7)
 - [x] **Email notifications configured** — All form submissions notify ted@tedsvoiceacademy.com (Feb 5, 2026 — Session 7)
 - [x] **Comprehensive site audit** — 21-item findings report covering all 13 pages, SEO, technical config, visual design. Findings captured in this backlog. (Feb 5, 2026 — Session 7)
+- [x] **Fixed robots.txt sitemap URL** — Changed www to bare domain (Feb 5, 2026 — Session 8)
+- [x] **Fixed LocalBusiness schema URLs** — Changed www to bare domain in BaseLayout.astro (Feb 5, 2026 — Session 8)
+- [x] **Removed broken favicon PNG references** — Deleted 3 broken link tags, kept working SVG (Feb 5, 2026 — Session 8)
+- [x] **Replaced placeholder testimonials with Rapid Reviews carousel** — Integrated Google Reviews widget on homepage (Feb 5, 2026 — Session 8)
+- [x] **FAQ accordion pattern** — Converted FAQ/AVF/PASS pages to `<details>/<summary>` with +/- indicators, brand-colored styling (Feb 5, 2026 — Session 8)
+- [x] **Card height fix** — CSS flexbox equalization on singing, speaking, ensembles, pricing, index pages (Feb 5, 2026 — Session 8)
+- [x] **Privacy Policy page created** — `/privacy` with comprehensive policy in Forward Light voice (Feb 5, 2026 — Session 8)
+- [x] **Terms of Service page created** — `/terms` with full terms in Forward Light voice (Feb 5, 2026 — Session 8)
+- [x] **AVF dials image updated** — Ted replaced `public/images/avf-dials.png` with new version (Feb 5, 2026 — Session 8)
+- [x] **Analytics decision made** — GA4 + Google Search Console + Looker Studio (free), weekly email report (Feb 5, 2026 — Session 8)
 
 ---
 
-*Last updated: February 5, 2026 (Session 7)*
+*Last updated: February 5, 2026 (Session 8)*

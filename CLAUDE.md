@@ -2,7 +2,7 @@
 
 ## Project Overview
 
-You are continuing development on the Ted's Voice Academy (TVA) website — a professional voice coaching business run by Ted Chamberlain in Lacey, Washington. The site is **fully built (14 pages)** and **live on Netlify**.
+You are continuing development on the Ted's Voice Academy (TVA) website — a professional voice coaching business run by Ted Chamberlain in Lacey, Washington. The site is **fully built (16 pages)** and **live on Netlify**.
 
 **CRITICAL WORKFLOW RULE:** Do NOT implement changes without Ted's explicit approval. Present recommendations, discuss, get the green light, then implement. This applies to everything — quick fixes, visual changes, SEO tweaks, all of it.
 
@@ -19,28 +19,30 @@ You are continuing development on the Ted's Voice Academy (TVA) website — a pr
 
 ## Current Status
 
-### All 14 Pages Complete
+### All 16 Pages Complete
 | Page | File | Status |
 |------|------|--------|
-| Homepage | `src/pages/index.astro` | ✅ Complete |
+| Homepage | `src/pages/index.astro` | ✅ Complete — Rapid Reviews carousel (Feb 5) |
 | Contact | `src/pages/contact.astro` | ✅ Complete — Google Maps embed, Netlify form |
 | Singing | `src/pages/singing.astro` | ✅ Complete |
 | Speaking | `src/pages/speaking.astro` | ✅ Complete |
 | Ensembles | `src/pages/ensembles.astro` | ✅ Complete |
 | About | `src/pages/about.astro` | ✅ Complete — Person schema |
 | Pricing | `src/pages/pricing.astro` | ✅ Complete |
-| AVF | `src/pages/avf.astro` | ✅ Complete — Book schema + FAQ section |
-| PASS Profile | `src/pages/pass-profile.astro` | ✅ Complete — FAQ section |
+| AVF | `src/pages/avf.astro` | ✅ Complete — Book schema + FAQ accordion |
+| PASS Profile | `src/pages/pass-profile.astro` | ✅ Complete — FAQ accordion |
 | Workshops | `src/pages/workshops.astro` | ✅ Complete — workshop inquiry form (Netlify) |
 | Vocal Health Hub | `src/pages/vocal-health.astro` | ✅ Complete — 4 sections have "coming soon" placeholders awaiting Ted's content |
-| Blog | `src/pages/blog.astro` | ✅ Complete — landing page; no individual post system yet |
-| **FAQ** | `src/pages/faq.astro` | ✅ **New Feb 4** — 15 Q&As with FAQPage schema |
-| **Success** | `src/pages/success.astro` | ✅ **New Feb 5** — Form submission thank-you page (noIndex) |
+| Blog | `src/pages/blog.astro` | ✅ Complete — landing page; no individual post system yet. Leave visible until blog system built. |
+| FAQ | `src/pages/faq.astro` | ✅ Complete — 15 Q&As with FAQPage schema, accordion pattern |
+| Success | `src/pages/success.astro` | ✅ Complete — Form submission thank-you page (noIndex) |
+| **Privacy** | `src/pages/privacy.astro` | ✅ **New Feb 5** — Privacy policy page |
+| **Terms** | `src/pages/terms.astro` | ✅ **New Feb 5** — Terms of service page |
 
-### SEO Infrastructure (added Feb 4, 2026)
-- `public/robots.txt` — crawler directives + sitemap reference
-- `@astrojs/sitemap` integration — auto-generates sitemap with all 13 pages
-- **LocalBusiness JSON-LD** in BaseLayout (every page) — includes sameAs social profiles
+### SEO Infrastructure (Feb 4-5, 2026)
+- `public/robots.txt` — crawler directives + sitemap reference (URL fixed to bare domain Feb 5)
+- `@astrojs/sitemap` integration — auto-generates sitemap with all 16 pages
+- **LocalBusiness JSON-LD** in BaseLayout (every page) — includes sameAs social profiles (URLs fixed to bare domain Feb 5)
 - **Person schema** on About page, **Book schema** on AVF page
 - **FAQPage schema** on FAQ, AVF, and PASS pages
 - All meta titles/descriptions aligned with `docs/specs/TVA_SEO_Meta_Content_v1.md`
@@ -285,12 +287,11 @@ In Footer.astro. Form name: `newsletter-footer`. Fields: email.
 - [ ] Articles & Resources: featured articles, external resource links
 
 ### Post-Launch / Phase 2
-- [ ] Analytics setup (GA4 or Plausible)
+- [ ] Analytics setup — **GA4 + Google Search Console + Looker Studio weekly email report** (Ted's decision, Feb 5 session 8)
 - [ ] CMS for easy content updates (Decap CMS recommended)
 - [ ] Digital product delivery for Vocal Fit (Gumroad or Lemonsqueezy)
 - [ ] Email newsletter system (Buttondown recommended)
 - [ ] Members-only section (approach TBD)
-- [ ] Real testimonials (currently placeholders)
 - [ ] OG images for social sharing
 - [ ] Blog individual post system (CMS-driven)
 - [ ] Vocal Health Hub: expand placeholder sections when Ted provides content
@@ -393,8 +394,9 @@ When nearing token limits (60-70% usage):
 | Feb 4, 2026 | Session 5 (Claude Code) | Domain cutover: added tedsvoiceacademy.com + www to Netlify, changed A record and www CNAME at Squarespace from Webwave to Netlify, SSL provisioned via Let's Encrypt. Old tedsvoice.com Webwave site left intact. Domain registered at Squarespace. |
 | Feb 4, 2026 | Session 6 (Claude Code) | Fixed redirect loop: removed conflicting bare→www redirect from netlify.toml (commit `4a8b573`). Updated astro.config.mjs site URL to bare domain. Ted activated Netlify DNS. Verified MX, PASS subdomain, SSL intact. Site live at tedsvoiceacademy.com. |
 | Feb 5, 2026 | Session 7 (Claude Code) | Fixed all 4 Netlify forms (broken since launch). Created form-detect.html + success.astro. Removed catch-all redirect + deprecated config from netlify.toml. Ted enabled Form Detection in Netlify UI. Email notifications configured. Comprehensive 21-item site audit. Findings captured in PROJECT_BACKLOG.md awaiting Ted's review/approval. |
+| Feb 5, 2026 | Session 8 (Claude Code) | Fixed robots.txt + schema URLs (www→bare). Removed broken favicon PNGs. Replaced placeholder testimonials with Rapid Reviews carousel. FAQ accordion on FAQ/AVF/PASS pages. Card height fix across 5 pages. Created Privacy Policy + Terms of Service pages (16 pages total). AVF dials image updated. Ted decided: GA4 + Search Console + Looker Studio for analytics. Blog stays visible. |
 
 ---
 
-*Last updated: February 5, 2026 (Session 7)*
+*Last updated: February 5, 2026 (Session 8)*
 *Project started: January 2026*
