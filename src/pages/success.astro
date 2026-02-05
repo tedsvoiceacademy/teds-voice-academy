@@ -9,7 +9,7 @@ import Layout from '../layouts/BaseLayout.astro';
 >
   <section class="success-hero">
     <div class="container">
-      <div class="success-content">
+      <div class="success-content reveal">
         <span class="success-icon" aria-hidden="true">&#10003;</span>
         <h1>Message received!</h1>
         <p class="success-message">
@@ -26,7 +26,11 @@ import Layout from '../layouts/BaseLayout.astro';
 
 <style>
   .success-hero {
-    background: linear-gradient(135deg, var(--color-navy-deep) 0%, var(--color-navy-medium) 100%);
+    background:
+      url('/images/noise-texture.png') repeat,
+      linear-gradient(135deg, var(--color-navy-deep) 0%, var(--color-navy-medium) 100%);
+    background-size: 200px 200px, 100% 100%;
+    background-blend-mode: soft-light, normal;
     padding: 6rem 0;
     text-align: center;
     min-height: 60vh;

@@ -90,7 +90,7 @@ import Layout from '../layouts/BaseLayout.astro';
   <section class="intro-section">
     <div class="container">
       <div class="intro-grid">
-        <div class="intro-content">
+        <div class="intro-content reveal-left">
           <p class="intro-text drop-cap">
             Every singer arrives with different goals. Some want to strengthen their foundation. Others are working through a specific challenge. Some have been singing for years and want to go deeper. Others are just getting started.
           </p>
@@ -98,7 +98,7 @@ import Layout from '../layouts/BaseLayout.astro';
             I meet you where you are. Lessons are built around your goals, your style, and your voice.
           </p>
         </div>
-        <div class="intro-image">
+        <div class="intro-image reveal-right">
           <img src="/images/ted-teaching-studio.webp" alt="Ted Chamberlain coaching a singing lesson at the piano" class="intro-photo" />
         </div>
       </div>
@@ -108,26 +108,26 @@ import Layout from '../layouts/BaseLayout.astro';
   <!-- Who I Work With Section -->
   <section class="who-section">
     <div class="container">
-      <h2 class="decorated-heading">Singers at every level</h2>
-      <p class="section-intro">I work with complete beginners, experienced performers, and everyone in between. Here's a sampling of who walks through my door:</p>
+      <h2 class="decorated-heading reveal">Singers at every level</h2>
+      <p class="section-intro reveal">I work with complete beginners, experienced performers, and everyone in between. Here's a sampling of who walks through my door:</p>
       
-      <div class="cards-grid">
-        <div class="card">
+      <div class="cards-grid reveal-stagger">
+        <div class="card reveal">
           <h3>Complete beginners</h3>
           <p>Many of my students arrive convinced they "can't sing." Some haven't sung since childhood. Some have been told they're tone-deaf. I've helped countless singers find their pitch and build confidence from the ground up. Progress often happens faster than people expect.</p>
         </div>
         
-        <div class="card">
+        <div class="card reveal">
           <h3>Developing singers</h3>
           <p>If you've been singing for a while and want to grow, I can help you understand what's working, what's getting in the way, and what to focus on next.</p>
         </div>
         
-        <div class="card">
+        <div class="card reveal">
           <h3>Experienced performers</h3>
           <p>Whether you're preparing for something specific or refining your craft, I offer a fresh perspective grounded in how the voice actually works.</p>
         </div>
         
-        <div class="card">
+        <div class="card reveal">
           <h3>Recovering voices</h3>
           <p>Vocal strain, fatigue, and injury are more common than people realize. Helping singers recover and rebuild is a special focus of mine. I approach this work with care, patience, and a deep understanding of vocal health.</p>
         </div>
@@ -137,7 +137,7 @@ import Layout from '../layouts/BaseLayout.astro';
 
   <!-- Styles & Genres Section -->
   <section class="styles-section has-grain">
-    <div class="container container-narrow">
+    <div class="container container-narrow reveal">
       <h2>Any style. Your style.</h2>
       <p>I work across all genres and traditions. The principles of healthy, expressive singing apply whether you're performing classical art song, musical theater, pop, gospel, barbershop, or anything else.</p>
       
@@ -157,20 +157,20 @@ import Layout from '../layouts/BaseLayout.astro';
   <!-- How Lessons Work Section -->
   <section class="how-section">
     <div class="container">
-      <h2>How lessons work</h2>
+      <h2 class="reveal">How lessons work</h2>
       
-      <div class="how-grid">
-        <div class="how-item">
+      <div class="how-grid reveal-stagger">
+        <div class="how-item reveal">
           <h3>The first step</h3>
           <p>We start with a free discovery call — a short conversation where I learn about your goals and you learn about how I teach. From there, we decide together if it's a good fit.</p>
         </div>
         
-        <div class="how-item">
+        <div class="how-item reveal">
           <h3>Lesson format</h3>
           <p>Lessons are one hour. Weekly lessons work best for most students — that steady rhythm builds momentum and allows real progress to take hold. I also offer flexible options for students whose schedules or circumstances require a different pace.</p>
         </div>
         
-        <div class="how-item">
+        <div class="how-item reveal">
           <h3>In-person or virtual</h3>
           <p>I teach primarily in person at my studio in Lacey, Washington. Virtual lessons are available and work well for some students — though for many, starting in person helps us build a stronger foundation together.</p>
         </div>
@@ -180,7 +180,7 @@ import Layout from '../layouts/BaseLayout.astro';
 
   <!-- What to Expect Section -->
   <section class="expect-section">
-    <div class="container container-narrow">
+    <div class="container container-narrow reveal">
       <h2>What to expect</h2>
       
       <p>Singing is human-to-human communication. Everything I teach supports that central truth — expression drives the voice, and technique serves expression.</p>
@@ -210,7 +210,7 @@ import Layout from '../layouts/BaseLayout.astro';
 
   <!-- Age Note Section -->
   <section class="age-section">
-    <div class="container container-narrow">
+    <div class="container container-narrow reveal">
       <h2>A note on age</h2>
       <p>I typically work with singers ages 14 and up. That's when most students have the maturity and focus to get the most from this kind of work.</p>
       <p>For younger singers, I often recommend children's choirs as a wonderful way to build skills, develop musicianship, and fall in love with singing. If you're unsure whether your child is ready, feel free to reach out — I'm happy to talk it through.</p>
@@ -220,7 +220,7 @@ import Layout from '../layouts/BaseLayout.astro';
 
   <!-- CTA Section -->
   <section class="cta-section has-grain">
-    <div class="container">
+    <div class="container reveal">
       <h2>Ready to get started?</h2>
       <p>The first step is a free discovery call. Tell me a bit about yourself and your goals, and I'll be in touch to set up a time to talk.</p>
       <a href="/contact" class="btn btn-primary">Book a Free Discovery Call</a>
@@ -232,7 +232,11 @@ import Layout from '../layouts/BaseLayout.astro';
 <style>
   /* Hero Section */
   .hero {
-    background: linear-gradient(135deg, var(--color-navy-deep) 0%, var(--color-navy-medium) 100%);
+    background:
+      url('/images/noise-texture.png') repeat,
+      linear-gradient(135deg, var(--color-navy-deep) 0%, var(--color-navy-medium) 100%);
+    background-size: 200px 200px, 100% 100%;
+    background-blend-mode: soft-light, normal;
     padding: 5rem 0 4rem;
     text-align: center;
   }
@@ -392,7 +396,11 @@ import Layout from '../layouts/BaseLayout.astro';
 
   /* Styles Section */
   .styles-section {
-    background: linear-gradient(135deg, var(--color-navy-deep) 0%, var(--color-navy-medium) 100%);
+    background:
+      url('/images/noise-texture.png') repeat,
+      linear-gradient(135deg, var(--color-navy-deep) 0%, var(--color-navy-medium) 100%);
+    background-size: 200px 200px, 100% 100%;
+    background-blend-mode: soft-light, normal;
     padding: 4rem 0;
     color: var(--color-cream);
   }
@@ -543,7 +551,11 @@ import Layout from '../layouts/BaseLayout.astro';
 
   /* CTA Section */
   .cta-section {
-    background: linear-gradient(135deg, var(--color-navy-deep) 0%, var(--color-navy-medium) 100%);
+    background:
+      url('/images/noise-texture.png') repeat,
+      linear-gradient(135deg, var(--color-navy-deep) 0%, var(--color-navy-medium) 100%);
+    background-size: 200px 200px, 100% 100%;
+    background-blend-mode: soft-light, normal;
     padding: 4rem 0;
     text-align: center;
   }

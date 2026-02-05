@@ -8,7 +8,7 @@ import Layout from '../layouts/BaseLayout.astro';
 >
   <!-- Hero Section -->
   <section class="hero">
-    <div class="container">
+    <div class="container reveal">
       <span class="hero-eyebrow">Contact</span>
       <h1>Let me know how I can help</h1>
       <p class="hero-subtitle">I'd love to hear what you're working on — or what you're curious about.</p>
@@ -20,7 +20,7 @@ import Layout from '../layouts/BaseLayout.astro';
     <div class="container">
       <div class="form-grid">
         <!-- Left: Intro + Form -->
-        <div class="form-column">
+        <div class="form-column reveal-left">
           <p class="intro-text">
             The first step is simple — tell me a bit about yourself and what you're hoping to accomplish. I'll follow up within 24–48 hours to schedule a free discovery call. That's where we'll talk through your goals and see if we're a good fit.
           </p>
@@ -139,7 +139,7 @@ import Layout from '../layouts/BaseLayout.astro';
         </div>
 
         <!-- Right: What Happens Next + Contact Info -->
-        <div class="info-column">
+        <div class="info-column reveal-right">
           <!-- What Happens Next -->
           <div class="info-card">
             <h3>What to expect</h3>
@@ -206,8 +206,8 @@ import Layout from '../layouts/BaseLayout.astro';
   <!-- Map Section -->
   <section class="map-section">
     <div class="container">
-      <h2 class="section-heading">Find the Studio</h2>
-      <div class="map-container">
+      <h2 class="section-heading reveal">Find the Studio</h2>
+      <div class="map-container reveal">
         <iframe
           src="https://www.google.com/maps?q=4204+Lorna+Ct+SE,+Lacey,+WA+98503&output=embed"
           width="100%"
@@ -235,7 +235,11 @@ import Layout from '../layouts/BaseLayout.astro';
 <style>
   /* Hero Section */
   .hero {
-    background: linear-gradient(135deg, var(--color-navy-deep) 0%, var(--color-navy-medium) 100%);
+    background:
+      url('/images/noise-texture.png') repeat,
+      linear-gradient(135deg, var(--color-navy-deep) 0%, var(--color-navy-medium) 100%);
+    background-size: 200px 200px, 100% 100%;
+    background-blend-mode: soft-light, normal;
     padding: 4rem 0 3rem;
     text-align: center;
   }
@@ -506,7 +510,11 @@ import Layout from '../layouts/BaseLayout.astro';
 
   /* Accent Card */
   .info-card-accent {
-    background: linear-gradient(135deg, var(--color-navy-deep) 0%, var(--color-navy-medium) 100%);
+    background:
+      url('/images/noise-texture.png') repeat,
+      linear-gradient(135deg, var(--color-navy-deep) 0%, var(--color-navy-medium) 100%);
+    background-size: 200px 200px, 100% 100%;
+    background-blend-mode: soft-light, normal;
   }
 
   .info-card-accent h3 {
@@ -523,7 +531,11 @@ import Layout from '../layouts/BaseLayout.astro';
 
   /* Map Section */
   .map-section {
-    background: var(--color-navy-deep);
+    background:
+      url('/images/noise-texture.png') repeat,
+      var(--color-navy-deep);
+    background-size: 200px 200px, 100% 100%;
+    background-blend-mode: soft-light, normal;
     padding: 3rem 0 4rem;
   }
 

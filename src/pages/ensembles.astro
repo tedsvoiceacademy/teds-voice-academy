@@ -104,7 +104,7 @@ import Layout from '../layouts/BaseLayout.astro';
   <section class="intro-section">
     <div class="container">
       <div class="intro-grid">
-        <div class="intro-content">
+        <div class="intro-content reveal-left">
           <p class="intro-text drop-cap">
             Strong ensemble singing starts with strong individual skills — and with a shared understanding of how voices work together. I help choirs/choruses, quartets, and other vocal groups develop tuning, unity, and authentic performance presence.
           </p>
@@ -112,7 +112,7 @@ import Layout from '../layouts/BaseLayout.astro';
             Whether you're preparing for competition, working through a specific challenge, or simply want to connect more deeply as an ensemble, I can help your group find its voice.
           </p>
         </div>
-        <div class="intro-image">
+        <div class="intro-image reveal-right">
           <img src="/images/ensemble-chorus-group.webp" alt="Community chorus group photo — ensemble coached by Ted Chamberlain" class="intro-photo" />
         </div>
       </div>
@@ -122,36 +122,36 @@ import Layout from '../layouts/BaseLayout.astro';
   <!-- Who I Work With Section -->
   <section class="who-section">
     <div class="container">
-      <h2 class="decorated-heading">Groups of all kinds</h2>
-      <p class="section-intro">I work with ensembles across traditions and contexts. Here's a sampling of the groups I coach:</p>
+      <h2 class="decorated-heading reveal">Groups of all kinds</h2>
+      <p class="section-intro reveal">I work with ensembles across traditions and contexts. Here's a sampling of the groups I coach:</p>
       
-      <div class="cards-grid">
-        <div class="card">
+      <div class="cards-grid reveal-stagger">
+        <div class="card reveal">
           <h3>Church choirs</h3>
           <p>From small worship teams to full sanctuary choirs, I help church musicians develop their sound and lead their congregations with confidence.</p>
         </div>
         
-        <div class="card">
+        <div class="card reveal">
           <h3>Barbershop quartets and choruses</h3>
           <p>I've spent decades in the barbershop world as a performer, director, and coach. I understand what judges listen for and how to help groups achieve ring, unity, and emotional connection.</p>
         </div>
         
-        <div class="card">
+        <div class="card reveal">
           <h3>A cappella groups</h3>
           <p>Whether you're a college ensemble, community group, or professional vocal band, I can help you tighten your sound and elevate your performances.</p>
         </div>
         
-        <div class="card">
+        <div class="card reveal">
           <h3>School and youth ensembles</h3>
           <p>I bring nearly 30 years of choral conducting experience in public schools. I know how to meet young singers where they are and help them grow.</p>
         </div>
         
-        <div class="card">
+        <div class="card reveal">
           <h3>Community choirs</h3>
           <p>Singing together builds connection. I help community groups develop their musicianship while keeping the joy at the center.</p>
         </div>
         
-        <div class="card">
+        <div class="card reveal">
           <h3>Competition-focused groups</h3>
           <p>If you're preparing for contest, I can help you refine the details that make the difference — tuning, vowel matching, phrasing, and stage presence.</p>
         </div>
@@ -162,7 +162,7 @@ import Layout from '../layouts/BaseLayout.astro';
   <!-- Ensemble Showcase -->
   <section class="showcase-section">
     <div class="container container-narrow">
-      <div class="showcase-image">
+      <div class="showcase-image reveal">
         <img src="/images/ensemble-quartet-competition.webp" alt="Barbershop quartet coached by Ted Chamberlain with competition awards" class="showcase-photo" />
         <p class="showcase-caption">A competition quartet with their awards — one of many groups Ted has coached</p>
       </div>
@@ -172,31 +172,31 @@ import Layout from '../layouts/BaseLayout.astro';
   <!-- What I Help With Section -->
   <section class="help-section has-grain">
     <div class="container">
-      <h2>What we work on</h2>
-      <p class="section-intro">Every ensemble has different needs. Here are some of the areas I address:</p>
+      <h2 class="reveal">What we work on</h2>
+      <p class="section-intro reveal">Every ensemble has different needs. Here are some of the areas I address:</p>
       
-      <div class="help-grid">
-        <div class="help-item">
+      <div class="help-grid reveal-stagger">
+        <div class="help-item reveal">
           <h3>Tuning and intonation</h3>
           <p>When voices lock in, the sound transforms. I help groups understand the mechanics of tuning and develop the listening skills that make it happen.</p>
         </div>
         
-        <div class="help-item">
+        <div class="help-item reveal">
           <h3>Unity and vowel matching</h3>
           <p>A unified sound isn't about erasing individuality. It's about making intentional choices together. We work on vowel shapes, tone color, and the subtle adjustments that create a cohesive ensemble sound.</p>
         </div>
         
-        <div class="help-item">
+        <div class="help-item reveal">
           <h3>Performance presence</h3>
           <p>Great singing deserves great delivery. I help groups connect with their audience, tell the story, and bring genuine emotion to the stage.</p>
         </div>
         
-        <div class="help-item">
+        <div class="help-item reveal">
           <h3>Section development</h3>
           <p>Sometimes the work happens in smaller groups. I coach section leaders and help individual voice parts strengthen their foundation.</p>
         </div>
         
-        <div class="help-item">
+        <div class="help-item reveal">
           <h3>Director support</h3>
           <p>I work alongside directors to address specific challenges, prepare for performances, or bring a fresh perspective to repertoire.</p>
         </div>
@@ -206,7 +206,7 @@ import Layout from '../layouts/BaseLayout.astro';
 
   <!-- How It Works Section -->
   <section class="how-section">
-    <div class="container container-narrow">
+    <div class="container container-narrow reveal">
       <h2>How ensemble coaching works</h2>
       
       <div class="how-content">
@@ -237,7 +237,7 @@ import Layout from '../layouts/BaseLayout.astro';
 
   <!-- What to Expect Section -->
   <section class="expect-section">
-    <div class="container container-narrow">
+    <div class="container container-narrow reveal">
       <h2>What to expect</h2>
       
       <p>I approach ensemble coaching the same way I approach individual instruction: expression first, technique in service of expression.</p>
@@ -252,7 +252,7 @@ import Layout from '../layouts/BaseLayout.astro';
 
   <!-- CTA Section -->
   <section class="cta-section has-grain">
-    <div class="container">
+    <div class="container reveal">
       <h2>Ready to elevate your ensemble?</h2>
       <p>The first step is a conversation. Tell me about your group and your goals, and I'll share how I can help.</p>
       <a href="/contact" class="btn btn-primary">Get in Touch</a>
@@ -264,7 +264,11 @@ import Layout from '../layouts/BaseLayout.astro';
 <style>
   /* Hero Section */
   .hero {
-    background: linear-gradient(135deg, var(--color-navy-deep) 0%, var(--color-navy-medium) 100%);
+    background:
+      url('/images/noise-texture.png') repeat,
+      linear-gradient(135deg, var(--color-navy-deep) 0%, var(--color-navy-medium) 100%);
+    background-size: 200px 200px, 100% 100%;
+    background-blend-mode: soft-light, normal;
     padding: 5rem 0 4rem;
     text-align: center;
   }
@@ -449,7 +453,11 @@ import Layout from '../layouts/BaseLayout.astro';
 
   /* Help Section */
   .help-section {
-    background: linear-gradient(135deg, var(--color-navy-deep) 0%, var(--color-navy-medium) 100%);
+    background:
+      url('/images/noise-texture.png') repeat,
+      linear-gradient(135deg, var(--color-navy-deep) 0%, var(--color-navy-medium) 100%);
+    background-size: 200px 200px, 100% 100%;
+    background-blend-mode: soft-light, normal;
     padding: 4rem 0;
   }
 
@@ -568,7 +576,11 @@ import Layout from '../layouts/BaseLayout.astro';
 
   /* CTA Section */
   .cta-section {
-    background: linear-gradient(135deg, var(--color-navy-deep) 0%, var(--color-navy-medium) 100%);
+    background:
+      url('/images/noise-texture.png') repeat,
+      linear-gradient(135deg, var(--color-navy-deep) 0%, var(--color-navy-medium) 100%);
+    background-size: 200px 200px, 100% 100%;
+    background-blend-mode: soft-light, normal;
     padding: 4rem 0;
     text-align: center;
   }

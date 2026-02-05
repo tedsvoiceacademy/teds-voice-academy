@@ -8,7 +8,7 @@ import Layout from '../layouts/BaseLayout.astro';
 >
   <!-- Hero Section -->
   <section class="hero">
-    <div class="container">
+    <div class="container reveal">
       <span class="hero-eyebrow">Blog</span>
       <h1>Ideas, insights, and practical guidance for your voice</h1>
       <p class="hero-subtitle">Whether you sing, speak, or both — there's something here for you.</p>
@@ -17,7 +17,7 @@ import Layout from '../layouts/BaseLayout.astro';
 
   <!-- Intro Section -->
   <section class="intro-section">
-    <div class="container container-narrow">
+    <div class="container container-narrow reveal">
       <p class="intro-text">I write about the voice because I find it endlessly fascinating — and because I believe everyone deserves access to good information about how their instrument works.</p>
       <p class="intro-text">These posts explore technique, health, performance, and the mindset behind vocal development. Some are deep dives. Some are quick tips. All of them come from four decades of teaching, performing, and learning alongside my students.</p>
       <p class="intro-text">Browse by topic below, or scroll through the latest posts.</p>
@@ -27,25 +27,25 @@ import Layout from '../layouts/BaseLayout.astro';
   <!-- Categories Section -->
   <section class="categories-section">
     <div class="container">
-      <h2>Explore by Topic</h2>
-      <div class="categories-grid">
-        <div class="category-card">
+      <h2 class="reveal">Explore by Topic</h2>
+      <div class="categories-grid reveal-stagger">
+        <div class="category-card reveal">
           <h3>Vocal Health</h3>
           <p>Taking care of your voice so it can take care of you. Warm-ups, recovery, hydration, and what to do when something feels off.</p>
         </div>
-        <div class="category-card">
+        <div class="category-card reveal">
           <h3>Technique</h3>
           <p>The how and why behind breath support, resonance, phonation, and articulation — the physical foundations of good singing and speaking.</p>
         </div>
-        <div class="category-card">
+        <div class="category-card reveal">
           <h3>Performance</h3>
           <p>What happens when you step in front of an audience. Stage presence, audition preparation, and connecting with listeners.</p>
         </div>
-        <div class="category-card">
+        <div class="category-card reveal">
           <h3>Mindset & Practice</h3>
           <p>The mental and emotional side of vocal development. Confidence, consistency, and the long game of getting better.</p>
         </div>
-        <div class="category-card">
+        <div class="category-card reveal">
           <h3>For Professionals</h3>
           <p>Guidance for those building a career with their voice — teaching, industry insights, and communication in business contexts.</p>
         </div>
@@ -56,8 +56,8 @@ import Layout from '../layouts/BaseLayout.astro';
   <!-- Recent Posts Section -->
   <section class="posts-section">
     <div class="container">
-      <h2>Recent Posts</h2>
-      <div class="posts-coming-soon">
+      <h2 class="reveal">Recent Posts</h2>
+      <div class="posts-coming-soon reveal">
         <h3>Posts are on the way</h3>
         <p>I'm building out a library of articles on vocal technique, health, performance, and more. Check back soon for the first posts — or join the list below to be notified when new content is published.</p>
       </div>
@@ -67,7 +67,7 @@ import Layout from '../layouts/BaseLayout.astro';
   <!-- Newsletter Section -->
   <section class="newsletter-section">
     <div class="container container-narrow">
-      <h2>Stay in the loop</h2>
+      <h2 class="reveal">Stay in the loop</h2>
       <p class="newsletter-intro">Get notified when new articles are published — plus occasional voice tips and updates.</p>
       <form
         name="blog-newsletter"
@@ -75,7 +75,7 @@ import Layout from '../layouts/BaseLayout.astro';
         action="/success"
         data-netlify="true"
         netlify-honeypot="bot-field"
-        class="newsletter-form"
+        class="newsletter-form reveal"
       >
         <p class="hidden">
           <label>Don't fill this out if you're human: <input name="bot-field" /></label>
@@ -92,7 +92,7 @@ import Layout from '../layouts/BaseLayout.astro';
 
   <!-- CTA Section -->
   <section class="cta-section">
-    <div class="container">
+    <div class="container reveal">
       <h2>Want to go deeper?</h2>
       <p>Reading is a great start. Working together is where real progress happens. If something here sparks a question or a goal, I'd love to hear about it.</p>
       <a href="/contact" class="btn btn-primary">Book a Free Discovery Call</a>
@@ -104,7 +104,11 @@ import Layout from '../layouts/BaseLayout.astro';
 <style>
   /* Hero Section */
   .hero {
-    background: linear-gradient(135deg, var(--color-navy-deep) 0%, var(--color-navy-medium) 100%);
+    background:
+      url('/images/noise-texture.png') repeat,
+      linear-gradient(135deg, var(--color-navy-deep) 0%, var(--color-navy-medium) 100%);
+    background-size: 200px 200px, 100% 100%;
+    background-blend-mode: soft-light, normal;
     padding: 5rem 0 4rem;
     text-align: center;
   }
@@ -278,7 +282,11 @@ import Layout from '../layouts/BaseLayout.astro';
 
   /* Newsletter Section */
   .newsletter-section {
-    background: linear-gradient(135deg, var(--color-navy-deep) 0%, var(--color-navy-medium) 100%);
+    background:
+      url('/images/noise-texture.png') repeat,
+      linear-gradient(135deg, var(--color-navy-deep) 0%, var(--color-navy-medium) 100%);
+    background-size: 200px 200px, 100% 100%;
+    background-blend-mode: soft-light, normal;
     padding: 4rem 0;
     text-align: center;
   }

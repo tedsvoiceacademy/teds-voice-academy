@@ -55,7 +55,7 @@ import Layout from '../layouts/BaseLayout.astro';
 
   <!-- Intro Section -->
   <section class="intro-section">
-    <div class="container container-narrow">
+    <div class="container container-narrow reveal">
       <p class="intro-text">
         I've been singing since I was eight years old. I started teaching in 1988. In the decades since, I've worked with thousands of singers and speakers — in classrooms, rehearsal halls, private studios, and on stages around the country.
       </p>
@@ -70,7 +70,7 @@ import Layout from '../layouts/BaseLayout.astro';
 
   <!-- My Path Section -->
   <section class="path-section">
-    <div class="container container-narrow">
+    <div class="container container-narrow reveal">
       <h2>How I got here</h2>
       
       <p>I fell in love with the voice early — and that love has only deepened over time. The voice is endlessly fascinating to me. How it works. Why it works. What happens when everything aligns and a singer or speaker finds that moment of freedom and flow.</p>
@@ -88,25 +88,25 @@ import Layout from '../layouts/BaseLayout.astro';
   <!-- Philosophy Section -->
   <section class="philosophy-section has-grain">
     <div class="container">
-      <h2>What I believe about voice</h2>
+      <h2 class="reveal">What I believe about voice</h2>
       
-      <div class="beliefs-grid">
-        <div class="belief-card">
+      <div class="beliefs-grid reveal-stagger">
+        <div class="belief-card reveal">
           <h3>Expression comes first</h3>
           <p>Technique exists to serve expression — to give you the freedom to say what you mean, the way you mean it.</p>
         </div>
-        
-        <div class="belief-card">
+
+        <div class="belief-card reveal">
           <h3>Every voice is unique</h3>
           <p>You are better at being you than anyone else will ever be — and you can never be as good at being like someone else as you can at being you. My job isn't to make you sound like someone else. It's to help you sound more like yourself — with more ease, more power, and more confidence.</p>
         </div>
-        
-        <div class="belief-card">
+
+        <div class="belief-card reveal">
           <h3>Understanding the "why" and the "how"</h3>
           <p>When you know how your voice works, you can keep growing on your own. You're not dependent on me to fix things. You have the knowledge to figure it out yourself.</p>
         </div>
-        
-        <div class="belief-card">
+
+        <div class="belief-card reveal">
           <h3>Voice work is human work</h3>
           <p>It's personal. It takes trust. I take that seriously.</p>
         </div>
@@ -116,7 +116,7 @@ import Layout from '../layouts/BaseLayout.astro';
 
   <!-- Credentials Section -->
   <section class="credentials-section">
-    <div class="container container-narrow">
+    <div class="container container-narrow reveal">
       <h2>Background</h2>
       
       <p>I hold two degrees from Seattle Pacific University — one in Vocal Performance, one in K-12 Music Education. I earned National Board Certification in 2005 and hold a lifetime teaching certification in Washington State.</p>
@@ -161,7 +161,7 @@ import Layout from '../layouts/BaseLayout.astro';
   <!-- Professional Affiliations Section -->
   <section class="affiliations-section">
     <div class="container">
-      <h2>Proudly connected with</h2>
+      <h2 class="reveal">Proudly connected with</h2>
 
       <h3 class="affiliation-group-label">Vocal &amp; Music Organizations</h3>
       <div class="affiliations-grid">
@@ -199,7 +199,7 @@ import Layout from '../layouts/BaseLayout.astro';
 
   <!-- Personal Note Section -->
   <section class="personal-section">
-    <div class="container container-narrow">
+    <div class="container container-narrow reveal">
       <h2>A bit more about me</h2>
       
       <p>I live in Lacey, Washington, where I teach from my home studio. I'm madly in love with my wife, Tammy — she's at the center of everything good in my life. And if you come to my studio, you'll be greeted by Keeva, our dog, who considers welcoming clients one of her most important jobs.</p>
@@ -213,7 +213,7 @@ import Layout from '../layouts/BaseLayout.astro';
   <!-- Ensembles Section -->
   <section class="ensembles-section">
     <div class="container container-narrow">
-      <h2>On stage with my ensembles</h2>
+      <h2 class="reveal">On stage with my ensembles</h2>
 
       <p>Teaching voice is my calling — and performing is where I keep that calling alive. I'm an active performer in the barbershop harmony community, and my ensemble work is one of the great joys of my life.</p>
 
@@ -263,7 +263,7 @@ import Layout from '../layouts/BaseLayout.astro';
 
   <!-- CTA Section -->
   <section class="cta-section has-grain">
-    <div class="container">
+    <div class="container reveal">
       <h2>Let's talk</h2>
       <p>The first step is a free discovery call — a short conversation where I learn about your goals and you learn about how I work.</p>
       <a href="/contact" class="btn btn-primary">Book a Free Discovery Call</a>
@@ -275,7 +275,11 @@ import Layout from '../layouts/BaseLayout.astro';
 <style>
   /* Hero Section */
   .hero {
-    background: linear-gradient(135deg, var(--color-navy-deep) 0%, var(--color-navy-medium) 100%);
+    background:
+      url('/images/noise-texture.png') repeat,
+      linear-gradient(135deg, var(--color-navy-deep) 0%, var(--color-navy-medium) 100%);
+    background-size: 200px 200px, 100% 100%;
+    background-blend-mode: soft-light, normal;
     padding: 4rem 0;
   }
 
@@ -324,6 +328,32 @@ import Layout from '../layouts/BaseLayout.astro';
     border: 3px solid var(--color-gold-bright);
     box-shadow: 0 8px 30px rgba(0, 0, 0, 0.3);
     object-fit: cover;
+  }
+
+  /* Hero entrance animations */
+  @keyframes heroTextIn {
+    from { opacity: 0; transform: translateX(-30px); }
+    to { opacity: 1; transform: translateX(0); }
+  }
+
+  @keyframes heroPhotoIn {
+    from { opacity: 0; transform: scale(1.06); }
+    to { opacity: 1; transform: scale(1); }
+  }
+
+  .hero-content {
+    animation: heroTextIn 1s ease-out 0.2s both;
+  }
+
+  .ted-headshot {
+    animation: heroPhotoIn 1.2s ease-out 0.5s both;
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    .hero-content,
+    .ted-headshot {
+      animation: none;
+    }
   }
 
   /* Container Narrow */
@@ -402,7 +432,11 @@ import Layout from '../layouts/BaseLayout.astro';
 
   /* Philosophy Section */
   .philosophy-section {
-    background: linear-gradient(135deg, var(--color-navy-deep) 0%, var(--color-navy-medium) 100%);
+    background:
+      url('/images/noise-texture.png') repeat,
+      linear-gradient(135deg, var(--color-navy-deep) 0%, var(--color-navy-medium) 100%);
+    background-size: 200px 200px, 100% 100%;
+    background-blend-mode: soft-light, normal;
     padding: 4rem 0;
   }
 
@@ -772,7 +806,11 @@ import Layout from '../layouts/BaseLayout.astro';
 
   /* CTA Section */
   .cta-section {
-    background: linear-gradient(135deg, var(--color-navy-deep) 0%, var(--color-navy-medium) 100%);
+    background:
+      url('/images/noise-texture.png') repeat,
+      linear-gradient(135deg, var(--color-navy-deep) 0%, var(--color-navy-medium) 100%);
+    background-size: 200px 200px, 100% 100%;
+    background-blend-mode: soft-light, normal;
     padding: 4rem 0;
     text-align: center;
   }

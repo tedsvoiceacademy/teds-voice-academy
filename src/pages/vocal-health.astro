@@ -8,7 +8,7 @@ import Layout from '../layouts/BaseLayout.astro';
 >
   <!-- Hero Section -->
   <section class="hero">
-    <div class="container">
+    <div class="container reveal">
       <span class="hero-eyebrow">Vocal Health</span>
       <h1>Your voice deserves good care</h1>
       <p class="hero-subtitle">A healthy voice is built through daily habits, simple practices, and small choices that keep your voice resilient over time.</p>
@@ -26,34 +26,34 @@ import Layout from '../layouts/BaseLayout.astro';
   <!-- Navigation Cards Section -->
   <section class="nav-cards-section">
     <div class="container">
-      <h2>What would you like to explore?</h2>
-      <div class="nav-cards-grid">
-        <a href="#foundations" class="nav-card">
+      <h2 class="reveal">What would you like to explore?</h2>
+      <div class="nav-cards-grid reveal-stagger">
+        <a href="#foundations" class="nav-card reveal">
           <h3>Foundations</h3>
           <p>The basics that matter most — hydration, rest, environment, and the daily habits that keep your voice healthy.</p>
           <span class="card-cta">Start with the Foundations &rarr;</span>
         </a>
-        <a href="#warning-signs" class="nav-card">
+        <a href="#warning-signs" class="nav-card reveal">
           <h3>When Things Feel Off</h3>
           <p>How to recognize vocal fatigue, when to rest, when to seek help, and how to find a voice specialist.</p>
           <span class="card-cta">Learn the Warning Signs &rarr;</span>
         </a>
-        <a href="#home-care" class="nav-card">
+        <a href="#home-care" class="nav-card reveal">
           <h3>Home Care & Remedies</h3>
           <p>Gargles, teas, lozenges, and other home remedies I've found helpful over the years.</p>
           <span class="card-cta">Explore Home Remedies &rarr;</span>
         </a>
-        <a href="#sovt" class="nav-card">
+        <a href="#sovt" class="nav-card reveal">
           <h3>SOVT Tools & Techniques</h3>
           <p>Semi-occluded vocal tract exercises — one of the most effective ways to warm up, cool down, and maintain vocal health.</p>
           <span class="card-cta">Discover SOVT &rarr;</span>
         </a>
-        <a href="#vocal-fit" class="nav-card">
+        <a href="#vocal-fit" class="nav-card reveal">
           <h3>Vocal Fit</h3>
           <p>My vocal conditioning routines — structured exercises for warming up, building flexibility, and maintaining vocal health across different needs and stages of life.</p>
           <span class="card-cta">Explore Vocal Fit &rarr;</span>
         </a>
-        <a href="#articles" class="nav-card">
+        <a href="#articles" class="nav-card reveal">
           <h3>Articles & Resources</h3>
           <p>A collection of my writing on vocal health topics, plus links to helpful resources.</p>
           <span class="card-cta">Browse Articles &rarr;</span>
@@ -68,7 +68,7 @@ import Layout from '../layouts/BaseLayout.astro';
   <section id="foundations" class="content-section content-section--light">
     <div class="container container-narrow">
       <span class="section-eyebrow">Foundations</span>
-      <h2>The basics that keep your voice healthy</h2>
+      <h2 class="reveal">The basics that keep your voice healthy</h2>
       <p class="section-lead">Vocal health comes down to a few fundamentals: stay hydrated, get enough rest, and pay attention to your environment. These are daily habits that add up over time — and they create the conditions for your voice to thrive.</p>
       <p class="section-lead">Here's what I've learned matters most.</p>
 
@@ -156,7 +156,7 @@ import Layout from '../layouts/BaseLayout.astro';
   <section id="warning-signs" class="content-section content-section--dark">
     <div class="container container-narrow">
       <span class="section-eyebrow">When Things Feel Off</span>
-      <h2>Listening to what your voice is telling you</h2>
+      <h2 class="reveal">Listening to what your voice is telling you</h2>
       <p class="section-lead">Your voice gives you signals. Learning to read them — and knowing how to respond — helps you take care of problems early, before they become bigger issues.</p>
       <p class="section-lead">Here's guidance for some common situations.</p>
 
@@ -303,7 +303,7 @@ import Layout from '../layouts/BaseLayout.astro';
   <section id="home-care" class="content-section content-section--light">
     <div class="container container-narrow">
       <span class="section-eyebrow">Home Care & Remedies</span>
-      <h2>Simple things that help</h2>
+      <h2 class="reveal">Simple things that help</h2>
       <p class="section-lead">Over the years, I've found certain home remedies genuinely useful for soothing tired voices and supporting recovery. These are my personal recommendations — things I've tested and trust.</p>
       <p class="section-lead"><em>Note: These suggestions are for general comfort and care. If you're experiencing persistent symptoms, please consult a medical professional.</em></p>
 
@@ -334,7 +334,7 @@ import Layout from '../layouts/BaseLayout.astro';
   <section id="sovt" class="content-section content-section--dark">
     <div class="container container-narrow">
       <span class="section-eyebrow">SOVT Tools & Techniques</span>
-      <h2>One of the best things you can do for your voice</h2>
+      <h2 class="reveal">One of the best things you can do for your voice</h2>
       <p class="section-lead">SOVT stands for Semi-Occluded Vocal Tract. It's a category of exercises where you create a partial closure in your mouth or lips while phonating (making sound). This creates back-pressure that helps your vocal folds vibrate more efficiently with less effort.</p>
       <p class="section-lead">I've been using and teaching SOVT exercises for years. They're among the most valuable tools I know for warming up, cooling down, and maintaining vocal health.</p>
 
@@ -351,7 +351,7 @@ import Layout from '../layouts/BaseLayout.astro';
   <section id="vocal-fit" class="content-section content-section--light">
     <div class="container container-narrow">
       <span class="section-eyebrow">Vocal Fit</span>
-      <h2>Structured routines for a healthy voice</h2>
+      <h2 class="reveal">Structured routines for a healthy voice</h2>
       <p class="section-lead">Vocal Fit is my collection of vocal conditioning routines — structured exercises designed to build and maintain vocal flexibility, efficiency, and resilience.</p>
       <p class="section-lead">Each routine is designed for a specific purpose. Whether you need a gentle morning warm-up, exercises tailored for aging voices, or a general conditioning program, there's a Vocal Fit routine for you.</p>
 
@@ -378,7 +378,7 @@ import Layout from '../layouts/BaseLayout.astro';
   <section id="articles" class="content-section content-section--dark">
     <div class="container container-narrow">
       <span class="section-eyebrow">Articles & Resources</span>
-      <h2>More to explore</h2>
+      <h2 class="reveal">More to explore</h2>
       <p class="section-lead">I write regularly about vocal health, technique, and the habits that support a healthy voice. Here you'll find a curated collection of articles, blog posts, and helpful resources.</p>
 
       <div class="coming-soon-block">
@@ -390,7 +390,7 @@ import Layout from '../layouts/BaseLayout.astro';
 
   <!-- CTA Section -->
   <section class="cta-section">
-    <div class="container">
+    <div class="container reveal">
       <h2>Want to go deeper?</h2>
       <p>The best way to truly understand your voice is to work with someone who can guide you personally. If you're ready for that kind of support, let's talk.</p>
       <a href="/contact" class="btn btn-primary">Get in Touch</a>
@@ -402,7 +402,11 @@ import Layout from '../layouts/BaseLayout.astro';
 <style>
   /* Hero Section */
   .hero {
-    background: linear-gradient(135deg, var(--color-navy-deep) 0%, var(--color-navy-medium) 100%);
+    background:
+      url('/images/noise-texture.png') repeat,
+      linear-gradient(135deg, var(--color-navy-deep) 0%, var(--color-navy-medium) 100%);
+    background-size: 200px 200px, 100% 100%;
+    background-blend-mode: soft-light, normal;
     padding: 5rem 0 3rem;
     text-align: center;
   }
@@ -711,7 +715,11 @@ import Layout from '../layouts/BaseLayout.astro';
 
   /* CTA Section */
   .cta-section {
-    background: linear-gradient(135deg, var(--color-navy-deep) 0%, var(--color-navy-medium) 100%);
+    background:
+      url('/images/noise-texture.png') repeat,
+      linear-gradient(135deg, var(--color-navy-deep) 0%, var(--color-navy-medium) 100%);
+    background-size: 200px 200px, 100% 100%;
+    background-blend-mode: soft-light, normal;
     padding: 4rem 0;
     text-align: center;
   }

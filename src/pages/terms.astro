@@ -8,7 +8,7 @@ import Layout from '../layouts/BaseLayout.astro';
 >
   <!-- Hero Section -->
   <section class="hero">
-    <div class="container">
+    <div class="container reveal">
       <span class="hero-eyebrow">Terms</span>
       <h1>Terms of Service</h1>
       <p class="hero-subtitle">The basics for using this website and working with me.</p>
@@ -17,7 +17,7 @@ import Layout from '../layouts/BaseLayout.astro';
 
   <!-- Overview -->
   <section class="content-section">
-    <div class="container container-narrow">
+    <div class="container container-narrow reveal">
       <p class="effective-date"><strong>Effective:</strong> February 2026</p>
 
       <p>These terms apply to your use of the Ted's Voice Academy website (tedsvoiceacademy.com). By using this site, you agree to these terms. They're written to be clear and fair.</p>
@@ -66,7 +66,11 @@ import Layout from '../layouts/BaseLayout.astro';
 <style>
   /* Hero Section */
   .hero {
-    background: linear-gradient(135deg, var(--color-navy-deep) 0%, var(--color-navy-medium) 100%);
+    background:
+      url('/images/noise-texture.png') repeat,
+      linear-gradient(135deg, var(--color-navy-deep) 0%, var(--color-navy-medium) 100%);
+    background-size: 200px 200px, 100% 100%;
+    background-blend-mode: soft-light, normal;
     padding: 5rem 0 3rem;
     text-align: center;
   }

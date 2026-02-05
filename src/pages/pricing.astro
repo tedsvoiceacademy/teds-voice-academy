@@ -8,7 +8,7 @@ const pageDescription = "Transparent pricing for singing, speaking, and ensemble
 <Layout title={pageTitle} description={pageDescription}>
   <!-- Hero Section -->
   <section class="hero">
-    <div class="container">
+    <div class="container reveal">
       <span class="hero-eyebrow">Pricing & Packages</span>
       <h1>Flexible options for every voice</h1>
       <p class="hero-subhead">Whether you're building a long-term practice, preparing for a specific goal, or exploring what coaching can offer, there's a path that fits.</p>
@@ -17,7 +17,7 @@ const pageDescription = "Transparent pricing for singing, speaking, and ensemble
 
   <!-- Intro Section -->
   <section class="intro-section">
-    <div class="container">
+    <div class="container reveal">
       <p class="intro-text">Every voice is different, and so is every coaching journey. Some clients thrive with weekly lessons and consistent momentum. Others prefer focused, short-term work around a specific goal. I've designed my offerings to meet you where you are and support the kind of progress you're seeking.</p>
       <p class="session-note">All sessions are 60 minutes and fully customized to your voice and goals.</p>
     </div>
@@ -26,12 +26,12 @@ const pageDescription = "Transparent pricing for singing, speaking, and ensemble
   <!-- Singing Coaching Section -->
   <section class="pricing-section singing-section">
     <div class="container">
-      <h2 class="section-title">Singing Coaching</h2>
-      <p class="section-intro">Vocal and performance coaching for singers, typically ages 14 and up. Whether you're preparing for an audition, working through a technical challenge, or building a sustainable singing practice, these options give you the structure and flexibility to move forward.</p>
-      
-      <div class="pricing-grid">
+      <h2 class="section-title reveal">Singing Coaching</h2>
+      <p class="section-intro reveal">Vocal and performance coaching for singers, typically ages 14 and up. Whether you're preparing for an audition, working through a technical challenge, or building a sustainable singing practice, these options give you the structure and flexibility to move forward.</p>
+
+      <div class="pricing-grid reveal-stagger">
         <!-- Monthly Plan - Recommended -->
-        <div class="pricing-card recommended">
+        <div class="pricing-card recommended reveal">
           <span class="badge">Recommended</span>
           <h3>Monthly Plan</h3>
           <div class="price">$320<span>/month</span></div>
@@ -42,7 +42,7 @@ const pageDescription = "Transparent pricing for singing, speaking, and ensemble
         </div>
 
         <!-- Lesson Packages -->
-        <div class="pricing-card packages">
+        <div class="pricing-card packages reveal">
           <h3>Lesson Packages</h3>
           <p class="description">Packages offer flexibility for clients who want to prepay for a set of lessons without committing to a weekly schedule. Sessions can be scheduled as frequently as twice a week or as occasionally as every few weeks. Packages are also available as gifts.</p>
           <table class="package-table">
@@ -75,7 +75,7 @@ const pageDescription = "Transparent pricing for singing, speaking, and ensemble
         </div>
 
         <!-- Single Sessions -->
-        <div class="pricing-card single">
+        <div class="pricing-card single reveal">
           <h3>Single Sessions</h3>
           <div class="price">$100<span>/session</span></div>
           <p class="description">Single sessions work well for occasional check-ins, audition prep, or trying out a first lesson before committing to a package or plan.</p>
@@ -84,7 +84,7 @@ const pageDescription = "Transparent pricing for singing, speaking, and ensemble
       </div>
 
       <!-- Flagship Singing Series -->
-      <div class="flagship-series">
+      <div class="flagship-series reveal">
         <div class="flagship-card">
           <span class="flagship-label">Flagship Series</span>
           <h3>The Sound of Confidence</h3>
@@ -109,11 +109,11 @@ const pageDescription = "Transparent pricing for singing, speaking, and ensemble
   <!-- Speaking Coaching Section -->
   <section class="pricing-section speaking-section">
     <div class="container">
-      <h2 class="section-title">Speaking Coaching</h2>
-      <p class="section-intro">Voice and performance coaching for clear, confident, authentic communication. Speaking coaching often centers on a specific objective—an upcoming presentation, building vocal resilience, or developing executive presence.</p>
-      
+      <h2 class="section-title reveal">Speaking Coaching</h2>
+      <p class="section-intro reveal">Voice and performance coaching for clear, confident, authentic communication. Speaking coaching often centers on a specific objective—an upcoming presentation, building vocal resilience, or developing executive presence.</p>
+
       <!-- Flagship Speaking Series -->
-      <div class="flagship-series">
+      <div class="flagship-series reveal">
         <div class="flagship-card featured">
           <span class="flagship-label">Flagship Series</span>
           <h3>The Voice of Impact</h3>
@@ -135,9 +135,9 @@ const pageDescription = "Transparent pricing for singing, speaking, and ensemble
         </div>
       </div>
 
-      <div class="pricing-grid two-col">
+      <div class="pricing-grid two-col reveal-stagger">
         <!-- Lesson Packages -->
-        <div class="pricing-card packages">
+        <div class="pricing-card packages reveal">
           <h3>Lesson Packages</h3>
           <p class="description">Packages offer flexibility for speaking clients who want to continue beyond a Flagship Series or prefer an open-ended coaching relationship. Sessions can be scheduled around your availability and professional demands.</p>
           <table class="package-table">
@@ -170,7 +170,7 @@ const pageDescription = "Transparent pricing for singing, speaking, and ensemble
         </div>
 
         <!-- Single Sessions -->
-        <div class="pricing-card single">
+        <div class="pricing-card single reveal">
           <h3>Single Sessions</h3>
           <div class="price">$100<span>/session</span></div>
           <p class="description">Single sessions are available for speaking clients who prefer flexibility or want to explore the work before committing to a series or package.</p>
@@ -183,11 +183,11 @@ const pageDescription = "Transparent pricing for singing, speaking, and ensemble
   <!-- Hybrid Coaching Section -->
   <section class="pricing-section hybrid-section">
     <div class="container">
-      <h2 class="section-title">For Voices That Do Both</h2>
-      <p class="section-intro">Some voices don't fit neatly into "singing" or "speaking." If you're a worship leader, educator, coach, singer-songwriter, or anyone who uses your voice across multiple contexts, this track is designed for you.</p>
-      
+      <h2 class="section-title reveal">For Voices That Do Both</h2>
+      <p class="section-intro reveal">Some voices don't fit neatly into "singing" or "speaking." If you're a worship leader, educator, coach, singer-songwriter, or anyone who uses your voice across multiple contexts, this track is designed for you.</p>
+
       <!-- Flagship Hybrid Series -->
-      <div class="flagship-series">
+      <div class="flagship-series reveal">
         <div class="flagship-card">
           <span class="flagship-label">Flagship Series</span>
           <h3>Singers Who Speak, Speakers Who Sing</h3>
@@ -212,10 +212,10 @@ const pageDescription = "Transparent pricing for singing, speaking, and ensemble
   <!-- Ensemble Coaching Section -->
   <section class="pricing-section ensemble-section">
     <div class="container">
-      <h2 class="section-title">Ensemble Coaching</h2>
-      <p class="section-intro">Vocal and performance coaching for groups seeking unity, efficiency, and expressive sound. I work with barbershop quartets, contemporary a cappella groups, community choruses, and ensembles of all kinds.</p>
-      
-      <div class="custom-engagement">
+      <h2 class="section-title reveal">Ensemble Coaching</h2>
+      <p class="section-intro reveal">Vocal and performance coaching for groups seeking unity, efficiency, and expressive sound. I work with barbershop quartets, contemporary a cappella groups, community choruses, and ensembles of all kinds.</p>
+
+      <div class="custom-engagement reveal">
         <h3>Custom Engagements</h3>
         <p class="description">Ensemble coaching is tailored to your group's size, goals, and timeline. Options include one-time sessions, sectional intensives, show preparation, and multi-day retreat formats.</p>
         <p class="description">Each session is customized to your ensemble's priorities: tuning, vowel matching, performance delivery, interpretation, or stage presence. Both in-person and virtual options are available.</p>
@@ -235,15 +235,15 @@ const pageDescription = "Transparent pricing for singing, speaking, and ensemble
   <!-- Gift Certificates Section -->
   <section class="gift-section">
     <div class="container">
-      <h2 class="section-title">Gift Certificates</h2>
-      <p class="description">Gift certificates are available in any amount and can be applied toward any coaching service—singing lessons, speaking sessions, ensemble work, or Flagship Series tracks. A thoughtful gift for the singer or speaker in your life.</p>
+      <h2 class="section-title reveal">Gift Certificates</h2>
+      <p class="description reveal">Gift certificates are available in any amount and can be applied toward any coaching service—singing lessons, speaking sessions, ensemble work, or Flagship Series tracks. A thoughtful gift for the singer or speaker in your life.</p>
       <a href="/contact" class="cta-button secondary">Purchase a Gift Certificate</a>
     </div>
   </section>
 
   <!-- CTA Section -->
   <section class="cta-section">
-    <div class="container">
+    <div class="container reveal">
       <h2>Ready to get started?</h2>
       <p>The first step is a conversation. Tell me a bit about your goals, and we'll find the right fit together.</p>
       <a href="/contact" class="cta-button">Book a Free Discovery Call</a>
@@ -255,7 +255,11 @@ const pageDescription = "Transparent pricing for singing, speaking, and ensemble
 <style>
   /* Hero Section */
   .hero {
-    background: linear-gradient(135deg, var(--color-navy-deep) 0%, var(--color-navy-medium) 100%);
+    background:
+      url('/images/noise-texture.png') repeat,
+      linear-gradient(135deg, var(--color-navy-deep) 0%, var(--color-navy-medium) 100%);
+    background-size: 200px 200px, 100% 100%;
+    background-blend-mode: soft-light, normal;
     color: var(--color-white);
     padding: 5rem 2rem 4rem;
     text-align: center;
@@ -492,7 +496,11 @@ const pageDescription = "Transparent pricing for singing, speaking, and ensemble
   }
 
   .flagship-card {
-    background: linear-gradient(135deg, var(--color-navy-deep) 0%, var(--color-navy-medium) 100%);
+    background:
+      url('/images/noise-texture.png') repeat,
+      linear-gradient(135deg, var(--color-navy-deep) 0%, var(--color-navy-medium) 100%);
+    background-size: 200px 200px, 100% 100%;
+    background-blend-mode: soft-light, normal;
     color: var(--color-white);
     border-radius: 16px;
     padding: 2.5rem;
@@ -678,7 +686,11 @@ const pageDescription = "Transparent pricing for singing, speaking, and ensemble
   /* CTA Section */
   .cta-section {
     padding: 5rem 2rem;
-    background: linear-gradient(135deg, var(--color-navy-deep) 0%, var(--color-navy-medium) 100%);
+    background:
+      url('/images/noise-texture.png') repeat,
+      linear-gradient(135deg, var(--color-navy-deep) 0%, var(--color-navy-medium) 100%);
+    background-size: 200px 200px, 100% 100%;
+    background-blend-mode: soft-light, normal;
     color: var(--color-white);
     text-align: center;
   }

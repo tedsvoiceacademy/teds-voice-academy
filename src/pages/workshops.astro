@@ -8,7 +8,7 @@ import Layout from '../layouts/BaseLayout.astro';
 >
   <!-- Hero Section -->
   <section class="hero">
-    <div class="container">
+    <div class="container reveal">
       <span class="hero-eyebrow">Workshops & Presentations</span>
       <h1>Teaching Voice from the Inside Out</h1>
       <p class="hero-subtitle">Interactive workshops that help singers and speakers understand how the voice actually works — so they can use it with greater confidence, clarity, and purpose.</p>
@@ -19,7 +19,7 @@ import Layout from '../layouts/BaseLayout.astro';
 
   <!-- AVF Workshop Series Section -->
   <section class="avf-series-section">
-    <div class="container container-narrow">
+    <div class="container container-narrow reveal">
       <h2>The AVF Workshop Series</h2>
       <p>This is my signature educational offering — a live, in-person workshop series grounded in the Adaptive Voice Framework (AVF).</p>
       <p>The series begins with a shared session for all participants, then continues in two focused paths: one for singers, one for speakers. Each path includes three workshops total (including the shared first session), with each session lasting two hours.</p>
@@ -42,13 +42,13 @@ import Layout from '../layouts/BaseLayout.astro';
   <!-- Bring the Series / Public Dates -->
   <section class="series-details-section">
     <div class="container">
-      <div class="details-grid">
-        <div class="detail-card">
+      <div class="details-grid reveal-stagger">
+        <div class="detail-card reveal">
           <h3>Bring the Series to Your Organization</h3>
           <p>The AVF Workshop Series can be delivered as a private experience for your group, retreat, or event. I'll work with you to adapt the format to your needs while maintaining the core learning arc.</p>
           <a href="#workshop-inquiry" class="btn btn-primary">Inquire About a Private Series</a>
         </div>
-        <div class="detail-card">
+        <div class="detail-card reveal">
           <h3>Public Workshop Dates</h3>
           <p>I'll be announcing public workshop dates soon. If you'd like to be notified when registration opens, let me know.</p>
           <a href="/contact" class="btn btn-secondary">Join the Interest List</a>
@@ -59,7 +59,7 @@ import Layout from '../layouts/BaseLayout.astro';
 
   <!-- Conference Sessions Section -->
   <section class="conference-section">
-    <div class="container container-narrow">
+    <div class="container container-narrow reveal">
       <h2>Conference Sessions & Vocal Education Events</h2>
       <p>I'm available for invited teaching at conferences, harmony schools, and vocal education events. Past and current contexts include events like Harmony College Northwest, Harmony University, and professional voice conferences.</p>
 
@@ -79,11 +79,11 @@ import Layout from '../layouts/BaseLayout.astro';
   <!-- Custom Workshops Section -->
   <section class="custom-section">
     <div class="container">
-      <h2>Custom Workshops for Groups & Teams</h2>
-      <p class="section-intro">Looking to bring voice education to your chorus, quartet, team, or organization? I design custom workshops tailored to your group's focus and goals.</p>
+      <h2 class="reveal">Custom Workshops for Groups & Teams</h2>
+      <p class="section-intro reveal">Looking to bring voice education to your chorus, quartet, team, or organization? I design custom workshops tailored to your group's focus and goals.</p>
 
-      <div class="custom-grid">
-        <div class="custom-card">
+      <div class="custom-grid reveal-stagger">
+        <div class="custom-card reveal">
           <h3>For singers and ensembles:</h3>
           <ul>
             <li>Building a strong foundation: breath, tone, unity, and healthy singing habits</li>
@@ -98,7 +98,7 @@ import Layout from '../layouts/BaseLayout.astro';
           </ul>
         </div>
 
-        <div class="custom-card">
+        <div class="custom-card reveal">
           <h3>For speakers and professional teams:</h3>
           <ul>
             <li>Communication style awareness featuring the PASS Profile</li>
@@ -121,7 +121,7 @@ import Layout from '../layouts/BaseLayout.astro';
   <section id="workshop-inquiry" class="inquiry-section">
     <div class="container">
       <div class="inquiry-grid">
-        <div class="inquiry-form-column">
+        <div class="inquiry-form-column reveal-left">
           <h2>Let's Talk About Your Event</h2>
           <p class="inquiry-intro">Whether you're planning a conference session, a choir retreat, or a team development experience, I'd enjoy hearing what you have in mind.</p>
 
@@ -215,7 +215,7 @@ import Layout from '../layouts/BaseLayout.astro';
           </form>
         </div>
 
-        <div class="inquiry-info-column">
+        <div class="inquiry-info-column reveal-right">
           <div class="info-card">
             <h3>What happens next</h3>
             <p>After you submit this form:</p>
@@ -246,7 +246,11 @@ import Layout from '../layouts/BaseLayout.astro';
 <style>
   /* Hero Section */
   .hero {
-    background: linear-gradient(135deg, var(--color-navy-deep) 0%, var(--color-navy-medium) 100%);
+    background:
+      url('/images/noise-texture.png') repeat,
+      linear-gradient(135deg, var(--color-navy-deep) 0%, var(--color-navy-medium) 100%);
+    background-size: 200px 200px, 100% 100%;
+    background-blend-mode: soft-light, normal;
     padding: 5rem 0 4rem;
     text-align: center;
   }
@@ -420,7 +424,11 @@ import Layout from '../layouts/BaseLayout.astro';
 
   /* Conference Section */
   .conference-section {
-    background: linear-gradient(135deg, var(--color-navy-deep) 0%, var(--color-navy-medium) 100%);
+    background:
+      url('/images/noise-texture.png') repeat,
+      linear-gradient(135deg, var(--color-navy-deep) 0%, var(--color-navy-medium) 100%);
+    background-size: 200px 200px, 100% 100%;
+    background-blend-mode: soft-light, normal;
     padding: 4rem 0;
     color: var(--color-cream);
   }
@@ -686,7 +694,11 @@ import Layout from '../layouts/BaseLayout.astro';
 
   /* Accent Card */
   .info-card-accent {
-    background: linear-gradient(135deg, var(--color-navy-deep) 0%, var(--color-navy-medium) 100%);
+    background:
+      url('/images/noise-texture.png') repeat,
+      linear-gradient(135deg, var(--color-navy-deep) 0%, var(--color-navy-medium) 100%);
+    background-size: 200px 200px, 100% 100%;
+    background-blend-mode: soft-light, normal;
   }
 
   .info-card-accent h3 {
