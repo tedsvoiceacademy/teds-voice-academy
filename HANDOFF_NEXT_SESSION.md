@@ -33,7 +33,7 @@ This applies to everything — quick fixes, visual changes, SEO tweaks, all of i
 
 ### Ready to Implement Next
 
-1. **Hero H1 sizing** — Ted approved this for session 8 but we ran out of time. Current: `clamp(2rem, 4vw + 1rem, 3rem)` (32px-48px). Need to show Ted 2-3 larger size options for comparison. Quick CSS change once decided.
+1. ~~**Hero eyebrow sizing**~~ — **DONE (Session 9).** "MASTER YOUR VOICE" eyebrow bumped from `1rem` (16px) to `1.25rem` (20px). H1 left unchanged. CLAUDE.md hero pattern updated to match.
 
 2. **GA4 + Google Search Console + Looker Studio setup** — Ted approved GA4 (free) + Google Search Console + Looker Studio for a free weekly "TVA Website Weekly Performance Overview" email report. Needs implementation.
 

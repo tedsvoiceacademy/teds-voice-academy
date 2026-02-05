@@ -109,7 +109,7 @@ This website has THREE brand color schemes. Do NOT collapse them:
 ```css
 .hero-eyebrow {
   display: block;
-  font-size: 1rem;
+  font-size: 1.25rem;
   font-weight: 600;
   text-transform: uppercase;
   letter-spacing: 0.15em;

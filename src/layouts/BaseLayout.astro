@@ -81,6 +81,15 @@ const fullTitle = title === siteName ? title : `${title} | ${siteName}`;
   <!-- Generator -->
   <meta name="generator" content={Astro.generator} />
 
+  <!-- Google Analytics (GA4) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-ZDX6WPT6CZ"></script>
+  <script is:inline>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-ZDX6WPT6CZ');
+  </script>
+
   <!-- LocalBusiness Structured Data (JSON-LD) -->
   <script type="application/ld+json" set:html={JSON.stringify({
     "@context": "https://schema.org",

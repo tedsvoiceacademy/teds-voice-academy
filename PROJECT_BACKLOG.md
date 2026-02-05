@@ -20,7 +20,7 @@ This is the living project list for the TVA website. Items move between tiers as
 
 These items have been discussed and approved by Ted. They're ready to go when session time allows.
 
-- [ ] **Hero H1 sizing** — Ted wants to see larger options. Current: `clamp(2rem, 4vw + 1rem, 3rem)` (32px-48px). Show 2-3 size comparisons. Quick CSS change once decided.
+- [x] **Hero eyebrow sizing** — "MASTER YOUR VOICE" bumped from `1rem` to `1.25rem` (16px→20px). H1 unchanged. (Session 9)
 - [ ] **GA4 + Google Search Console + Looker Studio** — Ted approved. Free analytics stack with weekly "TVA Website Weekly Performance Overview" email report via Looker Studio.
 
 ---
