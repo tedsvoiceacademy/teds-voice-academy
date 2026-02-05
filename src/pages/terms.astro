@@ -1,0 +1,159 @@
+---
+import Layout from '../layouts/BaseLayout.astro';
+---
+
+<Layout
+  title="Terms of Service"
+  description="Terms of service for Ted's Voice Academy website and coaching services in Lacey, WA."
+>
+  <!-- Hero Section -->
+  <section class="hero">
+    <div class="container">
+      <span class="hero-eyebrow">Terms</span>
+      <h1>Terms of Service</h1>
+      <p class="hero-subtitle">The basics for using this website and working with me.</p>
+    </div>
+  </section>
+
+  <!-- Overview -->
+  <section class="content-section">
+    <div class="container container-narrow">
+      <p class="effective-date"><strong>Effective:</strong> February 2026</p>
+
+      <p>These terms apply to your use of the Ted's Voice Academy website (tedsvoiceacademy.com). By using this site, you agree to these terms. They're written to be clear and fair.</p>
+
+      <h2>About This Site</h2>
+      <p>This website provides information about voice coaching services offered by Ted Chamberlain through Ted's Voice Academy in Lacey, Washington. The content here — including articles, tips, and educational material — is for informational purposes.</p>
+
+      <h2>Coaching Services</h2>
+      <p>Voice coaching sessions, pricing, availability, and terms are discussed directly between you and me. Submitting a contact form or inquiry is not a commitment to purchase services — it's simply the start of a conversation.</p>
+      <p>Specific terms for lesson packages, cancellation policies, and scheduling are provided when you begin coaching and may be updated from time to time.</p>
+
+      <h2>PASS Profile Assessment</h2>
+      <p>The PASS Profile assessment is a separate product available at <a href="https://pass.tedsvoiceacademy.com">pass.tedsvoiceacademy.com</a>. It has its own terms of service and purchase agreement presented at the time of purchase.</p>
+
+      <h2>Website Content</h2>
+      <p>I work hard to keep the information on this site accurate and current. However, voice coaching is personal and individual — what works for one person may not apply to another. The content here is educational, not a substitute for professional medical advice.</p>
+      <p>If you're experiencing vocal pain, persistent hoarseness, or other medical symptoms, please consult a medical professional.</p>
+
+      <h2>Intellectual Property</h2>
+      <p>The content on this site — including text, images, logos, the Adaptive Voice Framework, and PASS Profile materials — is the property of Ted Chamberlain and Ted's Voice Academy. You're welcome to share links to any page, but please don't copy or reproduce content without permission.</p>
+
+      <h2>External Links</h2>
+      <p>This site links to external websites (Amazon, social media, etc.) for your convenience. I'm not responsible for the content, privacy practices, or availability of those sites.</p>
+
+      <h2>Forms and Communication</h2>
+      <p>When you submit a form on this site, I'll use your information to respond to your inquiry. I aim to reply within 24-48 hours. See my <a href="/privacy">Privacy Policy</a> for details on how I handle your information.</p>
+
+      <h2>Limitation of Liability</h2>
+      <p>I provide this website and its content in good faith. I'm not liable for any damages arising from your use of this site or reliance on its content. Voice coaching results vary based on individual factors including practice, physical health, and personal goals.</p>
+
+      <h2>Changes to These Terms</h2>
+      <p>I may update these terms as needed. Changes take effect when posted on this page. Continued use of the site after changes means you accept the updated terms.</p>
+
+      <h2>Contact</h2>
+      <p>Questions about these terms? Reach out:</p>
+      <p>
+        <strong>Ted Chamberlain</strong><br />
+        Ted's Voice Academy<br />
+        <a href="mailto:ted@tedsvoiceacademy.com">ted@tedsvoiceacademy.com</a><br />
+        <a href="tel:+12534142267">(253) 414-2267</a>
+      </p>
+    </div>
+  </section>
+</Layout>
+
+<style>
+  /* Hero Section */
+  .hero {
+    background: linear-gradient(135deg, var(--color-navy-deep) 0%, var(--color-navy-medium) 100%);
+    padding: 5rem 0 3rem;
+    text-align: center;
+  }
+
+  .hero-eyebrow {
+    display: block;
+    font-size: 1rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.15em;
+    color: var(--color-gold-bright);
+    margin-bottom: 0.75rem;
+  }
+
+  .hero h1 {
+    font-family: var(--font-heading);
+    font-size: clamp(2rem, 4vw + 1rem, 3rem);
+    font-weight: 700;
+    color: var(--color-white);
+    margin: 0 0 1rem 0;
+    line-height: 1.2;
+  }
+
+  .hero-subtitle {
+    font-size: 1.125rem;
+    color: var(--color-cream);
+    max-width: 600px;
+    margin: 0 auto;
+    line-height: 1.6;
+  }
+
+  /* Container Narrow */
+  .container-narrow {
+    max-width: 800px;
+    margin: 0 auto;
+  }
+
+  /* Content Section */
+  .content-section {
+    background: var(--color-white);
+    padding: 4rem 0;
+  }
+
+  .effective-date {
+    font-size: 0.9375rem;
+    color: var(--color-charcoal);
+    margin-bottom: 2rem;
+    opacity: 0.7;
+  }
+
+  .content-section p {
+    color: var(--color-charcoal);
+    line-height: 1.8;
+    font-size: 1.0625rem;
+    margin-bottom: 1.25rem;
+  }
+
+  .content-section h2 {
+    font-family: var(--font-heading);
+    font-size: clamp(1.25rem, 2vw + 0.5rem, 1.75rem);
+    font-weight: 700;
+    color: var(--color-navy-deep);
+    margin: 2.5rem 0 1rem;
+    padding-bottom: 0.5rem;
+    border-bottom: 2px solid var(--color-gold-bright);
+  }
+
+  .content-section a {
+    color: var(--color-navy-deep);
+    font-weight: 600;
+    text-decoration: underline;
+    text-decoration-color: var(--color-gold-bright);
+    text-underline-offset: 2px;
+  }
+
+  .content-section a:hover {
+    color: var(--color-gold-bright);
+  }
+
+  /* Mobile */
+  @media (max-width: 768px) {
+    .hero {
+      padding: 3.5rem 0 2.5rem;
+    }
+
+    .content-section {
+      padding: 3rem 0;
+    }
+  }
+</style>

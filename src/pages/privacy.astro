@@ -1,0 +1,193 @@
+---
+import Layout from '../layouts/BaseLayout.astro';
+---
+
+<Layout
+  title="Privacy Policy"
+  description="How Ted's Voice Academy handles your information. Simple, straightforward, and respectful of your privacy."
+>
+  <!-- Hero Section -->
+  <section class="hero">
+    <div class="container">
+      <span class="hero-eyebrow">Privacy</span>
+      <h1>Privacy Policy</h1>
+      <p class="hero-subtitle">How I handle your information — simply and respectfully.</p>
+    </div>
+  </section>
+
+  <!-- Overview -->
+  <section class="content-section">
+    <div class="container container-narrow">
+      <p class="effective-date"><strong>Effective:</strong> February 2026</p>
+
+      <p>I take your privacy seriously. This policy explains what information I collect through this website, how I use it, and your choices about it. I keep things simple because your trust matters to me.</p>
+
+      <h2>What I Collect</h2>
+
+      <h3>Information you provide directly</h3>
+      <p>When you fill out a form on this site — the contact form, workshop inquiry, or newsletter signup — you provide information like your name, email address, and phone number. I only collect what the form asks for, and you always see exactly what you're submitting.</p>
+
+      <h3>Information collected automatically</h3>
+      <p>Like most websites, this site's hosting provider (Netlify) may collect basic technical information such as your IP address, browser type, and pages visited. This is standard web server operation and is not used for tracking or advertising.</p>
+
+      <h2>How I Use Your Information</h2>
+      <ul>
+        <li><strong>To respond to you</strong> — When you submit a contact or workshop inquiry form, I use your information to get back to you.</li>
+        <li><strong>To send updates</strong> — If you sign up for the newsletter, I'll send you voice tips and updates. You can unsubscribe anytime.</li>
+        <li><strong>To improve the site</strong> — Basic usage data helps me understand which pages are helpful so I can make the site better.</li>
+      </ul>
+
+      <h2>What I Don't Do</h2>
+      <ul>
+        <li>I don't sell your information to anyone.</li>
+        <li>I don't share your information with third parties for marketing.</li>
+        <li>I don't use tracking cookies for advertising.</li>
+        <li>I don't collect more information than needed.</li>
+      </ul>
+
+      <h2>Third-Party Services</h2>
+      <p>This site uses a few services to function:</p>
+      <ul>
+        <li><strong>Netlify</strong> — hosts this website and processes form submissions.</li>
+        <li><strong>Google Fonts</strong> — provides the typefaces used on the site.</li>
+        <li><strong>Rapid Reviews</strong> — displays customer reviews on the homepage.</li>
+      </ul>
+      <p>Each of these services has its own privacy policy. I choose services that respect user privacy.</p>
+
+      <h2>Your Choices</h2>
+      <p>You can contact me at any time to:</p>
+      <ul>
+        <li>Ask what information I have about you</li>
+        <li>Request that I delete your information</li>
+        <li>Unsubscribe from any communications</li>
+      </ul>
+
+      <h2>Contact</h2>
+      <p>If you have questions about this privacy policy or how I handle your information, reach out:</p>
+      <p>
+        <strong>Ted Chamberlain</strong><br />
+        Ted's Voice Academy<br />
+        <a href="mailto:ted@tedsvoiceacademy.com">ted@tedsvoiceacademy.com</a><br />
+        <a href="tel:+12534142267">(253) 414-2267</a>
+      </p>
+
+      <h2>Updates</h2>
+      <p>I may update this policy as the site evolves. Any changes will be posted on this page with a revised date.</p>
+    </div>
+  </section>
+</Layout>
+
+<style>
+  /* Hero Section */
+  .hero {
+    background: linear-gradient(135deg, var(--color-navy-deep) 0%, var(--color-navy-medium) 100%);
+    padding: 5rem 0 3rem;
+    text-align: center;
+  }
+
+  .hero-eyebrow {
+    display: block;
+    font-size: 1rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.15em;
+    color: var(--color-gold-bright);
+    margin-bottom: 0.75rem;
+  }
+
+  .hero h1 {
+    font-family: var(--font-heading);
+    font-size: clamp(2rem, 4vw + 1rem, 3rem);
+    font-weight: 700;
+    color: var(--color-white);
+    margin: 0 0 1rem 0;
+    line-height: 1.2;
+  }
+
+  .hero-subtitle {
+    font-size: 1.125rem;
+    color: var(--color-cream);
+    max-width: 600px;
+    margin: 0 auto;
+    line-height: 1.6;
+  }
+
+  /* Container Narrow */
+  .container-narrow {
+    max-width: 800px;
+    margin: 0 auto;
+  }
+
+  /* Content Section */
+  .content-section {
+    background: var(--color-white);
+    padding: 4rem 0;
+  }
+
+  .effective-date {
+    font-size: 0.9375rem;
+    color: var(--color-charcoal);
+    margin-bottom: 2rem;
+    opacity: 0.7;
+  }
+
+  .content-section p {
+    color: var(--color-charcoal);
+    line-height: 1.8;
+    font-size: 1.0625rem;
+    margin-bottom: 1.25rem;
+  }
+
+  .content-section h2 {
+    font-family: var(--font-heading);
+    font-size: clamp(1.25rem, 2vw + 0.5rem, 1.75rem);
+    font-weight: 700;
+    color: var(--color-navy-deep);
+    margin: 2.5rem 0 1rem;
+    padding-bottom: 0.5rem;
+    border-bottom: 2px solid var(--color-gold-bright);
+  }
+
+  .content-section h3 {
+    font-family: var(--font-heading);
+    font-size: 1.125rem;
+    font-weight: 700;
+    color: var(--color-navy-deep);
+    margin: 1.5rem 0 0.75rem;
+  }
+
+  .content-section ul {
+    color: var(--color-charcoal);
+    line-height: 1.8;
+    font-size: 1.0625rem;
+    margin-bottom: 1.25rem;
+    padding-left: 1.5rem;
+  }
+
+  .content-section li {
+    margin-bottom: 0.5rem;
+  }
+
+  .content-section a {
+    color: var(--color-navy-deep);
+    font-weight: 600;
+    text-decoration: underline;
+    text-decoration-color: var(--color-gold-bright);
+    text-underline-offset: 2px;
+  }
+
+  .content-section a:hover {
+    color: var(--color-gold-bright);
+  }
+
+  /* Mobile */
+  @media (max-width: 768px) {
+    .hero {
+      padding: 3.5rem 0 2.5rem;
+    }
+
+    .content-section {
+      padding: 3rem 0;
+    }
+  }
+</style>
