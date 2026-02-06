@@ -80,10 +80,17 @@ import SectionDivider from '../components/SectionDivider.astro';
   <!-- Hero Section -->
   <section class="hero">
     <div class="container">
-      <span class="hero-eyebrow">Singing Lessons</span>
-      <h1>Build a voice you can trust</h1>
-      <p class="hero-subtitle">Vocal and performance coaching for singers, typically ages 14 and up.</p>
-      <a href="/contact" class="btn btn-primary">Book a Free Discovery Call</a>
+      <div class="hero-grid">
+        <div class="hero-content">
+          <span class="hero-eyebrow">Singing Lessons</span>
+          <h1>Build a voice you can trust</h1>
+          <p class="hero-subtitle">Vocal and performance coaching for singers, typically ages 14 and up.</p>
+          <a href="/contact" class="btn btn-primary">Book a Free Discovery Call</a>
+        </div>
+        <div class="hero-image">
+          <img src="/images/hero-singing-lesson.webp" alt="Ted coaching a singing student in the studio" class="hero-photo" />
+        </div>
+      </div>
     </div>
   </section>
 
@@ -253,12 +260,25 @@ import SectionDivider from '../components/SectionDivider.astro';
     background-size: 200px 200px, 100% 100%;
     background-blend-mode: soft-light, normal;
     padding: 5rem 0 4rem;
-    text-align: center;
+  }
+
+  .hero-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 2.5rem;
+    align-items: center;
+  }
+
+  @media (min-width: 900px) {
+    .hero-grid {
+      grid-template-columns: 1.1fr 1fr;
+      gap: 4rem;
+    }
   }
 
   .hero-eyebrow {
     display: block;
-    font-size: 1rem;
+    font-size: 1.25rem;
     font-weight: 600;
     text-transform: uppercase;
     letter-spacing: 0.15em;
@@ -268,17 +288,52 @@ import SectionDivider from '../components/SectionDivider.astro';
 
   .hero h1 {
     font-family: var(--font-heading);
-    font-size: clamp(2.25rem, 5vw + 1rem, 3.5rem);
+    font-size: clamp(2rem, 4vw + 1rem, 3rem);
     font-weight: 700;
     color: var(--color-white);
     margin: 0 0 1rem;
+    line-height: 1.2;
   }
 
   .hero-subtitle {
     font-size: 1.25rem;
     color: var(--color-cream);
     max-width: 600px;
-    margin: 0 auto 2rem;
+    margin-bottom: 2rem;
+  }
+
+  .hero-image {
+    display: flex;
+    justify-content: center;
+  }
+
+  .hero-photo {
+    width: 100%;
+    max-width: 500px;
+    height: auto;
+    border-radius: 12px;
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.3);
+    animation: heroPhotoIn 1.2s ease-out 0.5s both;
+  }
+
+  .hero-content {
+    animation: heroTextIn 1s ease-out 0.2s both;
+  }
+
+  @keyframes heroTextIn {
+    from { opacity: 0; transform: translateX(-30px); }
+    to { opacity: 1; transform: translateX(0); }
+  }
+
+  @keyframes heroPhotoIn {
+    from { opacity: 0; transform: scale(1.06); }
+    to { opacity: 1; transform: scale(1); }
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    .hero-content, .hero-photo {
+      animation: none;
+    }
   }
 
   /* Buttons */
