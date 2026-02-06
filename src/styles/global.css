@@ -669,6 +669,8 @@ button {
 
 .icon-inline {
   display: inline-block;
+  width: 20px;
+  height: 20px;
   vertical-align: -0.15em;
   margin-right: 0.5rem;
   flex-shrink: 0;
