@@ -78,7 +78,7 @@ Ted said he'll get to blog content "in the next few days."
 ## Tier 2 — Important Additions
 
 - [x] **Organizations & affiliations on About page** — DONE (Session 10, commit `3c54db0`). 8 org logos + 2 ensemble logos. "Proudly connected with" section. All linked to websites. Person schema updated with 10 memberOf entries.
-- [ ] **Coaching & performance photos** — Photos of Ted coaching, students performing, etc. throughout the site.
+- [x] **Coaching & performance photos (partial)** — DONE (Session 14). 3 photos placed: Ted teaching (workshops), award ceremony (about), chorus directing (ensembles). 45+ unused photos remain in public/images/.
 - [ ] **Restructure Vocal Health Hub** — Minimize "coming soon" placeholders. Reorganize to lead with completed content.
 - [ ] **Add Review/AggregateRating schema** — When Google reviews exist, add to LocalBusiness markup. Star ratings in search results dramatically increase CTR.
 - [ ] **Event schema on Workshops page** — When specific workshops are scheduled, add Event structured data.
@@ -97,7 +97,7 @@ Ted explicitly said he wants to get to these as soon as possible. These need col
 - [x] **Scroll-triggered animations** — DONE (Session 11, commits `3f1042e`, `6aae45e`). `.reveal`, `.reveal-left`, `.reveal-right`, `.reveal-stagger` CSS utilities + IntersectionObserver. Applied to all 16 pages. `prefers-reduced-motion` respected.
 - [x] **Hero entrance animations** — DONE (Session 11, commits `e8cee80`, `6aae45e`). CSS keyframe animations on pages with hero photos: Homepage, About, AVF, PASS Profile.
 - [x] **Section dividers** — DONE (Session 13). `SectionDivider.astro` component with wave/curve/angle variants + gold accent stroke. Deployed on 12 pages at dark↔light section transitions.
-- [ ] **Iconography** — Lucide inline SVG icons on card titles and section headings.
+- [x] **Iconography** — DONE (Session 14). 64 Lucide inline SVG icons across 10 pages. `.icon-inline` CSS utility in global.css.
 - [ ] **Hero parallax effect** — CSS-only parallax on hero photos. Disabled on mobile. Ted interested but deferred.
 - [ ] **Varied section layouts** — Per-page layout diversity: numbered steps, alternating left-right, timelines.
 - [ ] **Digital product delivery for Vocal Fit** — Gumroad or Lemonsqueezy. Blocked until product defined.
@@ -280,6 +280,11 @@ The page structure is built. These sections have "coming soon" placeholders:
 - [x] **Internal linking strategy** — 2-3 contextual cross-links added to 10 pages (Feb 5, 2026 — Session 13)
 - [x] **Publish/update dates** — `<time>` tags with `.page-date` CSS on 10 content pages (Feb 5, 2026 — Session 13)
 
+- [x] **.gitignore** — Created for node_modules, dist, .astro, .DS_Store (Feb 6, 2026 — Session 14)
+- [x] **Card grid symmetry fixes** — Fixed orphan cards on 6 pages (singing, index, ensembles, pricing, blog, pass-profile). Replaced auto-fit with explicit column counts. Added "Show preparation" 6th card to ensembles (Feb 6, 2026 — Session 14)
+- [x] **Photo placement** — Processed 3 photos to WebP, placed on workshops (Ted teaching), about (award ceremony), ensembles (chorus directing) (Feb 6, 2026 — Session 14)
+- [x] **Lucide iconography** — 64 inline SVG icons across 10 pages. `.icon-inline` CSS utility. Icons on card H3 headings using currentColor stroke (Feb 6, 2026 — Session 14)
+
 ---
 
-*Last updated: February 5, 2026 (Session 13)*
+*Last updated: February 6, 2026 (Session 14)*

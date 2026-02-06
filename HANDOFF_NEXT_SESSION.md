@@ -1,7 +1,7 @@
 # SESSION HANDOFF — Ted's Voice Academy
 
-**Date written:** February 5, 2026
-**Written by:** Claude Code session 13 (Opus 4)
+**Date written:** February 6, 2026
+**Written by:** Claude Code session 14 (Opus 4)
 **Site status: LAUNCHED & LIVE** at https://tedsvoiceacademy.com
 
 ---
@@ -31,65 +31,53 @@ This applies to everything — quick fixes, visual changes, SEO tweaks, all of i
 
 ---
 
-## What Session 13 Accomplished
+## What Session 14 Accomplished
 
-### Dead `.has-grain` CSS Cleanup
-- Removed ~35 lines of unused CSS from `global.css` (`.has-grain`, `.has-grain::before`, `.has-grain > *`, `.has-grain--light::before`)
-- Removed `has-grain` class from HTML in 5 pages: index, singing, speaking, about, ensembles
+### .gitignore
+- Created `.gitignore` at project root (node_modules/, dist/, .astro/, .DS_Store, nul)
+- Repo previously had no .gitignore — build artifacts showed as untracked
 
-### OG Default Image
-- Created `scripts/generate-og-image.mjs` using sharp library
-- Generated `public/images/og-default.jpg` (1200x630px, navy gradient + grain + gold text)
-- Updated `BaseLayout.astro` with absolute URL logic for og:image and twitter:image meta tags
-- `siteUrl` constant + `ogImageAbsolute` variable ensure proper social platform compatibility
+### Card Grid Symmetry Fixes (6 pages)
+- **singing.astro** `.cards-grid`: Changed `auto-fit minmax(280px)` to `repeat(2, 1fr)` for clean 2x2
+- **index.astro** `.paths-grid`: Changed `auto-fit minmax(300px)` to `repeat(3, 1fr)` for 3 inline
+- **ensembles.astro** `.help-grid`: Added 6th card "Show preparation" + changed to `repeat(3, 1fr)` for 2x3; tablet breakpoint at 768px to 2-col; 480px to 1-col
+- **pricing.astro** `.pricing-grid`: Changed `auto-fit minmax(300px)` to `repeat(3, 1fr)`
+- **blog.astro** `.categories-grid`: Changed to `repeat(3, 1fr)` at desktop; 768px to 2-col with last card centered; 480px to 1-col
+- **pass-profile.astro** `.future-items`: Changed to `repeat(3, 1fr)` + added 600px mobile breakpoint to 1-col
 
-### Answer Capsule Summaries (GEO)
-- Added `.capsule-section` and `.answer-capsule` CSS to `global.css`
-- 2-3 sentence summaries on 7 pages: Singing, Speaking, Ensembles, Pricing, Workshops, AVF, PASS Profile
-- Each capsule provides a concise answer AI search engines can quote directly
+### Photo Processing & Placement (3 photos)
+- Converted 3 raw photos to WebP (800px max width, quality 80) using sharp:
+  - `ted-workshop-teaching.webp` (13 KB) — Ted in studio, gesturing while teaching
+  - `ted-entrepreneur-award.webp` (271 KB) — Ted holding Entrepreneur of Year plaque at Saint Martin's
+  - `ted-directing-chorus-stage.webp` (48 KB) — Ted directing men's chorus on stage
+- **workshops.astro**: Added teaching photo in AVF Workshop Series section with text+image grid
+- **about.astro**: Added award ceremony photo as 3rd item in awards-grid; changed grid to 3-col
+- **ensembles.astro**: Added chorus directing photo as second showcase image before "How It Works"
 
-### SectionDivider Component + Site-Wide Rollout
-- Created `src/components/SectionDivider.astro` with wave/curve/angle SVG variants
-- **Key design:** Each divider has two SVG paths — a fill path (smooth color transition) + a gold accent stroke (`var(--color-gold-bright)`, 50% opacity, `vector-effect: non-scaling-stroke`)
-- Props: `variant`, `topColor`, `bottomColor`, `flip`, `height` (default 48px)
-- Deployed on **12 pages** at dark-to-light section transitions
-- Pages with dividers: index (4), about (4), singing (3), speaking (3), ensembles (4), avf (5), pass-profile (3), pricing (2), workshops (3), blog (3), vocal-health (2), faq (2)
-- Pages without dividers: contact, success, terms, privacy (no meaningful dark-to-light transitions)
-
-### About Page Beliefs Grid Fix
-- Changed `.beliefs-grid` from `repeat(auto-fit, minmax(280px, 1fr))` to `repeat(2, 1fr)`
-- Fixes 3+1 orphan card layout to clean 2x2 grid at desktop
-- Mobile still stacks to 1 column via existing breakpoint
-
-### Self-Hosted Fonts
-- Downloaded 15 WOFF2 files to `public/fonts/`:
-  - Inter: 400, 500, 600, 700
-  - Playfair Display: 400, 500, 600, 700
-  - Cinzel: 400, 600, 700 (AVF sub-brand)
-  - Cormorant Garamond: 400, 600, 400i, 500i (AVF sub-brand)
-- Added `@font-face` declarations to top of `global.css` (Inter + Playfair Display)
-- Added `@font-face` declarations to `avf.astro` scoped styles (Cinzel + Cormorant Garamond)
-- Removed all 3 Google Fonts link tags from `BaseLayout.astro` (preconnect + stylesheet)
-- Removed Google Fonts `@import` from `avf.astro`
-- **Zero external font requests** — all fonts served from own domain
-
-### Internal Cross-Linking
-- Added 2-3 contextual inline links to 10 pages
-- Links wrap existing text phrases — no new copy added
-- Key link patterns: service pages link to /avf and /vocal-health, about beliefs link to /avf + /singing, pricing sections link to respective service pages, workshops links to /avf + /pass-profile
-
-### Publish/Update Dates
-- Added `.page-date` CSS utility to `global.css`
-- Added `<time datetime="2026-02-05">` tags with "Last updated" text to 10 content pages
-- Placed inside capsule sections (7 pages) or first content section (3 pages)
+### Lucide Iconography (64 icons across 10 pages)
+- Added `.icon-inline` CSS utility to `global.css`
+- Inline SVG icons (20x20, stroke-based, `aria-hidden="true"`, `currentColor`) on card H3 headings
+- **Icon counts by page:**
+  - singing.astro: 7 (CirclePlay, TrendingUp, Award, Heart, MessageCircle, Clock, MapPin)
+  - speaking.astro: 10 (Target, AlertCircle, Shield, MessageCircle, Globe, Sliders, etc.)
+  - ensembles.astro: 12 (Music, Users, Mic, BookOpen, Heart, Award, Sliders, Zap, Layers, Shield, RotateCw)
+  - about.astro: 4 (Heart, Fingerprint, Lightbulb, Users)
+  - avf.astro: 4 (Music, BookOpen, Mic, Heart)
+  - pass-profile.astro: 10 (Target, Brain, Users, Clock, Layers, RotateCw, Mic, Zap, Fingerprint, Lightbulb)
+  - pricing.astro: 4 (Calendar, Package, Zap, Users)
+  - workshops.astro: 2 (Music, Mic)
+  - blog.astro: 5 (Heart, Sliders, Zap, Brain, Briefcase)
+  - vocal-health.astro: 6 (Home, AlertCircle, Leaf, Zap, Activity, BookOpen)
 
 ---
 
 ## Decisions Made This Session
 
-1. **Section divider approach:** Gold accent stroke on SVG transitions (50% opacity) — visible but subtle
-2. **Font self-hosting scope:** Included AVF sub-brand fonts (Cinzel + Cormorant Garamond), not just the main brand fonts
-3. **Divider placement:** Only at dark-to-light transitions — not between white and off-white sections
+1. **Card symmetry approach:** Explicit column counts (`repeat(N, 1fr)`) instead of `auto-fit` to eliminate orphan cards at all viewport widths
+2. **Ensembles 5 to 6 cards:** Added "Show preparation" to make a clean 3x2 grid instead of 3+2 orphan
+3. **Photo selection:** Chose 3 from 48 unused based on content relevance + page needs (workshops had zero photos, about needed ceremony shot, ensembles needed group performance shot)
+4. **Icon approach:** Inline SVG (no library dependency), `currentColor` inheritance, decorative-only (`aria-hidden`)
+5. **Blog 5-card layout:** 3-col at desktop, 2-col at tablet with 5th card centered full-width, 1-col at mobile
 
 ---
 
@@ -106,20 +94,19 @@ This applies to everything — quick fixes, visual changes, SEO tweaks, all of i
 
 ### Tier 2:
 - [ ] **Per-page OG images** — Branded social sharing images for individual pages
-- [ ] **Coaching & performance photos** — Waiting on Ted
 - [ ] **Restructure Vocal Health Hub** — Minimize "coming soon" placeholders
 
 ### Tier 3 — Visual Polish:
-- [ ] **Iconography** — Lucide inline SVG icons on card titles and section headings
 - [ ] **Hero parallax effect** — CSS-only parallax on hero photos
 - [ ] **Varied section layouts** — Numbered steps, alternating left-right, timelines
 
 ### Discussion Items:
-- Hero photos for pages that currently lack them (Pricing, Contact, Workshops, Vocal Health, Blog, FAQ)
+- Hero photos for pages that currently lack them (Pricing, Contact, Vocal Health, FAQ)
+- Remaining unused photos (45+ in public/images/) — consider cleanup or placement
 
 ---
 
-## Verified Current State (as of Session 13)
+## Verified Current State (as of Session 14)
 
 ### Git & Deploy
 - **GitHub repo:** https://github.com/tedsvoiceacademy/teds-voice-academy
@@ -127,7 +114,8 @@ This applies to everything — quick fixes, visual changes, SEO tweaks, all of i
 - **Live site:** https://tedsvoiceacademy.com
 - **Netlify URL:** https://deft-baklava-b2eb2e.netlify.app/
 - **Build status:** Clean — 16 pages built, zero errors
-- **Note:** Session 13 changes are NOT yet committed. All changes are local only.
+- **Latest commit:** `d6105fb` — Session 14 changes pushed to origin/main
+- **No uncommitted changes** (beyond untracked raw source photos and docs/)
 
 ### What's Live (16 Pages)
 Homepage, Contact, Singing, Speaking, Ensembles, About, Pricing, AVF, PASS Profile, Workshops, Vocal Health Hub, Blog, FAQ, Success, Privacy, Terms
@@ -141,28 +129,36 @@ Homepage, Contact, Singing, Speaking, Ensembles, About, Pricing, AVF, PASS Profi
 - **Email notifications:** Configured to ted@tedsvoiceacademy.com for all forms
 
 ### Key Files Modified This Session
-- `src/styles/global.css` — @font-face declarations, .page-date utility, removed .has-grain, added .capsule-section + .answer-capsule
-- `src/layouts/BaseLayout.astro` — Removed Google Fonts CDN, added absolute OG URL logic
-- `src/components/SectionDivider.astro` — NEW component (wave/curve/angle + gold stroke)
-- `scripts/generate-og-image.mjs` — NEW script for OG image generation
-- `public/images/og-default.jpg` — NEW generated OG image
-- `public/fonts/` — NEW directory with 15 WOFF2 font files
-- `src/pages/avf.astro` — Self-hosted AVF fonts, SectionDividers, capsule, date, internal links
-- All 16 page files modified (various combinations of: has-grain removal, capsules, dividers, dates, internal links)
+- `src/styles/global.css` — Added `.icon-inline` utility class
+- `.gitignore` — NEW file
+- `public/images/ted-workshop-teaching.webp` — NEW (13 KB)
+- `public/images/ted-entrepreneur-award.webp` — NEW (271 KB)
+- `public/images/ted-directing-chorus-stage.webp` — NEW (48 KB)
+- 12 page files modified: singing, speaking, ensembles, about, avf, pass-profile, pricing, workshops, blog, vocal-health, index (grid fixes + icons + photos)
 
 ### Images in public/images/
-Same as Session 11, plus:
-- `og-default.jpg` — 1200x630px branded social sharing image
-
-### Fonts in public/fonts/ (NEW)
-- `inter-400.woff2`, `inter-500.woff2`, `inter-600.woff2`, `inter-700.woff2`
-- `playfair-display-400.woff2`, `playfair-display-500.woff2`, `playfair-display-600.woff2`, `playfair-display-700.woff2`
-- `cinzel-400.woff2`, `cinzel-600.woff2`, `cinzel-700.woff2`
-- `cormorant-garamond-400.woff2`, `cormorant-garamond-600.woff2`, `cormorant-garamond-400i.woff2`, `cormorant-garamond-500i.woff2`
+Same as Session 13, plus:
+- `ted-workshop-teaching.webp` — Ted teaching in studio (from "8 Ted Portrait Teaching.png")
+- `ted-entrepreneur-award.webp` — Ted at award ceremony (from "Ted Lacey Entrepreneur OTY 2025 - 1.jpg")
+- `ted-directing-chorus-stage.webp` — Ted directing chorus on stage (from Facebook photo)
 
 ---
 
 ## Technical Architecture Notes
+
+### Icon System (Session 14)
+- **Approach:** Inline SVG icons, no external library or component
+- **CSS:** `.icon-inline` in global.css — `display: inline-block`, `vertical-align: -0.15em`, `margin-right: 0.5rem`
+- **Size:** 20x20px with 24x24 viewBox (Lucide standard)
+- **Color:** `stroke="currentColor"` — inherits text color automatically (white in dark sections, navy in light sections)
+- **Accessibility:** `aria-hidden="true"` — icons are decorative, text carries meaning
+- **Total:** 64 icons across 10 pages
+
+### Card Grid System (Session 14)
+- **Previous approach:** `repeat(auto-fit, minmax(Xpx, 1fr))` — caused orphan cards at intermediate widths
+- **New approach:** Explicit column counts with responsive breakpoints
+- **Pattern:** `repeat(N, 1fr)` at desktop, `repeat(2, 1fr)` at tablet, `1fr` at mobile
+- **Breakpoints:** 768px (tablet) and 480px (small mobile) where needed
 
 ### Font System (Session 13)
 - **Main brand:** Inter (body) + Playfair Display (headings) — `@font-face` in global.css
