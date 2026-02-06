@@ -284,7 +284,10 @@ The page structure is built. These sections have "coming soon" placeholders:
 - [x] **Card grid symmetry fixes** — Fixed orphan cards on 6 pages (singing, index, ensembles, pricing, blog, pass-profile). Replaced auto-fit with explicit column counts. Added "Show preparation" 6th card to ensembles (Feb 6, 2026 — Session 14)
 - [x] **Photo placement** — Processed 3 photos to WebP, placed on workshops (Ted teaching), about (award ceremony), ensembles (chorus directing) (Feb 6, 2026 — Session 14)
 - [x] **Lucide iconography** — 64 inline SVG icons across 10 pages. `.icon-inline` CSS utility. Icons on card H3 headings using currentColor stroke (Feb 6, 2026 — Session 14)
+- [x] **Icon visibility fix** — Added explicit CSS width/height to `.icon-inline` to override global SVG reset. All 64 icons now render correctly (Feb 6, 2026 — Session 14b)
+- [x] **Additional grid symmetry fixes** — speaking `.how-grid`, pass-profile `.differentiators` + `.applications-grid` changed to `repeat(2, 1fr)`. Pricing `.two-col` got explicit 2-col override (Feb 6, 2026 — Session 14b)
+- [x] **Trademark symbols** — Added ™ to PASS Profile, AVF, Adaptive Voice Framework across 14 files (38 instances). Key headings + first body mention per page (Feb 6, 2026 — Session 14b)
 
 ---
 
-*Last updated: February 6, 2026 (Session 14)*
+*Last updated: February 6, 2026 (Session 14b)*

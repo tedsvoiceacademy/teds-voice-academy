@@ -1,7 +1,7 @@
 # SESSION HANDOFF — Ted's Voice Academy
 
 **Date written:** February 6, 2026
-**Written by:** Claude Code session 14 (Opus 4)
+**Written by:** Claude Code session 14b (Opus 4)
 **Site status: LAUNCHED & LIVE** at https://tedsvoiceacademy.com
 
 ---
@@ -31,43 +31,41 @@ This applies to everything — quick fixes, visual changes, SEO tweaks, all of i
 
 ---
 
-## What Session 14 Accomplished
+## What Session 14 + 14b Accomplished
 
-### .gitignore
+### .gitignore (Session 14)
 - Created `.gitignore` at project root (node_modules/, dist/, .astro/, .DS_Store, nul)
-- Repo previously had no .gitignore — build artifacts showed as untracked
 
-### Card Grid Symmetry Fixes (6 pages)
-- **singing.astro** `.cards-grid`: Changed `auto-fit minmax(280px)` to `repeat(2, 1fr)` for clean 2x2
-- **index.astro** `.paths-grid`: Changed `auto-fit minmax(300px)` to `repeat(3, 1fr)` for 3 inline
-- **ensembles.astro** `.help-grid`: Added 6th card "Show preparation" + changed to `repeat(3, 1fr)` for 2x3; tablet breakpoint at 768px to 2-col; 480px to 1-col
-- **pricing.astro** `.pricing-grid`: Changed `auto-fit minmax(300px)` to `repeat(3, 1fr)`
-- **blog.astro** `.categories-grid`: Changed to `repeat(3, 1fr)` at desktop; 768px to 2-col with last card centered; 480px to 1-col
-- **pass-profile.astro** `.future-items`: Changed to `repeat(3, 1fr)` + added 600px mobile breakpoint to 1-col
+### Card Grid Symmetry Fixes (9 grids across 7 pages — Sessions 14 + 14b)
+- **singing.astro** `.cards-grid`: `auto-fit` → `repeat(2, 1fr)` for 2x2
+- **index.astro** `.paths-grid`: `auto-fit` → `repeat(3, 1fr)` for 3 inline
+- **ensembles.astro** `.help-grid`: Added 6th card + `repeat(3, 1fr)` for 2x3
+- **pricing.astro** `.pricing-grid`: `auto-fit` → `repeat(3, 1fr)`
+- **pricing.astro** `.pricing-grid.two-col`: Added `repeat(2, 1fr)` override (was inheriting 3-col from parent, leaving column 3 empty) **(Session 14b fix)**
+- **blog.astro** `.categories-grid`: `repeat(3, 1fr)` + responsive breakpoints
+- **pass-profile.astro** `.future-items`: `repeat(3, 1fr)` + 600px mobile breakpoint
+- **pass-profile.astro** `.differentiators`: `auto-fit` → `repeat(2, 1fr)` for 2x2 **(Session 14b fix)**
+- **pass-profile.astro** `.applications-grid`: `auto-fit` → `repeat(2, 1fr)` for 2x2 **(Session 14b fix)**
+- **speaking.astro** `.how-grid`: `auto-fit` → `repeat(2, 1fr)` for 2x2 **(Session 14b fix)**
 
-### Photo Processing & Placement (3 photos)
-- Converted 3 raw photos to WebP (800px max width, quality 80) using sharp:
-  - `ted-workshop-teaching.webp` (13 KB) — Ted in studio, gesturing while teaching
-  - `ted-entrepreneur-award.webp` (271 KB) — Ted holding Entrepreneur of Year plaque at Saint Martin's
-  - `ted-directing-chorus-stage.webp` (48 KB) — Ted directing men's chorus on stage
-- **workshops.astro**: Added teaching photo in AVF Workshop Series section with text+image grid
-- **about.astro**: Added award ceremony photo as 3rd item in awards-grid; changed grid to 3-col
-- **ensembles.astro**: Added chorus directing photo as second showcase image before "How It Works"
+### Icon Visibility Fix (Session 14b)
+- `.icon-inline` in global.css now has explicit `width: 20px; height: 20px;`
+- Root cause: global SVG reset (`svg { display: block; height: auto; }`) was overriding HTML width/height attributes on the inline SVGs
+- This fix makes all 64 icons visible
 
-### Lucide Iconography (64 icons across 10 pages)
-- Added `.icon-inline` CSS utility to `global.css`
+### Trademark Symbols (Session 14b — 38 instances across 14 files)
+- Added ™ to PASS Profile, AVF, and Adaptive Voice Framework
+- Strategy: Key headings + first body mention per page
+- NOT added to: URLs, CSS classes, alt text, schema/JSON-LD, email addresses
+- Files: pass-profile, avf, singing, speaking, pricing, workshops, about, index, faq, terms, vocal-health, contact, Header, Footer
+
+### Photo Processing & Placement (3 photos — Session 14)
+- `ted-workshop-teaching.webp` (13 KB), `ted-entrepreneur-award.webp` (271 KB), `ted-directing-chorus-stage.webp` (48 KB)
+- Placed on workshops, about, ensembles pages
+
+### Lucide Iconography (64 icons across 10 pages — Session 14)
+- `.icon-inline` CSS utility in global.css
 - Inline SVG icons (20x20, stroke-based, `aria-hidden="true"`, `currentColor`) on card H3 headings
-- **Icon counts by page:**
-  - singing.astro: 7 (CirclePlay, TrendingUp, Award, Heart, MessageCircle, Clock, MapPin)
-  - speaking.astro: 10 (Target, AlertCircle, Shield, MessageCircle, Globe, Sliders, etc.)
-  - ensembles.astro: 12 (Music, Users, Mic, BookOpen, Heart, Award, Sliders, Zap, Layers, Shield, RotateCw)
-  - about.astro: 4 (Heart, Fingerprint, Lightbulb, Users)
-  - avf.astro: 4 (Music, BookOpen, Mic, Heart)
-  - pass-profile.astro: 10 (Target, Brain, Users, Clock, Layers, RotateCw, Mic, Zap, Fingerprint, Lightbulb)
-  - pricing.astro: 4 (Calendar, Package, Zap, Users)
-  - workshops.astro: 2 (Music, Mic)
-  - blog.astro: 5 (Heart, Sliders, Zap, Brain, Briefcase)
-  - vocal-health.astro: 6 (Home, AlertCircle, Leaf, Zap, Activity, BookOpen)
 
 ---
 
@@ -78,6 +76,7 @@ This applies to everything — quick fixes, visual changes, SEO tweaks, all of i
 3. **Photo selection:** Chose 3 from 48 unused based on content relevance + page needs (workshops had zero photos, about needed ceremony shot, ensembles needed group performance shot)
 4. **Icon approach:** Inline SVG (no library dependency), `currentColor` inheritance, decorative-only (`aria-hidden`)
 5. **Blog 5-card layout:** 3-col at desktop, 2-col at tablet with 5th card centered full-width, 1-col at mobile
+6. **Trademark strategy (Session 14b):** ™ on key headings (H1/H2/H3) + first body text mention per page. Not on every instance — that would clutter the reading experience
 
 ---
 
@@ -114,7 +113,8 @@ This applies to everything — quick fixes, visual changes, SEO tweaks, all of i
 - **Live site:** https://tedsvoiceacademy.com
 - **Netlify URL:** https://deft-baklava-b2eb2e.netlify.app/
 - **Build status:** Clean — 16 pages built, zero errors
-- **Latest commit:** `d6105fb` — Session 14 changes pushed to origin/main
+- **Latest commit:** `366a679` — Session 14b: icon fix, grid symmetry, pricing alignment, TM symbols
+- **Previous commit:** `d6105fb` — Session 14: icons, card symmetry, photos, .gitignore
 - **No uncommitted changes** (beyond untracked raw source photos and docs/)
 
 ### What's Live (16 Pages)
@@ -129,12 +129,13 @@ Homepage, Contact, Singing, Speaking, Ensembles, About, Pricing, AVF, PASS Profi
 - **Email notifications:** Configured to ted@tedsvoiceacademy.com for all forms
 
 ### Key Files Modified This Session
-- `src/styles/global.css` — Added `.icon-inline` utility class
+- `src/styles/global.css` — `.icon-inline` utility class + width/height fix
 - `.gitignore` — NEW file
 - `public/images/ted-workshop-teaching.webp` — NEW (13 KB)
 - `public/images/ted-entrepreneur-award.webp` — NEW (271 KB)
 - `public/images/ted-directing-chorus-stage.webp` — NEW (48 KB)
-- 12 page files modified: singing, speaking, ensembles, about, avf, pass-profile, pricing, workshops, blog, vocal-health, index (grid fixes + icons + photos)
+- 14 page files modified: all pages got either grid fixes, icons, photos, or TM symbols
+- `src/components/Header.astro` + `src/components/Footer.astro` — TM in nav labels
 
 ### Images in public/images/
 Same as Session 13, plus:
@@ -146,13 +147,21 @@ Same as Session 13, plus:
 
 ## Technical Architecture Notes
 
-### Icon System (Session 14)
+### Icon System (Session 14 + 14b fix)
 - **Approach:** Inline SVG icons, no external library or component
-- **CSS:** `.icon-inline` in global.css — `display: inline-block`, `vertical-align: -0.15em`, `margin-right: 0.5rem`
+- **CSS:** `.icon-inline` in global.css — `display: inline-block`, `width: 20px`, `height: 20px`, `vertical-align: -0.15em`, `margin-right: 0.5rem`
+- **IMPORTANT:** The explicit CSS `width` and `height` are required because the global SVG reset (`svg { display: block; height: auto; }`) overrides HTML attributes. Without CSS dimensions, icons are invisible.
 - **Size:** 20x20px with 24x24 viewBox (Lucide standard)
 - **Color:** `stroke="currentColor"` — inherits text color automatically (white in dark sections, navy in light sections)
 - **Accessibility:** `aria-hidden="true"` — icons are decorative, text carries meaning
 - **Total:** 64 icons across 10 pages
+
+### Trademark System (Session 14b)
+- **Terms:** PASS Profile™, AVF™, Adaptive Voice Framework™
+- **Strategy:** ™ on key headings (H1/H2/H3) + first body mention per page
+- **Excluded from:** URLs/hrefs, CSS class names, alt text, JSON-LD schema, email addresses
+- **Coverage:** 38 instances across 14 files (12 pages + Header + Footer)
+- **Legal pages:** terms.astro has ™ in IP section — important for trademark protection
 
 ### Card Grid System (Session 14)
 - **Previous approach:** `repeat(auto-fit, minmax(Xpx, 1fr))` — caused orphan cards at intermediate widths
