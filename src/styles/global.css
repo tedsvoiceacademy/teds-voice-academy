@@ -664,6 +664,17 @@ button {
 }
 
 /* --------------------------------------------------------------------------
+   ICON UTILITY — Inline SVG icons (Lucide-style)
+   -------------------------------------------------------------------------- */
+
+.icon-inline {
+  display: inline-block;
+  vertical-align: -0.15em;
+  margin-right: 0.5rem;
+  flex-shrink: 0;
+}
+
+/* --------------------------------------------------------------------------
    VISUAL POLISH — Scroll-Triggered Reveal Animations
    Add class="reveal" to any element for fade-up on scroll.
    Variants: .reveal-left, .reveal-right for directional slides.

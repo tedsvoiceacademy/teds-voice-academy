@@ -31,8 +31,15 @@ import SectionDivider from '../components/SectionDivider.astro';
   <!-- AVF Workshop Series Section -->
   <section class="avf-series-section">
     <div class="container container-narrow reveal">
-      <h2>The AVF Workshop Series</h2>
-      <p>This is my signature educational offering — a live, in-person workshop series grounded in the <a href="/avf">Adaptive Voice Framework (AVF)</a>.</p>
+      <div class="series-intro-grid">
+        <div class="series-intro-text">
+          <h2>The AVF Workshop Series</h2>
+          <p>This is my signature educational offering — a live, in-person workshop series grounded in the <a href="/avf">Adaptive Voice Framework (AVF)</a>.</p>
+        </div>
+        <div class="series-intro-image">
+          <img src="/images/ted-workshop-teaching.webp" alt="Ted Chamberlain teaching in his voice studio, gesturing while explaining vocal technique" class="series-photo" />
+        </div>
+      </div>
       <p>The series begins with a shared session for all participants, then continues in two focused paths: one for singers, one for speakers. Each path includes three workshops total (including the shared first session), with each session lasting two hours.</p>
 
       <h3>What participants experience:</h3>
@@ -99,7 +106,7 @@ import SectionDivider from '../components/SectionDivider.astro';
 
       <div class="custom-grid reveal-stagger">
         <div class="custom-card reveal">
-          <h3>For singers and ensembles:</h3>
+          <h3><svg class="icon-inline" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 18V5l12-2v13"/><circle cx="6" cy="18" r="3"/><circle cx="18" cy="16" r="3"/></svg>For singers and ensembles:</h3>
           <ul>
             <li>Building a strong foundation: breath, tone, unity, and healthy singing habits</li>
             <li>Understanding the voice as a balanced, responsive system</li>
@@ -114,7 +121,7 @@ import SectionDivider from '../components/SectionDivider.astro';
         </div>
 
         <div class="custom-card reveal">
-          <h3>For speakers and professional teams:</h3>
+          <h3><svg class="icon-inline" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 2a3 3 0 0 0-3 3v7a3 3 0 0 0 6 0V5a3 3 0 0 0-3-3Z"/><path d="M19 10v2a7 7 0 0 1-14 0v-2"/><line x1="12" x2="12" y1="19" y2="22"/></svg>For speakers and professional teams:</h3>
           <ul>
             <li>Communication style awareness featuring the PASS Profile</li>
             <li>Developing your own speaking style and personal voice brand</li>
@@ -348,6 +355,27 @@ import SectionDivider from '../components/SectionDivider.astro';
   .container-narrow {
     max-width: 800px;
     margin: 0 auto;
+  }
+
+  /* Series Intro Grid */
+  .series-intro-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 2rem;
+    margin-bottom: 2rem;
+  }
+
+  @media (min-width: 768px) {
+    .series-intro-grid {
+      grid-template-columns: 1.2fr 0.8fr;
+      align-items: start;
+    }
+  }
+
+  .series-photo {
+    width: 100%;
+    border-radius: 12px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
   }
 
   /* AVF Series Section */
