@@ -1,5 +1,6 @@
 ---
 import Layout from '../layouts/BaseLayout.astro';
+import SectionDivider from '../components/SectionDivider.astro';
 ---
 
 <Layout title="PASS Profile | Know Your Communication Style" description="Discover your unique communication fingerprint with the PASS Profile assessment. Understand how you connect, lead, and collaborate. Used by teams worldwide.">
@@ -59,6 +60,16 @@ import Layout from '../layouts/BaseLayout.astro';
       <div class="hero-visual">
         <img src="/images/pass-bubble.webp" alt="PASS Profile 3.0 - fingerprint inside speech bubble" class="hero-fingerprint" />
       </div>
+    </div>
+  </section>
+
+  <SectionDivider variant="wave" topColor="var(--color-pass-teal)" bottomColor="var(--color-white)" />
+
+  <!-- Answer Capsule — structured summary for AI search engines -->
+  <section class="capsule-section">
+    <div class="container">
+      <p class="answer-capsule">PASS Profile is a professional communication assessment that measures 40 traits across six domains to create your unique communication fingerprint. Developed by Ted Chamberlain, it uses scenario-based questions to reveal your authentic communication style. The assessment costs $49.99 and delivers a 46-48 page personalized PDF report.</p>
+      <p class="page-date">Last updated: <time datetime="2026-02-05">February 5, 2026</time></p>
     </div>
   </section>
 
@@ -133,6 +144,8 @@ import Layout from '../layouts/BaseLayout.astro';
     </div>
   </section>
 
+  <SectionDivider variant="curve" topColor="var(--color-white)" bottomColor="var(--color-pass-teal)" />
+
   <!-- How It's Different -->
   <section class="different">
     <div class="container">
@@ -159,6 +172,8 @@ import Layout from '../layouts/BaseLayout.astro';
       </div>
     </div>
   </section>
+
+  <SectionDivider variant="wave" topColor="var(--color-pass-teal)" bottomColor="var(--color-cream)" />
 
   <!-- What You'll Receive -->
   <section class="receive">
@@ -309,7 +324,7 @@ import Layout from '../layouts/BaseLayout.astro';
       <h2>How I Use PASS Profile in Coaching</h2>
       <p>PASS Profile started as a tool I developed for my speaking clients. When someone comes to me wanting to communicate with more clarity, confidence, or presence, understanding their natural communication patterns gives us a powerful starting point.</p>
       <p>The assessment reveals what they're already doing well — so we can build on it. It shows where their style naturally excels — so they can seek out those situations. And it highlights opportunities to expand their range when certain contexts call for a different approach.</p>
-      <p>For professionals working on communication presence and impact, the assessment is often transformative. For clients focused on vocal technique, projection, or accent work, we may take a different path. Every client's needs are unique.</p>
+      <p>For professionals working on communication presence and impact, the assessment is often transformative. For clients focused on <a href="/avf">vocal technique</a>, projection, or accent work, we may take a different path. Every client's needs are unique.</p>
     </div>
   </section>
 
@@ -338,7 +353,7 @@ import Layout from '../layouts/BaseLayout.astro';
         </div>
       </div>
       
-      <p class="contact-note">If you're interested in using PASS Profile in your organization or practice, reach out. I'm actively developing team workshops and organizational applications.</p>
+      <p class="contact-note">If you're interested in using PASS Profile in your organization or practice, reach out. I'm actively developing <a href="/workshops">team workshops</a> and organizational applications.</p>
     </div>
   </section>
 

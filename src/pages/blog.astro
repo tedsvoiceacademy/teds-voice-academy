@@ -1,5 +1,6 @@
 ---
 import Layout from '../layouts/BaseLayout.astro';
+import SectionDivider from '../components/SectionDivider.astro';
 ---
 
 <Layout
@@ -15,9 +16,12 @@ import Layout from '../layouts/BaseLayout.astro';
     </div>
   </section>
 
+  <SectionDivider variant="wave" topColor="var(--color-navy-deep)" bottomColor="var(--color-off-white)" />
+
   <!-- Intro Section -->
   <section class="intro-section">
     <div class="container container-narrow reveal">
+      <p class="page-date">Last updated: <time datetime="2026-02-05">February 5, 2026</time></p>
       <p class="intro-text">I write about the voice because I find it endlessly fascinating — and because I believe everyone deserves access to good information about how their instrument works.</p>
       <p class="intro-text">These posts explore technique, health, performance, and the mindset behind vocal development. Some are deep dives. Some are quick tips. All of them come from four decades of teaching, performing, and learning alongside my students.</p>
       <p class="intro-text">Browse by topic below, or scroll through the latest posts.</p>
@@ -30,12 +34,12 @@ import Layout from '../layouts/BaseLayout.astro';
       <h2 class="reveal">Explore by Topic</h2>
       <div class="categories-grid reveal-stagger">
         <div class="category-card reveal">
-          <h3>Vocal Health</h3>
+          <h3><a href="/vocal-health">Vocal Health</a></h3>
           <p>Taking care of your voice so it can take care of you. Warm-ups, recovery, hydration, and what to do when something feels off.</p>
         </div>
         <div class="category-card reveal">
           <h3>Technique</h3>
-          <p>The how and why behind breath support, resonance, phonation, and articulation — the physical foundations of good singing and speaking.</p>
+          <p>The how and why behind <a href="/avf">breath support, resonance, phonation, and articulation</a> — the physical foundations of good singing and speaking.</p>
         </div>
         <div class="category-card reveal">
           <h3>Performance</h3>
@@ -47,7 +51,7 @@ import Layout from '../layouts/BaseLayout.astro';
         </div>
         <div class="category-card reveal">
           <h3>For Professionals</h3>
-          <p>Guidance for those building a career with their voice — teaching, industry insights, and communication in business contexts.</p>
+          <p>Guidance for those building a career with their voice — teaching, industry insights, and <a href="/speaking">communication in business contexts</a>.</p>
         </div>
       </div>
     </div>
@@ -63,6 +67,8 @@ import Layout from '../layouts/BaseLayout.astro';
       </div>
     </div>
   </section>
+
+  <SectionDivider variant="curve" topColor="var(--color-off-white)" bottomColor="var(--color-navy-deep)" />
 
   <!-- Newsletter Section -->
   <section class="newsletter-section">
@@ -89,6 +95,8 @@ import Layout from '../layouts/BaseLayout.astro';
       </form>
     </div>
   </section>
+
+  <SectionDivider variant="wave" topColor="var(--color-navy-deep)" bottomColor="var(--color-white)" />
 
   <!-- CTA Section -->
   <section class="cta-section">
@@ -233,12 +241,32 @@ import Layout from '../layouts/BaseLayout.astro';
     margin: 0 0 0.75rem;
   }
 
+  .category-card h3 a {
+    color: inherit;
+    text-decoration: none;
+  }
+
+  .category-card h3 a:hover {
+    color: var(--color-gold-bright);
+  }
+
   .category-card p {
     color: var(--color-charcoal);
     line-height: 1.6;
     margin: 0;
     font-size: 0.9375rem;
     flex-grow: 1;
+  }
+
+  .category-card p a {
+    color: inherit;
+    text-decoration: underline;
+    text-decoration-color: var(--color-gold-bright);
+    text-underline-offset: 2px;
+  }
+
+  .category-card p a:hover {
+    color: var(--color-gold-bright);
   }
 
   /* Posts Section */

@@ -1,5 +1,6 @@
 ---
 import Layout from '../layouts/BaseLayout.astro';
+import SectionDivider from '../components/SectionDivider.astro';
 ---
 
 <Layout
@@ -91,12 +92,22 @@ import Layout from '../layouts/BaseLayout.astro';
   </Fragment>
 
   <!-- Hero Section -->
-  <section class="hero has-grain">
+  <section class="hero">
     <div class="container">
       <span class="hero-eyebrow">Ensemble Coaching</span>
       <h1>Find your voice together</h1>
       <p class="hero-subtitle">Vocal and performance coaching for groups seeking unity, efficiency, and expressive sound.</p>
       <a href="/contact" class="btn btn-primary">Get in Touch</a>
+    </div>
+  </section>
+
+  <SectionDivider variant="wave" topColor="var(--color-navy-deep)" bottomColor="var(--color-white)" />
+
+  <!-- Answer Capsule — structured summary for AI search engines -->
+  <section class="capsule-section">
+    <div class="container">
+      <p class="answer-capsule">Ted's Voice Academy offers ensemble coaching for choirs, barbershop quartets, and a cappella groups in the Pacific Northwest and beyond. Sessions cover tuning, vowel matching, performance presence, and vocal technique. Custom engagements include single sessions, retreat formats, and competition preparation.</p>
+      <p class="page-date">Last updated: <time datetime="2026-02-05">February 5, 2026</time></p>
     </div>
   </section>
 
@@ -106,7 +117,7 @@ import Layout from '../layouts/BaseLayout.astro';
       <div class="intro-grid">
         <div class="intro-content reveal-left">
           <p class="intro-text drop-cap">
-            Strong ensemble singing starts with strong individual skills — and with a shared understanding of how voices work together. I help choirs/choruses, quartets, and other vocal groups develop tuning, unity, and authentic performance presence.
+            Strong ensemble singing starts with <a href="/singing">strong individual skills</a> — and with a shared understanding of how voices work together. I help choirs/choruses, quartets, and other vocal groups develop tuning, unity, and authentic performance presence.
           </p>
           <p class="intro-text">
             Whether you're preparing for competition, working through a specific challenge, or simply want to connect more deeply as an ensemble, I can help your group find its voice.
@@ -169,8 +180,10 @@ import Layout from '../layouts/BaseLayout.astro';
     </div>
   </section>
 
+  <SectionDivider variant="curve" topColor="var(--color-white)" bottomColor="var(--color-navy-deep)" />
+
   <!-- What I Help With Section -->
-  <section class="help-section has-grain">
+  <section class="help-section">
     <div class="container">
       <h2 class="reveal">What we work on</h2>
       <p class="section-intro reveal">Every ensemble has different needs. Here are some of the areas I address:</p>
@@ -203,6 +216,8 @@ import Layout from '../layouts/BaseLayout.astro';
       </div>
     </div>
   </section>
+
+  <SectionDivider variant="wave" topColor="var(--color-navy-deep)" bottomColor="var(--color-off-white)" />
 
   <!-- How It Works Section -->
   <section class="how-section">
@@ -246,12 +261,14 @@ import Layout from '../layouts/BaseLayout.astro';
 
       <p>We'll work on the physical and musical foundations that let voices come together freely — breath support, resonance, vowel placement, and listening skills. We'll also explore the performance side — how to connect with each other and with your audience, how to tell the story, and how to bring your authentic selves to the music.</p>
       
-      <p>I explain the "why" behind what we're doing. When your singers understand how their voices work, they can keep growing on their own. That's the goal.</p>
+      <p>I explain the "why" behind what we're doing. When your singers understand <a href="/avf">how their voices work</a>, they can keep growing on their own. That's the goal.</p>
     </div>
   </section>
 
+  <SectionDivider variant="angle" topColor="var(--color-white)" bottomColor="var(--color-navy-deep)" />
+
   <!-- CTA Section -->
-  <section class="cta-section has-grain">
+  <section class="cta-section">
     <div class="container reveal">
       <h2>Ready to elevate your ensemble?</h2>
       <p>The first step is a conversation. Tell me about your group and your goals, and I'll share how I can help.</p>

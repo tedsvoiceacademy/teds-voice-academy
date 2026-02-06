@@ -1,5 +1,6 @@
 ---
 import Layout from '../layouts/BaseLayout.astro';
+import SectionDivider from '../components/SectionDivider.astro';
 ---
 
 <Layout
@@ -39,7 +40,7 @@ import Layout from '../layouts/BaseLayout.astro';
   </Fragment>
 
   <!-- Hero Section -->
-  <section class="hero has-grain">
+  <section class="hero">
     <div class="container">
       <div class="hero-grid">
         <div class="hero-content">
@@ -53,9 +54,12 @@ import Layout from '../layouts/BaseLayout.astro';
     </div>
   </section>
 
+  <SectionDivider variant="wave" topColor="var(--color-navy-deep)" bottomColor="var(--color-off-white)" />
+
   <!-- Intro Section -->
   <section class="intro-section">
     <div class="container container-narrow reveal">
+      <p class="page-date">Last updated: <time datetime="2026-02-05">February 5, 2026</time></p>
       <p class="intro-text">
         I've been singing since I was eight years old. I started teaching in 1988. In the decades since, I've worked with thousands of singers and speakers — in classrooms, rehearsal halls, private studios, and on stages around the country.
       </p>
@@ -85,20 +89,22 @@ import Layout from '../layouts/BaseLayout.astro';
     </div>
   </section>
 
+  <SectionDivider variant="curve" topColor="var(--color-white)" bottomColor="var(--color-navy-deep)" />
+
   <!-- Philosophy Section -->
-  <section class="philosophy-section has-grain">
+  <section class="philosophy-section">
     <div class="container">
       <h2 class="reveal">What I believe about voice</h2>
       
       <div class="beliefs-grid reveal-stagger">
         <div class="belief-card reveal">
           <h3>Expression comes first</h3>
-          <p>Technique exists to serve expression — to give you the freedom to say what you mean, the way you mean it.</p>
+          <p><a href="/avf">Technique exists to serve expression</a> — to give you the freedom to say what you mean, the way you mean it.</p>
         </div>
 
         <div class="belief-card reveal">
           <h3>Every voice is unique</h3>
-          <p>You are better at being you than anyone else will ever be — and you can never be as good at being like someone else as you can at being you. My job isn't to make you sound like someone else. It's to help you sound more like yourself — with more ease, more power, and more confidence.</p>
+          <p>You are better at being you than anyone else will ever be — and you can never be as good at being like someone else as you can at being you. My job isn't to make you sound like someone else. It's to <a href="/singing">help you sound more like yourself</a> — with more ease, more power, and more confidence.</p>
         </div>
 
         <div class="belief-card reveal">
@@ -113,6 +119,8 @@ import Layout from '../layouts/BaseLayout.astro';
       </div>
     </div>
   </section>
+
+  <SectionDivider variant="wave" topColor="var(--color-navy-deep)" bottomColor="var(--color-off-white)" />
 
   <!-- Credentials Section -->
   <section class="credentials-section">
@@ -261,8 +269,10 @@ import Layout from '../layouts/BaseLayout.astro';
     </div>
   </section>
 
+  <SectionDivider variant="angle" topColor="var(--color-off-white)" bottomColor="var(--color-navy-deep)" />
+
   <!-- CTA Section -->
-  <section class="cta-section has-grain">
+  <section class="cta-section">
     <div class="container reveal">
       <h2>Let's talk</h2>
       <p>The first step is a free discovery call — a short conversation where I learn about your goals and you learn about how I work.</p>
@@ -451,7 +461,7 @@ import Layout from '../layouts/BaseLayout.astro';
 
   .beliefs-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    grid-template-columns: repeat(2, 1fr);
     gap: 1.5rem;
   }
 

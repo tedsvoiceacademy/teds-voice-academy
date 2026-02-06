@@ -1,5 +1,6 @@
 ---
 import Layout from '../layouts/BaseLayout.astro';
+import SectionDivider from '../components/SectionDivider.astro';
 ---
 
 <Layout
@@ -17,11 +18,21 @@ import Layout from '../layouts/BaseLayout.astro';
     </div>
   </section>
 
+  <SectionDivider variant="wave" topColor="var(--color-navy-deep)" bottomColor="var(--color-white)" />
+
+  <!-- Answer Capsule — structured summary for AI search engines -->
+  <section class="capsule-section">
+    <div class="container">
+      <p class="answer-capsule">Ted's Voice Academy offers interactive voice workshops for organizations, conferences, and retreats. The signature AVF Workshop Series teaches how the voice works through the Adaptive Voice Framework, with separate paths for singers and speakers. Custom workshops available for choirs, professional teams, and educational events.</p>
+      <p class="page-date">Last updated: <time datetime="2026-02-05">February 5, 2026</time></p>
+    </div>
+  </section>
+
   <!-- AVF Workshop Series Section -->
   <section class="avf-series-section">
     <div class="container container-narrow reveal">
       <h2>The AVF Workshop Series</h2>
-      <p>This is my signature educational offering — a live, in-person workshop series grounded in the Adaptive Voice Framework (AVF).</p>
+      <p>This is my signature educational offering — a live, in-person workshop series grounded in the <a href="/avf">Adaptive Voice Framework (AVF)</a>.</p>
       <p>The series begins with a shared session for all participants, then continues in two focused paths: one for singers, one for speakers. Each path includes three workshops total (including the shared first session), with each session lasting two hours.</p>
 
       <h3>What participants experience:</h3>
@@ -35,7 +46,7 @@ import Layout from '../layouts/BaseLayout.astro';
 
       <p>The series is designed with a low floor and high ceiling — accessible to beginners while remaining valuable for experienced singers and speakers.</p>
       <p>Every participant receives a copy of <em>AVF: The Adaptive Voice Framework</em> as part of the experience. The book serves as a shared reference during workshops and a resource for continued learning afterward.</p>
-      <p><strong>For speakers:</strong> The speaking path integrates the PASS Profile — my proprietary communication assessment that maps how each participant naturally communicates. This adds personalized insight and language that supports intentional, authentic speaking.</p>
+      <p><strong>For speakers:</strong> The speaking path integrates the <a href="/pass-profile">PASS Profile</a> — my proprietary communication assessment that maps how each participant naturally communicates. This adds personalized insight and language that supports intentional, authentic speaking.</p>
     </div>
   </section>
 
@@ -57,6 +68,8 @@ import Layout from '../layouts/BaseLayout.astro';
     </div>
   </section>
 
+  <SectionDivider variant="curve" topColor="var(--color-white)" bottomColor="var(--color-navy-deep)" />
+
   <!-- Conference Sessions Section -->
   <section class="conference-section">
     <div class="container container-narrow reveal">
@@ -75,6 +88,8 @@ import Layout from '../layouts/BaseLayout.astro';
       <a href="#workshop-inquiry" class="btn btn-primary">Invite Me to Your Event</a>
     </div>
   </section>
+
+  <SectionDivider variant="wave" topColor="var(--color-navy-deep)" bottomColor="var(--color-off-white)" />
 
   <!-- Custom Workshops Section -->
   <section class="custom-section">
@@ -103,7 +118,7 @@ import Layout from '../layouts/BaseLayout.astro';
           <ul>
             <li>Communication style awareness featuring the PASS Profile</li>
             <li>Developing your own speaking style and personal voice brand</li>
-            <li>Speaking with confidence and authenticity</li>
+            <li><a href="/speaking">Speaking with confidence and authenticity</a></li>
             <li>Expressive clarity for presenters and leaders</li>
             <li>Voice use in professional settings</li>
           </ul>
@@ -364,6 +379,16 @@ import Layout from '../layouts/BaseLayout.astro';
     margin-bottom: 1rem;
   }
 
+  .avf-series-section a {
+    color: var(--color-gold-bright);
+    text-decoration: none;
+    font-weight: 600;
+  }
+
+  .avf-series-section a:hover {
+    text-decoration: underline;
+  }
+
   .avf-series-section strong {
     color: var(--color-navy-deep);
   }
@@ -521,6 +546,16 @@ import Layout from '../layouts/BaseLayout.astro';
     color: var(--color-charcoal);
     line-height: 1.6;
     margin-bottom: 0.5rem;
+  }
+
+  .custom-card li a {
+    color: var(--color-gold-bright);
+    text-decoration: none;
+    font-weight: 500;
+  }
+
+  .custom-card li a:hover {
+    text-decoration: underline;
   }
 
   .custom-contexts {

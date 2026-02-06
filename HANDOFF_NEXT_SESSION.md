@@ -1,7 +1,7 @@
 # SESSION HANDOFF — Ted's Voice Academy
 
 **Date written:** February 5, 2026
-**Written by:** Claude Code session 11 (Opus 4.5)
+**Written by:** Claude Code session 13 (Opus 4)
 **Site status: LAUNCHED & LIVE** at https://tedsvoiceacademy.com
 
 ---
@@ -31,81 +31,103 @@ This applies to everything — quick fixes, visual changes, SEO tweaks, all of i
 
 ---
 
-## What Session 11 Has Accomplished
+## What Session 13 Accomplished
 
-### Grain Texture Overhaul (Commits `8be3d32` through `94f7625`)
-- **Session 10's SVG feTurbulence grain was invisible** — the `::before` pseudo-element approach doesn't render when sections use Astro's scoped `<style>` blocks
-- Generated a real PNG noise texture (`public/images/noise-texture.png`, 200x200px, ~62KB) using sharp
-- **Working approach:** Bake the noise PNG directly into each section's `background` property as a CSS multiple background layer:
-  ```css
-  background:
-    url('/images/noise-texture.png') repeat,
-    linear-gradient(135deg, var(--color-navy-deep) 0%, var(--color-navy-medium) 100%);
-  background-size: 200px 200px, 100% 100%;
-  background-blend-mode: soft-light, normal;
-  ```
-- `soft-light` is the correct blend mode — `overlay` makes dark colors invisible, `screen` is too bright
-- Grain applied to ALL dark/navy/teal sections across ALL 16 pages (including AVF teal sections and PASS dark sections)
-- The `.has-grain` class in global.css is now **dead code** — the pseudo-element approach doesn't work. Grain is applied per-page in scoped styles.
+### Dead `.has-grain` CSS Cleanup
+- Removed ~35 lines of unused CSS from `global.css` (`.has-grain`, `.has-grain::before`, `.has-grain > *`, `.has-grain--light::before`)
+- Removed `has-grain` class from HTML in 5 pages: index, singing, speaking, about, ensembles
 
-### Credentials Bar Blending (Commit `2ed057e`)
-- Credentials bar below homepage hero now flows from the hero with reversed gradient direction
-- Added thin gold hairline `border-top: 1px solid rgba(212, 168, 75, 0.15)` for subtle separation
+### OG Default Image
+- Created `scripts/generate-og-image.mjs` using sharp library
+- Generated `public/images/og-default.jpg` (1200x630px, navy gradient + grain + gold text)
+- Updated `BaseLayout.astro` with absolute URL logic for og:image and twitter:image meta tags
+- `siteUrl` constant + `ogImageAbsolute` variable ensure proper social platform compatibility
 
-### Scroll-Triggered Reveal Animations (Commit `3f1042e`, `6aae45e`)
-- Added CSS utilities to `global.css`: `.reveal` (fade-up), `.reveal-left` (slide-left), `.reveal-right` (slide-right), `.reveal-stagger` (staggered children)
-- `prefers-reduced-motion` respected for all animations
-- IntersectionObserver script in `BaseLayout.astro` (threshold: 0.15, rootMargin: '0px 0px -40px 0px')
-- Applied reveals to ALL 16 pages — headings, card grids (staggered), content sections, CTAs
+### Answer Capsule Summaries (GEO)
+- Added `.capsule-section` and `.answer-capsule` CSS to `global.css`
+- 2-3 sentence summaries on 7 pages: Singing, Speaking, Ensembles, Pricing, Workshops, AVF, PASS Profile
+- Each capsule provides a concise answer AI search engines can quote directly
 
-### Hero Entrance Animations (Commit `e8cee80`, `6aae45e`)
-- CSS keyframe animations for hero sections with photos:
-  - `heroTextIn`: slide from left, 1s ease-out, 0.2s delay
-  - `heroPhotoIn`: scale from 1.06 to 1, 1.2s ease-out, 0.5s delay
-- Applied to: Homepage, About, AVF, PASS Profile hero sections
-- `prefers-reduced-motion` disables all animations
+### SectionDivider Component + Site-Wide Rollout
+- Created `src/components/SectionDivider.astro` with wave/curve/angle SVG variants
+- **Key design:** Each divider has two SVG paths — a fill path (smooth color transition) + a gold accent stroke (`var(--color-gold-bright)`, 50% opacity, `vector-effect: non-scaling-stroke`)
+- Props: `variant`, `topColor`, `bottomColor`, `flip`, `height` (default 48px)
+- Deployed on **12 pages** at dark-to-light section transitions
+- Pages with dividers: index (4), about (4), singing (3), speaking (3), ensembles (4), avf (5), pass-profile (3), pricing (2), workshops (3), blog (3), vocal-health (2), faq (2)
+- Pages without dividers: contact, success, terms, privacy (no meaningful dark-to-light transitions)
 
-### Full Site Rollout (Commit `6aae45e`)
-- **All 15 non-homepage pages** received grain texture + scroll reveals in a single commit
-- Pages updated: singing, speaking, ensembles, about, avf, pass-profile, pricing, contact, workshops, blog, faq, vocal-health, success, terms, privacy
-- Removed dead `has-grain` class from AVF and PASS pages
-- Build verified: all 16 pages compile cleanly
+### About Page Beliefs Grid Fix
+- Changed `.beliefs-grid` from `repeat(auto-fit, minmax(280px, 1fr))` to `repeat(2, 1fr)`
+- Fixes 3+1 orphan card layout to clean 2x2 grid at desktop
+- Mobile still stacks to 1 column via existing breakpoint
+
+### Self-Hosted Fonts
+- Downloaded 15 WOFF2 files to `public/fonts/`:
+  - Inter: 400, 500, 600, 700
+  - Playfair Display: 400, 500, 600, 700
+  - Cinzel: 400, 600, 700 (AVF sub-brand)
+  - Cormorant Garamond: 400, 600, 400i, 500i (AVF sub-brand)
+- Added `@font-face` declarations to top of `global.css` (Inter + Playfair Display)
+- Added `@font-face` declarations to `avf.astro` scoped styles (Cinzel + Cormorant Garamond)
+- Removed all 3 Google Fonts link tags from `BaseLayout.astro` (preconnect + stylesheet)
+- Removed Google Fonts `@import` from `avf.astro`
+- **Zero external font requests** — all fonts served from own domain
+
+### Internal Cross-Linking
+- Added 2-3 contextual inline links to 10 pages
+- Links wrap existing text phrases — no new copy added
+- Key link patterns: service pages link to /avf and /vocal-health, about beliefs link to /avf + /singing, pricing sections link to respective service pages, workshops links to /avf + /pass-profile
+
+### Publish/Update Dates
+- Added `.page-date` CSS utility to `global.css`
+- Added `<time datetime="2026-02-05">` tags with "Last updated" text to 10 content pages
+- Placed inside capsule sections (7 pages) or first content section (3 pages)
 
 ---
 
 ## Decisions Made This Session
 
-1. **Grain intensity:** Ted approved `soft-light` blend mode (~50% softer than initial `screen` attempt)
-2. **Parallax on grain:** Rejected — draws attention to the texture itself (bad UX). Bookmarked CSS parallax for hero *photos* instead.
-3. **Hero photos on pages without them:** Ted noted "those pages look less polished" — bookmarked for future discussion (Pricing, Contact, Workshops, Vocal Health, Blog, FAQ)
-4. **Google Business Profile optimization:** Deferred to a future session. Ted got a quick rundown of what to do.
+1. **Section divider approach:** Gold accent stroke on SVG transitions (50% opacity) — visible but subtle
+2. **Font self-hosting scope:** Included AVF sub-brand fonts (Cinzel + Cormorant Garamond), not just the main brand fonts
+3. **Divider placement:** Only at dark-to-light transitions — not between white and off-white sections
 
 ---
 
 ## What's Next
 
-### Ready to Implement (approved by Ted this session):
-1. **SVG section dividers** — Create `SectionDivider.astro` component with wave/curve/angle variants
-2. **OG default image** — Design branded 1200x630px image for social sharing
-3. **Answer capsule summaries** — Add 2-3 sentence summaries at top of service pages for AI search engines
+### Tier 1 — High Value (no Ted input needed):
+- [ ] **Breadcrumb schema + visual breadcrumbs** — BreadcrumbList JSON-LD + breadcrumb navigation on interior pages
+- [ ] **Track AI referral traffic in GA4** — Custom channel grouping for ChatGPT, Perplexity, etc.
 
-### Bookmarked for Discussion:
+### Tier 1 — Needs Ted's content:
+- [ ] **Blog individual post system** — Build template/layout, routing (`/blog/[slug]`), index page
+- [ ] **Import 24 scraped blog posts** — Waiting on Ted's scraped content
+- [ ] **CMS (Decap CMS)** — Critical for Ted's independence
+
+### Tier 2:
+- [ ] **Per-page OG images** — Branded social sharing images for individual pages
+- [ ] **Coaching & performance photos** — Waiting on Ted
+- [ ] **Restructure Vocal Health Hub** — Minimize "coming soon" placeholders
+
+### Tier 3 — Visual Polish:
+- [ ] **Iconography** — Lucide inline SVG icons on card titles and section headings
+- [ ] **Hero parallax effect** — CSS-only parallax on hero photos
+- [ ] **Varied section layouts** — Numbered steps, alternating left-right, timelines
+
+### Discussion Items:
 - Hero photos for pages that currently lack them (Pricing, Contact, Workshops, Vocal Health, Blog, FAQ)
-- CSS parallax effect on hero photos (subtle, disabled on mobile)
-- Clean up dead `.has-grain` pseudo-element code in global.css
 
 ---
 
-## Verified Current State (as of Session 11)
+## Verified Current State (as of Session 13)
 
 ### Git & Deploy
 - **GitHub repo:** https://github.com/tedsvoiceacademy/teds-voice-academy
-- **Latest pushed commit:** `6aae45e` on `main` branch
-- **Session 11 commits:** `8be3d32`, `dfefce0`, `674cb5d`, `94f7625`, `2ed057e`, `3f1042e`, `e8cee80`, `6aae45e`
 - **Local project path:** `H:\OneDrive\AI Projects\TVA AI Projects\TVA Webstie 4.0\teds-voice-academy-main\teds-voice-academy-main\`
 - **Live site:** https://tedsvoiceacademy.com
 - **Netlify URL:** https://deft-baklava-b2eb2e.netlify.app/
-- **Build status:** Clean — 16 pages built
+- **Build status:** Clean — 16 pages built, zero errors
+- **Note:** Session 13 changes are NOT yet committed. All changes are local only.
 
 ### What's Live (16 Pages)
 Homepage, Contact, Singing, Speaking, Ensembles, About, Pricing, AVF, PASS Profile, Workshops, Vocal Health Hub, Blog, FAQ, Success, Privacy, Terms
@@ -113,65 +135,56 @@ Homepage, Contact, Singing, Speaking, Ensembles, About, Pricing, AVF, PASS Profi
 ### Analytics
 - **GA4:** Live, Measurement ID `G-ZDX6WPT6CZ`. Script in BaseLayout.astro `<head>` with `is:inline` directive.
 - **Google Search Console:** Verified for tedsvoiceacademy.com. Sitemap submitted.
-- **Looker Studio:** Deferred — needs a few days of GA4 data first.
-
-### Google Business Profile
-- Ted confirmed he has one for tedsvoiceacademy.com and has done good work on it
-- Wants to maximize/optimize it further
-- Deferred to a future session
 
 ### Netlify Forms — WORKING
-- **Form Detection:** Enabled in Netlify UI
 - **Forms detected:** contact, workshop-inquiry, blog-newsletter, newsletter-footer
 - **Email notifications:** Configured to ted@tedsvoiceacademy.com for all forms
 
+### Key Files Modified This Session
+- `src/styles/global.css` — @font-face declarations, .page-date utility, removed .has-grain, added .capsule-section + .answer-capsule
+- `src/layouts/BaseLayout.astro` — Removed Google Fonts CDN, added absolute OG URL logic
+- `src/components/SectionDivider.astro` — NEW component (wave/curve/angle + gold stroke)
+- `scripts/generate-og-image.mjs` — NEW script for OG image generation
+- `public/images/og-default.jpg` — NEW generated OG image
+- `public/fonts/` — NEW directory with 15 WOFF2 font files
+- `src/pages/avf.astro` — Self-hosted AVF fonts, SectionDividers, capsule, date, internal links
+- All 16 page files modified (various combinations of: has-grain removal, capsules, dividers, dates, internal links)
+
 ### Images in public/images/
-**WebP versions (what the site uses):**
-- `tva-logo.webp`, `hero-ted.webp`, `ted-headshot.webp`
-- `avf-book-cover.webp`, `avf-book-photo.webp`, `avf-pillars.webp`, `avf-dials.webp`
-- `pass-bubble.webp`, `pass-profile-logo.webp`
-- `award-businessrate-top3-vocal-instructor-2025.webp`, `award-lacey-chamber-entrepreneur-of-year-2025.webp`
-- `logo-nats.webp`, `logo-barbershop-harmony-society.webp`, `logo-evergreen-district.webp`, `logo-mbha.webp`
-- `logo-bni.webp`, `logo-bring.webp`, `logo-lacey-chamber.webp`, `logo-thurston-chamber.webp`
-- `logo-voices-of-the-sound.webp`, `logo-hot-notes.webp`
-- `noise-texture.png` — **NEW in Session 11** — 200x200px tiling noise texture for grain effect
+Same as Session 11, plus:
+- `og-default.jpg` — 1200x630px branded social sharing image
 
-**Original PNGs still present** (backups, not referenced by code):
-- All 9 original PNGs + 10 original logo PNGs + 2 original award WebPs with old names
-
-### Unused Photos Still in public/images/ (not committed to git):
-- **"6 Ted Portrait"** — Navy blazer headshot. Could replace or supplement existing headshot on About page.
-- **"5 Direct Eye-Line Confidence...plaque"** — Full standing portrait with BusinessRate plaque.
-- **"Ted Lacey Entrepreneur OTY 2025 - 1" and "- 3"** — Award ceremony photos.
-- Multiple older Facebook-era photos (numbered filenames)
-- AI-generated images (skipped — real photos preferred)
-
-### Still Needed Photos:
-- Voices of the Sound group/rehearsal photo (Ted still looking for one)
-- Ted speaking/presenting at a podium or event
-- Studio space interior shot
+### Fonts in public/fonts/ (NEW)
+- `inter-400.woff2`, `inter-500.woff2`, `inter-600.woff2`, `inter-700.woff2`
+- `playfair-display-400.woff2`, `playfair-display-500.woff2`, `playfair-display-600.woff2`, `playfair-display-700.woff2`
+- `cinzel-400.woff2`, `cinzel-600.woff2`, `cinzel-700.woff2`
+- `cormorant-garamond-400.woff2`, `cormorant-garamond-600.woff2`, `cormorant-garamond-400i.woff2`, `cormorant-garamond-500i.woff2`
 
 ---
 
 ## Technical Architecture Notes
 
+### Font System (Session 13)
+- **Main brand:** Inter (body) + Playfair Display (headings) — `@font-face` in global.css
+- **AVF sub-brand:** Cinzel + Cormorant Garamond — `@font-face` in avf.astro scoped styles
+- **CSS vars:** `--font-body`, `--font-heading`, `--font-avf-accent`
+- **Zero external font requests** — no Google Fonts CDN dependency
+
+### Section Divider System (Session 13)
+- **Component:** `src/components/SectionDivider.astro`
+- **SVG approach:** Two paths per divider — fill path (color transition) + stroke path (gold accent line)
+- **Stroke:** `var(--color-gold-bright)`, stroke-width 2, 50% opacity, `vector-effect: non-scaling-stroke`
+- **Placement strategy:** Only at dark-to-light transitions (navy/teal to white/off-white/cream)
+- **viewBox:** `0 0 1440 64`, `preserveAspectRatio="none"` for responsive full-width
+
 ### Grain Texture System (Session 11)
 - **Working approach:** CSS multiple backgrounds with `background-blend-mode: soft-light`
-- **NOT working:** `::before` pseudo-elements defined in global.css (Astro scoped styles prevent rendering)
-- **Pattern:** Each section's background property is updated in-page scoped `<style>` to include the noise PNG
-- **The `.has-grain` class in global.css is dead code** — should be cleaned up
-- **noise-texture.png** tiles seamlessly at any size; `background-size: 200px 200px` controls the grain scale
+- **Pattern:** Each dark section's background property includes noise PNG in scoped `<style>`
+- **noise-texture.png** tiles seamlessly at any size; `background-size: 200px 200px`
 
 ### Scroll Reveal System (Session 11)
 - **CSS:** `.reveal`, `.reveal-left`, `.reveal-right`, `.reveal-stagger` in `global.css`
 - **JS:** IntersectionObserver in `BaseLayout.astro` (runs on every page automatically)
-- **One-shot:** Elements reveal once and stay visible (`observer.unobserve()` after reveal)
-- **Stagger:** Parent `.reveal-stagger` + children `.reveal` — nth-child delays from 0s to 0.5s
-
-### Hero Entrance Animations (Session 11)
-- **CSS keyframes:** Defined in each page's scoped `<style>` (not global)
-- **Applied to:** Homepage (hero-content + hero-photo), About (hero-content + ted-headshot), AVF (hero-content + hero-image), PASS (hero-text + hero-visual)
-- **Not scroll-triggered** — these fire on page load (above the fold)
 
 ---
 

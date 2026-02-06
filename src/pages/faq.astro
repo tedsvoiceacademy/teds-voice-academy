@@ -1,5 +1,6 @@
 ---
 import Layout from '../layouts/BaseLayout.astro';
+import SectionDivider from '../components/SectionDivider.astro';
 ---
 
 <Layout
@@ -144,6 +145,8 @@ import Layout from '../layouts/BaseLayout.astro';
     </div>
   </section>
 
+  <SectionDivider variant="wave" topColor="var(--color-navy-deep)" bottomColor="var(--color-white)" />
+
   <!-- Getting Started -->
   <section class="faq-section">
     <div class="container container-narrow">
@@ -246,6 +249,8 @@ import Layout from '../layouts/BaseLayout.astro';
       </details>
     </div>
   </section>
+
+  <SectionDivider variant="angle" topColor="var(--color-off-white)" bottomColor="var(--color-navy-deep)" />
 
   <!-- CTA Section -->
   <section class="cta-section">

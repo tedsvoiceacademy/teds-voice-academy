@@ -5,6 +5,70 @@
    ========================================================================== */
 
 /* --------------------------------------------------------------------------
+   SELF-HOSTED FONTS
+   -------------------------------------------------------------------------- */
+
+/* Inter — Body text */
+@font-face {
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url('/fonts/inter-400.woff2') format('woff2');
+}
+@font-face {
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 500;
+  font-display: swap;
+  src: url('/fonts/inter-500.woff2') format('woff2');
+}
+@font-face {
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 600;
+  font-display: swap;
+  src: url('/fonts/inter-600.woff2') format('woff2');
+}
+@font-face {
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: url('/fonts/inter-700.woff2') format('woff2');
+}
+
+/* Playfair Display — Headings */
+@font-face {
+  font-family: 'Playfair Display';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url('/fonts/playfair-display-400.woff2') format('woff2');
+}
+@font-face {
+  font-family: 'Playfair Display';
+  font-style: normal;
+  font-weight: 500;
+  font-display: swap;
+  src: url('/fonts/playfair-display-500.woff2') format('woff2');
+}
+@font-face {
+  font-family: 'Playfair Display';
+  font-style: normal;
+  font-weight: 600;
+  font-display: swap;
+  src: url('/fonts/playfair-display-600.woff2') format('woff2');
+}
+@font-face {
+  font-family: 'Playfair Display';
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: url('/fonts/playfair-display-700.woff2') format('woff2');
+}
+
+/* --------------------------------------------------------------------------
    CSS CUSTOM PROPERTIES (Design Tokens)
    -------------------------------------------------------------------------- */
 
@@ -552,42 +616,6 @@ button {
   font-weight: var(--font-bold);
 }
 
-/* --------------------------------------------------------------------------
-   VISUAL POLISH — Background Noise / Grain Texture
-   Real PNG noise texture overlay for sections needing visual depth.
-   Apply .has-grain to any section for a soft film-grain texture.
-   Use .has-grain--light for cream/light sections.
-   -------------------------------------------------------------------------- */
-
-.has-grain {
-  position: relative;
-  isolation: isolate;
-}
-
-.has-grain::before {
-  content: '';
-  position: absolute;
-  inset: 0;
-  z-index: 0;
-  opacity: 0.12;
-  pointer-events: none;
-  mix-blend-mode: screen;
-  background-image: url('/images/noise-texture.png');
-  background-repeat: repeat;
-  background-size: 200px 200px;
-}
-
-/* Ensure section content stays above the grain layer */
-.has-grain > * {
-  position: relative;
-  z-index: 1;
-}
-
-/* Light variant — more visible on cream/light backgrounds */
-.has-grain--light::before {
-  opacity: 0.15;
-  mix-blend-mode: multiply;
-}
 
 /* --------------------------------------------------------------------------
    VISUAL POLISH — Section Accent Stripe
@@ -596,6 +624,43 @@ button {
 
 .section-accent-top {
   border-top: 2px solid var(--color-gold-bright);
+}
+
+/* --------------------------------------------------------------------------
+   VISUAL POLISH — Answer Capsule
+   Brief 2-3 sentence summary for AI search engines and quick scanning.
+   Place at top of main content on service/product pages.
+   -------------------------------------------------------------------------- */
+
+.capsule-section {
+  padding: 2rem 2rem 0;
+  background: var(--color-white);
+}
+
+.answer-capsule {
+  font-size: 1.1rem;
+  line-height: 1.7;
+  color: var(--color-charcoal);
+  background: var(--color-off-white);
+  border-left: 4px solid var(--color-gold-bright);
+  padding: 1.25rem 1.5rem;
+  margin: 0 auto 0;
+  max-width: 800px;
+  border-radius: 0 8px 8px 0;
+}
+
+/* --------------------------------------------------------------------------
+   PAGE DATES
+   Small "Last updated" display for content pages.
+   Uses <time> tags for semantic markup and SEO.
+   -------------------------------------------------------------------------- */
+
+.page-date {
+  font-size: 0.8125rem;
+  color: var(--color-gray-medium);
+  text-align: center;
+  padding: 0.5rem 0 0;
+  margin: 0;
 }
 
 /* --------------------------------------------------------------------------

@@ -36,12 +36,12 @@ Full research report completed. Ted said "I will definitely want to fully maximi
 
 **Quick GEO/SEO wins (approved or ready to discuss):**
 - [x] **Course + Service schema markup** — DONE (Session 10, commit `fed84fe`). Course + Service JSON-LD on Singing, Speaking, Ensembles pages.
-- [ ] **Answer capsule summaries** — Add 2-3 sentence summaries at top of each service page for AI engines to quote.
-- [ ] **Add publish/update dates** — Display dates on all content pages with `<time>` tags.
+- [x] **Answer capsule summaries** — DONE (Session 13). 2-3 sentence GEO summaries on 7 pages: Singing, Speaking, Ensembles, Pricing, Workshops, AVF, PASS Profile.
+- [x] **Add publish/update dates** — DONE (Session 13). `<time>` tags with `.page-date` styling on 10 content pages.
 - [ ] **Track AI referral traffic in GA4** — Custom channel grouping for ChatGPT, Perplexity, etc.
 - [ ] **Google Business Profile optimization** — Ted confirmed he has one for tedsvoiceacademy.com and has done good work on it. Wants to maximize it further.
-- [ ] **Internal linking strategy** — Every page links to 2-3 related pages contextually.
-- [ ] **Self-host fonts** — Download Inter + Playfair Display, serve from own domain. Eliminates external DNS lookups.
+- [x] **Internal linking strategy** — DONE (Session 13). 2-3 contextual cross-links added to 10 pages.
+- [x] **Self-host fonts** — DONE (Session 13). Inter (4 weights) + Playfair Display (4 weights) + Cinzel (3 weights) + Cormorant Garamond (4 weights) self-hosted as WOFF2. Google Fonts CDN completely removed.
 - [ ] **Breadcrumb schema + visual breadcrumbs** — Add BreadcrumbList schema and breadcrumb navigation to interior pages.
 - [ ] **Review collection system** — Create process for requesting Google reviews from students.
 
@@ -67,7 +67,8 @@ Ted said he'll get to blog content "in the next few days."
 - [ ] **CMS for content updates** — Decap CMS for Ted to update any part of the site independently. Critical enabler for Ted's independence.
 
 ### Other Tier 1 Items
-- [ ] **OG images for social sharing** — Default + per-page branded 1200x630px images. Currently referenced in BaseLayout but file doesn't exist. Ted now understands what this is (explained in Session 9).
+- [x] **OG default image for social sharing** — DONE (Session 13). Generated `og-default.jpg` (1200x630px). BaseLayout updated with absolute URLs. Per-page variants still open.
+- [ ] **Per-page OG images** — Branded social sharing images for individual pages (singing, speaking, about, etc.).
 - [ ] **Looker Studio weekly email** — Deferred until GA4 has data. Set up "TVA Website Weekly Performance Overview" report.
 - [ ] **Email newsletter system** — Buttondown recommended. Connects to existing newsletter signup forms.
 - [ ] **Form notification email formatting** — Netlify form emails are plain/ugly. Needs serverless function or third-party integration.
@@ -95,7 +96,7 @@ Ted explicitly said he wants to get to these as soon as possible. These need col
 - [x] **Background texture & visual richness** — DONE (Session 10 initial, **Session 11 overhaul**). Session 10's SVG approach didn't render in Astro scoped styles. Session 11: real PNG noise texture baked into CSS multiple backgrounds with `soft-light` blend. Applied to ALL dark sections on ALL 16 pages. Commit `6aae45e`.
 - [x] **Scroll-triggered animations** — DONE (Session 11, commits `3f1042e`, `6aae45e`). `.reveal`, `.reveal-left`, `.reveal-right`, `.reveal-stagger` CSS utilities + IntersectionObserver. Applied to all 16 pages. `prefers-reduced-motion` respected.
 - [x] **Hero entrance animations** — DONE (Session 11, commits `e8cee80`, `6aae45e`). CSS keyframe animations on pages with hero photos: Homepage, About, AVF, PASS Profile.
-- [ ] **Section dividers** — SVG wave/curve/angle shapes between sections. Create SectionDivider.astro component.
+- [x] **Section dividers** — DONE (Session 13). `SectionDivider.astro` component with wave/curve/angle variants + gold accent stroke. Deployed on 12 pages at dark↔light section transitions.
 - [ ] **Iconography** — Lucide inline SVG icons on card titles and section headings.
 - [ ] **Hero parallax effect** — CSS-only parallax on hero photos. Disabled on mobile. Ted interested but deferred.
 - [ ] **Varied section layouts** — Per-page layout diversity: numbered steps, alternating left-right, timelines.
@@ -125,12 +126,12 @@ Full research completed. See Tier 1 GEO/SEO section above for the prioritized ac
 2. robots.txt update for AI crawlers ✅ DONE
 3. llms.txt file ✅ DONE
 4. Review collection system
-5. Course + Service schema (next up)
-6. Answer capsules on service pages
-7. Publish/update dates on pages
+5. Course + Service schema ✅ DONE
+6. Answer capsules on service pages ✅ DONE (Session 13)
+7. Publish/update dates on pages ✅ DONE (Session 13)
 8. AI traffic tracking in GA4
 9. Blog content (Tier 1 posts)
-10. Internal linking strategy
+10. Internal linking strategy ✅ DONE (Session 13)
 
 ---
 
@@ -270,6 +271,15 @@ The page structure is built. These sections have "coming soon" placeholders:
 - [x] **Scroll-triggered reveal animations** — .reveal, .reveal-left, .reveal-right, .reveal-stagger CSS + IntersectionObserver on ALL 16 pages (Feb 5, 2026 — Session 11)
 - [x] **Hero entrance animations** — CSS keyframe animations on Homepage, About, AVF, PASS Profile hero sections (Feb 5, 2026 — Session 11)
 
+- [x] **Dead `.has-grain` CSS cleanup** — Removed ~35 lines of unused global CSS and `has-grain` class from 5 page HTMLs (Feb 5, 2026 — Session 13)
+- [x] **OG default image** — Generated `og-default.jpg` (1200x630px) with sharp. BaseLayout absolute URL fix for og:image/twitter:image (Feb 5, 2026 — Session 13)
+- [x] **Answer capsule summaries** — GEO-optimized summaries on 7 service/product pages (Feb 5, 2026 — Session 13)
+- [x] **SectionDivider component** — SVG wave/curve/angle shapes with gold accent stroke. Deployed on 12 pages (Feb 5, 2026 — Session 13)
+- [x] **About page beliefs grid fix** — Changed from auto-fit 3+1 orphan to 2×2 grid (Feb 5, 2026 — Session 13)
+- [x] **Self-host fonts** — Inter + Playfair Display + Cinzel + Cormorant Garamond as WOFF2. Google Fonts CDN fully removed (Feb 5, 2026 — Session 13)
+- [x] **Internal linking strategy** — 2-3 contextual cross-links added to 10 pages (Feb 5, 2026 — Session 13)
+- [x] **Publish/update dates** — `<time>` tags with `.page-date` CSS on 10 content pages (Feb 5, 2026 — Session 13)
+
 ---
 
-*Last updated: February 5, 2026 (Session 11)*
+*Last updated: February 5, 2026 (Session 13)*

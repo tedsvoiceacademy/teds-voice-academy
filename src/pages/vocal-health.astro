@@ -1,5 +1,6 @@
 ---
 import Layout from '../layouts/BaseLayout.astro';
+import SectionDivider from '../components/SectionDivider.astro';
 ---
 
 <Layout
@@ -16,9 +17,12 @@ import Layout from '../layouts/BaseLayout.astro';
     </div>
   </section>
 
+  <SectionDivider variant="wave" topColor="var(--color-navy-deep)" bottomColor="var(--color-off-white)" />
+
   <!-- Medical Disclaimer -->
   <section class="disclaimer-section">
     <div class="container container-narrow">
+      <p class="page-date">Last updated: <time datetime="2026-02-05">February 5, 2026</time></p>
       <p class="disclaimer"><em>I'm a voice teacher, not a medical professional. The information here is educational — it's not a substitute for medical advice. If you're experiencing persistent vocal problems, pain, or any symptoms that concern you, please consult a physician or voice-specialized medical professional.</em></p>
     </div>
   </section>
@@ -358,8 +362,8 @@ import Layout from '../layouts/BaseLayout.astro';
       <h3>Who Vocal Fit is for</h3>
       <p>Vocal Fit routines are designed for anyone who uses their voice regularly and wants to keep it healthy. They're especially helpful for:</p>
       <ul>
-        <li>Singers who want a structured warm-up routine</li>
-        <li>Speakers, teachers, and presenters who use their voices all day</li>
+        <li><a href="/singing">Singers</a> who want a structured warm-up routine</li>
+        <li><a href="/speaking">Speakers, teachers, and presenters</a> who use their voices all day</li>
         <li>Older adults who want to maintain vocal vitality</li>
         <li>Anyone recovering from vocal fatigue or strain</li>
         <li>People who want to build good vocal habits before problems develop</li>
@@ -387,6 +391,8 @@ import Layout from '../layouts/BaseLayout.astro';
       </div>
     </div>
   </section>
+
+  <SectionDivider variant="angle" topColor="var(--color-off-white)" bottomColor="var(--color-navy-deep)" />
 
   <!-- CTA Section -->
   <section class="cta-section">
@@ -636,6 +642,16 @@ import Layout from '../layouts/BaseLayout.astro';
     color: var(--color-charcoal);
     line-height: 1.7;
     margin-bottom: 0.5rem;
+  }
+
+  .content-section li a {
+    color: var(--color-gold-bright);
+    text-decoration: none;
+    font-weight: 600;
+  }
+
+  .content-section li a:hover {
+    text-decoration: underline;
   }
 
   .content-block strong {

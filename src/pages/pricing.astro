@@ -1,5 +1,6 @@
 ---
 import Layout from '../layouts/BaseLayout.astro';
+import SectionDivider from '../components/SectionDivider.astro';
 
 const pageTitle = "Voice Lesson Pricing";
 const pageDescription = "Transparent pricing for singing, speaking, and ensemble coaching. Monthly plans starting at $320 for weekly hour-long lessons. Lacey, WA and virtual options.";
@@ -15,6 +16,16 @@ const pageDescription = "Transparent pricing for singing, speaking, and ensemble
     </div>
   </section>
 
+  <SectionDivider variant="wave" topColor="var(--color-navy-deep)" bottomColor="var(--color-white)" />
+
+  <!-- Answer Capsule — structured summary for AI search engines -->
+  <section class="capsule-section">
+    <div class="container">
+      <p class="answer-capsule">Ted's Voice Academy pricing: monthly singing plans at $320/month ($80/lesson), lesson packages from $75-$85/lesson, and single sessions at $100. Flagship 4-session series are $400. All sessions are 60 minutes. In-person (Lacey, WA) and virtual options available.</p>
+      <p class="page-date">Last updated: <time datetime="2026-02-05">February 5, 2026</time></p>
+    </div>
+  </section>
+
   <!-- Intro Section -->
   <section class="intro-section">
     <div class="container reveal">
@@ -27,7 +38,7 @@ const pageDescription = "Transparent pricing for singing, speaking, and ensemble
   <section class="pricing-section singing-section">
     <div class="container">
       <h2 class="section-title reveal">Singing Coaching</h2>
-      <p class="section-intro reveal">Vocal and performance coaching for singers, typically ages 14 and up. Whether you're preparing for an audition, working through a technical challenge, or building a sustainable singing practice, these options give you the structure and flexibility to move forward.</p>
+      <p class="section-intro reveal"><a href="/singing">Vocal and performance coaching for singers</a>, typically ages 14 and up. Whether you're preparing for an audition, working through a technical challenge, or building a sustainable singing practice, these options give you the structure and flexibility to move forward.</p>
 
       <div class="pricing-grid reveal-stagger">
         <!-- Monthly Plan - Recommended -->
@@ -110,7 +121,7 @@ const pageDescription = "Transparent pricing for singing, speaking, and ensemble
   <section class="pricing-section speaking-section">
     <div class="container">
       <h2 class="section-title reveal">Speaking Coaching</h2>
-      <p class="section-intro reveal">Voice and performance coaching for clear, confident, authentic communication. Speaking coaching often centers on a specific objective—an upcoming presentation, building vocal resilience, or developing executive presence.</p>
+      <p class="section-intro reveal">Voice and performance coaching for clear, confident, authentic communication. <a href="/speaking">Speaking coaching</a> often centers on a specific objective—an upcoming presentation, building vocal resilience, or developing executive presence.</p>
 
       <!-- Flagship Speaking Series -->
       <div class="flagship-series reveal">
@@ -213,7 +224,7 @@ const pageDescription = "Transparent pricing for singing, speaking, and ensemble
   <section class="pricing-section ensemble-section">
     <div class="container">
       <h2 class="section-title reveal">Ensemble Coaching</h2>
-      <p class="section-intro reveal">Vocal and performance coaching for groups seeking unity, efficiency, and expressive sound. I work with barbershop quartets, contemporary a cappella groups, community choruses, and ensembles of all kinds.</p>
+      <p class="section-intro reveal">Vocal and performance coaching for groups seeking unity, efficiency, and expressive sound. I work with barbershop quartets, contemporary a cappella groups, community choruses, and <a href="/ensembles">ensembles of all kinds</a>.</p>
 
       <div class="custom-engagement reveal">
         <h3>Custom Engagements</h3>
@@ -240,6 +251,8 @@ const pageDescription = "Transparent pricing for singing, speaking, and ensemble
       <a href="/contact" class="cta-button secondary">Purchase a Gift Certificate</a>
     </div>
   </section>
+
+  <SectionDivider variant="angle" topColor="var(--color-cream)" bottomColor="var(--color-navy-deep)" />
 
   <!-- CTA Section -->
   <section class="cta-section">

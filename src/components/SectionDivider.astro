@@ -1,0 +1,74 @@
+---
+/**
+ * SectionDivider.astro
+ * SVG section dividers with wave/curve/angle variants.
+ * Creates a shaped transition between sections with a gold accent line.
+ *
+ * Props:
+ *   variant: 'wave' | 'curve' | 'angle' (default: 'wave')
+ *   topColor: CSS color of the section above (default: navy-deep)
+ *   bottomColor: CSS color of the section below (default: off-white)
+ *   flip: boolean — mirror vertically (default: false)
+ *   height: number — SVG height in px (default: 48)
+ */
+
+interface Props {
+  variant?: 'wave' | 'curve' | 'angle';
+  topColor?: string;
+  bottomColor?: string;
+  flip?: boolean;
+  height?: number;
+}
+
+const {
+  variant = 'wave',
+  topColor = 'var(--color-navy-deep)',
+  bottomColor = 'var(--color-off-white)',
+  flip = false,
+  height = 48,
+} = Astro.props;
+
+// Fill paths — fill the bottom portion with the bottomColor
+const fillPaths: Record<string, string> = {
+  wave: 'M0,32 C320,64 480,0 720,32 C960,64 1120,0 1440,32 L1440,64 L0,64 Z',
+  curve: 'M0,48 Q720,0 1440,48 L1440,64 L0,64 Z',
+  angle: 'M0,48 L720,0 L1440,48 L1440,64 L0,64 Z',
+};
+
+// Stroke paths — the visible accent line along the transition edge
+const strokePaths: Record<string, string> = {
+  wave: 'M0,32 C320,64 480,0 720,32 C960,64 1120,0 1440,32',
+  curve: 'M0,48 Q720,0 1440,48',
+  angle: 'M0,48 L720,0 L1440,48',
+};
+---
+
+<div
+  class="section-divider"
+  style={`background: ${topColor};${flip ? ' transform: scaleY(-1);' : ''}`}
+>
+  <svg
+    viewBox="0 0 1440 64"
+    preserveAspectRatio="none"
+    xmlns="http://www.w3.org/2000/svg"
+    style={`display: block; width: 100%; height: ${height}px;`}
+    aria-hidden="true"
+  >
+    <path d={fillPaths[variant]} fill={bottomColor} />
+    <path
+      d={strokePaths[variant]}
+      fill="none"
+      stroke="var(--color-gold-bright)"
+      stroke-width="2"
+      stroke-opacity="0.5"
+      vector-effect="non-scaling-stroke"
+    />
+  </svg>
+</div>
+
+<style>
+  .section-divider {
+    line-height: 0;
+    overflow: hidden;
+  }
+</style>

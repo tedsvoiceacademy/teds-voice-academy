@@ -1,5 +1,6 @@
 ---
 import Layout from '../layouts/BaseLayout.astro';
+import SectionDivider from '../components/SectionDivider.astro';
 ---
 
 <Layout
@@ -77,12 +78,22 @@ import Layout from '../layouts/BaseLayout.astro';
   </Fragment>
 
   <!-- Hero Section -->
-  <section class="hero has-grain">
+  <section class="hero">
     <div class="container">
       <span class="hero-eyebrow">Singing Lessons</span>
       <h1>Build a voice you can trust</h1>
       <p class="hero-subtitle">Vocal and performance coaching for singers, typically ages 14 and up.</p>
       <a href="/contact" class="btn btn-primary">Book a Free Discovery Call</a>
+    </div>
+  </section>
+
+  <SectionDivider variant="wave" topColor="var(--color-navy-deep)" bottomColor="var(--color-white)" />
+
+  <!-- Answer Capsule — structured summary for AI search engines -->
+  <section class="capsule-section">
+    <div class="container">
+      <p class="answer-capsule">Ted's Voice Academy offers private singing lessons for adults and teens in Lacey, Washington, with virtual sessions also available. Lessons use the Adaptive Voice Framework (AVF) to build vocal confidence, technique, and expressive range across all genres. Monthly plans start at $320/month; single sessions are $100.</p>
+      <p class="page-date">Last updated: <time datetime="2026-02-05">February 5, 2026</time></p>
     </div>
   </section>
 
@@ -124,19 +135,19 @@ import Layout from '../layouts/BaseLayout.astro';
         
         <div class="card reveal">
           <h3>Experienced performers</h3>
-          <p>Whether you're preparing for something specific or refining your craft, I offer a fresh perspective grounded in how the voice actually works.</p>
+          <p>Whether you're preparing for something specific or refining your craft, I offer a fresh perspective grounded in <a href="/avf">how the voice actually works</a>.</p>
         </div>
         
         <div class="card reveal">
           <h3>Recovering voices</h3>
-          <p>Vocal strain, fatigue, and injury are more common than people realize. Helping singers recover and rebuild is a special focus of mine. I approach this work with care, patience, and a deep understanding of vocal health.</p>
+          <p>Vocal strain, fatigue, and injury are more common than people realize. Helping singers recover and rebuild is a special focus of mine. I approach this work with care, patience, and a deep understanding of <a href="/vocal-health">vocal health</a>.</p>
         </div>
       </div>
     </div>
   </section>
 
   <!-- Styles & Genres Section -->
-  <section class="styles-section has-grain">
+  <section class="styles-section">
     <div class="container container-narrow reveal">
       <h2>Any style. Your style.</h2>
       <p>I work across all genres and traditions. The principles of healthy, expressive singing apply whether you're performing classical art song, musical theater, pop, gospel, barbershop, or anything else.</p>
@@ -153,6 +164,8 @@ import Layout from '../layouts/BaseLayout.astro';
       <p class="styles-note">If your style isn't listed here, reach out anyway. I've probably worked with it.</p>
     </div>
   </section>
+
+  <SectionDivider variant="curve" topColor="var(--color-navy-deep)" bottomColor="var(--color-off-white)" />
 
   <!-- How Lessons Work Section -->
   <section class="how-section">
@@ -218,8 +231,10 @@ import Layout from '../layouts/BaseLayout.astro';
     </div>
   </section>
 
+  <SectionDivider variant="angle" topColor="var(--color-off-white)" bottomColor="var(--color-navy-deep)" />
+
   <!-- CTA Section -->
-  <section class="cta-section has-grain">
+  <section class="cta-section">
     <div class="container reveal">
       <h2>Ready to get started?</h2>
       <p>The first step is a free discovery call. Tell me a bit about yourself and your goals, and I'll be in touch to set up a time to talk.</p>

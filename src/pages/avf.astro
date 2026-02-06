@@ -1,5 +1,6 @@
 ---
 import Layout from '../layouts/BaseLayout.astro';
+import SectionDivider from '../components/SectionDivider.astro';
 
 const pageTitle = "The Adaptive Voice Framework | Voice Training Book by Ted";
 const pageDescription = "A comprehensive guide to understanding how your voice works. The Adaptive Voice Framework distills 40 years of study into one complete owner's manual for singers.";
@@ -85,6 +86,16 @@ const amazonLink = "https://www.amazon.com/dp/B0GD2SH8J5";
     </div>
   </section>
 
+  <SectionDivider variant="wave" topColor="var(--color-avf-teal)" bottomColor="var(--color-white)" />
+
+  <!-- Answer Capsule — structured summary for AI search engines -->
+  <section class="capsule-section">
+    <div class="container">
+      <p class="answer-capsule">The Adaptive Voice Framework (AVF) is a comprehensive voice training system developed by Ted Chamberlain over four decades of teaching and performing. AVF organizes vocal function into Five Pillars and Eight Dials, bridging science, somatics, and artistic expression. The book is available on Amazon in paperback ($42.95) and Kindle ($9.99).</p>
+      <p class="page-date">Last updated: <time datetime="2026-02-05">February 5, 2026</time></p>
+    </div>
+  </section>
+
   <!-- What Is AVF Section -->
   <section id="what-is-avf" class="avf-section what-is-avf">
     <div class="container container-narrow reveal">
@@ -96,6 +107,8 @@ const amazonLink = "https://www.amazon.com/dp/B0GD2SH8J5";
       <p>When you understand these foundations, techniques that seemed contradictory start to connect. You see why certain approaches work for certain goals. You gain the clarity to make good choices for your voice — or to help your students make good choices for theirs.</p>
     </div>
   </section>
+
+  <SectionDivider variant="curve" topColor="var(--color-avf-cream)" bottomColor="var(--color-avf-teal)" />
 
   <!-- Five Pillars Section -->
   <section class="avf-section pillars-section">
@@ -135,6 +148,8 @@ const amazonLink = "https://www.amazon.com/dp/B0GD2SH8J5";
     </div>
   </section>
 
+  <SectionDivider variant="wave" topColor="var(--color-avf-teal)" bottomColor="var(--color-avf-cream)" />
+
   <!-- Eight Dials Section -->
   <section class="avf-section dials-section">
     <div class="container">
@@ -161,6 +176,8 @@ const amazonLink = "https://www.amazon.com/dp/B0GD2SH8J5";
     </div>
   </section>
 
+  <SectionDivider variant="curve" topColor="var(--color-avf-cream)" bottomColor="var(--color-avf-teal)" />
+
   <!-- Who It's For Section -->
   <section class="avf-section who-section">
     <div class="container container-narrow">
@@ -168,7 +185,7 @@ const amazonLink = "https://www.amazon.com/dp/B0GD2SH8J5";
       <div class="audience-grid reveal-stagger">
         <div class="audience-card reveal">
           <h3>Singers</h3>
-          <p>of any genre who want to understand their instrument — with the freedom to cross styles safely and the knowledge to keep growing.</p>
+          <p>of any genre who want to <a href="/singing">understand their instrument</a> — with the freedom to cross styles safely and the knowledge to keep growing.</p>
         </div>
         <div class="audience-card reveal">
           <h3>Voice teachers</h3>
@@ -176,7 +193,7 @@ const amazonLink = "https://www.amazon.com/dp/B0GD2SH8J5";
         </div>
         <div class="audience-card reveal">
           <h3>Speakers and professionals</h3>
-          <p>who rely on their voice daily and want it to function reliably, clearly, and authentically — without strain.</p>
+          <p>who <a href="/speaking">rely on their voice daily</a> and want it to function reliably, clearly, and authentically — without strain.</p>
         </div>
         <div class="audience-card reveal">
           <h3>Anyone</h3>
@@ -185,6 +202,8 @@ const amazonLink = "https://www.amazon.com/dp/B0GD2SH8J5";
       </div>
     </div>
   </section>
+
+  <SectionDivider variant="wave" topColor="var(--color-avf-teal)" bottomColor="var(--color-avf-cream)" />
 
   <!-- The Book Section -->
   <section class="avf-section book-section">
@@ -254,7 +273,7 @@ const amazonLink = "https://www.amazon.com/dp/B0GD2SH8J5";
 
       <details class="faq-item reveal">
         <summary>Does AVF work for contemporary and pop styles, or just classical?</summary>
-        <p>AVF covers every genre. The Five Pillars are universal foundations shared by all healthy voices. The Eight Dials are what create stylistic variety — they explain how a classical sound differs from a pop sound, and how to move between them safely. The book includes specific cross-genre applications.</p>
+        <p>AVF covers every genre. The Five Pillars are universal foundations shared by all <a href="/vocal-health">healthy voices</a>. The Eight Dials are what create stylistic variety — they explain how a classical sound differs from a pop sound, and how to move between them safely. The book includes specific cross-genre applications.</p>
       </details>
 
       <details class="faq-item reveal">
@@ -281,8 +300,14 @@ const amazonLink = "https://www.amazon.com/dp/B0GD2SH8J5";
 </Layout>
 
 <style>
-  /* Import Google Fonts for AVF branding */
-  @import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700&family=Cormorant+Garamond:ital,wght@0,400;0,600;1,400;1,500&display=swap');
+  /* AVF Sub-Brand Fonts (self-hosted) */
+  @font-face { font-family: 'Cinzel'; font-weight: 400; font-display: swap; src: url('/fonts/cinzel-400.woff2') format('woff2'); }
+  @font-face { font-family: 'Cinzel'; font-weight: 600; font-display: swap; src: url('/fonts/cinzel-600.woff2') format('woff2'); }
+  @font-face { font-family: 'Cinzel'; font-weight: 700; font-display: swap; src: url('/fonts/cinzel-700.woff2') format('woff2'); }
+  @font-face { font-family: 'Cormorant Garamond'; font-style: normal; font-weight: 400; font-display: swap; src: url('/fonts/cormorant-garamond-400.woff2') format('woff2'); }
+  @font-face { font-family: 'Cormorant Garamond'; font-style: normal; font-weight: 600; font-display: swap; src: url('/fonts/cormorant-garamond-600.woff2') format('woff2'); }
+  @font-face { font-family: 'Cormorant Garamond'; font-style: italic; font-weight: 400; font-display: swap; src: url('/fonts/cormorant-garamond-400i.woff2') format('woff2'); }
+  @font-face { font-family: 'Cormorant Garamond'; font-style: italic; font-weight: 500; font-display: swap; src: url('/fonts/cormorant-garamond-500i.woff2') format('woff2'); }
 
   /* AVF Color Variables (using CSS custom properties from global.css) */
   /* --color-avf-teal: #1a6b7c */
