@@ -78,7 +78,7 @@ Ted said he'll get to blog content "in the next few days."
 ## Tier 2 — Important Additions
 
 - [x] **Organizations & affiliations on About page** — DONE (Session 10, commit `3c54db0`). 8 org logos + 2 ensemble logos. "Proudly connected with" section. All linked to websites. Person schema updated with 10 memberOf entries.
-- [x] **Coaching & performance photos (partial)** — DONE (Session 14). 3 photos placed: Ted teaching (workshops), award ceremony (about), chorus directing (ensembles). 45+ unused photos remain in public/images/.
+- [x] **Coaching & performance photos (partial)** — DONE (Sessions 14 + 14c). 3 inline photos placed (workshops, about, ensembles). 3 hero images placed (Singing, Speaking, Ensembles). Remaining pages (Workshops, Vocal Health, Pricing, Blog, FAQ, Contact) still have text-only heroes. Ted has `Ted Quartet coach.png` and `studio lesson2.png` ready for future use.
 - [ ] **Restructure Vocal Health Hub** — Minimize "coming soon" placeholders. Reorganize to lead with completed content.
 - [ ] **Add Review/AggregateRating schema** — When Google reviews exist, add to LocalBusiness markup. Star ratings in search results dramatically increase CTR.
 - [ ] **Event schema on Workshops page** — When specific workshops are scheduled, add Event structured data.
@@ -287,7 +287,8 @@ The page structure is built. These sections have "coming soon" placeholders:
 - [x] **Icon visibility fix** — Added explicit CSS width/height to `.icon-inline` to override global SVG reset. All 64 icons now render correctly (Feb 6, 2026 — Session 14b)
 - [x] **Additional grid symmetry fixes** — speaking `.how-grid`, pass-profile `.differentiators` + `.applications-grid` changed to `repeat(2, 1fr)`. Pricing `.two-col` got explicit 2-col override (Feb 6, 2026 — Session 14b)
 - [x] **Trademark symbols** — Added ™ to PASS Profile, AVF, Adaptive Voice Framework across 14 files (38 instances). Key headings + first body mention per page (Feb 6, 2026 — Session 14b)
+- [x] **Hero images on service pages** — Added hero images to Singing, Speaking, Ensembles. Converted text-only heroes to hero-grid layout with entrance animations. Photos: hero-singing-lesson.webp (68KB), hero-speaking.webp (27KB), hero-ensembles.webp (79KB) (Feb 6, 2026 — Session 14c)
 
 ---
 
-*Last updated: February 6, 2026 (Session 14b)*
+*Last updated: February 6, 2026 (Session 14c)*

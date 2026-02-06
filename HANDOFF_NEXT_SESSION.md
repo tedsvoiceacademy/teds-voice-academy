@@ -31,7 +31,7 @@ This applies to everything — quick fixes, visual changes, SEO tweaks, all of i
 
 ---
 
-## What Session 14 + 14b Accomplished
+## What Session 14 + 14b + 14c Accomplished
 
 ### .gitignore (Session 14)
 - Created `.gitignore` at project root (node_modules/, dist/, .astro/, .DS_Store, nul)
@@ -67,6 +67,14 @@ This applies to everything — quick fixes, visual changes, SEO tweaks, all of i
 - `.icon-inline` CSS utility in global.css
 - Inline SVG icons (20x20, stroke-based, `aria-hidden="true"`, `currentColor`) on card H3 headings
 
+### Hero Images on Service Pages (Session 14c)
+- Converted 3 new photos from Ted to WebP: `hero-singing-lesson.webp` (68 KB), `hero-speaking.webp` (27 KB), `hero-ensembles.webp` (79 KB)
+- Converted text-only heroes on Singing, Speaking, and Ensembles to `hero-grid` layout (text left, image right)
+- Added entrance animations matching Homepage/About pattern (text slides in from left, photo fades/scales)
+- Responsive: stacks to single column below 900px; `prefers-reduced-motion` respected
+- **Pages now with hero images (7):** Homepage, About, AVF, PASS Profile, Singing, Speaking, Ensembles
+- **Pages still text-only heroes:** Pricing, Workshops, Vocal Health, Blog, FAQ, Contact (plus Terms, Privacy, Success which don't need images)
+
 ---
 
 ## Decisions Made This Session
@@ -91,9 +99,13 @@ This applies to everything — quick fixes, visual changes, SEO tweaks, all of i
 - [ ] **Import 24 scraped blog posts** — Waiting on Ted's scraped content
 - [ ] **CMS (Decap CMS)** — Critical for Ted's independence
 
+### Dedicated Inventory Session (separate from general sessions):
+- [ ] **Resource cataloging** — Ted has added Vocal Fit files, warm-ups, vocal health resources, and miscellaneous files to the project folder. A dedicated session is needed to inventory, categorize, identify duplicates, and plan what goes on the site vs. stays offline. See `HANDOFF_INVENTORY_SESSION.md` for full details.
+
 ### Tier 2:
 - [ ] **Per-page OG images** — Branded social sharing images for individual pages
 - [ ] **Restructure Vocal Health Hub** — Minimize "coming soon" placeholders
+- [ ] **Remaining hero images** — Workshops, Vocal Health, Pricing, Blog, FAQ, Contact still have text-only heroes. Ted has `Ted Quartet coach.png` and `studio lesson2.png` available for future use.
 
 ### Tier 3 — Visual Polish:
 - [ ] **Hero parallax effect** — CSS-only parallax on hero photos
@@ -113,8 +125,8 @@ This applies to everything — quick fixes, visual changes, SEO tweaks, all of i
 - **Live site:** https://tedsvoiceacademy.com
 - **Netlify URL:** https://deft-baklava-b2eb2e.netlify.app/
 - **Build status:** Clean — 16 pages built, zero errors
-- **Latest commit:** `366a679` — Session 14b: icon fix, grid symmetry, pricing alignment, TM symbols
-- **Previous commit:** `d6105fb` — Session 14: icons, card symmetry, photos, .gitignore
+- **Latest commit:** `06271f2` — Session 14c: hero images on Singing, Speaking, Ensembles
+- **Previous commits:** `366a679` (14b: icon fix, grids, TM), `d6105fb` (14: icons, symmetry, photos)
 - **No uncommitted changes** (beyond untracked raw source photos and docs/)
 
 ### What's Live (16 Pages)
@@ -136,6 +148,10 @@ Homepage, Contact, Singing, Speaking, Ensembles, About, Pricing, AVF, PASS Profi
 - `public/images/ted-directing-chorus-stage.webp` — NEW (48 KB)
 - 14 page files modified: all pages got either grid fixes, icons, photos, or TM symbols
 - `src/components/Header.astro` + `src/components/Footer.astro` — TM in nav labels
+- `public/images/hero-singing-lesson.webp` — NEW (68 KB, from studio lesson.png)
+- `public/images/hero-speaking.webp` — NEW (27 KB, from Ted speaking.png)
+- `public/images/hero-ensembles.webp` — NEW (79 KB, from Ted Ensemble.png)
+- `src/pages/singing.astro`, `src/pages/speaking.astro`, `src/pages/ensembles.astro` — hero-grid layout + hero images
 
 ### Images in public/images/
 Same as Session 13, plus:
