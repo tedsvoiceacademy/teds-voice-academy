@@ -7,7 +7,7 @@ image:
   url: '/images/blog/13-maximizing-vocal-practice.webp'
   alt: 'Illustration of vocal practice tools including mirror and recording devices'
 categories: ['Mindset & Practice']
-tags: ['vocal practice', 'self-assessment', 'recording', 'mirror practice', 'singing improvement']
+tags: ['vocal practice', 'self-assessment', 'vocal development', 'singing improvement', 'practice habits']
 draft: false
 ---
 

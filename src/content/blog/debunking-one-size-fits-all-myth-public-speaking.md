@@ -7,7 +7,7 @@ image:
   url: '/images/blog/16-diverse-speaking-montage.webp'
   alt: 'Montage of diverse public speakers with different communication styles'
 categories: ['For Professionals']
-tags: ['public speaking', 'communication style', 'authenticity', 'PASS Profile', 'speaking confidence']
+tags: ['public speaking', 'authentic voice', 'vocal coaching', 'PASS Profile', 'professional development']
 draft: false
 ---
 

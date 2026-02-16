@@ -7,7 +7,7 @@ image:
   url: '/images/blog/17-overcoming-public-speaking-fear.webp'
   alt: 'Person overcoming fear of public speaking with confidence'
 categories: ['For Professionals', 'Mindset & Practice']
-tags: ['public speaking fear', 'glossophobia', 'confidence', 'PASS Profile', 'coaching']
+tags: ['public speaking', 'glossophobia', 'confidence', 'PASS Profile', 'vocal coaching']
 draft: false
 ---
 

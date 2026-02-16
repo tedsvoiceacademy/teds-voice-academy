@@ -7,7 +7,7 @@ image:
   url: '/images/blog/06-singing-vs-speaking.webp'
   alt: 'Comparison of singing and speaking vocal techniques'
 categories: ['For Professionals', 'Technique']
-tags: ['singing vs speaking', 'vocal coaching', 'public speaking', 'voice technique', 'communication']
+tags: ['singing vs speaking', 'vocal coaching', 'public speaking', 'vocal technique', 'professional development']
 draft: false
 ---
 

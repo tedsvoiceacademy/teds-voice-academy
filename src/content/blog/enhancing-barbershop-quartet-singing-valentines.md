@@ -1,13 +1,13 @@
 ---
 title: 'Vocal Coaching for Barbershop Quartets | Improve Singing Valentines Performances'
-description: 'How targeted vocal coaching elevates barbershop quartet performances for Singing Valentines—from vocal production to ensemble skills and stage presence.'
+description: 'How targeted vocal coaching elevates barbershop quartet performances for Singing Valentines in Seattle—from vocal production to ensemble skills and stage presence.'
 pubDate: '2024-05-01'
 author: 'Ted Lacey'
 image:
   url: '/images/blog/22-barbershop-quartet.webp'
   alt: 'Barbershop quartet performing a Singing Valentine serenade'
 categories: ['Performance']
-tags: ['barbershop', 'quartet', 'singing valentines', 'ensemble coaching', 'vocal harmony']
+tags: ['barbershop', 'ensemble singing', 'singing valentines', 'vocal coaching', 'a cappella']
 draft: false
 ---
 

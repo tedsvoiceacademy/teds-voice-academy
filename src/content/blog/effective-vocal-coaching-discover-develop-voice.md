@@ -6,8 +6,8 @@ author: 'Ted Lacey'
 image:
   url: '/images/blog/19-effective-vocal-coaching.webp'
   alt: 'Vocal coach working with a student on voice development'
-categories: ['For Professionals', 'Technique']
-tags: ['vocal coaching', 'voice development', 'singing lessons', 'public speaking', 'stage confidence']
+categories: ['For Professionals', 'Performance']
+tags: ['vocal coaching', 'vocal development', 'singing lessons', 'public speaking', 'professional development']
 draft: false
 ---
 

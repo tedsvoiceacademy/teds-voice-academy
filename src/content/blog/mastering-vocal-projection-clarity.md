@@ -7,7 +7,7 @@ image:
   url: '/images/blog/10-mastering-vocal-projection.webp'
   alt: 'Illustration of vocal projection and clarity techniques'
 categories: ['Technique', 'Vocal Health']
-tags: ['vocal projection', 'clarity', 'breath support', 'resonance', 'vocal health']
+tags: ['vocal projection', 'vocal clarity', 'breath support', 'vocal resonance', 'vocal technique']
 draft: false
 ---
 

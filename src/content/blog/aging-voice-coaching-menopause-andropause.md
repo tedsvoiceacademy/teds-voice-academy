@@ -7,7 +7,7 @@ image:
   url: '/images/blog/03-aging-hormones-the-voice.webp'
   alt: 'Illustration of aging and hormonal effects on the voice'
 categories: ['Vocal Health']
-tags: ['aging voice', 'menopause', 'andropause', 'vocal health', 'voice coaching']
+tags: ['aging voice', 'menopause', 'andropause', 'vocal health', 'vocal coaching']
 draft: false
 ---
 

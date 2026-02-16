@@ -7,7 +7,7 @@ image:
   url: '/images/blog/02-the-quiet-power-of-consistency.webp'
   alt: 'Illustration representing the quiet power of consistent vocal practice'
 categories: ['Mindset & Practice']
-tags: ['practice habits', 'consistency', 'vocal development', 'motivation', 'habit building']
+tags: ['practice habits', 'consistency', 'vocal development', 'singing improvement', 'habit building']
 draft: false
 ---
 

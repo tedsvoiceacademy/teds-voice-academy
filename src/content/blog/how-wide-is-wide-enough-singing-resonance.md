@@ -7,7 +7,7 @@ image:
   url: '/images/blog/04-how-wide-is-wide-enough.webp'
   alt: 'Illustration of vocal resonance and vowel shaping in singing'
 categories: ['Technique']
-tags: ['resonance', 'vowel shaping', 'singing technique', 'vocal tract', 'formants']
+tags: ['vocal resonance', 'vowel shaping', 'singing technique', 'vocal tract', 'voice science']
 draft: false
 ---
 

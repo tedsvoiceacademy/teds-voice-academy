@@ -7,7 +7,7 @@ image:
   url: '/images/blog/18-diverse-styles.webp'
   alt: 'Illustration of diverse singing styles and vocal techniques'
 categories: ['Technique']
-tags: ['vocal techniques', 'singing style', 'artistic freedom', 'vocal mastery', 'genre-specific singing']
+tags: ['vocal technique', 'singing styles', 'authentic voice', 'vocal coaching', 'artistic expression']
 draft: false
 ---
 

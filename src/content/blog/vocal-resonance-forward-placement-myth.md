@@ -7,7 +7,7 @@ image:
   url: '/images/blog/07-vocal-resonance-in-singing.webp'
   alt: 'Illustration of vocal resonance concepts in singing'
 categories: ['Technique']
-tags: ['vocal resonance', 'forward placement', 'singing myths', 'voice science', 'vocal pedagogy']
+tags: ['vocal resonance', 'forward placement', 'singing myths', 'voice science', 'singing technique']
 draft: false
 ---
 

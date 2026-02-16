@@ -7,7 +7,7 @@ image:
   url: '/images/blog/01-olympia-wa-audition-guide.webp'
   alt: 'Infographic guide for auditions in Olympia WA featuring singers, choir, theater actors, and youth performers'
 categories: ['Performance']
-tags: ['auditions', 'olympia wa', 'community theater', 'choirs', 'performance tips']
+tags: ['auditions', 'olympia wa', 'community theater', 'ensemble singing', 'performance tips']
 draft: false
 ---
 

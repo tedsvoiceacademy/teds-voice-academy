@@ -6,8 +6,8 @@ author: 'Ted Lacey'
 image:
   url: '/images/blog/09-breath-support-vocal-compression.webp'
   alt: 'Illustration of breath support and vocal compression for singers'
-categories: ['Technique']
-tags: ['breath support', 'vocal compression', 'singing exercises', 'subglottic pressure', 'straw phonation']
+categories: ['Technique', 'Vocal Health']
+tags: ['breath support', 'vocal compression', 'singing exercises', 'vocal health', 'straw phonation']
 draft: false
 ---
 

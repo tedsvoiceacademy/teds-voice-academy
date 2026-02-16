@@ -6,8 +6,8 @@ author: 'Ted Lacey'
 image:
   url: '/images/blog/05-authenticity.webp'
   alt: 'Illustration representing authentic singing and vocal truth'
-categories: ['Technique', 'Mindset & Practice']
-tags: ['authenticity', 'vocal identity', 'singing technique', 'artistic expression', 'true voice']
+categories: ['Technique', 'Performance']
+tags: ['authentic voice', 'vocal identity', 'singing technique', 'artistic expression', 'singing styles']
 draft: false
 ---
 

@@ -7,7 +7,7 @@ image:
   url: '/images/blog/23-hidden-layers-masterful-singing.webp'
   alt: 'Layers of masterful singing from technique to emotional expression'
 categories: ['Performance', 'Mindset & Practice']
-tags: ['masterful singing', 'emotional expression', 'vocal health', 'performance art', 'singing technique']
+tags: ['masterful singing', 'emotional expression', 'vocal health', 'singing technique', 'vocal development']
 draft: false
 ---
 

@@ -7,7 +7,7 @@ image:
   url: '/images/blog/20-vocal-freedom-alignment.webp'
   alt: 'Singer demonstrating proper body alignment for vocal freedom'
 categories: ['Technique', 'Vocal Health']
-tags: ['body alignment', 'posture', 'vocal freedom', 'tension release', 'singing exercises']
+tags: ['body alignment', 'posture', 'vocal freedom', 'tension release', 'vocal health']
 draft: false
 ---
 

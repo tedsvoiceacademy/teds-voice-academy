@@ -6,8 +6,8 @@ author: 'Ted Lacey'
 image:
   url: '/images/blog/12-soft-palate-nasality.webp'
   alt: 'Illustration of soft palate position and nasality in singing'
-categories: ['Technique']
-tags: ['soft palate', 'nasality', 'nasal resonance', 'singing exercises', 'vocal resonance']
+categories: ['Technique', 'Vocal Health']
+tags: ['soft palate', 'nasality', 'vocal resonance', 'singing technique', 'voice science']
 draft: false
 ---
 

@@ -7,7 +7,7 @@ image:
   url: '/images/blog/21-early-morning-vocal-warm-up.webp'
   alt: 'Singer doing a morning vocal warm-up routine'
 categories: ['Vocal Health', 'Technique']
-tags: ['vocal warm-up', 'morning routine', 'throat clearing', 'humming exercises', 'vocal health']
+tags: ['vocal warm-up', 'singing exercises', 'vocal health', 'humming exercises', 'breath support']
 draft: false
 ---
 

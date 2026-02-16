@@ -6,8 +6,8 @@ author: 'Ted Lacey'
 image:
   url: '/images/blog/11-breath-support-singers.gif'
   alt: 'Animated illustration of breath support mechanics for singers'
-categories: ['Technique']
-tags: ['breath support', 'singing myths', 'diaphragm', 'vocal technique', 'airflow']
+categories: ['Technique', 'Vocal Health']
+tags: ['breath support', 'singing myths', 'vocal compression', 'vocal technique', 'vocal health']
 draft: false
 ---
 

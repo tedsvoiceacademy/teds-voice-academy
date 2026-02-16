@@ -6,8 +6,8 @@ author: 'Ted Lacey'
 image:
   url: '/images/blog/14-various-genres.webp'
   alt: 'Illustration of various singing genres including classical, theater, and contemporary'
-categories: ['Technique', 'Performance']
-tags: ['singing styles', 'classical singing', 'musical theater', 'contemporary vocals', 'vocal health']
+categories: ['Technique', 'Performance', 'Vocal Health']
+tags: ['singing styles', 'classical singing', 'musical theater', 'vocal coaching', 'vocal health']
 draft: false
 ---
 

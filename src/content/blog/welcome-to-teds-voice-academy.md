@@ -1,13 +1,13 @@
 ---
 title: "Welcome to Ted's Voice Academy: Vocal Coaching for Singers & Speakers"
-description: "An introduction to Ted's Voice Academy—personalized vocal coaching for discovering your authentic voice, whether you sing or speak."
+description: "An introduction to Ted's Voice Academy in Olympia, WA—personalized vocal coaching for singers and speakers ready to discover their authentic voice."
 pubDate: '2024-03-01'
 author: 'Ted Lacey'
 image:
   url: '/images/blog/24-welcome-to-teds-voice-academy.webp'
   alt: "Ted's Voice Academy logo and welcome banner"
 categories: ['For Professionals']
-tags: ['vocal coaching', 'voice academy', 'singing lessons', 'speaking skills', 'authentic voice']
+tags: ['vocal coaching', 'olympia wa', 'singing lessons', 'authentic voice', 'professional development']
 draft: false
 ---
 

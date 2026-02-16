@@ -7,7 +7,7 @@ image:
   url: '/images/blog/15-if-youre-human-youre-a-singer.webp'
   alt: 'Diverse group of people singing together representing universal human singing'
 categories: ['Mindset & Practice']
-tags: ['singing for everyone', 'biology of singing', 'music and the brain', 'confidence', 'vocal expression']
+tags: ['singing for everyone', 'beginner singing', 'vocal development', 'singing lessons', 'vocal expression']
 draft: false
 ---
 
