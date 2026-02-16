@@ -22,7 +22,7 @@ import SectionDivider from '../components/SectionDivider.astro';
   <!-- Medical Disclaimer -->
   <section class="disclaimer-section">
     <div class="container container-narrow">
-      <p class="page-date">Last updated: <time datetime="2026-02-05">February 5, 2026</time></p>
+      <p class="page-date">Last updated: <time datetime="2026-02-16">February 16, 2026</time></p>
       <p class="disclaimer"><em>I'm a voice teacher, not a medical professional. The information here is educational — it's not a substitute for medical advice. If you're experiencing persistent vocal problems, pain, or any symptoms that concern you, please consult a physician or voice-specialized medical professional.</em></p>
     </div>
   </section>
@@ -311,12 +311,65 @@ import SectionDivider from '../components/SectionDivider.astro';
       <p class="section-lead">Over the years, I've found certain home remedies genuinely useful for soothing tired voices and supporting recovery. These are my personal recommendations — things I've tested and trust.</p>
       <p class="section-lead"><em>Note: These suggestions are for general comfort and care. If you're experiencing persistent symptoms, please consult a medical professional.</em></p>
 
-      <div class="coming-soon-block">
-        <h3>Content coming soon</h3>
-        <p>Detailed recommendations for gargles, teas and soothing drinks, lozenges, supplements, and steam and humidity techniques are on their way. Check back soon.</p>
+      <!-- Gargle Recipe -->
+      <div class="content-block">
+        <h3>My go-to gargle for singers and speakers</h3>
+        <p>I've used this gargle for years and recommend it to my students. It combines ingredients that soothe, cleanse, and reduce inflammation in the throat. It takes a few minutes to prepare, and the relief is real.</p>
+
+        <h4>What you'll need:</h4>
+        <ul>
+          <li><strong>Warm water</strong> &mdash; 1 cup (the soothing base)</li>
+          <li><strong>Salt</strong> &mdash; 1/2 teaspoon (helps reduce swelling and cleanses the throat)</li>
+          <li><strong>Honey</strong> &mdash; 1 tablespoon (soothes and has natural antibacterial properties)</li>
+          <li><strong>Fresh ginger juice</strong> &mdash; 1 teaspoon (reduces inflammation and supports immunity)</li>
+          <li><strong>Apple cider vinegar</strong> &mdash; 1 teaspoon (balances pH and has antibacterial effects)</li>
+          <li><strong>Turmeric</strong> &mdash; 1/4 teaspoon (contains curcumin, a powerful anti-inflammatory)</li>
+          <li><strong>Lemon juice</strong> &mdash; a few drops (rich in vitamin C)</li>
+          <li><strong>Peppermint oil</strong> &mdash; 1&ndash;2 drops, optional (antimicrobial and soothing &mdash; use sparingly)</li>
+        </ul>
+
+        <h4>How to make it:</h4>
+        <ol>
+          <li>Juice fresh ginger to get about a teaspoon (or grate it and squeeze through a fine strainer).</li>
+          <li>Combine the warm water, salt, honey, ginger juice, apple cider vinegar, turmeric, and lemon juice. Stir until the honey and salt dissolve completely.</li>
+          <li>Add 1&ndash;2 drops of peppermint oil if using. Essential oils are potent, so a little goes a long way.</li>
+          <li>Take a small sip, tilt your head back, and gargle for about 30 seconds. Spit it out. Repeat as needed, especially before and after singing or speaking.</li>
+        </ol>
+
+        <p class="callout"><strong>Tips:</strong> Use fresh ingredients when possible. Adjust the apple cider vinegar and peppermint oil to your taste and tolerance. Make a fresh batch each day for the best results.</p>
       </div>
 
-      <!-- Steam section (has content) -->
+      <!-- Dr. Gould's Gargle -->
+      <div class="content-block">
+        <h3>Dr. Gould's Gargle</h3>
+        <p>This is a simpler, clinical gargle that voice professionals have used for decades. It's quick to prepare and especially helpful when your voice needs a recovery boost.</p>
+
+        <h4>What you'll need:</h4>
+        <ul>
+          <li><strong>Salt</strong> &mdash; 1/2 teaspoon (exfoliates and cleanses the vocal folds)</li>
+          <li><strong>Baking soda</strong> &mdash; 1/2 teaspoon (antibacterial and antifungal)</li>
+          <li><strong>Clear Karo syrup</strong> &mdash; 1/2 teaspoon (provides a soothing coating)</li>
+          <li><strong>Warm water</strong> &mdash; 6 ounces</li>
+        </ul>
+
+        <h4>How to use it:</h4>
+        <ol>
+          <li>Inhale steam from a humidifier or bowl of hot water for 2&ndash;3 minutes before gargling.</li>
+          <li>Combine the salt, baking soda, Karo syrup, and warm water. Stir until dissolved.</li>
+          <li>Gargle with the solution 2&ndash;3 times per day for up to 7 days.</li>
+          <li>Wait 20&ndash;30 minutes after gargling before eating, so the solution has time to do its work.</li>
+        </ol>
+      </div>
+
+      <!-- Teas and other tips -->
+      <div class="content-block">
+        <h3>A few more things that help</h3>
+        <p><strong>Warm herbal teas</strong> are a simple way to soothe your throat and stay hydrated. Caffeine-free options like chamomile, ginger, or licorice root tea are gentle choices. Adding a spoonful of honey can make them even more comforting.</p>
+        <p><strong>Honey on its own</strong> can coat and soothe an irritated throat. A small spoonful before bed or between voice-heavy sessions can make a noticeable difference.</p>
+        <p><strong>What to be careful with:</strong> Menthol-based cough drops can feel soothing, but some contain ingredients that dry out your throat over time. Look for lozenges with glycerin, honey, or slippery elm instead. And remember &mdash; the <a href="#foundations" class="inline-link">hydration habits</a> in the Foundations section above are your best daily defense.</p>
+      </div>
+
+      <!-- Steam section (existing content) -->
       <div class="content-block">
         <h3>Direct relief for your vocal tract</h3>
         <p>Steam inhalation is one of the simplest, most effective ways to soothe irritated vocal tissue. Warm, moist air helps reduce inflammation and keeps your throat comfortable.</p>
@@ -342,9 +395,69 @@ import SectionDivider from '../components/SectionDivider.astro';
       <p class="section-lead">SOVT stands for Semi-Occluded Vocal Tract. It's a category of exercises where you create a partial closure in your mouth or lips while phonating (making sound). This creates back-pressure that helps your vocal folds vibrate more efficiently with less effort.</p>
       <p class="section-lead">I've been using and teaching SOVT exercises for years. They're among the most valuable tools I know for warming up, cooling down, and maintaining vocal health.</p>
 
-      <div class="coming-soon-block">
-        <h3>Detailed content coming soon</h3>
-        <p>Full explanations of why SOVT works, specific exercises (straw phonation, lip trills, tongue trills, humming, cup bubbling), recommended tools, and guidance on when and how to use them are on the way.</p>
+      <!-- Why SOVT Works -->
+      <div class="content-block">
+        <h3>Why SOVT works</h3>
+        <p>When you partially close your mouth or lips while making sound, you create back pressure in the vocal tract. That back pressure does something remarkable: it helps your vocal folds vibrate more efficiently and with less effort.</p>
+        <p>Think of it as a gentle assist for your voice. The back pressure reduces the collision force between your vocal folds, lowers the effort needed to start phonation, and encourages healthy, balanced vibration. The result is less fatigue, smoother tone, and a voice that recovers faster.</p>
+        <p>These exercises improve vocal fold closure without strain, encourage consistent airflow, and can help smooth the transition between vocal registers. They work for every voice type, every style, and every level of experience.</p>
+      </div>
+
+      <!-- The Exercises -->
+      <div class="content-block">
+        <h3>The exercises</h3>
+        <p>SOVT exercises come in several forms. Each creates that beneficial back pressure in a slightly different way. Here are the ones I use and teach most:</p>
+
+        <h4>Humming</h4>
+        <p>The simplest SOVT exercise. Hum with your mouth closed, creating a resonant sound that promotes healthy vocal fold vibration. You can also hum with your mouth slightly open, directing the sound toward the "mask" area of your face. Sounds like "ng" (as in "sing"), "zzz," and "vvv" work similarly &mdash; they all create a semi-occluded condition that builds resonance and encourages efficient vibration.</p>
+
+        <h4>Lip trills</h4>
+        <p>Blow air through closed lips so they vibrate or "trill." This requires steady airflow from the diaphragm and helps relax the vocal folds while reducing tension in the larynx. You can do lip trills on pitches, scales, or simple melodies. They're excellent for connecting breath to voice.</p>
+
+        <h4>Straw phonation</h4>
+        <p>Make sound through a narrow straw. The straw creates back pressure in the vocal tract, helping your vocal folds vibrate more efficiently with less effort. This is one of the most effective SOVT techniques &mdash; it can significantly reduce vocal fatigue and works beautifully for both warm-up and cool-down.</p>
+
+        <h4>Lax Vox</h4>
+        <p>Phonate into a tube that's submerged in water. The water's resistance creates back pressure and provides tactile feedback you can feel and hear. Lax Vox is particularly effective for smoothing out the voice, reducing vocal fold swelling, and improving vocal fold closure. Many voice therapists use this technique for rehabilitation.</p>
+      </div>
+
+      <!-- 5-Minute SOVT Routine -->
+      <div class="content-block">
+        <h3>Your 5-minute SOVT routine</h3>
+        <p>This is the routine I recommend for daily practice. It takes five minutes and makes a real difference:</p>
+        <ol>
+          <li><strong>Hum gently</strong> &mdash; 1 minute. Keep it light and relaxed. Explore your comfortable range.</li>
+          <li><strong>Straw phonation</strong> &mdash; 1 minute. Blow softly through a straw while making sound. No force needed.</li>
+          <li><strong>Lip trills</strong> &mdash; 1 minute. Sing a soft "brrr" sound with minimal breath, gliding through your range.</li>
+          <li><strong>Transition to singing or speaking</strong> &mdash; 1 minute. Gently return to your normal voice.</li>
+        </ol>
+        <p class="callout"><strong>The key rule:</strong> Stop immediately if your voice feels tight or tired. SOVT exercises are about building a voice that works easily &mdash; they should never feel like a strain. Do this once a day for five minutes. In just a few weeks, you'll notice your voice working with more ease.</p>
+      </div>
+
+      <!-- Choosing Your Straw -->
+      <div class="content-block">
+        <h3>Choosing your straw</h3>
+        <p>The size of your straw changes the effect of the exercise. Here's a simple guide:</p>
+        <ul>
+          <li><strong>Narrower straws</strong> (like coffee stirrers) create more back pressure and demand finer control. These are great for advanced singers refining their technique.</li>
+          <li><strong>Medium straws</strong> (standard drinking straws) offer balanced resistance and are the best all-around choice for daily training.</li>
+          <li><strong>Wider straws or tubes</strong> create gentler back pressure and are ideal for beginners, recovery exercises, or very gentle warm-ups.</li>
+        </ul>
+        <p><strong>Length matters too:</strong> Shorter straws give a lighter effect. Longer straws engage the resonator more deeply and provide a more intensive experience. For most people, a standard-length drinking straw is a great starting point.</p>
+        <p>Specialized tools like the <strong>PocketVox</strong> and <strong>MaskVox</strong> (from DoctorVox) are designed specifically for SOVT exercises and offer consistent, calibrated resistance. They're worth exploring if you use these techniques regularly.</p>
+      </div>
+
+      <!-- When to Use SOVT -->
+      <div class="content-block">
+        <h3>When to use SOVT</h3>
+        <p>These exercises fit naturally into several parts of your day:</p>
+        <ul>
+          <li><strong>Before singing or speaking</strong> &mdash; A few minutes of SOVT exercises warm up your voice gently and efficiently, preparing your vocal folds for sustained use.</li>
+          <li><strong>After heavy voice use</strong> &mdash; SOVT exercises make excellent cool-downs. Gentle humming or straw phonation helps your voice transition back to rest.</li>
+          <li><strong>During recovery</strong> &mdash; If your voice is tired or strained, SOVT exercises (especially Lax Vox and wider straws) encourage healing vibration without adding strain.</li>
+          <li><strong>As daily maintenance</strong> &mdash; Five minutes a day keeps your voice in good working order. It's like stretching for your vocal folds.</li>
+        </ul>
+        <p>The beauty of SOVT exercises is their versatility. Whether you're a professional singer, a teacher who talks all day, or someone who just wants to keep their voice healthy, these techniques adapt to your needs.</p>
       </div>
     </div>
   </section>
@@ -369,9 +482,23 @@ import SectionDivider from '../components/SectionDivider.astro';
         <li>People who want to build good vocal habits before problems develop</li>
       </ul>
 
-      <div class="coming-soon-block">
-        <h3>Available routines coming soon</h3>
-        <p>Detailed descriptions of the Early Morning Warm-Up, Aging Voices routine, and additional routines are on the way — along with information on format and how to get them.</p>
+      <!-- What's in Vocal Fit -->
+      <div class="content-block">
+        <h3>What's in Vocal Fit</h3>
+        <p>Each Vocal Fit routine is an audio MP3 you can follow along with at home, in the car, or wherever you warm up. The routines are available in two range bundles:</p>
+        <ul>
+          <li><strong>LOW range bundle</strong> &mdash; designed for lower voices (baritones, altos, and lower mezzo-sopranos)</li>
+          <li><strong>HIGH range bundle</strong> &mdash; designed for higher voices (tenors, sopranos, and higher mezzo-sopranos)</li>
+        </ul>
+        <p>Each bundle includes 8 targeted exercises &mdash; humming, lip trills, glissandos, balanced onset arpeggios, dynamic training, and more &mdash; plus a complete warm-up sequence that combines them all. A companion PDF guide walks you through each exercise so you understand what you're doing and why.</p>
+        <p>There's also a modifications guide specifically for aging and maturing voices, addressing the changes that voices experience over time.</p>
+      </div>
+
+      <!-- Coming to the store -->
+      <div class="content-block">
+        <h3>Vocal Fit is coming soon</h3>
+        <p>Vocal Fit routines will be available for purchase directly from this site. If you'd like to be notified when they're ready, <a href="/contact" class="inline-link">reach out to me</a> or sign up for the <a href="#newsletter" class="inline-link">newsletter below</a>.</p>
+        <p>In the meantime, the <a href="#sovt" class="inline-link">SOVT exercises above</a> are a great place to start building your daily vocal conditioning practice.</p>
       </div>
     </div>
   </section>
@@ -385,9 +512,18 @@ import SectionDivider from '../components/SectionDivider.astro';
       <h2 class="reveal">More to explore</h2>
       <p class="section-lead">I write regularly about vocal health, technique, and the habits that support a healthy voice. Here you'll find a curated collection of articles, blog posts, and helpful resources.</p>
 
-      <div class="coming-soon-block">
-        <h3>Articles coming soon</h3>
-        <p>Featured articles, blog posts on vocal health, and curated external resources are on the way.</p>
+      <div class="content-block">
+        <h3>From the blog</h3>
+        <p>Here are some of my most relevant articles on vocal health and technique:</p>
+        <ul>
+          <li><a href="/blog/aging-voice-coaching-menopause-andropause" class="inline-link">Aging Voice Coaching</a> &mdash; How hormonal changes affect the voice and what coaching can do to help.</li>
+          <li><a href="/blog/what-is-breath-support-vocal-compression" class="inline-link">Breath Support &amp; Vocal Compression</a> &mdash; Understanding the mechanics of supported singing, including straw phonation exercises.</li>
+          <li><a href="/blog/breath-support-for-singers-debunking-myths" class="inline-link">Breath Support for Singers: Debunking Myths</a> &mdash; Separating what actually works from common misconceptions.</li>
+          <li><a href="/blog/early-morning-vocal-warm-up" class="inline-link">Early Morning Vocal Warm-Up</a> &mdash; A gentle routine for voices that need extra care first thing in the morning.</li>
+          <li><a href="/blog/vocal-freedom-power-of-proper-alignment" class="inline-link">Vocal Freedom &amp; Proper Alignment</a> &mdash; How your body's posture directly affects your vocal health and sound.</li>
+          <li><a href="/blog/mastering-vocal-projection-clarity" class="inline-link">Mastering Vocal Projection &amp; Clarity</a> &mdash; Techniques for being heard without straining, including SOVT exercises.</li>
+        </ul>
+        <p><a href="/blog" class="inline-link">Explore all articles &rarr;</a></p>
       </div>
     </div>
   </section>
