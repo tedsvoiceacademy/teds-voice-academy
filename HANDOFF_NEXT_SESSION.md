@@ -90,22 +90,21 @@ This applies to everything — quick fixes, visual changes, SEO tweaks, all of i
 
 ## What's Next
 
-### Tier 1 — High Value (no Ted input needed):
+### Tier 1 — Next Priorities:
+- [ ] **CMS (Decap CMS)** — **Ted's #1 near-term priority.** He needs an easy way to add blog posts and modify site content independently. Critical enabler.
+- [ ] **E-Commerce (Lemonsqueezy)** — Needed for Vocal Fit digital product sales. Also enables future product offerings.
+- [ ] **Review 41 untracked images** — Decide placement/removal with Ted (see Feb 16 session notes below)
 - [ ] **Breadcrumb schema + visual breadcrumbs** — BreadcrumbList JSON-LD + breadcrumb navigation on interior pages
 - [ ] **Track AI referral traffic in GA4** — Custom channel grouping for ChatGPT, Perplexity, etc.
 
-### Tier 1 — Needs Ted's content:
-- [x] **Blog individual post system** — ✅ DONE (Feb 16 session: layout, routing, 24 posts, SEO optimization, category filtering)
-- [x] **Import 24 scraped blog posts** — ✅ DONE (Feb 16 session)
-- [ ] **CMS (Decap CMS)** — Critical for Ted's independence
-- [ ] **Review 41 untracked images** — Decide placement/removal with Ted (see Feb 16 session notes below)
-
-### Dedicated Inventory Session — ✅ COMPLETED Feb 7:
-Resource cataloging is done. See `HANDOFF_RESOURCE_INVENTORY.md` and `BRIEFING_FROM_INVENTORY_SESSION.md` for full details. Key outcomes: Vocal Fit assets ready for store page, SOVT content ready for Vocal Health Hub (Ted wants section designed first), audition checklist identified as lead magnet.
+### Completed:
+- [x] **Blog system** — ✅ DONE (Feb 16). 24 posts, routing, layout, SEO optimization, interactive category filtering.
+- [x] **Vocal Health page** — ✅ DONE (Feb 16). All 4 "coming soon" placeholders replaced with real content.
+- [x] **Inventory session** — ✅ DONE (Feb 7). See `HANDOFF_RESOURCE_INVENTORY.md`.
 
 ### Tier 2:
 - [ ] **Per-page OG images** — Branded social sharing images for individual pages
-- [ ] **Restructure Vocal Health Hub** — Minimize "coming soon" placeholders
+- [ ] **BlogPosting schema** — Each post needs BlogPosting JSON-LD and per-post OG tags
 - [ ] **Remaining hero images** — Workshops, Vocal Health, Pricing, Blog, FAQ, Contact still have text-only heroes. Ted has `Ted Quartet coach.png` and `studio lesson2.png` available for future use.
 
 ### Tier 3 — Visual Polish:
@@ -126,7 +125,7 @@ Resource cataloging is done. See `HANDOFF_RESOURCE_INVENTORY.md` and `BRIEFING_F
 - **Live site:** https://tedsvoiceacademy.com
 - **Netlify URL:** https://deft-baklava-b2eb2e.netlify.app/
 - **Build status:** Clean — 40 pages built (16 original + 24 blog posts), zero errors
-- **Latest commits:** Blog system + 24 posts pushed Feb 16; SEO optimizations pending commit
+- **Latest commits:** `877a11d` (handoff docs), `94604ba` (vocal health page), `78c1677` (blog SEO + filtering), `a9bd0ef` (blog system)
 - **Previous commits:** `06271f2` (14c: hero images), `366a679` (14b: icon fix, grids, TM), `d6105fb` (14: icons, symmetry, photos)
 
 ### What's Live (40 Pages)
@@ -332,33 +331,30 @@ The images include original source photos (PNG/JPG), various WebP conversions, a
 
 ### Git State
 - **Build:** Clean — 40 pages, zero errors
-- **Blog commit:** Pushed to GitHub (blog system + 24 posts)
-- **Uncommitted changes:** SEO/category optimizations, blog landing page filtering, handoff doc update (this section)
+- **All session work pushed to GitHub:** `a9bd0ef` → `78c1677` → `5473361` → `94604ba` → `877a11d`
+- **Remaining uncommitted:** CLAUDE.md, README.md, index.astro (Elfsight widget ID change), tsconfig.json, favicon.svg, docs/ folder — these are pre-existing modifications from earlier sessions, not from Feb 16 work. Review and commit in next session.
 
 ### What's Next
 
-**Immediate (this session or next):**
-- [x] Commit and push SEO optimizations + blog landing page updates — ✅ DONE (commit `78c1677`)
-- [ ] Review 41 untracked images with Ted — placement decisions needed
-- [ ] Commit handoff docs + index.astro widget change + backlog updates
+**Ted's Near-Term Priorities (updated Feb 16):**
 
-**Ted's Near-Term Priorities (flagged Feb 16):**
-
-1. **Vocal Health Page Development:**
-   - **Home Care & Remedies** — Replace "coming soon" placeholder. Ted's gargle recipe is in his resource files. Locate it, develop content for this section.
-   - **SOVT Tools & Techniques** — Replace "coming soon" placeholder. SOVT materials available in Ted's files. Develop exercise explanations and recommendations.
-   - **Vocal Fit** — This will be a **purchased product**. Needs e-commerce solution before the section can fully launch. Update placeholder to reflect product status.
-   - **Add blog link** — Add link to `/blog` in the "More to Explore" section at bottom of vocal-health.astro.
-
-2. **CMS for Site Independence:**
+1. **CMS for Site Independence (Ted's #1):**
    - Ted needs an easy way to change/modify the site, especially the blog (adding new posts).
    - Decap CMS is the leading candidate — provides a GUI editor that commits to GitHub.
    - This is a **critical enabler** — Ted should be able to add blog posts without a developer session.
 
-3. **E-Commerce for Digital Products:**
+2. **E-Commerce for Digital Products:**
    - Vocal Fit will be sold from the site. Need to choose and integrate a payment/delivery solution.
-   - Options: Gumroad, Lemonsqueezy, Shopify Lite, Stripe direct.
-   - Also relevant for any future products Ted wants to sell.
+   - Lemonsqueezy chosen as platform. Also relevant for any future products Ted wants to sell.
+   - Once live, update the Vocal Fit section on vocal-health.astro to link to the store.
+
+3. **41 Untracked Images:**
+   - Review with Ted for placement/removal decisions (see notes below).
+
+**Completed This Session (Feb 16):**
+- [x] Blog system fully built and deployed (24 posts, SEO, filtering) — commit `78c1677`
+- [x] Vocal Health page — all 4 placeholders replaced with real content — commit `94604ba`
+- [x] Handoff docs + backlog updated — commits `5473361`, `877a11d`
 
 **Blog Enhancements (Tier 2):**
 - [ ] Related posts section on individual blog post pages

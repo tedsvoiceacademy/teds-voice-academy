@@ -67,15 +67,15 @@ Blog stays visible in nav (Ted's decision, Feb 5 session 8).
 - Tier 2: The AVF Framework explained, Vocal warmups for beginners, Musical theatre audition prep, Can you teach yourself to sing?, Speaking with confidence
 - Tier 3: Best performance venues in Olympia/Lacey, Singing groups in South Sound area
 
-### Vocal Health Page Development (Ted's Feb 16 Priority)
-The page has 3 placeholder "coming soon" sections. Ted has content/files ready for two of them and wants to plan the third:
+### Vocal Health Page — ✅ COMPLETE (Feb 16, 2026)
+All 4 "coming soon" placeholders replaced with real content (commit `94604ba`):
 
-1. **Home Care & Remedies ("Simple things that help")** — Gargle recipe is among Ted's files. Replace "coming soon" placeholder (lines 314-317 of vocal-health.astro) with real content. Ted's files likely in the inventoried resource folders.
-2. **SOVT Tools & Techniques ("One of the best things you can do for your voice")** — SOVT materials are available in Ted's files. Replace placeholder (lines 345-348) with exercise explanations, techniques, recommended tools.
-3. **Vocal Fit ("Structured routines for a healthy voice")** — This will be a **purchased product**. Needs e-commerce solution before it can go live. Placeholder at lines 372-375 should be updated to reflect it's a product (pricing, delivery method TBD). Blocked on: e-commerce setup (Gumroad, Lemonsqueezy, or similar).
-4. **Add blog link to Vocal Health page** — Add a link to `/blog` in the "More to Explore" section at bottom of the Vocal Health page.
+1. [x] **Home Care & Remedies** — Ted's gargle recipe (8 ingredients), Dr. Gould's Gargle (clinical recipe), tea/honey tips
+2. [x] **SOVT Tools & Techniques** — Why SOVT works, 4 exercises, 5-minute routine, straw guide, usage guidance
+3. [x] **Vocal Fit** — Product preview (LOW/HIGH bundles, 8 exercises, companion PDF), "coming soon to store" with contact/newsletter links. **Still needs:** e-commerce integration (Lemonsqueezy) before it can be sold.
+4. [x] **Articles & Resources** — 6 curated blog links + "Explore all articles" link to /blog
 
-**Action:** Next session should locate the gargle recipe and SOVT files in Ted's resource folders (see `HANDOFF_RESOURCE_INVENTORY.md`), then develop content for sections 1 and 2. Section 3 needs e-commerce infrastructure first.
+Source content: Ted's gargle PDFs from `H:\OneDrive\Ted's Voice Academy\Vocal Health\`, SOVT docs extracted from .docx files via PowerShell Word COM.
 
 ### Other Tier 1 Items
 - [x] **OG default image for social sharing** — DONE (Session 13). Generated `og-default.jpg` (1200x630px). BaseLayout updated with absolute URLs. Per-page variants still open.
@@ -90,7 +90,7 @@ The page has 3 placeholder "coming soon" sections. Ted has content/files ready f
 
 - [x] **Organizations & affiliations on About page** — DONE (Session 10, commit `3c54db0`). 8 org logos + 2 ensemble logos. "Proudly connected with" section. All linked to websites. Person schema updated with 10 memberOf entries.
 - [x] **Coaching & performance photos (partial)** — DONE (Sessions 14 + 14c). 3 inline photos placed (workshops, about, ensembles). 3 hero images placed (Singing, Speaking, Ensembles). Remaining pages (Workshops, Vocal Health, Pricing, Blog, FAQ, Contact) still have text-only heroes. Ted has `Ted Quartet coach.png` and `studio lesson2.png` ready for future use.
-- [ ] **Restructure Vocal Health Hub** — Minimize "coming soon" placeholders. Reorganize to lead with completed content.
+- [x] **Vocal Health Hub content** — ✅ DONE (Feb 16). All 4 "coming soon" placeholders replaced with real content.
 - [ ] **Add Review/AggregateRating schema** — When Google reviews exist, add to LocalBusiness markup. Star ratings in search results dramatically increase CTR.
 - [ ] **Event schema on Workshops page** — When specific workshops are scheduled, add Event structured data.
 
@@ -213,12 +213,9 @@ These items are blocked until Ted provides content, assets, or makes a decision.
 ### Blog Content
 - [x] **24 scraped blog posts** — ✅ DONE (Feb 16). All imported, optimized, and live.
 
-### Vocal Health Hub Content
-The page structure is built. These sections have "coming soon" placeholders:
-- [ ] **Home Care & Remedies** — gargle recipe available in Ted's files. Ready to develop.
-- [ ] **SOVT Tools & Techniques** — SOVT materials available in Ted's files. Ready to develop.
-- [ ] **Vocal Fit** — Will be a purchased product. Needs e-commerce solution first.
-- [ ] **Articles & Resources** — featured articles, external resource links
+### Vocal Health Hub Content — ✅ COMPLETE (Feb 16)
+All placeholder sections replaced with real content. Remaining work:
+- [ ] **Vocal Fit e-commerce** — Product is described on the page, but needs Lemonsqueezy integration before it can be sold. Update store link when ready.
 
 ### E-Commerce / Digital Product Sales
 - [ ] **E-commerce solution** — Needed for Vocal Fit and potentially other digital products Ted wants to sell from the site. Options: Gumroad, Lemonsqueezy, Shopify Lite, or Stripe direct. Ted needs to decide approach + pricing.
@@ -306,7 +303,8 @@ The page structure is built. These sections have "coming soon" placeholders:
 - [x] **Blog system complete** — 24 posts imported from scraped content. BlogPostLayout.astro, [...slug].astro routing, blog/index.astro landing page. 24 hero images in public/images/blog/. Build: 40 pages. (Feb 16, 2026)
 - [x] **Blog SEO optimization** — Categories rebalanced (Vocal Health 4→8, Performance 5→7). Tags standardized across all 24 posts. Descriptions optimized for 120-160 chars with local SEO terms. (Feb 16, 2026)
 - [x] **Blog interactive category filtering** — Category cards on blog landing page converted to JS-powered filter buttons with post counts, active states, filter indicator bar. (Feb 16, 2026)
+- [x] **Vocal Health page — all placeholders replaced** — Home Care (gargle recipes, tea tips), SOVT (exercises, routine, straw guide), Vocal Fit (product preview), Articles (6 blog links). Source content from Ted's PDFs + .docx files. (Feb 16, 2026)
 
 ---
 
-*Last updated: February 16, 2026 (Blog Session)*
+*Last updated: February 16, 2026 (Blog + Vocal Health Session)*
