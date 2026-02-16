@@ -262,9 +262,17 @@ Created migration tooling at `scripts/blog-migration/` and Astro content collect
 
 ---
 
-## Session: February 16, 2026 - Blog System Complete + SEO Optimization
+## Session: February 16, 2026 - Blog System + SEO + Vocal Health Page
 
 ### Completed This Session
+
+**Vocal Health Page — ALL PLACEHOLDERS REPLACED (commit `94604ba`):**
+- **Home Care & Remedies:** Ted's gargle recipe (8 ingredients with instructions), Dr. Gould's Gargle (clinical recipe with 7-day protocol), tea/honey/lozenge tips, cross-link to hydration section
+- **SOVT Tools & Techniques:** Why SOVT works, 4 exercises explained (humming, lip trills, straw phonation, Lax Vox), 5-minute daily routine, straw selection guide, usage guidance (warm-up/cool-down/recovery/maintenance)
+- **Vocal Fit:** Product preview (LOW/HIGH range MP3 bundles, 8 exercises, companion PDF, aging voice modifications), "coming to the store" notice with contact/newsletter links
+- **Articles & Resources:** 6 curated Vocal Health blog post links + "Explore all articles" link to /blog
+- Updated last-modified date to Feb 16, 2026
+- Source content: Ted's gargle PDFs from `H:\OneDrive\Ted's Voice Academy\Vocal Health\`, SOVT docs extracted from WEBSITE-READY via PowerShell Word COM
 
 **Blog System — FULLY BUILT:**
 - Deleted all 10 old files from `src/content/blog/` (6 non-blog page dumps + 4 messy WebWave scrapes)
