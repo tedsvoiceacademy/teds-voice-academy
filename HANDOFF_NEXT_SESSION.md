@@ -330,19 +330,34 @@ The images include original source photos (PNG/JPG), various WebP conversions, a
 ### What's Next
 
 **Immediate (this session or next):**
-- [ ] Commit and push SEO optimizations + blog landing page updates
+- [x] Commit and push SEO optimizations + blog landing page updates — ✅ DONE (commit `78c1677`)
 - [ ] Review 41 untracked images with Ted — placement decisions needed
-- [ ] Commit handoff docs + index.astro widget change
+- [ ] Commit handoff docs + index.astro widget change + backlog updates
+
+**Ted's Near-Term Priorities (flagged Feb 16):**
+
+1. **Vocal Health Page Development:**
+   - **Home Care & Remedies** — Replace "coming soon" placeholder. Ted's gargle recipe is in his resource files. Locate it, develop content for this section.
+   - **SOVT Tools & Techniques** — Replace "coming soon" placeholder. SOVT materials available in Ted's files. Develop exercise explanations and recommendations.
+   - **Vocal Fit** — This will be a **purchased product**. Needs e-commerce solution before the section can fully launch. Update placeholder to reflect product status.
+   - **Add blog link** — Add link to `/blog` in the "More to Explore" section at bottom of vocal-health.astro.
+
+2. **CMS for Site Independence:**
+   - Ted needs an easy way to change/modify the site, especially the blog (adding new posts).
+   - Decap CMS is the leading candidate — provides a GUI editor that commits to GitHub.
+   - This is a **critical enabler** — Ted should be able to add blog posts without a developer session.
+
+3. **E-Commerce for Digital Products:**
+   - Vocal Fit will be sold from the site. Need to choose and integrate a payment/delivery solution.
+   - Options: Gumroad, Lemonsqueezy, Shopify Lite, Stripe direct.
+   - Also relevant for any future products Ted wants to sell.
 
 **Blog Enhancements (Tier 2):**
 - [ ] Related posts section on individual blog post pages
+- [ ] BlogPosting schema + per-post OG tags
 - [ ] Pagination on blog landing if post count grows
-- [ ] Per-post OG images for social sharing
-- [ ] CMS (Decap CMS) for Ted to manage blog independently
 
 **Site-wide (from backlog):**
 - [ ] Breadcrumb schema + visual breadcrumbs
 - [ ] Track AI referral traffic in GA4
-- [ ] Restructure Vocal Health Hub (SOVT content ready, Ted wants section designed first)
-- [ ] Vocal Fit store page (assets ready, needs pricing/URL decisions from Ted)
 - [ ] Remaining hero images for text-only hero pages

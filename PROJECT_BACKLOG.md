@@ -44,6 +44,7 @@ Full research report completed. Ted said "I will definitely want to fully maximi
 - [x] **Self-host fonts** — DONE (Session 13). Inter (4 weights) + Playfair Display (4 weights) + Cinzel (3 weights) + Cormorant Garamond (4 weights) self-hosted as WOFF2. Google Fonts CDN completely removed.
 - [ ] **Breadcrumb schema + visual breadcrumbs** — Add BreadcrumbList schema and breadcrumb navigation to interior pages.
 - [ ] **Review collection system** — Create process for requesting Google reviews from students.
+- [ ] **Local citation / NAP consistency audit** — Verify business name, address, phone are identical across all directories (Alignable, Chamber of Commerce, Google Business Profile, Facebook, etc.). Inconsistent NAP hurts local search rankings. (Added Session 15 from cross-reference audit.)
 
 **Larger GEO/SEO efforts:**
 - [ ] **Add statistics, credentials, verifiable facts** throughout site copy (needs Ted's input — years experience, number of students, certifications)
@@ -52,19 +53,29 @@ Full research report completed. Ted said "I will definitely want to fully maximi
 - [ ] **Long-tail keyword optimization** — Target specific queries throughout site content
 
 ### Blog System + Content (Ted's #1 post-launch priority)
-Ted is scraping 24 blog posts from the old tedsvoice.com Webwave site. Blog stays visible in nav (Ted's decision, Feb 5 session 8).
+Blog stays visible in nav (Ted's decision, Feb 5 session 8).
+
+- [x] **Blog individual post system** — ✅ DONE (Feb 16). Layout, dynamic routing, 24 posts, hero images, all deployed.
+- [x] **Import 24 scraped blog posts** — ✅ DONE (Feb 16). All 24 posts converted with proper frontmatter, categories, tags.
+- [x] **Blog SEO optimization** — ✅ DONE (Feb 16). Categories rebalanced, tags standardized, descriptions optimized 120-160 chars, local SEO terms added.
+- [x] **Blog landing interactive filtering** — ✅ DONE (Feb 16). Category cards filter posts with JS toggle, count badges, active states.
+- [ ] **CMS for content updates** — Decap CMS (or similar) for Ted to manage blog posts and site content independently. **Critical enabler for Ted's independence.** Ted specifically flagged this as a near-term priority (Feb 16).
+- [ ] **BlogPosting schema** — Each post needs BlogPosting JSON-LD and per-post OG tags.
 
 **Blog content strategy from GEO/SEO research (12 prioritized topics):**
 - Tier 1: How to choose a voice teacher, Singing lessons for adults, What to expect at first lesson, Vocal health care, Voice teacher vs vocal coach
 - Tier 2: The AVF Framework explained, Vocal warmups for beginners, Musical theatre audition prep, Can you teach yourself to sing?, Speaking with confidence
 - Tier 3: Best performance venues in Olympia/Lacey, Singing groups in South Sound area
 
-Ted said he'll get to blog content "in the next few days."
+### Vocal Health Page Development (Ted's Feb 16 Priority)
+The page has 3 placeholder "coming soon" sections. Ted has content/files ready for two of them and wants to plan the third:
 
-- [ ] **Blog individual post system** — Build blog post template/layout, routing (`/blog/[slug]`), and index page. Currently only a landing page with category cards.
-- [ ] **Import 24 scraped blog posts** — Convert Ted's scraped content into publishable posts.
-- [ ] **Blog post SEO** — Each post needs: unique title/description, BlogPosting schema, OG tags.
-- [ ] **CMS for content updates** — Decap CMS for Ted to update any part of the site independently. Critical enabler for Ted's independence.
+1. **Home Care & Remedies ("Simple things that help")** — Gargle recipe is among Ted's files. Replace "coming soon" placeholder (lines 314-317 of vocal-health.astro) with real content. Ted's files likely in the inventoried resource folders.
+2. **SOVT Tools & Techniques ("One of the best things you can do for your voice")** — SOVT materials are available in Ted's files. Replace placeholder (lines 345-348) with exercise explanations, techniques, recommended tools.
+3. **Vocal Fit ("Structured routines for a healthy voice")** — This will be a **purchased product**. Needs e-commerce solution before it can go live. Placeholder at lines 372-375 should be updated to reflect it's a product (pricing, delivery method TBD). Blocked on: e-commerce setup (Gumroad, Lemonsqueezy, or similar).
+4. **Add blog link to Vocal Health page** — Add a link to `/blog` in the "More to Explore" section at bottom of the Vocal Health page.
+
+**Action:** Next session should locate the gargle recipe and SOVT files in Ted's resource folders (see `HANDOFF_RESOURCE_INVENTORY.md`), then develop content for sections 1 and 2. Section 3 needs e-commerce infrastructure first.
 
 ### Other Tier 1 Items
 - [x] **OG default image for social sharing** — DONE (Session 13). Generated `og-default.jpg` (1200x630px). BaseLayout updated with absolute URLs. Per-page variants still open.
@@ -100,7 +111,7 @@ Ted explicitly said he wants to get to these as soon as possible. These need col
 - [x] **Iconography** — DONE (Session 14). 64 Lucide inline SVG icons across 10 pages. `.icon-inline` CSS utility in global.css.
 - [ ] **Hero parallax effect** — CSS-only parallax on hero photos. Disabled on mobile. Ted interested but deferred.
 - [ ] **Varied section layouts** — Per-page layout diversity: numbered steps, alternating left-right, timelines.
-- [ ] **Digital product delivery for Vocal Fit** — Gumroad or Lemonsqueezy. Blocked until product defined.
+- [ ] **Digital product delivery for Vocal Fit** — Gumroad or Lemonsqueezy. Ted confirmed (Feb 16) this will be a purchased product — needs e-commerce setup. See "Waiting on Ted > E-Commerce" section.
 - [ ] **Members-only section** — Approach TBD.
 
 ---
@@ -200,14 +211,17 @@ Let's start with topic [NUMBER]. I'll share my perspective and expertise, and yo
 These items are blocked until Ted provides content, assets, or makes a decision.
 
 ### Blog Content
-- [ ] **24 scraped blog posts** — Ted is scraping from old tedsvoice.com Webwave site.
+- [x] **24 scraped blog posts** — ✅ DONE (Feb 16). All imported, optimized, and live.
 
 ### Vocal Health Hub Content
 The page structure is built. These sections have "coming soon" placeholders:
-- [ ] **Home Care & Remedies** — gargle recipes, tea recommendations, lozenge guidance
-- [ ] **SOVT Tools & Techniques** — exercises with instructions, recommended tools
-- [ ] **Vocal Fit** — product descriptions, format details, pricing
+- [ ] **Home Care & Remedies** — gargle recipe available in Ted's files. Ready to develop.
+- [ ] **SOVT Tools & Techniques** — SOVT materials available in Ted's files. Ready to develop.
+- [ ] **Vocal Fit** — Will be a purchased product. Needs e-commerce solution first.
 - [ ] **Articles & Resources** — featured articles, external resource links
+
+### E-Commerce / Digital Product Sales
+- [ ] **E-commerce solution** — Needed for Vocal Fit and potentially other digital products Ted wants to sell from the site. Options: Gumroad, Lemonsqueezy, Shopify Lite, or Stripe direct. Ted needs to decide approach + pricing.
 
 ### Other Content Needed
 - [x] **Organization logos/confirmation** — DONE (Session 10). Ted provided all logos. List confirmed and implemented.
@@ -289,6 +303,10 @@ The page structure is built. These sections have "coming soon" placeholders:
 - [x] **Trademark symbols** — Added ™ to PASS Profile, AVF, Adaptive Voice Framework across 14 files (38 instances). Key headings + first body mention per page (Feb 6, 2026 — Session 14b)
 - [x] **Hero images on service pages** — Added hero images to Singing, Speaking, Ensembles. Converted text-only heroes to hero-grid layout with entrance animations. Photos: hero-singing-lesson.webp (68KB), hero-speaking.webp (27KB), hero-ensembles.webp (79KB) (Feb 6, 2026 — Session 14c)
 
+- [x] **Blog system complete** — 24 posts imported from scraped content. BlogPostLayout.astro, [...slug].astro routing, blog/index.astro landing page. 24 hero images in public/images/blog/. Build: 40 pages. (Feb 16, 2026)
+- [x] **Blog SEO optimization** — Categories rebalanced (Vocal Health 4→8, Performance 5→7). Tags standardized across all 24 posts. Descriptions optimized for 120-160 chars with local SEO terms. (Feb 16, 2026)
+- [x] **Blog interactive category filtering** — Category cards on blog landing page converted to JS-powered filter buttons with post counts, active states, filter indicator bar. (Feb 16, 2026)
+
 ---
 
-*Last updated: February 6, 2026 (Session 14c)*
+*Last updated: February 16, 2026 (Blog Session)*
