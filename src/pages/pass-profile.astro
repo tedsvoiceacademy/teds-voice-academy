@@ -404,6 +404,9 @@ import SectionDivider from '../components/SectionDivider.astro';
 
       <div class="ecosystem-grid reveal-stagger">
         <div class="ecosystem-card reveal">
+          <div class="eco-logo">
+            <img src="/images/pass-profile-logo.webp" alt="PASS Profile logo" class="eco-logo-img" />
+          </div>
           <div class="eco-badge">Individual</div>
           <h3>PASS Profile</h3>
           <div class="eco-price">$49.99</div>
@@ -411,6 +414,9 @@ import SectionDivider from '../components/SectionDivider.astro';
           <a href="https://pass.tedsvoiceacademy.com" class="eco-link">Get Your Profile →</a>
         </div>
         <div class="ecosystem-card featured reveal">
+          <div class="eco-logo">
+            <img src="/images/PASS + Voice-Brand Logo.png" alt="PASS Profile + Voice-Brand Alignment bundle logo" class="eco-logo-img" />
+          </div>
           <div class="eco-badge">Best Value</div>
           <h3>PASS + Voice-Brand Bundle</h3>
           <div class="eco-price">$59.99</div>
@@ -418,6 +424,9 @@ import SectionDivider from '../components/SectionDivider.astro';
           <a href="https://pass.tedsvoiceacademy.com" class="eco-link">Get the Bundle →</a>
         </div>
         <div class="ecosystem-card reveal">
+          <div class="eco-logo">
+            <img src="/images/Team Dynamics Alignment Logo.png" alt="Team Dynamics Alignment logo" class="eco-logo-img" />
+          </div>
           <div class="eco-badge">Teams</div>
           <h3>Team Dynamics Alignment</h3>
           <div class="eco-price">$39.99 – $119.99</div>
@@ -1114,6 +1123,22 @@ import SectionDivider from '../components/SectionDivider.astro';
     border-color: var(--pass-accent);
     background: var(--pass-light);
     box-shadow: 0 4px 16px rgba(61, 181, 140, 0.15);
+  }
+
+  .eco-logo {
+    margin-bottom: 1.25rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 80px;
+  }
+
+  .eco-logo-img {
+    max-height: 80px;
+    max-width: 100%;
+    width: auto;
+    display: block;
+    object-fit: contain;
   }
 
   .eco-badge {
