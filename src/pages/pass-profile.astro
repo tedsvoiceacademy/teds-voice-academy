@@ -12,32 +12,67 @@ import SectionDivider from '../components/SectionDivider.astro';
         {
           "@type": "Question",
           "name": "How is PASS Profile different from DISC or Myers-Briggs?",
-          "acceptedAnswer": { "@type": "Answer", "text": "DISC and Myers-Briggs measure broad personality traits and sort you into types. PASS Profile focuses specifically on communication behavior in professional settings. It uses real workplace scenarios instead of abstract questions, and it generates truly individual results — more unique combinations than atoms in the observable universe." }
+          "acceptedAnswer": { "@type": "Answer", "text": "DISC, Myers-Briggs, and CliftonStrengths measure broad personality traits and sort you into types. PASS Profile focuses specifically on communication behaviors in professional settings. It presents 60 real workplace scenarios and measures 40 traits on a continuous 0-100 scale — creating more unique combinations than atoms in the observable universe." }
+        },
+        {
+          "@type": "Question",
+          "name": "Is PASS Profile a personality test?",
+          "acceptedAnswer": { "@type": "Answer", "text": "No. PASS measures communication behaviors — how you actually communicate and interact in professional settings. It doesn't measure personality, intelligence, competence, or character. It's a professional development tool for self-awareness and intentional communication." }
+        },
+        {
+          "@type": "Question",
+          "name": "How does the PASS Profile assessment work?",
+          "acceptedAnswer": { "@type": "Answer", "text": "You encounter 60 workplace scenarios. For each, you rate four possible responses on a 1-5 scale based on how much each sounds like you — producing 240 individual data points. Each response contributes to multiple traits simultaneously. There are no right or wrong answers. Your progress auto-saves on every response." }
         },
         {
           "@type": "Question",
           "name": "How long does the PASS Profile assessment take?",
-          "acceptedAnswer": { "@type": "Answer", "text": "Most people complete it in 30 to 60 minutes. You can save your progress and return later — each scenario has a Save and Exit button." }
+          "acceptedAnswer": { "@type": "Answer", "text": "Most people complete it in 30 to 60 minutes. There's no time limit. Your progress auto-saves on every response, and you can pause and resume anytime." }
         },
         {
           "@type": "Question",
           "name": "Will my results match someone else's?",
-          "acceptedAnswer": { "@type": "Answer", "text": "It's virtually impossible. PASS measures 40 traits on a continuous scale, creating more unique combinations than atoms in the observable universe. Your communication fingerprint is genuinely yours." }
+          "acceptedAnswer": { "@type": "Answer", "text": "It's virtually impossible. PASS measures 40 traits on a continuous 0-100 scale, creating more unique combinations than atoms in the observable universe. Your communication fingerprint is mathematically unique to you." }
         },
         {
           "@type": "Question",
-          "name": "Can teams take PASS Profile together?",
-          "acceptedAnswer": { "@type": "Answer", "text": "Yes. When team members understand each other's communication patterns, they collaborate more effectively. Each person takes the assessment individually and receives their own report. Team workshops and organizational applications are in development." }
+          "name": "What do the PASS Profile scores mean?",
+          "acceptedAnswer": { "@type": "Answer", "text": "Each trait is scored 0-100 in three ranges: Natural (66-100) means this comes easily — it's your default. Flexible (36-65) means you adapt based on context. Intentional (0-35) means you can do this with conscious effort. All three ranges are equally valuable." }
+        },
+        {
+          "@type": "Question",
+          "name": "Can PASS Profile be used for hiring or screening?",
+          "acceptedAnswer": { "@type": "Answer", "text": "No. PASS Profile is a professional development tool, not a hiring or screening instrument. It measures communication preferences, not competence, ability, or job performance." }
+        },
+        {
+          "@type": "Question",
+          "name": "Can I share my PASS Profile results with my team?",
+          "acceptedAnswer": { "@type": "Answer", "text": "Yes. Your report includes a Working With Others section designed to be shared with colleagues, written in first person so teammates can quickly understand how to collaborate with you." }
+        },
+        {
+          "@type": "Question",
+          "name": "Can teams use PASS Profile together?",
+          "acceptedAnswer": { "@type": "Answer", "text": "Yes. Each team member takes the individual PASS assessment first. Then the Team Dynamics Alignment report analyzes how everyone's communication patterns interact — revealing pair dynamics, six communication roles, collective strengths, and team-specific scenarios. TDA is available for teams of 2-12 people, priced from $39.99 to $119.99 by team size." }
+        },
+        {
+          "@type": "Question",
+          "name": "What is Voice-Brand Alignment?",
+          "acceptedAnswer": { "@type": "Answer", "text": "Voice-Brand Alignment is the role-specific application layer on top of your PASS Profile. You provide your job title, industry, key audiences, and role description. It generates an 8-10 page report with a personal communication brand statement, role-specific strategic playbook, and 90-day integration plan. Available in the PASS + Voice-Brand Bundle for $59.99." }
+        },
+        {
+          "@type": "Question",
+          "name": "What is Team Dynamics Alignment?",
+          "acceptedAnswer": { "@type": "Answer", "text": "Team Dynamics Alignment analyzes how a team's individual communication patterns interact. It reveals pair dynamics, communication roles (Initiator, Bridge, Anchor, Catalyst, Harmonizer, Strategist), collective strengths, and team-specific scenarios. Available for teams of 2-3 ($39.99), 4-8 ($79.99), or 9-12 ($119.99)." }
         },
         {
           "@type": "Question",
           "name": "What do I do with my results after I get them?",
-          "acceptedAnswer": { "@type": "Answer", "text": "Your report includes a 90-day development roadmap, a shareable Working With Others section for colleagues, and a one-page Quick Reference Card. You can also book a coaching session to explore your results in depth and apply them to specific professional challenges." }
+          "acceptedAnswer": { "@type": "Answer", "text": "Your report includes a 90-day development roadmap with specific daily practices, a shareable Working With Others section for colleagues, a one-page Quick Reference Card, and a Similar Well-Known Communicator match. You can also book a coaching session to explore your results in depth." }
         },
         {
           "@type": "Question",
           "name": "How much does PASS Profile cost?",
-          "acceptedAnswer": { "@type": "Answer", "text": "The assessment is $49.99. You receive a comprehensive 46-48 page personalized PDF report, typically delivered within minutes of completion." }
+          "acceptedAnswer": { "@type": "Answer", "text": "PASS Profile is $49.99. The PASS + Voice-Brand Bundle is $59.99 (saves $10). Team Dynamics Alignment is $39.99 for 2-3 members, $79.99 for 4-8, or $119.99 for 9-12. All reports are personalized PDFs delivered to your email within minutes." }
         }
       ]
     })} />
@@ -53,9 +88,10 @@ import SectionDivider from '../components/SectionDivider.astro';
         <h1>Discover Your Communication Fingerprint</h1>
         <p class="hero-subhead">Your communication style is as unique as your fingerprint. PASS Profile™ reveals how you naturally communicate in professional settings — helping you leverage your authentic strengths.</p>
         <div class="hero-cta">
-          <a href="https://pass.tedsvoiceacademy.com" class="btn btn-primary">Take Assessment — $49.99</a>
-          <a href="#how-it-works" class="btn btn-secondary">See How It Works ↓</a>
+          <a href="https://pass.tedsvoiceacademy.com" class="btn btn-primary">Get Your Profile — $49.99</a>
+          <a href="https://pass.tedsvoiceacademy.com" class="btn btn-secondary">Get the Bundle — $59.99</a>
         </div>
+        <p class="hero-bundle-note">Bundle includes Voice-Brand Alignment — your role-specific application report</p>
       </div>
       <div class="hero-visual">
         <img src="/images/pass-bubble.webp" alt="PASS Profile 3.0 - fingerprint inside speech bubble" class="hero-fingerprint" />
@@ -68,8 +104,8 @@ import SectionDivider from '../components/SectionDivider.astro';
   <!-- Answer Capsule — structured summary for AI search engines -->
   <section class="capsule-section">
     <div class="container">
-      <p class="answer-capsule">PASS Profile is a professional communication assessment that measures 40 traits across six domains to create your unique communication fingerprint. Developed by Ted Chamberlain, it uses scenario-based questions to reveal your authentic communication style. The assessment costs $49.99 and delivers a 46-48 page personalized PDF report.</p>
-      <p class="page-date">Last updated: <time datetime="2026-02-05">February 5, 2026</time></p>
+      <p class="answer-capsule">PASS Profile is a professional communication assessment that measures 40 traits across six domains to create your unique communication fingerprint. Developed by Ted Chamberlain, it uses scenario-based questions to reveal your authentic communication style. The assessment costs $49.99 and delivers a 35-48 page personalized PDF report. A Voice-Brand Alignment bundle ($59.99) adds role-specific application insights. Team Dynamics Alignment ($39.99-$119.99) analyzes how teams of 2-12 communicate together.</p>
+      <p class="page-date">Last updated: <time datetime="2026-02-18">February 18, 2026</time></p>
     </div>
   </section>
 
@@ -118,27 +154,30 @@ import SectionDivider from '../components/SectionDivider.astro';
 
       <div class="score-ranges reveal-stagger">
         <div class="score-range high reveal">
-          <div class="score-label">70-100</div>
+          <div class="score-label">66–100</div>
+          <div class="score-name">Natural</div>
           <div class="score-description">
-            <strong>Higher scores</strong> indicate natural strengths — patterns that come easily and typically energize you.
+            This comes easily to you. It's your default setting — where you go without thinking about it.
           </div>
         </div>
         <div class="score-range mid reveal">
-          <div class="score-label">40-69</div>
+          <div class="score-label">36–65</div>
+          <div class="score-name">Flexible</div>
           <div class="score-description">
-            <strong>Mid-range scores</strong> show flexibility — you adapt your approach based on context and situation. This versatility is itself a strength.
+            You adapt based on the situation. You can go either way depending on context, giving you natural versatility.
           </div>
         </div>
         <div class="score-range low reveal">
-          <div class="score-label">0-39</div>
+          <div class="score-label">0–35</div>
+          <div class="score-name">Intentional</div>
           <div class="score-description">
-            <strong>Lower scores</strong> reveal distinctive features of your style. Every pattern has contexts where it excels. Your valleys help define what makes your fingerprint unique.
+            You can absolutely do this — it takes conscious effort. This is a strategic choice you make when the situation calls for it.
           </div>
         </div>
       </div>
 
       <div class="key-insight reveal">
-        <p><strong>Here's what matters most: your valleys are as important as your peaks.</strong> Someone with high Empathy and low Directness is defined by both scores together. The combination creates your unique communication fingerprint.</p>
+        <p><strong>All three ranges are equally valuable.</strong> A Natural score means a behavior flows automatically. An Intentional score means you have conscious control over when and how you deploy it. Neither is better or worse — they are different strategic positions.</p>
         <p>Your report analyzes all 40 trait scores together — how they combine and interact is what makes your pattern genuinely yours.</p>
       </div>
     </div>
@@ -179,7 +218,7 @@ import SectionDivider from '../components/SectionDivider.astro';
   <section class="receive">
     <div class="container">
       <h2 class="reveal">What You'll Receive</h2>
-      <p class="section-intro reveal">After completing the assessment (30–60 minutes), you'll receive a comprehensive PDF report — typically 46-48 pages — delivered to your email.</p>
+      <p class="section-intro reveal">After completing the assessment (30–60 minutes), you'll receive a comprehensive PDF report — typically 35-48 pages — delivered to your email.</p>
       <p class="reveal">Your report draws on all 40 of your trait scores to create a complete picture of your communication style. Every insight reflects how your full pattern works together — peaks and valleys alike.</p>
 
       <div class="report-contents">
@@ -290,8 +329,8 @@ import SectionDivider from '../components/SectionDivider.astro';
           <div class="step-number">2</div>
           <div class="step-content">
             <h3>Complete the assessment</h3>
-            <p>You'll encounter 60 workplace scenarios. For each one, you'll rate four possible responses on a scale of 1–5 based on how much each sounds like you. Every option reflects a valid professional approach — there are no right or wrong answers.</p>
-            <p class="step-note">The assessment takes 30–60 minutes. Each scenario has a "Save and Exit" button, so you can stop anytime and return later to pick up where you left off.</p>
+            <p>You'll encounter 60 workplace scenarios. For each one, you'll rate four possible responses on a scale of 1–5 based on how much each sounds like you — producing 240 individual data points. Every option reflects a valid professional approach — there are no right or wrong answers.</p>
+            <p class="step-note">The assessment takes 30–60 minutes. Your progress auto-saves on every response, and you can use the "Save and Exit" button anytime to stop and pick up exactly where you left off.</p>
           </div>
         </div>
         <div class="step reveal">
@@ -341,7 +380,7 @@ import SectionDivider from '../components/SectionDivider.astro';
         </div>
         <div class="application reveal">
           <h3>For HR and team leaders</h3>
-          <p>Help employees understand their communication strengths and how to work effectively with colleagues who communicate differently. Teams that understand each other collaborate better — with fewer conflicts and stronger results.</p>
+          <p>Help employees understand their communication strengths and how to work effectively with colleagues who communicate differently. The <a href="https://pass.tedsvoiceacademy.com" style="color: var(--pass-accent);">Team Dynamics Alignment</a> report reveals how team members' patterns interact — available for groups of 2-12.</p>
         </div>
         <div class="application reveal">
           <h3>For educational institutions</h3>
@@ -353,32 +392,39 @@ import SectionDivider from '../components/SectionDivider.astro';
         </div>
       </div>
       
-      <p class="contact-note">If you're interested in using PASS Profile in your organization or practice, reach out. I'm actively developing <a href="/workshops">team workshops</a> and organizational applications.</p>
+      <p class="contact-note">If you're interested in using PASS Profile in your organization or practice, reach out. <a href="https://pass.tedsvoiceacademy.com" style="color: var(--pass-accent);">Voice-Brand Alignment</a> and <a href="https://pass.tedsvoiceacademy.com" style="color: var(--pass-accent);">Team Dynamics Alignment</a> are available now. Team workshops coming soon. Email <a href="mailto:PASS@tedsvoiceacademy.com">PASS@tedsvoiceacademy.com</a></p>
     </div>
   </section>
 
-  <!-- Coming Soon -->
-  <section class="coming-soon">
+  <!-- The PASS Ecosystem -->
+  <section class="ecosystem">
     <div class="container">
-      <h2 class="reveal">What's Next for PASS Profile™</h2>
-      <p class="section-intro reveal">PASS Profile continues to grow. Here's what's in development:</p>
+      <h2 class="reveal">The PASS Profile™ Ecosystem</h2>
+      <p class="section-intro reveal">PASS Profile is part of a three-product communication intelligence system. Each product builds on the one before it — revealing WHO you are as a communicator, HOW to apply it in your role, and how your pattern INTERACTS with others.</p>
 
-      <div class="future-items reveal-stagger">
-        <div class="future-item reveal">
-          <h3>Voice-Brand Alignment</h3>
-          <p>An add-on that aligns your communication fingerprint with your specific role and responsibilities, giving you direct clarity on how to leverage your style in your current position.</p>
+      <div class="ecosystem-grid reveal-stagger">
+        <div class="ecosystem-card reveal">
+          <div class="eco-badge">Individual</div>
+          <h3>PASS Profile</h3>
+          <div class="eco-price">$49.99</div>
+          <p>Your communication fingerprint. 60 workplace scenarios measuring 40 traits across 6 domains, delivered as a personalized 35-48 page PDF report.</p>
+          <a href="https://pass.tedsvoiceacademy.com" class="eco-link">Get Your Profile →</a>
         </div>
-        <div class="future-item reveal">
+        <div class="ecosystem-card featured reveal">
+          <div class="eco-badge">Best Value</div>
+          <h3>PASS + Voice-Brand Bundle</h3>
+          <div class="eco-price">$59.99</div>
+          <p>Everything in PASS Profile, plus a role-specific Voice-Brand Alignment report (8-10 pages) showing how to deploy your communication pattern in your specific job, industry, and audience context.</p>
+          <a href="https://pass.tedsvoiceacademy.com" class="eco-link">Get the Bundle →</a>
+        </div>
+        <div class="ecosystem-card reveal">
+          <div class="eco-badge">Teams</div>
           <h3>Team Dynamics Alignment</h3>
-          <p>A team-level analysis that helps groups understand how to work together more effectively based on their combined communication patterns.</p>
-        </div>
-        <div class="future-item reveal">
-          <h3>Workshops and training</h3>
-          <p>Group sessions for organizations and teams.</p>
+          <div class="eco-price">$39.99 – $119.99</div>
+          <p>Team interaction analysis for groups of 2-12. Reveals pair dynamics, communication roles, collective strengths, and how individual patterns interact. Requires each member to have a completed PASS Profile.</p>
+          <a href="https://pass.tedsvoiceacademy.com" class="eco-link">Build Your Team Report →</a>
         </div>
       </div>
-      
-      <p class="notify-text">Want to be notified when these become available? Email <a href="mailto:PASS@tedsvoiceacademy.com">PASS@tedsvoiceacademy.com</a></p>
     </div>
   </section>
 
@@ -389,32 +435,67 @@ import SectionDivider from '../components/SectionDivider.astro';
 
       <details class="faq-item reveal">
         <summary>How is PASS Profile different from DISC or Myers-Briggs?</summary>
-        <p>DISC and Myers-Briggs measure broad personality traits and sort you into types. PASS Profile focuses specifically on communication behavior in professional settings. It uses real workplace scenarios instead of abstract questions, and it generates truly individual results — more unique combinations than atoms in the observable universe.</p>
+        <p>DISC, Myers-Briggs, and CliftonStrengths measure broad personality traits and sort you into types — one of 4, 16, or 34 categories. PASS Profile focuses specifically on communication behaviors in professional settings. It presents 60 real workplace scenarios (not abstract self-descriptions) and measures 40 traits on a continuous 0-100 scale. The result is more unique combinations than atoms in the observable universe — your profile is mathematically yours alone.</p>
+      </details>
+
+      <details class="faq-item reveal">
+        <summary>Is PASS Profile a personality test?</summary>
+        <p>No. PASS measures communication behaviors — how you actually communicate and interact in professional settings. It doesn't measure personality, intelligence, competence, or character. It's a professional development tool for self-awareness and intentional communication, not a psychological or clinical assessment.</p>
+      </details>
+
+      <details class="faq-item reveal">
+        <summary>How does the assessment work?</summary>
+        <p>You'll encounter 60 workplace scenarios presenting realistic professional situations. For each scenario, you rate four possible responses on a 1-5 scale based on how much each sounds like you. This produces 240 individual data points. Each response contributes to multiple traits simultaneously — there are no right or wrong answers. Your progress auto-saves on every response, and you can pause and resume anytime.</p>
       </details>
 
       <details class="faq-item reveal">
         <summary>How long does the assessment take?</summary>
-        <p>Most people complete it in 30 to 60 minutes. You can save your progress and return later — each scenario has a Save and Exit button.</p>
+        <p>Most people complete it in 30 to 60 minutes. There's no time limit — go at your own pace. Your progress auto-saves on every response, and the "Save and Exit" button lets you stop anytime and return later to pick up exactly where you left off.</p>
       </details>
 
       <details class="faq-item reveal">
         <summary>Will my results match someone else's?</summary>
-        <p>It's virtually impossible. PASS measures 40 traits on a continuous scale, creating more unique combinations than atoms in the observable universe. Your communication fingerprint is genuinely yours.</p>
+        <p>It's virtually impossible. PASS measures 40 traits on a continuous 0-100 scale, creating more unique combinations than atoms in the observable universe (10<sup>168</sup> possible profiles). Unlike assessments that sort you into one of a handful of types, your communication fingerprint is mathematically unique to you.</p>
       </details>
 
       <details class="faq-item reveal">
-        <summary>Can teams take PASS Profile together?</summary>
-        <p>Yes. When team members understand each other's communication patterns, they collaborate more effectively. Each person takes the assessment individually and receives their own report. Team workshops and organizational applications are in development.</p>
+        <summary>What do the scores mean?</summary>
+        <p>Each trait is scored 0-100 and falls into one of three ranges: <strong>Natural (66-100)</strong> means this behavior comes easily — it's your default. <strong>Flexible (36-65)</strong> means you adapt based on context — this versatility is itself a strength. <strong>Intentional (0-35)</strong> means you can absolutely do this — it just takes conscious effort. All three ranges are equally valuable. Your report analyzes how all 40 scores work together — the pattern is what makes you unique.</p>
+      </details>
+
+      <details class="faq-item reveal">
+        <summary>Can I use this for hiring or screening?</summary>
+        <p>No. PASS Profile is explicitly a professional development tool. It is not designed or validated for hiring, screening, or selection decisions. It measures communication preferences — not competence, ability, or job performance. It's designed to help individuals and teams understand and leverage their communication patterns, not to evaluate or rank people.</p>
+      </details>
+
+      <details class="faq-item reveal">
+        <summary>Can I share my results with my team?</summary>
+        <p>Yes — your report includes a "Working With Others" section specifically designed to be shared with colleagues. It's written in first person ("I communicate best when..." / "To work effectively with me...") so teammates can quickly understand how to collaborate with you. It's also available as a one-click copy from your client portal.</p>
+      </details>
+
+      <details class="faq-item reveal">
+        <summary>Can teams use PASS Profile together?</summary>
+        <p>Yes. Each team member takes the individual PASS assessment first. Then the Team Dynamics Alignment report analyzes how everyone's communication patterns interact — revealing pair dynamics, six communication roles (Initiator, Bridge, Anchor, Catalyst, Harmonizer, and Strategist), collective strengths, and team-specific scenarios. TDA is available for teams of 2-12 people, priced from $39.99 to $119.99 by team size.</p>
+      </details>
+
+      <details class="faq-item reveal">
+        <summary>What is Voice-Brand Alignment?</summary>
+        <p>Voice-Brand Alignment is the "what does this mean for MY job?" layer on top of your PASS Profile. You provide your job title, industry, key audiences, and role description. The system then generates an 8-10 page report showing exactly how to deploy your communication fingerprint in your specific role — including a personal communication brand statement, role-specific strategic playbook, and a 90-day integration plan. Available in the PASS + Voice-Brand Bundle for $59.99.</p>
+      </details>
+
+      <details class="faq-item reveal">
+        <summary>What is Team Dynamics Alignment?</summary>
+        <p>Team Dynamics Alignment analyzes how a team's individual communication patterns interact. It reveals pair dynamics (how every pair of members communicates), communication roles (Initiator, Bridge, Anchor, Catalyst, Harmonizer, and Strategist), collective strengths, and team-specific scenarios with actionable strategies. Reports include SVG visualizations like trait heatmaps and domain radar overlays. Available for teams of 2-3 ($39.99), 4-8 ($79.99), or 9-12 ($119.99).</p>
       </details>
 
       <details class="faq-item reveal">
         <summary>What do I do with my results after I get them?</summary>
-        <p>Your report includes a 90-day development roadmap, a shareable "Working With Others" section for colleagues, and a one-page Quick Reference Card. You can also book a coaching session to explore your results in depth and apply them to specific professional challenges.</p>
+        <p>Your report includes a 90-day development roadmap with specific daily practices, a shareable "Working With Others" section for colleagues, a one-page Quick Reference Card for daily use, and a Similar Well-Known Communicator match. You can also book a one-on-one coaching session (in person or virtually) to explore your results in depth and apply them to specific professional challenges.</p>
       </details>
 
       <details class="faq-item reveal">
         <summary>How much does PASS Profile cost?</summary>
-        <p>The assessment is $49.99. You receive a comprehensive 46-48 page personalized PDF report, typically delivered within minutes of completion.</p>
+        <p>PASS Profile is $49.99. The PASS + Voice-Brand Bundle is $59.99 (saves $10 vs. purchasing separately). Team Dynamics Alignment is $39.99 for 2-3 members, $79.99 for 4-8, or $119.99 for 9-12. All reports are personalized PDFs delivered to your email within minutes of completion.</p>
       </details>
     </div>
   </section>
@@ -424,8 +505,11 @@ import SectionDivider from '../components/SectionDivider.astro';
     <div class="container reveal">
       <h2>Understand how you communicate. Use it on purpose.</h2>
       <p>Your communication fingerprint reveals the patterns that shape how you connect, collaborate, and lead. When you understand these patterns, you can leverage them with intention — in any professional context, with any audience, for any purpose.</p>
-      <a href="https://pass.tedsvoiceacademy.com" class="btn btn-primary">Take Assessment — $49.99</a>
-      <p class="contact-line">Questions about the assessment? Email <a href="mailto:PASS@tedsvoiceacademy.com">PASS@tedsvoiceacademy.com</a></p>
+      <div class="cta-buttons">
+        <a href="https://pass.tedsvoiceacademy.com" class="btn btn-primary">Get Your Profile — $49.99</a>
+        <a href="https://pass.tedsvoiceacademy.com" class="btn btn-secondary">Get the Bundle — $59.99</a>
+      </div>
+      <p class="contact-line">Questions? Email <a href="mailto:PASS@tedsvoiceacademy.com">PASS@tedsvoiceacademy.com</a></p>
     </div>
   </section>
 
@@ -435,19 +519,23 @@ import SectionDivider from '../components/SectionDivider.astro';
       <div class="facts-grid reveal">
         <div class="fact">
           <span class="fact-label">Assessment</span>
-          <span class="fact-value">60 scenarios, ~30-60 minutes</span>
+          <span class="fact-value">60 scenarios, ~30-60 min</span>
         </div>
         <div class="fact">
-          <span class="fact-label">Report</span>
-          <span class="fact-value">46-48 page personalized PDF</span>
-        </div>
-        <div class="fact">
-          <span class="fact-label">Price</span>
+          <span class="fact-label">PASS Profile</span>
           <span class="fact-value">$49.99</span>
         </div>
         <div class="fact">
+          <span class="fact-label">PASS + VBA Bundle</span>
+          <span class="fact-value">$59.99</span>
+        </div>
+        <div class="fact">
+          <span class="fact-label">Team Dynamics</span>
+          <span class="fact-value">$39.99 – $119.99</span>
+        </div>
+        <div class="fact">
           <span class="fact-label">Delivery</span>
-          <span class="fact-value">Email, typically within minutes</span>
+          <span class="fact-value">PDF via email, within minutes</span>
         </div>
       </div>
     </div>
@@ -527,6 +615,13 @@ import SectionDivider from '../components/SectionDivider.astro';
     display: flex;
     flex-wrap: wrap;
     gap: 1rem;
+  }
+
+  .hero-bundle-note {
+    font-size: 0.875rem;
+    color: var(--color-off-white);
+    opacity: 0.8;
+    margin-top: 0.75rem;
   }
 
   .hero-visual {
@@ -683,7 +778,15 @@ import SectionDivider from '../components/SectionDivider.astro';
     font-size: 1.25rem;
     font-weight: 700;
     color: var(--pass-primary);
-    min-width: 80px;
+    min-width: 70px;
+  }
+
+  .score-name {
+    font-family: var(--font-heading);
+    font-size: 1rem;
+    font-weight: 600;
+    color: var(--pass-accent);
+    min-width: 90px;
   }
 
   .score-description {
@@ -986,50 +1089,77 @@ import SectionDivider from '../components/SectionDivider.astro';
     font-style: italic;
   }
 
-  /* Coming Soon Section */
-  .coming-soon {
+  /* Ecosystem Section */
+  .ecosystem {
     background: var(--color-white);
     padding: 5rem 2rem;
   }
 
-  .future-items {
+  .ecosystem-grid {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 1.5rem;
-    margin-bottom: 2rem;
   }
 
-  .future-item {
-    padding: 1.5rem;
-    background: var(--pass-light);
+  .ecosystem-card {
+    padding: 2rem;
+    background: var(--pass-cream);
     border-radius: 8px;
-    border: 1px dashed var(--pass-primary);
-    opacity: 0.9;
+    border: 2px solid rgba(15, 77, 90, 0.15);
+    display: flex;
+    flex-direction: column;
   }
 
-  .future-item h3 {
+  .ecosystem-card.featured {
+    border-color: var(--pass-accent);
+    background: var(--pass-light);
+    box-shadow: 0 4px 16px rgba(61, 181, 140, 0.15);
+  }
+
+  .eco-badge {
+    display: inline-block;
+    font-size: 0.75rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    color: var(--pass-accent);
+    margin-bottom: 0.75rem;
+  }
+
+  .ecosystem-card h3 {
     font-family: var(--font-heading);
-    font-size: 1rem;
+    font-size: 1.125rem;
     font-weight: 600;
     color: var(--pass-primary);
     margin-bottom: 0.5rem;
   }
 
-  .future-item p {
+  .eco-price {
+    font-family: var(--font-heading);
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: var(--pass-primary);
+    margin-bottom: 1rem;
+  }
+
+  .ecosystem-card p {
     font-size: 0.9375rem;
     line-height: 1.6;
     color: var(--color-charcoal);
-    margin: 0;
+    margin: 0 0 1.25rem 0;
+    flex-grow: 1;
   }
 
-  .notify-text {
-    font-size: 1rem;
-    color: var(--color-charcoal);
-  }
-
-  .notify-text a {
+  .eco-link {
+    display: inline-block;
     color: var(--pass-accent);
     font-weight: 600;
+    text-decoration: none;
+    font-size: 0.9375rem;
+  }
+
+  .eco-link:hover {
+    text-decoration: underline;
   }
 
   /* PASS FAQ Section */
@@ -1121,9 +1251,23 @@ import SectionDivider from '../components/SectionDivider.astro';
     opacity: 0.9;
   }
 
+  .cta-buttons {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1rem;
+    margin-bottom: 1rem;
+  }
+
   .final-cta .btn-primary {
     font-size: 1.125rem;
     padding: 1.125rem 2.5rem;
+  }
+
+  .final-cta .btn-secondary {
+    font-size: 1.125rem;
+    padding: 1.125rem 2.5rem;
+    border-color: rgba(255,255,255,0.5);
   }
 
   .contact-line {
@@ -1237,7 +1381,7 @@ import SectionDivider from '../components/SectionDivider.astro';
       gap: 1.5rem;
     }
 
-    .future-items {
+    .ecosystem-grid {
       grid-template-columns: 1fr;
     }
 
