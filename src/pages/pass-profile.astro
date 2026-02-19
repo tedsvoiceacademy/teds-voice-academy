@@ -3,8 +3,74 @@ import Layout from '../layouts/BaseLayout.astro';
 import SectionDivider from '../components/SectionDivider.astro';
 ---
 
-<Layout title="PASS Profile | Know Your Communication Style" description="Discover your unique communication fingerprint with the PASS Profile assessment. Understand how you connect, lead, and collaborate. Used by teams worldwide.">
+<Layout title="PASS Profile™ — Communication Assessment" description="Professional communication assessment: 60 workplace scenarios, 40 traits, personalized PDF report. $49.99 individual or $59.99 with Voice-Brand Alignment." ogImage="/images/pass-bubble.png" canonicalUrl="https://www.tedsvoiceacademy.com/pass-profile">
   <Fragment slot="head">
+    <script type="application/ld+json" set:html={JSON.stringify({
+      "@context": "https://schema.org",
+      "@type": "Product",
+      "name": "PASS Profile Communication Assessment",
+      "description": "Professional communication assessment measuring 40 traits across 6 domains via 60 workplace scenarios. Delivers a personalized 35-48 page PDF report revealing your unique communication fingerprint.",
+      "image": "https://www.tedsvoiceacademy.com/images/pass-profile-logo.webp",
+      "brand": { "@type": "Brand", "name": "PASS Profile" },
+      "creator": { "@type": "Person", "name": "Ted Chamberlain", "url": "https://www.tedsvoiceacademy.com/about" },
+      "offers": {
+        "@type": "Offer",
+        "url": "https://pass.tedsvoiceacademy.com",
+        "priceCurrency": "USD",
+        "price": "49.99",
+        "availability": "https://schema.org/InStock",
+        "priceValidUntil": "2026-12-31",
+        "seller": { "@type": "Organization", "name": "Ted's Voice Academy", "url": "https://www.tedsvoiceacademy.com" }
+      },
+      "category": "Professional Development"
+    })} />
+    <script type="application/ld+json" set:html={JSON.stringify({
+      "@context": "https://schema.org",
+      "@type": "Product",
+      "name": "PASS Profile + Voice-Brand Alignment Bundle",
+      "description": "Complete communication intelligence bundle: PASS Profile assessment (35-48 page report) plus Voice-Brand Alignment (8-10 page role-specific report) with personal communication brand statement, strategic playbook, and 90-day integration plan.",
+      "image": "https://www.tedsvoiceacademy.com/images/PASS + Voice-Brand Logo.png",
+      "brand": { "@type": "Brand", "name": "PASS Profile" },
+      "creator": { "@type": "Person", "name": "Ted Chamberlain", "url": "https://www.tedsvoiceacademy.com/about" },
+      "offers": {
+        "@type": "Offer",
+        "url": "https://pass.tedsvoiceacademy.com",
+        "priceCurrency": "USD",
+        "price": "59.99",
+        "availability": "https://schema.org/InStock",
+        "priceValidUntil": "2026-12-31",
+        "seller": { "@type": "Organization", "name": "Ted's Voice Academy", "url": "https://www.tedsvoiceacademy.com" }
+      },
+      "category": "Professional Development"
+    })} />
+    <script type="application/ld+json" set:html={JSON.stringify({
+      "@context": "https://schema.org",
+      "@type": "Product",
+      "name": "Team Dynamics Alignment Report",
+      "description": "Team communication analysis for groups of 2-12 members. Reveals pair dynamics, six communication roles, collective strengths, and team-specific scenarios. Requires completed PASS Profile for each team member.",
+      "image": "https://www.tedsvoiceacademy.com/images/Team Dynamics Alignment Logo.png",
+      "brand": { "@type": "Brand", "name": "PASS Profile" },
+      "creator": { "@type": "Person", "name": "Ted Chamberlain", "url": "https://www.tedsvoiceacademy.com/about" },
+      "offers": {
+        "@type": "AggregateOffer",
+        "url": "https://pass.tedsvoiceacademy.com",
+        "priceCurrency": "USD",
+        "lowPrice": "39.99",
+        "highPrice": "119.99",
+        "offerCount": 3,
+        "availability": "https://schema.org/InStock",
+        "seller": { "@type": "Organization", "name": "Ted's Voice Academy", "url": "https://www.tedsvoiceacademy.com" }
+      },
+      "category": "Professional Development"
+    })} />
+    <script type="application/ld+json" set:html={JSON.stringify({
+      "@context": "https://schema.org",
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://www.tedsvoiceacademy.com/" },
+        { "@type": "ListItem", "position": 2, "name": "PASS Profile", "item": "https://www.tedsvoiceacademy.com/pass-profile" }
+      ]
+    })} />
     <script type="application/ld+json" set:html={JSON.stringify({
       "@context": "https://schema.org",
       "@type": "FAQPage",
@@ -104,7 +170,7 @@ import SectionDivider from '../components/SectionDivider.astro';
   <!-- Answer Capsule — structured summary for AI search engines -->
   <section class="capsule-section">
     <div class="container">
-      <p class="answer-capsule">PASS Profile is a professional communication assessment that measures 40 traits across six domains to create your unique communication fingerprint. Developed by Ted Chamberlain, it uses scenario-based questions to reveal your authentic communication style. The assessment costs $49.99 and delivers a 35-48 page personalized PDF report. A Voice-Brand Alignment bundle ($59.99) adds role-specific application insights. Team Dynamics Alignment ($39.99-$119.99) analyzes how teams of 2-12 communicate together.</p>
+      <p class="answer-capsule">PASS Profile is a professional communication assessment developed by Ted Chamberlain that measures 40 traits across six domains using 60 workplace scenarios. Unlike DISC (4 types) or Myers-Briggs (16 types), PASS scores each trait on a continuous 0-100 scale, producing a mathematically unique communication fingerprint. The assessment takes 30-60 minutes, costs $49.99, and delivers a personalized 35-48 page PDF report via email within minutes. A Voice-Brand Alignment bundle ($59.99) adds role-specific application. Team Dynamics Alignment ($39.99-$119.99) analyzes group communication for teams of 2-12. Available at pass.tedsvoiceacademy.com.</p>
       <p class="page-date">Last updated: <time datetime="2026-02-18">February 18, 2026</time></p>
     </div>
   </section>
@@ -290,7 +356,7 @@ import SectionDivider from '../components/SectionDivider.astro';
         </div>
         <div class="audience-item reveal">
           <h3>Leaders and managers</h3>
-          <p>Who want to understand how their communication style impacts their teams — and how to adapt when the situation calls for it.</p>
+          <p>Who want to understand how their communication style impacts their teams — and how to adapt when the situation calls for it. Pair PASS with <a href="/speaking">speaking coaching</a> for maximum impact.</p>
         </div>
         <div class="audience-item reveal">
           <h3>People in transition</h3>
@@ -302,7 +368,7 @@ import SectionDivider from '../components/SectionDivider.astro';
         </div>
         <div class="audience-item reveal">
           <h3>Coaches, consultants, and HR professionals</h3>
-          <p>Looking for a diagnostic foundation for development conversations and team building.</p>
+          <p>Looking for a diagnostic foundation for development conversations and team building. <a href="/contact">Reach out</a> to discuss organizational applications.</p>
         </div>
         <div class="audience-item reveal">
           <h3>High-stakes communicators</h3>
@@ -351,7 +417,7 @@ import SectionDivider from '../components/SectionDivider.astro';
 
       <div class="coaching-option reveal">
         <h3>Optional: Book a coaching session</h3>
-        <p>I offer one-on-one sessions (in person or virtually) to explore your results in depth and apply them to specific professional challenges.</p>
+        <p>I offer one-on-one sessions (in person or virtually) to explore your results in depth and apply them to specific professional challenges. <a href="/contact">Book a session</a> to get started.</p>
         <a href="/speaking" class="link-arrow">Learn about speaking coaching →</a>
       </div>
     </div>
@@ -363,7 +429,7 @@ import SectionDivider from '../components/SectionDivider.astro';
       <h2>How I Use PASS Profile™ in Coaching</h2>
       <p>PASS Profile started as a tool I developed for my speaking clients. When someone comes to me wanting to communicate with more clarity, confidence, or presence, understanding their natural communication patterns gives us a powerful starting point.</p>
       <p>The assessment reveals what they're already doing well — so we can build on it. It shows where their style naturally excels — so they can seek out those situations. And it highlights opportunities to expand their range when certain contexts call for a different approach.</p>
-      <p>For professionals working on communication presence and impact, the assessment is often transformative. For clients focused on <a href="/avf">vocal technique</a>, projection, or accent work, we may take a different path. Every client's needs are unique.</p>
+      <p>For professionals working on communication presence and impact, the assessment is often transformative. For clients focused on <a href="/avf">vocal technique</a>, projection, or accent work, we may take a different path. Every client's needs are unique. <a href="/about">Learn more about my background</a> and how I bring PASS into <a href="/workshops">team workshops</a>.</p>
     </div>
   </section>
 
@@ -506,6 +572,18 @@ import SectionDivider from '../components/SectionDivider.astro';
         <summary>How much does PASS Profile cost?</summary>
         <p>PASS Profile is $49.99. The PASS + Voice-Brand Bundle is $59.99 (saves $10 vs. purchasing separately). Team Dynamics Alignment is $39.99 for 2-3 members, $79.99 for 4-8, or $119.99 for 9-12. All reports are personalized PDFs delivered to your email within minutes of completion.</p>
       </details>
+    </div>
+  </section>
+
+  <!-- Related Reading -->
+  <section class="related-reading">
+    <div class="container reveal">
+      <h2>Related Articles</h2>
+      <ul class="related-links">
+        <li><a href="/blog/debunking-one-size-fits-all-myth-public-speaking">Debunking the One-Size-Fits-All Myth in Public Speaking</a></li>
+        <li><a href="/blog/overcoming-public-speaking-fear">Overcoming Public Speaking Fear: Build Confidence &amp; Speak Authentically</a></li>
+        <li><a href="/blog/singing-vs-speaking-vocal-coach">Singing vs. Speaking: Why a Vocal Coach Can Help Both</a></li>
+      </ul>
     </div>
   </section>
 
@@ -1246,6 +1324,51 @@ import SectionDivider from '../components/SectionDivider.astro';
     margin: 0;
     color: var(--color-charcoal);
     padding: 0 1.25rem 1.25rem;
+  }
+
+  /* Related Reading Section */
+  .related-reading {
+    background: var(--color-white);
+    padding: 3rem 2rem;
+  }
+
+  .related-reading h2 {
+    font-size: 1.25rem;
+    margin-bottom: 1rem;
+  }
+
+  .related-links {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+  }
+
+  .related-links li {
+    padding-left: 1.25rem;
+    position: relative;
+  }
+
+  .related-links li::before {
+    content: "→";
+    position: absolute;
+    left: 0;
+    color: var(--pass-accent);
+    font-weight: 600;
+  }
+
+  .related-links a {
+    color: var(--pass-primary);
+    text-decoration: none;
+    font-weight: 500;
+    font-size: 1rem;
+  }
+
+  .related-links a:hover {
+    color: var(--pass-accent);
+    text-decoration: underline;
   }
 
   /* Final CTA Section */
