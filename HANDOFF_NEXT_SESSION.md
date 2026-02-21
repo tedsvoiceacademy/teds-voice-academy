@@ -413,20 +413,37 @@ The images include original source photos (PNG/JPG), various WebP conversions, a
 - Fixed PASS Profile description (was wrong — "Performing Arts Skills Summary" → "Personal Authentic Speaking Style")
 - Updated intro paragraph to mention all three products
 
+**Decap CMS Integration:**
+- `public/admin/index.html` — CMS entry point with Netlify Identity widget
+- `public/admin/config.yml` — Blog collection config mapped to existing frontmatter
+- `src/layouts/BaseLayout.astro` — Netlify Identity widget + post-login redirect
+- `src/content/config.ts` — Fixed author default ('Ted Lacey' → 'Ted Chamberlain')
+- `public/robots.txt` — Added Disallow for /admin/
+
+**REQUIRES NETLIFY DASHBOARD ACTIVATION:**
+1. Go to Netlify dashboard → Site Settings → Identity → Enable Identity
+2. Under Registration, set to "Invite only"
+3. Under Services → Git Gateway, click "Enable Git Gateway"
+4. Go to Identity tab → Invite users → Add ted@tedsvoiceacademy.com
+5. Ted clicks the invite link in his email, sets a password
+6. Ted can then access `https://tedsvoiceacademy.com/admin/` to manage blog posts
+
 **Git:**
-- 6 commits pushed to GitHub:
+- 8 commits pushed to GitHub:
   1. `e0ca753` — Shop + Intonation Lab pages
   2. `26d6f55` — Intonation Lab screenshots
   3. `6b51c26` — BlogPosting schema + visual breadcrumbs
   4. `93e5ce2` — Related posts + backlog docs
   5. `1826ec9` — Per-page OG images
   6. `41764f5` — llms.txt update + backlog cleanup
+  7. `add0007` — CLAUDE.md + handoff doc updates
+  8. `9244dbc` — Decap CMS integration
 - Build: 42 pages clean (18 route pages + 24 blog posts)
 
 ### What's Next
 
 **Immediate priorities:**
-- [ ] **CMS (Decap CMS)** — Ted's #1 near-term priority for site independence
+- [ ] **Activate Decap CMS on Netlify** — Enable Identity + Git Gateway in Netlify dashboard (see steps above)
 - [ ] **E-Commerce (Lemonsqueezy)** — Needed for Vocal Fit digital product sales
 
 **Tier 2:**

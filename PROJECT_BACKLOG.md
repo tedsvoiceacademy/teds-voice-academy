@@ -59,7 +59,7 @@ Blog stays visible in nav (Ted's decision, Feb 5 session 8).
 - [x] **Import 24 scraped blog posts** — ✅ DONE (Feb 16). All 24 posts converted with proper frontmatter, categories, tags.
 - [x] **Blog SEO optimization** — ✅ DONE (Feb 16). Categories rebalanced, tags standardized, descriptions optimized 120-160 chars, local SEO terms added.
 - [x] **Blog landing interactive filtering** — ✅ DONE (Feb 16). Category cards filter posts with JS toggle, count badges, active states.
-- [ ] **CMS for content updates** — Decap CMS (or similar) for Ted to manage blog posts and site content independently. **Critical enabler for Ted's independence.** Ted specifically flagged this as a near-term priority (Feb 16).
+- [x] **CMS for content updates** — DONE (Session 12). Decap CMS integrated. `public/admin/` with config.yml mapped to blog collection. Netlify Identity widget in BaseLayout. **Requires Netlify dashboard activation:** Enable Identity (invite-only), Enable Git Gateway, Invite ted@tedsvoiceacademy.com.
 - [x] **BlogPosting schema** — DONE (Session 12). BlogPosting JSON-LD in BlogPostLayout.astro. Auto-applies to all 24 posts.
 
 **Blog content strategy from GEO/SEO research (12 prioritized topics):**
@@ -313,7 +313,8 @@ All placeholder sections replaced with real content. Remaining work:
 - [x] **Related posts on blog** — Scoring algorithm (categories 3x, tags 1x) in [...slug].astro. Top 3 related posts shown on each of 24 blog posts. (Feb 21, 2026 — Session 12)
 - [x] **Per-page OG images** — 14 branded social sharing images generated with sharp (1200x630). ogImage prop wired on all content pages. (Feb 21, 2026 — Session 12)
 - [x] **llms.txt updated** — Added Intonation Lab + Shop sections and URLs. Fixed PASS Profile description. (Feb 21, 2026 — Session 12)
+- [x] **Decap CMS integrated** — public/admin/ with Netlify Identity + Git Gateway backend. Blog collection mapped to existing schema. Requires Netlify dashboard activation. (Feb 21, 2026 — Session 12)
 
 ---
 
-*Last updated: February 21, 2026 (Session 12 — Shop, Intonation Lab, Breadcrumbs, BlogPosting, Related Posts, OG Images, llms.txt)*
+*Last updated: February 21, 2026 (Session 12 — Shop, Intonation Lab, Breadcrumbs, BlogPosting, Related Posts, OG Images, llms.txt, Decap CMS)*
