@@ -314,7 +314,11 @@ All placeholder sections replaced with real content. Remaining work:
 - [x] **Per-page OG images** — 14 branded social sharing images generated with sharp (1200x630). ogImage prop wired on all content pages. (Feb 21, 2026 — Session 12)
 - [x] **llms.txt updated** — Added Intonation Lab + Shop sections and URLs. Fixed PASS Profile description. (Feb 21, 2026 — Session 12)
 - [x] **Decap CMS integrated** — public/admin/ with Netlify Identity + Git Gateway backend. Blog collection mapped to existing schema. Requires Netlify dashboard activation. (Feb 21, 2026 — Session 12)
+- [x] **www domain URL fix** — BaseLayout siteUrl fixed (www→bare). 12 www URLs in pass-profile schema fixed. PASS OG image switched to branded og-pass-profile.jpg. (Feb 21, 2026 — Session 12)
+- [x] **PASS image optimization** — PASS + Voice-Brand Logo (877KB→186KB) and Team Dynamics Logo (2.3MB→183KB) converted to WebP. 88% total reduction. (Feb 21, 2026 — Session 12)
+- [x] **noreferrer on all external links** — Added to about (11 links), avf (3), intonation-lab (6), shop (3), Footer (8). All target="_blank" links now have rel="noopener noreferrer". (Feb 21, 2026 — Session 12)
+- [x] **Schema on remaining pages** — Service schema on Workshops, OfferCatalog on Pricing, WebPage on Vocal Health. All 18 route pages now have page-specific structured data. (Feb 21, 2026 — Session 12)
 
 ---
 
-*Last updated: February 21, 2026 (Session 12 — Shop, Intonation Lab, Breadcrumbs, BlogPosting, Related Posts, OG Images, llms.txt, Decap CMS)*
+*Last updated: February 21, 2026 (Session 12)*
