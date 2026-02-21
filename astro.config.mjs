@@ -5,7 +5,11 @@ import sitemap from '@astrojs/sitemap';
 export default defineConfig({
   site: 'https://tedsvoiceacademy.com',
   output: 'static',
-  integrations: [sitemap()],
+  integrations: [
+    sitemap({
+      filter: (page) => !page.includes('/success'),
+    }),
+  ],
   build: {
     assets: 'assets'
   },
