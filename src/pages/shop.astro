@@ -231,7 +231,7 @@ const liveProducts = products.filter(p => p.status === 'live');
                       href={product.ctaUrl}
                       class="product-cta"
                       target={product.ctaExternal ? '_blank' : undefined}
-                      rel={product.ctaExternal ? 'noopener' : undefined}
+                      rel={product.ctaExternal ? 'noopener noreferrer' : undefined}
                     >
                       {product.ctaLabel}
                     </a>
