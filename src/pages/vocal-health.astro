@@ -9,6 +9,28 @@ import Breadcrumb from '../components/Breadcrumb.astro';
   description="Care for your voice with trusted guidance on hydration, rest, warm-ups, and when to seek help. Practical vocal health information from an experienced voice coach."
   ogImage="/images/og/og-vocal-health.jpg"
 >
+  <Fragment slot="head">
+    <script type="application/ld+json" set:html={JSON.stringify({
+      "@context": "https://schema.org",
+      "@type": "WebPage",
+      "name": "Vocal Health Resources — Ted's Voice Academy",
+      "description": "Practical vocal health guidance including hydration, vocal hygiene, home care remedies, SOVT exercises, and when to seek medical help.",
+      "url": "https://tedsvoiceacademy.com/vocal-health",
+      "author": {
+        "@type": "Person",
+        "name": "Ted Chamberlain",
+        "url": "https://tedsvoiceacademy.com/about"
+      },
+      "about": [
+        { "@type": "Thing", "name": "Vocal health" },
+        { "@type": "Thing", "name": "Voice care" },
+        { "@type": "Thing", "name": "Vocal hygiene" },
+        { "@type": "Thing", "name": "SOVT exercises" }
+      ],
+      "specialty": "Voice coaching and vocal health education"
+    })} />
+  </Fragment>
+
   <!-- Hero Section -->
   <section class="hero">
     <div class="container reveal">

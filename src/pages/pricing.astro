@@ -8,6 +8,57 @@ const pageDescription = "Transparent pricing for singing, speaking, and ensemble
 ---
 
 <Layout title={pageTitle} description={pageDescription} ogImage="/images/og/og-pricing.jpg">
+  <Fragment slot="head">
+    <script type="application/ld+json" set:html={JSON.stringify({
+      "@context": "https://schema.org",
+      "@type": "OfferCatalog",
+      "name": "Ted's Voice Academy Coaching Plans",
+      "description": "Singing, speaking, and ensemble coaching plans with flexible pricing options.",
+      "provider": {
+        "@type": "LocalBusiness",
+        "name": "Ted's Voice Academy",
+        "url": "https://tedsvoiceacademy.com"
+      },
+      "itemListElement": [
+        {
+          "@type": "Offer",
+          "name": "Monthly Singing Plan",
+          "description": "Weekly 60-minute singing lesson on a recurring schedule. Best value for consistent progress.",
+          "price": "320",
+          "priceCurrency": "USD",
+          "unitCode": "MON",
+          "availability": "https://schema.org/InStock"
+        },
+        {
+          "@type": "AggregateOffer",
+          "name": "Singing Lesson Packages",
+          "description": "Prepaid lesson packages of 5, 10, or 20 sessions with flexible scheduling.",
+          "lowPrice": "75",
+          "highPrice": "85",
+          "priceCurrency": "USD",
+          "offerCount": 3,
+          "availability": "https://schema.org/InStock"
+        },
+        {
+          "@type": "Offer",
+          "name": "Single Singing Session",
+          "description": "Individual 60-minute singing lesson. Ideal for trying coaching or focused one-time work.",
+          "price": "100",
+          "priceCurrency": "USD",
+          "availability": "https://schema.org/InStock"
+        },
+        {
+          "@type": "Offer",
+          "name": "Flagship Vocal Series",
+          "description": "Four-session intensive series covering vocal fundamentals, breathing, technique, and performance preparation.",
+          "price": "400",
+          "priceCurrency": "USD",
+          "availability": "https://schema.org/InStock"
+        }
+      ]
+    })} />
+  </Fragment>
+
   <!-- Hero Section -->
   <section class="hero">
     <div class="container reveal">

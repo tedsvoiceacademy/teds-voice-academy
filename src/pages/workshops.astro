@@ -9,6 +9,31 @@ import Breadcrumb from '../components/Breadcrumb.astro';
   description="Bring expert voice training to your organization. Workshops on vocal health, communication skills, and ensemble techniques for groups in the Pacific Northwest."
   ogImage="/images/og/og-workshops.jpg"
 >
+  <Fragment slot="head">
+    <script type="application/ld+json" set:html={JSON.stringify({
+      "@context": "https://schema.org",
+      "@type": "Service",
+      "name": "Voice Workshops & Group Training",
+      "description": "Interactive voice workshops for organizations, conferences, and retreats. Topics include vocal technique, communication skills, vocal health, and ensemble performance.",
+      "provider": {
+        "@type": "LocalBusiness",
+        "name": "Ted's Voice Academy",
+        "url": "https://tedsvoiceacademy.com"
+      },
+      "serviceType": "Voice Workshop",
+      "areaServed": [
+        { "@type": "State", "name": "Washington" },
+        { "@type": "City", "name": "Lacey" },
+        { "@type": "City", "name": "Olympia" }
+      ],
+      "offers": {
+        "@type": "Offer",
+        "availability": "https://schema.org/InStock",
+        "description": "Custom pricing based on group size, duration, and format. Contact for a quote."
+      }
+    })} />
+  </Fragment>
+
   <!-- Hero Section -->
   <section class="hero">
     <div class="container reveal">
