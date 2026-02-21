@@ -20,7 +20,7 @@ You are continuing development on the Ted's Voice Academy (TVA) website — a pr
 
 ## Current Status
 
-### All 18 Pages Complete
+### All 20 Route Pages Complete (+ 24 blog posts = 43 pages built)
 | Page | File | Status |
 |------|------|--------|
 | Homepage | `src/pages/index.astro` | ✅ Complete — Rapid Reviews carousel (Feb 5), Intonation Lab ecosystem card (Feb 21) |
@@ -41,6 +41,7 @@ You are continuing development on the Ted's Voice Academy (TVA) website — a pr
 | Terms | `src/pages/terms.astro` | ✅ Complete — Terms of service page |
 | **Shop** | `src/pages/shop.astro` | ✅ **New Feb 21** — Product catalog (5 products), ItemList schema |
 | **Intonation Lab** | `src/pages/intonation-lab.astro` | ✅ **New Feb 21** — Full product page, SoftwareApplication + FAQPage schema |
+| **404** | `src/pages/404.astro` | ✅ **New Feb 21** — Branded error page (noIndex) |
 
 ### SEO & Analytics Infrastructure (Feb 4-5, 2026)
 - `public/robots.txt` — crawler directives + sitemap reference (URL fixed to bare domain Feb 5)
