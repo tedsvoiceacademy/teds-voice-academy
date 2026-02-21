@@ -68,7 +68,7 @@ import Breadcrumb from '../components/Breadcrumb.astro';
           <span class="hero-eyebrow">About Ted</span>
           <h1>Teaching voice for four decades — and still developing, learning, growing</h1>
         </div>
-        <div class="hero-image" style="--hero-bg: url('/images/ted-headshot.webp')" role="img" aria-label="Ted, voice coach and founder of Ted's Voice Academy">
+        <div class="hero-image">
           <img src="/images/ted-headshot.webp" alt="Ted, voice coach and founder of Ted's Voice Academy" class="ted-headshot" />
         </div>
       </div>
@@ -388,29 +388,6 @@ import Breadcrumb from '../components/Breadcrumb.astro';
     .hero-content,
     .ted-headshot {
       animation: none;
-    }
-  }
-
-  /* ----- CSS-only parallax for hero image (desktop only) ----- */
-  @media (min-width: 769px) and (prefers-reduced-motion: no-preference) {
-    .hero-image {
-      background-image: var(--hero-bg);
-      background-size: cover;
-      background-position: center top;
-      background-attachment: fixed;
-      background-repeat: no-repeat;
-      border-radius: 12px;
-      border: 3px solid var(--color-gold-bright);
-      box-shadow: 0 8px 30px rgba(0, 0, 0, 0.3);
-      min-height: 380px;
-      max-width: 350px;
-    }
-
-    .hero-image .ted-headshot {
-      visibility: hidden;
-      height: 0;
-      min-height: 0;
-      overflow: hidden;
     }
   }
 
