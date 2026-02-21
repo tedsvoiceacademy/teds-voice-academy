@@ -92,7 +92,7 @@ const products = [
 const liveProducts = products.filter(p => p.status === 'live');
 ---
 
-<Layout title={pageTitle} description={pageDescription}>
+<Layout title={pageTitle} description={pageDescription} ogImage="/images/og/og-shop.jpg">
   <Fragment slot="head">
     <script type="application/ld+json" set:html={JSON.stringify({
       "@context": "https://schema.org",
