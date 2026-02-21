@@ -44,4 +44,4 @@ Ready to transform your public speaking skills? Reach out for professional coach
 **Contact Ted's Voice Academy:**
 - Cell/Message/Text: 253-414-2267
 - Email: ted@tedsvoiceacademy.com
-- Web: www.tedsvoiceacademy.com
+- Web: tedsvoiceacademy.com
