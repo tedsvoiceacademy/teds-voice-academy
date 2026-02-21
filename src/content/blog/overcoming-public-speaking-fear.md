@@ -42,6 +42,6 @@ Don't let the fear of public speaking hold you back any longer. Embrace the jour
 Ready to transform your public speaking skills? Reach out for professional coaching and explore the PASS Profile to unlock your authentic speaking potential. The journey to confident and authentic communication starts now.
 
 **Contact Ted's Voice Academy:**
-- Cell/Message/Text: 253-414-2267
+- Cell/Message/Text: (253) 414-2267
 - Email: ted@tedsvoiceacademy.com
 - Web: tedsvoiceacademy.com
