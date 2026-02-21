@@ -98,11 +98,18 @@ const ogImageAbsolute = ogImage.startsWith('http') ? ogImage : `${siteUrl}${ogIm
     "@context": "https://schema.org",
     "@type": "LocalBusiness",
     "name": "Ted's Voice Academy",
-    "description": "Voice coaching for singing, speaking, and ensembles in Lacey, WA",
+    "description": "Voice coaching for singing, speaking, and ensembles in Lacey, WA. Founded by Ted Chamberlain, a National Board Certified Teacher with 38+ years of experience and over 1,000 students coached since 1988.",
     "image": "https://tedsvoiceacademy.com/images/tva-logo.webp",
+    "foundingDate": "2023-07-17",
     "founder": {
       "@type": "Person",
-      "name": "Ted Chamberlain"
+      "name": "Ted Chamberlain",
+      "jobTitle": "Voice Coach & Vocal Instructor",
+      "hasCredential": [
+        { "@type": "EducationalOccupationalCredential", "name": "BA in K-12 Music Education" },
+        { "@type": "EducationalOccupationalCredential", "name": "BA in Vocal Performance" },
+        { "@type": "EducationalOccupationalCredential", "name": "National Board Certified Teacher" }
+      ]
     },
     "address": {
       "@type": "PostalAddress",
