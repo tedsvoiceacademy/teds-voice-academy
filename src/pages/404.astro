@@ -1,0 +1,142 @@
+---
+import Layout from '../layouts/BaseLayout.astro';
+---
+
+<Layout title="Page Not Found" description="The page you're looking for doesn't exist. Let's get you back on track." noIndex={true}>
+  <section class="hero-404">
+    <div class="container">
+      <span class="hero-eyebrow">404</span>
+      <h1>This page doesn't exist</h1>
+      <p class="hero-subtitle">The page you're looking for may have been moved or removed. Let's get you back to something useful.</p>
+      <div class="cta-group">
+        <a href="/" class="btn btn-primary">Back to Home</a>
+        <a href="/contact" class="btn btn-secondary">Contact Ted</a>
+      </div>
+      <nav class="quick-links" aria-label="Quick navigation">
+        <p class="quick-links-label">Or try one of these:</p>
+        <ul>
+          <li><a href="/singing">Singing Lessons</a></li>
+          <li><a href="/speaking">Speaking Coaching</a></li>
+          <li><a href="/about">About Ted</a></li>
+          <li><a href="/blog">Blog</a></li>
+          <li><a href="/pricing">Pricing</a></li>
+          <li><a href="/faq">FAQ</a></li>
+        </ul>
+      </nav>
+    </div>
+  </section>
+</Layout>
+
+<style>
+  .hero-404 {
+    min-height: 70vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    background:
+      url('/images/noise-texture.png') repeat,
+      linear-gradient(135deg, var(--color-navy-deep) 0%, var(--color-navy-medium) 100%);
+    background-size: 200px 200px, 100% 100%;
+    background-blend-mode: soft-light, normal;
+    padding: 4rem 1rem;
+  }
+
+  .hero-eyebrow {
+    display: block;
+    font-size: 4rem;
+    font-weight: 700;
+    font-family: var(--font-heading);
+    color: var(--color-gold-bright);
+    margin-bottom: 0.5rem;
+    line-height: 1;
+  }
+
+  h1 {
+    font-family: var(--font-heading);
+    font-size: clamp(2rem, 4vw + 1rem, 3rem);
+    font-weight: 700;
+    color: var(--color-white);
+    margin: 0 0 1rem 0;
+    line-height: 1.2;
+  }
+
+  .hero-subtitle {
+    font-size: 1.15rem;
+    color: var(--color-cream);
+    max-width: 550px;
+    margin: 0 auto 2rem;
+    line-height: 1.6;
+  }
+
+  .cta-group {
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-bottom: 3rem;
+  }
+
+  .btn {
+    display: inline-block;
+    padding: 0.875rem 2rem;
+    border-radius: 6px;
+    font-weight: 600;
+    text-decoration: none;
+    transition: all 0.3s ease;
+  }
+
+  .btn-primary {
+    background: var(--color-gold-bright);
+    color: var(--color-navy-deep);
+  }
+
+  .btn-primary:hover {
+    background: var(--color-gold-hover);
+    transform: translateY(-2px);
+  }
+
+  .btn-secondary {
+    border: 2px solid var(--color-gold-bright);
+    color: var(--color-gold-bright);
+    background: transparent;
+  }
+
+  .btn-secondary:hover {
+    background: rgba(212, 168, 75, 0.1);
+    transform: translateY(-2px);
+  }
+
+  .quick-links {
+    border-top: 1px solid rgba(255, 255, 255, 0.15);
+    padding-top: 2rem;
+    max-width: 500px;
+    margin: 0 auto;
+  }
+
+  .quick-links-label {
+    font-size: 0.9rem;
+    color: rgba(255, 255, 255, 0.6);
+    margin-bottom: 1rem;
+  }
+
+  .quick-links ul {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.75rem 1.5rem;
+    justify-content: center;
+  }
+
+  .quick-links a {
+    color: var(--color-cream);
+    text-decoration: none;
+    font-size: 0.95rem;
+    transition: color 0.2s ease;
+  }
+
+  .quick-links a:hover {
+    color: var(--color-gold-bright);
+  }
+</style>

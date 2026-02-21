@@ -198,7 +198,7 @@ const liveProducts = products.filter(p => p.status === 'live');
             )}
             <div class="product-card__image">
               {product.image ? (
-                <img src={product.image} alt={product.name} loading="lazy" />
+                <img src={product.image} alt={product.name} loading="lazy" decoding="async" />
               ) : (
                 <div class="product-card__placeholder">
                   {product.type === 'Download' ? (

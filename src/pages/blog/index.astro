@@ -85,7 +85,7 @@ categoryNames.forEach(cat => {
           <a href={`/blog/${post.slug}`} class="post-card reveal" data-categories={JSON.stringify(post.data.categories || [])}>
             {post.data.image && (
               <div class="post-card-image">
-                <img src={post.data.image.url} alt={post.data.image.alt} width="400" height="225" loading="lazy" />
+                <img src={post.data.image.url} alt={post.data.image.alt} width="400" height="225" loading="lazy" decoding="async" />
               </div>
             )}
             <div class="post-card-body">
