@@ -395,18 +395,42 @@ The images include original source photos (PNG/JPG), various WebP conversions, a
 - Page count updated to 18 route pages (was 16)
 - Session 12 added to session log
 
+**Related Posts on Blog:**
+- Scoring algorithm in `[...slug].astro`: shared categories weighted 3x, shared tags 1x
+- Top 3 related posts shown at bottom of each blog post page
+- Cards with image, title, description, categories, date
+- Responsive grid: 3-col → 2-col → 1-col
+
+**Per-Page OG Images:**
+- 14 branded social sharing images (1200x630 JPEG) generated with sharp
+- Script: `scripts/generate-og-pages.mjs`
+- Images: `public/images/og/og-{slug}.jpg` for all content pages
+- `ogImage` prop wired on all 14 content pages
+
+**llms.txt Updated:**
+- Added Intonation Lab + Shop sections with full product descriptions
+- Added /intonation-lab/ and /shop/ to Key Pages section
+- Fixed PASS Profile description (was wrong — "Performing Arts Skills Summary" → "Personal Authentic Speaking Style")
+- Updated intro paragraph to mention all three products
+
 **Git:**
-- 3 commits pushed to GitHub (shop + intonation lab, screenshots, breadcrumbs + schema)
+- 6 commits pushed to GitHub:
+  1. `e0ca753` — Shop + Intonation Lab pages
+  2. `26d6f55` — Intonation Lab screenshots
+  3. `6b51c26` — BlogPosting schema + visual breadcrumbs
+  4. `93e5ce2` — Related posts + backlog docs
+  5. `1826ec9` — Per-page OG images
+  6. `41764f5` — llms.txt update + backlog cleanup
 - Build: 42 pages clean (18 route pages + 24 blog posts)
 
 ### What's Next
 
 **Immediate priorities:**
-- [ ] **Related posts on blog pages** — Add related posts section to individual blog post pages
 - [ ] **CMS (Decap CMS)** — Ted's #1 near-term priority for site independence
 - [ ] **E-Commerce (Lemonsqueezy)** — Needed for Vocal Fit digital product sales
 
 **Tier 2:**
-- [ ] Per-page OG images
 - [ ] Remaining hero images for text-only hero pages
 - [ ] Track AI referral traffic in GA4
+- [ ] Review collection system
+- [ ] NAP consistency audit

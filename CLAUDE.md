@@ -2,7 +2,7 @@
 
 ## Project Overview
 
-You are continuing development on the Ted's Voice Academy (TVA) website — a professional voice coaching business run by Ted Chamberlain in Lacey, Washington. The site is **fully built (16 pages)** and **live on Netlify**.
+You are continuing development on the Ted's Voice Academy (TVA) website — a professional voice coaching business run by Ted Chamberlain in Lacey, Washington. The site is **fully built (18 route pages + 24 blog posts = 42 pages)** and **live on Netlify**.
 
 **CRITICAL WORKFLOW RULE:** Do NOT implement changes without Ted's explicit approval. Present recommendations, discuss, get the green light, then implement. This applies to everything — quick fixes, visual changes, SEO tweaks, all of it.
 
@@ -33,8 +33,8 @@ You are continuing development on the Ted's Voice Academy (TVA) website — a pr
 | AVF | `src/pages/avf.astro` | ✅ Complete — Book schema + FAQ accordion |
 | PASS Profile | `src/pages/pass-profile.astro` | ✅ Complete — FAQ accordion |
 | Workshops | `src/pages/workshops.astro` | ✅ Complete — workshop inquiry form (Netlify) |
-| Vocal Health Hub | `src/pages/vocal-health.astro` | ✅ Complete — 4 sections have "coming soon" placeholders awaiting Ted's content |
-| Blog | `src/pages/blog.astro` | ✅ Complete — landing page; no individual post system yet. Leave visible until blog system built. |
+| Vocal Health Hub | `src/pages/vocal-health.astro` | ✅ Complete — All 4 sections live (Feb 16) |
+| Blog | `src/pages/blog/index.astro` | ✅ Complete — Landing page + 24 individual posts via [...slug].astro |
 | FAQ | `src/pages/faq.astro` | ✅ Complete — 15 Q&As with FAQPage schema, accordion pattern |
 | Success | `src/pages/success.astro` | ✅ Complete — Form submission thank-you page (noIndex) |
 | Privacy | `src/pages/privacy.astro` | ✅ Complete — Privacy policy page |
@@ -430,7 +430,7 @@ When nearing token limits (60-70% usage):
 | Feb 5, 2026 | Session 9 (Claude Code) | Hero eyebrow sizing (1rem→1.25rem). GA4 tracking live (G-ZDX6WPT6CZ) + is:inline fix. Google Search Console verified, sitemap submitted. Privacy policy updated for GA4. Contact form tone softened (H1, optional fields, warmer copy). Comprehensive GEO/SEO research report (8 GEO recs, 10 SEO improvements, 12 blog topics, schema additions). Ted approved quick wins: robots.txt AI crawlers, llms.txt, image optimization, award photos. |
 | Feb 5, 2026 | Session 10 (Claude Code) | Image optimization (PNG→WebP, 84% reduction). Award photos on About page. Professional affiliations section (10 org logos). Ensemble logos on cards. Course + Service schema on 3 pages. PASS logo visibility fix. Card symmetry fix. Visual Polish Tier 1 (card hovers, gold accent lines, drop caps, pull quotes). Photos placed on 3 service pages. Visual Polish Tier 2 (grain textures initial, pull quotes on 6 pages). |
 | Feb 5, 2026 | Session 11 (Claude Code) | Grain texture overhaul: replaced broken SVG feTurbulence with real PNG noise texture baked into CSS backgrounds (soft-light blend). Applied to ALL dark sections on ALL 16 pages. Scroll-triggered reveal animations (IntersectionObserver + CSS) on all 16 pages. Hero entrance animations on Homepage, About, AVF, PASS. Credentials bar blending on homepage. |
-| Feb 21, 2026 | Session 12 (Claude Code) | Shop hub page (/shop) with 5 product cards (3 live, 2 coming-soon) and ItemList schema. Intonation Lab product page (/intonation-lab) with features, pricing tiers, FAQ accordion, SoftwareApplication + FAQPage schema. Intonation Lab added to Resources dropdown + footer. Shop added as top-level nav + footer. Homepage ecosystem updated with Intonation Lab card (6 cards, clean 3x2 grid). 18 pages total. |
+| Feb 21, 2026 | Session 12 (Claude Code) | Shop hub page (/shop) with 5 product cards + ItemList schema. Intonation Lab product page (/intonation-lab) with features, pricing, FAQ, SoftwareApplication schema. Nav/footer updated. Homepage ecosystem grid updated. BlogPosting JSON-LD on all 24 blog posts. Breadcrumb.astro component + BreadcrumbList schema on all 17 interior pages + 24 posts. Related posts algorithm on blog (categories 3x, tags 1x). 14 per-page OG images generated with sharp. llms.txt updated with new products + fixed PASS description. |
 
 ---
 
