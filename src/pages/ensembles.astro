@@ -104,7 +104,7 @@ import Breadcrumb from '../components/Breadcrumb.astro';
           <p class="hero-subtitle">Vocal and performance coaching for groups seeking unity, efficiency, and expressive sound.</p>
           <a href="/contact" class="btn btn-primary">Get in Touch</a>
         </div>
-        <div class="hero-image">
+        <div class="hero-image" style="--hero-bg: url('/images/hero-ensembles.webp')" role="img" aria-label="Ted directing a men's chorus on stage">
           <img src="/images/hero-ensembles.webp" alt="Ted directing a men's chorus on stage" class="hero-photo" />
         </div>
       </div>
@@ -385,6 +385,28 @@ import Breadcrumb from '../components/Breadcrumb.astro';
   @media (prefers-reduced-motion: reduce) {
     .hero-content, .hero-photo {
       animation: none;
+    }
+  }
+
+  /* ----- CSS-only parallax for hero image (desktop only) ----- */
+  @media (min-width: 769px) and (prefers-reduced-motion: no-preference) {
+    .hero-image {
+      background-image: var(--hero-bg);
+      background-size: cover;
+      background-position: center;
+      background-attachment: fixed;
+      background-repeat: no-repeat;
+      border-radius: 12px;
+      box-shadow: 0 8px 30px rgba(0, 0, 0, 0.3);
+      min-height: 380px;
+      max-width: 500px;
+    }
+
+    .hero-image .hero-photo {
+      visibility: hidden;
+      height: 0;
+      min-height: 0;
+      overflow: hidden;
     }
   }
 

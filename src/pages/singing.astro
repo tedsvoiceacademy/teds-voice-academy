@@ -90,7 +90,7 @@ import Breadcrumb from '../components/Breadcrumb.astro';
           <p class="hero-subtitle">Vocal and performance coaching for singers, typically ages 14 and up.</p>
           <a href="/contact" class="btn btn-primary">Book a Free Discovery Call</a>
         </div>
-        <div class="hero-image">
+        <div class="hero-image" style="--hero-bg: url('/images/hero-singing-lesson.webp')" role="img" aria-label="Ted coaching a singing student in the studio">
           <img src="/images/hero-singing-lesson.webp" alt="Ted coaching a singing student in the studio" class="hero-photo" />
         </div>
       </div>
@@ -336,6 +336,29 @@ import Breadcrumb from '../components/Breadcrumb.astro';
   @media (prefers-reduced-motion: reduce) {
     .hero-content, .hero-photo {
       animation: none;
+    }
+  }
+
+  /* ----- CSS-only parallax for hero image (desktop only) ----- */
+  @media (min-width: 769px) and (prefers-reduced-motion: no-preference) {
+    .hero-image {
+      background-image: var(--hero-bg);
+      background-size: cover;
+      background-position: center;
+      background-attachment: fixed;
+      background-repeat: no-repeat;
+      border-radius: 12px;
+      box-shadow: 0 8px 30px rgba(0, 0, 0, 0.3);
+      min-height: 380px;
+      max-width: 500px;
+    }
+
+    .hero-image .hero-photo {
+      /* Hide the <img> on desktop — the CSS background handles the visual */
+      visibility: hidden;
+      height: 0;
+      min-height: 0;
+      overflow: hidden;
     }
   }
 
