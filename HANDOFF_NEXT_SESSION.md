@@ -94,7 +94,6 @@ This applies to everything — quick fixes, visual changes, SEO tweaks, all of i
 - [ ] **CMS (Decap CMS)** — **Ted's #1 near-term priority.** He needs an easy way to add blog posts and modify site content independently. Critical enabler.
 - [ ] **E-Commerce (Lemonsqueezy)** — Needed for Vocal Fit digital product sales. Also enables future product offerings.
 - [ ] **Review 41 untracked images** — Decide placement/removal with Ted (see Feb 16 session notes below)
-- [ ] **Breadcrumb schema + visual breadcrumbs** — BreadcrumbList JSON-LD + breadcrumb navigation on interior pages
 - [ ] **Track AI referral traffic in GA4** — Custom channel grouping for ChatGPT, Perplexity, etc.
 
 ### Completed:
@@ -104,7 +103,7 @@ This applies to everything — quick fixes, visual changes, SEO tweaks, all of i
 
 ### Tier 2:
 - [ ] **Per-page OG images** — Branded social sharing images for individual pages
-- [ ] **BlogPosting schema** — Each post needs BlogPosting JSON-LD and per-post OG tags
+- [ ] **Related posts on blog pages** — Add related posts section to individual blog post pages
 - [ ] **Remaining hero images** — Workshops, Vocal Health, Pricing, Blog, FAQ, Contact still have text-only heroes. Ted has `Ted Quartet coach.png` and `studio lesson2.png` available for future use.
 
 ### Tier 3 — Visual Polish:
@@ -124,12 +123,12 @@ This applies to everything — quick fixes, visual changes, SEO tweaks, all of i
 - **Local project path:** `H:\OneDrive\AI Projects\TVA AI Projects\TVA Webstie 4.0\teds-voice-academy-main\teds-voice-academy-main\`
 - **Live site:** https://tedsvoiceacademy.com
 - **Netlify URL:** https://deft-baklava-b2eb2e.netlify.app/
-- **Build status:** Clean — 40 pages built (16 original + 24 blog posts), zero errors
+- **Build status:** Clean — 42 pages built (18 route pages + 24 blog posts), zero errors
 - **Latest commits:** `877a11d` (handoff docs), `94604ba` (vocal health page), `78c1677` (blog SEO + filtering), `a9bd0ef` (blog system)
 - **Previous commits:** `06271f2` (14c: hero images), `366a679` (14b: icon fix, grids, TM), `d6105fb` (14: icons, symmetry, photos)
 
-### What's Live (40 Pages)
-Homepage, Contact, Singing, Speaking, Ensembles, About, Pricing, AVF, PASS Profile, Workshops, Vocal Health Hub, Blog (landing + 24 individual posts), FAQ, Success, Privacy, Terms
+### What's Live (42 Pages)
+Homepage, Contact, Singing, Speaking, Ensembles, About, Pricing, AVF, PASS Profile, Workshops, Vocal Health Hub, Blog (landing + 24 individual posts), FAQ, Success, Privacy, Terms, Shop, Intonation Lab
 
 ### Analytics
 - **GA4:** Live, Measurement ID `G-ZDX6WPT6CZ`. Script in BaseLayout.astro `<head>` with `is:inline` directive.
@@ -330,7 +329,7 @@ The images include original source photos (PNG/JPG), various WebP conversions, a
 **Recommendation:** Commit the handoff docs and the index.astro widget change in a cleanup commit. The 41 unused images should NOT be committed until Ted decides what to do with them.
 
 ### Git State
-- **Build:** Clean — 40 pages, zero errors
+- **Build:** Clean — 42 pages, zero errors
 - **All session work pushed to GitHub:** `a9bd0ef` → `78c1677` → `5473361` → `94604ba` → `877a11d`
 - **Remaining uncommitted:** CLAUDE.md, README.md, index.astro (Elfsight widget ID change), tsconfig.json, favicon.svg, docs/ folder — these are pre-existing modifications from earlier sessions, not from Feb 16 work. Review and commit in next session.
 
@@ -358,10 +357,56 @@ The images include original source photos (PNG/JPG), various WebP conversions, a
 
 **Blog Enhancements (Tier 2):**
 - [ ] Related posts section on individual blog post pages
-- [ ] BlogPosting schema + per-post OG tags
 - [ ] Pagination on blog landing if post count grows
 
 **Site-wide (from backlog):**
-- [ ] Breadcrumb schema + visual breadcrumbs
 - [ ] Track AI referral traffic in GA4
 - [ ] Remaining hero images for text-only hero pages
+
+---
+
+## Session: February 21, 2026 - Session 12 (Shop, Intonation Lab, Breadcrumbs, BlogPosting Schema)
+
+### Completed This Session
+
+**Shop Hub Page (`/shop`):**
+- New shop page with 5 products displayed: 3 live (AVF book, PASS Profile, Intonation Lab), 2 coming-soon (Vocal Fit LOW, Vocal Fit HIGH)
+- Nav and footer updated with Shop link
+
+**Intonation Lab Product Page (`/intonation-lab`):**
+- Full product page with hero section, features breakdown, pricing details, and FAQ accordion
+- Nav and footer updated with Intonation Lab link
+
+**Homepage Ecosystem Section:**
+- Added Intonation Lab card to the ecosystem grid
+- Updated to 3x2 grid layout
+
+**BlogPosting JSON-LD Schema:**
+- BlogPosting structured data added to `BlogPostLayout.astro`
+- Auto-applies to all 24 blog posts
+- Includes headline, datePublished, author, publisher, image, description
+
+**Breadcrumb Navigation + Schema:**
+- Created `Breadcrumb.astro` component with visual breadcrumb navigation
+- BreadcrumbList JSON-LD schema included in the component
+- Deployed on all 17 interior pages and all 24 blog posts
+
+**CLAUDE.md Updated:**
+- Page count updated to 18 route pages (was 16)
+- Session 12 added to session log
+
+**Git:**
+- 3 commits pushed to GitHub (shop + intonation lab, screenshots, breadcrumbs + schema)
+- Build: 42 pages clean (18 route pages + 24 blog posts)
+
+### What's Next
+
+**Immediate priorities:**
+- [ ] **Related posts on blog pages** — Add related posts section to individual blog post pages
+- [ ] **CMS (Decap CMS)** — Ted's #1 near-term priority for site independence
+- [ ] **E-Commerce (Lemonsqueezy)** — Needed for Vocal Fit digital product sales
+
+**Tier 2:**
+- [ ] Per-page OG images
+- [ ] Remaining hero images for text-only hero pages
+- [ ] Track AI referral traffic in GA4

@@ -3,15 +3,39 @@ import { getCollection } from 'astro:content';
 import BlogPostLayout from '../../layouts/BlogPostLayout.astro';
 
 export async function getStaticPaths() {
-  const posts = await getCollection('blog', ({ data }) => !data.draft);
-  return posts.map((post) => ({
+  const allPosts = await getCollection('blog', ({ data }) => !data.draft);
+  return allPosts.map((post) => ({
     params: { slug: post.slug },
-    props: { post },
+    props: { post, allPosts },
   }));
 }
 
-const { post } = Astro.props;
+const { post, allPosts } = Astro.props;
 const { Content } = await post.render();
+
+// Compute related posts by shared categories and tags
+const currentCategories = post.data.categories || [];
+const currentTags = post.data.tags || [];
+
+const scored = allPosts
+  .filter((p) => p.slug !== post.slug)
+  .map((p) => {
+    const sharedCats = (p.data.categories || []).filter((c: string) => currentCategories.includes(c)).length;
+    const sharedTags = (p.data.tags || []).filter((t: string) => currentTags.includes(t)).length;
+    return { post: p, score: sharedCats * 3 + sharedTags };
+  })
+  .filter((s) => s.score > 0)
+  .sort((a, b) => b.score - a.score || b.post.data.pubDate.valueOf() - a.post.data.pubDate.valueOf())
+  .slice(0, 3);
+
+const relatedPosts = scored.map((s) => ({
+  slug: s.post.slug,
+  title: s.post.data.title,
+  description: s.post.data.description,
+  image: s.post.data.image,
+  categories: s.post.data.categories,
+  pubDate: s.post.data.pubDate,
+}));
 ---
 
 <BlogPostLayout
@@ -23,6 +47,7 @@ const { Content } = await post.render();
   image={post.data.image}
   categories={post.data.categories}
   tags={post.data.tags}
+  relatedPosts={relatedPosts}
 >
   <Content />
 </BlogPostLayout>

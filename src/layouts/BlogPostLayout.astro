@@ -2,6 +2,15 @@
 import Layout from './BaseLayout.astro';
 import Breadcrumb from '../components/Breadcrumb.astro';
 
+interface RelatedPost {
+  slug: string;
+  title: string;
+  description: string;
+  image?: { url: string; alt: string };
+  categories?: string[];
+  pubDate: Date;
+}
+
 interface Props {
   title: string;
   description: string;
@@ -14,9 +23,10 @@ interface Props {
   };
   categories?: string[];
   tags?: string[];
+  relatedPosts?: RelatedPost[];
 }
 
-const { title, description, pubDate, updatedDate, author, image, categories = [], tags = [] } = Astro.props;
+const { title, description, pubDate, updatedDate, author, image, categories = [], tags = [], relatedPosts = [] } = Astro.props;
 
 const formattedDate = pubDate.toLocaleDateString('en-US', {
   year: 'numeric',
@@ -139,6 +149,38 @@ const formattedUpdatedDate = updatedDate?.toLocaleDateString('en-US', {
           </div>
         </div>
       </div>
+    )}
+
+    <!-- Related Posts -->
+    {relatedPosts.length > 0 && (
+      <section class="related-section">
+        <div class="container">
+          <h2 class="related-heading reveal">You might also enjoy</h2>
+          <div class="related-grid reveal-stagger">
+            {relatedPosts.map((related) => (
+              <a href={`/blog/${related.slug}`} class="related-card reveal">
+                {related.image && (
+                  <img
+                    src={related.image.url}
+                    alt={related.image.alt}
+                    width="400"
+                    height="220"
+                    loading="lazy"
+                    class="related-card__image"
+                  />
+                )}
+                <div class="related-card__body">
+                  {related.categories && related.categories.length > 0 && (
+                    <span class="related-card__category">{related.categories[0]}</span>
+                  )}
+                  <h3 class="related-card__title">{related.title}</h3>
+                  <p class="related-card__desc">{related.description}</p>
+                </div>
+              </a>
+            ))}
+          </div>
+        </div>
+      </section>
     )}
 
     <!-- Footer CTA -->
@@ -389,6 +431,95 @@ const formattedUpdatedDate = updatedDate?.toLocaleDateString('en-US', {
     padding: 0.25rem 0.75rem;
     border-radius: 20px;
     border: 1px solid var(--color-gray-light);
+  }
+
+  /* Related Posts */
+  .related-section {
+    background: var(--color-cream);
+    padding: 3.5rem 0;
+  }
+
+  .related-heading {
+    font-family: var(--font-heading);
+    font-size: clamp(1.5rem, 3vw + 0.5rem, 2rem);
+    font-weight: 700;
+    color: var(--color-navy-deep);
+    text-align: center;
+    margin: 0 0 2rem;
+  }
+
+  .related-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.5rem;
+  }
+
+  .related-card {
+    display: flex;
+    flex-direction: column;
+    background: var(--color-white);
+    border-radius: 12px;
+    overflow: hidden;
+    text-decoration: none;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+  }
+
+  .related-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
+  }
+
+  .related-card__image {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+  }
+
+  .related-card__body {
+    padding: 1.25rem;
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+  }
+
+  .related-card__category {
+    display: inline-block;
+    font-size: 0.75rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    color: var(--color-gold-bright);
+    margin-bottom: 0.5rem;
+  }
+
+  .related-card__title {
+    font-family: var(--font-heading);
+    font-size: 1.0625rem;
+    font-weight: 700;
+    color: var(--color-navy-deep);
+    line-height: 1.3;
+    margin: 0 0 0.5rem;
+  }
+
+  .related-card__desc {
+    font-size: 0.875rem;
+    color: var(--color-charcoal);
+    line-height: 1.5;
+    margin: 0;
+    flex-grow: 1;
+  }
+
+  @media (max-width: 900px) {
+    .related-grid {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+
+  @media (max-width: 560px) {
+    .related-grid {
+      grid-template-columns: 1fr;
+    }
   }
 
   /* Footer CTA */

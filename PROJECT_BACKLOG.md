@@ -42,7 +42,7 @@ Full research report completed. Ted said "I will definitely want to fully maximi
 - [ ] **Google Business Profile optimization** — Ted confirmed he has one for tedsvoiceacademy.com and has done good work on it. Wants to maximize it further.
 - [x] **Internal linking strategy** — DONE (Session 13). 2-3 contextual cross-links added to 10 pages.
 - [x] **Self-host fonts** — DONE (Session 13). Inter (4 weights) + Playfair Display (4 weights) + Cinzel (3 weights) + Cormorant Garamond (4 weights) self-hosted as WOFF2. Google Fonts CDN completely removed.
-- [ ] **Breadcrumb schema + visual breadcrumbs** — Add BreadcrumbList schema and breadcrumb navigation to interior pages.
+- [x] **Breadcrumb schema + visual breadcrumbs** — DONE (Session 12). Breadcrumb.astro component + BreadcrumbList schema on all 17 interior pages + blog posts.
 - [ ] **Review collection system** — Create process for requesting Google reviews from students.
 - [ ] **Local citation / NAP consistency audit** — Verify business name, address, phone are identical across all directories (Alignable, Chamber of Commerce, Google Business Profile, Facebook, etc.). Inconsistent NAP hurts local search rankings. (Added Session 15 from cross-reference audit.)
 
@@ -60,7 +60,7 @@ Blog stays visible in nav (Ted's decision, Feb 5 session 8).
 - [x] **Blog SEO optimization** — ✅ DONE (Feb 16). Categories rebalanced, tags standardized, descriptions optimized 120-160 chars, local SEO terms added.
 - [x] **Blog landing interactive filtering** — ✅ DONE (Feb 16). Category cards filter posts with JS toggle, count badges, active states.
 - [ ] **CMS for content updates** — Decap CMS (or similar) for Ted to manage blog posts and site content independently. **Critical enabler for Ted's independence.** Ted specifically flagged this as a near-term priority (Feb 16).
-- [ ] **BlogPosting schema** — Each post needs BlogPosting JSON-LD and per-post OG tags.
+- [x] **BlogPosting schema** — DONE (Session 12). BlogPosting JSON-LD in BlogPostLayout.astro. Auto-applies to all 24 posts.
 
 **Blog content strategy from GEO/SEO research (12 prioritized topics):**
 - Tier 1: How to choose a voice teacher, Singing lessons for adults, What to expect at first lesson, Vocal health care, Voice teacher vs vocal coach
@@ -305,6 +305,12 @@ All placeholder sections replaced with real content. Remaining work:
 - [x] **Blog interactive category filtering** — Category cards on blog landing page converted to JS-powered filter buttons with post counts, active states, filter indicator bar. (Feb 16, 2026)
 - [x] **Vocal Health page — all placeholders replaced** — Home Care (gargle recipes, tea tips), SOVT (exercises, routine, straw guide), Vocal Fit (product preview), Articles (6 blog links). Source content from Ted's PDFs + .docx files. (Feb 16, 2026)
 
+- [x] **Shop hub page** — New `/shop` page with 5 products (3 live, 2 coming-soon). Nav and footer updated. (Feb 21, 2026 — Session 12)
+- [x] **Intonation Lab product page** — New `/intonation-lab` page with hero, features, pricing, FAQ. (Feb 21, 2026 — Session 12)
+- [x] **BlogPosting schema** — BlogPosting JSON-LD in BlogPostLayout.astro. Auto-applies to all 24 posts. (Feb 21, 2026 — Session 12)
+- [x] **Breadcrumb component + schema** — Breadcrumb.astro component with BreadcrumbList JSON-LD deployed on all 17 interior pages + 24 blog posts. (Feb 21, 2026 — Session 12)
+- [x] **Homepage ecosystem grid updated** — Intonation Lab card added, 3x2 grid layout. (Feb 21, 2026 — Session 12)
+
 ---
 
-*Last updated: February 16, 2026 (Blog + Vocal Health Session)*
+*Last updated: February 21, 2026 (Session 12 — Shop, Intonation Lab, Breadcrumbs, BlogPosting Schema)*
