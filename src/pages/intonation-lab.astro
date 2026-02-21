@@ -1,0 +1,939 @@
+---
+import Layout from '../layouts/BaseLayout.astro';
+import SectionDivider from '../components/SectionDivider.astro';
+
+const pageTitle = "Intonation Lab — Ear Training for Singers";
+const pageDescription = "Browser-based ear training tool with real-time pitch detection, just intonation targets, and visual feedback. 13 intervals, 7 chord types, 52-exercise curriculum. From $99.";
+const intlabUrl = "https://intlab.tedsvoiceacademy.com";
+---
+
+<Layout title={pageTitle} description={pageDescription}>
+  <Fragment slot="head">
+    <script type="application/ld+json" set:html={JSON.stringify({
+      "@context": "https://schema.org",
+      "@type": "SoftwareApplication",
+      "name": "Intonation Lab",
+      "applicationCategory": "EducationalApplication",
+      "operatingSystem": "Web browser",
+      "description": "Browser-based ear training tool for singers using real-time pitch detection, just intonation targets, and multiple visual feedback systems. Features 13 intervals, 7 chord types, 13 timbres, and a 52-exercise guided curriculum.",
+      "url": "https://intlab.tedsvoiceacademy.com",
+      "creator": {
+        "@type": "Person",
+        "name": "Ted Chamberlain",
+        "url": "https://tedsvoiceacademy.com/about"
+      },
+      "offers": {
+        "@type": "AggregateOffer",
+        "priceCurrency": "USD",
+        "lowPrice": "99",
+        "highPrice": "999",
+        "offerCount": 4,
+        "availability": "https://schema.org/InStock"
+      }
+    })} />
+    <script type="application/ld+json" set:html={JSON.stringify({
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "What is just intonation and why does it matter for singers?",
+          "acceptedAnswer": { "@type": "Answer", "text": "Just intonation is a tuning system based on pure harmonic ratios — the natural relationships between frequencies. When singers tune to these pure ratios rather than piano tuning (equal temperament), chords ring with clarity and resonance. It's the difference between a chord that sounds good and one that locks in with a physical buzz you can feel." }
+        },
+        {
+          "@type": "Question",
+          "name": "Do I need special equipment to use Intonation Lab?",
+          "acceptedAnswer": { "@type": "Answer", "text": "Just a device with a microphone and a modern web browser. Intonation Lab works on desktop, tablet, and phone. No downloads or installation needed. A USB microphone or headset can improve accuracy, but built-in microphones work fine for most users." }
+        },
+        {
+          "@type": "Question",
+          "name": "What's the difference between Single, Quartet, Ensemble, and Chorus licenses?",
+          "acceptedAnswer": { "@type": "Answer", "text": "Single ($99) gives one person access. Quartet ($299) includes 4 access codes — one per member. Ensemble ($499) includes 12 codes for small groups. Chorus ($999) includes 40 codes for large ensembles. All access codes are delivered instantly by email after purchase." }
+        },
+        {
+          "@type": "Question",
+          "name": "Can I use Intonation Lab on my phone?",
+          "acceptedAnswer": { "@type": "Answer", "text": "Yes. Intonation Lab runs in any modern browser on desktop, tablet, or phone. The responsive layout adapts automatically. Your settings and training progress are saved in your browser." }
+        },
+        {
+          "@type": "Question",
+          "name": "Is Intonation Lab only for advanced singers?",
+          "acceptedAnswer": { "@type": "Answer", "text": "Intonation Lab is designed for all levels. Beginners can start in Basic mode with a generous accuracy window of ±25 cents. The guided curriculum progresses gradually from easy intervals to harder ones. Advanced and expert sensitivity levels challenge even professional singers." }
+        },
+        {
+          "@type": "Question",
+          "name": "How is Intonation Lab different from a regular tuner?",
+          "acceptedAnswer": { "@type": "Answer", "text": "Standard tuners tell you if a single note is sharp or flat relative to equal temperament. Intonation Lab understands musical context — it knows what interval or chord tone you're aiming for, calculates the exact just intonation target, and shows you through multiple visualizations how close you are. It trains your ear, not just your eyes." }
+        }
+      ]
+    })} />
+    <script type="application/ld+json" set:html={JSON.stringify({
+      "@context": "https://schema.org",
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://tedsvoiceacademy.com/" },
+        { "@type": "ListItem", "position": 2, "name": "Intonation Lab", "item": "https://tedsvoiceacademy.com/intonation-lab" }
+      ]
+    })} />
+  </Fragment>
+
+  <!-- Hero Section -->
+  <section class="hero">
+    <div class="container">
+      <div class="hero-grid">
+        <div class="hero-content">
+          <span class="hero-eyebrow">Intonation Lab</span>
+          <h1>Train your ear to sing in perfect tune</h1>
+          <p class="hero-body">Pianos are tuned to a compromise. Voices don't have to be. Intonation Lab teaches your ear to hear and produce the pure intervals that make chords ring — using real-time pitch detection, just intonation targets, and visual feedback you can see and feel.</p>
+          <div class="hero-ctas">
+            <a href={intlabUrl} class="cta-button primary" target="_blank" rel="noopener">Get Access</a>
+            <a href="#features" class="cta-button secondary">See How It Works ↓</a>
+          </div>
+        </div>
+        <div class="hero-image">
+          <div class="hero-visual">
+            <div class="beat-circle-demo">
+              <div class="beat-circle-ring"></div>
+              <span class="beat-label">In Tune</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <SectionDivider variant="wave" topColor="var(--color-navy-deep)" bottomColor="var(--color-off-white)" />
+
+  <!-- Answer Capsule -->
+  <section class="capsule-section">
+    <div class="container">
+      <p class="answer-capsule">Intonation Lab is a browser-based ear training tool for singers, created by Ted Chamberlain. It uses real-time pitch detection to help singers develop precise intonation using just intonation — the pure tuning system based on natural harmonic ratios. Features include 13 intervals, 7 chord types, 13 timbres, a beat frequency visualization, cymatics display, pitch tracker, and a 52-exercise guided curriculum. Pricing starts at $99 for individuals, with group licenses up to $999 for choruses.</p>
+      <p class="page-date">Last updated: <time datetime="2026-02-21">February 21, 2026</time></p>
+    </div>
+  </section>
+
+  <!-- The Problem Section -->
+  <section class="problem-section">
+    <div class="container container-narrow reveal">
+      <h2 class="decorated-heading">Pianos are out of tune. On purpose.</h2>
+      <p class="drop-cap">Every piano in the world uses equal temperament — a tuning system that slightly detunes every interval so all 12 keys sound equally acceptable. It's a practical compromise, and for keyboards it works well enough.</p>
+      <p>But singers aren't keyboards. When you sing a major third that matches a piano, you're actually 14 cents sharp of the pure, resonant interval. When a <a href="/ensembles">barbershop quartet or choir</a> locks into a chord that rings with an almost physical buzz, they're singing in just intonation — pure ratios that equal temperament can only approximate.</p>
+      <blockquote class="pull-quote">When a chord locks in, you can feel it. That's just intonation.</blockquote>
+      <p>The challenge is training your ear to hear and produce these pure intervals reliably. That's what Intonation Lab is built to do.</p>
+    </div>
+  </section>
+
+  <SectionDivider variant="curve" topColor="var(--color-off-white)" bottomColor="var(--color-navy-deep)" />
+
+  <!-- Features Section -->
+  <section id="features" class="features-section">
+    <div class="container">
+      <h2 class="decorated-heading decorated-heading--light reveal">What's inside</h2>
+      <p class="section-intro reveal">Six core capabilities that work together to build your intonation skills — from hearing the difference to singing it consistently.</p>
+
+      <div class="features-grid reveal-stagger">
+        <div class="feature-card reveal">
+          <div class="feature-icon">
+            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true">
+              <path d="M9 18V5l12-2v13"/>
+              <circle cx="6" cy="18" r="3"/>
+              <circle cx="18" cy="16" r="3"/>
+            </svg>
+          </div>
+          <h3>13 Intervals + 7 Chord Types</h3>
+          <p>Practice any interval from unison through octave, or choose from major and minor triads, dominant 7th, major 7th, minor 7th, diminished, and augmented chords. Each target is calculated using just intonation ratios.</p>
+        </div>
+
+        <div class="feature-card reveal">
+          <div class="feature-icon">
+            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true">
+              <circle cx="12" cy="12" r="10"/>
+              <circle cx="12" cy="12" r="6"/>
+              <circle cx="12" cy="12" r="2"/>
+            </svg>
+          </div>
+          <h3>Beat Frequency Circle</h3>
+          <p>A pulsing ring that wobbles at the actual beat rate between your voice and the target. Still and green when you're in tune, wobbling red when you're off. Learning to see and hear these beats is one of the most powerful ways to develop intonation.</p>
+        </div>
+
+        <div class="feature-card reveal">
+          <div class="feature-icon">
+            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true">
+              <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/>
+            </svg>
+          </div>
+          <h3>Cymatics Visualization</h3>
+          <p>A mandala-like geometric pattern that stays stable and symmetric when you're in tune, then rotates and distorts as you drift. A beautiful way to visualize acoustic consonance in real time.</p>
+        </div>
+
+        <div class="feature-card reveal">
+          <div class="feature-icon">
+            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true">
+              <path d="M12 2a3 3 0 0 0-3 3v7a3 3 0 0 0 6 0V5a3 3 0 0 0-3-3Z"/>
+              <path d="M19 10v2a7 7 0 0 1-14 0v-2"/>
+              <line x1="12" x2="12" y1="19" y2="22"/>
+            </svg>
+          </div>
+          <h3>13 Timbres</h3>
+          <p>Hear your reference pitch as sine wave, oboe, violin, piano, organ, trumpet, flute, or six vocal timbres (male and female "oo," "ah," and "ee"). Each with a unique harmonic profile to train against.</p>
+        </div>
+
+        <div class="feature-card reveal">
+          <div class="feature-icon">
+            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true">
+              <polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/>
+            </svg>
+          </div>
+          <h3>Pitch Tracker</h3>
+          <p>A scrolling line chart that records your pitch over time, showing your trajectory toward the target. See whether you approach from above or below, and how stable your pitch is once you find it.</p>
+        </div>
+
+        <div class="feature-card reveal">
+          <div class="feature-icon">
+            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true">
+              <path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"/>
+              <path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"/>
+            </svg>
+          </div>
+          <h3>52-Exercise Curriculum</h3>
+          <p>A guided training system that progresses from easy intervals to hard ones, at increasing accuracy requirements. Four difficulty levels from beginner (±25 cents) to expert (±5 cents). Progress tracking and diagnostic feedback after each exercise.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <SectionDivider variant="wave" topColor="var(--color-navy-deep)" bottomColor="var(--color-cream)" />
+
+  <!-- How It Works Section -->
+  <section class="how-section">
+    <div class="container container-narrow">
+      <h2 class="decorated-heading reveal">How it works</h2>
+      <div class="steps reveal-stagger">
+        <div class="step reveal">
+          <span class="step-number">1</span>
+          <div class="step-content">
+            <h3>Choose your interval or chord</h3>
+            <p>Select any of 13 intervals (unison through octave) or 7 chord types. The app calculates the exact just intonation target frequency.</p>
+          </div>
+        </div>
+        <div class="step reveal">
+          <span class="step-number">2</span>
+          <div class="step-content">
+            <h3>Enable your microphone</h3>
+            <p>Grant microphone access and Intonation Lab starts analyzing your pitch in real time using autocorrelation-based detection.</p>
+          </div>
+        </div>
+        <div class="step reveal">
+          <span class="step-number">3</span>
+          <div class="step-content">
+            <h3>Sing and watch the feedback</h3>
+            <p>The beat frequency circle, cents gauge, cymatics pattern, and pitch tracker all respond instantly. Color shifts from red to amber to green as you approach the target.</p>
+          </div>
+        </div>
+        <div class="step reveal">
+          <span class="step-number">4</span>
+          <div class="step-content">
+            <h3>Train with the guided curriculum</h3>
+            <p>Follow 52 structured exercises that progressively challenge your ear. Track your progress across all intervals and difficulty levels.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Pricing Section -->
+  <section class="pricing-section">
+    <div class="container">
+      <h2 class="decorated-heading reveal">Choose your license</h2>
+      <p class="section-intro reveal">Individual access or group licenses for quartets, ensembles, and choruses. All access codes are delivered instantly by email.</p>
+
+      <div class="pricing-grid reveal-stagger">
+        <div class="pricing-card reveal">
+          <h3>Single</h3>
+          <div class="price">$99</div>
+          <p class="price-desc">1 access code</p>
+          <p class="pricing-detail">Full access for one singer. Works across all your devices with the same code and email.</p>
+          <a href={intlabUrl} class="pricing-cta" target="_blank" rel="noopener">Get Access</a>
+        </div>
+
+        <div class="pricing-card pricing-card--popular reveal">
+          <span class="popular-badge">Popular</span>
+          <h3>Quartet</h3>
+          <div class="price">$299</div>
+          <p class="price-desc">4 access codes</p>
+          <p class="pricing-detail">One code per member. Train individually between rehearsals and build ensemble intonation skills together.</p>
+          <a href={intlabUrl} class="pricing-cta" target="_blank" rel="noopener">Get Access</a>
+        </div>
+
+        <div class="pricing-card reveal">
+          <h3>Ensemble</h3>
+          <div class="price">$499</div>
+          <p class="price-desc">12 access codes</p>
+          <p class="pricing-detail">For small ensembles and a cappella groups. Distribute codes to your members and track collective progress.</p>
+          <a href={intlabUrl} class="pricing-cta" target="_blank" rel="noopener">Get Access</a>
+        </div>
+
+        <div class="pricing-card reveal">
+          <h3>Chorus</h3>
+          <div class="price">$999</div>
+          <p class="price-desc">40 access codes</p>
+          <p class="pricing-detail">For full choruses and large vocal ensembles. Give every section access to systematic ear training.</p>
+          <a href={intlabUrl} class="pricing-cta" target="_blank" rel="noopener">Get Access</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <SectionDivider variant="angle" topColor="var(--color-white)" bottomColor="var(--color-cream)" />
+
+  <!-- FAQ Section -->
+  <section class="faq-section">
+    <div class="container container-narrow">
+      <h2 class="decorated-heading reveal">Common Questions</h2>
+
+      <details class="faq-item reveal">
+        <summary>What is just intonation and why does it matter for singers?</summary>
+        <p>Just intonation is a tuning system based on pure harmonic ratios — the natural relationships between frequencies. When singers tune to these pure ratios rather than piano tuning (equal temperament), chords ring with clarity and resonance. It's the difference between a chord that sounds good and one that locks in with a physical buzz you can feel.</p>
+      </details>
+
+      <details class="faq-item reveal">
+        <summary>Do I need special equipment?</summary>
+        <p>Just a device with a microphone and a modern web browser. Intonation Lab works on desktop, tablet, and phone. No downloads or installation needed. A USB microphone or headset can improve accuracy, but built-in microphones work fine for most users.</p>
+      </details>
+
+      <details class="faq-item reveal">
+        <summary>What's the difference between the license tiers?</summary>
+        <p>Single ($99) gives one person access. Quartet ($299) includes 4 access codes — one per member. Ensemble ($499) includes 12 codes for small groups. Chorus ($999) includes 40 codes for large ensembles. All access codes are delivered instantly by email after purchase.</p>
+      </details>
+
+      <details class="faq-item reveal">
+        <summary>Can I use it on my phone?</summary>
+        <p>Yes. Intonation Lab runs in any modern browser on desktop, tablet, or phone. The responsive layout adapts automatically. Your settings and training progress are saved in your browser.</p>
+      </details>
+
+      <details class="faq-item reveal">
+        <summary>Is Intonation Lab only for advanced singers?</summary>
+        <p>Intonation Lab is designed for all levels. Beginners can start in Basic mode with a generous accuracy window of ±25 cents. The guided curriculum progresses gradually from easy intervals to harder ones. Advanced and expert sensitivity levels challenge even professional singers.</p>
+      </details>
+
+      <details class="faq-item reveal">
+        <summary>How is this different from a regular tuner?</summary>
+        <p>Standard tuners tell you if a single note is sharp or flat relative to equal temperament. Intonation Lab understands musical context — it knows what interval or chord tone you're aiming for, calculates the exact just intonation target, and shows you through multiple visualizations how close you are. It trains your ear, not just your eyes.</p>
+      </details>
+    </div>
+  </section>
+
+  <!-- Final CTA Section -->
+  <section class="final-cta">
+    <div class="container reveal">
+      <h2>Ready to train your ear?</h2>
+      <p>Intonation Lab gives you the tools to hear, see, and develop the precise pitch skills that make voices and ensembles ring. Pair it with <a href="/singing" style="color: var(--color-gold-bright);">private coaching</a> for even faster results.</p>
+      <a href={intlabUrl} class="cta-button primary" target="_blank" rel="noopener">Get Access</a>
+      <p class="contact-line">Questions? Email <a href="mailto:ted@tedsvoiceacademy.com">ted@tedsvoiceacademy.com</a> · <a href="/shop">Browse all products</a></p>
+    </div>
+  </section>
+</Layout>
+
+<style>
+  /* Hero Section */
+  .hero {
+    background:
+      url('/images/noise-texture.png') repeat,
+      linear-gradient(135deg, var(--color-navy-deep) 0%, var(--color-navy-medium) 100%);
+    background-size: 200px 200px, 100% 100%;
+    background-blend-mode: soft-light, normal;
+    color: var(--color-white);
+    padding: 5rem 2rem 4rem;
+  }
+
+  .hero-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 3rem;
+    align-items: center;
+  }
+
+  @media (min-width: 900px) {
+    .hero-grid {
+      grid-template-columns: 1.2fr 1fr;
+      gap: 4rem;
+    }
+  }
+
+  .hero-eyebrow {
+    display: block;
+    font-size: 1.25rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.15em;
+    color: var(--color-gold-bright);
+    margin-bottom: 0.75rem;
+  }
+
+  .hero h1 {
+    font-family: var(--font-heading);
+    font-size: clamp(2rem, 4vw + 1rem, 3rem);
+    font-weight: 700;
+    color: var(--color-white);
+    margin: 0 0 1.5rem 0;
+    line-height: 1.2;
+  }
+
+  .hero-body {
+    font-size: 1.125rem;
+    line-height: 1.7;
+    color: var(--color-cream);
+    margin-bottom: 2rem;
+  }
+
+  .hero-ctas {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+  }
+
+  /* Hero Visual — Beat Circle Demo */
+  .hero-visual {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .beat-circle-demo {
+    position: relative;
+    width: 280px;
+    height: 280px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .beat-circle-ring {
+    position: absolute;
+    inset: 0;
+    border-radius: 50%;
+    border: 4px solid #3db58c;
+    box-shadow: 0 0 40px rgba(61, 181, 140, 0.3), inset 0 0 40px rgba(61, 181, 140, 0.1);
+    animation: beatPulse 3s ease-in-out infinite;
+  }
+
+  .beat-label {
+    font-size: 1.25rem;
+    font-weight: 600;
+    color: #3db58c;
+    letter-spacing: 0.05em;
+  }
+
+  @keyframes beatPulse {
+    0%, 100% { transform: scale(1); opacity: 0.8; }
+    50% { transform: scale(1.05); opacity: 1; }
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    .beat-circle-ring {
+      animation: none;
+    }
+  }
+
+  /* Hero entrance animations */
+  @keyframes heroTextIn {
+    from { opacity: 0; transform: translateX(-30px); }
+    to { opacity: 1; transform: translateX(0); }
+  }
+  @keyframes heroVisualIn {
+    from { opacity: 0; transform: scale(0.9); }
+    to { opacity: 1; transform: scale(1); }
+  }
+  .hero-content {
+    animation: heroTextIn 1s ease-out 0.2s both;
+  }
+  .hero-visual {
+    animation: heroVisualIn 1.2s ease-out 0.5s both;
+  }
+  @media (prefers-reduced-motion: reduce) {
+    .hero-content, .hero-visual {
+      animation: none;
+    }
+  }
+
+  /* CTA Buttons */
+  .cta-button {
+    display: inline-block;
+    font-size: 1rem;
+    font-weight: 600;
+    padding: 1rem 2rem;
+    border-radius: 8px;
+    text-decoration: none;
+    transition: all 0.2s ease;
+  }
+
+  .cta-button.primary {
+    background: var(--color-gold-bright);
+    color: var(--color-navy-deep);
+  }
+
+  .cta-button.primary:hover {
+    background: var(--color-gold-hover);
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(212, 168, 75, 0.3);
+  }
+
+  .cta-button.secondary {
+    background: transparent;
+    border: 2px solid var(--color-cream);
+    color: var(--color-cream);
+  }
+
+  .cta-button.secondary:hover {
+    background: rgba(245, 240, 225, 0.1);
+  }
+
+  /* Container */
+  .container-narrow {
+    max-width: 800px;
+    margin: 0 auto;
+  }
+
+  /* Answer Capsule */
+  .capsule-section {
+    padding: 2rem 2rem 0;
+    background: var(--color-off-white);
+  }
+
+  .answer-capsule {
+    font-size: 1rem;
+    line-height: 1.7;
+    color: var(--color-charcoal);
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 1.5rem;
+    background: var(--color-white);
+    border-left: 4px solid var(--color-gold-bright);
+    border-radius: 0 8px 8px 0;
+  }
+
+  .page-date {
+    font-size: 0.85rem;
+    color: rgba(42, 42, 42, 0.6);
+    max-width: 800px;
+    margin: 0.5rem auto 0;
+  }
+
+  /* Problem Section */
+  .problem-section {
+    background: var(--color-off-white);
+    padding: 4rem 2rem;
+    text-align: center;
+  }
+
+  .problem-section h2 {
+    font-family: var(--font-heading);
+    font-size: clamp(1.75rem, 3vw + 1rem, 2.5rem);
+    font-weight: 700;
+    color: var(--color-navy-deep);
+    margin: 0 0 1.5rem;
+  }
+
+  .problem-section p {
+    font-size: 1.1rem;
+    line-height: 1.8;
+    color: var(--color-charcoal);
+    text-align: left;
+    margin-bottom: 1.25rem;
+  }
+
+  /* Features Section */
+  .features-section {
+    background:
+      url('/images/noise-texture.png') repeat,
+      linear-gradient(135deg, var(--color-navy-deep) 0%, var(--color-navy-medium) 100%);
+    background-size: 200px 200px, 100% 100%;
+    background-blend-mode: soft-light, normal;
+    padding: 4rem 2rem;
+  }
+
+  .features-section h2 {
+    font-family: var(--font-heading);
+    font-size: clamp(1.75rem, 3vw + 1rem, 2.5rem);
+    font-weight: 700;
+    color: var(--color-white);
+    text-align: center;
+    margin: 0 0 0.75rem;
+  }
+
+  .section-intro {
+    text-align: center;
+    font-size: 1.1rem;
+    color: var(--color-cream);
+    max-width: 700px;
+    margin: 0 auto 2.5rem;
+    line-height: 1.7;
+  }
+
+  .features-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.5rem;
+  }
+
+  .feature-card {
+    background: rgba(255, 255, 255, 0.08);
+    padding: 1.75rem;
+    border-radius: 12px;
+    border-top: 3px solid var(--color-gold-bright);
+    transition: transform 0.2s ease, background 0.2s ease;
+  }
+
+  .feature-card:hover {
+    transform: translateY(-4px);
+    background: rgba(255, 255, 255, 0.12);
+  }
+
+  .feature-icon {
+    color: var(--color-gold-bright);
+    margin-bottom: 1rem;
+  }
+
+  .feature-card h3 {
+    font-family: var(--font-heading);
+    font-size: 1.15rem;
+    font-weight: 700;
+    color: var(--color-white);
+    margin: 0 0 0.75rem;
+  }
+
+  .feature-card p {
+    color: var(--color-cream);
+    font-size: 0.95rem;
+    line-height: 1.6;
+    margin: 0;
+    opacity: 0.95;
+  }
+
+  /* How It Works Section */
+  .how-section {
+    background: var(--color-cream);
+    padding: 4rem 2rem;
+  }
+
+  .how-section h2 {
+    font-family: var(--font-heading);
+    font-size: clamp(1.75rem, 3vw + 1rem, 2.5rem);
+    font-weight: 700;
+    color: var(--color-navy-deep);
+    text-align: center;
+    margin: 0 0 2.5rem;
+  }
+
+  .steps {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+  }
+
+  .step {
+    display: flex;
+    gap: 1.5rem;
+    align-items: flex-start;
+  }
+
+  .step-number {
+    flex-shrink: 0;
+    width: 48px;
+    height: 48px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: var(--color-navy-deep);
+    color: var(--color-gold-bright);
+    font-size: 1.25rem;
+    font-weight: 700;
+    border-radius: 50%;
+  }
+
+  .step-content h3 {
+    font-family: var(--font-heading);
+    font-size: 1.2rem;
+    font-weight: 700;
+    color: var(--color-navy-deep);
+    margin: 0 0 0.5rem;
+  }
+
+  .step-content p {
+    font-size: 1rem;
+    line-height: 1.6;
+    color: var(--color-charcoal);
+    margin: 0;
+  }
+
+  /* Pricing Section */
+  .pricing-section {
+    background: var(--color-white);
+    padding: 4rem 2rem;
+  }
+
+  .pricing-section h2 {
+    font-family: var(--font-heading);
+    font-size: clamp(1.75rem, 3vw + 1rem, 2.5rem);
+    font-weight: 700;
+    color: var(--color-navy-deep);
+    text-align: center;
+    margin: 0 0 0.75rem;
+  }
+
+  .pricing-section .section-intro {
+    color: var(--color-charcoal);
+    margin-bottom: 2.5rem;
+  }
+
+  .pricing-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1.5rem;
+  }
+
+  .pricing-card {
+    background: var(--color-off-white);
+    border-radius: 12px;
+    padding: 2rem;
+    text-align: center;
+    position: relative;
+    border: 1px solid rgba(0, 0, 0, 0.06);
+    display: flex;
+    flex-direction: column;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+  }
+
+  .pricing-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
+  }
+
+  .pricing-card--popular {
+    border: 2px solid var(--color-gold-bright);
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+  }
+
+  .popular-badge {
+    position: absolute;
+    top: -12px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: var(--color-gold-bright);
+    color: var(--color-navy-deep);
+    font-size: 0.75rem;
+    font-weight: 700;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+    padding: 0.35rem 1rem;
+    border-radius: 20px;
+  }
+
+  .pricing-card h3 {
+    font-family: var(--font-heading);
+    font-size: 1.35rem;
+    font-weight: 700;
+    color: var(--color-navy-deep);
+    margin: 0 0 0.5rem;
+  }
+
+  .price {
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: var(--color-navy-deep);
+    margin: 0 0 0.25rem;
+  }
+
+  .price-desc {
+    font-size: 0.9rem;
+    color: rgba(42, 42, 42, 0.7);
+    margin: 0 0 1rem;
+  }
+
+  .pricing-detail {
+    font-size: 0.95rem;
+    line-height: 1.6;
+    color: var(--color-charcoal);
+    margin: 0;
+    flex-grow: 1;
+  }
+
+  .pricing-cta {
+    display: inline-block;
+    margin-top: 1.5rem;
+    background: var(--color-gold-bright);
+    color: var(--color-navy-deep);
+    font-size: 1rem;
+    font-weight: 600;
+    padding: 0.75rem 1.5rem;
+    border-radius: 8px;
+    text-decoration: none;
+    transition: background 0.2s ease, transform 0.2s ease;
+  }
+
+  .pricing-cta:hover {
+    background: var(--color-gold-hover);
+    transform: translateY(-1px);
+  }
+
+  /* FAQ Section */
+  .faq-section {
+    background: var(--color-cream);
+    padding: 4rem 2rem;
+  }
+
+  .faq-section h2 {
+    font-family: var(--font-heading);
+    font-size: clamp(1.75rem, 3vw + 1rem, 2.5rem);
+    font-weight: 700;
+    color: var(--color-navy-deep);
+    text-align: center;
+    margin: 0 0 2.5rem;
+  }
+
+  .faq-item {
+    margin-bottom: 1rem;
+    border: 1px solid rgba(10, 22, 40, 0.1);
+    border-radius: 8px;
+    overflow: hidden;
+    background: var(--color-white);
+  }
+
+  .faq-item:last-child {
+    margin-bottom: 0;
+  }
+
+  .faq-item summary {
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: var(--color-navy-deep);
+    padding: 1.25rem 3rem 1.25rem 1.25rem;
+    cursor: pointer;
+    list-style: none;
+    position: relative;
+    transition: background 0.2s ease;
+  }
+
+  .faq-item summary::-webkit-details-marker {
+    display: none;
+  }
+
+  .faq-item summary::after {
+    content: "+";
+    position: absolute;
+    right: 1.25rem;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 1.5rem;
+    font-weight: 400;
+    color: var(--color-gold-bright);
+    transition: transform 0.2s ease;
+  }
+
+  .faq-item[open] summary::after {
+    content: "\2212";
+  }
+
+  .faq-item summary:hover {
+    background: rgba(212, 168, 75, 0.06);
+  }
+
+  .faq-item p {
+    font-size: 1rem;
+    line-height: 1.7;
+    margin: 0;
+    color: var(--color-charcoal);
+    padding: 0 1.25rem 1.25rem;
+  }
+
+  /* Final CTA Section */
+  .final-cta {
+    background:
+      url('/images/noise-texture.png') repeat,
+      linear-gradient(135deg, var(--color-navy-deep) 0%, var(--color-navy-medium) 100%);
+    background-size: 200px 200px, 100% 100%;
+    background-blend-mode: soft-light, normal;
+    padding: 4rem 2rem;
+    text-align: center;
+    color: var(--color-white);
+  }
+
+  .final-cta h2 {
+    font-family: var(--font-heading);
+    font-size: clamp(1.75rem, 3vw + 1rem, 2.5rem);
+    font-weight: 700;
+    margin: 0 0 1rem;
+  }
+
+  .final-cta > .container > p {
+    font-size: 1.1rem;
+    line-height: 1.7;
+    color: var(--color-cream);
+    max-width: 600px;
+    margin: 0 auto 2rem;
+  }
+
+  .contact-line {
+    margin-top: 1.5rem;
+    font-size: 0.95rem;
+    color: rgba(245, 240, 225, 0.8);
+  }
+
+  .contact-line a {
+    color: var(--color-gold-bright);
+    font-weight: 600;
+    text-decoration: none;
+  }
+
+  .contact-line a:hover {
+    text-decoration: underline;
+  }
+
+  /* Responsive */
+  @media (max-width: 1024px) {
+    .features-grid {
+      grid-template-columns: repeat(2, 1fr);
+    }
+
+    .pricing-grid {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+
+  @media (max-width: 768px) {
+    .hero {
+      padding: 4rem 1.5rem 3rem;
+    }
+
+    .features-grid {
+      grid-template-columns: 1fr;
+    }
+
+    .pricing-grid {
+      grid-template-columns: 1fr;
+    }
+
+    .problem-section,
+    .features-section,
+    .how-section,
+    .pricing-section,
+    .faq-section,
+    .final-cta {
+      padding: 3rem 1.5rem;
+    }
+
+    .hero-ctas {
+      flex-direction: column;
+      align-items: stretch;
+    }
+
+    .cta-button {
+      text-align: center;
+    }
+
+    .beat-circle-demo {
+      width: 200px;
+      height: 200px;
+    }
+  }
+</style>

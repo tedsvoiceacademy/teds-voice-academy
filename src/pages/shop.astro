@@ -1,0 +1,606 @@
+---
+import Layout from '../layouts/BaseLayout.astro';
+import SectionDivider from '../components/SectionDivider.astro';
+
+const pageTitle = "Shop — Voice Tools & Resources";
+const pageDescription = "Books, assessments, ear training tools, and vocal resources from Ted's Voice Academy. Everything I build comes from real teaching experience.";
+
+const products = [
+  {
+    slug: 'avf-book',
+    name: 'The Adaptive Voice Framework™',
+    tagline: 'The owner\'s manual your voice never came with',
+    description: 'Nearly 700 pages covering voice science, technique, and artistry. The Five Pillars and Eight Dials explained in depth — a complete system for understanding how voices work.',
+    price: '$9.99 – $42.95',
+    priceNote: 'Kindle $9.99 · Paperback $42.95',
+    type: 'Book',
+    image: '/images/avf-book-cover.webp',
+    ctaLabel: 'Order on Amazon',
+    ctaUrl: 'https://www.amazon.com/dp/B0GD2SH8J5',
+    ctaExternal: true,
+    internalPageUrl: '/avf',
+    internalPageLabel: 'Learn more about AVF',
+    status: 'live',
+  },
+  {
+    slug: 'pass-profile',
+    name: 'PASS Profile™',
+    tagline: 'Discover how you naturally communicate',
+    description: 'A professional communication assessment measuring 40 traits across 6 domains. 60 workplace scenarios, a personalized 35–48 page PDF report, and actionable insights.',
+    price: '$49.99 – $59.99',
+    priceNote: 'Individual $49.99 · With Voice-Brand Alignment $59.99',
+    type: 'Platform',
+    image: '/images/pass-profile-logo.webp',
+    ctaLabel: 'Get Your Profile',
+    ctaUrl: 'https://pass.tedsvoiceacademy.com',
+    ctaExternal: true,
+    internalPageUrl: '/pass-profile',
+    internalPageLabel: 'Learn more about PASS',
+    status: 'live',
+  },
+  {
+    slug: 'intonation-lab',
+    name: 'Intonation Lab',
+    tagline: 'Train your ear to sing in perfect tune',
+    description: 'A browser-based ear training tool using real-time pitch detection, just intonation targets, and visual feedback. 13 intervals, 7 chord types, 52-exercise curriculum.',
+    price: '$99 – $999',
+    priceNote: 'Single $99 · Quartet $299 · Ensemble $499 · Chorus $999',
+    type: 'Web App',
+    image: '/images/intonation-lab-card.webp',
+    ctaLabel: 'Get Access',
+    ctaUrl: 'https://intlab.tedsvoiceacademy.com',
+    ctaExternal: true,
+    internalPageUrl: '/intonation-lab',
+    internalPageLabel: 'Learn more about Intonation Lab',
+    status: 'live',
+  },
+  {
+    slug: 'vocal-fit',
+    name: 'Vocal Fit',
+    tagline: 'Daily vocal conditioning exercises',
+    description: 'Structured warm-up and conditioning routines designed for singers and speakers. Build vocal stamina, flexibility, and reliability with guided exercises you can do on your own.',
+    price: '',
+    priceNote: '',
+    type: 'Download',
+    image: '',
+    ctaLabel: '',
+    ctaUrl: '',
+    ctaExternal: false,
+    internalPageUrl: '',
+    internalPageLabel: '',
+    status: 'coming-soon',
+  },
+  {
+    slug: 'riser-placement',
+    name: 'Riser Placement Tool',
+    tagline: 'Optimize your ensemble\'s stage setup',
+    description: 'A visual tool for chorus directors and ensemble leaders to plan riser placement and section positioning for optimal blend, balance, and acoustic projection.',
+    price: '',
+    priceNote: '',
+    type: 'Web App',
+    image: '',
+    ctaLabel: '',
+    ctaUrl: '',
+    ctaExternal: false,
+    internalPageUrl: '',
+    internalPageLabel: '',
+    status: 'coming-soon',
+  },
+];
+
+const liveProducts = products.filter(p => p.status === 'live');
+---
+
+<Layout title={pageTitle} description={pageDescription}>
+  <Fragment slot="head">
+    <script type="application/ld+json" set:html={JSON.stringify({
+      "@context": "https://schema.org",
+      "@type": "ItemList",
+      "name": "Ted's Voice Academy Products",
+      "description": "Voice training tools, books, and assessments from Ted's Voice Academy",
+      "numberOfItems": liveProducts.length,
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "item": {
+            "@type": "Book",
+            "name": "The Adaptive Voice Framework",
+            "author": { "@type": "Person", "name": "Ted Chamberlain" },
+            "url": "https://www.amazon.com/dp/B0GD2SH8J5",
+            "offers": {
+              "@type": "AggregateOffer",
+              "priceCurrency": "USD",
+              "lowPrice": "9.99",
+              "highPrice": "42.95"
+            }
+          }
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "item": {
+            "@type": "Product",
+            "name": "PASS Profile Communication Assessment",
+            "url": "https://pass.tedsvoiceacademy.com",
+            "offers": {
+              "@type": "AggregateOffer",
+              "priceCurrency": "USD",
+              "lowPrice": "49.99",
+              "highPrice": "59.99"
+            }
+          }
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "item": {
+            "@type": "SoftwareApplication",
+            "name": "Intonation Lab",
+            "applicationCategory": "EducationalApplication",
+            "url": "https://intlab.tedsvoiceacademy.com",
+            "offers": {
+              "@type": "AggregateOffer",
+              "priceCurrency": "USD",
+              "lowPrice": "99",
+              "highPrice": "999"
+            }
+          }
+        }
+      ]
+    })} />
+    <script type="application/ld+json" set:html={JSON.stringify({
+      "@context": "https://schema.org",
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://tedsvoiceacademy.com/" },
+        { "@type": "ListItem", "position": 2, "name": "Shop", "item": "https://tedsvoiceacademy.com/shop" }
+      ]
+    })} />
+  </Fragment>
+
+  <!-- Hero Section -->
+  <section class="hero">
+    <div class="container reveal">
+      <span class="hero-eyebrow">Shop</span>
+      <h1>Tools for every voice</h1>
+      <p class="hero-subhead">Books, assessments, and training tools — everything I build comes from real teaching experience and a commitment to helping voices grow.</p>
+    </div>
+  </section>
+
+  <SectionDivider variant="wave" topColor="var(--color-navy-deep)" bottomColor="var(--color-off-white)" />
+
+  <!-- Answer Capsule -->
+  <section class="capsule-section">
+    <div class="container">
+      <p class="answer-capsule">Ted's Voice Academy offers voice training products including the Adaptive Voice Framework book ($9.99–$42.95 on Amazon), PASS Profile communication assessment ($49.99–$59.99), and Intonation Lab ear training web app ($99–$999). All products are developed by Ted Chamberlain from four decades of voice teaching experience.</p>
+      <p class="page-date">Last updated: <time datetime="2026-02-21">February 21, 2026</time></p>
+    </div>
+  </section>
+
+  <!-- Intro Section -->
+  <section class="intro-section">
+    <div class="container container-narrow reveal">
+      <p class="intro-text">Over four decades of teaching, I've developed tools that extend what happens in the studio. Each product on this page grew out of a real need I saw in my students — a clearer way to understand vocal function, a way to measure communication style, a tool for training intonation by ear. They're practical, field-tested, and designed to help you keep growing between lessons and beyond.</p>
+    </div>
+  </section>
+
+  <!-- Product Grid -->
+  <section class="products-section">
+    <div class="container">
+      <div class="products-grid reveal-stagger">
+        {products.map((product) => (
+          <div class={`product-card ${product.status === 'coming-soon' ? 'product-card--coming-soon' : ''} reveal`}>
+            {product.status === 'coming-soon' && (
+              <span class="coming-soon-badge">Coming Soon</span>
+            )}
+            <div class="product-card__image">
+              {product.image ? (
+                <img src={product.image} alt={product.name} loading="lazy" />
+              ) : (
+                <div class="product-card__placeholder">
+                  {product.type === 'Download' ? (
+                    <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true">
+                      <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/>
+                      <polyline points="7 10 12 15 17 10"/>
+                      <line x1="12" y1="15" x2="12" y2="3"/>
+                    </svg>
+                  ) : (
+                    <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true">
+                      <rect x="2" y="3" width="20" height="14" rx="2" ry="2"/>
+                      <line x1="8" y1="21" x2="16" y2="21"/>
+                      <line x1="12" y1="17" x2="12" y2="21"/>
+                    </svg>
+                  )}
+                </div>
+              )}
+            </div>
+            <div class="product-card__content">
+              <span class="product-card__type">{product.type}</span>
+              <h3 class="product-card__name">{product.name}</h3>
+              <p class="product-card__tagline">{product.tagline}</p>
+              <p class="product-card__description">{product.description}</p>
+              {product.status === 'live' && (
+                <div class="product-card__footer">
+                  <p class="product-card__price">{product.price}</p>
+                  <p class="product-card__price-note">{product.priceNote}</p>
+                  <div class="product-card__actions">
+                    <a
+                      href={product.ctaUrl}
+                      class="product-cta"
+                      target={product.ctaExternal ? '_blank' : undefined}
+                      rel={product.ctaExternal ? 'noopener' : undefined}
+                    >
+                      {product.ctaLabel}
+                    </a>
+                    {product.internalPageUrl && (
+                      <a href={product.internalPageUrl} class="product-learn-more">
+                        {product.internalPageLabel} →
+                      </a>
+                    )}
+                  </div>
+                </div>
+              )}
+            </div>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <SectionDivider variant="curve" topColor="var(--color-off-white)" bottomColor="var(--color-navy-deep)" />
+
+  <!-- Built From the Studio Section -->
+  <section class="studio-section">
+    <div class="container container-narrow reveal">
+      <h2>Built from the studio</h2>
+      <p>Every tool on this page grew out of my teaching practice. The AVF book captures four decades of vocal study in one framework. PASS Profile turns communication self-awareness into something measurable. Intonation Lab makes ear training precise and visual.</p>
+      <p>These aren't theoretical products — they're practical tools I use with real students every week. And there's more on the way.</p>
+      <div class="studio-ctas">
+        <a href="/about" class="studio-link">More about my approach →</a>
+        <a href="/contact" class="studio-link">Get in touch →</a>
+      </div>
+    </div>
+  </section>
+</Layout>
+
+<style>
+  /* Hero Section */
+  .hero {
+    background:
+      url('/images/noise-texture.png') repeat,
+      linear-gradient(135deg, var(--color-navy-deep) 0%, var(--color-navy-medium) 100%);
+    background-size: 200px 200px, 100% 100%;
+    background-blend-mode: soft-light, normal;
+    color: var(--color-white);
+    padding: 5rem 2rem 4rem;
+    text-align: center;
+  }
+
+  .hero .container {
+    max-width: 800px;
+    margin: 0 auto;
+  }
+
+  .hero-eyebrow {
+    display: block;
+    font-size: 1.25rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.15em;
+    color: var(--color-gold-bright);
+    margin-bottom: 0.75rem;
+  }
+
+  .hero h1 {
+    font-family: var(--font-heading);
+    font-size: clamp(2rem, 4vw + 1rem, 3rem);
+    font-weight: 700;
+    color: var(--color-white);
+    margin: 0 0 1.5rem 0;
+    line-height: 1.2;
+  }
+
+  .hero-subhead {
+    font-size: 1.125rem;
+    line-height: 1.6;
+    color: var(--color-off-white);
+    opacity: 0.95;
+    max-width: 650px;
+    margin: 0 auto;
+  }
+
+  /* Intro Section */
+  .intro-section {
+    padding: 3rem 2rem 0;
+    background: var(--color-off-white);
+    text-align: center;
+  }
+
+  .intro-text {
+    font-size: 1.125rem;
+    line-height: 1.8;
+    color: var(--color-charcoal);
+    margin: 0;
+  }
+
+  /* Answer Capsule */
+  .capsule-section {
+    padding: 2rem 2rem 0;
+    background: var(--color-off-white);
+  }
+
+  .answer-capsule {
+    font-size: 1rem;
+    line-height: 1.7;
+    color: var(--color-charcoal);
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 1.5rem;
+    background: var(--color-white);
+    border-left: 4px solid var(--color-gold-bright);
+    border-radius: 0 8px 8px 0;
+  }
+
+  .page-date {
+    font-size: 0.85rem;
+    color: rgba(42, 42, 42, 0.6);
+    max-width: 800px;
+    margin: 0.5rem auto 0;
+  }
+
+  /* Products Section */
+  .products-section {
+    padding: 3rem 2rem 4rem;
+    background: var(--color-off-white);
+  }
+
+  .products-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 2rem;
+  }
+
+  /* Product Card */
+  .product-card {
+    background: var(--color-white);
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 2px 12px rgba(0, 0, 0, 0.08);
+    border: 1px solid rgba(0, 0, 0, 0.06);
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+  }
+
+  .product-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
+  }
+
+  .product-card--coming-soon {
+    opacity: 0.7;
+  }
+
+  .product-card--coming-soon:hover {
+    transform: none;
+    box-shadow: 0 2px 12px rgba(0, 0, 0, 0.08);
+  }
+
+  .coming-soon-badge {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    background: var(--color-navy-deep);
+    color: var(--color-cream);
+    font-size: 0.75rem;
+    font-weight: 700;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+    padding: 0.35rem 0.75rem;
+    border-radius: 20px;
+    z-index: 1;
+  }
+
+  /* Product Card Image */
+  .product-card__image {
+    height: 200px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: var(--color-cream);
+    overflow: hidden;
+  }
+
+  .product-card__image img {
+    max-height: 180px;
+    max-width: 90%;
+    object-fit: contain;
+  }
+
+  .product-card__placeholder {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+    color: rgba(42, 42, 42, 0.25);
+  }
+
+  /* Product Card Content */
+  .product-card__content {
+    padding: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+  }
+
+  .product-card__type {
+    display: inline-block;
+    font-size: 0.75rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    color: var(--color-gold-bright);
+    margin-bottom: 0.5rem;
+  }
+
+  .product-card__name {
+    font-family: var(--font-heading);
+    font-size: 1.35rem;
+    font-weight: 700;
+    color: var(--color-navy-deep);
+    margin: 0 0 0.5rem;
+    line-height: 1.3;
+  }
+
+  .product-card__tagline {
+    font-size: 0.95rem;
+    font-weight: 500;
+    color: var(--color-navy-medium);
+    margin: 0 0 0.75rem;
+    font-style: italic;
+  }
+
+  .product-card__description {
+    font-size: 0.95rem;
+    line-height: 1.6;
+    color: var(--color-charcoal);
+    margin: 0;
+    flex-grow: 1;
+  }
+
+  .product-card__footer {
+    margin-top: 1.25rem;
+    padding-top: 1.25rem;
+    border-top: 1px solid rgba(0, 0, 0, 0.08);
+  }
+
+  .product-card__price {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: var(--color-navy-deep);
+    margin: 0 0 0.25rem;
+  }
+
+  .product-card__price-note {
+    font-size: 0.85rem;
+    color: rgba(42, 42, 42, 0.7);
+    margin: 0 0 1rem;
+  }
+
+  .product-card__actions {
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+  }
+
+  .product-cta {
+    display: inline-block;
+    background: var(--color-gold-bright);
+    color: var(--color-navy-deep);
+    font-size: 1rem;
+    font-weight: 600;
+    padding: 0.75rem 1.5rem;
+    border-radius: 8px;
+    text-decoration: none;
+    text-align: center;
+    transition: background 0.2s ease, transform 0.2s ease;
+  }
+
+  .product-cta:hover {
+    background: var(--color-gold-hover);
+    transform: translateY(-1px);
+  }
+
+  .product-learn-more {
+    display: inline-block;
+    font-size: 0.9rem;
+    font-weight: 600;
+    color: var(--color-navy-deep);
+    text-decoration: none;
+    transition: color 0.2s ease;
+  }
+
+  .product-learn-more:hover {
+    color: var(--color-gold-bright);
+  }
+
+  /* Container Narrow */
+  .container-narrow {
+    max-width: 800px;
+    margin: 0 auto;
+  }
+
+  /* Studio Section */
+  .studio-section {
+    background:
+      url('/images/noise-texture.png') repeat,
+      linear-gradient(135deg, var(--color-navy-deep) 0%, var(--color-navy-medium) 100%);
+    background-size: 200px 200px, 100% 100%;
+    background-blend-mode: soft-light, normal;
+    padding: 4rem 2rem;
+    text-align: center;
+    color: var(--color-white);
+  }
+
+  .studio-section h2 {
+    font-family: var(--font-heading);
+    font-size: clamp(1.75rem, 3vw + 1rem, 2.5rem);
+    font-weight: 700;
+    color: var(--color-white);
+    margin: 0 0 1.5rem;
+  }
+
+  .studio-section p {
+    font-size: 1.1rem;
+    line-height: 1.7;
+    color: var(--color-cream);
+    margin: 0 0 1rem;
+  }
+
+  .studio-ctas {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    margin-top: 2rem;
+  }
+
+  .studio-link {
+    color: var(--color-gold-bright);
+    font-weight: 600;
+    text-decoration: none;
+    font-size: 1rem;
+    transition: color 0.2s ease;
+  }
+
+  .studio-link:hover {
+    color: var(--color-gold-hover);
+  }
+
+  /* Responsive */
+  @media (max-width: 768px) {
+    .hero {
+      padding: 4rem 1.5rem 3rem;
+    }
+
+    .products-section {
+      padding: 2rem 1rem 3rem;
+    }
+
+    .products-grid {
+      grid-template-columns: 1fr;
+    }
+
+    .studio-section {
+      padding: 3rem 1.5rem;
+    }
+
+    .studio-ctas {
+      flex-direction: column;
+      align-items: center;
+      gap: 1rem;
+    }
+  }
+</style>

@@ -9,6 +9,7 @@ You are continuing development on the Ted's Voice Academy (TVA) website — a pr
 **Also read these files:**
 - `PROJECT_BACKLOG.md` — living to-do list with all open items, organized by priority tier
 - `HANDOFF_NEXT_SESSION.md` — verified current state, known bugs, what was/wasn't done last session
+- `HANDOFF_RESOURCE_INVENTORY.md` — **complete resource file map** (images, MP3s, PDFs, docs). Produced by dedicated inventory session Feb 7, 2026. Contains Ted's decisions on every file, organized folder structure, and build action items for digital products, lead magnets, and Vocal Health Hub content.
 
 **Live Site:** https://tedsvoiceacademy.com
 **GitHub:** https://github.com/tedsvoiceacademy/teds-voice-academy
@@ -19,10 +20,10 @@ You are continuing development on the Ted's Voice Academy (TVA) website — a pr
 
 ## Current Status
 
-### All 16 Pages Complete
+### All 18 Pages Complete
 | Page | File | Status |
 |------|------|--------|
-| Homepage | `src/pages/index.astro` | ✅ Complete — Rapid Reviews carousel (Feb 5) |
+| Homepage | `src/pages/index.astro` | ✅ Complete — Rapid Reviews carousel (Feb 5), Intonation Lab ecosystem card (Feb 21) |
 | Contact | `src/pages/contact.astro` | ✅ Complete — Google Maps embed, Netlify form |
 | Singing | `src/pages/singing.astro` | ✅ Complete |
 | Speaking | `src/pages/speaking.astro` | ✅ Complete |
@@ -36,12 +37,14 @@ You are continuing development on the Ted's Voice Academy (TVA) website — a pr
 | Blog | `src/pages/blog.astro` | ✅ Complete — landing page; no individual post system yet. Leave visible until blog system built. |
 | FAQ | `src/pages/faq.astro` | ✅ Complete — 15 Q&As with FAQPage schema, accordion pattern |
 | Success | `src/pages/success.astro` | ✅ Complete — Form submission thank-you page (noIndex) |
-| **Privacy** | `src/pages/privacy.astro` | ✅ **New Feb 5** — Privacy policy page |
-| **Terms** | `src/pages/terms.astro` | ✅ **New Feb 5** — Terms of service page |
+| Privacy | `src/pages/privacy.astro` | ✅ Complete — Privacy policy page |
+| Terms | `src/pages/terms.astro` | ✅ Complete — Terms of service page |
+| **Shop** | `src/pages/shop.astro` | ✅ **New Feb 21** — Product catalog (5 products), ItemList schema |
+| **Intonation Lab** | `src/pages/intonation-lab.astro` | ✅ **New Feb 21** — Full product page, SoftwareApplication + FAQPage schema |
 
 ### SEO & Analytics Infrastructure (Feb 4-5, 2026)
 - `public/robots.txt` — crawler directives + sitemap reference (URL fixed to bare domain Feb 5)
-- `@astrojs/sitemap` integration — auto-generates sitemap with all 16 pages
+- `@astrojs/sitemap` integration — auto-generates sitemap with all 18 pages
 - **LocalBusiness JSON-LD** in BaseLayout (every page) — includes sameAs social profiles (URLs fixed to bare domain Feb 5)
 - **Person schema** on About page, **Book schema** on AVF page
 - **FAQPage schema** on FAQ, AVF, and PASS pages
@@ -178,7 +181,9 @@ teds-voice-academy/
 │   │   ├── faq.astro             # ✅ New Feb 4, 2026
 │   │   ├── success.astro         # ✅ New Feb 5, 2026 — form thank-you page
 │   │   ├── privacy.astro         # ✅ New Feb 5, 2026 — Privacy policy (updated for GA4)
-│   │   └── terms.astro           # ✅ New Feb 5, 2026 — Terms of service
+│   │   ├── terms.astro           # ✅ New Feb 5, 2026 — Terms of service
+│   │   ├── shop.astro            # ✅ New Feb 21, 2026 — Product catalog
+│   │   └── intonation-lab.astro  # ✅ New Feb 21, 2026 — Intonation Lab product page
 │   └── styles/
 │       └── global.css            # Design tokens
 ├── public/
@@ -425,8 +430,9 @@ When nearing token limits (60-70% usage):
 | Feb 5, 2026 | Session 9 (Claude Code) | Hero eyebrow sizing (1rem→1.25rem). GA4 tracking live (G-ZDX6WPT6CZ) + is:inline fix. Google Search Console verified, sitemap submitted. Privacy policy updated for GA4. Contact form tone softened (H1, optional fields, warmer copy). Comprehensive GEO/SEO research report (8 GEO recs, 10 SEO improvements, 12 blog topics, schema additions). Ted approved quick wins: robots.txt AI crawlers, llms.txt, image optimization, award photos. |
 | Feb 5, 2026 | Session 10 (Claude Code) | Image optimization (PNG→WebP, 84% reduction). Award photos on About page. Professional affiliations section (10 org logos). Ensemble logos on cards. Course + Service schema on 3 pages. PASS logo visibility fix. Card symmetry fix. Visual Polish Tier 1 (card hovers, gold accent lines, drop caps, pull quotes). Photos placed on 3 service pages. Visual Polish Tier 2 (grain textures initial, pull quotes on 6 pages). |
 | Feb 5, 2026 | Session 11 (Claude Code) | Grain texture overhaul: replaced broken SVG feTurbulence with real PNG noise texture baked into CSS backgrounds (soft-light blend). Applied to ALL dark sections on ALL 16 pages. Scroll-triggered reveal animations (IntersectionObserver + CSS) on all 16 pages. Hero entrance animations on Homepage, About, AVF, PASS. Credentials bar blending on homepage. |
+| Feb 21, 2026 | Session 12 (Claude Code) | Shop hub page (/shop) with 5 product cards (3 live, 2 coming-soon) and ItemList schema. Intonation Lab product page (/intonation-lab) with features, pricing tiers, FAQ accordion, SoftwareApplication + FAQPage schema. Intonation Lab added to Resources dropdown + footer. Shop added as top-level nav + footer. Homepage ecosystem updated with Intonation Lab card (6 cards, clean 3x2 grid). 18 pages total. |
 
 ---
 
-*Last updated: February 5, 2026 (Session 11)*
+*Last updated: February 21, 2026 (Session 12)*
 *Project started: January 2026*
