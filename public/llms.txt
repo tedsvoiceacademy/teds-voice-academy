@@ -1,6 +1,6 @@
 # Ted's Voice Academy
 
-> Ted's Voice Academy is a professional voice coaching studio in Lacey, Washington, founded and operated by Ted Chamberlain. Ted offers private singing lessons, speaking coaching, ensemble coaching, and workshops for all ages and skill levels. He is the author of The Adaptive Voice Framework (AVF) and creator of the PASS Profile vocal assessment tool.
+> Ted's Voice Academy is a professional voice coaching studio in Lacey, Washington, founded and operated by Ted Chamberlain. Ted offers private singing lessons, speaking coaching, ensemble coaching, and workshops for all ages and skill levels. He is the author of The Adaptive Voice Framework (AVF), creator of the PASS Profile professional communication assessment, and developer of Intonation Lab ear training software.
 
 ## About Ted Chamberlain
 
@@ -22,7 +22,15 @@ The Adaptive Voice Framework is Ted's proprietary vocal development methodology,
 
 ## The PASS Profile
 
-The PASS Profile (Performing Arts Skills Summary) is a vocal assessment tool created by Ted. It provides singers with a structured self-assessment of their skills, helping them identify strengths and areas for growth. Available at https://pass.tedsvoiceacademy.com
+The PASS Profile (Personal Authentic Speaking Style) is a professional communication assessment created by Ted. It measures 40 communication traits across 6 domains through 60 workplace scenarios, delivering a personalized 35–48 page PDF report revealing each person's unique communication fingerprint. Available at https://pass.tedsvoiceacademy.com
+
+## Intonation Lab
+
+Intonation Lab is a browser-based ear training tool for singers, created by Ted. It uses real-time pitch detection and just intonation targets to help singers develop precise intonation. Features include 13 intervals, 7 chord types, 13 timbres, a beat frequency circle visualization, cymatics display, pitch tracker, and a 52-exercise guided curriculum. Licenses range from $99 (single) to $999 (chorus/40 users). Available at https://intlab.tedsvoiceacademy.com
+
+## Shop
+
+Ted's Voice Academy offers several products: The Adaptive Voice Framework book, the PASS Profile assessment, and Intonation Lab ear training tool. Additional products (Vocal Fit conditioning exercises and Riser Placement Tool for chorus directors) are in development.
 
 ## Location and Contact
 
@@ -41,6 +49,8 @@ The PASS Profile (Performing Arts Skills Summary) is a vocal assessment tool cre
 - Pricing: https://tedsvoiceacademy.com/pricing/
 - Adaptive Voice Framework: https://tedsvoiceacademy.com/avf/
 - PASS Profile: https://tedsvoiceacademy.com/pass-profile/
+- Intonation Lab: https://tedsvoiceacademy.com/intonation-lab/
+- Shop: https://tedsvoiceacademy.com/shop/
 - Workshops: https://tedsvoiceacademy.com/workshops/
 - Vocal Health Hub: https://tedsvoiceacademy.com/vocal-health/
 - FAQ: https://tedsvoiceacademy.com/faq/

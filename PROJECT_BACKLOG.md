@@ -78,8 +78,8 @@ All 4 "coming soon" placeholders replaced with real content (commit `94604ba`):
 Source content: Ted's gargle PDFs from `H:\OneDrive\Ted's Voice Academy\Vocal Health\`, SOVT docs extracted from .docx files via PowerShell Word COM.
 
 ### Other Tier 1 Items
-- [x] **OG default image for social sharing** — DONE (Session 13). Generated `og-default.jpg` (1200x630px). BaseLayout updated with absolute URLs. Per-page variants still open.
-- [ ] **Per-page OG images** — Branded social sharing images for individual pages (singing, speaking, about, etc.).
+- [x] **OG default image for social sharing** — DONE (Session 13). Generated `og-default.jpg` (1200x630px). BaseLayout updated with absolute URLs.
+- [x] **Per-page OG images** — DONE (Session 12). 14 branded OG images (1200x630) generated with sharp. All content pages wired with ogImage prop.
 - [ ] **Looker Studio weekly email** — Deferred until GA4 has data. Set up "TVA Website Weekly Performance Overview" report.
 - [ ] **Email newsletter system** — Buttondown recommended. Connects to existing newsletter signup forms.
 - [ ] **Form notification email formatting** — Netlify form emails are plain/ugly. Needs serverless function or third-party integration.
@@ -310,7 +310,10 @@ All placeholder sections replaced with real content. Remaining work:
 - [x] **BlogPosting schema** — BlogPosting JSON-LD in BlogPostLayout.astro. Auto-applies to all 24 posts. (Feb 21, 2026 — Session 12)
 - [x] **Breadcrumb component + schema** — Breadcrumb.astro component with BreadcrumbList JSON-LD deployed on all 17 interior pages + 24 blog posts. (Feb 21, 2026 — Session 12)
 - [x] **Homepage ecosystem grid updated** — Intonation Lab card added, 3x2 grid layout. (Feb 21, 2026 — Session 12)
+- [x] **Related posts on blog** — Scoring algorithm (categories 3x, tags 1x) in [...slug].astro. Top 3 related posts shown on each of 24 blog posts. (Feb 21, 2026 — Session 12)
+- [x] **Per-page OG images** — 14 branded social sharing images generated with sharp (1200x630). ogImage prop wired on all content pages. (Feb 21, 2026 — Session 12)
+- [x] **llms.txt updated** — Added Intonation Lab + Shop sections and URLs. Fixed PASS Profile description. (Feb 21, 2026 — Session 12)
 
 ---
 
-*Last updated: February 21, 2026 (Session 12 — Shop, Intonation Lab, Breadcrumbs, BlogPosting Schema)*
+*Last updated: February 21, 2026 (Session 12 — Shop, Intonation Lab, Breadcrumbs, BlogPosting, Related Posts, OG Images, llms.txt)*
