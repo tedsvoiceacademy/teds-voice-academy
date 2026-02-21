@@ -1,0 +1,100 @@
+backend:
+  name: git-gateway
+  branch: main
+
+# Where uploaded images go
+media_folder: "public/images/blog"
+public_folder: "/images/blog"
+
+# Publish immediately (no editorial workflow)
+# To enable draft/review later, uncomment:
+# publish_mode: editorial_workflow
+
+collections:
+  - name: "blog"
+    label: "Blog Posts"
+    folder: "src/content/blog"
+    create: true
+    delete: true
+    slug: "{{slug}}"
+    extension: "md"
+    format: "frontmatter"
+    sortable_fields: ["pubDate", "title"]
+    summary: "{{title}} — {{pubDate}}"
+    fields:
+      - label: "Title"
+        name: "title"
+        widget: "string"
+        required: true
+
+      - label: "Description"
+        name: "description"
+        widget: "text"
+        required: true
+        hint: "1-2 sentence summary for search engines and social sharing (120-160 characters ideal)"
+
+      - label: "Publish Date"
+        name: "pubDate"
+        widget: "datetime"
+        date_format: "YYYY-MM-DD"
+        time_format: false
+        required: true
+
+      - label: "Updated Date"
+        name: "updatedDate"
+        widget: "datetime"
+        date_format: "YYYY-MM-DD"
+        time_format: false
+        required: false
+
+      - label: "Author"
+        name: "author"
+        widget: "string"
+        default: "Ted Chamberlain"
+        required: true
+
+      - label: "Featured Image"
+        name: "image"
+        widget: "object"
+        required: false
+        fields:
+          - label: "Image"
+            name: "url"
+            widget: "image"
+            required: true
+            hint: "Upload or select an image for this post"
+          - label: "Alt Text"
+            name: "alt"
+            widget: "string"
+            required: true
+            hint: "Describe the image for accessibility (e.g., 'Ted coaching a student in the studio')"
+
+      - label: "Categories"
+        name: "categories"
+        widget: "select"
+        multiple: true
+        min: 1
+        options:
+          - "Technique"
+          - "Vocal Health"
+          - "Performance"
+          - "Mindset & Practice"
+          - "For Professionals"
+        required: true
+
+      - label: "Tags"
+        name: "tags"
+        widget: "list"
+        required: false
+        hint: "Add tags one at a time (e.g., warm-ups, breathing, stage fright)"
+
+      - label: "Draft"
+        name: "draft"
+        widget: "boolean"
+        default: false
+        required: false
+        hint: "Draft posts are hidden from the live site"
+
+      - label: "Body"
+        name: "body"
+        widget: "markdown"

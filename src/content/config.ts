@@ -7,7 +7,7 @@ const blogCollection = defineCollection({
     description: z.string(),
     pubDate: z.coerce.date(),
     updatedDate: z.coerce.date().optional(),
-    author: z.string().default('Ted Lacey'),
+    author: z.string().default('Ted Chamberlain'),
     image: z.object({
       url: z.string(),
       alt: z.string(),

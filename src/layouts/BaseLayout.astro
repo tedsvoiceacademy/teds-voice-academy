@@ -132,6 +132,9 @@ const ogImageAbsolute = ogImage.startsWith('http') ? ogImage : `${siteUrl}${ogIm
     ]
   })} />
 
+  <!-- Netlify Identity Widget (for Decap CMS login) -->
+  <script is:inline src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
+
   <!-- Additional head content from pages -->
   <slot name="head" />
 </head>
@@ -152,6 +155,19 @@ const ogImageAbsolute = ogImage.startsWith('http') ? ogImage : `${siteUrl}${ogIm
   
   <!-- Scripts slot for page-specific scripts -->
   <slot name="scripts" />
+
+  <!-- Netlify Identity redirect (after CMS login, go to /admin/) -->
+  <script is:inline>
+    if (window.netlifyIdentity) {
+      window.netlifyIdentity.on("init", function(user) {
+        if (!user) {
+          window.netlifyIdentity.on("login", function() {
+            document.location.href = "/admin/";
+          });
+        }
+      });
+    }
+  </script>
 
   <!-- Scroll Reveal Observer -->
   <script is:inline>
