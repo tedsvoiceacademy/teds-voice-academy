@@ -197,36 +197,82 @@ import Breadcrumb from '../components/Breadcrumb.astro';
     <div class="container">
       <h2 class="reveal">What we work on</h2>
       <p class="section-intro reveal">Every ensemble has different needs. Here are some of the areas I address:</p>
-      
-      <div class="help-grid reveal-stagger">
-        <div class="help-item reveal">
-          <h3><svg class="icon-inline" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="4" x2="4" y1="21" y2="14"/><line x1="4" x2="4" y1="10" y2="3"/><line x1="12" x2="12" y1="21" y2="12"/><line x1="12" x2="12" y1="8" y2="3"/><line x1="20" x2="20" y1="21" y2="16"/><line x1="20" x2="20" y1="12" y2="3"/><line x1="2" x2="6" y1="14" y2="14"/><line x1="10" x2="14" y1="8" y2="8"/><line x1="18" x2="22" y1="16" y2="16"/></svg>Tuning and intonation</h3>
-          <p>When voices lock in, the sound transforms. I help groups understand the mechanics of tuning and develop the listening skills that make it happen.</p>
-        </div>
-        
-        <div class="help-item reveal">
-          <h3><svg class="icon-inline" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M22 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>Unity and vowel matching</h3>
-          <p>A unified sound isn't about erasing individuality. It's about making intentional choices together. We work on vowel shapes, tone color, and the subtle adjustments that create a cohesive ensemble sound.</p>
-        </div>
-        
-        <div class="help-item reveal">
-          <h3><svg class="icon-inline" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg>Performance presence</h3>
-          <p>Great singing deserves great delivery. I help groups connect with their audience, tell the story, and bring genuine emotion to the stage.</p>
-        </div>
-        
-        <div class="help-item reveal">
-          <h3><svg class="icon-inline" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m12.83 2.18a2 2 0 0 0-1.66 0L2.6 6.08a1 1 0 0 0 0 1.83l8.58 3.91a2 2 0 0 0 1.66 0l8.58-3.9a1 1 0 0 0 0-1.83Z"/><path d="m22.54 12.43-1.42-.65-8.29 3.78a2 2 0 0 1-1.66 0l-8.29-3.78-1.42.65a1 1 0 0 0 0 1.84l8.58 3.91a2 2 0 0 0 1.66 0l8.58-3.9a1 1 0 0 0 .26-1.85Z"/><path d="m22.54 16.43-1.42-.65-8.29 3.78a2 2 0 0 1-1.66 0l-8.29-3.78-1.42.65a1 1 0 0 0 0 1.84l8.58 3.91a2 2 0 0 0 1.66 0l8.58-3.9a1 1 0 0 0 .26-1.85Z"/></svg>Section development</h3>
-          <p>Sometimes the work happens in smaller groups. I coach section leaders and help individual voice parts strengthen their foundation.</p>
-        </div>
-        
-        <div class="help-item reveal">
-          <h3><svg class="icon-inline" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 13c0 5-3.5 7.5-7.66 8.95a1 1 0 0 1-.67-.01C7.5 20.5 4 18 4 13V6a1 1 0 0 1 1-1c2 0 4.5-1.2 6.24-2.72a1.17 1.17 0 0 1 1.52 0C14.51 3.81 17 5 19 5a1 1 0 0 1 1 1z"/></svg>Director support</h3>
-          <p>I work alongside directors to address specific challenges, prepare for performances, or bring a fresh perspective to repertoire.</p>
+
+      <div class="help-features">
+        <!-- Feature 1: Icon LEFT -->
+        <div class="help-feature help-feature--left reveal-left">
+          <div class="help-feature__icon">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="4" x2="4" y1="21" y2="14"/><line x1="4" x2="4" y1="10" y2="3"/><line x1="12" x2="12" y1="21" y2="12"/><line x1="12" x2="12" y1="8" y2="3"/><line x1="20" x2="20" y1="21" y2="16"/><line x1="20" x2="20" y1="12" y2="3"/><line x1="2" x2="6" y1="14" y2="14"/><line x1="10" x2="14" y1="8" y2="8"/><line x1="18" x2="22" y1="16" y2="16"/></svg>
+          </div>
+          <div class="help-feature__content">
+            <h3>Tuning and intonation</h3>
+            <p>When voices lock in, the sound transforms. I help groups understand the mechanics of tuning and develop the listening skills that make it happen.</p>
+          </div>
         </div>
 
-        <div class="help-item reveal">
-          <h3><svg class="icon-inline" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 12a9 9 0 1 1-9-9c2.52 0 4.93 1 6.74 2.74L21 8"/><path d="M21 3v5h-5"/></svg>Show preparation</h3>
-          <p>From repertoire selection to staging, I help groups pull everything together for performances that feel polished, connected, and genuinely moving.</p>
+        <div class="help-feature__connector" aria-hidden="true"><span class="help-feature__dot"></span></div>
+
+        <!-- Feature 2: Icon RIGHT -->
+        <div class="help-feature help-feature--right reveal-right">
+          <div class="help-feature__icon">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M22 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+          </div>
+          <div class="help-feature__content">
+            <h3>Unity and vowel matching</h3>
+            <p>A unified sound isn't about erasing individuality. It's about making intentional choices together. We work on vowel shapes, tone color, and the subtle adjustments that create a cohesive ensemble sound.</p>
+          </div>
+        </div>
+
+        <div class="help-feature__connector" aria-hidden="true"><span class="help-feature__dot"></span></div>
+
+        <!-- Feature 3: Icon LEFT -->
+        <div class="help-feature help-feature--left reveal-left">
+          <div class="help-feature__icon">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg>
+          </div>
+          <div class="help-feature__content">
+            <h3>Performance presence</h3>
+            <p>Great singing deserves great delivery. I help groups connect with their audience, tell the story, and bring genuine emotion to the stage.</p>
+          </div>
+        </div>
+
+        <div class="help-feature__connector" aria-hidden="true"><span class="help-feature__dot"></span></div>
+
+        <!-- Feature 4: Icon RIGHT -->
+        <div class="help-feature help-feature--right reveal-right">
+          <div class="help-feature__icon">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m12.83 2.18a2 2 0 0 0-1.66 0L2.6 6.08a1 1 0 0 0 0 1.83l8.58 3.91a2 2 0 0 0 1.66 0l8.58-3.9a1 1 0 0 0 0-1.83Z"/><path d="m22.54 12.43-1.42-.65-8.29 3.78a2 2 0 0 1-1.66 0l-8.29-3.78-1.42.65a1 1 0 0 0 0 1.84l8.58 3.91a2 2 0 0 0 1.66 0l8.58-3.9a1 1 0 0 0 .26-1.85Z"/><path d="m22.54 16.43-1.42-.65-8.29 3.78a2 2 0 0 1-1.66 0l-8.29-3.78-1.42.65a1 1 0 0 0 0 1.84l8.58 3.91a2 2 0 0 0 1.66 0l8.58-3.9a1 1 0 0 0 .26-1.85Z"/></svg>
+          </div>
+          <div class="help-feature__content">
+            <h3>Section development</h3>
+            <p>Sometimes the work happens in smaller groups. I coach section leaders and help individual voice parts strengthen their foundation.</p>
+          </div>
+        </div>
+
+        <div class="help-feature__connector" aria-hidden="true"><span class="help-feature__dot"></span></div>
+
+        <!-- Feature 5: Icon LEFT -->
+        <div class="help-feature help-feature--left reveal-left">
+          <div class="help-feature__icon">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 13c0 5-3.5 7.5-7.66 8.95a1 1 0 0 1-.67-.01C7.5 20.5 4 18 4 13V6a1 1 0 0 1 1-1c2 0 4.5-1.2 6.24-2.72a1.17 1.17 0 0 1 1.52 0C14.51 3.81 17 5 19 5a1 1 0 0 1 1 1z"/></svg>
+          </div>
+          <div class="help-feature__content">
+            <h3>Director support</h3>
+            <p>I work alongside directors to address specific challenges, prepare for performances, or bring a fresh perspective to repertoire.</p>
+          </div>
+        </div>
+
+        <div class="help-feature__connector" aria-hidden="true"><span class="help-feature__dot"></span></div>
+
+        <!-- Feature 6: Icon RIGHT -->
+        <div class="help-feature help-feature--right reveal-right">
+          <div class="help-feature__icon">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 12a9 9 0 1 1-9-9c2.52 0 4.93 1 6.74 2.74L21 8"/><path d="M21 3v5h-5"/></svg>
+          </div>
+          <div class="help-feature__content">
+            <h3>Show preparation</h3>
+            <p>From repertoire selection to staging, I help groups pull everything together for performances that feel polished, connected, and genuinely moving.</p>
+          </div>
         </div>
       </div>
     </div>
@@ -586,30 +632,90 @@ import Breadcrumb from '../components/Breadcrumb.astro';
     color: var(--color-cream);
   }
 
-  .help-grid {
+  /* Alternating feature blocks */
+  .help-features {
+    max-width: 900px;
+    margin: 0 auto;
+  }
+
+  .help-feature {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: auto 1fr;
     gap: 2rem;
+    align-items: center;
+    padding: 2rem 2.5rem;
+    border-radius: 12px;
   }
 
-  .help-item {
-    background: rgba(255, 255, 255, 0.08);
-    padding: 1.5rem;
-    border-radius: 10px;
+  /* Alternating background tints for visual rhythm */
+  .help-feature--left {
+    background: rgba(255, 255, 255, 0.05);
   }
 
-  .help-item h3 {
+  .help-feature--right {
+    background: rgba(255, 255, 255, 0.1);
+    grid-template-columns: 1fr auto;
+  }
+
+  /* Flip icon to the right side for --right variants */
+  .help-feature--right .help-feature__icon {
+    order: 2;
+  }
+
+  .help-feature--right .help-feature__content {
+    order: 1;
+    text-align: right;
+  }
+
+  /* Icon circle */
+  .help-feature__icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 72px;
+    height: 72px;
+    border-radius: 50%;
+    background: rgba(212, 168, 75, 0.15);
+    border: 2px solid var(--color-gold-bright);
+    flex-shrink: 0;
+  }
+
+  .help-feature__icon svg {
+    width: 32px;
+    height: 32px;
+    stroke: var(--color-gold-bright);
+  }
+
+  /* Content */
+  .help-feature__content h3 {
     font-family: var(--font-heading);
-    font-size: 1.125rem;
+    font-size: 1.25rem;
     font-weight: 700;
     color: var(--color-gold-bright);
-    margin: 0 0 0.75rem;
+    margin: 0 0 0.5rem;
   }
 
-  .help-item p {
+  .help-feature__content p {
     color: var(--color-cream);
     line-height: 1.7;
     margin: 0;
+    font-size: 1.05rem;
+  }
+
+  /* Gold dot connector between blocks */
+  .help-feature__connector {
+    display: flex;
+    justify-content: center;
+    padding: 0.75rem 0;
+  }
+
+  .help-feature__dot {
+    display: block;
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background: var(--color-gold-bright);
+    opacity: 0.6;
   }
 
   /* How Section */
@@ -746,14 +852,26 @@ import Breadcrumb from '../components/Breadcrumb.astro';
       grid-template-columns: 1fr;
     }
 
-    .help-grid {
-      grid-template-columns: repeat(2, 1fr);
-    }
-  }
-
-  @media (max-width: 480px) {
-    .help-grid {
+    /* Stack feature blocks vertically on mobile */
+    .help-feature,
+    .help-feature--right {
       grid-template-columns: 1fr;
+      text-align: center;
+      gap: 1rem;
+      padding: 1.5rem;
+    }
+
+    .help-feature--right .help-feature__icon {
+      order: 0;
+    }
+
+    .help-feature--right .help-feature__content {
+      order: 0;
+      text-align: center;
+    }
+
+    .help-feature__icon {
+      margin: 0 auto;
     }
   }
 </style>
