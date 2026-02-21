@@ -1,6 +1,7 @@
 ---
 import Layout from '../layouts/BaseLayout.astro';
 import SectionDivider from '../components/SectionDivider.astro';
+import Breadcrumb from '../components/Breadcrumb.astro';
 ---
 
 <Layout
@@ -139,6 +140,7 @@ import SectionDivider from '../components/SectionDivider.astro';
   <!-- Hero Section -->
   <section class="hero">
     <div class="container reveal">
+      <Breadcrumb items={[{ label: 'FAQ' }]} />
       <span class="hero-eyebrow">FAQ</span>
       <h1>Frequently Asked Questions</h1>
       <p class="hero-subtitle">Answers to the questions I hear most often about voice lessons, coaching, and getting started.</p>

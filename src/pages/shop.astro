@@ -1,6 +1,7 @@
 ---
 import Layout from '../layouts/BaseLayout.astro';
 import SectionDivider from '../components/SectionDivider.astro';
+import Breadcrumb from '../components/Breadcrumb.astro';
 
 const pageTitle = "Shop — Voice Tools & Resources";
 const pageDescription = "Books, assessments, ear training tools, and vocal resources from Ted's Voice Academy. Everything I build comes from real teaching experience.";
@@ -162,6 +163,7 @@ const liveProducts = products.filter(p => p.status === 'live');
   <!-- Hero Section -->
   <section class="hero">
     <div class="container reveal">
+      <Breadcrumb items={[{ label: 'Shop' }]} schema={false} />
       <span class="hero-eyebrow">Shop</span>
       <h1>Tools for every voice</h1>
       <p class="hero-subhead">Books, assessments, and training tools — everything I build comes from real teaching experience and a commitment to helping voices grow.</p>

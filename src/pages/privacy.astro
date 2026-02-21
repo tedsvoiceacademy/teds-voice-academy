@@ -1,5 +1,6 @@
 ---
 import Layout from '../layouts/BaseLayout.astro';
+import Breadcrumb from '../components/Breadcrumb.astro';
 ---
 
 <Layout
@@ -9,6 +10,7 @@ import Layout from '../layouts/BaseLayout.astro';
   <!-- Hero Section -->
   <section class="hero">
     <div class="container reveal">
+      <Breadcrumb items={[{ label: 'Privacy Policy' }]} />
       <span class="hero-eyebrow">Privacy</span>
       <h1>Privacy Policy</h1>
       <p class="hero-subtitle">How I handle your information — simply and respectfully.</p>

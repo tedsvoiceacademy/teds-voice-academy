@@ -1,6 +1,7 @@
 ---
 import Layout from '../layouts/BaseLayout.astro';
 import SectionDivider from '../components/SectionDivider.astro';
+import Breadcrumb from '../components/Breadcrumb.astro';
 ---
 
 <Layout
@@ -10,6 +11,7 @@ import SectionDivider from '../components/SectionDivider.astro';
   <!-- Hero Section -->
   <section class="hero">
     <div class="container reveal">
+      <Breadcrumb items={[{ label: 'Vocal Health' }]} />
       <span class="hero-eyebrow">Vocal Health</span>
       <h1>Your voice deserves good care</h1>
       <p class="hero-subtitle">A healthy voice is built through daily habits, simple practices, and small choices that keep your voice resilient over time.</p>

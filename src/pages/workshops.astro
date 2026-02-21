@@ -1,6 +1,7 @@
 ---
 import Layout from '../layouts/BaseLayout.astro';
 import SectionDivider from '../components/SectionDivider.astro';
+import Breadcrumb from '../components/Breadcrumb.astro';
 ---
 
 <Layout
@@ -10,6 +11,7 @@ import SectionDivider from '../components/SectionDivider.astro';
   <!-- Hero Section -->
   <section class="hero">
     <div class="container reveal">
+      <Breadcrumb items={[{ label: 'Workshops' }]} />
       <span class="hero-eyebrow">Workshops & Presentations</span>
       <h1>Teaching Voice from the Inside Out</h1>
       <p class="hero-subtitle">Interactive workshops that help singers and speakers understand how the voice actually works — so they can use it with greater confidence, clarity, and purpose.</p>

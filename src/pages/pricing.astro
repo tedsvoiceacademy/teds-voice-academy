@@ -1,6 +1,7 @@
 ---
 import Layout from '../layouts/BaseLayout.astro';
 import SectionDivider from '../components/SectionDivider.astro';
+import Breadcrumb from '../components/Breadcrumb.astro';
 
 const pageTitle = "Voice Lesson Pricing";
 const pageDescription = "Transparent pricing for singing, speaking, and ensemble coaching. Monthly plans starting at $320 for weekly hour-long lessons. Lacey, WA and virtual options.";
@@ -10,6 +11,7 @@ const pageDescription = "Transparent pricing for singing, speaking, and ensemble
   <!-- Hero Section -->
   <section class="hero">
     <div class="container reveal">
+      <Breadcrumb items={[{ label: 'Pricing' }]} />
       <span class="hero-eyebrow">Pricing & Packages</span>
       <h1>Flexible options for every voice</h1>
       <p class="hero-subhead">Whether you're building a long-term practice, preparing for a specific goal, or exploring what coaching can offer, there's a path that fits.</p>

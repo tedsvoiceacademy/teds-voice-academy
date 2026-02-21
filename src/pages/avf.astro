@@ -1,6 +1,7 @@
 ---
 import Layout from '../layouts/BaseLayout.astro';
 import SectionDivider from '../components/SectionDivider.astro';
+import Breadcrumb from '../components/Breadcrumb.astro';
 
 const pageTitle = "The Adaptive Voice Framework | Voice Training Book by Ted";
 const pageDescription = "A comprehensive guide to understanding how your voice works. The Adaptive Voice Framework distills 40 years of study into one complete owner's manual for singers.";
@@ -66,6 +67,7 @@ const amazonLink = "https://www.amazon.com/dp/B0GD2SH8J5";
   <!-- Hero Section -->
   <section class="avf-hero">
     <div class="container">
+      <Breadcrumb items={[{ label: 'AVF™ Book' }]} />
       <div class="hero-grid">
         <div class="hero-content">
           <h1 class="hero-title">AVF™: The Adaptive Voice Framework™</h1>

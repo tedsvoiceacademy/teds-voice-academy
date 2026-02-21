@@ -1,6 +1,7 @@
 ---
 import Layout from '../layouts/BaseLayout.astro';
 import SectionDivider from '../components/SectionDivider.astro';
+import Breadcrumb from '../components/Breadcrumb.astro';
 ---
 
 <Layout title="PASS Profile™ — Communication Assessment" description="Professional communication assessment: 60 workplace scenarios, 40 traits, personalized PDF report. $49.99 individual or $59.99 with Voice-Brand Alignment." ogImage="/images/pass-bubble.png" canonicalUrl="https://www.tedsvoiceacademy.com/pass-profile">
@@ -146,6 +147,9 @@ import SectionDivider from '../components/SectionDivider.astro';
 
   <!-- Hero Section -->
   <section class="hero">
+    <div class="container">
+      <Breadcrumb items={[{ label: 'PASS Profile™' }]} schema={false} />
+    </div>
     <div class="hero-content">
       <div class="hero-text">
         <div class="logo-card">

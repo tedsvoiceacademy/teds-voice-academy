@@ -1,6 +1,7 @@
 ---
 import Layout from '../layouts/BaseLayout.astro';
 import SectionDivider from '../components/SectionDivider.astro';
+import Breadcrumb from '../components/Breadcrumb.astro';
 ---
 
 <Layout
@@ -80,6 +81,7 @@ import SectionDivider from '../components/SectionDivider.astro';
   <!-- Hero Section -->
   <section class="hero">
     <div class="container">
+      <Breadcrumb items={[{ label: 'Singing Lessons' }]} />
       <div class="hero-grid">
         <div class="hero-content">
           <span class="hero-eyebrow">Singing Lessons</span>

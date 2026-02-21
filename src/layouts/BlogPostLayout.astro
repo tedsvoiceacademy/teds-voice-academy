@@ -1,5 +1,6 @@
 ---
 import Layout from './BaseLayout.astro';
+import Breadcrumb from '../components/Breadcrumb.astro';
 
 interface Props {
   title: string;
@@ -36,10 +37,65 @@ const formattedUpdatedDate = updatedDate?.toLocaleDateString('en-US', {
   ogType="article"
   ogImage={image?.url}
 >
+  <Fragment slot="head">
+    <script type="application/ld+json" set:html={JSON.stringify({
+      "@context": "https://schema.org",
+      "@type": "BlogPosting",
+      "headline": title,
+      "description": description,
+      "author": {
+        "@type": "Person",
+        "name": author,
+        "url": "https://tedsvoiceacademy.com/about"
+      },
+      "publisher": {
+        "@type": "Organization",
+        "name": "Ted's Voice Academy",
+        "logo": {
+          "@type": "ImageObject",
+          "url": "https://tedsvoiceacademy.com/images/tva-logo.webp"
+        }
+      },
+      "datePublished": pubDate.toISOString(),
+      ...(updatedDate ? { "dateModified": updatedDate.toISOString() } : {}),
+      ...(image ? { "image": `https://tedsvoiceacademy.com${image.url}` } : {}),
+      "mainEntityOfPage": {
+        "@type": "WebPage",
+        "@id": Astro.url.href
+      },
+      ...(categories.length > 0 ? { "articleSection": categories[0] } : {}),
+      ...(tags.length > 0 ? { "keywords": tags.join(", ") } : {})
+    })} />
+    <script type="application/ld+json" set:html={JSON.stringify({
+      "@context": "https://schema.org",
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://tedsvoiceacademy.com"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Blog",
+          "item": "https://tedsvoiceacademy.com/blog"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": title
+        }
+      ]
+    })} />
+  </Fragment>
+
   <article class="blog-post">
     <!-- Hero -->
     <header class="post-hero">
       <div class="container reveal">
+        <Breadcrumb items={[{ label: 'Blog', href: '/blog' }, { label: title }]} schema={false} />
         <a href="/blog" class="back-link">&larr; Back to Blog</a>
         <div class="post-meta">
           {categories.map(cat => (

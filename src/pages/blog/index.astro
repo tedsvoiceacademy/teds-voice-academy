@@ -1,6 +1,7 @@
 ---
 import Layout from '../../layouts/BaseLayout.astro';
 import SectionDivider from '../../components/SectionDivider.astro';
+import Breadcrumb from '../../components/Breadcrumb.astro';
 import { getCollection } from 'astro:content';
 
 const allPosts = await getCollection('blog', ({ data }) => !data.draft);
@@ -21,6 +22,7 @@ categoryNames.forEach(cat => {
   <!-- Hero Section -->
   <section class="hero">
     <div class="container reveal">
+      <Breadcrumb items={[{ label: 'Blog' }]} />
       <span class="hero-eyebrow">Blog</span>
       <h1>Ideas, insights, and practical guidance for your voice</h1>
       <p class="hero-subtitle">Whether you sing, speak, or both — there's something here for you.</p>

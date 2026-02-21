@@ -1,0 +1,115 @@
+---
+/**
+ * Breadcrumb.astro
+ * Visual breadcrumb navigation + BreadcrumbList schema
+ * Place at the top of hero sections on all interior pages
+ *
+ * Usage:
+ *   <Breadcrumb items={[
+ *     { label: 'Resources', href: '#' },
+ *     { label: 'AVF Book' }
+ *   ]} />
+ *
+ * "Home" is always prepended automatically.
+ * The last item has no link (current page).
+ * Set schema={false} if BreadcrumbList JSON-LD already exists on the page.
+ */
+
+interface BreadcrumbItem {
+  label: string;
+  href?: string;
+}
+
+interface Props {
+  items: BreadcrumbItem[];
+  schema?: boolean;
+}
+
+const { items, schema = true } = Astro.props;
+
+// Build full breadcrumb list with Home prepended
+const fullItems = [
+  { label: 'Home', href: '/' },
+  ...items
+];
+
+// Build schema itemListElement
+const schemaItems = fullItems.map((item, index) => ({
+  "@type": "ListItem",
+  "position": index + 1,
+  "name": item.label,
+  ...(item.href ? { "item": `https://tedsvoiceacademy.com${item.href}` } : {})
+}));
+---
+
+<nav class="breadcrumb" aria-label="Breadcrumb">
+  <ol class="breadcrumb__list">
+    {fullItems.map((item, index) => (
+      <li class="breadcrumb__item">
+        {index < fullItems.length - 1 ? (
+          <>
+            <a href={item.href} class="breadcrumb__link">{item.label}</a>
+            <span class="breadcrumb__separator" aria-hidden="true">/</span>
+          </>
+        ) : (
+          <span class="breadcrumb__current" aria-current="page">{item.label}</span>
+        )}
+      </li>
+    ))}
+  </ol>
+</nav>
+
+{schema && (
+  <script type="application/ld+json" set:html={JSON.stringify({
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": schemaItems
+  })} />
+)}
+
+<style>
+  .breadcrumb {
+    margin-bottom: 1rem;
+  }
+
+  .breadcrumb__list {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 0;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    font-size: 0.8125rem;
+    line-height: 1.4;
+  }
+
+  .breadcrumb__item {
+    display: flex;
+    align-items: center;
+  }
+
+  .breadcrumb__link {
+    color: var(--color-cream);
+    text-decoration: none;
+    opacity: 0.7;
+    transition: opacity 0.2s ease, color 0.2s ease;
+  }
+
+  .breadcrumb__link:hover,
+  .breadcrumb__link:focus-visible {
+    opacity: 1;
+    color: var(--color-gold-bright);
+  }
+
+  .breadcrumb__separator {
+    margin: 0 0.5rem;
+    color: var(--color-cream);
+    opacity: 0.4;
+  }
+
+  .breadcrumb__current {
+    color: var(--color-gold-bright);
+    font-weight: 500;
+  }
+</style>

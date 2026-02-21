@@ -1,5 +1,6 @@
 ---
 import Layout from '../layouts/BaseLayout.astro';
+import Breadcrumb from '../components/Breadcrumb.astro';
 ---
 
 <Layout 
@@ -9,6 +10,7 @@ import Layout from '../layouts/BaseLayout.astro';
   <!-- Hero Section -->
   <section class="hero">
     <div class="container reveal">
+      <Breadcrumb items={[{ label: 'Contact' }]} />
       <span class="hero-eyebrow">Contact</span>
       <h1>Let me know how I can help</h1>
       <p class="hero-subtitle">I'd love to hear what you're working on — or what you're curious about.</p>

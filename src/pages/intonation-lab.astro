@@ -1,6 +1,7 @@
 ---
 import Layout from '../layouts/BaseLayout.astro';
 import SectionDivider from '../components/SectionDivider.astro';
+import Breadcrumb from '../components/Breadcrumb.astro';
 
 const pageTitle = "Intonation Lab — Ear Training for Singers";
 const pageDescription = "Browser-based ear training tool with real-time pitch detection, just intonation targets, and visual feedback. 13 intervals, 7 chord types, 52-exercise curriculum. From $99.";
@@ -80,6 +81,7 @@ const intlabUrl = "https://intlab.tedsvoiceacademy.com";
   <!-- Hero Section -->
   <section class="hero">
     <div class="container">
+      <Breadcrumb items={[{ label: 'Intonation Lab' }]} schema={false} />
       <div class="hero-grid">
         <div class="hero-content">
           <span class="hero-eyebrow">Intonation Lab</span>
