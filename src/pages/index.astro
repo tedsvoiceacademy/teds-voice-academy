@@ -148,8 +148,15 @@ import SectionDivider from '../components/SectionDivider.astro';
   <section class="reviews-section">
     <div class="container">
       <h2 class="reveal">What people are saying</h2>
+      <p class="reviews-subtitle reveal">Your experience matters. If I've helped you find your voice, I'd love to hear about it.</p>
       <div class="reviews-carousel-wrapper">
         <div id="wid_1770480467829"></div>
+      </div>
+      <div class="reviews-cta reveal">
+        <a href="https://go.r-rev.com/tedsvoiceacademy" target="_blank" rel="noopener noreferrer" class="btn btn-review">
+          <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon-inline"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
+          Share Your Experience
+        </a>
       </div>
     </div>
   </section>
@@ -633,12 +640,52 @@ import SectionDivider from '../components/SectionDivider.astro';
     font-weight: 700;
     color: var(--color-navy-deep);
     text-align: center;
+    margin: 0 0 0.75rem;
+  }
+
+  .reviews-subtitle {
+    text-align: center;
+    color: var(--color-charcoal);
+    font-size: 1.1rem;
+    line-height: 1.6;
     margin: 0 0 2rem;
+    opacity: 0.85;
   }
 
   .reviews-carousel-wrapper {
     max-width: 100%;
     overflow: hidden;
+  }
+
+  .reviews-cta {
+    text-align: center;
+    margin-top: 2rem;
+  }
+
+  .btn-review {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    background: var(--color-gold-bright);
+    color: var(--color-navy-deep);
+    font-family: var(--font-body);
+    font-size: 1rem;
+    font-weight: 600;
+    padding: 0.85rem 2rem;
+    border-radius: 8px;
+    text-decoration: none;
+    transition: background 0.2s ease, transform 0.2s ease;
+  }
+
+  .btn-review:hover {
+    background: var(--color-gold-hover);
+    transform: translateY(-2px);
+  }
+
+  .btn-review svg {
+    width: 20px;
+    height: 20px;
+    flex-shrink: 0;
   }
 
   /* CTA Section */
