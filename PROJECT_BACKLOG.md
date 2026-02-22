@@ -38,7 +38,7 @@ Full research report completed. Ted said "I will definitely want to fully maximi
 - [x] **Course + Service schema markup** — DONE (Session 10, commit `fed84fe`). Course + Service JSON-LD on Singing, Speaking, Ensembles pages.
 - [x] **Answer capsule summaries** — DONE (Session 13). 2-3 sentence GEO summaries on 7 pages: Singing, Speaking, Ensembles, Pricing, Workshops, AVF, PASS Profile.
 - [x] **Add publish/update dates** — DONE (Session 13). `<time>` tags with `.page-date` styling on 10 content pages.
-- [ ] **Track AI referral traffic in GA4** — Custom channel grouping for ChatGPT, Perplexity, etc.
+- [x] **Track AI referral traffic in GA4** — DONE (Session 15). Custom `ai_referral` event tracking in BaseLayout.astro. Ted needs to create Custom Channel Group in GA4 Admin.
 - [ ] **Google Business Profile optimization** — Ted confirmed he has one for tedsvoiceacademy.com and has done good work on it. Wants to maximize it further.
 - [x] **Internal linking strategy** — DONE (Session 13). 2-3 contextual cross-links added to 10 pages.
 - [x] **Self-host fonts** — DONE (Session 13). Inter (4 weights) + Playfair Display (4 weights) + Cinzel (3 weights) + Cormorant Garamond (4 weights) self-hosted as WOFF2. Google Fonts CDN completely removed.
@@ -110,7 +110,7 @@ Ted explicitly said he wants to get to these as soon as possible. These need col
 - [x] **Section dividers** — DONE (Session 13). `SectionDivider.astro` component with wave/curve/angle variants + gold accent stroke. Deployed on 12 pages at dark↔light section transitions.
 - [x] **Iconography** — DONE (Session 14). 64 Lucide inline SVG icons across 10 pages. `.icon-inline` CSS utility in global.css.
 - [ ] **Hero parallax effect** — CSS-only parallax on hero photos. Disabled on mobile. Ted interested but deferred.
-- [ ] **Varied section layouts** — Per-page layout diversity: numbered steps, alternating left-right, timelines.
+- [x] **Varied section layouts** — DONE (Sessions 14c-15). Speaking: icon-emphasis cards + numbered step timeline. Workshops: session roadmap + checklist layout. Singing (Session 15): icon-emphasis cards + genre tile grid.
 - [ ] **Digital product delivery for Vocal Fit** — Gumroad or Lemonsqueezy for MP3 delivery. Ted confirmed (Feb 16) this will be a purchased product — needs e-commerce setup. See "Waiting on Ted > E-Commerce" section. (Note: Riser Placement App uses Stripe/Supabase/Netlify instead — see E-Commerce section.)
 - [ ] **Members-only section** — Approach TBD.
 

@@ -31,6 +31,37 @@ This applies to everything — quick fixes, visual changes, SEO tweaks, all of i
 
 ---
 
+## What Session 15 Accomplished
+
+### GA4 AI Referral Tracking
+- Added custom event tracking to `BaseLayout.astro` after existing GA4 config
+- Detects referrers from ChatGPT, Claude, Perplexity, Copilot, Gemini
+- Fires `ai_referral` custom event with `ai_source` parameter
+- Ted needs to set up Custom Channel Group in GA4 Admin (instructions provided in session)
+
+### Audition Readiness Checklist Lead Magnet (Singing Page)
+- Copied PDF to `public/documents/tva-audition-readiness-checklist.pdf`
+- New `audition-checklist` form registered in `public/form-detect.html`
+- Lead magnet section on singing.astro: gold-bordered card with first name + email fields
+- Placed between "Styles & Genres" and "How Lessons Work"
+- Form action: `/success?download=checklist`
+- Success page enhanced with query param detection — shows download button when `?download=checklist` is present
+
+### Singing Page Layout Variety
+- **"Who I Work With":** Converted from simple cards with inline icons to icon-emphasis layout (gold circle icon left, text right) matching Speaking page pattern. Hover lift animation.
+- **"Styles & Genres":** Replaced plain `<ul>` bulleted list with 3-column icon-tile grid. Each tile has genre SVG icon + gold left border. Responsive: 3-col → 2-col (768px) → 1-col (480px).
+
+### Looker Studio Weekly Email Report
+- Instructions provided to Ted (no code changes) for creating GA4 dashboard in Looker Studio
+- Recommended sections: KPI cards, top pages, traffic sources, user trend, devices, geography
+- Includes Custom Channel Group setup instructions for AI referral tracking
+
+### Handoff Doc Updates
+- Updated PROJECT_BACKLOG.md with e-commerce architecture notes (Vocal Fit vs Riser Placement App)
+- Updated HANDOFF_RESOURCE_INVENTORY.md with platform decisions
+
+---
+
 ## What Session 14 + 14b + 14c Accomplished
 
 ### .gitignore (Session 14)
@@ -93,8 +124,10 @@ This applies to everything — quick fixes, visual changes, SEO tweaks, all of i
 ### Tier 1 — Next Priorities:
 - [ ] **CMS (Decap CMS)** — **Ted's #1 near-term priority.** He needs an easy way to add blog posts and modify site content independently. Critical enabler.
 - [ ] **E-Commerce for Vocal Fit** — Lemonsqueezy (or similar) needed for Vocal Fit MP3 bundle sales. Riser Placement App will NOT use Lemonsqueezy — it uses Stripe + Supabase + Netlify (same architecture as Intonation Lab) for better copy-protection.
+- [ ] **Riser Placement App page** — Product page needed (like Intonation Lab page)
 - [ ] **Review 41 untracked images** — Decide placement/removal with Ted (see Feb 16 session notes below)
-- [ ] **Track AI referral traffic in GA4** — Custom channel grouping for ChatGPT, Perplexity, etc.
+- [x] **Track AI referral traffic in GA4** — ✅ DONE (Session 15). Custom event tracking in BaseLayout.astro. Ted needs to create Custom Channel Group in GA4 Admin.
+- [x] **Audition Checklist lead magnet** — ✅ DONE (Session 15). Email-gated PDF download on Singing page.
 
 ### Completed:
 - [x] **Blog system** — ✅ DONE (Feb 16). 24 posts, routing, layout, SEO optimization, interactive category filtering.
@@ -108,7 +141,7 @@ This applies to everything — quick fixes, visual changes, SEO tweaks, all of i
 
 ### Tier 3 — Visual Polish:
 - [ ] **Hero parallax effect** — CSS-only parallax on hero photos
-- [ ] **Varied section layouts** — Numbered steps, alternating left-right, timelines
+- [x] **Varied section layouts** — ✅ Singing page done (Session 15): icon-emphasis cards + genre tile grid. Speaking/Workshops done earlier.
 
 ### Discussion Items:
 - Hero photos for pages that currently lack them (Pricing, Contact, Vocal Health, FAQ)
@@ -116,27 +149,28 @@ This applies to everything — quick fixes, visual changes, SEO tweaks, all of i
 
 ---
 
-## Verified Current State (as of Session 14)
+## Verified Current State (as of Session 15)
 
 ### Git & Deploy
 - **GitHub repo:** https://github.com/tedsvoiceacademy/teds-voice-academy
-- **Local project path:** `H:\OneDrive\AI Projects\TVA AI Projects\TVA Webstie 4.0\teds-voice-academy-main\teds-voice-academy-main\`
+- **Local project path:** `C:\Users\ted_c\OneDrive\AI Projects\TVA AI Projects\TVA Webstie 4.0\teds-voice-academy-main\teds-voice-academy-main\`
 - **Live site:** https://tedsvoiceacademy.com
 - **Netlify URL:** https://deft-baklava-b2eb2e.netlify.app/
-- **Build status:** Clean — 42 pages built (18 route pages + 24 blog posts), zero errors
-- **Latest commits:** `877a11d` (handoff docs), `94604ba` (vocal health page), `78c1677` (blog SEO + filtering), `a9bd0ef` (blog system)
-- **Previous commits:** `06271f2` (14c: hero images), `366a679` (14b: icon fix, grids, TM), `d6105fb` (14: icons, symmetry, photos)
+- **Build status:** Clean — 43 pages built (20 route pages + 24 blog posts), zero errors
+- **Latest commit:** `7895365` (Session 15: lead magnet, GA4 AI tracking, Singing layout variety)
+- **Previous commits:** `355e69d` (review section), `b901b20` (Speaking layout), `9bafda7` (Workshops layout)
 
-### What's Live (42 Pages)
-Homepage, Contact, Singing, Speaking, Ensembles, About, Pricing, AVF, PASS Profile, Workshops, Vocal Health Hub, Blog (landing + 24 individual posts), FAQ, Success, Privacy, Terms, Shop, Intonation Lab
+### What's Live (43 Pages)
+Homepage, Contact, Singing, Speaking, Ensembles, About, Pricing, AVF, PASS Profile, Workshops, Vocal Health Hub, Blog (landing + 24 individual posts), FAQ, Success, Privacy, Terms, Shop, Intonation Lab, 404
 
 ### Analytics
 - **GA4:** Live, Measurement ID `G-ZDX6WPT6CZ`. Script in BaseLayout.astro `<head>` with `is:inline` directive.
 - **Google Search Console:** Verified for tedsvoiceacademy.com. Sitemap submitted.
 
 ### Netlify Forms — WORKING
-- **Forms detected:** contact, workshop-inquiry, blog-newsletter, newsletter-footer
+- **Forms detected:** contact, workshop-inquiry, blog-newsletter, newsletter-footer, audition-checklist
 - **Email notifications:** Configured to ted@tedsvoiceacademy.com for all forms
+- **Lead magnet form:** audition-checklist → redirects to `/success?download=checklist` for PDF download
 
 ### Key Files Modified This Session
 - `src/styles/global.css` — `.icon-inline` utility class + width/height fix
