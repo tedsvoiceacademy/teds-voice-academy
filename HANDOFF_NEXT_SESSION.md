@@ -92,7 +92,7 @@ This applies to everything — quick fixes, visual changes, SEO tweaks, all of i
 
 ### Tier 1 — Next Priorities:
 - [ ] **CMS (Decap CMS)** — **Ted's #1 near-term priority.** He needs an easy way to add blog posts and modify site content independently. Critical enabler.
-- [ ] **E-Commerce (Lemonsqueezy)** — Needed for Vocal Fit digital product sales. Also enables future product offerings.
+- [ ] **E-Commerce for Vocal Fit** — Lemonsqueezy (or similar) needed for Vocal Fit MP3 bundle sales. Riser Placement App will NOT use Lemonsqueezy — it uses Stripe + Supabase + Netlify (same architecture as Intonation Lab) for better copy-protection.
 - [ ] **Review 41 untracked images** — Decide placement/removal with Ted (see Feb 16 session notes below)
 - [ ] **Track AI referral traffic in GA4** — Custom channel grouping for ChatGPT, Perplexity, etc.
 
@@ -444,7 +444,7 @@ The images include original source photos (PNG/JPG), various WebP conversions, a
 
 **Immediate priorities:**
 - [ ] **Activate Decap CMS on Netlify** — Enable Identity + Git Gateway in Netlify dashboard (see steps above)
-- [ ] **E-Commerce (Lemonsqueezy)** — Needed for Vocal Fit digital product sales
+- [ ] **E-Commerce for Vocal Fit** — Lemonsqueezy (or similar) needed for Vocal Fit MP3 sales. Riser Placement App uses Stripe/Supabase/Netlify instead (like Intonation Lab)
 
 **Tier 2:**
 - [ ] Remaining hero images for text-only hero pages

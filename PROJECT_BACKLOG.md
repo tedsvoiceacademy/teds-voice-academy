@@ -111,7 +111,7 @@ Ted explicitly said he wants to get to these as soon as possible. These need col
 - [x] **Iconography** — DONE (Session 14). 64 Lucide inline SVG icons across 10 pages. `.icon-inline` CSS utility in global.css.
 - [ ] **Hero parallax effect** — CSS-only parallax on hero photos. Disabled on mobile. Ted interested but deferred.
 - [ ] **Varied section layouts** — Per-page layout diversity: numbered steps, alternating left-right, timelines.
-- [ ] **Digital product delivery for Vocal Fit** — Gumroad or Lemonsqueezy. Ted confirmed (Feb 16) this will be a purchased product — needs e-commerce setup. See "Waiting on Ted > E-Commerce" section.
+- [ ] **Digital product delivery for Vocal Fit** — Gumroad or Lemonsqueezy for MP3 delivery. Ted confirmed (Feb 16) this will be a purchased product — needs e-commerce setup. See "Waiting on Ted > E-Commerce" section. (Note: Riser Placement App uses Stripe/Supabase/Netlify instead — see E-Commerce section.)
 - [ ] **Members-only section** — Approach TBD.
 
 ---
@@ -215,10 +215,11 @@ These items are blocked until Ted provides content, assets, or makes a decision.
 
 ### Vocal Health Hub Content — ✅ COMPLETE (Feb 16)
 All placeholder sections replaced with real content. Remaining work:
-- [ ] **Vocal Fit e-commerce** — Product is described on the page, but needs Lemonsqueezy integration before it can be sold. Update store link when ready.
+- [ ] **Vocal Fit e-commerce** — Product is described on the page, but needs e-commerce integration (Lemonsqueezy or similar) before it can be sold. Update store link when ready.
 
 ### E-Commerce / Digital Product Sales
-- [ ] **E-commerce solution** — Needed for Vocal Fit and potentially other digital products Ted wants to sell from the site. Options: Gumroad, Lemonsqueezy, Shopify Lite, or Stripe direct. Ted needs to decide approach + pricing.
+- [ ] **Vocal Fit e-commerce** — Needed for Vocal Fit MP3 bundle sales. Options: Gumroad, Lemonsqueezy, Shopify Lite, or Stripe direct. Ted needs to decide approach + pricing.
+- [ ] **Riser Placement App** — Will use **Stripe + Supabase + Netlify** (same architecture as Intonation Lab). NOT Lemonsqueezy. Being built in a separate chat. This approach provides better copy-protection via authenticated web app access rather than a self-contained download.
 
 ### Other Content Needed
 - [x] **Organization logos/confirmation** — DONE (Session 10). Ted provided all logos. List confirmed and implemented.

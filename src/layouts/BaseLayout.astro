@@ -91,6 +91,23 @@ const ogImageAbsolute = ogImage.startsWith('http') ? ogImage : `${siteUrl}${ogIm
     function gtag(){dataLayer.push(arguments);}
     gtag('js', new Date());
     gtag('config', 'G-ZDX6WPT6CZ');
+
+    // Detect AI referral sources
+    var ref = document.referrer;
+    var aiSources = {
+      'chatgpt.com': 'ChatGPT',
+      'chat.openai.com': 'ChatGPT',
+      'claude.ai': 'Claude',
+      'perplexity.ai': 'Perplexity',
+      'copilot.microsoft.com': 'Copilot',
+      'gemini.google.com': 'Gemini'
+    };
+    for (var domain in aiSources) {
+      if (ref.indexOf(domain) !== -1) {
+        gtag('event', 'ai_referral', { ai_source: aiSources[domain], referrer: ref });
+        break;
+      }
+    }
   </script>
 
   <!-- LocalBusiness Structured Data (JSON-LD) -->

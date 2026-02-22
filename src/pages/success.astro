@@ -9,7 +9,8 @@ import Layout from '../layouts/BaseLayout.astro';
 >
   <section class="success-hero">
     <div class="container">
-      <div class="success-content reveal">
+      <!-- Default message (shown when no download param) -->
+      <div id="default-success" class="success-content reveal">
         <span class="success-icon" aria-hidden="true">&#10003;</span>
         <h1>Message received!</h1>
         <p class="success-message">
@@ -20,8 +21,35 @@ import Layout from '../layouts/BaseLayout.astro';
           <a href="/about" class="btn-link">Learn more about my approach &rarr;</a>
         </div>
       </div>
+
+      <!-- Download message (shown when ?download=checklist) -->
+      <div id="download-success" class="success-content reveal" style="display: none;">
+        <span class="success-icon" aria-hidden="true">&#x2913;</span>
+        <h1>Your checklist is ready!</h1>
+        <p class="success-message">
+          Thanks for signing up. Click below to download your Audition Readiness Checklist.
+        </p>
+        <div class="success-actions">
+          <a href="/documents/tva-audition-readiness-checklist.pdf" class="btn btn-primary" download>Download Checklist (PDF)</a>
+          <a href="/" class="btn-link">Back to Home &rarr;</a>
+        </div>
+      </div>
     </div>
   </section>
+
+  <Fragment slot="scripts">
+    <script is:inline>
+      (function() {
+        var params = new URLSearchParams(window.location.search);
+        if (params.get('download') === 'checklist') {
+          var defaultEl = document.getElementById('default-success');
+          var downloadEl = document.getElementById('download-success');
+          if (defaultEl) defaultEl.style.display = 'none';
+          if (downloadEl) downloadEl.style.display = '';
+        }
+      })();
+    </script>
+  </Fragment>
 </Layout>
 
 <style>

@@ -70,7 +70,7 @@ teds-voice-academy-main/              ← Parent project folder
 | 5 | **Workshop slides inform site copy** | YES — use to inform workshop descriptions on the website. Materials themselves stay offline (possible future workshop participant login area). |
 | 6 | **Anatomy/posture diagrams** | Concepts are useful. Ted will recreate needed ones in AI. Copyrighted originals cannot be used. |
 | 7 | **Warm-up docs for website** | YES — prioritized list created (see Page Content Sources section below). |
-| 8 | **Digital product platform** | **Lemonsqueezy** — lower fees (5% + 50¢ vs Gumroad's 10%), automatic sales tax handling. |
+| 8 | **Digital product platform** | **Lemonsqueezy** for Vocal Fit MP3 downloads — lower fees (5% + 50¢ vs Gumroad's 10%), automatic sales tax handling. **Riser Placement App** uses Stripe + Supabase + Netlify instead (same as Intonation Lab) — better copy-protection via authenticated web app. |
 
 ---
 

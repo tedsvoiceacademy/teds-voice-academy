@@ -132,25 +132,45 @@ import Breadcrumb from '../components/Breadcrumb.astro';
       <h2 class="decorated-heading reveal">Singers at every level</h2>
       <p class="section-intro reveal">I work with complete beginners, experienced performers, and everyone in between. Here's a sampling of who walks through my door:</p>
       
-      <div class="cards-grid reveal-stagger">
-        <div class="card reveal">
-          <h3><svg class="icon-inline" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><polygon points="10 8 16 12 10 16 10 8"/></svg>Complete beginners</h3>
-          <p>Many of my students arrive convinced they "can't sing." Some haven't sung since childhood. Some have been told they're tone-deaf. I've helped countless singers find their pitch and build confidence from the ground up. Progress often happens faster than people expect.</p>
+      <div class="icon-cards-grid reveal-stagger">
+        <div class="icon-card reveal">
+          <div class="icon-circle">
+            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><polygon points="10 8 16 12 10 16 10 8"/></svg>
+          </div>
+          <div class="icon-card-body">
+            <h3>Complete beginners</h3>
+            <p>Many of my students arrive convinced they "can't sing." Some haven't sung since childhood. Some have been told they're tone-deaf. I've helped countless singers find their pitch and build confidence from the ground up. Progress often happens faster than people expect.</p>
+          </div>
         </div>
-        
-        <div class="card reveal">
-          <h3><svg class="icon-inline" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="22 7 13.5 15.5 8.5 10.5 2 17"/><polyline points="16 7 22 7 22 13"/></svg>Developing singers</h3>
-          <p>If you've been singing for a while and want to grow, I can help you understand what's working, what's getting in the way, and what to focus on next.</p>
+
+        <div class="icon-card reveal">
+          <div class="icon-circle">
+            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="22 7 13.5 15.5 8.5 10.5 2 17"/><polyline points="16 7 22 7 22 13"/></svg>
+          </div>
+          <div class="icon-card-body">
+            <h3>Developing singers</h3>
+            <p>If you've been singing for a while and want to grow, I can help you understand what's working, what's getting in the way, and what to focus on next.</p>
+          </div>
         </div>
-        
-        <div class="card reveal">
-          <h3><svg class="icon-inline" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="8" r="6"/><path d="M15.477 12.89 17 22l-5-3-5 3 1.523-9.11"/></svg>Experienced performers</h3>
-          <p>Whether you're preparing for something specific or refining your craft, I offer a fresh perspective grounded in <a href="/avf">how the voice actually works</a>.</p>
+
+        <div class="icon-card reveal">
+          <div class="icon-circle">
+            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="8" r="6"/><path d="M15.477 12.89 17 22l-5-3-5 3 1.523-9.11"/></svg>
+          </div>
+          <div class="icon-card-body">
+            <h3>Experienced performers</h3>
+            <p>Whether you're preparing for something specific or refining your craft, I offer a fresh perspective grounded in <a href="/avf">how the voice actually works</a>.</p>
+          </div>
         </div>
-        
-        <div class="card reveal">
-          <h3><svg class="icon-inline" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.3 1.5 4.05 3 5.5l7 7Z"/></svg>Recovering voices</h3>
-          <p>Vocal strain, fatigue, and injury are more common than people realize. Helping singers recover and rebuild is a special focus of mine. I approach this work with care, patience, and a deep understanding of <a href="/vocal-health">vocal health</a>.</p>
+
+        <div class="icon-card reveal">
+          <div class="icon-circle">
+            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.3 1.5 4.05 3 5.5l7 7Z"/></svg>
+          </div>
+          <div class="icon-card-body">
+            <h3>Recovering voices</h3>
+            <p>Vocal strain, fatigue, and injury are more common than people realize. Helping singers recover and rebuild is a special focus of mine. I approach this work with care, patience, and a deep understanding of <a href="/vocal-health">vocal health</a>.</p>
+          </div>
         </div>
       </div>
     </div>
@@ -163,19 +183,78 @@ import Breadcrumb from '../components/Breadcrumb.astro';
       <p>I work across all genres and traditions. The principles of healthy, expressive singing apply whether you're performing classical art song, musical theater, pop, gospel, barbershop, or anything else.</p>
       
       <p><strong>Styles I work with regularly include:</strong></p>
-      <ul class="styles-list">
-        <li>Classical and art song</li>
-        <li>Musical theater</li>
-        <li>Pop, rock, and contemporary</li>
-        <li>Barbershop and a cappella</li>
-        <li>Church music — soloists, cantors, praise bands, choir members</li>
-      </ul>
+      <div class="genre-grid">
+        <div class="genre-tile">
+          <svg class="genre-icon" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 18V5l12-2v13"/><circle cx="6" cy="18" r="3"/><circle cx="18" cy="16" r="3"/></svg>
+          <div>
+            <span class="genre-name">Classical & Art Song</span>
+          </div>
+        </div>
+        <div class="genre-tile">
+          <svg class="genre-icon" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"/><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"/></svg>
+          <div>
+            <span class="genre-name">Musical Theater</span>
+          </div>
+        </div>
+        <div class="genre-tile">
+          <svg class="genre-icon" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 2v20"/><path d="M2 10h4"/><path d="M18 10h4"/><path d="M6 6l2 2"/><path d="M16 6l-2 2"/><circle cx="12" cy="14" r="4"/></svg>
+          <div>
+            <span class="genre-name">Pop, Rock & Contemporary</span>
+          </div>
+        </div>
+        <div class="genre-tile">
+          <svg class="genre-icon" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M16 3h5v5"/><path d="M8 3H3v5"/><path d="M12 22v-8.3a4 4 0 0 0-1.172-2.872L3 3"/><path d="m15 9 6-6"/></svg>
+          <div>
+            <span class="genre-name">Barbershop & A Cappella</span>
+          </div>
+        </div>
+        <div class="genre-tile">
+          <svg class="genre-icon" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 2v8"/><path d="M8 6h8"/><path d="M6 10h12l2 10H4l2-10z"/></svg>
+          <div>
+            <span class="genre-name">Church Music</span>
+            <span class="genre-sub">Soloists, cantors, praise bands, choir</span>
+          </div>
+        </div>
+      </div>
       
       <p class="styles-note">If your style isn't listed here, reach out anyway. I've probably worked with it.</p>
     </div>
   </section>
 
-  <SectionDivider variant="curve" topColor="var(--color-navy-deep)" bottomColor="var(--color-off-white)" />
+  <!-- Lead Magnet: Audition Readiness Checklist -->
+  <section class="lead-magnet-section">
+    <div class="container">
+      <div class="lead-magnet-card reveal">
+        <h2>Free download: Audition Readiness Checklist</h2>
+        <p>Preparing for an audition? This checklist covers the 7 key areas every singer should address before walking into the room — from vocal warm-up to mental preparation.</p>
+        <form
+          name="audition-checklist"
+          method="POST"
+          data-netlify="true"
+          netlify-honeypot="bot-field"
+          action="/success?download=checklist"
+          class="lead-magnet-form"
+        >
+          <input type="hidden" name="form-name" value="audition-checklist" />
+          <p class="hidden" aria-hidden="true"><label>Don't fill this out: <input name="bot-field" /></label></p>
+          <div class="form-row">
+            <div class="form-field">
+              <label for="checklist-name">First name</label>
+              <input type="text" id="checklist-name" name="first-name" required placeholder="Your first name" />
+            </div>
+            <div class="form-field">
+              <label for="checklist-email">Email</label>
+              <input type="email" id="checklist-email" name="email" required placeholder="you@example.com" />
+            </div>
+            <button type="submit" class="btn btn-primary">Get the Checklist</button>
+          </div>
+        </form>
+        <p class="lead-magnet-note">Covers 7 audition types — musical theater, choir, a cappella, and more.</p>
+      </div>
+    </div>
+  </section>
+
+  <SectionDivider variant="curve" topColor="var(--color-off-white)" bottomColor="var(--color-off-white)" />
 
   <!-- How Lessons Work Section -->
   <section class="how-section">
@@ -475,34 +554,63 @@ import Breadcrumb from '../components/Breadcrumb.astro';
     margin: 0 auto 2.5rem;
   }
 
-  .cards-grid {
+  /* Icon Cards Grid — 2-column with icon emphasis */
+  .icon-cards-grid {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     gap: 1.5rem;
+    max-width: 960px;
+    margin: 0 auto;
   }
 
-  .card {
+  .icon-card {
     background: var(--color-off-white);
     padding: 1.75rem;
     border-radius: 12px;
-    border-left: 4px solid var(--color-gold-bright);
     display: flex;
-    flex-direction: column;
+    gap: 1.25rem;
+    align-items: flex-start;
+    transition: transform 0.25s ease, box-shadow 0.25s ease;
+    border: 1px solid rgba(0, 0, 0, 0.04);
   }
 
-  .card h3 {
+  .icon-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
+  }
+
+  .icon-circle {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 56px;
+    height: 56px;
+    min-width: 56px;
+    border-radius: 50%;
+    background: var(--color-gold-bright);
+    color: var(--color-white);
+    box-shadow: 0 4px 12px rgba(212, 168, 75, 0.3);
+    flex-shrink: 0;
+  }
+
+  .icon-circle svg {
+    stroke: var(--color-white);
+  }
+
+  .icon-card-body h3 {
     font-family: var(--font-heading);
-    font-size: 1.25rem;
+    font-size: 1.1rem;
     font-weight: 700;
     color: var(--color-navy-deep);
-    margin: 0 0 0.75rem;
+    margin: 0.15rem 0 0.6rem;
+    line-height: 1.3;
   }
 
-  .card p {
+  .icon-card-body p {
     color: var(--color-charcoal);
-    line-height: 1.6;
+    line-height: 1.65;
     margin: 0;
-    flex-grow: 1;
+    font-size: 0.975rem;
   }
 
   /* Styles Section */
@@ -533,19 +641,172 @@ import Breadcrumb from '../components/Breadcrumb.astro';
     color: var(--color-gold-bright);
   }
 
-  .styles-list {
-    margin: 1rem 0 1.5rem;
-    padding-left: 1.5rem;
+  /* Genre Tile Grid */
+  .genre-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1rem;
+    margin: 1.5rem 0;
   }
 
-  .styles-list li {
-    margin-bottom: 0.5rem;
-    line-height: 1.5;
+  .genre-tile {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    background: rgba(255, 255, 255, 0.06);
+    border-left: 4px solid var(--color-gold-bright);
+    border-radius: 8px;
+    padding: 1rem 1.25rem;
+    transition: background 0.2s ease;
+  }
+
+  .genre-tile:hover {
+    background: rgba(255, 255, 255, 0.1);
+  }
+
+  .genre-icon {
+    flex-shrink: 0;
+    stroke: var(--color-gold-bright);
+  }
+
+  .genre-name {
+    display: block;
+    font-weight: 600;
+    color: var(--color-white);
+    font-size: 0.975rem;
+    line-height: 1.3;
+  }
+
+  .genre-sub {
+    display: block;
+    font-size: 0.825rem;
+    color: rgba(255, 255, 255, 0.65);
+    margin-top: 0.2rem;
+  }
+
+  @media (max-width: 768px) {
+    .genre-grid {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+
+  @media (max-width: 480px) {
+    .genre-grid {
+      grid-template-columns: 1fr;
+    }
   }
 
   .styles-note {
     font-style: italic;
     color: var(--color-gold-bright);
+  }
+
+  /* Lead Magnet Section */
+  .lead-magnet-section {
+    background: var(--color-off-white);
+    padding: 3rem 0;
+  }
+
+  .lead-magnet-card {
+    max-width: 700px;
+    margin: 0 auto;
+    background: var(--color-white);
+    border: 2px solid var(--color-gold-bright);
+    border-radius: 12px;
+    padding: 2.5rem;
+    text-align: center;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+  }
+
+  .lead-magnet-card h2 {
+    font-family: var(--font-heading);
+    font-size: clamp(1.5rem, 2.5vw + 0.5rem, 1.75rem);
+    font-weight: 700;
+    color: var(--color-navy-deep);
+    margin: 0 0 1rem;
+  }
+
+  .lead-magnet-card > p {
+    color: var(--color-charcoal);
+    line-height: 1.7;
+    margin-bottom: 1.5rem;
+    max-width: 550px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .lead-magnet-form .hidden {
+    display: none;
+  }
+
+  .form-row {
+    display: flex;
+    gap: 1rem;
+    align-items: flex-end;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+
+  .form-field {
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+    flex: 1;
+    min-width: 180px;
+  }
+
+  .form-field label {
+    font-size: 0.875rem;
+    font-weight: 600;
+    color: var(--color-navy-deep);
+    margin-bottom: 0.35rem;
+  }
+
+  .form-field input {
+    padding: 0.75rem 1rem;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    font-size: 1rem;
+    font-family: var(--font-body);
+    transition: border-color 0.2s ease;
+  }
+
+  .form-field input:focus {
+    outline: none;
+    border-color: var(--color-gold-bright);
+    box-shadow: 0 0 0 3px rgba(212, 168, 75, 0.15);
+  }
+
+  .form-row .btn {
+    white-space: nowrap;
+    align-self: flex-end;
+  }
+
+  .lead-magnet-note {
+    font-size: 0.875rem;
+    color: #777;
+    margin-top: 1rem;
+    margin-bottom: 0;
+    font-style: italic;
+  }
+
+  @media (max-width: 600px) {
+    .lead-magnet-card {
+      padding: 1.75rem 1.25rem;
+    }
+
+    .form-row {
+      flex-direction: column;
+      align-items: stretch;
+    }
+
+    .form-field {
+      min-width: 100%;
+    }
+
+    .form-row .btn {
+      width: 100%;
+    }
   }
 
   /* How Section */
@@ -800,6 +1061,7 @@ import Breadcrumb from '../components/Breadcrumb.astro';
     .intro-section,
     .who-section,
     .styles-section,
+    .lead-magnet-section,
     .how-section,
     .expect-section,
     .age-section,
@@ -807,8 +1069,23 @@ import Breadcrumb from '../components/Breadcrumb.astro';
       padding: 3rem 0;
     }
 
-    .cards-grid {
+    .icon-cards-grid {
       grid-template-columns: 1fr;
+    }
+
+    .icon-card {
+      padding: 1.5rem;
+    }
+
+    .icon-circle {
+      width: 48px;
+      height: 48px;
+      min-width: 48px;
+    }
+
+    .icon-circle svg {
+      width: 22px;
+      height: 22px;
     }
 
     /* Timeline mobile: shrink number circles slightly */
