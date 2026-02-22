@@ -22,11 +22,18 @@ categoryNames.forEach(cat => {
 >
   <!-- Hero Section -->
   <section class="hero">
-    <div class="container reveal">
+    <div class="container">
       <Breadcrumb items={[{ label: 'Blog' }]} />
-      <span class="hero-eyebrow">Blog</span>
-      <h1>Ideas, insights, and practical guidance for your voice</h1>
-      <p class="hero-subtitle">Whether you sing, speak, or both — there's something here for you.</p>
+      <div class="hero-grid">
+        <div class="hero-content">
+          <span class="hero-eyebrow">Blog</span>
+          <h1>Ideas, insights, and practical guidance for your voice</h1>
+          <p class="hero-subtitle">Whether you sing, speak, or both — there's something here for you.</p>
+        </div>
+        <div class="hero-image">
+          <img src="/images/hero-blog.webp" alt="Ted at the piano coaching a student singing in the studio" class="hero-photo" />
+        </div>
+      </div>
     </div>
   </section>
 
@@ -223,12 +230,59 @@ categoryNames.forEach(cat => {
     background-size: 200px 200px, 100% 100%;
     background-blend-mode: soft-light, normal;
     padding: 5rem 0 4rem;
-    text-align: center;
+  }
+
+  .hero-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 2.5rem;
+    align-items: center;
+  }
+
+  @media (min-width: 900px) {
+    .hero-grid {
+      grid-template-columns: 1.1fr 1fr;
+      gap: 4rem;
+    }
+  }
+
+  .hero-image {
+    display: flex;
+    justify-content: center;
+  }
+
+  .hero-photo {
+    width: 100%;
+    max-width: 500px;
+    height: auto;
+    border-radius: 12px;
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.3);
+    animation: heroPhotoIn 1.2s ease-out 0.5s both;
+  }
+
+  .hero-content {
+    animation: heroTextIn 1s ease-out 0.2s both;
+  }
+
+  @keyframes heroTextIn {
+    from { opacity: 0; transform: translateX(-30px); }
+    to { opacity: 1; transform: translateX(0); }
+  }
+
+  @keyframes heroPhotoIn {
+    from { opacity: 0; transform: scale(1.06); }
+    to { opacity: 1; transform: scale(1); }
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    .hero-content, .hero-photo {
+      animation: none;
+    }
   }
 
   .hero-eyebrow {
     display: block;
-    font-size: 1rem;
+    font-size: 1.25rem;
     font-weight: 600;
     text-transform: uppercase;
     letter-spacing: 0.15em;

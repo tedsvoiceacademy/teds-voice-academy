@@ -61,11 +61,18 @@ const pageDescription = "Transparent pricing for singing, speaking, and ensemble
 
   <!-- Hero Section -->
   <section class="hero">
-    <div class="container reveal">
+    <div class="container">
       <Breadcrumb items={[{ label: 'Pricing' }]} />
-      <span class="hero-eyebrow">Pricing & Packages</span>
-      <h1>Flexible options for every voice</h1>
-      <p class="hero-subhead">Whether you're building a long-term practice, preparing for a specific goal, or exploring what coaching can offer, there's a path that fits.</p>
+      <div class="hero-grid">
+        <div class="hero-content">
+          <span class="hero-eyebrow">Pricing & Packages</span>
+          <h1>Flexible options for every voice</h1>
+          <p class="hero-subhead">Whether you're building a long-term practice, preparing for a specific goal, or exploring what coaching can offer, there's a path that fits.</p>
+        </div>
+        <div class="hero-image">
+          <img src="/images/hero-pricing.webp" alt="Ted Chamberlain, voice coach at Ted's Voice Academy" class="hero-photo" />
+        </div>
+      </div>
     </div>
   </section>
 
@@ -327,18 +334,60 @@ const pageDescription = "Transparent pricing for singing, speaking, and ensemble
     background-size: 200px 200px, 100% 100%;
     background-blend-mode: soft-light, normal;
     color: var(--color-white);
-    padding: 5rem 2rem 4rem;
-    text-align: center;
+    padding: 5rem 0 4rem;
   }
 
-  .hero .container {
-    max-width: 800px;
-    margin: 0 auto;
+  .hero-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 2.5rem;
+    align-items: center;
+  }
+
+  @media (min-width: 900px) {
+    .hero-grid {
+      grid-template-columns: 1.1fr 1fr;
+      gap: 4rem;
+    }
+  }
+
+  .hero-image {
+    display: flex;
+    justify-content: center;
+  }
+
+  .hero-photo {
+    width: 100%;
+    max-width: 500px;
+    height: auto;
+    border-radius: 12px;
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.3);
+    animation: heroPhotoIn 1.2s ease-out 0.5s both;
+  }
+
+  .hero-content {
+    animation: heroTextIn 1s ease-out 0.2s both;
+  }
+
+  @keyframes heroTextIn {
+    from { opacity: 0; transform: translateX(-30px); }
+    to { opacity: 1; transform: translateX(0); }
+  }
+
+  @keyframes heroPhotoIn {
+    from { opacity: 0; transform: scale(1.06); }
+    to { opacity: 1; transform: scale(1); }
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    .hero-content, .hero-photo {
+      animation: none;
+    }
   }
 
   .hero-eyebrow {
     display: block;
-    font-size: 1rem;
+    font-size: 1.25rem;
     font-weight: 600;
     text-transform: uppercase;
     letter-spacing: 0.15em;

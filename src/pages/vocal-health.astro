@@ -33,12 +33,18 @@ import Breadcrumb from '../components/Breadcrumb.astro';
 
   <!-- Hero Section -->
   <section class="hero">
-    <div class="container reveal">
+    <div class="container">
       <Breadcrumb items={[{ label: 'Vocal Health' }]} />
-      <span class="hero-eyebrow">Vocal Health</span>
-      <h1>Your voice deserves good care</h1>
-      <p class="hero-subtitle">A healthy voice is built through daily habits, simple practices, and small choices that keep your voice resilient over time.</p>
-      <p class="hero-body">I've spent years learning what helps voices stay strong — and what helps them recover when they're tired or strained. This section shares what I've learned: practical guidance you can use whether you're maintaining a healthy voice or working your way back from a rough stretch.</p>
+      <div class="hero-grid">
+        <div class="hero-content">
+          <span class="hero-eyebrow">Vocal Health</span>
+          <h1>Your voice deserves good care</h1>
+          <p class="hero-subtitle">A healthy voice is built through daily habits, simple practices, and small choices that keep your voice resilient over time.</p>
+        </div>
+        <div class="hero-image">
+          <img src="/images/hero-vocal-health.webp" alt="Ted Chamberlain explaining vocal technique in the studio" class="hero-photo" />
+        </div>
+      </div>
     </div>
   </section>
 
@@ -574,13 +580,60 @@ import Breadcrumb from '../components/Breadcrumb.astro';
       linear-gradient(135deg, var(--color-navy-deep) 0%, var(--color-navy-medium) 100%);
     background-size: 200px 200px, 100% 100%;
     background-blend-mode: soft-light, normal;
-    padding: 5rem 0 3rem;
-    text-align: center;
+    padding: 5rem 0 4rem;
+  }
+
+  .hero-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 2.5rem;
+    align-items: center;
+  }
+
+  @media (min-width: 900px) {
+    .hero-grid {
+      grid-template-columns: 1.1fr 1fr;
+      gap: 4rem;
+    }
+  }
+
+  .hero-image {
+    display: flex;
+    justify-content: center;
+  }
+
+  .hero-photo {
+    width: 100%;
+    max-width: 500px;
+    height: auto;
+    border-radius: 12px;
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.3);
+    animation: heroPhotoIn 1.2s ease-out 0.5s both;
+  }
+
+  .hero-content {
+    animation: heroTextIn 1s ease-out 0.2s both;
+  }
+
+  @keyframes heroTextIn {
+    from { opacity: 0; transform: translateX(-30px); }
+    to { opacity: 1; transform: translateX(0); }
+  }
+
+  @keyframes heroPhotoIn {
+    from { opacity: 0; transform: scale(1.06); }
+    to { opacity: 1; transform: scale(1); }
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    .hero-content, .hero-photo {
+      animation: none;
+    }
   }
 
   .hero-eyebrow {
     display: block;
-    font-size: 1rem;
+    font-size: 1.25rem;
     font-weight: 600;
     text-transform: uppercase;
     letter-spacing: 0.15em;
