@@ -1,6 +1,6 @@
 # Ted's Voice Academy
 
-> Ted's Voice Academy is a professional voice coaching studio in Lacey, Washington, founded and operated by Ted Chamberlain. Ted offers private singing lessons, speaking coaching, ensemble coaching, and workshops for all ages and skill levels. He is the author of The Adaptive Voice Framework (AVF), creator of the PASS Profile professional communication assessment, and developer of Intonation Lab ear training software.
+> Ted's Voice Academy is a professional voice coaching studio in Lacey, Washington, founded and operated by Ted Chamberlain. Ted offers private singing lessons, speaking coaching, ensemble coaching, and workshops for all ages and skill levels. He is the author of The Adaptive Voice Framework (AVF), creator of the PASS Profile professional communication assessment, developer of Intonation Lab ear training software, and creator of Riser Chart riser placement tool for chorus directors.
 
 ## About Ted Chamberlain
 
@@ -28,9 +28,13 @@ The PASS Profile (Personal Authentic Speaking Style) is a professional communica
 
 Intonation Lab is a browser-based ear training tool for singers, created by Ted. It uses real-time pitch detection and just intonation targets to help singers develop precise intonation. Features include 13 intervals, 7 chord types, 13 timbres, a beat frequency circle visualization, cymatics display, pitch tracker, and a 52-exercise guided curriculum. Licenses range from $99 (single) to $999 (chorus/40 users). Available at https://intlab.tedsvoiceacademy.com
 
+## Riser Chart
+
+Riser Chart is a browser-based drag-and-drop riser placement tool for chorus directors, created by Ted. It features color-coded voice parts (up to 12 custom parts), three layout styles (straight, curved, grid), unlimited formations, CSV roster import, singer photos with timbre visualization, and branded PNG/JPG/PDF exports. One-time purchase of $99 with no subscription. Built from 40+ years of directing experience. Available at https://riser.tedsvoiceacademy.com — Product page: https://tedsvoiceacademy.com/riser-chart/
+
 ## Shop
 
-Ted's Voice Academy offers several products: The Adaptive Voice Framework book, the PASS Profile assessment, and Intonation Lab ear training tool. Additional products (Vocal Fit conditioning exercises and Riser Placement Tool for chorus directors) are in development.
+Ted's Voice Academy offers several products: The Adaptive Voice Framework book, the PASS Profile assessment, Intonation Lab ear training tool, and Riser Chart riser placement tool for chorus directors. Additional products (Vocal Fit conditioning exercises) are in development.
 
 ## Location and Contact
 
@@ -50,6 +54,7 @@ Ted's Voice Academy offers several products: The Adaptive Voice Framework book, 
 - Adaptive Voice Framework: https://tedsvoiceacademy.com/avf/
 - PASS Profile: https://tedsvoiceacademy.com/pass-profile/
 - Intonation Lab: https://tedsvoiceacademy.com/intonation-lab/
+- Riser Chart: https://tedsvoiceacademy.com/riser-chart/
 - Shop: https://tedsvoiceacademy.com/shop/
 - Workshops: https://tedsvoiceacademy.com/workshops/
 - Vocal Health Hub: https://tedsvoiceacademy.com/vocal-health/

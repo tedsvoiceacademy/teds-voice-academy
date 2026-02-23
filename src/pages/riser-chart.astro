@@ -1,0 +1,829 @@
+---
+import Layout from '../layouts/BaseLayout.astro';
+import SectionDivider from '../components/SectionDivider.astro';
+import Breadcrumb from '../components/Breadcrumb.astro';
+
+const pageTitle = "Riser Chart — Drag-and-Drop Riser Placement for Chorus Directors";
+const pageDescription = "Visual riser placement tool built by a chorus director. Drag-and-drop singers, color-coded voice parts, unlimited formations, branded exports. $99 one-time, no subscription.";
+const riserChartUrl = "https://riser.tedsvoiceacademy.com";
+---
+
+<Layout title={pageTitle} description={pageDescription} ogImage="/images/og/og-riser-chart.jpg">
+  <Fragment slot="head">
+    <script type="application/ld+json" set:html={JSON.stringify({
+      "@context": "https://schema.org",
+      "@type": "SoftwareApplication",
+      "name": "Riser Chart",
+      "applicationCategory": "UtilitiesApplication",
+      "operatingSystem": "Web browser",
+      "description": "Drag-and-drop riser placement tool for chorus directors. Color-coded voice parts, unlimited formations, CSV roster import, branded PNG/JPG/PDF exports. Built by a director with 40+ years of experience.",
+      "url": "https://riser.tedsvoiceacademy.com",
+      "creator": {
+        "@type": "Person",
+        "name": "Ted Chamberlain",
+        "url": "https://tedsvoiceacademy.com/about"
+      },
+      "offers": {
+        "@type": "Offer",
+        "priceCurrency": "USD",
+        "price": "99",
+        "availability": "https://schema.org/InStock"
+      }
+    })} />
+    <script type="application/ld+json" set:html={JSON.stringify({
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "How do I access Riser Chart?",
+          "acceptedAnswer": { "@type": "Answer", "text": "Riser Chart is a hosted web app — just open it in your browser. No software to install, no files to manage. After purchase, you receive an access code and activate with your email. Use the same code on any device." }
+        },
+        {
+          "@type": "Question",
+          "name": "What voice part systems does Riser Chart support?",
+          "acceptedAnswer": { "@type": "Answer", "text": "Any voice part system you use. Define up to 12 custom voice parts with custom names and colors. Works for barbershop (Tenor, Lead, Baritone, Bass), SATB, show choir, a cappella — any ensemble structure. Sub-parts like Tenor 1 and Tenor 2 are supported with distinct color shading." }
+        },
+        {
+          "@type": "Question",
+          "name": "Is my data stored in the cloud?",
+          "acceptedAnswer": { "@type": "Answer", "text": "No. All your chorus data — singers, formations, branding — is stored locally on your device and is never transmitted to external servers. This is a deliberate privacy feature. You can back up your entire project as a JSON file and restore it on any device." }
+        },
+        {
+          "@type": "Question",
+          "name": "Do I have to pay monthly?",
+          "acceptedAnswer": { "@type": "Answer", "text": "No. Riser Chart is a one-time purchase of $99. No subscription, no recurring fees. All upgrades come automatically — every time you open the app, you're on the latest version." }
+        },
+        {
+          "@type": "Question",
+          "name": "Can I use Riser Chart on multiple devices?",
+          "acceptedAnswer": { "@type": "Answer", "text": "Yes. Your access code works on any device with the same email address. Use the JSON backup and restore feature to move your project data between devices." }
+        },
+        {
+          "@type": "Question",
+          "name": "How many singers can it handle?",
+          "acceptedAnswer": { "@type": "Answer", "text": "Riser Chart handles rosters of 150+ singers smoothly. You can have unlimited formations, each with its own riser configuration and placements." }
+        }
+      ]
+    })} />
+    <script type="application/ld+json" set:html={JSON.stringify({
+      "@context": "https://schema.org",
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://tedsvoiceacademy.com/" },
+        { "@type": "ListItem", "position": 2, "name": "Riser Chart", "item": "https://tedsvoiceacademy.com/riser-chart" }
+      ]
+    })} />
+  </Fragment>
+
+  <!-- Hero Section -->
+  <section class="hero">
+    <div class="container reveal">
+      <Breadcrumb items={[{ label: 'Riser Chart' }]} schema={false} />
+      <span class="hero-eyebrow">Riser Chart</span>
+      <h1>Drag-and-drop riser placement for chorus directors</h1>
+      <p class="hero-body">Built by a director who spent 40 years trying sticky notes, magnets, PowerPoint, and foam boards. Riser Chart does what all of those couldn't — let you arrange singers visually, see voice parts at a glance, and print a clean chart in seconds.</p>
+      <div class="hero-ctas">
+        <a href={riserChartUrl} class="cta-button primary" target="_blank" rel="noopener noreferrer">Get Access</a>
+        <a href="#features" class="cta-button secondary">See Features ↓</a>
+      </div>
+    </div>
+  </section>
+
+  <SectionDivider variant="wave" topColor="var(--color-navy-deep)" bottomColor="var(--color-off-white)" />
+
+  <!-- Answer Capsule -->
+  <section class="capsule-section">
+    <div class="container">
+      <p class="answer-capsule">Riser Chart is a browser-based riser placement tool for chorus directors, created by Ted Chamberlain. It features drag-and-drop singer placement, color-coded voice parts (up to 12 custom parts), three layout styles (straight, curved, grid), unlimited formations, CSV roster import, and branded PNG/JPG/PDF exports. One-time purchase of $99 with no subscription. Works in Chrome, Edge, Firefox, and Safari.</p>
+      <p class="page-date">Last updated: <time datetime="2026-02-22">February 22, 2026</time></p>
+    </div>
+  </section>
+
+  <!-- Origin Story Section -->
+  <section class="story-section">
+    <div class="container container-narrow reveal">
+      <h2 class="decorated-heading">I've been directing since the 1980s. I tried everything.</h2>
+      <p class="drop-cap">If you're a chorus director, you know the drill. You've got a show coming up, singers have moved around, new members joined, and you need to figure out who stands where on those risers. Again.</p>
+      <p>I spent decades looking for a good way to handle this. <strong>Seating chart tools?</strong> Made for classrooms, not risers. <strong>PowerPoint?</strong> Life is too short to drag little text boxes around slides. <strong>Cookie sheets with magnets?</strong> Worked okay — until someone bumped the table.</p>
+      <p><strong>Sticky notes on poster board?</strong> The sticky wore off, coffee spilled, notes stuck to someone's sleeve, and the giant board took up half my office. <strong>Velcro names on foam board?</strong> Took forever to set up, and moving people was still more hassle than it was worth.</p>
+      <blockquote class="pull-quote">After years of settling, I finally said: it's time to build my own.</blockquote>
+      <p>I designed Riser Chart for the way I actually work — drag a singer onto a spot, see voice parts at a glance, try a different arrangement in seconds, print a clean chart for the risers. No learning curve. No monthly fees eating away at your chorus budget.</p>
+    </div>
+  </section>
+
+  <SectionDivider variant="curve" topColor="var(--color-off-white)" bottomColor="var(--color-navy-deep)" />
+
+  <!-- Features Section -->
+  <section id="features" class="features-section">
+    <div class="container">
+      <h2 class="decorated-heading decorated-heading--light reveal">What's inside</h2>
+      <p class="section-intro reveal">Six core capabilities that make riser placement fast, visual, and frustration-free.</p>
+
+      <div class="features-grid reveal-stagger">
+        <div class="feature-card reveal">
+          <div class="feature-icon">
+            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true">
+              <path d="M15 3h4a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2h-4"/>
+              <polyline points="10 17 15 12 10 7"/>
+              <line x1="15" y1="12" x2="3" y2="12"/>
+            </svg>
+          </div>
+          <h3>Drag-and-Drop Placement</h3>
+          <p>Grab a singer from the sidebar and drop them onto any riser spot. Move them around by dragging on the canvas. Click to place, Delete key to remove. Auto-placement fills all spots by voice part in one click.</p>
+        </div>
+
+        <div class="feature-card reveal">
+          <div class="feature-icon">
+            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true">
+              <circle cx="12" cy="12" r="10"/>
+              <circle cx="12" cy="12" r="4"/>
+              <line x1="12" y1="2" x2="12" y2="6"/>
+              <line x1="12" y1="18" x2="12" y2="22"/>
+              <line x1="2" y1="12" x2="6" y2="12"/>
+              <line x1="18" y1="12" x2="22" y2="12"/>
+            </svg>
+          </div>
+          <h3>Color-Coded Voice Parts</h3>
+          <p>Define up to 12 custom voice parts with custom names and colors. Works for barbershop, SATB, show choir, a cappella — any structure. Voice part colors appear everywhere: canvas, sidebar, filters, and legend.</p>
+        </div>
+
+        <div class="feature-card reveal">
+          <div class="feature-icon">
+            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true">
+              <rect x="3" y="3" width="7" height="7"/>
+              <rect x="14" y="3" width="7" height="7"/>
+              <rect x="3" y="14" width="7" height="7"/>
+              <rect x="14" y="14" width="7" height="7"/>
+            </svg>
+          </div>
+          <h3>3 Layout Styles</h3>
+          <p>Straight rows, curved arcs, or rectangular grid — match your actual physical setup. Configure 0–4 elevated levels plus a floor row, with each row independently adjustable from 2 to 20 spots.</p>
+        </div>
+
+        <div class="feature-card reveal">
+          <div class="feature-icon">
+            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true">
+              <path d="M16 4h2a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h2"/>
+              <rect x="8" y="2" width="8" height="4" rx="1" ry="1"/>
+              <line x1="9" y1="12" x2="15" y2="12"/>
+              <line x1="9" y1="16" x2="13" y2="16"/>
+            </svg>
+          </div>
+          <h3>Unlimited Formations</h3>
+          <p>Create as many named arrangements as you need — competition, holiday show, rehearsal, experiments. Each formation keeps its own riser configuration and placements. Switch between them in one click.</p>
+        </div>
+
+        <div class="feature-card reveal">
+          <div class="feature-icon">
+            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true">
+              <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/>
+              <polyline points="14 2 14 8 20 8"/>
+              <line x1="12" y1="18" x2="12" y2="12"/>
+              <polyline points="9 15 12 12 15 15"/>
+            </svg>
+          </div>
+          <h3>Branded Exports</h3>
+          <p>Export as PNG, JPG, or PDF — all in high resolution with your chorus name, logo, and formation title. Print-ready charts for posting at rehearsal, emailing section leaders, or filing in your director binder.</p>
+        </div>
+
+        <div class="feature-card reveal">
+          <div class="feature-icon">
+            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true">
+              <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/>
+              <polyline points="17 8 12 3 7 8"/>
+              <line x1="12" y1="3" x2="12" y2="15"/>
+            </svg>
+          </div>
+          <h3>CSV Roster Import</h3>
+          <p>Drag and drop a CSV file to import your entire roster in seconds. Flexible column matching handles various header names and voice part abbreviations. Singer photos, timbre ratings, height, and notes all supported.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <SectionDivider variant="wave" topColor="var(--color-navy-deep)" bottomColor="var(--color-cream)" />
+
+  <!-- How It Works Section -->
+  <section class="how-section">
+    <div class="container container-narrow">
+      <h2 class="decorated-heading reveal">How it works</h2>
+      <div class="steps reveal-stagger">
+        <div class="step reveal">
+          <span class="step-number">1</span>
+          <div class="step-content">
+            <h3>Run the setup wizard</h3>
+            <p>Enter your chorus name, configure voice parts with custom colors, choose your brand accent color, and upload your logo. You're arranging singers within minutes.</p>
+          </div>
+        </div>
+        <div class="step reveal">
+          <span class="step-number">2</span>
+          <div class="step-content">
+            <h3>Import your roster</h3>
+            <p>Drop in a CSV file or add singers one by one. Each singer gets a profile with voice part, sub-part, timbre rating, height, photo, and notes.</p>
+          </div>
+        </div>
+        <div class="step reveal">
+          <span class="step-number">3</span>
+          <div class="step-content">
+            <h3>Drag singers onto the risers</h3>
+            <p>Pick a layout style, set your rows and spots, then drag singers from the sidebar onto the canvas. Use auto-placement to fill spots by voice part in one click, then fine-tune.</p>
+          </div>
+        </div>
+        <div class="step reveal">
+          <span class="step-number">4</span>
+          <div class="step-content">
+            <h3>Export and print</h3>
+            <p>Export branded charts as PNG, JPG, or PDF. Post them at rehearsal, email them to section leaders, or file them in your binder. Create new formations for the next event and start again.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Pricing Section -->
+  <section class="pricing-section">
+    <div class="container reveal">
+      <h2 class="decorated-heading">One price. No subscription. Ever.</h2>
+      <div class="pricing-card-single">
+        <div class="price-display">$99</div>
+        <p class="price-label">One-time purchase</p>
+        <ul class="price-includes">
+          <li>Full access to all features</li>
+          <li>Automatic updates — always the latest version</li>
+          <li>Use on any device with your access code</li>
+          <li>JSON backup and restore</li>
+          <li>Email support included</li>
+        </ul>
+        <a href={riserChartUrl} class="pricing-cta" target="_blank" rel="noopener noreferrer">Get Access</a>
+        <p class="pricing-note">No downloads. No installation. No recurring fees.</p>
+      </div>
+    </div>
+  </section>
+
+  <SectionDivider variant="angle" topColor="var(--color-white)" bottomColor="var(--color-cream)" />
+
+  <!-- FAQ Section -->
+  <section class="faq-section">
+    <div class="container container-narrow">
+      <h2 class="decorated-heading reveal">Common Questions</h2>
+
+      <details class="faq-item reveal">
+        <summary>How do I access Riser Chart?</summary>
+        <p>Riser Chart is a hosted web app — just open it in your browser. No software to install, no files to manage. After purchase, you receive an access code and activate with your email. Use the same code on any device.</p>
+      </details>
+
+      <details class="faq-item reveal">
+        <summary>What voice part systems does it support?</summary>
+        <p>Any voice part system you use. Define up to 12 custom voice parts with custom names and colors. Works for barbershop (Tenor, Lead, Baritone, Bass), SATB, show choir, a cappella — any ensemble structure. Sub-parts like Tenor 1 and Tenor 2 are supported with distinct color shading.</p>
+      </details>
+
+      <details class="faq-item reveal">
+        <summary>Is my data stored in the cloud?</summary>
+        <p>No. All your chorus data — singers, formations, branding — is stored locally on your device and is never transmitted to external servers. This is a deliberate privacy feature. You can back up your entire project as a JSON file and restore it on any device.</p>
+      </details>
+
+      <details class="faq-item reveal">
+        <summary>Do I have to pay monthly?</summary>
+        <p>No. Riser Chart is a one-time purchase of $99. No subscription, no recurring fees. All upgrades come automatically — every time you open the app, you're on the latest version.</p>
+      </details>
+
+      <details class="faq-item reveal">
+        <summary>Can I use it on multiple devices?</summary>
+        <p>Yes. Your access code works on any device with the same email address. Use the JSON backup and restore feature to move your project data between devices.</p>
+      </details>
+
+      <details class="faq-item reveal">
+        <summary>How many singers can it handle?</summary>
+        <p>Riser Chart handles rosters of 150+ singers smoothly. You can have unlimited formations, each with its own riser configuration and placements.</p>
+      </details>
+    </div>
+  </section>
+
+  <!-- Final CTA Section -->
+  <section class="final-cta">
+    <div class="container reveal">
+      <h2>Ready to stop fighting with sticky notes?</h2>
+      <p>Riser Chart gives you the visual, drag-and-drop riser placement tool that directors have been wishing for. Built from four decades of directing experience — and available for less than the cost of one rehearsal rental.</p>
+      <a href={riserChartUrl} class="cta-button primary" target="_blank" rel="noopener noreferrer">Get Access</a>
+      <p class="contact-line">Questions? Email <a href="mailto:ted@tedsvoiceacademy.com">ted@tedsvoiceacademy.com</a> · <a href="/shop">Browse all products</a></p>
+    </div>
+  </section>
+</Layout>
+
+<style>
+  /* Hero Section */
+  .hero {
+    background:
+      url('/images/noise-texture.png') repeat,
+      linear-gradient(135deg, var(--color-navy-deep) 0%, var(--color-navy-medium) 100%);
+    background-size: 200px 200px, 100% 100%;
+    background-blend-mode: soft-light, normal;
+    color: var(--color-white);
+    padding: 5rem 2rem 4rem;
+    text-align: center;
+  }
+
+  .hero .container {
+    max-width: 800px;
+    margin: 0 auto;
+  }
+
+  .hero-eyebrow {
+    display: block;
+    font-size: 1.25rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.15em;
+    color: var(--color-gold-bright);
+    margin-bottom: 0.75rem;
+  }
+
+  .hero h1 {
+    font-family: var(--font-heading);
+    font-size: clamp(2rem, 4vw + 1rem, 3rem);
+    font-weight: 700;
+    color: var(--color-white);
+    margin: 0 0 1.5rem 0;
+    line-height: 1.2;
+  }
+
+  .hero-body {
+    font-size: 1.125rem;
+    line-height: 1.7;
+    color: var(--color-cream);
+    margin-bottom: 2rem;
+    max-width: 700px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .hero-ctas {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1rem;
+  }
+
+  /* Hero entrance animation */
+  @keyframes heroFadeIn {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+  .hero .container {
+    animation: heroFadeIn 1s ease-out 0.2s both;
+  }
+  @media (prefers-reduced-motion: reduce) {
+    .hero .container { animation: none; }
+  }
+
+  /* CTA Buttons */
+  .cta-button {
+    display: inline-block;
+    font-size: 1rem;
+    font-weight: 600;
+    padding: 1rem 2rem;
+    border-radius: 8px;
+    text-decoration: none;
+    transition: all 0.2s ease;
+  }
+
+  .cta-button.primary {
+    background: var(--color-gold-bright);
+    color: var(--color-navy-deep);
+  }
+
+  .cta-button.primary:hover {
+    background: var(--color-gold-hover);
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(212, 168, 75, 0.3);
+  }
+
+  .cta-button.secondary {
+    background: transparent;
+    border: 2px solid var(--color-cream);
+    color: var(--color-cream);
+  }
+
+  .cta-button.secondary:hover {
+    background: rgba(245, 240, 225, 0.1);
+  }
+
+  /* Container */
+  .container-narrow {
+    max-width: 800px;
+    margin: 0 auto;
+  }
+
+  /* Answer Capsule */
+  .capsule-section {
+    padding: 2rem 2rem 0;
+    background: var(--color-off-white);
+  }
+
+  .answer-capsule {
+    font-size: 1rem;
+    line-height: 1.7;
+    color: var(--color-charcoal);
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 1.5rem;
+    background: var(--color-white);
+    border-left: 4px solid var(--color-gold-bright);
+    border-radius: 0 8px 8px 0;
+  }
+
+  .page-date {
+    font-size: 0.85rem;
+    color: rgba(42, 42, 42, 0.6);
+    max-width: 800px;
+    margin: 0.5rem auto 0;
+  }
+
+  /* Story Section */
+  .story-section {
+    background: var(--color-off-white);
+    padding: 4rem 2rem;
+    text-align: center;
+  }
+
+  .story-section h2 {
+    font-family: var(--font-heading);
+    font-size: clamp(1.75rem, 3vw + 1rem, 2.5rem);
+    font-weight: 700;
+    color: var(--color-navy-deep);
+    margin: 0 0 1.5rem;
+  }
+
+  .story-section p {
+    font-size: 1.1rem;
+    line-height: 1.8;
+    color: var(--color-charcoal);
+    text-align: left;
+    margin-bottom: 1.25rem;
+  }
+
+  /* Features Section */
+  .features-section {
+    background:
+      url('/images/noise-texture.png') repeat,
+      linear-gradient(135deg, var(--color-navy-deep) 0%, var(--color-navy-medium) 100%);
+    background-size: 200px 200px, 100% 100%;
+    background-blend-mode: soft-light, normal;
+    padding: 4rem 2rem;
+  }
+
+  .features-section h2 {
+    font-family: var(--font-heading);
+    font-size: clamp(1.75rem, 3vw + 1rem, 2.5rem);
+    font-weight: 700;
+    color: var(--color-white);
+    text-align: center;
+    margin: 0 0 0.75rem;
+  }
+
+  .section-intro {
+    text-align: center;
+    font-size: 1.1rem;
+    color: var(--color-cream);
+    max-width: 700px;
+    margin: 0 auto 2.5rem;
+    line-height: 1.7;
+  }
+
+  .features-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.5rem;
+  }
+
+  .feature-card {
+    background: rgba(255, 255, 255, 0.08);
+    padding: 1.75rem;
+    border-radius: 12px;
+    border-top: 3px solid var(--color-gold-bright);
+    transition: transform 0.2s ease, background 0.2s ease;
+  }
+
+  .feature-card:hover {
+    transform: translateY(-4px);
+    background: rgba(255, 255, 255, 0.12);
+  }
+
+  .feature-icon {
+    color: var(--color-gold-bright);
+    margin-bottom: 1rem;
+  }
+
+  .feature-card h3 {
+    font-family: var(--font-heading);
+    font-size: 1.15rem;
+    font-weight: 700;
+    color: var(--color-white);
+    margin: 0 0 0.75rem;
+  }
+
+  .feature-card p {
+    color: var(--color-cream);
+    font-size: 0.95rem;
+    line-height: 1.6;
+    margin: 0;
+    opacity: 0.95;
+  }
+
+  /* How It Works Section */
+  .how-section {
+    background: var(--color-cream);
+    padding: 4rem 2rem;
+  }
+
+  .how-section h2 {
+    font-family: var(--font-heading);
+    font-size: clamp(1.75rem, 3vw + 1rem, 2.5rem);
+    font-weight: 700;
+    color: var(--color-navy-deep);
+    text-align: center;
+    margin: 0 0 2.5rem;
+  }
+
+  .steps {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+  }
+
+  .step {
+    display: flex;
+    gap: 1.5rem;
+    align-items: flex-start;
+  }
+
+  .step-number {
+    flex-shrink: 0;
+    width: 48px;
+    height: 48px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: var(--color-navy-deep);
+    color: var(--color-gold-bright);
+    font-size: 1.25rem;
+    font-weight: 700;
+    border-radius: 50%;
+  }
+
+  .step-content h3 {
+    font-family: var(--font-heading);
+    font-size: 1.2rem;
+    font-weight: 700;
+    color: var(--color-navy-deep);
+    margin: 0 0 0.5rem;
+  }
+
+  .step-content p {
+    font-size: 1rem;
+    line-height: 1.6;
+    color: var(--color-charcoal);
+    margin: 0;
+  }
+
+  /* Pricing Section */
+  .pricing-section {
+    background: var(--color-white);
+    padding: 4rem 2rem;
+    text-align: center;
+  }
+
+  .pricing-section h2 {
+    font-family: var(--font-heading);
+    font-size: clamp(1.75rem, 3vw + 1rem, 2.5rem);
+    font-weight: 700;
+    color: var(--color-navy-deep);
+    margin: 0 0 2.5rem;
+  }
+
+  .pricing-card-single {
+    max-width: 420px;
+    margin: 0 auto;
+    background: var(--color-off-white);
+    border-radius: 12px;
+    padding: 2.5rem 2rem;
+    border: 2px solid var(--color-gold-bright);
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+  }
+
+  .price-display {
+    font-size: 3.5rem;
+    font-weight: 700;
+    color: var(--color-navy-deep);
+    line-height: 1;
+    margin: 0 0 0.25rem;
+  }
+
+  .price-label {
+    font-size: 1.1rem;
+    color: rgba(42, 42, 42, 0.7);
+    margin: 0 0 1.5rem;
+  }
+
+  .price-includes {
+    list-style: none;
+    padding: 0;
+    margin: 0 0 2rem;
+    text-align: left;
+  }
+
+  .price-includes li {
+    font-size: 1rem;
+    line-height: 1.6;
+    color: var(--color-charcoal);
+    padding: 0.5rem 0;
+    padding-left: 1.75rem;
+    position: relative;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.06);
+  }
+
+  .price-includes li:last-child {
+    border-bottom: none;
+  }
+
+  .price-includes li::before {
+    content: "✓";
+    position: absolute;
+    left: 0;
+    color: var(--color-gold-bright);
+    font-weight: 700;
+  }
+
+  .pricing-cta {
+    display: inline-block;
+    background: var(--color-gold-bright);
+    color: var(--color-navy-deep);
+    font-size: 1.1rem;
+    font-weight: 600;
+    padding: 1rem 2.5rem;
+    border-radius: 8px;
+    text-decoration: none;
+    transition: background 0.2s ease, transform 0.2s ease;
+  }
+
+  .pricing-cta:hover {
+    background: var(--color-gold-hover);
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(212, 168, 75, 0.3);
+  }
+
+  .pricing-note {
+    font-size: 0.9rem;
+    color: rgba(42, 42, 42, 0.6);
+    margin: 1rem 0 0;
+  }
+
+  /* FAQ Section */
+  .faq-section {
+    background: var(--color-cream);
+    padding: 4rem 2rem;
+  }
+
+  .faq-section h2 {
+    font-family: var(--font-heading);
+    font-size: clamp(1.75rem, 3vw + 1rem, 2.5rem);
+    font-weight: 700;
+    color: var(--color-navy-deep);
+    text-align: center;
+    margin: 0 0 2.5rem;
+  }
+
+  .faq-item {
+    margin-bottom: 1rem;
+    border: 1px solid rgba(10, 22, 40, 0.1);
+    border-radius: 8px;
+    overflow: hidden;
+    background: var(--color-white);
+  }
+
+  .faq-item:last-child {
+    margin-bottom: 0;
+  }
+
+  .faq-item summary {
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: var(--color-navy-deep);
+    padding: 1.25rem 3rem 1.25rem 1.25rem;
+    cursor: pointer;
+    list-style: none;
+    position: relative;
+    transition: background 0.2s ease;
+  }
+
+  .faq-item summary::-webkit-details-marker {
+    display: none;
+  }
+
+  .faq-item summary::after {
+    content: "+";
+    position: absolute;
+    right: 1.25rem;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 1.5rem;
+    font-weight: 400;
+    color: var(--color-gold-bright);
+    transition: transform 0.2s ease;
+  }
+
+  .faq-item[open] summary::after {
+    content: "\2212";
+  }
+
+  .faq-item summary:hover {
+    background: rgba(212, 168, 75, 0.06);
+  }
+
+  .faq-item p {
+    font-size: 1rem;
+    line-height: 1.7;
+    margin: 0;
+    color: var(--color-charcoal);
+    padding: 0 1.25rem 1.25rem;
+  }
+
+  /* Final CTA Section */
+  .final-cta {
+    background:
+      url('/images/noise-texture.png') repeat,
+      linear-gradient(135deg, var(--color-navy-deep) 0%, var(--color-navy-medium) 100%);
+    background-size: 200px 200px, 100% 100%;
+    background-blend-mode: soft-light, normal;
+    padding: 4rem 2rem;
+    text-align: center;
+    color: var(--color-white);
+  }
+
+  .final-cta h2 {
+    font-family: var(--font-heading);
+    font-size: clamp(1.75rem, 3vw + 1rem, 2.5rem);
+    font-weight: 700;
+    margin: 0 0 1rem;
+  }
+
+  .final-cta > .container > p {
+    font-size: 1.1rem;
+    line-height: 1.7;
+    color: var(--color-cream);
+    max-width: 600px;
+    margin: 0 auto 2rem;
+  }
+
+  .contact-line {
+    margin-top: 1.5rem;
+    font-size: 0.95rem;
+    color: rgba(245, 240, 225, 0.8);
+  }
+
+  .contact-line a {
+    color: var(--color-gold-bright);
+    font-weight: 600;
+    text-decoration: none;
+  }
+
+  .contact-line a:hover {
+    text-decoration: underline;
+  }
+
+  /* Responsive */
+  @media (max-width: 1024px) {
+    .features-grid {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+
+  @media (max-width: 768px) {
+    .hero {
+      padding: 4rem 1.5rem 3rem;
+    }
+
+    .features-grid {
+      grid-template-columns: 1fr;
+    }
+
+    .story-section,
+    .features-section,
+    .how-section,
+    .pricing-section,
+    .faq-section,
+    .final-cta {
+      padding: 3rem 1.5rem;
+    }
+
+    .hero-ctas {
+      flex-direction: column;
+      align-items: stretch;
+    }
+
+    .cta-button {
+      text-align: center;
+    }
+  }
+</style>
