@@ -50,9 +50,16 @@ const ogImageAbsolute = ogImage.startsWith('http') ? ogImage : `${siteUrl}${ogIm
   <!-- Robots -->
   {noIndex && <meta name="robots" content="noindex, nofollow" />}
   
-  <!-- Favicon -->
+  <!-- Favicon & Manifest -->
   <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
   <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+  <link rel="manifest" href="/site.webmanifest" />
+
+  <!-- Language -->
+  <link rel="alternate" hreflang="en" href={canonicalUrl} />
+
+  <!-- Author -->
+  <meta name="author" content="Ted Chamberlain" />
 
   <!-- Preconnect to external origins -->
   <link rel="preconnect" href="https://www.googletagmanager.com" />
@@ -68,6 +75,9 @@ const ogImageAbsolute = ogImage.startsWith('http') ? ogImage : `${siteUrl}${ogIm
   <meta property="og:title" content={fullTitle} />
   <meta property="og:description" content={description} />
   <meta property="og:image" content={ogImageAbsolute} />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+  <meta property="og:image:type" content="image/jpeg" />
   <meta property="og:site_name" content={siteName} />
   <meta property="og:locale" content="en_US" />
   
@@ -109,6 +119,19 @@ const ogImageAbsolute = ogImage.startsWith('http') ? ogImage : `${siteUrl}${ogIm
       }
     }
   </script>
+
+  <!-- WebSite Structured Data (JSON-LD) -->
+  <script type="application/ld+json" set:html={JSON.stringify({
+    "@context": "https://schema.org",
+    "@type": "WebSite",
+    "name": "Ted's Voice Academy",
+    "url": "https://tedsvoiceacademy.com",
+    "publisher": {
+      "@type": "Organization",
+      "name": "Ted's Voice Academy",
+      "url": "https://tedsvoiceacademy.com"
+    }
+  })} />
 
   <!-- LocalBusiness Structured Data (JSON-LD) -->
   <script type="application/ld+json" set:html={JSON.stringify({
