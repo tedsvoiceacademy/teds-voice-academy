@@ -4,7 +4,7 @@ import SectionDivider from '../components/SectionDivider.astro';
 import Breadcrumb from '../components/Breadcrumb.astro';
 
 const pageTitle = "Riser Chart — Drag-and-Drop Riser Placement for Chorus Directors";
-const pageDescription = "Visual riser placement tool built by a chorus director. Drag-and-drop singers, color-coded voice parts, unlimited formations, branded exports. $99 one-time, no subscription.";
+const pageDescription = "Visual riser placement tool built by a chorus director. Drag-and-drop singers, color-coded voice parts (up to 24), unlimited formations, singer photos, batch editing, branded exports. $99 one-time, no subscription.";
 const riserChartUrl = "https://riser.tedsvoiceacademy.com";
 ---
 
@@ -16,8 +16,9 @@ const riserChartUrl = "https://riser.tedsvoiceacademy.com";
       "name": "Riser Chart",
       "applicationCategory": "UtilitiesApplication",
       "operatingSystem": "Web browser",
-      "description": "Drag-and-drop riser placement tool for chorus directors. Color-coded voice parts, unlimited formations, CSV roster import, branded PNG/JPG/PDF exports. Built by a director with 40+ years of experience.",
+      "description": "Drag-and-drop riser placement tool for chorus directors. Up to 24 color-coded voice parts, 200+ singers, 10 rows with 40 spots each, singer photos, timbre/resonance rings, batch editing, groups, events, unlimited formations, CSV roster import, branded PNG/JPG/PDF exports. Built by a director with 40+ years of experience.",
       "url": "https://riser.tedsvoiceacademy.com",
+      "screenshot": "https://tedsvoiceacademy.com/images/riser-chart-screenshot.webp",
       "creator": {
         "@type": "Person",
         "name": "Ted Chamberlain",
@@ -28,7 +29,8 @@ const riserChartUrl = "https://riser.tedsvoiceacademy.com";
         "priceCurrency": "USD",
         "price": "99",
         "availability": "https://schema.org/InStock"
-      }
+      },
+      "featureList": "Drag-and-drop placement, Click-to-swap, Auto-place, Up to 24 custom voice parts, Singer photos, Timbre/resonance color rings, Batch edit multi-select, Groups and ensembles, Events, Unlimited formations, 3 layout styles, Up to 10 rows, Up to 40 spots per row, CSV import/export, JSON backup/restore, Branded PNG/JPG/PDF exports, Custom branding, Undo/redo, Keyboard shortcuts"
     })} />
     <script type="application/ld+json" set:html={JSON.stringify({
       "@context": "https://schema.org",
@@ -37,17 +39,17 @@ const riserChartUrl = "https://riser.tedsvoiceacademy.com";
         {
           "@type": "Question",
           "name": "How do I access Riser Chart?",
-          "acceptedAnswer": { "@type": "Answer", "text": "Riser Chart is a hosted web app — just open it in your browser. No software to install, no files to manage. After purchase, you receive an access code and activate with your email. Use the same code on any device." }
+          "acceptedAnswer": { "@type": "Answer", "text": "Riser Chart is a hosted web app — just open it in your browser at riser.tedsvoiceacademy.com. No software to install, no files to manage. After purchase, you receive an access code by email and activate with your email address. Use the same code on any device." }
         },
         {
           "@type": "Question",
           "name": "What voice part systems does Riser Chart support?",
-          "acceptedAnswer": { "@type": "Answer", "text": "Any voice part system you use. Define up to 12 custom voice parts with custom names and colors. Works for barbershop (Tenor, Lead, Baritone, Bass), SATB, show choir, a cappella — any ensemble structure. Sub-parts like Tenor 1 and Tenor 2 are supported with distinct color shading." }
+          "acceptedAnswer": { "@type": "Answer", "text": "Any voice part system you use. Define up to 24 custom voice parts with custom names and colors. Works for barbershop (Tenor, Lead, Baritone, Bass), SATB, show choir, a cappella — any ensemble structure. Sub-parts like Soprano 1 and Soprano 2 are supported." }
         },
         {
           "@type": "Question",
           "name": "Is my data stored in the cloud?",
-          "acceptedAnswer": { "@type": "Answer", "text": "No. All your chorus data — singers, formations, branding — is stored locally on your device and is never transmitted to external servers. This is a deliberate privacy feature. You can back up your entire project as a JSON file and restore it on any device." }
+          "acceptedAnswer": { "@type": "Answer", "text": "No. All your chorus data — singers, formations, photos, branding — is stored locally on your device and is never transmitted to external servers. This is a deliberate privacy feature. You can back up your entire project as a JSON file and restore it on any device." }
         },
         {
           "@type": "Question",
@@ -62,7 +64,17 @@ const riserChartUrl = "https://riser.tedsvoiceacademy.com";
         {
           "@type": "Question",
           "name": "How many singers can it handle?",
-          "acceptedAnswer": { "@type": "Answer", "text": "Riser Chart handles rosters of 150+ singers smoothly. You can have unlimited formations, each with its own riser configuration and placements." }
+          "acceptedAnswer": { "@type": "Answer", "text": "Riser Chart has been tested with 200+ singers and handles large ensembles smoothly. You can have unlimited formations, each with its own riser configuration and placements." }
+        },
+        {
+          "@type": "Question",
+          "name": "Does Riser Chart work on my phone or tablet?",
+          "acceptedAnswer": { "@type": "Answer", "text": "Riser Chart is designed for desktop and laptop computers. The drag-and-drop interface works best with a mouse or trackpad. It may display on tablets, but the full experience requires a desktop browser." }
+        },
+        {
+          "@type": "Question",
+          "name": "Can I import my roster from a spreadsheet?",
+          "acceptedAnswer": { "@type": "Answer", "text": "Yes. Export your roster from Excel or Google Sheets as a CSV file, then use Roster > Import CSV. Download the CSV Template for the correct column format. Groups, voice parts, timbre ratings, height, and notes are all supported." }
         }
       ]
     })} />
@@ -80,11 +92,12 @@ const riserChartUrl = "https://riser.tedsvoiceacademy.com";
   <section class="hero">
     <div class="container reveal">
       <Breadcrumb items={[{ label: 'Riser Chart' }]} schema={false} />
+      <img src="/images/riser-chart-logo.webp" alt="Riser Chart logo" class="hero-logo" width="120" height="120" />
       <span class="hero-eyebrow">Riser Chart</span>
       <h1>Drag-and-drop riser placement for chorus directors</h1>
       <p class="hero-body">Built by a director who spent 40 years trying sticky notes, magnets, PowerPoint, and foam boards. Riser Chart does what all of those couldn't — let you arrange singers visually, see voice parts at a glance, and print a clean chart in seconds.</p>
       <div class="hero-ctas">
-        <a href={riserChartUrl} class="cta-button primary" target="_blank" rel="noopener noreferrer">Get Access</a>
+        <a href={riserChartUrl} class="cta-button primary" target="_blank" rel="noopener noreferrer">Get Access — $99</a>
         <a href="#features" class="cta-button secondary">See Features ↓</a>
       </div>
     </div>
@@ -95,20 +108,37 @@ const riserChartUrl = "https://riser.tedsvoiceacademy.com";
   <!-- Answer Capsule -->
   <section class="capsule-section">
     <div class="container">
-      <p class="answer-capsule">Riser Chart is a browser-based riser placement tool for chorus directors, created by Ted Chamberlain. It features drag-and-drop singer placement, color-coded voice parts (up to 12 custom parts), three layout styles (straight, curved, grid), unlimited formations, CSV roster import, and branded PNG/JPG/PDF exports. One-time purchase of $99 with no subscription. Works in Chrome, Edge, Firefox, and Safari.</p>
-      <p class="page-date">Last updated: <time datetime="2026-02-22">February 22, 2026</time></p>
+      <p class="answer-capsule">Riser Chart is a browser-based riser placement tool for chorus directors, created by Ted Chamberlain. It features drag-and-drop singer placement, color-coded voice parts (up to 24 custom parts), singer photos with timbre/resonance visual rings, three layout styles (straight, curved, grid), up to 10 rows with 40 spots each, unlimited formations grouped by event, batch editing for large rosters, CSV roster import, and branded PNG/JPG/PDF exports. Handles 200+ singers. One-time purchase of $99 with no subscription. Works in Chrome, Edge, Firefox, and Safari.</p>
+      <p class="page-date">Last updated: <time datetime="2026-02-24">February 24, 2026</time></p>
+    </div>
+  </section>
+
+  <!-- Screenshot Showcase -->
+  <section class="screenshot-section">
+    <div class="container reveal">
+      <div class="screenshot-frame">
+        <img src="/images/riser-chart-screenshot.webp" alt="Riser Chart app showing 23 singers arranged on curved risers with color-coded voice parts, sidebar roster, and formation tabs" loading="lazy" decoding="async" width="1160" height="900" />
+      </div>
+      <p class="screenshot-caption">Curved riser layout with color-coded voice parts, sidebar roster, and formation tabs</p>
     </div>
   </section>
 
   <!-- Origin Story Section -->
   <section class="story-section">
-    <div class="container container-narrow reveal">
-      <h2 class="decorated-heading">I've been directing since the 1980s. I tried everything.</h2>
-      <p class="drop-cap">If you're a chorus director, you know the drill. You've got a show coming up, singers have moved around, new members joined, and you need to figure out who stands where on those risers. Again.</p>
-      <p>I spent decades looking for a good way to handle this. <strong>Seating chart tools?</strong> Made for classrooms, not risers. <strong>PowerPoint?</strong> Life is too short to drag little text boxes around slides. <strong>Cookie sheets with magnets?</strong> Worked okay — until someone bumped the table.</p>
-      <p><strong>Sticky notes on poster board?</strong> The sticky wore off, coffee spilled, notes stuck to someone's sleeve, and the giant board took up half my office. <strong>Velcro names on foam board?</strong> Took forever to set up, and moving people was still more hassle than it was worth.</p>
-      <blockquote class="pull-quote">After years of settling, I finally said: it's time to build my own.</blockquote>
-      <p>I designed Riser Chart for the way I actually work — drag a singer onto a spot, see voice parts at a glance, try a different arrangement in seconds, print a clean chart for the risers. No learning curve. No monthly fees eating away at your chorus budget.</p>
+    <div class="container reveal">
+      <div class="story-grid">
+        <div class="story-image">
+          <img src="/images/riser-chart-frustrated-director.webp" alt="Frustrated chorus director surrounded by sticky notes, magnets, and paper charts on a cluttered desk" loading="lazy" decoding="async" width="600" height="600" />
+        </div>
+        <div class="story-text">
+          <h2 class="decorated-heading decorated-heading--left">I've been directing since the 1980s. I tried everything.</h2>
+          <p class="drop-cap">If you're a chorus director, you know the drill. You've got a show coming up, singers have moved around, new members joined, and you need to figure out who stands where on those risers. Again.</p>
+          <p>I spent decades looking for a good way to handle this. <strong>Seating chart tools?</strong> Made for classrooms, not risers. <strong>PowerPoint?</strong> Life is too short to drag little text boxes around slides. <strong>Cookie sheets with magnets?</strong> Worked okay — until someone bumped the table.</p>
+          <p><strong>Sticky notes on poster board?</strong> The sticky wore off, coffee spilled, notes stuck to someone's sleeve, and the giant board took up half my office. <strong>Velcro names on foam board?</strong> Took forever to set up, and moving people was still more hassle than it was worth.</p>
+          <blockquote class="pull-quote">After years of settling, I finally said: it's time to build my own.</blockquote>
+          <p>I designed Riser Chart for the way I actually work — drag a singer onto a spot, see voice parts at a glance, try a different arrangement in seconds, print a clean chart for the risers. No learning curve. No monthly fees eating away at your chorus budget.</p>
+        </div>
+      </div>
     </div>
   </section>
 
@@ -118,7 +148,7 @@ const riserChartUrl = "https://riser.tedsvoiceacademy.com";
   <section id="features" class="features-section">
     <div class="container">
       <h2 class="decorated-heading decorated-heading--light reveal">What's inside</h2>
-      <p class="section-intro reveal">Six core capabilities that make riser placement fast, visual, and frustration-free.</p>
+      <p class="section-intro reveal">Nine core capabilities that make riser placement fast, visual, and frustration-free.</p>
 
       <div class="features-grid reveal-stagger">
         <div class="feature-card reveal">
@@ -130,7 +160,7 @@ const riserChartUrl = "https://riser.tedsvoiceacademy.com";
             </svg>
           </div>
           <h3>Drag-and-Drop Placement</h3>
-          <p>Grab a singer from the sidebar and drop them onto any riser spot. Move them around by dragging on the canvas. Click to place, Delete key to remove. Auto-placement fills all spots by voice part in one click.</p>
+          <p>Grab a singer from the sidebar and drop them onto any riser spot. Click to place, click-to-swap two singers instantly, or Auto-Place to fill all spots by voice part in one click. Undo and redo with Ctrl+Z (up to 20 steps).</p>
         </div>
 
         <div class="feature-card reveal">
@@ -144,8 +174,8 @@ const riserChartUrl = "https://riser.tedsvoiceacademy.com";
               <line x1="18" y1="12" x2="22" y2="12"/>
             </svg>
           </div>
-          <h3>Color-Coded Voice Parts</h3>
-          <p>Define up to 12 custom voice parts with custom names and colors. Works for barbershop, SATB, show choir, a cappella — any structure. Voice part colors appear everywhere: canvas, sidebar, filters, and legend.</p>
+          <h3>Up to 24 Custom Voice Parts</h3>
+          <p>Define up to 24 voice parts with custom names and colors. Works for barbershop, SATB, show choir, a cappella — any structure. Sub-parts like Soprano 1 and Soprano 2 are supported. Voice part colors appear on the canvas, sidebar, filters, and exports.</p>
         </div>
 
         <div class="feature-card reveal">
@@ -157,8 +187,19 @@ const riserChartUrl = "https://riser.tedsvoiceacademy.com";
               <rect x="14" y="14" width="7" height="7"/>
             </svg>
           </div>
-          <h3>3 Layout Styles</h3>
-          <p>Straight rows, curved arcs, or rectangular grid — match your actual physical setup. Configure 0–4 elevated levels plus a floor row, with each row independently adjustable from 2 to 20 spots.</p>
+          <h3>3 Layout Styles, 10 Rows</h3>
+          <p>Straight rows, curved arcs, or rectangular grid — match your actual physical setup. Up to 10 rows (floor plus 9 levels), with each row independently adjustable from 1 to 40 spots. The canvas scales automatically.</p>
+        </div>
+
+        <div class="feature-card reveal">
+          <div class="feature-icon">
+            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true">
+              <circle cx="12" cy="8" r="5"/>
+              <path d="M3 21v-2a7 7 0 0 1 7-7h4a7 7 0 0 1 7 7v2"/>
+            </svg>
+          </div>
+          <h3>Singer Photos &amp; Timbre Rings</h3>
+          <p>Upload headshots that display inside singer circles on the canvas. Each singer gets a timbre/resonance rating (1–10) shown as a color ring — warm yellow to cool purple — so you can see vocal blend at a glance.</p>
         </div>
 
         <div class="feature-card reveal">
@@ -170,8 +211,21 @@ const riserChartUrl = "https://riser.tedsvoiceacademy.com";
               <line x1="9" y1="16" x2="13" y2="16"/>
             </svg>
           </div>
-          <h3>Unlimited Formations</h3>
-          <p>Create as many named arrangements as you need — competition, holiday show, rehearsal, experiments. Each formation keeps its own riser configuration and placements. Switch between them in one click.</p>
+          <h3>Unlimited Formations &amp; Events</h3>
+          <p>Create as many formations as you need — competition, holiday show, section rehearsal, experiments. Group formations by event (e.g., "Spring Concert"). Each formation keeps its own layout, placements, and group filter. Switch in one click.</p>
+        </div>
+
+        <div class="feature-card reveal">
+          <div class="feature-icon">
+            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true">
+              <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/>
+              <circle cx="9" cy="7" r="4"/>
+              <path d="M23 21v-2a4 4 0 0 0-3-3.87"/>
+              <path d="M16 3.13a4 4 0 0 1 0 7.75"/>
+            </svg>
+          </div>
+          <h3>Groups &amp; Batch Editing</h3>
+          <p>Tag singers with multiple group memberships (Concert Choir, Jazz Ensemble, Chamber Singers). Filter formations by group. Ctrl+Click to select multiple singers, then change voice parts, timbre, or groups for all of them at once.</p>
         </div>
 
         <div class="feature-card reveal">
@@ -184,7 +238,7 @@ const riserChartUrl = "https://riser.tedsvoiceacademy.com";
             </svg>
           </div>
           <h3>Branded Exports</h3>
-          <p>Export as PNG, JPG, or PDF — all in high resolution with your chorus name, logo, and formation title. Print-ready charts for posting at rehearsal, emailing section leaders, or filing in your director binder.</p>
+          <p>Export as PNG, JPG, or PDF — all at full native resolution with your chorus name, logo, accent color, and voice part colors. Brand-tinted riser platforms use shades of your accent color. Print, email, or project during rehearsal.</p>
         </div>
 
         <div class="feature-card reveal">
@@ -195,8 +249,21 @@ const riserChartUrl = "https://riser.tedsvoiceacademy.com";
               <line x1="12" y1="3" x2="12" y2="15"/>
             </svg>
           </div>
-          <h3>CSV Roster Import</h3>
-          <p>Drag and drop a CSV file to import your entire roster in seconds. Flexible column matching handles various header names and voice part abbreviations. Singer photos, timbre ratings, height, and notes all supported.</p>
+          <h3>CSV Import &amp; JSON Backup</h3>
+          <p>Import your entire roster from a CSV spreadsheet in seconds — with a downloadable template and sample roster to get started. Back up everything as a JSON file and restore it on any device.</p>
+        </div>
+
+        <div class="feature-card reveal">
+          <div class="feature-icon">
+            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true">
+              <rect x="2" y="3" width="20" height="14" rx="2" ry="2"/>
+              <path d="M12 17v4"/>
+              <path d="M8 21h8"/>
+              <path d="M6 8h.01M10 8h.01"/>
+            </svg>
+          </div>
+          <h3>Full Brand Customization</h3>
+          <p>Custom accent color tints headers, buttons, selection rings, and riser platforms. Upload your logo, set a custom favicon, choose a B&amp;W logo for print. Header text auto-adjusts for contrast. Your chorus, your look.</p>
         </div>
       </div>
     </div>
@@ -212,30 +279,63 @@ const riserChartUrl = "https://riser.tedsvoiceacademy.com";
         <div class="step reveal">
           <span class="step-number">1</span>
           <div class="step-content">
-            <h3>Run the setup wizard</h3>
-            <p>Enter your chorus name, configure voice parts with custom colors, choose your brand accent color, and upload your logo. You're arranging singers within minutes.</p>
+            <h3>Purchase and activate</h3>
+            <p>Visit riser.tedsvoiceacademy.com, purchase through secure Stripe checkout, and receive your access code by email. Enter the code and your email to unlock the app.</p>
           </div>
         </div>
         <div class="step reveal">
           <span class="step-number">2</span>
           <div class="step-content">
-            <h3>Import your roster</h3>
-            <p>Drop in a CSV file or add singers one by one. Each singer gets a profile with voice part, sub-part, timbre rating, height, photo, and notes.</p>
+            <h3>Run the setup wizard</h3>
+            <p>A guided 4-step wizard walks you through naming your chorus, configuring up to 24 voice parts with custom colors, choosing your brand accent color, and uploading your logo.</p>
           </div>
         </div>
         <div class="step reveal">
           <span class="step-number">3</span>
           <div class="step-content">
-            <h3>Drag singers onto the risers</h3>
-            <p>Pick a layout style, set your rows and spots, then drag singers from the sidebar onto the canvas. Use auto-placement to fill spots by voice part in one click, then fine-tune.</p>
+            <h3>Build your roster</h3>
+            <p>Import from a CSV spreadsheet or add singers one by one. Each singer gets a profile with voice part, sub-part, timbre rating, height, photo, group memberships, and notes.</p>
           </div>
         </div>
         <div class="step reveal">
           <span class="step-number">4</span>
           <div class="step-content">
-            <h3>Export and print</h3>
-            <p>Export branded charts as PNG, JPG, or PDF. Post them at rehearsal, email them to section leaders, or file them in your binder. Create new formations for the next event and start again.</p>
+            <h3>Arrange and export</h3>
+            <p>Pick a layout style, set your rows and spots, then drag singers onto the canvas. Create multiple formations for different songs or events. Export branded charts as PNG, JPG, or PDF.</p>
           </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Who Uses It Section -->
+  <section class="audience-section">
+    <div class="container">
+      <h2 class="decorated-heading reveal">Built for anyone who arranges singers</h2>
+      <div class="audience-grid reveal-stagger">
+        <div class="audience-card reveal">
+          <h3>Chorus directors</h3>
+          <p>Concert formations for ensembles of any size, from 8 to 200+ singers across 10 rows.</p>
+        </div>
+        <div class="audience-card reveal">
+          <h3>Worship leaders</h3>
+          <p>Arrange choir or praise team positions on stage quickly and visually.</p>
+        </div>
+        <div class="audience-card reveal">
+          <h3>Show choir directors</h3>
+          <p>Plan choreography staging and multiple formation changes per show.</p>
+        </div>
+        <div class="audience-card reveal">
+          <h3>Music educators</h3>
+          <p>Teach ensemble arrangement and vocal blend with a tool students can see.</p>
+        </div>
+        <div class="audience-card reveal">
+          <h3>A cappella groups</h3>
+          <p>Organize small-group formations with full voice part and timbre control.</p>
+        </div>
+        <div class="audience-card reveal">
+          <h3>Community choirs</h3>
+          <p>Manage large, rotating rosters with CSV import, groups, and batch editing.</p>
         </div>
       </div>
     </div>
@@ -249,14 +349,15 @@ const riserChartUrl = "https://riser.tedsvoiceacademy.com";
         <div class="price-display">$99</div>
         <p class="price-label">One-time purchase</p>
         <ul class="price-includes">
-          <li>Full access to all features</li>
+          <li>Full access to every feature — nothing held back</li>
           <li>Automatic updates — always the latest version</li>
           <li>Use on any device with your access code</li>
-          <li>JSON backup and restore</li>
+          <li>200+ singers, 10 rows, 24 voice parts, unlimited formations</li>
+          <li>JSON backup and restore across devices</li>
           <li>Email support included</li>
         </ul>
         <a href={riserChartUrl} class="pricing-cta" target="_blank" rel="noopener noreferrer">Get Access</a>
-        <p class="pricing-note">No downloads. No installation. No recurring fees.</p>
+        <p class="pricing-note">No downloads. No installation. No recurring fees. Coupon codes available.</p>
       </div>
     </div>
   </section>
@@ -270,17 +371,17 @@ const riserChartUrl = "https://riser.tedsvoiceacademy.com";
 
       <details class="faq-item reveal">
         <summary>How do I access Riser Chart?</summary>
-        <p>Riser Chart is a hosted web app — just open it in your browser. No software to install, no files to manage. After purchase, you receive an access code and activate with your email. Use the same code on any device.</p>
+        <p>Riser Chart is a hosted web app — just open it in your browser at riser.tedsvoiceacademy.com. No software to install, no files to manage. After purchase, you receive an access code by email and activate with your email address. Use the same code on any device.</p>
       </details>
 
       <details class="faq-item reveal">
         <summary>What voice part systems does it support?</summary>
-        <p>Any voice part system you use. Define up to 12 custom voice parts with custom names and colors. Works for barbershop (Tenor, Lead, Baritone, Bass), SATB, show choir, a cappella — any ensemble structure. Sub-parts like Tenor 1 and Tenor 2 are supported with distinct color shading.</p>
+        <p>Any voice part system you use. Define up to 24 custom voice parts with custom names and colors. Works for barbershop (Tenor, Lead, Baritone, Bass), SATB, show choir, a cappella — any ensemble structure. Sub-parts like Soprano 1 and Soprano 2 are supported.</p>
       </details>
 
       <details class="faq-item reveal">
         <summary>Is my data stored in the cloud?</summary>
-        <p>No. All your chorus data — singers, formations, branding — is stored locally on your device and is never transmitted to external servers. This is a deliberate privacy feature. You can back up your entire project as a JSON file and restore it on any device.</p>
+        <p>No. All your chorus data — singers, formations, photos, branding — is stored locally on your device and is never transmitted to external servers. This is a deliberate privacy feature. You can back up your entire project as a JSON file and restore it on any device.</p>
       </details>
 
       <details class="faq-item reveal">
@@ -295,7 +396,17 @@ const riserChartUrl = "https://riser.tedsvoiceacademy.com";
 
       <details class="faq-item reveal">
         <summary>How many singers can it handle?</summary>
-        <p>Riser Chart handles rosters of 150+ singers smoothly. You can have unlimited formations, each with its own riser configuration and placements.</p>
+        <p>Riser Chart has been tested with 200+ singers and handles large ensembles smoothly. You can have unlimited formations, each with its own riser configuration and placements.</p>
+      </details>
+
+      <details class="faq-item reveal">
+        <summary>Does it work on my phone or tablet?</summary>
+        <p>Riser Chart is designed for desktop and laptop computers. The drag-and-drop interface works best with a mouse or trackpad. While it may display on tablets, the full experience requires a desktop browser (Chrome, Firefox, Safari, or Edge).</p>
+      </details>
+
+      <details class="faq-item reveal">
+        <summary>Can I import my roster from a spreadsheet?</summary>
+        <p>Yes. Export your roster from Excel or Google Sheets as a CSV file, then use Roster > Import CSV. Download the CSV Template for the correct column format. Voice parts, groups, timbre ratings, height, and notes are all supported. Groups are auto-created if they don't already exist.</p>
       </details>
     </div>
   </section>
@@ -305,8 +416,8 @@ const riserChartUrl = "https://riser.tedsvoiceacademy.com";
     <div class="container reveal">
       <h2>Ready to stop fighting with sticky notes?</h2>
       <p>Riser Chart gives you the visual, drag-and-drop riser placement tool that directors have been wishing for. Built from four decades of directing experience — and available for less than the cost of one rehearsal rental.</p>
-      <a href={riserChartUrl} class="cta-button primary" target="_blank" rel="noopener noreferrer">Get Access</a>
-      <p class="contact-line">Questions? Email <a href="mailto:ted@tedsvoiceacademy.com">ted@tedsvoiceacademy.com</a> · <a href="/shop">Browse all products</a></p>
+      <a href={riserChartUrl} class="cta-button primary" target="_blank" rel="noopener noreferrer">Get Access — $99</a>
+      <p class="contact-line">Questions? Email <a href="mailto:support@tedsvoiceacademy.com">support@tedsvoiceacademy.com</a> · <a href="/shop/">Browse all products</a></p>
     </div>
   </section>
 </Layout>
@@ -327,6 +438,13 @@ const riserChartUrl = "https://riser.tedsvoiceacademy.com";
   .hero .container {
     max-width: 800px;
     margin: 0 auto;
+  }
+
+  .hero-logo {
+    display: block;
+    margin: 0 auto 1.25rem;
+    width: 120px;
+    height: auto;
   }
 
   .hero-eyebrow {
@@ -440,14 +558,63 @@ const riserChartUrl = "https://riser.tedsvoiceacademy.com";
     margin: 0.5rem auto 0;
   }
 
+  /* Screenshot Section */
+  .screenshot-section {
+    background: var(--color-off-white);
+    padding: 2.5rem 2rem 1rem;
+    text-align: center;
+  }
+
+  .screenshot-frame {
+    max-width: 960px;
+    margin: 0 auto;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 8px 40px rgba(10, 22, 40, 0.18), 0 2px 8px rgba(10, 22, 40, 0.08);
+    border: 1px solid rgba(10, 22, 40, 0.1);
+  }
+
+  .screenshot-frame img {
+    display: block;
+    width: 100%;
+    height: auto;
+  }
+
+  .screenshot-caption {
+    font-size: 0.9rem;
+    color: rgba(42, 42, 42, 0.6);
+    margin: 1rem auto 0;
+    font-style: italic;
+  }
+
   /* Story Section */
   .story-section {
     background: var(--color-off-white);
     padding: 4rem 2rem;
-    text-align: center;
   }
 
-  .story-section h2 {
+  .story-grid {
+    display: grid;
+    grid-template-columns: 1fr 1.5fr;
+    gap: 3rem;
+    align-items: start;
+    max-width: 1000px;
+    margin: 0 auto;
+  }
+
+  .story-image {
+    position: sticky;
+    top: 6rem;
+  }
+
+  .story-image img {
+    width: 100%;
+    height: auto;
+    border-radius: 12px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+  }
+
+  .story-text h2 {
     font-family: var(--font-heading);
     font-size: clamp(1.75rem, 3vw + 1rem, 2.5rem);
     font-weight: 700;
@@ -455,7 +622,7 @@ const riserChartUrl = "https://riser.tedsvoiceacademy.com";
     margin: 0 0 1.5rem;
   }
 
-  .story-section p {
+  .story-text p {
     font-size: 1.1rem;
     line-height: 1.8;
     color: var(--color-charcoal);
@@ -587,6 +754,57 @@ const riserChartUrl = "https://riser.tedsvoiceacademy.com";
     margin: 0;
   }
 
+  /* Audience Section */
+  .audience-section {
+    background: var(--color-off-white);
+    padding: 4rem 2rem;
+  }
+
+  .audience-section h2 {
+    font-family: var(--font-heading);
+    font-size: clamp(1.75rem, 3vw + 1rem, 2.5rem);
+    font-weight: 700;
+    color: var(--color-navy-deep);
+    text-align: center;
+    margin: 0 0 2.5rem;
+  }
+
+  .audience-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.5rem;
+    max-width: 900px;
+    margin: 0 auto;
+  }
+
+  .audience-card {
+    background: var(--color-white);
+    padding: 1.5rem;
+    border-radius: 10px;
+    border-left: 3px solid var(--color-gold-bright);
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
+    transition: transform 0.2s ease;
+  }
+
+  .audience-card:hover {
+    transform: translateY(-3px);
+  }
+
+  .audience-card h3 {
+    font-family: var(--font-heading);
+    font-size: 1.05rem;
+    font-weight: 700;
+    color: var(--color-navy-deep);
+    margin: 0 0 0.5rem;
+  }
+
+  .audience-card p {
+    font-size: 0.95rem;
+    line-height: 1.5;
+    color: var(--color-charcoal);
+    margin: 0;
+  }
+
   /* Pricing Section */
   .pricing-section {
     background: var(--color-white);
@@ -648,7 +866,7 @@ const riserChartUrl = "https://riser.tedsvoiceacademy.com";
   }
 
   .price-includes li::before {
-    content: "✓";
+    content: "\2713";
     position: absolute;
     left: 0;
     color: var(--color-gold-bright);
@@ -797,6 +1015,10 @@ const riserChartUrl = "https://riser.tedsvoiceacademy.com";
     .features-grid {
       grid-template-columns: repeat(2, 1fr);
     }
+
+    .audience-grid {
+      grid-template-columns: repeat(2, 1fr);
+    }
   }
 
   @media (max-width: 768px) {
@@ -808,9 +1030,25 @@ const riserChartUrl = "https://riser.tedsvoiceacademy.com";
       grid-template-columns: 1fr;
     }
 
+    .audience-grid {
+      grid-template-columns: 1fr;
+    }
+
+    .story-grid {
+      grid-template-columns: 1fr;
+      gap: 2rem;
+    }
+
+    .story-image {
+      position: static;
+      max-width: 400px;
+      margin: 0 auto;
+    }
+
     .story-section,
     .features-section,
     .how-section,
+    .audience-section,
     .pricing-section,
     .faq-section,
     .final-cta {
