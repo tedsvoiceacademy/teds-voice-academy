@@ -57,7 +57,7 @@ This applies to everything — quick fixes, visual changes, SEO tweaks, all of i
 - Includes Custom Channel Group setup instructions for AI referral tracking
 
 ### Handoff Doc Updates
-- Updated PROJECT_BACKLOG.md with e-commerce architecture notes (Vocal Fit vs Riser Placement App)
+- Updated PROJECT_BACKLOG.md with e-commerce architecture notes (Vocal Fit vs Riser Chart)
 - Updated HANDOFF_RESOURCE_INVENTORY.md with platform decisions
 
 ---
@@ -122,9 +122,9 @@ This applies to everything — quick fixes, visual changes, SEO tweaks, all of i
 ## What's Next
 
 ### Tier 1 — Next Priorities:
-- [ ] **CMS (Decap CMS)** — **Ted's #1 near-term priority.** He needs an easy way to add blog posts and modify site content independently. Critical enabler.
-- [ ] **E-Commerce for Vocal Fit** — Lemonsqueezy (or similar) needed for Vocal Fit MP3 bundle sales. Riser Placement App will NOT use Lemonsqueezy — it uses Stripe + Supabase + Netlify (same architecture as Intonation Lab) for better copy-protection.
-- [ ] **Riser Placement App page** — Product page needed (like Intonation Lab page)
+- [x] **CMS (Decap CMS)** — DONE. Code deployed (Session 12), Netlify activation complete (Identity, Git Gateway, user registered). Accessible at tedsvoiceacademy.com/admin/.
+- [ ] **E-Commerce for Vocal Fit** — Lemonsqueezy (or similar) needed for Vocal Fit MP3 bundle sales. Riser Chart will NOT use Lemonsqueezy — it uses Stripe + Supabase + Netlify (same architecture as Intonation Lab) for better copy-protection.
+- [x] **Riser Chart product page** — DONE. Live at `/riser-chart/`. App live at riser.tedsvoiceacademy.com.
 - [ ] **Review 41 untracked images** — Decide placement/removal with Ted (see Feb 16 session notes below)
 - [x] **Track AI referral traffic in GA4** — ✅ DONE (Session 15). Custom event tracking in BaseLayout.astro. Ted needs to create Custom Channel Group in GA4 Admin.
 - [x] **Audition Checklist lead magnet** — ✅ DONE (Session 15). Email-gated PDF download on Singing page.
@@ -135,8 +135,8 @@ This applies to everything — quick fixes, visual changes, SEO tweaks, all of i
 - [x] **Inventory session** — ✅ DONE (Feb 7). See `HANDOFF_RESOURCE_INVENTORY.md`.
 
 ### Tier 2:
-- [ ] **Per-page OG images** — Branded social sharing images for individual pages
-- [ ] **Related posts on blog pages** — Add related posts section to individual blog post pages
+- [x] **Per-page OG images** — DONE (Session 12). 14 branded OG images generated with sharp.
+- [x] **Related posts on blog pages** — DONE (Session 12). Scoring algorithm (categories 3x, tags 1x), top 3 related posts per blog post.
 - [ ] **Remaining hero images** — Workshops, Vocal Health, Pricing, Blog, FAQ, Contact still have text-only heroes. Ted has `Ted Quartet coach.png` and `studio lesson2.png` available for future use.
 
 ### Tier 3 — Visual Polish:
@@ -454,13 +454,8 @@ The images include original source photos (PNG/JPG), various WebP conversions, a
 - `src/content/config.ts` — Fixed author default ('Ted Lacey' → 'Ted Chamberlain')
 - `public/robots.txt` — Added Disallow for /admin/
 
-**REQUIRES NETLIFY DASHBOARD ACTIVATION:**
-1. Go to Netlify dashboard → Site Settings → Identity → Enable Identity
-2. Under Registration, set to "Invite only"
-3. Under Services → Git Gateway, click "Enable Git Gateway"
-4. Go to Identity tab → Invite users → Add ted@tedsvoiceacademy.com
-5. Ted clicks the invite link in his email, sets a password
-6. Ted can then access `https://tedsvoiceacademy.com/admin/` to manage blog posts
+**NETLIFY DASHBOARD ACTIVATION — DONE (Feb 24, 2026):**
+Identity enabled (invite-only), Git Gateway connected, ted@tedsvoiceacademy.com registered. CMS accessible at tedsvoiceacademy.com/admin/.
 
 **Git:**
 - 8 commits pushed to GitHub:
@@ -477,11 +472,31 @@ The images include original source photos (PNG/JPG), various WebP conversions, a
 ### What's Next
 
 **Immediate priorities:**
-- [ ] **Activate Decap CMS on Netlify** — Enable Identity + Git Gateway in Netlify dashboard (see steps above)
-- [ ] **E-Commerce for Vocal Fit** — Lemonsqueezy (or similar) needed for Vocal Fit MP3 sales. Riser Placement App uses Stripe/Supabase/Netlify instead (like Intonation Lab)
+- [x] **Activate Decap CMS on Netlify** — DONE (Feb 24). Identity, Git Gateway, user all confirmed active.
+- [ ] **E-Commerce for Vocal Fit** — Lemonsqueezy (or similar) needed for Vocal Fit MP3 sales. Riser Chart uses Stripe/Supabase/Netlify instead (like Intonation Lab)
 
 **Tier 2:**
 - [ ] Remaining hero images for text-only hero pages
-- [ ] Track AI referral traffic in GA4
+- [x] Track AI referral traffic in GA4 — DONE (Session 15). Custom `ai_referral` event in BaseLayout.astro.
 - [ ] Review collection system
 - [ ] NAP consistency audit
+
+---
+
+## Session: February 24, 2026 — Riser Chart Cloud Sync Update
+
+### Completed This Session
+- Updated Riser Chart product page for new Cloud Sync feature:
+  - Answer capsule: added Cloud Sync mention
+  - Feature card: renamed "CSV Import & JSON Backup" → "CSV Import, Backup & Cloud Sync"
+  - Schema featureList: added "Opt-in Cloud Sync"
+  - FAQ schema JSON-LD: updated "Is my data stored in the cloud?" and "Can I use Riser Chart on multiple devices?", added new "What if I don't want to use Cloud Sync?"
+  - Visible FAQ: same 3 updates as schema
+  - Pricing bullet: "JSON backup and restore" → "Opt-in Cloud Sync across devices (plus JSON backup/restore)"
+- Updated shop.astro Riser Chart product description with Cloud Sync mention
+- Updated public/llms.txt Riser Chart description with Cloud Sync and privacy caveat
+- Backlog and handoff docs updated to current state
+
+### Git
+- Commit: `31c9254` — Add Cloud Sync feature to Riser Chart product page, shop card, and llms.txt
+- Pushed to GitHub, Netlify deploy confirmed

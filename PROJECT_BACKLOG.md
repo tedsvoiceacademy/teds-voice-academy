@@ -59,7 +59,7 @@ Blog stays visible in nav (Ted's decision, Feb 5 session 8).
 - [x] **Import 24 scraped blog posts** — ✅ DONE (Feb 16). All 24 posts converted with proper frontmatter, categories, tags.
 - [x] **Blog SEO optimization** — ✅ DONE (Feb 16). Categories rebalanced, tags standardized, descriptions optimized 120-160 chars, local SEO terms added.
 - [x] **Blog landing interactive filtering** — ✅ DONE (Feb 16). Category cards filter posts with JS toggle, count badges, active states.
-- [x] **CMS for content updates** — DONE (Session 12). Decap CMS integrated. `public/admin/` with config.yml mapped to blog collection. Netlify Identity widget in BaseLayout. **Requires Netlify dashboard activation:** Enable Identity (invite-only), Enable Git Gateway, Invite ted@tedsvoiceacademy.com.
+- [x] **CMS for content updates** — DONE. Decap CMS integrated (Session 12) and Netlify activation complete (Identity enabled, Git Gateway connected, ted@tedsvoiceacademy.com registered). CMS accessible at tedsvoiceacademy.com/admin/.
 - [x] **BlogPosting schema** — DONE (Session 12). BlogPosting JSON-LD in BlogPostLayout.astro. Auto-applies to all 24 posts.
 
 **Blog content strategy from GEO/SEO research (12 prioritized topics):**
@@ -111,7 +111,7 @@ Ted explicitly said he wants to get to these as soon as possible. These need col
 - [x] **Iconography** — DONE (Session 14). 64 Lucide inline SVG icons across 10 pages. `.icon-inline` CSS utility in global.css.
 - [ ] **Hero parallax effect** — CSS-only parallax on hero photos. Disabled on mobile. Ted interested but deferred.
 - [x] **Varied section layouts** — DONE (Sessions 14c-15). Speaking: icon-emphasis cards + numbered step timeline. Workshops: session roadmap + checklist layout. Singing (Session 15): icon-emphasis cards + genre tile grid.
-- [ ] **Digital product delivery for Vocal Fit** — Gumroad or Lemonsqueezy for MP3 delivery. Ted confirmed (Feb 16) this will be a purchased product — needs e-commerce setup. See "Waiting on Ted > E-Commerce" section. (Note: Riser Placement App uses Stripe/Supabase/Netlify instead — see E-Commerce section.)
+- [ ] **Digital product delivery for Vocal Fit** — Gumroad or Lemonsqueezy for MP3 delivery. Ted confirmed (Feb 16) this will be a purchased product — needs e-commerce setup. See "Waiting on Ted > E-Commerce" section. (Note: Riser Chart uses Stripe/Supabase/Netlify instead — see E-Commerce section.)
 - [ ] **Members-only section** — Approach TBD.
 
 ---
@@ -219,7 +219,7 @@ All placeholder sections replaced with real content. Remaining work:
 
 ### E-Commerce / Digital Product Sales
 - [ ] **Vocal Fit e-commerce** — Needed for Vocal Fit MP3 bundle sales. Options: Gumroad, Lemonsqueezy, Shopify Lite, or Stripe direct. Ted needs to decide approach + pricing.
-- [ ] **Riser Placement App** — Will use **Stripe + Supabase + Netlify** (same architecture as Intonation Lab). NOT Lemonsqueezy. Being built in a separate chat. This approach provides better copy-protection via authenticated web app access rather than a self-contained download.
+- [x] **Riser Chart** — DONE. Live at riser.tedsvoiceacademy.com. Uses **Stripe + Supabase + Netlify** (same architecture as Intonation Lab). Product page at `/riser-chart/`. Cloud Sync feature added Feb 24, 2026.
 
 ### Other Content Needed
 - [x] **Organization logos/confirmation** — DONE (Session 10). Ted provided all logos. List confirmed and implemented.
@@ -306,7 +306,7 @@ All placeholder sections replaced with real content. Remaining work:
 - [x] **Blog interactive category filtering** — Category cards on blog landing page converted to JS-powered filter buttons with post counts, active states, filter indicator bar. (Feb 16, 2026)
 - [x] **Vocal Health page — all placeholders replaced** — Home Care (gargle recipes, tea tips), SOVT (exercises, routine, straw guide), Vocal Fit (product preview), Articles (6 blog links). Source content from Ted's PDFs + .docx files. (Feb 16, 2026)
 
-- [x] **Shop hub page** — New `/shop` page with 5 products (3 live, 2 coming-soon). Nav and footer updated. (Feb 21, 2026 — Session 12)
+- [x] **Shop hub page** — New `/shop` page with 5 products (4 live, 1 coming-soon). Nav and footer updated. (Feb 21, 2026 — Session 12)
 - [x] **Intonation Lab product page** — New `/intonation-lab` page with hero, features, pricing, FAQ. (Feb 21, 2026 — Session 12)
 - [x] **BlogPosting schema** — BlogPosting JSON-LD in BlogPostLayout.astro. Auto-applies to all 24 posts. (Feb 21, 2026 — Session 12)
 - [x] **Breadcrumb component + schema** — Breadcrumb.astro component with BreadcrumbList JSON-LD deployed on all 17 interior pages + 24 blog posts. (Feb 21, 2026 — Session 12)
@@ -323,6 +323,8 @@ All placeholder sections replaced with real content. Remaining work:
 - [x] **Lazy loading** — `loading="lazy" decoding="async"` on 27 below-fold images across 12 files. Hero images left eager for fast LCP. (Feb 21, 2026 — Session 12)
 - [x] **Performance optimizations** — Preconnect hints for GA + Netlify Identity, font preloading for Inter 400 + Playfair Display 700, sitemap filter excluding /success/. (Feb 21, 2026 — Session 12)
 
+- [x] **Riser Chart Cloud Sync update** — Updated product description, FAQ (schema + visible), feature card, pricing bullet, shop card, and llms.txt to reflect new opt-in Cloud Sync feature (Feb 24, 2026)
+
 ---
 
-*Last updated: February 21, 2026 (Session 12)*
+*Last updated: February 24, 2026*
