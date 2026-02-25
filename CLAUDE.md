@@ -2,7 +2,7 @@
 
 ## Project Overview
 
-You are continuing development on the Ted's Voice Academy (TVA) website — a professional voice coaching business run by Ted Chamberlain in Lacey, Washington. The site is **fully built (18 route pages + 24 blog posts = 42 pages)** and **live on Netlify**.
+You are continuing development on the Ted's Voice Academy (TVA) website — a professional voice coaching business run by Ted Chamberlain in Lacey, Washington. The site is **fully built (20 route pages + 24 blog posts = 44 pages)** and **live on Netlify**.
 
 **CRITICAL WORKFLOW RULE:** Do NOT implement changes without Ted's explicit approval. Present recommendations, discuss, get the green light, then implement. This applies to everything — quick fixes, visual changes, SEO tweaks, all of it.
 
@@ -312,10 +312,10 @@ In Footer.astro. Form name: `newsletter-footer`. Fields: email.
 **For the full project backlog, see `PROJECT_BACKLOG.md`.**
 
 ### Content Still Needed from Ted (for Vocal Health Hub)
-- [ ] Home Care & Remedies: gargle recipes, tea recommendations, lozenge guidance, supplement recommendations
-- [ ] SOVT Tools & Techniques: explanation of mechanics, recommended exercises with instructions, recommended tools
-- [ ] Vocal Fit: product descriptions, format details, pricing
-- [ ] Articles & Resources: featured articles, external resource links
+- [x] Home Care & Remedies — DONE (Feb 16, 2026)
+- [x] SOVT Tools & Techniques — DONE (Feb 16, 2026)
+- [x] Vocal Fit — Product preview live; e-commerce integration still needed
+- [x] Articles & Resources — DONE (Feb 16, 2026)
 
 ### Post-Launch / Phase 2
 - [x] Analytics setup — **GA4 live** (G-ZDX6WPT6CZ), **Google Search Console verified** (Feb 5, Session 9)
@@ -432,8 +432,9 @@ When nearing token limits (60-70% usage):
 | Feb 5, 2026 | Session 10 (Claude Code) | Image optimization (PNG→WebP, 84% reduction). Award photos on About page. Professional affiliations section (10 org logos). Ensemble logos on cards. Course + Service schema on 3 pages. PASS logo visibility fix. Card symmetry fix. Visual Polish Tier 1 (card hovers, gold accent lines, drop caps, pull quotes). Photos placed on 3 service pages. Visual Polish Tier 2 (grain textures initial, pull quotes on 6 pages). |
 | Feb 5, 2026 | Session 11 (Claude Code) | Grain texture overhaul: replaced broken SVG feTurbulence with real PNG noise texture baked into CSS backgrounds (soft-light blend). Applied to ALL dark sections on ALL 16 pages. Scroll-triggered reveal animations (IntersectionObserver + CSS) on all 16 pages. Hero entrance animations on Homepage, About, AVF, PASS. Credentials bar blending on homepage. |
 | Feb 21, 2026 | Session 12 (Claude Code) | Shop hub page (/shop) with 5 product cards + ItemList schema. Intonation Lab product page (/intonation-lab) with features, pricing, FAQ, SoftwareApplication schema. Nav/footer updated. Homepage ecosystem grid updated. BlogPosting JSON-LD on all 24 blog posts. Breadcrumb.astro component + BreadcrumbList schema on all 17 interior pages + 24 posts. Related posts algorithm on blog (categories 3x, tags 1x). 14 per-page OG images generated with sharp. llms.txt updated with new products + fixed PASS description. |
+| Feb 24, 2026 | Session (Claude Code) | Riser Chart Cloud Sync update: product description, FAQ (schema + visible), feature card, pricing bullet, shop card, and llms.txt updated for new opt-in Cloud Sync feature. Backlog and handoff docs cleaned up (stale items marked done, CMS activation confirmed complete, "Riser Placement App" renamed to "Riser Chart"). Added Riser Chart Q&A to site-wide FAQ page. Committed docs/ reference folder to Git. |
 
 ---
 
-*Last updated: February 21, 2026 (Session 12)*
+*Last updated: February 24, 2026*
 *Project started: January 2026*
