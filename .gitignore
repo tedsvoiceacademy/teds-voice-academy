@@ -2,4 +2,7 @@ node_modules/
 dist/
 .astro/
 .DS_Store
+.claude/
 nul
+ABOUTIntLab.md
+docs/images/
