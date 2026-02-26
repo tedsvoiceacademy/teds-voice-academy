@@ -2,10 +2,9 @@
 title: 'Auditions in Olympia, WA – 2025 Guide'
 description: 'A curated guide to choral and theater auditions in Olympia and Lacey, WA, with tips for nailing your audition from a local vocal coach.'
 pubDate: '2026-02-01'
-author: 'Ted Lacey'
-image:
-  url: '/images/blog/01-olympia-wa-audition-guide.webp'
-  alt: 'Infographic guide for auditions in Olympia WA featuring singers, choir, theater actors, and youth performers'
+author: 'Ted Chamberlain'
+heroImage: '/images/blog/01-olympia-wa-audition-guide.webp'
+heroImageAlt: 'Infographic guide for auditions in Olympia WA featuring singers, choir, theater actors, and youth performers'
 categories: ['Performance']
 tags: ['auditions', 'olympia wa', 'community theater', 'ensemble singing', 'performance tips']
 draft: false

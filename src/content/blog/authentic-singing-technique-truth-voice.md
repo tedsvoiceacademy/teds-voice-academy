@@ -2,10 +2,9 @@
 title: 'Singing with Authenticity: Technique, Truth & Voice'
 description: 'Explore three dimensions of authentic singing: technical foundation, artistic truth, and the true target voice where technique meets identity.'
 pubDate: '2025-10-01'
-author: 'Ted Lacey'
-image:
-  url: '/images/blog/05-authenticity.webp'
-  alt: 'Illustration representing authentic singing and vocal truth'
+author: 'Ted Chamberlain'
+heroImage: '/images/blog/05-authenticity.webp'
+heroImageAlt: 'Illustration representing authentic singing and vocal truth'
 categories: ['Technique', 'Performance']
 tags: ['authentic voice', 'vocal identity', 'singing technique', 'artistic expression', 'singing styles']
 draft: false

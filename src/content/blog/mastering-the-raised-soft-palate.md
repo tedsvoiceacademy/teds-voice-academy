@@ -2,10 +2,9 @@
 title: 'Mastering the Raised Soft Palate: Eliminate Nasality in Singing'
 description: 'How to lift and control the soft palate to eliminate nasality and unlock resonant, vibrant singing with practical exercises and tests.'
 pubDate: '2025-03-01'
-author: 'Ted Lacey'
-image:
-  url: '/images/blog/12-soft-palate-nasality.webp'
-  alt: 'Illustration of soft palate position and nasality in singing'
+author: 'Ted Chamberlain'
+heroImage: '/images/blog/12-soft-palate-nasality.webp'
+heroImageAlt: 'Illustration of soft palate position and nasality in singing'
 categories: ['Technique', 'Vocal Health']
 tags: ['soft palate', 'nasality', 'vocal resonance', 'singing technique', 'voice science']
 draft: false

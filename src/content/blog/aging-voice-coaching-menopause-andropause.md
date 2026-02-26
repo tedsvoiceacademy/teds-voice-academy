@@ -2,10 +2,9 @@
 title: "Aging, Hormones & the Voice: What Changes\u2014and How Vocal Coaching Helps"
 description: 'How menopause, andropause, and aging affect the voice, plus practical coaching strategies for maintaining vocal health and confidence at any age.'
 pubDate: '2025-12-01'
-author: 'Ted Lacey'
-image:
-  url: '/images/blog/03-aging-hormones-the-voice.webp'
-  alt: 'Illustration of aging and hormonal effects on the voice'
+author: 'Ted Chamberlain'
+heroImage: '/images/blog/03-aging-hormones-the-voice.webp'
+heroImageAlt: 'Illustration of aging and hormonal effects on the voice'
 categories: ['Vocal Health']
 tags: ['aging voice', 'menopause', 'andropause', 'vocal health', 'vocal coaching']
 draft: false

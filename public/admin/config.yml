@@ -26,12 +26,21 @@ collections:
         name: "title"
         widget: "string"
         required: true
+        hint: "Main headline. Keep under 60 characters for best SEO display."
+        pattern: ['.{1,80}', "Title should be under 80 characters"]
+
+      - label: "Subtitle"
+        name: "subtitle"
+        widget: "string"
+        required: false
+        hint: "Optional secondary headline displayed below the title (e.g., 'On Intrinsic Value, Singing Together, and What We've Forgotten')"
 
       - label: "Description"
         name: "description"
         widget: "text"
         required: true
-        hint: "1-2 sentence summary for search engines and social sharing (120-160 characters ideal)"
+        hint: "1-2 sentence summary for search engines and social sharing. Aim for 120-160 characters. This appears in Google results."
+        pattern: ['.{50,300}', "Description should be 50-300 characters. Ideal: 120-160."]
 
       - label: "Publish Date"
         name: "pubDate"
@@ -46,6 +55,7 @@ collections:
         date_format: "YYYY-MM-DD"
         time_format: false
         required: false
+        hint: "Only set this when making significant updates to an already-published post"
 
       - label: "Author"
         name: "author"
@@ -54,20 +64,16 @@ collections:
         required: true
 
       - label: "Featured Image"
-        name: "image"
-        widget: "object"
+        name: "heroImage"
+        widget: "image"
         required: false
-        fields:
-          - label: "Image"
-            name: "url"
-            widget: "image"
-            required: true
-            hint: "Upload or select an image for this post"
-          - label: "Alt Text"
-            name: "alt"
-            widget: "string"
-            required: true
-            hint: "Describe the image for accessibility (e.g., 'Ted coaching a student in the studio')"
+        hint: "Upload or select a featured image. Ideal size: 900x500px, WebP format. Appears at top of post and on blog cards."
+
+      - label: "Featured Image Alt Text"
+        name: "heroImageAlt"
+        widget: "string"
+        required: false
+        hint: "Describe the image for accessibility and SEO (e.g., 'Ted coaching a student in the studio'). Required if image is set."
 
       - label: "Categories"
         name: "categories"
@@ -80,21 +86,24 @@ collections:
           - "Performance"
           - "Mindset & Practice"
           - "For Professionals"
+          - "Music & Community"
         required: true
+        hint: "Select 1-2 categories. Categories determine related posts and blog filtering."
 
       - label: "Tags"
         name: "tags"
         widget: "list"
         required: false
-        hint: "Add tags one at a time (e.g., warm-ups, breathing, stage fright)"
+        hint: "Add 5-8 keyword tags for SEO and related posts (e.g., 'breath support', 'vocal warm-ups', 'stage fright'). Enter one at a time."
 
       - label: "Draft"
         name: "draft"
         widget: "boolean"
         default: false
         required: false
-        hint: "Draft posts are hidden from the live site"
+        hint: "Draft posts are hidden from the live site. Set to false to publish."
 
       - label: "Body"
         name: "body"
         widget: "markdown"
+        hint: "Use ## for section headings. Use > for blockquotes. Use [text](/page/) for internal links. Bold key phrases with **text**."

@@ -2,10 +2,9 @@
 title: "If You're Human, You're a Singer!"
 description: 'The biological, evolutionary, and neurological evidence that singing is hardwired into every human being—and why everyone can learn to sing.'
 pubDate: '2024-12-01'
-author: 'Ted Lacey'
-image:
-  url: '/images/blog/15-if-youre-human-youre-a-singer.webp'
-  alt: 'Diverse group of people singing together representing universal human singing'
+author: 'Ted Chamberlain'
+heroImage: '/images/blog/15-if-youre-human-youre-a-singer.webp'
+heroImageAlt: 'Diverse group of people singing together representing universal human singing'
 categories: ['Mindset & Practice']
 tags: ['singing for everyone', 'beginner singing', 'vocal development', 'singing lessons', 'vocal expression']
 draft: false

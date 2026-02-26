@@ -2,10 +2,9 @@
 title: 'Maximizing Vocal Practice: 3 Tools for Faster Singing Progress'
 description: 'How a mirror, audio recorder, and video recorder can accelerate your vocal development with objective feedback and self-assessment.'
 pubDate: '2025-02-01'
-author: 'Ted Lacey'
-image:
-  url: '/images/blog/13-maximizing-vocal-practice.webp'
-  alt: 'Illustration of vocal practice tools including mirror and recording devices'
+author: 'Ted Chamberlain'
+heroImage: '/images/blog/13-maximizing-vocal-practice.webp'
+heroImageAlt: 'Illustration of vocal practice tools including mirror and recording devices'
 categories: ['Mindset & Practice']
 tags: ['vocal practice', 'self-assessment', 'vocal development', 'singing improvement', 'practice habits']
 draft: false

@@ -2,10 +2,9 @@
 title: 'Debunking the One-Size-Fits-All Myth in Public Speaking'
 description: '20 aspects of your communication style that should be embraced rather than standardized, and why authenticity beats conformity in public speaking.'
 pubDate: '2024-11-01'
-author: 'Ted Lacey'
-image:
-  url: '/images/blog/16-diverse-speaking-montage.webp'
-  alt: 'Montage of diverse public speakers with different communication styles'
+author: 'Ted Chamberlain'
+heroImage: '/images/blog/16-diverse-speaking-montage.webp'
+heroImageAlt: 'Montage of diverse public speakers with different communication styles'
 categories: ['For Professionals']
 tags: ['public speaking', 'authentic voice', 'vocal coaching', 'PASS Profile', 'professional development']
 draft: false

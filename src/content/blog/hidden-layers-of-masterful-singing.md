@@ -2,10 +2,9 @@
 title: 'Masterful Singing: Technique, Emotion & Performance'
 description: 'Beyond technical skill—discover the hidden layers of masterful singing including emotional expression, vocal health, and the art of performance.'
 pubDate: '2024-04-01'
-author: 'Ted Lacey'
-image:
-  url: '/images/blog/23-hidden-layers-masterful-singing.webp'
-  alt: 'Layers of masterful singing from technique to emotional expression'
+author: 'Ted Chamberlain'
+heroImage: '/images/blog/23-hidden-layers-masterful-singing.webp'
+heroImageAlt: 'Layers of masterful singing from technique to emotional expression'
 categories: ['Performance', 'Mindset & Practice']
 tags: ['masterful singing', 'emotional expression', 'vocal health', 'singing technique', 'vocal development']
 draft: false

@@ -8,7 +8,7 @@ const allPosts = await getCollection('blog', ({ data }) => !data.draft);
 const posts = allPosts.sort((a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf());
 
 // Count posts per category
-const categoryNames = ['Vocal Health', 'Technique', 'Performance', 'Mindset & Practice', 'For Professionals'];
+const categoryNames = ['Vocal Health', 'Technique', 'Performance', 'Mindset & Practice', 'For Professionals', 'Music & Community'];
 const categoryCounts: Record<string, number> = {};
 categoryNames.forEach(cat => {
   categoryCounts[cat] = posts.filter(p => p.data.categories?.includes(cat)).length;
@@ -73,6 +73,10 @@ categoryNames.forEach(cat => {
           <h3><svg class="icon-inline" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M16 20V4a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"/><rect width="20" height="14" x="2" y="6" rx="2"/></svg>For Professionals <span class="category-count">{categoryCounts['For Professionals']}</span></h3>
           <p>Guidance for those building a career with their voice — teaching, industry insights, and communication in business contexts.</p>
         </button>
+        <button class="category-card reveal" data-filter="Music & Community" aria-label="Filter posts by Music and Community">
+          <h3><svg class="icon-inline" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 18V5l12-2v13"/><circle cx="6" cy="18" r="3"/><circle cx="18" cy="16" r="3"/></svg>Music &amp; Community <span class="category-count">{categoryCounts['Music & Community']}</span></h3>
+          <p>The bigger picture — why music matters, what singing together does for people, and the role of music in our communities.</p>
+        </button>
       </div>
     </div>
   </section>
@@ -90,9 +94,9 @@ categoryNames.forEach(cat => {
       <div class="posts-grid reveal-stagger" id="posts-grid">
         {posts.map((post) => (
           <a href={`/blog/${post.slug}`} class="post-card reveal" data-categories={JSON.stringify(post.data.categories || [])}>
-            {post.data.image && (
+            {post.data.heroImage && (
               <div class="post-card-image">
-                <img src={post.data.image.url} alt={post.data.image.alt} width="400" height="225" loading="lazy" decoding="async" />
+                <img src={post.data.heroImage} alt={post.data.heroImageAlt || ''} width="400" height="225" loading="lazy" decoding="async" />
               </div>
             )}
             <div class="post-card-body">

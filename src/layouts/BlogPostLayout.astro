@@ -6,27 +6,27 @@ interface RelatedPost {
   slug: string;
   title: string;
   description: string;
-  image?: { url: string; alt: string };
+  heroImage?: string;
+  heroImageAlt?: string;
   categories?: string[];
   pubDate: Date;
 }
 
 interface Props {
   title: string;
+  subtitle?: string;
   description: string;
   pubDate: Date;
   updatedDate?: Date;
   author: string;
-  image?: {
-    url: string;
-    alt: string;
-  };
+  heroImage?: string;
+  heroImageAlt?: string;
   categories?: string[];
   tags?: string[];
   relatedPosts?: RelatedPost[];
 }
 
-const { title, description, pubDate, updatedDate, author, image, categories = [], tags = [], relatedPosts = [] } = Astro.props;
+const { title, subtitle, description, pubDate, updatedDate, author, heroImage, heroImageAlt, categories = [], tags = [], relatedPosts = [] } = Astro.props;
 
 const formattedDate = pubDate.toLocaleDateString('en-US', {
   year: 'numeric',
@@ -45,7 +45,7 @@ const formattedUpdatedDate = updatedDate?.toLocaleDateString('en-US', {
   title={title}
   description={description}
   ogType="article"
-  ogImage={image?.url}
+  ogImage={heroImage}
 >
   <Fragment slot="head">
     <script type="application/ld+json" set:html={JSON.stringify({
@@ -68,7 +68,7 @@ const formattedUpdatedDate = updatedDate?.toLocaleDateString('en-US', {
       },
       "datePublished": pubDate.toISOString(),
       ...(updatedDate ? { "dateModified": updatedDate.toISOString() } : {}),
-      ...(image ? { "image": `https://tedsvoiceacademy.com${image.url}` } : {}),
+      ...(heroImage ? { "image": `https://tedsvoiceacademy.com${heroImage}` } : {}),
       "mainEntityOfPage": {
         "@type": "WebPage",
         "@id": Astro.url.href
@@ -114,15 +114,16 @@ const formattedUpdatedDate = updatedDate?.toLocaleDateString('en-US', {
           <time datetime={pubDate.toISOString()}>{formattedDate}</time>
         </div>
         <h1>{title}</h1>
+        {subtitle && <p class="post-subtitle">{subtitle}</p>}
         <p class="post-author">By {author}</p>
       </div>
     </header>
 
     <!-- Hero Image -->
-    {image && (
+    {heroImage && (
       <div class="post-hero-image">
         <div class="container">
-          <img src={image.url} alt={image.alt} width="900" height="500" loading="eager" />
+          <img src={heroImage} alt={heroImageAlt || ''} width="900" height="500" loading="eager" />
         </div>
       </div>
     )}
@@ -159,10 +160,10 @@ const formattedUpdatedDate = updatedDate?.toLocaleDateString('en-US', {
           <div class="related-grid reveal-stagger">
             {relatedPosts.map((related) => (
               <a href={`/blog/${related.slug}`} class="related-card reveal">
-                {related.image && (
+                {related.heroImage && (
                   <img
-                    src={related.image.url}
-                    alt={related.image.alt}
+                    src={related.heroImage}
+                    alt={related.heroImageAlt || ''}
                     width="400"
                     height="220"
                     loading="lazy"
@@ -257,6 +258,18 @@ const formattedUpdatedDate = updatedDate?.toLocaleDateString('en-US', {
     line-height: 1.2;
     margin: 0 0 0.75rem;
     max-width: 800px;
+  }
+
+  .post-subtitle {
+    font-family: var(--font-body);
+    font-size: clamp(1.0625rem, 2vw + 0.5rem, 1.25rem);
+    font-weight: 400;
+    font-style: italic;
+    color: var(--color-cream);
+    line-height: 1.5;
+    margin: 0 0 0.75rem;
+    max-width: 700px;
+    opacity: 0.9;
   }
 
   .post-author {

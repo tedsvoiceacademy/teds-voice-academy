@@ -2,10 +2,9 @@
 title: 'Morning Vocal Warm-Up for Singers | Clear Your Voice & Build Resonance'
 description: 'A step-by-step morning vocal warm-up routine with box breathing, humming, and targeted exercises to clear your throat and build resonance.'
 pubDate: '2024-06-01'
-author: 'Ted Lacey'
-image:
-  url: '/images/blog/21-early-morning-vocal-warm-up.webp'
-  alt: 'Singer doing a morning vocal warm-up routine'
+author: 'Ted Chamberlain'
+heroImage: '/images/blog/21-early-morning-vocal-warm-up.webp'
+heroImageAlt: 'Singer doing a morning vocal warm-up routine'
 categories: ['Vocal Health', 'Technique']
 tags: ['vocal warm-up', 'singing exercises', 'vocal health', 'humming exercises', 'breath support']
 draft: false

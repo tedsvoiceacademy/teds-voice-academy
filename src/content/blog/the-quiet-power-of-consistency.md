@@ -2,10 +2,9 @@
 title: 'The Quiet Power of Consistency: How Steady Practice Shapes the Voice'
 description: 'Why consistent vocal practice matters more than intensity, with strategies for building sustainable habits and overcoming common barriers.'
 pubDate: '2026-01-01'
-author: 'Ted Lacey'
-image:
-  url: '/images/blog/02-the-quiet-power-of-consistency.webp'
-  alt: 'Illustration representing the quiet power of consistent vocal practice'
+author: 'Ted Chamberlain'
+heroImage: '/images/blog/02-the-quiet-power-of-consistency.webp'
+heroImageAlt: 'Illustration representing the quiet power of consistent vocal practice'
 categories: ['Mindset & Practice']
 tags: ['practice habits', 'consistency', 'vocal development', 'singing improvement', 'habit building']
 draft: false

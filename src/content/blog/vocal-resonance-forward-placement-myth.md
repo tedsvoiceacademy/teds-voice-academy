@@ -2,10 +2,9 @@
 title: "'Forward' Is NOT Forward: Setting the Record Straight on Vocal Placement and Resonance"
 description: 'Why "forward placement" is a misleading concept in singing pedagogy, what vocal resonance really is, and better language for teaching singers.'
 pubDate: '2025-08-01'
-author: 'Ted Lacey'
-image:
-  url: '/images/blog/07-vocal-resonance-in-singing.webp'
-  alt: 'Illustration of vocal resonance concepts in singing'
+author: 'Ted Chamberlain'
+heroImage: '/images/blog/07-vocal-resonance-in-singing.webp'
+heroImageAlt: 'Illustration of vocal resonance concepts in singing'
 categories: ['Technique']
 tags: ['vocal resonance', 'forward placement', 'singing myths', 'voice science', 'singing technique']
 draft: false

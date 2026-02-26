@@ -2,10 +2,9 @@
 title: 'Your Voice Has a Journey: The 5 Stages Every Singer Experiences'
 description: 'From hesitant beginner to accomplished artist—discover the five stages of singing development and practical vocal coach tips for each stage.'
 pubDate: '2025-07-01'
-author: 'Ted Lacey'
-image:
-  url: '/images/blog/08-your-voice-has-a-journey.webp'
-  alt: "Illustration of the five stages of a singer's vocal journey"
+author: 'Ted Chamberlain'
+heroImage: '/images/blog/08-your-voice-has-a-journey.webp'
+heroImageAlt: "Illustration of the five stages of a singer's vocal journey"
 categories: ['Mindset & Practice']
 tags: ['vocal development', 'vocal journey', 'beginner singing', 'singing lessons', 'singing improvement']
 draft: false

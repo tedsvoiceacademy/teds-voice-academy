@@ -2,10 +2,9 @@
 title: 'Mastering the Art of Singing: A Guide to Classical, Musical Theater, and Contemporary Vocal Styles'
 description: 'Compare classical, musical theater, and contemporary singing styles—their techniques, health considerations, and what makes each unique.'
 pubDate: '2025-01-01'
-author: 'Ted Lacey'
-image:
-  url: '/images/blog/14-various-genres.webp'
-  alt: 'Illustration of various singing genres including classical, theater, and contemporary'
+author: 'Ted Chamberlain'
+heroImage: '/images/blog/14-various-genres.webp'
+heroImageAlt: 'Illustration of various singing genres including classical, theater, and contemporary'
 categories: ['Technique', 'Performance', 'Vocal Health']
 tags: ['singing styles', 'classical singing', 'musical theater', 'vocal coaching', 'vocal health']
 draft: false

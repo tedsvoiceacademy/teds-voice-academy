@@ -2,10 +2,9 @@
 title: 'Mastering Vocal Projection: Power, Clarity & Air Use Without Strain'
 description: 'Eight techniques for developing vocal projection and clarity—from posture and breath support to resonance and efficient air use—without straining.'
 pubDate: '2025-05-01'
-author: 'Ted Lacey'
-image:
-  url: '/images/blog/10-mastering-vocal-projection.webp'
-  alt: 'Illustration of vocal projection and clarity techniques'
+author: 'Ted Chamberlain'
+heroImage: '/images/blog/10-mastering-vocal-projection.webp'
+heroImageAlt: 'Illustration of vocal projection and clarity techniques'
 categories: ['Technique', 'Vocal Health']
 tags: ['vocal projection', 'vocal clarity', 'breath support', 'vocal resonance', 'vocal technique']
 draft: false

@@ -2,10 +2,9 @@
 title: 'Mastering Vocal Techniques: Tailor Your Singing Style for Artistic Freedom'
 description: 'Why one-size-fits-all vocal training stifles potential, and how mastering diverse techniques gives you the freedom to sing authentically in any style.'
 pubDate: '2024-09-01'
-author: 'Ted Lacey'
-image:
-  url: '/images/blog/18-diverse-styles.webp'
-  alt: 'Illustration of diverse singing styles and vocal techniques'
+author: 'Ted Chamberlain'
+heroImage: '/images/blog/18-diverse-styles.webp'
+heroImageAlt: 'Illustration of diverse singing styles and vocal techniques'
 categories: ['Technique']
 tags: ['vocal technique', 'singing styles', 'authentic voice', 'vocal coaching', 'artistic expression']
 draft: false

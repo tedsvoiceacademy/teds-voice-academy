@@ -2,10 +2,9 @@
 title: 'Breath Support for Singers: Myths, Essentials & Mastery'
 description: 'Debunking common breath support myths and explaining the real mechanics of alignment, compression, and airflow regulation for healthy singing.'
 pubDate: '2025-04-01'
-author: 'Ted Lacey'
-image:
-  url: '/images/blog/11-breath-support-singers.gif'
-  alt: 'Animated illustration of breath support mechanics for singers'
+author: 'Ted Chamberlain'
+heroImage: '/images/blog/11-breath-support-singers.gif'
+heroImageAlt: 'Animated illustration of breath support mechanics for singers'
 categories: ['Technique', 'Vocal Health']
 tags: ['breath support', 'singing myths', 'vocal compression', 'vocal technique', 'vocal health']
 draft: false

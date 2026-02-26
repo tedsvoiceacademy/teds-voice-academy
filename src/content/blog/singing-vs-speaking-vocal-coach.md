@@ -2,10 +2,9 @@
 title: 'Singing vs. Speaking: Why Vocal Coaches Help Both Performers and Professionals'
 description: 'How singing and speaking share the same vocal foundations but diverge in refinement, and why a singing-trained coach excels at both.'
 pubDate: '2025-09-01'
-author: 'Ted Lacey'
-image:
-  url: '/images/blog/06-singing-vs-speaking.webp'
-  alt: 'Comparison of singing and speaking vocal techniques'
+author: 'Ted Chamberlain'
+heroImage: '/images/blog/06-singing-vs-speaking.webp'
+heroImageAlt: 'Comparison of singing and speaking vocal techniques'
 categories: ['For Professionals', 'Technique']
 tags: ['singing vs speaking', 'vocal coaching', 'public speaking', 'vocal technique', 'professional development']
 draft: false

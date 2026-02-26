@@ -2,10 +2,9 @@
 title: 'Overcoming Public Speaking Fear: Build Confidence & Speak Authentically'
 description: 'How professional coaching and the PASS Profile help transform public speaking fear into confident, authentic communication.'
 pubDate: '2024-10-01'
-author: 'Ted Lacey'
-image:
-  url: '/images/blog/17-overcoming-public-speaking-fear.webp'
-  alt: 'Person overcoming fear of public speaking with confidence'
+author: 'Ted Chamberlain'
+heroImage: '/images/blog/17-overcoming-public-speaking-fear.webp'
+heroImageAlt: 'Person overcoming fear of public speaking with confidence'
 categories: ['For Professionals', 'Mindset & Practice']
 tags: ['public speaking', 'glossophobia', 'confidence', 'PASS Profile', 'vocal coaching']
 draft: false

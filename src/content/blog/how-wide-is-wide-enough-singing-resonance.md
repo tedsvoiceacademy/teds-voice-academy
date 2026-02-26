@@ -2,10 +2,9 @@
 title: 'How Wide Is Wide Enough? Singing, Resonance, and Vowel Shaping Explained'
 description: "Why \"open wider\" isn't the full answer for singing resonance, and how vowel shaping across the vocal tract creates richer, more efficient sound."
 pubDate: '2025-11-01'
-author: 'Ted Lacey'
-image:
-  url: '/images/blog/04-how-wide-is-wide-enough.webp'
-  alt: 'Illustration of vocal resonance and vowel shaping in singing'
+author: 'Ted Chamberlain'
+heroImage: '/images/blog/04-how-wide-is-wide-enough.webp'
+heroImageAlt: 'Illustration of vocal resonance and vowel shaping in singing'
 categories: ['Technique']
 tags: ['vocal resonance', 'vowel shaping', 'singing technique', 'vocal tract', 'voice science']
 draft: false

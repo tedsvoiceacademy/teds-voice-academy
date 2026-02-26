@@ -2,10 +2,9 @@
 title: 'Effective Vocal Coaching: Discover and Develop Your Voice'
 description: 'Why vocal coaching is essential for singers and speakers—from discovering your unique voice to mastering technique and building stage confidence.'
 pubDate: '2024-08-01'
-author: 'Ted Lacey'
-image:
-  url: '/images/blog/19-effective-vocal-coaching.webp'
-  alt: 'Vocal coach working with a student on voice development'
+author: 'Ted Chamberlain'
+heroImage: '/images/blog/19-effective-vocal-coaching.webp'
+heroImageAlt: 'Vocal coach working with a student on voice development'
 categories: ['For Professionals', 'Performance']
 tags: ['vocal coaching', 'vocal development', 'singing lessons', 'public speaking', 'professional development']
 draft: false

@@ -32,7 +32,8 @@ const relatedPosts = scored.map((s) => ({
   slug: s.post.slug,
   title: s.post.data.title,
   description: s.post.data.description,
-  image: s.post.data.image,
+  heroImage: s.post.data.heroImage,
+  heroImageAlt: s.post.data.heroImageAlt,
   categories: s.post.data.categories,
   pubDate: s.post.data.pubDate,
 }));
@@ -40,11 +41,13 @@ const relatedPosts = scored.map((s) => ({
 
 <BlogPostLayout
   title={post.data.title}
+  subtitle={post.data.subtitle}
   description={post.data.description}
   pubDate={post.data.pubDate}
   updatedDate={post.data.updatedDate}
   author={post.data.author}
-  image={post.data.image}
+  heroImage={post.data.heroImage}
+  heroImageAlt={post.data.heroImageAlt}
   categories={post.data.categories}
   tags={post.data.tags}
   relatedPosts={relatedPosts}

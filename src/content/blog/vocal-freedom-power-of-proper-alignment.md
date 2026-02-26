@@ -2,10 +2,9 @@
 title: 'Vocal Freedom: The Power of Proper Alignment in Singing'
 description: 'Practical imagery and exercises for grounding your stance, releasing tension, and aligning your body to support free, healthy vocal production.'
 pubDate: '2024-07-01'
-author: 'Ted Lacey'
-image:
-  url: '/images/blog/20-vocal-freedom-alignment.webp'
-  alt: 'Singer demonstrating proper body alignment for vocal freedom'
+author: 'Ted Chamberlain'
+heroImage: '/images/blog/20-vocal-freedom-alignment.webp'
+heroImageAlt: 'Singer demonstrating proper body alignment for vocal freedom'
 categories: ['Technique', 'Vocal Health']
 tags: ['body alignment', 'posture', 'vocal freedom', 'tension release', 'vocal health']
 draft: false
