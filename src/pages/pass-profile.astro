@@ -507,6 +507,60 @@ import Breadcrumb from '../components/Breadcrumb.astro';
     </div>
   </section>
 
+  <!-- Explore PASS Profile Section -->
+  <section class="explore-pass">
+    <div class="container">
+      <h2 class="reveal">Explore PASS Profile&#8482;</h2>
+      <p class="section-intro reveal">Dive deeper with these resources.</p>
+
+      <!-- Video embed -->
+      <div class="explore-video reveal">
+        <div class="video-wrapper">
+          <iframe src="https://www.youtube.com/embed/rH9rLxfveJ4"
+                  title="PASS Profile Explainer"
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                  allowfullscreen
+                  loading="lazy"></iframe>
+        </div>
+        <p class="video-caption">Watch: Discover Your Communication Fingerprint</p>
+      </div>
+
+      <!-- Infographic -->
+      <div class="explore-infographic reveal">
+        <a href="/images/pass-infographic.webp" target="_blank" rel="noopener">
+          <img src="/images/pass-infographic.webp"
+               alt="PASS Profile infographic — methodology, scoring, and three-product ecosystem overview"
+               loading="lazy" decoding="async" />
+        </a>
+        <p class="infographic-caption">PASS Profile at a glance — click to view full size</p>
+      </div>
+
+      <!-- Downloads row -->
+      <div class="explore-downloads reveal-stagger">
+        <a href="/resources/PASS-Profile-Overview.pdf" target="_blank" rel="noopener" class="download-card reveal">
+          <svg class="download-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
+            <polyline points="14 2 14 8 20 8"></polyline>
+            <line x1="16" y1="13" x2="8" y2="13"></line>
+            <line x1="16" y1="17" x2="8" y2="17"></line>
+            <polyline points="10 9 9 9 8 9"></polyline>
+          </svg>
+          <h3>Slide Deck Overview</h3>
+          <p>15-slide presentation covering the full PASS Profile methodology, products, and pricing.</p>
+        </a>
+        <a href="/resources/PASS-Profile-Info-Card.html" target="_blank" rel="noopener" class="download-card reveal">
+          <svg class="download-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+            <rect x="2" y="3" width="20" height="14" rx="2" ry="2"></rect>
+            <line x1="8" y1="21" x2="16" y2="21"></line>
+            <line x1="12" y1="17" x2="12" y2="21"></line>
+          </svg>
+          <h3>Printable Info Card</h3>
+          <p>Two-sided reference card — perfect for sharing with colleagues or printing for events.</p>
+        </a>
+      </div>
+    </div>
+  </section>
+
   <!-- PASS FAQ Section -->
   <section class="pass-faq">
     <div class="container">
@@ -1269,6 +1323,128 @@ import Breadcrumb from '../components/Breadcrumb.astro';
     text-decoration: underline;
   }
 
+  /* Explore PASS Profile Section */
+  .explore-pass {
+    background: var(--pass-light);
+    padding: 5rem 2rem;
+  }
+
+  .explore-pass h2 {
+    text-align: center;
+  }
+
+  .explore-pass .section-intro {
+    text-align: center;
+    max-width: 600px;
+    margin: 0 auto 3rem;
+  }
+
+  .explore-video {
+    margin-bottom: 3rem;
+  }
+
+  .video-wrapper {
+    position: relative;
+    padding-bottom: 56.25%;
+    height: 0;
+    overflow: hidden;
+    border-radius: 8px;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+  }
+
+  .video-wrapper iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: 0;
+  }
+
+  .video-caption {
+    font-size: 0.9375rem;
+    color: var(--color-charcoal);
+    text-align: center;
+    margin-top: 1rem;
+    opacity: 0.8;
+  }
+
+  .explore-infographic {
+    margin-bottom: 3rem;
+    text-align: center;
+  }
+
+  .explore-infographic a {
+    display: inline-block;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+
+  .explore-infographic a:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 30px rgba(0,0,0,0.15);
+  }
+
+  .explore-infographic img {
+    display: block;
+    max-width: 100%;
+    height: auto;
+  }
+
+  .infographic-caption {
+    font-size: 0.9375rem;
+    color: var(--color-charcoal);
+    text-align: center;
+    margin-top: 1rem;
+    opacity: 0.8;
+  }
+
+  .explore-downloads {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.5rem;
+  }
+
+  .download-card {
+    display: block;
+    background: var(--color-white);
+    padding: 2rem;
+    border-radius: 8px;
+    border-left: 4px solid var(--pass-accent);
+    box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+    text-decoration: none;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+
+  .download-card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 6px 20px rgba(0,0,0,0.12);
+  }
+
+  .download-icon {
+    width: 32px;
+    height: 32px;
+    color: var(--pass-accent);
+    margin-bottom: 1rem;
+  }
+
+  .download-card h3 {
+    font-family: var(--font-heading);
+    font-size: 1.125rem;
+    font-weight: 600;
+    color: var(--pass-primary);
+    margin-bottom: 0.5rem;
+  }
+
+  .download-card p {
+    font-size: 0.9375rem;
+    line-height: 1.6;
+    color: var(--color-charcoal);
+    margin: 0;
+  }
+
   /* PASS FAQ Section */
   .pass-faq {
     background: var(--pass-cream);
@@ -1534,6 +1710,10 @@ import Breadcrumb from '../components/Breadcrumb.astro';
     }
 
     .ecosystem-grid {
+      grid-template-columns: 1fr;
+    }
+
+    .explore-downloads {
       grid-template-columns: 1fr;
     }
 
