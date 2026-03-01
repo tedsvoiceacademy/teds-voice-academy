@@ -2,6 +2,7 @@
 import Layout from '../../layouts/BaseLayout.astro';
 import SectionDivider from '../../components/SectionDivider.astro';
 import Breadcrumb from '../../components/Breadcrumb.astro';
+import ShareButtons from '../../components/ShareButtons.astro';
 import { getCollection } from 'astro:content';
 
 const allPosts = await getCollection('blog', ({ data }) => !data.draft);
@@ -45,6 +46,9 @@ categoryNames.forEach(cat => {
       <p class="intro-text">I write about the voice because I find it endlessly fascinating — and because I believe everyone deserves access to good information about how their instrument works.</p>
       <p class="intro-text">These posts explore technique, health, performance, and the mindset behind vocal development. Some are deep dives. Some are quick tips. All of them come from four decades of teaching, performing, and learning alongside my students.</p>
       <p class="intro-text">Browse by topic below, or scroll through the latest posts.</p>
+      <div class="intro-share">
+        <ShareButtons url="https://tedsvoiceacademy.com/blog/" title="Voice Tips & Insights | TVA Blog" description="Practical advice for singers, speakers, and voice enthusiasts from a 40-year voice coaching veteran." />
+      </div>
     </div>
   </section>
 
@@ -356,8 +360,14 @@ categoryNames.forEach(cat => {
     margin-bottom: 1rem;
   }
 
-  .intro-text:last-child {
+  .intro-text:last-of-type {
     margin-bottom: 0;
+  }
+
+  .intro-share {
+    margin-top: 1.5rem;
+    padding-top: 1.5rem;
+    border-top: 1px solid var(--color-gray-light, #e0e0e0);
   }
 
   /* Categories Section */
