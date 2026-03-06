@@ -58,17 +58,10 @@ const formattedUpdatedDate = updatedDate?.toLocaleDateString('en-US', {
       "headline": title,
       "description": description,
       "author": {
-        "@type": "Person",
-        "name": author,
-        "url": "https://tedsvoiceacademy.com/about/"
+        "@id": "https://tedsvoiceacademy.com/#person"
       },
       "publisher": {
-        "@type": "Organization",
-        "name": "Ted's Voice Academy",
-        "logo": {
-          "@type": "ImageObject",
-          "url": "https://tedsvoiceacademy.com/images/tva-logo.webp"
-        }
+        "@id": "https://tedsvoiceacademy.com/#business"
       },
       "datePublished": pubDate.toISOString(),
       ...(updatedDate ? { "dateModified": updatedDate.toISOString() } : {}),
