@@ -82,6 +82,7 @@ const intlabUrl = "https://intlab.tedsvoiceacademy.com";
       <Breadcrumb items={[{ label: 'Intonation Lab' }]} schema={false} />
       <div class="hero-grid">
         <div class="hero-content">
+          <img src="/images/intonation-lab-logo.png" alt="Intonation Lab logo" class="hero-logo" width="360" height="360" />
           <span class="hero-eyebrow">Intonation Lab</span>
           <h1>Train your ear to sing in perfect tune</h1>
           <p class="hero-body">Pianos are tuned to a compromise. Voices don't have to be. Intonation Lab teaches your ear to hear and produce the pure intervals that make chords ring — using real-time pitch detection, AI coaching feedback, just intonation targets, and visual feedback you can see and feel.</p>
@@ -427,16 +428,29 @@ const intlabUrl = "https://intlab.tedsvoiceacademy.com";
   }
 
   /* Hero Screenshot */
+  .hero-logo {
+    display: block;
+    width: 360px;
+    max-width: 80%;
+    height: auto;
+    margin-bottom: 1.25rem;
+  }
+
   .hero-image {
     display: flex;
     justify-content: center;
+    overflow: hidden;
+    border-radius: 12px;
+    max-width: 560px;
   }
 
   .hero-screenshot {
-    width: 100%;
-    max-width: 560px;
+    width: 140%;
+    max-width: none;
     height: auto;
-    border-radius: 12px;
+    margin-left: -20%;
+    margin-top: -8%;
+    border-radius: 0;
     box-shadow: 0 8px 30px rgba(0, 0, 0, 0.3);
   }
 
