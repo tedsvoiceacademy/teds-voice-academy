@@ -4,7 +4,7 @@ import SectionDivider from '../components/SectionDivider.astro';
 import Breadcrumb from '../components/Breadcrumb.astro';
 
 const pageTitle = "Intonation Lab — Ear Training for Singers";
-const pageDescription = "Browser-based ear training tool with real-time pitch detection, just intonation targets, and visual feedback. 13 intervals, 7 chord types, 52-exercise curriculum. From $99.";
+const pageDescription = "Browser-based ear training tool with real-time pitch detection, just intonation targets, AI coaching feedback, and visual feedback. 29 intervals and chords, 52-exercise curriculum, free demo. From $99.";
 const intlabUrl = "https://intlab.tedsvoiceacademy.com";
 ---
 
@@ -16,7 +16,7 @@ const intlabUrl = "https://intlab.tedsvoiceacademy.com";
       "name": "Intonation Lab",
       "applicationCategory": "EducationalApplication",
       "operatingSystem": "Web browser",
-      "description": "Browser-based ear training tool for singers using real-time pitch detection, just intonation targets, and multiple visual feedback systems. Features 13 intervals, 7 chord types, 13 timbres, and a 52-exercise guided curriculum.",
+      "description": "Browser-based ear training tool for singers using real-time pitch detection, just intonation targets, AI coaching feedback, and multiple visual feedback systems. Features 29 intervals and chords, 13 timbres, a 52-exercise guided curriculum, recording and playback, drone mode, dark mode, and a free demo. Installable as a Progressive Web App.",
       "url": "https://intlab.tedsvoiceacademy.com",
       "creator": {
         "@type": "Person",
@@ -44,7 +44,7 @@ const intlabUrl = "https://intlab.tedsvoiceacademy.com";
         {
           "@type": "Question",
           "name": "Do I need special equipment to use Intonation Lab?",
-          "acceptedAnswer": { "@type": "Answer", "text": "Just a device with a microphone and a modern web browser. Intonation Lab works on desktop, tablet, and phone. No downloads or installation needed. A USB microphone or headset can improve accuracy, but built-in microphones work fine for most users." }
+          "acceptedAnswer": { "@type": "Answer", "text": "Just a device with a microphone and a modern web browser. Intonation Lab works on desktop, tablet, and phone — you can also install it as a Progressive Web App for an app-like experience. No downloads required. A USB microphone or headset can improve accuracy, but built-in microphones work fine for most users." }
         },
         {
           "@type": "Question",
@@ -54,17 +54,17 @@ const intlabUrl = "https://intlab.tedsvoiceacademy.com";
         {
           "@type": "Question",
           "name": "Can I use Intonation Lab on my phone?",
-          "acceptedAnswer": { "@type": "Answer", "text": "Yes. Intonation Lab runs in any modern browser on desktop, tablet, or phone. The responsive layout adapts automatically. Your settings and training progress are saved in your browser." }
+          "acceptedAnswer": { "@type": "Answer", "text": "Yes. Intonation Lab runs in any modern browser on desktop, tablet, or phone. The responsive layout adapts automatically. You can install it as a Progressive Web App for an app-like experience. Your settings and training progress are saved in your browser." }
         },
         {
           "@type": "Question",
           "name": "Is Intonation Lab only for advanced singers?",
-          "acceptedAnswer": { "@type": "Answer", "text": "Intonation Lab is designed for all levels. Beginners can start in Basic mode with a generous accuracy window of ±25 cents. The guided curriculum progresses gradually from easy intervals to harder ones. Advanced and expert sensitivity levels challenge even professional singers." }
+          "acceptedAnswer": { "@type": "Answer", "text": "Intonation Lab is designed for all levels. Beginners can start in Basic mode with a generous accuracy window of ±25 cents and an interactive onboarding tour. The guided curriculum progresses gradually from easy intervals to harder ones. Advanced and expert sensitivity levels challenge even professional singers." }
         },
         {
           "@type": "Question",
           "name": "How is Intonation Lab different from a regular tuner?",
-          "acceptedAnswer": { "@type": "Answer", "text": "Standard tuners tell you if a single note is sharp or flat relative to equal temperament. Intonation Lab understands musical context — it knows what interval or chord tone you're aiming for, calculates the exact just intonation target, and shows you through multiple visualizations how close you are. It trains your ear, not just your eyes." }
+          "acceptedAnswer": { "@type": "Answer", "text": "Standard tuners tell you if a single note is sharp or flat relative to equal temperament. Intonation Lab understands musical context — it knows what interval or chord tone you're aiming for, calculates the exact just intonation target, and shows you through multiple visualizations how close you are. It also provides AI coaching feedback, lets you record and review your sessions, and includes a JI vs ET comparison so you can hear the difference between tuning systems. It trains your ear, not just your eyes." }
         }
       ]
     })} />
@@ -86,10 +86,11 @@ const intlabUrl = "https://intlab.tedsvoiceacademy.com";
         <div class="hero-content">
           <span class="hero-eyebrow">Intonation Lab</span>
           <h1>Train your ear to sing in perfect tune</h1>
-          <p class="hero-body">Pianos are tuned to a compromise. Voices don't have to be. Intonation Lab teaches your ear to hear and produce the pure intervals that make chords ring — using real-time pitch detection, just intonation targets, and visual feedback you can see and feel.</p>
+          <p class="hero-body">Pianos are tuned to a compromise. Voices don't have to be. Intonation Lab teaches your ear to hear and produce the pure intervals that make chords ring — using real-time pitch detection, AI coaching feedback, just intonation targets, and visual feedback you can see and feel.</p>
           <div class="hero-ctas">
             <a href={intlabUrl} class="cta-button primary" target="_blank" rel="noopener noreferrer">Get Access</a>
-            <a href="#features" class="cta-button secondary">See How It Works ↓</a>
+            <a href={intlabUrl} class="cta-button secondary" target="_blank" rel="noopener noreferrer">Try Free Demo</a>
+            <a href="#features" class="cta-button secondary">See What's Inside ↓</a>
           </div>
         </div>
         <div class="hero-image">
@@ -104,8 +105,8 @@ const intlabUrl = "https://intlab.tedsvoiceacademy.com";
   <!-- Answer Capsule -->
   <section class="capsule-section">
     <div class="container">
-      <p class="answer-capsule">Intonation Lab is a browser-based ear training tool for singers, created by Ted Chamberlain. It uses real-time pitch detection to help singers develop precise intonation using just intonation — the pure tuning system based on natural harmonic ratios. Features include 13 intervals, 7 chord types, 13 timbres, a beat frequency visualization, cymatics display, pitch tracker, and a 52-exercise guided curriculum. Pricing starts at $99 for individuals, with group licenses up to $999 for choruses.</p>
-      <p class="page-date">Last updated: <time datetime="2026-02-21">February 21, 2026</time></p>
+      <p class="answer-capsule">Intonation Lab is a browser-based ear training tool for singers, created by Ted Chamberlain. It uses real-time pitch detection and AI coaching feedback to help singers develop precise intonation using just intonation — the pure tuning system based on natural harmonic ratios. Features include 29 intervals and chords, 13 timbres, a beat frequency visualization, cymatics display, pitch tracker with recording and playback, drone mode, JI vs ET comparison, dark mode, and a 52-exercise guided curriculum with four difficulty levels. A free demo is available with no sign-up required. Pricing starts at $99 for individuals, with group licenses up to $999 for choruses. Installable as a Progressive Web App on any device.</p>
+      <p class="page-date">Last updated: <time datetime="2026-03-05">March 5, 2026</time></p>
     </div>
   </section>
 
@@ -126,7 +127,7 @@ const intlabUrl = "https://intlab.tedsvoiceacademy.com";
   <section id="features" class="features-section">
     <div class="container">
       <h2 class="decorated-heading decorated-heading--light reveal">What's inside</h2>
-      <p class="section-intro reveal">Six core capabilities that work together to build your intonation skills — from hearing the difference to singing it consistently.</p>
+      <p class="section-intro reveal">Nine core capabilities that work together to build your intonation skills — from hearing the difference to singing it consistently.</p>
 
       <div class="features-grid reveal-stagger">
         <div class="feature-card reveal">
@@ -137,9 +138,20 @@ const intlabUrl = "https://intlab.tedsvoiceacademy.com";
               <circle cx="18" cy="16" r="3"/>
             </svg>
           </div>
-          <h3>13 Intervals + 7 Chord Types</h3>
-          <p>Practice any interval from unison through octave, or choose from major and minor triads, dominant 7th, major 7th, minor 7th, diminished, and augmented chords. Each target is calculated using just intonation ratios.</p>
+          <h3>29 Intervals + Chords</h3>
+          <p>13 melodic intervals from unison through octave, plus 16 chord types including triads, 7ths, suspensions, power chords, and extended harmonies like dominant 9th and add9. Every target is calculated using just intonation ratios.</p>
         </div>
+
+        <div class="feature-card reveal">
+          <div class="feature-icon">
+            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true">
+              <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/>
+            </svg>
+          </div>
+          <h3>AI Coaching Feedback</h3>
+          <p>Real-time coaching tips based on your pitch patterns. Detects sharp or flat bias, pitch instability, near-misses, and excellent accuracy — then gives specific advice like adjusting breath support or relaxing your jaw. All analysis runs locally in your browser.</p>
+        </div>
+
 
         <div class="feature-card reveal">
           <div class="feature-icon">
@@ -160,7 +172,7 @@ const intlabUrl = "https://intlab.tedsvoiceacademy.com";
             </svg>
           </div>
           <h3>Cymatics Visualization</h3>
-          <p>A mandala-like geometric pattern that stays stable and symmetric when you're in tune, then rotates and distorts as you drift. A beautiful way to visualize acoustic consonance in real time.</p>
+          <p>A mandala-like geometric pattern that stays stable and symmetric when you're in tune, then rotates and distorts as you drift. Expand any visualization to fullscreen for an immersive experience.</p>
         </div>
 
         <div class="feature-card reveal">
@@ -171,8 +183,8 @@ const intlabUrl = "https://intlab.tedsvoiceacademy.com";
               <line x1="12" x2="12" y1="19" y2="22"/>
             </svg>
           </div>
-          <h3>13 Timbres</h3>
-          <p>Hear your reference pitch as sine wave, oboe, violin, piano, organ, trumpet, flute, or six vocal timbres (male and female "oo," "ah," and "ee"). Each with a unique harmonic profile to train against.</p>
+          <h3>13 Timbres + Drone Mode</h3>
+          <p>Hear your reference pitch as sine wave, oboe, violin, piano, organ, trumpet, flute, or six vocal timbres. Turn on drone mode for a continuous background reference tone so you can practice hands-free. Adjust arpeggio speed to hear chord tones one at a time.</p>
         </div>
 
         <div class="feature-card reveal">
@@ -181,8 +193,8 @@ const intlabUrl = "https://intlab.tedsvoiceacademy.com";
               <polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/>
             </svg>
           </div>
-          <h3>Pitch Tracker</h3>
-          <p>A scrolling line chart that records your pitch over time, showing your trajectory toward the target. See whether you approach from above or below, and how stable your pitch is once you find it.</p>
+          <h3>Pitch Tracker + Recording</h3>
+          <p>A scrolling line chart shows your pitch in real time. Record your practice session (pitch data only, no audio), then replay it to review accuracy and spot patterns you can't hear in the moment.</p>
         </div>
 
         <div class="feature-card reveal">
@@ -194,6 +206,30 @@ const intlabUrl = "https://intlab.tedsvoiceacademy.com";
           </div>
           <h3>52-Exercise Curriculum</h3>
           <p>A guided training system that progresses from easy intervals to hard ones, at increasing accuracy requirements. Four difficulty levels from beginner (±25 cents) to expert (±5 cents). Progress tracking and diagnostic feedback after each exercise.</p>
+        </div>
+
+        <div class="feature-card reveal">
+          <div class="feature-icon">
+            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true">
+              <circle cx="12" cy="12" r="10"/>
+              <line x1="12" x2="12" y1="8" y2="12"/>
+              <line x1="12" x2="15" y1="12" y2="12"/>
+            </svg>
+          </div>
+          <h3>JI vs ET Comparison</h3>
+          <p>Hear any interval played in just intonation, then in equal temperament, back to back. This side-by-side comparison makes the difference between the two tuning systems immediately audible — even to ears that haven’t trained to hear it yet.</p>
+        </div>
+
+        <div class="feature-card reveal">
+          <div class="feature-icon">
+            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true">
+              <rect x="2" y="3" width="20" height="14" rx="2" ry="2"/>
+              <line x1="8" x2="16" y1="21" y2="21"/>
+              <line x1="12" x2="12" y1="17" y2="21"/>
+            </svg>
+          </div>
+          <h3>Works Everywhere</h3>
+          <p>Runs in any modern browser on desktop, tablet, or phone. Install as a Progressive Web App for an app-like experience with offline support. Dark mode, accessibility features, and an onboarding tour for new users. Try the free demo with no sign-up required.</p>
         </div>
       </div>
     </div>
@@ -209,29 +245,29 @@ const intlabUrl = "https://intlab.tedsvoiceacademy.com";
         <div class="step reveal">
           <span class="step-number">1</span>
           <div class="step-content">
-            <h3>Choose your interval or chord</h3>
-            <p>Select any of 13 intervals (unison through octave) or 7 chord types. The app calculates the exact just intonation target frequency.</p>
+            <h3>Try the free demo or get access</h3>
+            <p>The free demo gives you three intervals (Unison, Perfect 5th, Octave) with full visualizations and AI coaching — no sign-up required. Purchase an access code to unlock all 29 intervals and chords, the training curriculum, and recording.</p>
           </div>
         </div>
         <div class="step reveal">
           <span class="step-number">2</span>
           <div class="step-content">
-            <h3>Enable your microphone</h3>
-            <p>Grant microphone access and Intonation Lab starts analyzing your pitch in real time using autocorrelation-based detection.</p>
+            <h3>Choose your interval or chord</h3>
+            <p>Select any of 13 intervals (unison through octave) or 16 chord types. The app calculates the exact just intonation target frequency. Use the JI vs ET comparison to hear the difference between tuning systems.</p>
           </div>
         </div>
         <div class="step reveal">
           <span class="step-number">3</span>
           <div class="step-content">
-            <h3>Sing and watch the feedback</h3>
-            <p>The beat frequency circle, cents gauge, cymatics pattern, and pitch tracker all respond instantly. Color shifts from red to amber to green as you approach the target.</p>
+            <h3>Enable your microphone and sing</h3>
+            <p>Grant microphone access and Intonation Lab starts analyzing your pitch in real time. The beat frequency circle, cymatics pattern, pitch tracker, and AI coaching all respond instantly. Color shifts from red to amber to green as you approach the target.</p>
           </div>
         </div>
         <div class="step reveal">
           <span class="step-number">4</span>
           <div class="step-content">
-            <h3>Train with the guided curriculum</h3>
-            <p>Follow 52 structured exercises that progressively challenge your ear. Track your progress across all intervals and difficulty levels.</p>
+            <h3>Train, record, and review</h3>
+            <p>Follow 52 structured exercises that progressively challenge your ear. Record your practice sessions to review your pitch patterns. Track your progress across all intervals and difficulty levels.</p>
           </div>
         </div>
       </div>
@@ -295,7 +331,7 @@ const intlabUrl = "https://intlab.tedsvoiceacademy.com";
 
       <details class="faq-item reveal">
         <summary>Do I need special equipment?</summary>
-        <p>Just a device with a microphone and a modern web browser. Intonation Lab works on desktop, tablet, and phone. No downloads or installation needed. A USB microphone or headset can improve accuracy, but built-in microphones work fine for most users.</p>
+        <p>Just a device with a microphone and a modern web browser. Intonation Lab works on desktop, tablet, and phone — you can also install it as a Progressive Web App for an app-like experience. No downloads required. A USB microphone or headset can improve accuracy, but built-in microphones work fine for most users.</p>
       </details>
 
       <details class="faq-item reveal">
@@ -304,18 +340,18 @@ const intlabUrl = "https://intlab.tedsvoiceacademy.com";
       </details>
 
       <details class="faq-item reveal">
-        <summary>Can I use it on my phone?</summary>
-        <p>Yes. Intonation Lab runs in any modern browser on desktop, tablet, or phone. The responsive layout adapts automatically. Your settings and training progress are saved in your browser.</p>
-      </details>
-
-      <details class="faq-item reveal">
         <summary>Is Intonation Lab only for advanced singers?</summary>
-        <p>Intonation Lab is designed for all levels. Beginners can start in Basic mode with a generous accuracy window of ±25 cents. The guided curriculum progresses gradually from easy intervals to harder ones. Advanced and expert sensitivity levels challenge even professional singers.</p>
+        <p>Intonation Lab is designed for all levels. Beginners can start in Basic mode with a generous accuracy window of ±25 cents and an interactive onboarding tour. The guided curriculum progresses gradually from easy intervals to harder ones. Advanced and expert sensitivity levels challenge even professional singers.</p>
       </details>
 
       <details class="faq-item reveal">
         <summary>How is this different from a regular tuner?</summary>
-        <p>Standard tuners tell you if a single note is sharp or flat relative to equal temperament. Intonation Lab understands musical context — it knows what interval or chord tone you're aiming for, calculates the exact just intonation target, and shows you through multiple visualizations how close you are. It trains your ear, not just your eyes.</p>
+        <p>Standard tuners tell you if a single note is sharp or flat relative to equal temperament. Intonation Lab understands musical context — it knows what interval or chord tone you're aiming for, calculates the exact just intonation target, and shows you through multiple visualizations how close you are. It also provides AI coaching feedback, lets you record and review your sessions, and includes a JI vs ET comparison so you can hear the difference between tuning systems. It trains your ear, not just your eyes.</p>
+      </details>
+
+      <details class="faq-item reveal">
+        <summary>Can I use it on my phone?</summary>
+        <p>Yes. Intonation Lab runs in any modern browser on desktop, tablet, or phone. The responsive layout adapts automatically. You can install it as a Progressive Web App for an app-like experience. Dark mode matches your system preference automatically. Your settings and training progress are saved in your browser.</p>
       </details>
     </div>
   </section>
@@ -324,8 +360,11 @@ const intlabUrl = "https://intlab.tedsvoiceacademy.com";
   <section class="final-cta">
     <div class="container reveal">
       <h2>Ready to train your ear?</h2>
-      <p>Intonation Lab gives you the tools to hear, see, and develop the precise pitch skills that make voices and ensembles ring. Pair it with <a href="/singing/" style="color: var(--color-gold-bright);">private coaching</a> for even faster results.</p>
-      <a href={intlabUrl} class="cta-button primary" target="_blank" rel="noopener noreferrer">Get Access</a>
+      <p>Try the free demo right now — three intervals with full visualizations, AI coaching, and pitch detection. No sign-up required. Or pair Intonation Lab with <a href="/singing/" style="color: var(--color-gold-bright);">private coaching</a> for even faster results.</p>
+      <div class="final-cta-buttons">
+        <a href={intlabUrl} class="cta-button primary" target="_blank" rel="noopener noreferrer">Try Free Demo</a>
+        <a href={intlabUrl} class="cta-button secondary" target="_blank" rel="noopener noreferrer">Get Full Access</a>
+      </div>
       <p class="contact-line">Questions? Email <a href="mailto:ted@tedsvoiceacademy.com">ted@tedsvoiceacademy.com</a> · <a href="/shop/">Browse all products</a></p>
     </div>
   </section>
@@ -841,6 +880,13 @@ const intlabUrl = "https://intlab.tedsvoiceacademy.com";
     margin: 0 auto 2rem;
   }
 
+  .final-cta-buttons {
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+
   .contact-line {
     margin-top: 1.5rem;
     font-size: 0.95rem;
@@ -897,6 +943,11 @@ const intlabUrl = "https://intlab.tedsvoiceacademy.com";
 
     .cta-button {
       text-align: center;
+    }
+
+    .final-cta-buttons {
+      flex-direction: column;
+      align-items: center;
     }
   }
 </style>

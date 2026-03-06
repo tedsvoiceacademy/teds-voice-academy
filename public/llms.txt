@@ -26,7 +26,7 @@ The PASS Profile (Personal Authentic Speaking Style) is a professional communica
 
 ## Intonation Lab
 
-Intonation Lab is a browser-based ear training tool for singers, created by Ted. It uses real-time pitch detection and just intonation targets to help singers develop precise intonation. Features include 13 intervals, 7 chord types, 13 timbres, a beat frequency circle visualization, cymatics display, pitch tracker, and a 52-exercise guided curriculum. Licenses range from $99 (single) to $999 (chorus/40 users). Available at https://intlab.tedsvoiceacademy.com
+Intonation Lab is a browser-based ear training tool for singers, created by Ted. It uses real-time pitch detection, AI coaching feedback, and just intonation targets to help singers develop precise intonation. Features include 29 intervals and chords (13 melodic intervals + 16 chord types), 13 timbres, a beat frequency circle visualization, cymatics display, pitch tracker with recording and playback, drone mode, JI vs ET comparison, dark mode, staff notation, piano keyboard display, and a 52-exercise guided curriculum with four difficulty levels. A free demo is available with three intervals and full visualizations, no sign-up required. Installable as a Progressive Web App with offline support. Licenses range from $99 (single) to $999 (chorus/40 users). Available at https://intlab.tedsvoiceacademy.com
 
 ## Riser Chart
 
