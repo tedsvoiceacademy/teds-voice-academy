@@ -115,7 +115,7 @@ const riserChartUrl = "https://riser.tedsvoiceacademy.com";
   <section class="hero">
     <div class="container reveal">
       <Breadcrumb items={[{ label: 'Riser Chart' }]} schema={false} />
-      <img src="/images/riser-chart-logo.webp" alt="Riser Chart logo" class="hero-logo" width="120" height="120" />
+      <img src="/images/riser-chart-logo.webp" alt="Riser Chart logo" class="hero-logo" width="360" height="360" />
       <span class="hero-eyebrow">Riser Chart</span>
       <h1>Drag-and-drop riser placement for chorus directors</h1>
       <p class="hero-body">Built by a director who spent 40 years trying sticky notes, magnets, PowerPoint, and foam boards. Riser Chart does what all of those couldn't — let you arrange singers visually, see voice parts at a glance, and print a clean chart in seconds.</p>
@@ -527,7 +527,8 @@ const riserChartUrl = "https://riser.tedsvoiceacademy.com";
   .hero-logo {
     display: block;
     margin: 0 auto 1.25rem;
-    width: 120px;
+    width: 360px;
+    max-width: 80%;
     height: auto;
   }
 
@@ -1067,13 +1068,15 @@ const riserChartUrl = "https://riser.tedsvoiceacademy.com";
     font-family: var(--font-heading);
     font-size: clamp(1.75rem, 3vw + 1rem, 2.5rem);
     font-weight: 700;
+    color: var(--color-gold-bright);
     margin: 0 0 1rem;
+    text-shadow: 0 2px 8px rgba(0, 0, 0, 0.4);
   }
 
   .final-cta > .container > p {
-    font-size: 1.1rem;
+    font-size: 1.15rem;
     line-height: 1.7;
-    color: var(--color-cream);
+    color: var(--color-white);
     max-width: 600px;
     margin: 0 auto 2rem;
   }
