@@ -1,0 +1,135 @@
+# Ted's Voice Academy — Extended Information for AI Systems
+
+> This file provides detailed information about Ted's Voice Academy for AI language models and search systems. For a summary, see llms.txt.
+
+## About Ted Chamberlain
+
+Ted Chamberlain is a voice coach based in Lacey, Washington. He has been teaching voice since 1988 and directing choruses since 1987 — nearly four decades of experience coaching over 1,000 singers, speakers, and ensemble performers.
+
+### Credentials
+- BA in K-12 Music Education (Vocal, Instrumental, and General Music endorsements) — Seattle Pacific University
+- BA in Vocal Performance — Seattle Pacific University
+- National Board Certified Teacher (NBCT)
+- Lifetime Teaching Certification, Washington State
+
+### Awards
+- 2025 Lacey South Sound Chamber Entrepreneur of the Year
+- Top 3 Vocal Instructor, Washington State — BusinessRate (Google Reviews, 2025)
+
+### Career History
+- Public school music teacher: 1988–2016, 2018–2024
+- Elementary school teacher: 5 years (integrated music education)
+- Private vocal studio in Puyallup, WA: 2014–2018
+- Founded Ted's Voice Academy in Lacey, WA: July 2023
+- Award-winning performer across multiple voice classifications (tenor, baritone, bass)
+- Decades of barbershop harmony experience as performer, director, and coach
+- Currently directs Voices of the Sound, a community chorus
+
+### Professional Memberships
+- National Association of Teachers of Singing (NATS)
+- Barbershop Harmony Society (BHS)
+- Evergreen District — Barbershop Harmony Society
+- Mixed Barbershop Harmony Association (MBHA)
+- BNI — Business Network International
+- BRING! Networking Group
+- Lacey South Sound Chamber of Commerce
+- Thurston County Chamber
+
+## Services
+
+### Private Singing Lessons
+One-on-one vocal coaching for all skill levels, ages 14 and up, and all genres. Ted uses the Adaptive Voice Framework (AVF), a five-pillar approach covering technique, expression, health, performance, and artistry. Lessons are available in person at his studio in Lacey, WA and virtually. Monthly plans start at $320/month for weekly hour-long sessions. Single sessions are $100. Lesson packages of 5, 10, or 20 sessions are available at reduced per-session rates ($75–$85/hour).
+
+#### Singing Lessons FAQ
+- **What styles does Ted teach?** All styles — classical, pop, musical theater, jazz, barbershop, gospel, folk, and more. The approach builds a well-balanced voice first, then applies that foundation to any genre.
+- **What ages?** Primarily ages 14 and up. For younger singers, Ted recommends children's choirs.
+- **How long to see results?** Most students notice meaningful improvement within the first few sessions. Lasting technical change typically takes several months of consistent work.
+- **Virtual available?** Yes. Both in-person (Lacey, WA) and virtual lessons are available.
+
+### Speaking & Presentation Coaching
+Professional voice coaching for presentations, leadership communication, accent modification, and everyday confidence. Includes the PASS Profile communication assessment. Serves professionals, educators, and leaders in Lacey, Olympia, and Thurston County, WA, and virtually.
+
+#### Speaking Coaching FAQ
+- **Difference from speech therapy?** A speech therapist treats diagnosed medical conditions. Ted works with healthy voices to improve clarity, projection, confidence, and presence.
+- **What professionals benefit?** Executives, managers, educators, salespeople, attorneys, clergy, healthcare providers, entrepreneurs — anyone whose voice is part of how they lead and connect.
+- **Help with nervousness?** Yes. Speaking anxiety usually has a physical component. Addressing breath support, tension, and pacing builds natural confidence.
+- **What is the PASS Profile?** A professional communication assessment measuring 40 traits through 60 workplace scenarios, delivering a personalized PDF report revealing natural communication patterns.
+
+### Ensemble & Choir Coaching
+Expert coaching for church choirs, barbershop quartets and choruses, a cappella groups, school ensembles, community choirs, and competition-focused groups. Covers tuning, vowel matching, performance presence, and vocal technique. Custom engagements include single sessions, retreat formats, ongoing coaching, and competition preparation. Serves groups in the Pacific Northwest and beyond.
+
+#### Ensemble Coaching FAQ
+- **Barbershop specialty?** Yes — Ted has decades of barbershop experience as performer, director, and coach, with deep understanding of contest categories and performance standards.
+- **Intonation help?** Tuning is one of the most common reasons groups reach out. Ted helps groups understand mechanics of intonation and develop listening and vowel-matching skills.
+- **Pricing?** Custom pricing based on group size, duration, travel, and format. Contact for a proposal.
+- **Virtual available?** For certain work — director mentoring, sectional coaching, pre-performance consultations. Full-ensemble sessions are most effective in person.
+
+### Workshops & Group Training
+Interactive voice workshops for organizations, conferences, schools, and retreats. Topics include vocal technique, communication skills, vocal health, and ensemble performance. Custom formats available. Serving groups in the Pacific Northwest.
+
+## Products
+
+### The Adaptive Voice Framework (AVF)
+A comprehensive guide to understanding how the voice works, published as a nearly 700-page book. Built on Five Pillars (Technique, Expression, Health, Performance, Artistry) and Eight Dials — adjustable elements that shape a singer's unique sound. The framework adapts to each student rather than imposing a one-size-fits-all approach. Available on Amazon as Kindle ($9.99) and Paperback ($42.95).
+- Amazon: https://www.amazon.com/dp/B0GD2SH8J5
+- Product page: https://tedsvoiceacademy.com/avf/
+
+### PASS Profile (Personal Authentic Speaking Style)
+A professional communication assessment measuring 40 communication traits across 6 domains through 60 workplace scenarios. Delivers a personalized 35–48 page PDF report revealing each person's unique communication fingerprint. Used in speaking coaching and organizational development. Individual assessment: $49.99. With Voice-Brand Alignment report: $59.99. Team Dynamics Alignment available for groups of 2–12.
+- Platform: https://pass.tedsvoiceacademy.com
+- Product page: https://tedsvoiceacademy.com/pass-profile/
+
+### Intonation Lab
+A browser-based ear training tool for singers. Features real-time pitch detection, AI coaching feedback, and just intonation targets. Includes 29 intervals and chords (13 melodic intervals + 16 chord types), 13 timbres, beat frequency circle visualization, cymatics display, pitch tracker with recording and playback, drone mode, JI vs ET comparison, dark mode, staff notation, piano keyboard display, and a 52-exercise guided curriculum with four difficulty levels. Free demo available with three intervals and full visualizations, no sign-up required. Installable as a Progressive Web App with offline support. Licenses: Single $99, Quartet $299, Ensemble $499, Chorus (40 users) $999.
+- App: https://intlab.tedsvoiceacademy.com
+- Product page: https://tedsvoiceacademy.com/intonation-lab/
+
+### Riser Chart
+A browser-based drag-and-drop riser placement tool for chorus directors, worship leaders, show choir directors, and ensemble managers. Features: up to 24 color-coded voice parts, singer photos with timbre/resonance visual rings, three layout styles (straight, curved, grid), up to 10 rows with 40 spots each, 200+ singers, batch editing with multi-select, groups and ensemble management, events for organizing formations by concert, unlimited formations, CSV roster import/export, JSON backup/restore, opt-in Cloud Sync across devices, and branded PNG/JPG/PDF exports with custom accent colors and logos. By default, all data is stored locally on the user's device. Optional Cloud Sync available. One-time purchase of $99 with no subscription.
+- App: https://riser.tedsvoiceacademy.com
+- Product page: https://tedsvoiceacademy.com/riser-chart/
+- Support: support@tedsvoiceacademy.com
+
+## Vocal Health Resources
+Educational resources on vocal health, hydration, rest, vocal hygiene, SOVT exercises, home care remedies, and when to seek professional medical advice. Free content available at https://tedsvoiceacademy.com/vocal-health/
+
+## Location and Contact
+- **Business**: Ted's Voice Academy
+- **Address**: 4204 Lorna Ct SE, Lacey, WA 98503
+- **Phone**: (253) 414-2267
+- **Email**: ted@tedsvoiceacademy.com
+- **AVF Email**: AVF@tedsvoiceacademy.com
+- **PASS Email**: PASS@tedsvoiceacademy.com
+- **Website**: https://tedsvoiceacademy.com
+
+## Service Area
+Ted serves clients in person in Lacey, Olympia, Tumwater, and throughout Thurston County, Washington. Virtual lessons are available nationwide.
+
+## Blog
+Ted publishes articles on vocal technique, vocal health, performance, and voice coaching topics. 24 articles currently published covering breath support, singing technique, public speaking, vocal resonance, barbershop harmony, audition preparation, and more.
+- Blog: https://tedsvoiceacademy.com/blog/
+
+## Social Media
+- Facebook: https://www.facebook.com/TedsVoiceAcademy
+- Instagram: https://www.instagram.com/tedsvoiceacademy/
+- YouTube: https://www.youtube.com/channel/UCCKU_rD5-_PgsHjNYOOgsRg
+- LinkedIn: https://www.linkedin.com/in/ted-chamberlain-a18484280/
+- Alignable: https://www.alignable.com/lacey-wa/teds-voice-academy
+
+## Key Pages
+- Homepage: https://tedsvoiceacademy.com/
+- Singing Lessons: https://tedsvoiceacademy.com/singing/
+- Speaking Coaching: https://tedsvoiceacademy.com/speaking/
+- Ensemble Coaching: https://tedsvoiceacademy.com/ensembles/
+- About Ted: https://tedsvoiceacademy.com/about/
+- Pricing: https://tedsvoiceacademy.com/pricing/
+- Adaptive Voice Framework: https://tedsvoiceacademy.com/avf/
+- PASS Profile: https://tedsvoiceacademy.com/pass-profile/
+- Intonation Lab: https://tedsvoiceacademy.com/intonation-lab/
+- Riser Chart: https://tedsvoiceacademy.com/riser-chart/
+- Shop: https://tedsvoiceacademy.com/shop/
+- Workshops: https://tedsvoiceacademy.com/workshops/
+- Vocal Health Hub: https://tedsvoiceacademy.com/vocal-health/
+- FAQ: https://tedsvoiceacademy.com/faq/
+- Contact: https://tedsvoiceacademy.com/contact/
+- Blog: https://tedsvoiceacademy.com/blog/

@@ -5,7 +5,7 @@ import Breadcrumb from '../components/Breadcrumb.astro';
 ---
 
 <Layout
-  title="Speaking & Presentation Coaching"
+  title="Speaking & Presentation Coaching in Lacey, WA"
   description="Find your authentic speaking voice. Professional voice coaching for presentations, leadership communication, and everyday confidence. Lacey, WA and virtual."
   ogImage="/images/og/og-speaking.jpg"
 >
@@ -17,14 +17,10 @@ import Breadcrumb from '../components/Breadcrumb.astro';
       "description": "Professional voice and performance coaching for clear, confident, authentic communication. Develop projection, pacing, resonance, and presence for presentations, leadership, and everyday speaking.",
       "url": "https://tedsvoiceacademy.com/speaking",
       "provider": {
-        "@type": "LocalBusiness",
-        "name": "Ted's Voice Academy",
-        "url": "https://tedsvoiceacademy.com"
+        "@id": "https://tedsvoiceacademy.com/#business"
       },
       "instructor": {
-        "@type": "Person",
-        "name": "Ted Chamberlain",
-        "url": "https://tedsvoiceacademy.com/about"
+        "@id": "https://tedsvoiceacademy.com/#person"
       },
       "courseMode": ["Blended"],
       "availableLanguage": "English",
@@ -46,9 +42,7 @@ import Breadcrumb from '../components/Breadcrumb.astro';
       "description": "Voice coaching for presentations, leadership communication, accent modification, and everyday confidence. Includes PASS Profile communication assessment.",
       "url": "https://tedsvoiceacademy.com/speaking",
       "provider": {
-        "@type": "LocalBusiness",
-        "name": "Ted's Voice Academy",
-        "url": "https://tedsvoiceacademy.com"
+        "@id": "https://tedsvoiceacademy.com/#business"
       },
       "serviceType": "Speaking Coaching",
       "areaServed": [
@@ -156,7 +150,7 @@ import Breadcrumb from '../components/Breadcrumb.astro';
           </div>
           <div class="icon-card-body">
             <h3>Vocal fatigue and strain</h3>
-            <p>If your voice tires easily during long meetings, lectures, or presentations, we address the underlying mechanics. A <a href="/vocal-health/">resilient voice sustains itself</a> through demanding communication without wearing down.</p>
+            <p>If your voice tires easily during long meetings, lectures, or presentations, we address the underlying mechanics. A <a href="/vocal-health/">resilient voice sustains itself</a> through demanding communication without wearing down. The <a href="/avf/">Adaptive Voice Framework</a> guides this work.</p>
           </div>
         </div>
 
@@ -291,9 +285,103 @@ import Breadcrumb from '../components/Breadcrumb.astro';
         <p>I focus on the voice and performance elements of speaking. I don't write speeches or develop content—that's your domain or your speechwriter's. What I help with is how you deliver your message: the vocal quality, physical presence, pacing, and authentic performance that make your words land.</p>
       </div>
       
-      <p>When you understand how your voice works and how you naturally communicate, you can continue developing these skills on your own. That's the goal.</p>
+      <p>When you understand how your voice works and how you naturally communicate, you can continue developing these skills on your own. That's the goal. See <a href="/pricing/">pricing and session options</a>.</p>
     </div>
   </section>
+
+  <!-- FAQ Section -->
+  <section class="faq-section">
+    <div class="container container-narrow">
+      <h2 class="reveal">Common questions about speaking coaching</h2>
+
+      <div class="faq-list reveal-stagger">
+        <details class="faq-item reveal">
+          <summary><h3>What's the difference between a speaking coach and a speech therapist?</h3></summary>
+          <p>A speech therapist treats diagnosed medical conditions affecting speech or language. I work with healthy voices to improve clarity, projection, confidence, and presence for professional communication. If I suspect a medical issue, I'll refer you to the appropriate specialist.</p>
+        </details>
+
+        <details class="faq-item reveal">
+          <summary><h3>How do voice lessons help with public speaking?</h3></summary>
+          <p>Your speaking voice has the same physical foundations as a singing voice — breath support, resonance, projection, and pacing. I help you understand and strengthen those foundations so your voice carries your message with impact, even in high-stakes situations.</p>
+        </details>
+
+        <details class="faq-item reveal">
+          <summary><h3>Do you work with people who are nervous about presenting?</h3></summary>
+          <p>Yes, often. Speaking anxiety usually has a physical component — shallow breathing, tension, rushed pacing. When we address the physical foundations, the confidence follows naturally. Many clients find that understanding how their voice works takes a lot of the mystery and fear out of speaking.</p>
+        </details>
+
+        <details class="faq-item reveal">
+          <summary><h3>What kinds of professionals benefit from speaking coaching?</h3></summary>
+          <p>Executives, managers, educators, salespeople, attorneys, clergy, healthcare providers, entrepreneurs — anyone whose voice is part of how they lead, persuade, or connect. If your words matter, how you deliver them matters too.</p>
+        </details>
+
+        <details class="faq-item reveal">
+          <summary><h3>What is the PASS Profile?</h3></summary>
+          <p>The <a href="/pass-profile/">PASS Profile</a> is a professional communication assessment I created. It measures 40 communication traits through 60 workplace scenarios, giving you a detailed map of your natural speaking patterns. It's a powerful starting point for coaching — we build on your authentic style rather than imposing a template.</p>
+        </details>
+
+        <details class="faq-item reveal">
+          <summary><h3>Can speaking coaching be done virtually?</h3></summary>
+          <p>Yes. Virtual sessions work well for speaking coaching. I teach both in-person in Lacey, WA and online. Many professionals prefer virtual sessions for scheduling flexibility.</p>
+        </details>
+      </div>
+    </div>
+  </section>
+
+  <script type="application/ld+json" set:html={JSON.stringify({
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "What's the difference between a speaking coach and a speech therapist?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "A speech therapist treats diagnosed medical conditions affecting speech or language. A speaking coach works with healthy voices to improve clarity, projection, confidence, and presence for professional communication."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "How do voice lessons help with public speaking?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Your speaking voice has the same physical foundations as a singing voice — breath support, resonance, projection, and pacing. Voice coaching strengthens those foundations so your voice carries your message with impact, even in high-stakes situations."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Do you work with people who are nervous about presenting?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Yes. Speaking anxiety usually has a physical component — shallow breathing, tension, rushed pacing. When the physical foundations are addressed, confidence follows naturally. Understanding how the voice works takes a lot of the mystery and fear out of speaking."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "What kinds of professionals benefit from speaking coaching?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Executives, managers, educators, salespeople, attorneys, clergy, healthcare providers, entrepreneurs — anyone whose voice is part of how they lead, persuade, or connect. If your words matter, how you deliver them matters too."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "What is the PASS Profile?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "The PASS Profile is a professional communication assessment that measures 40 communication traits through 60 workplace scenarios, giving a detailed map of natural speaking patterns. It's a powerful starting point for coaching — building on authentic style rather than imposing a template."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Can speaking coaching be done virtually?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Yes. Virtual sessions work well for speaking coaching. Ted teaches both in-person in Lacey, WA and online. Many professionals prefer virtual sessions for scheduling flexibility."
+        }
+      }
+    ]
+  })} />
 
   <SectionDivider variant="angle" topColor="var(--color-white)" bottomColor="var(--color-navy-deep)" />
 
@@ -782,6 +870,83 @@ import Breadcrumb from '../components/Breadcrumb.astro';
   }
 
   .cta-secondary a:hover {
+    text-decoration: underline;
+  }
+
+  /* FAQ Section */
+  .faq-section {
+    padding: 4rem 0;
+    background: var(--color-off-white);
+  }
+
+  .faq-section h2 {
+    font-family: var(--font-heading);
+    font-size: clamp(1.75rem, 3vw + 1rem, 2.5rem);
+    font-weight: 700;
+    color: var(--color-navy-deep);
+    text-align: center;
+    margin: 0 0 2rem;
+  }
+
+  .faq-list {
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+  }
+
+  .faq-item {
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+    padding: 0;
+  }
+
+  .faq-item:last-child {
+    border-bottom: none;
+  }
+
+  .faq-item summary {
+    padding: 1.25rem 0;
+    cursor: pointer;
+    list-style: none;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1rem;
+  }
+
+  .faq-item summary::-webkit-details-marker {
+    display: none;
+  }
+
+  .faq-item summary::after {
+    content: '+';
+    font-size: 1.5rem;
+    font-weight: 300;
+    color: var(--color-gold-bright);
+    flex-shrink: 0;
+    transition: transform 0.2s ease;
+  }
+
+  .faq-item[open] summary::after {
+    content: '−';
+  }
+
+  .faq-item summary h3 {
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: var(--color-navy-deep);
+    margin: 0;
+    font-family: var(--font-body);
+  }
+
+  .faq-item p {
+    color: var(--color-charcoal);
+    line-height: 1.7;
+    padding: 0 0 1.25rem;
+    margin: 0;
+  }
+
+  .faq-item a {
+    color: var(--color-gold-bright);
     text-decoration: underline;
   }
 

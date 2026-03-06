@@ -5,7 +5,7 @@ import Breadcrumb from '../components/Breadcrumb.astro';
 ---
 
 <Layout
-  title="Ensemble & Choir Coaching"
+  title="Ensemble & Choir Coaching | Olympia & Lacey, WA"
   description="Expert coaching for choirs, vocal groups, and ensembles. Achieve unity without losing individual voices. Serving groups throughout the Olympia, WA region."
   ogImage="/images/og/og-ensembles.jpg"
 >
@@ -17,14 +17,10 @@ import Breadcrumb from '../components/Breadcrumb.astro';
       "description": "Vocal and performance coaching for choirs, quartets, and vocal ensembles. Develop tuning, unity, vowel matching, and authentic performance presence.",
       "url": "https://tedsvoiceacademy.com/ensembles/",
       "provider": {
-        "@type": "LocalBusiness",
-        "name": "Ted's Voice Academy",
-        "url": "https://tedsvoiceacademy.com"
+        "@id": "https://tedsvoiceacademy.com/#business"
       },
       "instructor": {
-        "@type": "Person",
-        "name": "Ted Chamberlain",
-        "url": "https://tedsvoiceacademy.com/about/"
+        "@id": "https://tedsvoiceacademy.com/#person"
       },
       "courseMode": ["Blended"],
       "availableLanguage": "English",
@@ -46,9 +42,7 @@ import Breadcrumb from '../components/Breadcrumb.astro';
       "description": "Expert coaching for church choirs, barbershop quartets and choruses, a cappella groups, school ensembles, community choirs, and competition-focused groups in the Olympia, WA region.",
       "url": "https://tedsvoiceacademy.com/ensembles/",
       "provider": {
-        "@type": "LocalBusiness",
-        "name": "Ted's Voice Academy",
-        "url": "https://tedsvoiceacademy.com"
+        "@id": "https://tedsvoiceacademy.com/#business"
       },
       "serviceType": "Ensemble Vocal Coaching",
       "areaServed": [
@@ -206,7 +200,7 @@ import Breadcrumb from '../components/Breadcrumb.astro';
           </div>
           <div class="help-feature__content">
             <h3>Tuning and intonation</h3>
-            <p>When voices lock in, the sound transforms. I help groups understand the mechanics of tuning and develop the listening skills that make it happen.</p>
+            <p>When voices lock in, the sound transforms. I help groups understand the mechanics of tuning and develop the listening skills that make it happen. My <a href="/intonation-lab/" style="color: var(--color-gold-bright);">Intonation Lab</a> ear training tool supports this work.</p>
           </div>
         </div>
 
@@ -332,9 +326,103 @@ import Breadcrumb from '../components/Breadcrumb.astro';
 
       <p>We'll work on the physical and musical foundations that let voices come together freely — breath support, resonance, vowel placement, and listening skills. We'll also explore the performance side — how to connect with each other and with your audience, how to tell the story, and how to bring your authentic selves to the music.</p>
       
-      <p>I explain the "why" behind what we're doing. When your singers understand <a href="/avf/">how their voices work</a>, they can keep growing on their own. That's the goal.</p>
+      <p>I explain the "why" behind what we're doing. When your singers understand <a href="/avf/">how their voices work</a>, they can keep growing on their own. That's the goal. See <a href="/pricing/">pricing and engagement options</a>, or explore <a href="/workshops/">workshop formats</a> for your group.</p>
     </div>
   </section>
+
+  <!-- FAQ Section -->
+  <section class="faq-section">
+    <div class="container container-narrow">
+      <h2 class="reveal">Common questions about ensemble coaching</h2>
+
+      <div class="faq-list reveal-stagger">
+        <details class="faq-item reveal">
+          <summary><h3>What types of ensembles do you work with?</h3></summary>
+          <p>I work with church choirs, barbershop quartets and choruses, a cappella groups, community choirs, school ensembles, and competition-focused vocal groups. If your group sings together, I can help.</p>
+        </details>
+
+        <details class="faq-item reveal">
+          <summary><h3>Do you work with barbershop groups specifically?</h3></summary>
+          <p>Yes — barbershop is a specialty. I've spent decades in the barbershop world as a performer, director, and coach. I understand contest judging categories, ring and lock, vowel matching, and the performance expectations unique to barbershop harmony.</p>
+        </details>
+
+        <details class="faq-item reveal">
+          <summary><h3>How do ensemble coaching sessions work?</h3></summary>
+          <p>Every engagement is custom. Options include one-time workshops, ongoing weekly or biweekly coaching, competition prep intensives, sectional work, and retreat formats. I can come to your rehearsal space, or smaller groups can visit my studio in Lacey, WA.</p>
+        </details>
+
+        <details class="faq-item reveal">
+          <summary><h3>Can you help a choir that's struggling with intonation?</h3></summary>
+          <p>Absolutely — tuning is one of the most common reasons groups reach out. I help singers understand the mechanics of intonation, develop listening skills, and learn vowel-matching techniques that transform ensemble sound. My <a href="/intonation-lab/">Intonation Lab</a> ear training tool can support this work between sessions.</p>
+        </details>
+
+        <details class="faq-item reveal">
+          <summary><h3>Do you offer virtual ensemble coaching?</h3></summary>
+          <p>Virtual coaching is available for certain types of work — pre-performance consultations, director mentoring, and sectional coaching can all work well online. Full-ensemble sessions are most effective in person.</p>
+        </details>
+
+        <details class="faq-item reveal">
+          <summary><h3>How is ensemble coaching priced?</h3></summary>
+          <p>Ensemble coaching is priced based on the scope of the engagement — group size, duration, travel, and format all factor in. <a href="/contact/">Get in touch</a> to discuss your group's needs and I'll put together a proposal. See the <a href="/pricing/">pricing page</a> for general information.</p>
+        </details>
+      </div>
+    </div>
+  </section>
+
+  <script type="application/ld+json" set:html={JSON.stringify({
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "What types of ensembles do you work with?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Ted works with church choirs, barbershop quartets and choruses, a cappella groups, community choirs, school ensembles, and competition-focused vocal groups."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Do you work with barbershop groups specifically?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Yes — barbershop is a specialty. Ted has spent decades in the barbershop world as a performer, director, and coach, understanding contest judging categories, ring and lock, vowel matching, and the performance expectations unique to barbershop harmony."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "How do ensemble coaching sessions work?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Every engagement is custom. Options include one-time workshops, ongoing weekly or biweekly coaching, competition prep intensives, sectional work, and retreat formats. Ted can come to your rehearsal space, or smaller groups can visit his studio in Lacey, WA."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Can you help a choir that's struggling with intonation?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Absolutely — tuning is one of the most common reasons groups reach out. Ted helps singers understand the mechanics of intonation, develop listening skills, and learn vowel-matching techniques that transform ensemble sound."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Do you offer virtual ensemble coaching?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Virtual coaching is available for certain types of work — pre-performance consultations, director mentoring, and sectional coaching can all work well online. Full-ensemble sessions are most effective in person."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "How is ensemble coaching priced?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Ensemble coaching is priced based on the scope of the engagement — group size, duration, travel, and format all factor in. Contact Ted to discuss your group's needs."
+        }
+      }
+    ]
+  })} />
 
   <SectionDivider variant="angle" topColor="var(--color-white)" bottomColor="var(--color-navy-deep)" />
 
@@ -808,6 +896,83 @@ import Breadcrumb from '../components/Breadcrumb.astro';
   }
 
   .cta-secondary a:hover {
+    text-decoration: underline;
+  }
+
+  /* FAQ Section */
+  .faq-section {
+    padding: 4rem 0;
+    background: var(--color-off-white);
+  }
+
+  .faq-section h2 {
+    font-family: var(--font-heading);
+    font-size: clamp(1.75rem, 3vw + 1rem, 2.5rem);
+    font-weight: 700;
+    color: var(--color-navy-deep);
+    text-align: center;
+    margin: 0 0 2rem;
+  }
+
+  .faq-list {
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+  }
+
+  .faq-item {
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+    padding: 0;
+  }
+
+  .faq-item:last-child {
+    border-bottom: none;
+  }
+
+  .faq-item summary {
+    padding: 1.25rem 0;
+    cursor: pointer;
+    list-style: none;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1rem;
+  }
+
+  .faq-item summary::-webkit-details-marker {
+    display: none;
+  }
+
+  .faq-item summary::after {
+    content: '+';
+    font-size: 1.5rem;
+    font-weight: 300;
+    color: var(--color-gold-bright);
+    flex-shrink: 0;
+    transition: transform 0.2s ease;
+  }
+
+  .faq-item[open] summary::after {
+    content: '−';
+  }
+
+  .faq-item summary h3 {
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: var(--color-navy-deep);
+    margin: 0;
+    font-family: var(--font-body);
+  }
+
+  .faq-item p {
+    color: var(--color-charcoal);
+    line-height: 1.7;
+    padding: 0 0 1.25rem;
+    margin: 0;
+  }
+
+  .faq-item a {
+    color: var(--color-gold-bright);
     text-decoration: underline;
   }
 

@@ -124,32 +124,32 @@ const ogImageAbsolute = ogImage.startsWith('http') ? ogImage : `${siteUrl}${ogIm
   <script type="application/ld+json" set:html={JSON.stringify({
     "@context": "https://schema.org",
     "@type": "WebSite",
+    "@id": "https://tedsvoiceacademy.com/#website",
     "name": "Ted's Voice Academy",
     "url": "https://tedsvoiceacademy.com",
+    "description": "Voice coaching for singing, speaking, and ensembles in Lacey, Washington. Founded by Ted Chamberlain.",
     "publisher": {
-      "@type": "Organization",
-      "name": "Ted's Voice Academy",
-      "url": "https://tedsvoiceacademy.com"
+      "@id": "https://tedsvoiceacademy.com/#business"
+    },
+    "potentialAction": {
+      "@type": "SearchAction",
+      "target": "https://tedsvoiceacademy.com/blog/?q={search_term_string}",
+      "query-input": "required name=search_term_string"
     }
   })} />
 
   <!-- LocalBusiness Structured Data (JSON-LD) -->
   <script type="application/ld+json" set:html={JSON.stringify({
     "@context": "https://schema.org",
-    "@type": "LocalBusiness",
+    "@type": ["LocalBusiness", "MusicSchool"],
+    "@id": "https://tedsvoiceacademy.com/#business",
     "name": "Ted's Voice Academy",
     "description": "Voice coaching for singing, speaking, and ensembles in Lacey, WA. Founded by Ted Chamberlain, a National Board Certified Teacher with 38+ years of experience and over 1,000 students coached since 1988.",
     "image": "https://tedsvoiceacademy.com/images/tva-logo.webp",
+    "logo": "https://tedsvoiceacademy.com/images/tva-logo.webp",
     "foundingDate": "2023-07-17",
     "founder": {
-      "@type": "Person",
-      "name": "Ted Chamberlain",
-      "jobTitle": "Voice Coach & Vocal Instructor",
-      "hasCredential": [
-        { "@type": "EducationalOccupationalCredential", "name": "BA in K-12 Music Education" },
-        { "@type": "EducationalOccupationalCredential", "name": "BA in Vocal Performance" },
-        { "@type": "EducationalOccupationalCredential", "name": "National Board Certified Teacher" }
-      ]
+      "@id": "https://tedsvoiceacademy.com/#person"
     },
     "address": {
       "@type": "PostalAddress",
@@ -175,9 +175,10 @@ const ogImageAbsolute = ogImage.startsWith('http') ? ogImage : `${siteUrl}${ogIm
       "closes": "18:00"
     },
     "areaServed": [
-      { "@type": "City", "name": "Lacey" },
-      { "@type": "City", "name": "Olympia" },
-      { "@type": "City", "name": "Tumwater" }
+      { "@type": "City", "name": "Lacey", "containedInPlace": { "@type": "State", "name": "Washington" } },
+      { "@type": "City", "name": "Olympia", "containedInPlace": { "@type": "State", "name": "Washington" } },
+      { "@type": "City", "name": "Tumwater", "containedInPlace": { "@type": "State", "name": "Washington" } },
+      { "@type": "AdministrativeArea", "name": "Thurston County" }
     ],
     "sameAs": [
       "https://www.facebook.com/TedsVoiceAcademy",

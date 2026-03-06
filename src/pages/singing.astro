@@ -17,14 +17,10 @@ import Breadcrumb from '../components/Breadcrumb.astro';
       "description": "One-on-one vocal coaching for singers of all styles and skill levels. Build a well-balanced voice through body alignment, breath coordination, healthy phonation, resonance, and expressive freedom.",
       "url": "https://tedsvoiceacademy.com/singing",
       "provider": {
-        "@type": "LocalBusiness",
-        "name": "Ted's Voice Academy",
-        "url": "https://tedsvoiceacademy.com"
+        "@id": "https://tedsvoiceacademy.com/#business"
       },
       "instructor": {
-        "@type": "Person",
-        "name": "Ted Chamberlain",
-        "url": "https://tedsvoiceacademy.com/about"
+        "@id": "https://tedsvoiceacademy.com/#person"
       },
       "courseMode": ["Blended"],
       "availableLanguage": "English",
@@ -46,9 +42,7 @@ import Breadcrumb from '../components/Breadcrumb.astro';
       "description": "Private singing lessons for all styles and skill levels in Lacey, WA. Classical, musical theater, pop, rock, barbershop, gospel, and more.",
       "url": "https://tedsvoiceacademy.com/singing",
       "provider": {
-        "@type": "LocalBusiness",
-        "name": "Ted's Voice Academy",
-        "url": "https://tedsvoiceacademy.com"
+        "@id": "https://tedsvoiceacademy.com/#business"
       },
       "serviceType": "Vocal Coaching",
       "areaServed": [
@@ -357,6 +351,100 @@ import Breadcrumb from '../components/Breadcrumb.astro';
       <p>There's no upper age limit. I've worked with singers well into their 70s and beyond. It's never too late to develop your voice.</p>
     </div>
   </section>
+
+  <!-- FAQ Section -->
+  <section class="faq-section">
+    <div class="container container-narrow">
+      <h2 class="reveal">Common questions about singing lessons</h2>
+
+      <div class="faq-list reveal-stagger">
+        <details class="faq-item reveal">
+          <summary><h3>How do I know if voice lessons are right for me?</h3></summary>
+          <p>Voice lessons are for anyone who wants to understand and improve how they use their voice. Whether you're a beginning singer, an experienced performer working through a challenge, or someone who simply loves to sing, lessons give you tools that last. No prior experience is required.</p>
+        </details>
+
+        <details class="faq-item reveal">
+          <summary><h3>What styles of singing do you teach?</h3></summary>
+          <p>I teach all styles. My approach builds a well-balanced voice first, then applies that foundation to whatever genre you love — classical, pop, musical theater, jazz, barbershop, gospel, or anything else. Good singing is good singing; the style just changes the notes.</p>
+        </details>
+
+        <details class="faq-item reveal">
+          <summary><h3>How long does it take to see results?</h3></summary>
+          <p>Most students notice meaningful improvement within the first few sessions — clearer tone, better breath support, or less strain. Lasting technical change takes consistent work over time, typically several months. The pace depends on your starting point, goals, and how often you practice.</p>
+        </details>
+
+        <details class="faq-item reveal">
+          <summary><h3>Do you teach children?</h3></summary>
+          <p>I work primarily with singers ages 14 and up. That's when most students have the focus and coordination to build lasting habits. For younger singers, I often recommend children's choirs as a wonderful way to build skills and fall in love with singing.</p>
+        </details>
+
+        <details class="faq-item reveal">
+          <summary><h3>Can I take singing lessons online?</h3></summary>
+          <p>Yes. I teach both in-person in Lacey, WA and virtually. Virtual lessons work well for most students, especially once we've established the fundamentals together.</p>
+        </details>
+
+        <details class="faq-item reveal">
+          <summary><h3>What is the Adaptive Voice Framework?</h3></summary>
+          <p>The <a href="/avf/">Adaptive Voice Framework (AVF)</a> is my comprehensive approach to voice development, built on Five Pillars and Eight Dials. It adapts to each singer rather than imposing a one-size-fits-all method. AVF guides everything I teach — and it's available as a book on Amazon.</p>
+        </details>
+      </div>
+    </div>
+  </section>
+
+  <script type="application/ld+json" set:html={JSON.stringify({
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "How do I know if voice lessons are right for me?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Voice lessons are for anyone who wants to understand and improve how they use their voice. Whether you're a beginning singer, an experienced performer working through a challenge, or someone who simply loves to sing, lessons give you tools that last. No prior experience is required."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "What styles of singing do you teach?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "I teach all styles. My approach builds a well-balanced voice first, then applies that foundation to whatever genre you love — classical, pop, musical theater, jazz, barbershop, gospel, or anything else. Good singing is good singing; the style just changes the notes."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "How long does it take to see results from singing lessons?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Most students notice meaningful improvement within the first few sessions — clearer tone, better breath support, or less strain. Lasting technical change takes consistent work over time, typically several months. The pace depends on your starting point, goals, and how often you practice."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Do you teach children?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "I work primarily with singers ages 14 and up. That's when most students have the focus and coordination to build lasting habits. For younger singers, I often recommend children's choirs as a wonderful way to build skills and fall in love with singing."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Can I take singing lessons online?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Yes. I teach both in-person in Lacey, WA and virtually. Virtual lessons work well for most students, especially once we've established the fundamentals together."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "What is the Adaptive Voice Framework?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "The Adaptive Voice Framework (AVF) is a comprehensive approach to voice development, built on Five Pillars and Eight Dials. It adapts to each singer rather than imposing a one-size-fits-all method. AVF guides everything Ted teaches — and it's available as a book on Amazon."
+        }
+      }
+    ]
+  })} />
 
   <SectionDivider variant="angle" topColor="var(--color-off-white)" bottomColor="var(--color-navy-deep)" />
 
@@ -1049,6 +1137,83 @@ import Breadcrumb from '../components/Breadcrumb.astro';
   }
 
   .cta-secondary a:hover {
+    text-decoration: underline;
+  }
+
+  /* FAQ Section */
+  .faq-section {
+    padding: 4rem 0;
+    background: var(--color-off-white);
+  }
+
+  .faq-section h2 {
+    font-family: var(--font-heading);
+    font-size: clamp(1.75rem, 3vw + 1rem, 2.5rem);
+    font-weight: 700;
+    color: var(--color-navy-deep);
+    text-align: center;
+    margin: 0 0 2rem;
+  }
+
+  .faq-list {
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+  }
+
+  .faq-item {
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+    padding: 0;
+  }
+
+  .faq-item:last-child {
+    border-bottom: none;
+  }
+
+  .faq-item summary {
+    padding: 1.25rem 0;
+    cursor: pointer;
+    list-style: none;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1rem;
+  }
+
+  .faq-item summary::-webkit-details-marker {
+    display: none;
+  }
+
+  .faq-item summary::after {
+    content: '+';
+    font-size: 1.5rem;
+    font-weight: 300;
+    color: var(--color-gold-bright);
+    flex-shrink: 0;
+    transition: transform 0.2s ease;
+  }
+
+  .faq-item[open] summary::after {
+    content: '−';
+  }
+
+  .faq-item summary h3 {
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: var(--color-navy-deep);
+    margin: 0;
+    font-family: var(--font-body);
+  }
+
+  .faq-item p {
+    color: var(--color-charcoal);
+    line-height: 1.7;
+    padding: 0 0 1.25rem;
+    margin: 0;
+  }
+
+  .faq-item a {
+    color: var(--color-gold-bright);
     text-decoration: underline;
   }
 
