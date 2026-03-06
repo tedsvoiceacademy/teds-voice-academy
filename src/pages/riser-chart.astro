@@ -16,7 +16,7 @@ const riserChartUrl = "https://riser.tedsvoiceacademy.com";
       "name": "Riser Chart",
       "applicationCategory": "UtilitiesApplication",
       "operatingSystem": "Web browser",
-      "description": "Drag-and-drop riser placement tool for chorus directors. Up to 24 color-coded voice parts, 200+ singers, 10 rows with 40 spots each, singer photos, timbre/resonance rings, batch editing, groups, events, unlimited formations, CSV roster import, branded PNG/JPG/PDF exports. Built by a director with 40+ years of experience.",
+      "description": "Drag-and-drop riser placement tool for chorus directors. Up to 24 color-coded voice parts, 200+ singers, 10 rows with 40 spots each, singer photos, timbre/resonance rings, batch editing, groups, events, unlimited formations, 4 layout styles (straight, curved, grid, free-form), auto-arrange templates, canvas annotations, singer links (together/apart), dark mode, share links, CSV roster import, branded PNG/JPG/PDF exports, multi-account support. Built by a director with 40+ years of experience.",
       "url": "https://riser.tedsvoiceacademy.com",
       "screenshot": "https://tedsvoiceacademy.com/images/riser-chart-screenshot.webp",
       "creator": {
@@ -28,7 +28,7 @@ const riserChartUrl = "https://riser.tedsvoiceacademy.com";
         "price": "99",
         "availability": "https://schema.org/InStock"
       },
-      "featureList": "Drag-and-drop placement, Click-to-swap, Auto-place, Up to 24 custom voice parts, Singer photos, Timbre/resonance color rings, Batch edit multi-select, Groups and ensembles, Events, Unlimited formations, 3 layout styles, Up to 10 rows, Up to 40 spots per row, CSV import/export, JSON backup/restore, Opt-in Cloud Sync, Branded PNG/JPG/PDF exports, Custom branding, Undo/redo, Keyboard shortcuts"
+      "featureList": "Drag-and-drop placement, Click-to-swap, Auto-place, Auto-arrange templates (5 patterns), Up to 24 custom voice parts, Singer photos, Timbre/resonance color rings, Batch edit multi-select, Groups and ensembles, Events, Unlimited formations, 4 layout styles (straight curved grid free-form), Up to 10 rows, Up to 40 spots per row, Singer Links (together/apart), Canvas annotations (text rectangles circles), Custom row labels, Per-formation photo mode, Dark mode, Share links (read-only URLs), Multi-account support, CSV import/export, JSON backup/restore, Opt-in Cloud Sync, Branded PNG/JPG/PDF exports, Print-friendly view, Custom branding with favicon, Undo/redo, Keyboard shortcuts, Onboarding tour"
     })} />
     <script type="application/ld+json" set:html={JSON.stringify({
       "@context": "https://schema.org",
@@ -47,7 +47,7 @@ const riserChartUrl = "https://riser.tedsvoiceacademy.com";
         {
           "@type": "Question",
           "name": "Is my data stored in the cloud?",
-          "acceptedAnswer": { "@type": "Answer", "text": "By default, all your chorus data — singers, formations, photos, branding — is stored locally on your device. If you enable the optional Cloud Sync feature (found in the Display menu), a copy is also stored securely in the cloud so you can keep multiple devices in sync. Cloud Sync is off by default." }
+          "acceptedAnswer": { "@type": "Answer", "text": "By default, all your chorus data — singers, formations, photos, branding — is stored locally on your device. If you enable the optional Cloud Sync feature (found in the Export menu), a copy is also stored securely in the cloud so you can keep multiple devices in sync. Cloud Sync is off by default." }
         },
         {
           "@type": "Question",
@@ -57,7 +57,7 @@ const riserChartUrl = "https://riser.tedsvoiceacademy.com";
         {
           "@type": "Question",
           "name": "Can I use Riser Chart on multiple devices?",
-          "acceptedAnswer": { "@type": "Answer", "text": "Yes. Activate with the same email and access code on each device. Enable Cloud Sync in the Display menu to automatically keep your data in sync across devices." }
+          "acceptedAnswer": { "@type": "Answer", "text": "Yes. Activate with the same email and access code on each device. Enable Cloud Sync in the Export menu to automatically keep your data in sync across devices." }
         },
         {
           "@type": "Question",
@@ -78,6 +78,26 @@ const riserChartUrl = "https://riser.tedsvoiceacademy.com";
           "@type": "Question",
           "name": "Can I import my roster from a spreadsheet?",
           "acceptedAnswer": { "@type": "Answer", "text": "Yes. Export your roster from Excel or Google Sheets as a CSV file, then use Roster > Import CSV. Download the CSV Template for the correct column format. Groups, voice parts, timbre ratings, height, and notes are all supported." }
+        },
+        {
+          "@type": "Question",
+          "name": "Can I share a formation with section leaders?",
+          "acceptedAnswer": { "@type": "Answer", "text": "Yes. Open Export > Copy Share Link to generate a read-only URL for any formation. Recipients can view the chart in their browser without needing an account or access code. Share links are snapshots — generate a new one after making changes." }
+        },
+        {
+          "@type": "Question",
+          "name": "Does Riser Chart have dark mode?",
+          "acceptedAnswer": { "@type": "Answer", "text": "Yes. Toggle dark mode in the Display menu. It applies to the entire UI. Your preference persists across sessions. Exports always use the standard light theme regardless of your display setting." }
+        },
+        {
+          "@type": "Question",
+          "name": "What is free-form layout?",
+          "acceptedAnswer": { "@type": "Answer", "text": "Free-form gives you a blank canvas with no riser rows or grid. Place singers anywhere by dragging or clicking — ideal for stage blocking and non-traditional formations. All other features work normally." }
+        },
+        {
+          "@type": "Question",
+          "name": "Can I use multiple accounts on the same computer?",
+          "acceptedAnswer": { "@type": "Answer", "text": "Yes. Each access code gets its own data silo — singers, formations, groups, branding, settings. Log out from the Help menu and log in with a different code. Works seamlessly with Cloud Sync." }
         }
       ]
     })} />
@@ -111,8 +131,8 @@ const riserChartUrl = "https://riser.tedsvoiceacademy.com";
   <!-- Answer Capsule -->
   <section class="capsule-section">
     <div class="container">
-      <p class="answer-capsule">Riser Chart is a browser-based riser placement tool for chorus directors, created by Ted Chamberlain. It features drag-and-drop singer placement, color-coded voice parts (up to 24 custom parts), singer photos with timbre/resonance visual rings, three layout styles (straight, curved, grid), up to 10 rows with 40 spots each, unlimited formations grouped by event, batch editing for large rosters, CSV roster import, branded PNG/JPG/PDF exports, and opt-in Cloud Sync to access your formations and roster across all your devices. Handles 200+ singers. One-time purchase of $99 with no subscription. Works in Chrome, Edge, Firefox, and Safari.</p>
-      <p class="page-date">Last updated: <time datetime="2026-02-24">February 24, 2026</time></p>
+      <p class="answer-capsule">Riser Chart is a browser-based riser placement tool for chorus directors, created by Ted Chamberlain. It features drag-and-drop singer placement, color-coded voice parts (up to 24 custom parts), singer photos with timbre/resonance visual rings, four layout styles (straight, curved, grid, free-form), up to 10 rows with 40 spots each, unlimited formations grouped by event, five auto-arrange templates, canvas annotations, singer links for proximity relationships, batch editing for large rosters, CSV roster import, dark mode, read-only share links, multi-account support, branded PNG/JPG/PDF exports, print-friendly view, and opt-in Cloud Sync to access your formations and roster across all your devices. Handles 200+ singers. One-time purchase of $99 with no subscription. Works in Chrome, Edge, Firefox, and Safari.</p>
+      <p class="page-date">Last updated: <time datetime="2026-03-06">March 6, 2026</time></p>
     </div>
   </section>
 
@@ -151,7 +171,7 @@ const riserChartUrl = "https://riser.tedsvoiceacademy.com";
   <section id="features" class="features-section">
     <div class="container">
       <h2 class="decorated-heading decorated-heading--light reveal">What's inside</h2>
-      <p class="section-intro reveal">Nine core capabilities that make riser placement fast, visual, and frustration-free.</p>
+      <p class="section-intro reveal">Everything you need to make riser placement fast, visual, and frustration-free.</p>
 
       <div class="features-grid reveal-stagger">
         <div class="feature-card reveal">
@@ -190,8 +210,8 @@ const riserChartUrl = "https://riser.tedsvoiceacademy.com";
               <rect x="14" y="14" width="7" height="7"/>
             </svg>
           </div>
-          <h3>3 Layout Styles, 10 Rows</h3>
-          <p>Straight rows, curved arcs, or rectangular grid — match your actual physical setup. Up to 10 rows (floor plus 9 levels), with each row independently adjustable from 1 to 40 spots. The canvas scales automatically.</p>
+          <h3>4 Layout Styles, 10 Rows</h3>
+          <p>Straight rows, curved arcs, rectangular grid, or free-form blank canvas — match your actual setup or create stage blocking diagrams. Up to 10 rows (floor plus 9 levels), with each row independently adjustable from 1 to 40 spots and custom row labels. The canvas scales automatically.</p>
         </div>
 
         <div class="feature-card reveal">
@@ -214,8 +234,8 @@ const riserChartUrl = "https://riser.tedsvoiceacademy.com";
               <line x1="9" y1="16" x2="13" y2="16"/>
             </svg>
           </div>
-          <h3>Unlimited Formations &amp; Events</h3>
-          <p>Create as many formations as you need — competition, holiday show, section rehearsal, experiments. Group formations by event (e.g., "Spring Concert"). Each formation keeps its own layout, placements, and group filter. Switch in one click.</p>
+          <h3>Formations, Events &amp; Auto-Arrange</h3>
+          <p>Create unlimited formations grouped by event. Five auto-arrange templates (Sections L→R, R→L, by Rows, Mixed, Random) get you started fast. Add text labels, rectangles, and circles as canvas annotations. Each formation keeps its own layout, placements, display mode, and group filter.</p>
         </div>
 
         <div class="feature-card reveal">
@@ -240,8 +260,8 @@ const riserChartUrl = "https://riser.tedsvoiceacademy.com";
               <polyline points="9 15 12 12 15 15"/>
             </svg>
           </div>
-          <h3>Branded Exports</h3>
-          <p>Export as PNG, JPG, or PDF — all at full native resolution with your chorus name, logo, accent color, and voice part colors. Brand-tinted riser platforms use shades of your accent color. Print, email, or project during rehearsal.</p>
+          <h3>Export, Share &amp; Print</h3>
+          <p>Export as PNG, JPG, or PDF at full resolution with your branding. Generate read-only share links so section leaders can view formations in their browser — no account needed. Print-friendly view hides all UI chrome for clean rehearsal handouts.</p>
         </div>
 
         <div class="feature-card reveal">
@@ -265,8 +285,43 @@ const riserChartUrl = "https://riser.tedsvoiceacademy.com";
               <path d="M6 8h.01M10 8h.01"/>
             </svg>
           </div>
-          <h3>Full Brand Customization</h3>
-          <p>Custom accent color tints headers, buttons, selection rings, and riser platforms. Upload your logo, set a custom favicon, choose a B&amp;W logo for print. Header text auto-adjusts for contrast. Your chorus, your look.</p>
+          <h3>Branding &amp; Dark Mode</h3>
+          <p>Custom accent color tints headers, buttons, and riser platforms. Upload your logo, B&amp;W logo for print, and custom favicon. Toggle dark mode for dim rehearsal spaces — your preference persists across sessions. Your chorus, your look.</p>
+        </div>
+
+        <div class="feature-card reveal">
+          <div class="feature-icon">
+            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true">
+              <path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"/>
+              <path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"/>
+            </svg>
+          </div>
+          <h3>Singer Links (Together / Apart)</h3>
+          <p>Define proximity relationships between singers. "Together" links show solid green lines — "Apart" links show dashed red lines on the canvas. Soft warnings remind you when placements conflict, but you always have the final say.</p>
+        </div>
+
+        <div class="feature-card reveal">
+          <div class="feature-icon">
+            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true">
+              <path d="M16 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/>
+              <circle cx="8.5" cy="7" r="4"/>
+              <polyline points="17 11 19 13 23 9"/>
+            </svg>
+          </div>
+          <h3>Multi-Account Support</h3>
+          <p>Each access code gets its own data silo — singers, formations, groups, branding, settings. Log out and log in with a different code on the same computer. Your email appears in the header so you always know which account is active.</p>
+        </div>
+
+        <div class="feature-card reveal">
+          <div class="feature-icon">
+            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true">
+              <circle cx="12" cy="12" r="10"/>
+              <line x1="12" y1="8" x2="12" y2="12"/>
+              <line x1="12" y1="16" x2="12.01" y2="16"/>
+            </svg>
+          </div>
+          <h3>Guided Onboarding</h3>
+          <p>A 7-step interactive tour walks new users through adding singers, building formations, using groups, exporting, and more. Replay anytime from the Help menu. Setup wizard on first launch configures voice parts, branding, and logo in minutes.</p>
         </div>
       </div>
     </div>
@@ -356,7 +411,8 @@ const riserChartUrl = "https://riser.tedsvoiceacademy.com";
           <li>Automatic updates — always the latest version</li>
           <li>Use on any device with your access code</li>
           <li>200+ singers, 10 rows, 24 voice parts, unlimited formations</li>
-          <li>Opt-in Cloud Sync across devices (plus JSON backup/restore)</li>
+          <li>4 layout styles, auto-arrange, annotations, singer links, dark mode</li>
+          <li>Share links, multi-account, Cloud Sync, JSON backup</li>
           <li>Email support included</li>
         </ul>
         <a href={riserChartUrl} class="pricing-cta" target="_blank" rel="noopener noreferrer">Get Access</a>
@@ -384,7 +440,7 @@ const riserChartUrl = "https://riser.tedsvoiceacademy.com";
 
       <details class="faq-item reveal">
         <summary>Is my data stored in the cloud?</summary>
-        <p>By default, all your chorus data — singers, formations, photos, branding — is stored locally on your device. If you enable the optional Cloud Sync feature (found in the Display menu), a copy is also stored securely in the cloud so you can keep multiple devices in sync. Cloud Sync is off by default.</p>
+        <p>By default, all your chorus data — singers, formations, photos, branding — is stored locally on your device. If you enable the optional Cloud Sync feature (found in the Export menu), a copy is also stored securely in the cloud so you can keep multiple devices in sync. Cloud Sync is off by default.</p>
       </details>
 
       <details class="faq-item reveal">
@@ -394,7 +450,7 @@ const riserChartUrl = "https://riser.tedsvoiceacademy.com";
 
       <details class="faq-item reveal">
         <summary>Can I use it on multiple devices?</summary>
-        <p>Yes. Activate with the same email and access code on each device. Enable Cloud Sync in the Display menu to automatically keep your data in sync across devices.</p>
+        <p>Yes. Activate with the same email and access code on each device. Enable Cloud Sync in the Export menu to automatically keep your data in sync across devices.</p>
       </details>
 
       <details class="faq-item reveal">
@@ -415,6 +471,26 @@ const riserChartUrl = "https://riser.tedsvoiceacademy.com";
       <details class="faq-item reveal">
         <summary>Can I import my roster from a spreadsheet?</summary>
         <p>Yes. Export your roster from Excel or Google Sheets as a CSV file, then use Roster > Import CSV. Download the CSV Template for the correct column format. Voice parts, groups, timbre ratings, height, and notes are all supported. Groups are auto-created if they don't already exist.</p>
+      </details>
+
+      <details class="faq-item reveal">
+        <summary>Can I share a formation with section leaders?</summary>
+        <p>Yes. Open Export > Copy Share Link to generate a read-only URL for any formation. Paste it into an email or text message. Recipients can view your chart in their browser — no account or access code required. Share links are snapshots, so generate a new one after making changes.</p>
+      </details>
+
+      <details class="faq-item reveal">
+        <summary>Does Riser Chart have dark mode?</summary>
+        <p>Yes. Toggle dark mode in the Display menu. It applies to the entire UI — header, sidebar, menus, modals, and canvas background. Your preference persists across sessions. Exports always use the standard light theme regardless of your display setting.</p>
+      </details>
+
+      <details class="faq-item reveal">
+        <summary>What is free-form layout?</summary>
+        <p>Free-form gives you a blank canvas with no riser rows or grid. Place singers anywhere by dragging or clicking — ideal for stage blocking, non-traditional formations, or any arrangement where singers don't stand on risers. All other features (swap, annotations, export) work normally.</p>
+      </details>
+
+      <details class="faq-item reveal">
+        <summary>Can I use multiple accounts on the same computer?</summary>
+        <p>Yes. Each access code gets its own data silo — singers, formations, groups, branding, settings. Log out from the Help menu, then log in with a different code. Works seamlessly with Cloud Sync. Your email appears in the header so you always know which account is active.</p>
       </details>
     </div>
   </section>
