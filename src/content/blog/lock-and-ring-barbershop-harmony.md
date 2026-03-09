@@ -41,8 +41,6 @@ What *was* that sound? Why did it feel that way — physical, penetrating, almos
 
 Eventually, I found the answers.
 
-![The difference between a correct chord and a ringing barbershop chord lies in harmonic alignment. When the overtones of the voices line up, the sound expands and the chord begins to ring.](/images/blog/lock_vs_intune.svg)
-
 ---
 
 ## This Is Not a Metaphor
@@ -77,8 +75,6 @@ When barbershop singers are truly chasing the sound the style is known for, they
 
 That distinction is the foundation of everything that follows.
 
-![Barbershop singers often tune chords toward pure acoustic relationships rather than the equal-tempered compromise used by most instruments.](/images/blog/tuning_comparison.svg)
-
 ---
 
 ## What Sound Waves Actually Do
@@ -95,8 +91,6 @@ Barbershop harmony, when it's truly working, is the sound of four human voices w
 
 That is the physics of expanded sound.
 
-![Sound waves reinforce each other when their peaks and troughs align. When they do not align, they interfere and weaken the sound.](/images/blog/wave_interference.svg)
-
 ---
 
 ## The Hidden Architecture of Every Voice
@@ -109,8 +103,6 @@ Every sung tone contains a whole series of additional tones layered above it —
 
 In everyday singing these overtones blend together and we hear them simply as the quality of the voice. We don't pick them out as separate pitches.
 
-![Every sung note contains a series of additional tones called harmonics or overtones. These hidden tones play a major role in the resonance of the voice.](/images/blog/harmonic_series.svg)
-
 Something remarkable happens when singers tune a chord to the natural acoustic relationships between notes.
 
 The overtones of different voices begin to line up with each other.
@@ -122,8 +114,6 @@ And this doesn't happen just once. It happens many times simultaneously, across 
 The chord contains frequencies — real, measurable acoustic energy — that the singers didn't individually create. The waves built it together.
 
 That is the expanded sound. And yes — it genuinely is larger than the sum of its parts.
-
-![When singers tune their voices to natural acoustic relationships, harmonics from different voices can land on the same frequencies and reinforce each other.](/images/blog/overtone_alignment.svg)
 
 ---
 
@@ -142,8 +132,6 @@ Listeners in that first encounter often notice one particular tone floating abov
 I know this because I was that listener once. Standing in a rehearsal room, completely certain I was hearing something that the four of us couldn't fully account for.
 
 I wasn't wrong.
-
-![When a chord locks, overtone reinforcement above the chord and difference tones below create a vertical column of sound larger than the voices that produced it.](/images/blog/expanded_sound_column.svg)
 
 ---
 
@@ -210,8 +198,6 @@ This effect cannot be experienced alone. It requires voices interacting in real 
 If you want to develop your ear more deliberately — to build the sensitivity that lets you hear the difference between approximate tuning and the precise acoustic alignment that produces lock and ring — that's something I've built a specific tool to help with. My **[Intonation Lab](/intonation-lab)** app was designed precisely for this: helping singers hear and internalize the difference between equal temperament and the pure intonation relationships that make expanded sound possible. You can't tune toward something you can't yet hear. Developing that sensitivity changes everything.
 
 And if you want to work directly on the intersection of vocal production, pure intonation, and expanded sound — the place where the voice and the harmony meet — that's the heart of what we do at **[Ted's Voice Academy](/).**
-
-![Spectrograms of ringing chords reveal strong harmonic bands where overtone energy reinforces across the spectrum.](/images/blog/ringing_chord_spectrogram.svg)
 
 ---
 
