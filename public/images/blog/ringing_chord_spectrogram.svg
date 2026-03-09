@@ -1,0 +1,23 @@
+
+<svg xmlns="http://www.w3.org/2000/svg" width="900" height="420">
+<text x="450" y="30" text-anchor="middle" font-size="24">Spectrogram of a Ringing Chord (Conceptual)</text>
+
+<!-- axes -->
+<line x1="80" y1="350" x2="850" y2="350"/>
+<line x1="80" y1="350" x2="80" y2="70"/>
+
+<text x="460" y="390" text-anchor="middle">Time</text>
+<text x="20" y="210" transform="rotate(-90 20,210)">Frequency</text>
+
+<!-- harmonic bands -->
+<rect x="120" y="300" width="650" height="8"/>
+<rect x="120" y="260" width="650" height="8"/>
+<rect x="120" y="220" width="650" height="8"/>
+<rect x="120" y="180" width="650" height="8"/>
+<rect x="120" y="140" width="650" height="8"/>
+
+<text x="460" y="110" text-anchor="middle" font-size="14">
+Strong horizontal bands represent reinforced harmonics
+</text>
+
+</svg>

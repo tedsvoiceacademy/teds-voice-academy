@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="600" height="500">
+<text x="300" y="30" text-anchor="middle" font-size="22">Expanded Column of Sound</text>
+
+<!-- singers -->
+<circle cx="120" cy="420" r="15"/><text x="120" y="450" text-anchor="middle">Bass</text>
+<circle cx="240" cy="420" r="15"/><text x="240" y="450" text-anchor="middle">Bar</text>
+<circle cx="360" cy="420" r="15"/><text x="360" y="450" text-anchor="middle">Lead</text>
+<circle cx="480" cy="420" r="15"/><text x="480" y="450" text-anchor="middle">Ten</text>
+
+<!-- column -->
+<rect x="250" y="120" width="100" height="280" fill="none" stroke="red" stroke-width="3"/>
+<text x="300" y="100" text-anchor="middle">Reinforced Overtones</text>
+
+<line x1="300" y1="420" x2="300" y2="470" stroke="blue" stroke-width="2"/>
+<text x="300" y="490" text-anchor="middle">Difference Tones</text>
+</svg>
