@@ -69,24 +69,20 @@ import Breadcrumb from '../components/Breadcrumb.astro';
               <input type="tel" id="phone" name="phone" />
             </div>
 
-            <!-- Interest (Checkboxes) -->
-            <fieldset class="form-group">
-              <legend>I'm interested in...</legend>
-              <div class="checkbox-group">
-                <label class="checkbox-label">
-                  <input type="checkbox" name="interest[]" value="singing" />
-                  <span>Singing</span>
-                </label>
-                <label class="checkbox-label">
-                  <input type="checkbox" name="interest[]" value="speaking" />
-                  <span>Speaking</span>
-                </label>
-                <label class="checkbox-label">
-                  <input type="checkbox" name="interest[]" value="ensemble" />
-                  <span>Ensemble Coaching</span>
-                </label>
-              </div>
-            </fieldset>
+            <!-- Interest -->
+            <div class="form-group">
+              <label for="interest">I'm interested in...</label>
+              <select id="interest" name="interest">
+                <option value="">Select an area</option>
+                <option value="singing">Singing Coaching</option>
+                <option value="speaking">Speaking Coaching</option>
+                <option value="ensemble">Ensemble Coaching</option>
+                <option value="workshops">Workshops</option>
+                <option value="avf">AVF Book</option>
+                <option value="pass">PASS Profile</option>
+                <option value="general">General Inquiry</option>
+              </select>
+            </div>
 
             <!-- Experience Level -->
             <div class="form-group">
@@ -94,9 +90,9 @@ import Breadcrumb from '../components/Breadcrumb.astro';
               <select id="experience" name="experience">
                 <option value="">Select your experience level</option>
                 <option value="beginner">Beginner</option>
-                <option value="some-experience">Some experience</option>
-                <option value="intermediate">Intermediate</option>
-                <option value="advanced">Advanced</option>
+                <option value="some">Some Experience</option>
+                <option value="experienced">Experienced</option>
+                <option value="professional">Professional</option>
               </select>
             </div>
 
@@ -106,14 +102,18 @@ import Breadcrumb from '../components/Breadcrumb.astro';
               <textarea id="goals" name="goals" rows="4"></textarea>
             </div>
 
-            <!-- Referral Source -->
+            <!-- How They Found Me -->
             <div class="form-group">
-              <label for="referral">How did you hear about me?</label>
-              <select id="referral" name="referral">
+              <label for="source">How did you hear about me?</label>
+              <select id="source" name="source">
                 <option value="">Select an option</option>
-                <option value="web-search">Web search</option>
+                <option value="web-search">Web Search</option>
+                <option value="social-media">Social Media</option>
                 <option value="referral">Referral</option>
-                <option value="social-media">Social media</option>
+                <option value="amazon">Amazon / AVF Book</option>
+                <option value="networking">Networking Event</option>
+                <option value="workshop">Workshop</option>
+                <option value="direct">Direct Contact (email/phone)</option>
                 <option value="other">Other</option>
               </select>
             </div>
@@ -241,6 +241,23 @@ import Breadcrumb from '../components/Breadcrumb.astro';
     </div>
   </section>
 </Layout>
+
+<script is:inline>
+  // Send form data to Notion CRM function alongside Netlify Forms
+  document.addEventListener('DOMContentLoaded', () => {
+    const form = document.querySelector('.contact-form');
+    if (!form) return;
+    form.addEventListener('submit', () => {
+      const data = Object.fromEntries(new FormData(form));
+      fetch('/.netlify/functions/submit-contact', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(data),
+        keepalive: true
+      }).catch(() => {});
+    });
+  });
+</script>
 
 <style>
   /* Hero Section */
