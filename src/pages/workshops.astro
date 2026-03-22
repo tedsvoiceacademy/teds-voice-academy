@@ -2,6 +2,7 @@
 import Layout from '../layouts/BaseLayout.astro';
 import SectionDivider from '../components/SectionDivider.astro';
 import Breadcrumb from '../components/Breadcrumb.astro';
+import NewsletterCTA from '../components/NewsletterCTA.astro';
 ---
 
 <Layout
@@ -326,6 +327,13 @@ import Breadcrumb from '../components/Breadcrumb.astro';
       </div>
     </div>
   </section>
+
+  <div class="container">
+    <NewsletterCTA
+      headline="Upcoming Workshops in Your Inbox"
+      text="Be the first to hear about new workshops, group training dates, and special events — delivered free once a month."
+    />
+  </div>
 </Layout>
 
 <style>

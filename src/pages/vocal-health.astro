@@ -2,6 +2,7 @@
 import Layout from '../layouts/BaseLayout.astro';
 import SectionDivider from '../components/SectionDivider.astro';
 import Breadcrumb from '../components/Breadcrumb.astro';
+import NewsletterCTA from '../components/NewsletterCTA.astro';
 ---
 
 <Layout
@@ -556,6 +557,13 @@ import Breadcrumb from '../components/Breadcrumb.astro';
       </div>
     </div>
   </section>
+
+  <div class="container">
+    <NewsletterCTA
+      headline="Vocal Health Tips Every Month — Free"
+      text="Warm-up routines, recovery techniques, and the latest vocal science — delivered to your inbox once a month."
+    />
+  </div>
 
   <SectionDivider variant="angle" topColor="var(--color-off-white)" bottomColor="var(--color-navy-deep)" />
 
