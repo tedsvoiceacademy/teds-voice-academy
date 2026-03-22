@@ -2,6 +2,7 @@
 import Layout from '../layouts/BaseLayout.astro';
 import SectionDivider from '../components/SectionDivider.astro';
 import Breadcrumb from '../components/Breadcrumb.astro';
+import NewsletterCTA from '../components/NewsletterCTA.astro';
 
 const pageTitle = "Voice Lesson Pricing";
 const pageDescription = "Transparent pricing for singing, speaking, and ensemble coaching. Monthly plans starting at $320 for weekly hour-long lessons. Lacey, WA and virtual options.";
@@ -309,6 +310,13 @@ const pageDescription = "Transparent pricing for singing, speaking, and ensemble
       <a href="/contact/" class="cta-button secondary">Purchase a Gift Certificate</a>
     </div>
   </section>
+
+  <div class="container">
+    <NewsletterCTA
+      headline="Not Ready for Coaching? Start Here."
+      text="The free monthly newsletter gives you real vocal exercises, technique lessons, and Ted's teaching insights. No commitment required."
+    />
+  </div>
 
   <SectionDivider variant="angle" topColor="var(--color-cream)" bottomColor="var(--color-navy-deep)" />
 

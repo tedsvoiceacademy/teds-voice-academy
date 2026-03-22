@@ -3,6 +3,7 @@ import Layout from '../../layouts/BaseLayout.astro';
 import SectionDivider from '../../components/SectionDivider.astro';
 import Breadcrumb from '../../components/Breadcrumb.astro';
 import ShareButtons from '../../components/ShareButtons.astro';
+import NewsletterCTA from '../../components/NewsletterCTA.astro';
 import { getCollection } from 'astro:content';
 
 const allPosts = await getCollection('blog', ({ data }) => !data.draft);
@@ -215,6 +216,10 @@ categoryNames.forEach(cat => {
       </form>
     </div>
   </section>
+
+  <div class="container">
+    <NewsletterCTA />
+  </div>
 
   <SectionDivider variant="wave" topColor="var(--color-navy-deep)" bottomColor="var(--color-white)" />
 

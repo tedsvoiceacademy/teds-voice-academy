@@ -2,6 +2,7 @@
 import Layout from '../layouts/BaseLayout.astro';
 import SectionDivider from '../components/SectionDivider.astro';
 import Breadcrumb from '../components/Breadcrumb.astro';
+import NewsletterCTA from '../components/NewsletterCTA.astro';
 
 const pageTitle = "Intonation Lab — Ear Training for Singers";
 const pageDescription = "Browser-based ear training tool with real-time pitch detection, just intonation targets, AI coaching feedback, and visual feedback. 29 intervals and chords, 52-exercise curriculum, free demo. From $99.";
@@ -354,6 +355,13 @@ const intlabUrl = "https://intlab.tedsvoiceacademy.com";
       </details>
     </div>
   </section>
+
+  <div class="container">
+    <NewsletterCTA
+      headline="Monthly Ear Training Tips & Ensemble Insights"
+      text="Practice routines, tuning exercises, and the science of how ensembles lock in — delivered free once a month."
+    />
+  </div>
 
   <!-- Final CTA Section -->
   <section class="final-cta">

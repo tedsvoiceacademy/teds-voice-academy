@@ -2,6 +2,7 @@
 import Layout from '../layouts/BaseLayout.astro';
 import SectionDivider from '../components/SectionDivider.astro';
 import Breadcrumb from '../components/Breadcrumb.astro';
+import NewsletterCTA from '../components/NewsletterCTA.astro';
 
 const pageTitle = "The Adaptive Voice Framework | Voice Training Book by Ted";
 const pageDescription = "A comprehensive guide to understanding how your voice works. The Adaptive Voice Framework distills 40 years of study into one complete owner's manual for singers.";
@@ -288,6 +289,13 @@ const amazonLink = "https://www.amazon.com/dp/B0GD2SH8J5";
       </details>
     </div>
   </section>
+
+  <div class="container">
+    <NewsletterCTA
+      headline="Monthly AVF Exercises in Your Inbox"
+      text="Get structured practice routines, technique deep dives, and the latest from the Adaptive Voice Framework — free every month."
+    />
+  </div>
 
   <!-- Final CTA Section -->
   <section class="avf-section final-cta">
