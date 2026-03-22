@@ -1,5 +1,6 @@
 ---
 import Layout from '../layouts/BaseLayout.astro';
+import Breadcrumb from '../components/Breadcrumb.astro';
 ---
 
 <Layout
@@ -9,6 +10,7 @@ import Layout from '../layouts/BaseLayout.astro';
   <main id="main-content">
     <section class="newsletter-hero">
       <div class="container">
+        <Breadcrumb items={[{ label: 'Newsletter' }]} />
         <div class="newsletter-hero__content">
           <p class="newsletter-hero__eyebrow">Free Monthly Newsletter</p>
           <h1 class="newsletter-hero__title">Your Voice, Every Month</h1>

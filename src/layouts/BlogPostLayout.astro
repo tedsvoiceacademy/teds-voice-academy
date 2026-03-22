@@ -52,6 +52,15 @@ const formattedUpdatedDate = updatedDate?.toLocaleDateString('en-US', {
   ogImage={heroImage}
 >
   <Fragment slot="head">
+    {categories.map(cat => (
+      <meta property="article:section" content={cat} />
+    ))}
+    {tags.map(tag => (
+      <meta property="article:tag" content={tag} />
+    ))}
+    <meta property="article:published_time" content={pubDate.toISOString()} />
+    {updatedDate && <meta property="article:modified_time" content={updatedDate.toISOString()} />}
+    <meta property="article:author" content="Ted Chamberlain" />
     <script type="application/ld+json" set:html={JSON.stringify({
       "@context": "https://schema.org",
       "@type": "BlogPosting",

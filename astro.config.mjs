@@ -7,7 +7,7 @@ export default defineConfig({
   output: 'static',
   integrations: [
     sitemap({
-      filter: (page) => !page.includes('/success'),
+      filter: (page) => !page.includes('/success') && !page.includes('/404'),
     }),
   ],
   build: {

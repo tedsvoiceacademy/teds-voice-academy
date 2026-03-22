@@ -61,6 +61,7 @@ Ted's Voice Academy offers several products: The Adaptive Voice Framework book, 
 - FAQ: https://tedsvoiceacademy.com/faq/
 - Contact: https://tedsvoiceacademy.com/contact/
 - Blog: https://tedsvoiceacademy.com/blog/
+- Newsletter: https://tedsvoiceacademy.com/newsletter/
 
 ## Social Media
 
