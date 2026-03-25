@@ -85,7 +85,7 @@ import Breadcrumb from '../components/Breadcrumb.astro';
           <a href="/contact/" class="btn btn-primary">Book a Free Discovery Call</a>
         </div>
         <div class="hero-image">
-          <img src="/images/hero-singing-lesson.webp" alt="Ted coaching a singing student in the studio" class="hero-photo" />
+          <img src="/images/hero-singing-lesson.webp" alt="Ted coaching a singing student in the studio" class="hero-photo" width="1200" height="800" />
         </div>
       </div>
     </div>
@@ -114,7 +114,7 @@ import Breadcrumb from '../components/Breadcrumb.astro';
           </p>
         </div>
         <div class="intro-image reveal-right">
-          <img src="/images/ted-teaching-studio.webp" alt="Ted Chamberlain coaching a singing lesson at the piano" class="intro-photo" loading="lazy" decoding="async" />
+          <img src="/images/ted-teaching-studio.webp" alt="Ted Chamberlain coaching a singing lesson at the piano" class="intro-photo" loading="lazy" decoding="async" width="1536" height="1024" />
         </div>
       </div>
     </div>
@@ -458,6 +458,24 @@ import Breadcrumb from '../components/Breadcrumb.astro';
     </div>
   </section>
 </Layout>
+
+<script is:inline>
+  document.addEventListener('DOMContentLoaded', () => {
+    const form = document.querySelector('.lead-magnet-form');
+    if (!form) return;
+    form.addEventListener('submit', () => {
+      const data = Object.fromEntries(new FormData(form));
+      data.channel = 'Lead Magnet Download';
+      data.magnet = 'Audition Readiness Checklist';
+      fetch('/.netlify/functions/submit-contact', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(data),
+        keepalive: true
+      }).catch(() => {});
+    });
+  });
+</script>
 
 <style>
   /* Hero Section */

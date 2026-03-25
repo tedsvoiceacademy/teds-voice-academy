@@ -1,10 +1,13 @@
 // netlify/functions/submit-contact.js
-// TVA Contact Form → Notion CRM
+// TVA Forms → Notion CRM
 // Deploys to: https://tedsvoiceacademy.com/.netlify/functions/submit-contact
 //
-// Required env variable in Netlify dashboard:
-//   NOTION_API_KEY  — your Notion integration token
-//   NOTION_DATABASE_ID — your TVA Contacts database ID (see below)
+// Handles ALL form submissions: contact, workshop, newsletter, lead magnets
+// Each form sends a "channel" field to identify the source.
+//
+// Required env variables in Netlify dashboard:
+//   NOTION_API_KEY     — your Notion integration token
+//   NOTION_DATABASE_ID — your TVA Contacts database ID
 //
 // TVA Contacts Database ID: 86748c8782c24266a8c53b9b2cc07ff1
 
@@ -40,25 +43,24 @@ const EXPERIENCE_MAP = {
   professional: "Professional",
 };
 
-exports.handler = async (event) => {
-  // Only allow POST
-  if (event.httpMethod !== "POST") {
-    return { statusCode: 405, body: "Method Not Allowed" };
-  }
+// Build Notion payload based on which form submitted
+function buildPayload(formData) {
+  const channel = formData.channel || "Website Contact Form";
 
-  // Parse the form body (supports both JSON and URL-encoded)
-  let formData;
-  try {
-    if (event.headers["content-type"]?.includes("application/json")) {
-      formData = JSON.parse(event.body);
-    } else {
-      formData = Object.fromEntries(new URLSearchParams(event.body));
-    }
-  } catch {
-    return { statusCode: 400, body: "Invalid form data" };
+  switch (channel) {
+    case "Workshop Inquiry":
+      return buildWorkshopPayload(formData);
+    case "Newsletter Signup":
+      return buildNewsletterPayload(formData);
+    case "Lead Magnet Download":
+      return buildLeadMagnetPayload(formData);
+    default:
+      return buildContactPayload(formData);
   }
+}
 
-  // Destructure expected fields from contact.astro form
+// --- Contact Form (existing) ---
+function buildContactPayload(formData) {
   const {
     name = "",
     email = "",
@@ -66,41 +68,34 @@ exports.handler = async (event) => {
     interest = "",
     experience = "",
     source = "",
-    goals = "",       // "What are you hoping to work on?" textarea
-    format = "",      // "Preferred lesson format" (goes into Notes)
-    additional = "",  // "Additional notes" textarea
+    goals = "",
+    format = "",
+    additional = "",
   } = formData;
 
-  // Split name into first/last
   const nameParts = name.trim().split(/\s+/);
   const firstName = nameParts[0] || name.trim();
   const lastName = nameParts.slice(1).join(" ");
 
-  // Build Notes field from all free-text inputs
   const notesParts = [];
   if (goals) notesParts.push(`Goals: ${goals}`);
   if (format) notesParts.push(`Preferred format: ${format}`);
   if (additional) notesParts.push(`Additional notes: ${additional}`);
   const notes = notesParts.join("\n\n");
 
-  // Map form values → Notion option labels
   const notionInterest = INTEREST_MAP[interest] || "General Inquiry";
   const notionSource = SOURCE_MAP[source] || "Other";
   const notionExperience = EXPERIENCE_MAP[experience] || undefined;
 
-  // Build Notion API payload
-  const notionPayload = {
+  return {
     parent: { database_id: NOTION_DATABASE_ID },
     properties: {
-      "First Name": {
-        title: [{ text: { content: firstName } }],
-      },
-      "Last Name": {
-        rich_text: [{ text: { content: lastName } }],
-      },
+      "First Name": { title: [{ text: { content: firstName } }] },
+      "Last Name": { rich_text: [{ text: { content: lastName } }] },
       Email: { email: email || null },
       Phone: { phone_number: phone || null },
       Status: { select: { name: "New" } },
+      "Contact Channel": { select: { name: "Website Contact Form" } },
       "Interested In": { select: { name: notionInterest } },
       "How They Found Me": { select: { name: notionSource } },
       ...(notionExperience && {
@@ -114,8 +109,127 @@ exports.handler = async (event) => {
       },
     },
   };
+}
 
-  // POST to Notion API
+// --- Workshop Inquiry Form ---
+function buildWorkshopPayload(formData) {
+  const {
+    "contact-name": contactName = "",
+    organization = "",
+    email = "",
+    phone = "",
+    "workshop-interest[]": workshopInterest = "",
+    "group-size": groupSize = "",
+    timeframe = "",
+    details = "",
+  } = formData;
+
+  const nameParts = contactName.trim().split(/\s+/);
+  const firstName = nameParts[0] || contactName.trim();
+  const lastName = nameParts.slice(1).join(" ");
+
+  const notesParts = [];
+  if (organization) notesParts.push(`Organization: ${organization}`);
+  if (workshopInterest) notesParts.push(`Workshop interest: ${workshopInterest}`);
+  if (groupSize) notesParts.push(`Group size: ${groupSize}`);
+  if (timeframe) notesParts.push(`Timeframe: ${timeframe}`);
+  if (details) notesParts.push(`Details: ${details}`);
+  const notes = notesParts.join("\n\n");
+
+  return {
+    parent: { database_id: NOTION_DATABASE_ID },
+    properties: {
+      "First Name": { title: [{ text: { content: firstName } }] },
+      "Last Name": { rich_text: [{ text: { content: lastName } }] },
+      Email: { email: email || null },
+      Phone: { phone_number: phone || null },
+      Status: { select: { name: "New" } },
+      "Contact Channel": { select: { name: "Workshop Inquiry" } },
+      "Interested In": { select: { name: "Workshops" } },
+      "How They Found Me": { select: { name: "Web Search" } },
+      ...(notes && {
+        Notes: { rich_text: [{ text: { content: notes } }] },
+      }),
+      "Next Action": {
+        rich_text: [{ text: { content: "Reply to workshop inquiry" } }],
+      },
+    },
+  };
+}
+
+// --- Newsletter Signup (blog + footer) ---
+function buildNewsletterPayload(formData) {
+  const {
+    "first-name": firstName = "",
+    email = "",
+    source: formSource = "",
+  } = formData;
+
+  const noteSource = formSource === "footer" ? "Footer newsletter signup" : "Blog newsletter signup";
+
+  return {
+    parent: { database_id: NOTION_DATABASE_ID },
+    properties: {
+      "First Name": { title: [{ text: { content: firstName || "(subscriber)" } }] },
+      Email: { email: email || null },
+      Status: { select: { name: "New" } },
+      "Contact Channel": { select: { name: "Newsletter Signup" } },
+      "Interested In": { select: { name: "General Inquiry" } },
+      "How They Found Me": { select: { name: "Web Search" } },
+      Notes: { rich_text: [{ text: { content: noteSource } }] },
+      "Next Action": {
+        rich_text: [{ text: { content: "Added via newsletter signup" } }],
+      },
+    },
+  };
+}
+
+// --- Lead Magnet Download (audition checklist, etc.) ---
+function buildLeadMagnetPayload(formData) {
+  const {
+    "first-name": firstName = "",
+    email = "",
+    magnet = "",
+  } = formData;
+
+  const magnetName = magnet || "Audition Readiness Checklist";
+
+  return {
+    parent: { database_id: NOTION_DATABASE_ID },
+    properties: {
+      "First Name": { title: [{ text: { content: firstName || "(subscriber)" } }] },
+      Email: { email: email || null },
+      Status: { select: { name: "New" } },
+      "Contact Channel": { select: { name: "Lead Magnet Download" } },
+      "Interested In": { select: { name: "Singing Coaching" } },
+      "How They Found Me": { select: { name: "Web Search" } },
+      Notes: { rich_text: [{ text: { content: `Downloaded: ${magnetName}` } }] },
+      "Next Action": {
+        rich_text: [{ text: { content: "Follow up — downloaded lead magnet" } }],
+      },
+    },
+  };
+}
+
+// --- Main handler ---
+exports.handler = async (event) => {
+  if (event.httpMethod !== "POST") {
+    return { statusCode: 405, body: "Method Not Allowed" };
+  }
+
+  let formData;
+  try {
+    if (event.headers["content-type"]?.includes("application/json")) {
+      formData = JSON.parse(event.body);
+    } else {
+      formData = Object.fromEntries(new URLSearchParams(event.body));
+    }
+  } catch {
+    return { statusCode: 400, body: "Invalid form data" };
+  }
+
+  const notionPayload = buildPayload(formData);
+
   try {
     const response = await fetch("https://api.notion.com/v1/pages", {
       method: "POST",
@@ -130,7 +244,6 @@ exports.handler = async (event) => {
     if (!response.ok) {
       const error = await response.text();
       console.error("Notion API error:", error);
-      // Still return 200 to the user — Netlify form backup catches it
       return {
         statusCode: 200,
         body: JSON.stringify({ success: true, notionError: true }),

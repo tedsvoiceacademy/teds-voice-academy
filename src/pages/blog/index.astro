@@ -234,6 +234,24 @@ categoryNames.forEach(cat => {
   </section>
 </Layout>
 
+<script is:inline>
+  document.addEventListener('DOMContentLoaded', () => {
+    const form = document.querySelector('.newsletter-form');
+    if (!form) return;
+    form.addEventListener('submit', () => {
+      const data = Object.fromEntries(new FormData(form));
+      data.channel = 'Newsletter Signup';
+      data.source = 'blog';
+      fetch('/.netlify/functions/submit-contact', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(data),
+        keepalive: true
+      }).catch(() => {});
+    });
+  });
+</script>
+
 <style>
   /* Hero Section */
   .hero {

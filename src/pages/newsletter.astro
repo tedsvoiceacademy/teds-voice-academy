@@ -6,6 +6,7 @@ import Breadcrumb from '../components/Breadcrumb.astro';
 <Layout
   title="Free Monthly Newsletter | Ted's Voice Academy"
   description="Monthly voice tips, practice routines, vocal science, and teaching insights — delivered free from Ted's studio to your inbox."
+  ogImage="/images/og/og-newsletter.jpg"
 >
   <main id="main-content">
     <section class="newsletter-hero">
@@ -401,6 +402,19 @@ import Breadcrumb from '../components/Breadcrumb.astro';
       btn.disabled = true;
       btn.style.opacity = '0.6';
       msg.textContent = '';
+
+      // Also send to Notion CRM
+      fetch('/.netlify/functions/submit-contact', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({
+          channel: 'Newsletter Signup',
+          email: email,
+          'first-name': '',
+          source: 'newsletter-page'
+        }),
+        keepalive: true
+      }).catch(() => {});
 
       try {
         const response = await fetch(

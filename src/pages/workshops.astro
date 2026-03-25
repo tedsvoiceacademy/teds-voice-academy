@@ -45,7 +45,7 @@ import NewsletterCTA from '../components/NewsletterCTA.astro';
           <a href="#workshop-inquiry" class="btn btn-primary">Bring Me to Your Event</a>
         </div>
         <div class="hero-image">
-          <img src="/images/hero-workshops.webp" alt="Ted coaching a barbershop quartet rehearsal" class="hero-photo" />
+          <img src="/images/hero-workshops.webp" alt="Ted coaching a barbershop quartet rehearsal" class="hero-photo" width="800" height="533" />
         </div>
       </div>
     </div>
@@ -70,7 +70,7 @@ import NewsletterCTA from '../components/NewsletterCTA.astro';
           <p>This is my signature educational offering — a live, in-person workshop series grounded in the <a href="/avf/">Adaptive Voice Framework (AVF)</a>.</p>
         </div>
         <div class="series-intro-image">
-          <img src="/images/ted-workshop-teaching.webp" alt="Ted Chamberlain teaching in his voice studio, gesturing while explaining vocal technique" class="series-photo" loading="lazy" decoding="async" />
+          <img src="/images/ted-workshop-teaching.webp" alt="Ted Chamberlain teaching in his voice studio, gesturing while explaining vocal technique" class="series-photo" loading="lazy" decoding="async" width="800" height="533" />
         </div>
       </div>
       <!-- Session Roadmap -->
@@ -335,6 +335,23 @@ import NewsletterCTA from '../components/NewsletterCTA.astro';
     />
   </div>
 </Layout>
+
+<script is:inline>
+  document.addEventListener('DOMContentLoaded', () => {
+    const form = document.querySelector('.inquiry-form');
+    if (!form) return;
+    form.addEventListener('submit', () => {
+      const data = Object.fromEntries(new FormData(form));
+      data.channel = 'Workshop Inquiry';
+      fetch('/.netlify/functions/submit-contact', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(data),
+        keepalive: true
+      }).catch(() => {});
+    });
+  });
+</script>
 
 <style>
   /* Hero Section */

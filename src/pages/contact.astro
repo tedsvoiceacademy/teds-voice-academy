@@ -19,7 +19,7 @@ import Breadcrumb from '../components/Breadcrumb.astro';
           <p class="hero-subtitle">I'd love to hear what you're working on — or what you're curious about.</p>
         </div>
         <div class="hero-image">
-          <img src="/images/hero-contact.webp" alt="Ted Chamberlain holding Top Business award plaque" class="hero-photo" />
+          <img src="/images/hero-contact.webp" alt="Ted Chamberlain holding Top Business award plaque" class="hero-photo" width="800" height="1192" />
         </div>
       </div>
     </div>
@@ -249,6 +249,7 @@ import Breadcrumb from '../components/Breadcrumb.astro';
     if (!form) return;
     form.addEventListener('submit', () => {
       const data = Object.fromEntries(new FormData(form));
+      data.channel = 'Website Contact Form';
       fetch('/.netlify/functions/submit-contact', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
