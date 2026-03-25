@@ -130,10 +130,10 @@ exports.handler = async (event) => {
     if (!response.ok) {
       const error = await response.text();
       console.error("Notion API error:", error);
-      // Still return 200 to the user — Netlify form backup catches it
+      // Temporarily exposing error for debugging — revert after testing
       return {
         statusCode: 200,
-        body: JSON.stringify({ success: true, notionError: true }),
+        body: JSON.stringify({ success: true, notionError: true, debug: error }),
       };
     }
 
