@@ -7,6 +7,8 @@ import NewsletterCTA from '../components/NewsletterCTA.astro';
 const pageTitle = "The Adaptive Voice Framework | Voice Training Book by Ted";
 const pageDescription = "A comprehensive guide to understanding how your voice works. The Adaptive Voice Framework distills 40 years of study into one complete owner's manual for singers.";
 const amazonLink = "https://www.amazon.com/dp/B0GD2SH8J5";
+const essentialsLink = "https://www.amazon.com/AVF-Guide-Essentials-Ted-Chamberlain-ebook/dp/B0GTRZTB75";
+const barbershopLink = "https://www.amazon.com/AVF-SINGERS-Barbershop-Adaptive-Framework-ebook/dp/B0GTRY4NDH";
 ---
 
 <Layout title={pageTitle} description={pageDescription} ogImage="/images/og/og-avf.jpg">
@@ -25,6 +27,34 @@ const amazonLink = "https://www.amazon.com/dp/B0GD2SH8J5";
         "isbn": "B0GD2SH8J5",
         "bookFormat": "https://schema.org/Paperback"
       }
+    })} />
+    <script type="application/ld+json" set:html={JSON.stringify({
+      "@context": "https://schema.org",
+      "@type": "Book",
+      "name": "AVF Guide: The Essentials",
+      "author": {
+        "@id": "https://tedsvoiceacademy.com/#person"
+      },
+      "description": "The entry-point guide to the Adaptive Voice Framework for singers and speakers. Covers the Five Pillars and Eight Dials in a concise, accessible format.",
+      "url": essentialsLink,
+      "workExample": [
+        { "@type": "Book", "isbn": "B0GTRZTB75", "bookFormat": "https://schema.org/Paperback" },
+        { "@type": "Book", "isbn": "B0GTRZTB75", "bookFormat": "https://schema.org/EBook" }
+      ]
+    })} />
+    <script type="application/ld+json" set:html={JSON.stringify({
+      "@context": "https://schema.org",
+      "@type": "Book",
+      "name": "AVF Singer's Guide: Barbershop Harmony",
+      "author": {
+        "@id": "https://tedsvoiceacademy.com/#person"
+      },
+      "description": "Applies the Adaptive Voice Framework to barbershop quartet and chorus singing. Covers lock and ring, vowel matching, part-specific guidance, and a coaching decoder.",
+      "url": barbershopLink,
+      "workExample": [
+        { "@type": "Book", "isbn": "B0GTRY4NDH", "bookFormat": "https://schema.org/Paperback" },
+        { "@type": "Book", "isbn": "B0GTRY4NDH", "bookFormat": "https://schema.org/EBook" }
+      ]
     })} />
     <script type="application/ld+json" set:html={JSON.stringify({
       "@context": "https://schema.org",
@@ -59,6 +89,16 @@ const amazonLink = "https://www.amazon.com/dp/B0GD2SH8J5";
           "@type": "Question",
           "name": "Is the book available in digital format?",
           "acceptedAnswer": { "@type": "Answer", "text": "Yes. The Kindle edition is $9.99 on Amazon. The paperback is $42.95. Both contain the full text, diagrams, and appendices." }
+        },
+        {
+          "@type": "Question",
+          "name": "What are the AVF Guide Series books?",
+          "acceptedAnswer": { "@type": "Answer", "text": "The AVF Guide Series applies the Adaptive Voice Framework to specific audiences. AVF Guide: The Essentials is the entry-point guide for any singer or speaker. AVF Singer's Guide: Barbershop Harmony applies the framework to quartet and chorus singing. Each guide stands alone — no prior reading required. Both are $14.95 paperback or $4.99 Kindle." }
+        },
+        {
+          "@type": "Question",
+          "name": "Do I need to read the main AVF book before the guides?",
+          "acceptedAnswer": { "@type": "Answer", "text": "Each guide is designed to stand alone — you can start with any book in the series. The guides introduce the Five Pillars and Eight Dials on their own terms. The main book offers deeper scientific and philosophical grounding for readers who want the complete picture." }
         }
       ]
     })} />
@@ -82,7 +122,7 @@ const amazonLink = "https://www.amazon.com/dp/B0GD2SH8J5";
           <p class="book-specs">Nearly 700 pages · Paperback $42.95 · Kindle $9.99</p>
         </div>
         <div class="hero-image">
-          <img src="/images/avf-book-cover.webp" alt="The Adaptive Voice Framework book cover" class="book-cover" />
+          <img src="/images/avf-book-cover.webp" alt="The Adaptive Voice Framework book cover" class="book-cover" width="896" height="1344" />
         </div>
       </div>
     </div>
@@ -93,7 +133,7 @@ const amazonLink = "https://www.amazon.com/dp/B0GD2SH8J5";
   <!-- Answer Capsule — structured summary for AI search engines -->
   <section class="capsule-section">
     <div class="container">
-      <p class="answer-capsule">The Adaptive Voice Framework (AVF) is a comprehensive voice training system developed by Ted Chamberlain over four decades of teaching and performing. AVF organizes vocal function into Five Pillars and Eight Dials, bridging science, somatics, and artistic expression. The book is available on Amazon in paperback ($42.95) and Kindle ($9.99).</p>
+      <p class="answer-capsule">The Adaptive Voice Framework (AVF) is a comprehensive voice training system developed by Ted Chamberlain over four decades of teaching and performing. AVF organizes vocal function into Five Pillars and Eight Dials, bridging science, somatics, and artistic expression. The main book is available on Amazon in paperback ($42.95) and Kindle ($9.99). The AVF Guide Series includes AVF Guide: The Essentials for singers and speakers, and AVF Singer's Guide: Barbershop Harmony for quartet and chorus singers ($14.95 paperback / $4.99 Kindle each).</p>
       <p class="page-date">Last updated: <time datetime="2026-02-05">February 5, 2026</time></p>
     </div>
   </section>
@@ -144,7 +184,7 @@ const amazonLink = "https://www.amazon.com/dp/B0GD2SH8J5";
           <p class="outro">These pillars work together as a balanced system. When one is out of alignment, the others compensate. Understanding this relationship gives you a clear starting point for growth — and helps you identify what's actually happening when something feels off.</p>
         </div>
         <div class="pillars-image reveal-right">
-          <img src="/images/avf-pillars.webp" alt="The Five Pillars of the Adaptive Voice Framework" loading="lazy" decoding="async" />
+          <img src="/images/avf-pillars.webp" alt="The Five Pillars of the Adaptive Voice Framework" loading="lazy" decoding="async" width="2000" height="1116" />
         </div>
       </div>
     </div>
@@ -158,7 +198,7 @@ const amazonLink = "https://www.amazon.com/dp/B0GD2SH8J5";
       <h2 class="reveal">The Eight Dials — settings that create stylistic variety</h2>
       <div class="dials-grid">
         <div class="dials-image reveal-left">
-          <img src="/images/avf-dials.webp" alt="The Eight Dials of the Adaptive Voice Framework" loading="lazy" decoding="async" />
+          <img src="/images/avf-dials.webp" alt="The Eight Dials of the Adaptive Voice Framework" loading="lazy" decoding="async" width="2048" height="1066" />
         </div>
         <div class="dials-content reveal-right">
           <p class="intro">While the pillars provide stability, the dials provide fluidity. These are the variables that let you shift your voice to fit different styles, contexts, and artistic choices:</p>
@@ -213,7 +253,7 @@ const amazonLink = "https://www.amazon.com/dp/B0GD2SH8J5";
       <h2 class="reveal">The Book</h2>
       <div class="book-grid">
         <div class="book-image reveal-left">
-          <img src="/images/avf-book-photo.webp" alt="The Adaptive Voice Framework book" loading="lazy" decoding="async" />
+          <img src="/images/avf-book-photo.webp" alt="The Adaptive Voice Framework book" loading="lazy" decoding="async" width="1092" height="1092" />
         </div>
         <div class="book-content reveal-right">
           <p class="book-title-display">AVF: The Adaptive Voice Framework</p>
@@ -239,6 +279,49 @@ const amazonLink = "https://www.amazon.com/dp/B0GD2SH8J5";
       </div>
     </div>
   </section>
+
+  <SectionDivider variant="curve" topColor="var(--color-avf-cream)" bottomColor="var(--color-avf-teal)" />
+
+  <!-- AVF Guide Series Section -->
+  <section class="avf-section guide-series-section">
+    <div class="container">
+      <h2 class="reveal">The AVF Guide Series</h2>
+      <p class="guide-series-intro reveal">The complete framework lives in the main book. The Guide Series brings it to focused audiences — shorter, targeted companions that stand on their own. Each guide introduces the Five Pillars and Eight Dials, then applies them where you need them most.</p>
+      <div class="guide-cards reveal-stagger">
+        <div class="guide-card reveal">
+          <div class="guide-card-image">
+            <img src="/images/avf-guide-essentials-cover.webp" alt="AVF Guide: The Essentials book cover" loading="lazy" decoding="async" width="896" height="1345" />
+          </div>
+          <div class="guide-card-content">
+            <h3>AVF Guide: The Essentials</h3>
+            <p class="guide-card-tagline">The entry point for singers and speakers</p>
+            <p>The core of the Adaptive Voice Framework in a concise, accessible format. Covers the Five Pillars and Eight Dials, functional listening, troubleshooting common vocal problems, and the concept of one instrument with many dialects. Written for anyone who uses their voice with intention — from the stage to the conference room.</p>
+            <div class="guide-card-meta">
+              <p class="guide-card-price">Paperback $14.95 · Kindle $4.99</p>
+              <a href={essentialsLink} class="cta-button primary" target="_blank" rel="noopener noreferrer">Order on Amazon</a>
+            </div>
+          </div>
+        </div>
+        <div class="guide-card reveal">
+          <div class="guide-card-image">
+            <img src="/images/avf-guide-barbershop-cover.webp" alt="AVF Singer's Guide: Barbershop Harmony book cover" loading="lazy" decoding="async" width="896" height="1344" />
+          </div>
+          <div class="guide-card-content">
+            <h3>AVF Singer's Guide: Barbershop Harmony</h3>
+            <p class="guide-card-tagline">For quartet and chorus singers</p>
+            <p>Applies the Adaptive Voice Framework to the barbershop style — lock and ring, formant matching, vowel tuning, and the acoustic engine behind expanded sound. Includes a coaching decoder that translates common barbershop directions into AVF language, part-specific guidance for all four voice parts, and practical exercises for rehearsal and performance.</p>
+            <div class="guide-card-meta">
+              <p class="guide-card-price">Paperback $14.95 · Kindle $4.99</p>
+              <a href={barbershopLink} class="cta-button primary" target="_blank" rel="noopener noreferrer">Order on Amazon</a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <p class="guide-series-note reveal">More guides are in development. Each one applies the framework to a specific singing tradition or voice use.</p>
+    </div>
+  </section>
+
+  <SectionDivider variant="wave" topColor="var(--color-avf-teal)" bottomColor="var(--color-avf-cream)" />
 
   <!-- Learn With Ted Section -->
   <section class="avf-section learn-section">
@@ -286,6 +369,16 @@ const amazonLink = "https://www.amazon.com/dp/B0GD2SH8J5";
       <details class="faq-item reveal">
         <summary>Is the book available in digital format?</summary>
         <p>Yes. The Kindle edition is $9.99 on Amazon. The paperback is $42.95. Both contain the full text, diagrams, and appendices.</p>
+      </details>
+
+      <details class="faq-item reveal">
+        <summary>What are the AVF Guide Series books?</summary>
+        <p>The AVF Guide Series applies the Adaptive Voice Framework to specific audiences. <a href={essentialsLink} target="_blank" rel="noopener noreferrer">AVF Guide: The Essentials</a> is the entry-point guide for any singer or speaker. <a href={barbershopLink} target="_blank" rel="noopener noreferrer">AVF Singer's Guide: Barbershop Harmony</a> applies the framework to quartet and chorus singing. Each guide stands alone — no prior reading required. Both are $14.95 paperback or $4.99 Kindle.</p>
+      </details>
+
+      <details class="faq-item reveal">
+        <summary>Do I need to read the main AVF book before the guides?</summary>
+        <p>Each guide is designed to stand alone — you can start with any book in the series. The guides introduce the Five Pillars and Eight Dials on their own terms. The main book offers deeper scientific and philosophical grounding for readers who want the complete picture.</p>
       </details>
     </div>
   </section>
@@ -767,6 +860,124 @@ const amazonLink = "https://www.amazon.com/dp/B0GD2SH8J5";
 
   .book-section .cta-button.primary:hover {
     background: #237d8f;
+  }
+
+  /* Guide Series Section */
+  .guide-series-section {
+    background:
+      url('/images/noise-texture.png') repeat,
+      linear-gradient(135deg, var(--color-avf-teal) 0%, #2d8a9b 100%);
+    background-size: 200px 200px, 100% 100%;
+    background-blend-mode: soft-light, normal;
+    color: var(--color-avf-cream);
+  }
+
+  .guide-series-section h2 {
+    font-family: 'Cinzel', serif;
+    font-size: 2rem;
+    font-weight: 600;
+    color: var(--color-avf-amber);
+    margin-bottom: 1.5rem;
+    text-align: center;
+  }
+
+  .guide-series-intro {
+    font-size: 1.1rem;
+    line-height: 1.7;
+    text-align: center;
+    max-width: 750px;
+    margin: 0 auto 3rem;
+  }
+
+  .guide-cards {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 2.5rem;
+  }
+
+  @media (min-width: 900px) {
+    .guide-cards {
+      grid-template-columns: 1fr 1fr;
+      gap: 3rem;
+    }
+  }
+
+  .guide-card {
+    background: rgba(255, 255, 255, 0.08);
+    border: 1px solid rgba(240, 232, 212, 0.2);
+    border-radius: 12px;
+    overflow: hidden;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+  }
+
+  .guide-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.25);
+  }
+
+  .guide-card-image {
+    display: flex;
+    justify-content: center;
+    padding: 2rem 2rem 0;
+  }
+
+  .guide-card-image img {
+    width: 220px;
+    height: auto;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
+    border-radius: 4px;
+  }
+
+  .guide-card-content {
+    padding: 1.5rem 2rem 2rem;
+  }
+
+  .guide-card-content h3 {
+    font-family: 'Cinzel', serif;
+    font-size: 1.25rem;
+    font-weight: 600;
+    color: var(--color-avf-amber);
+    margin: 0 0 0.5rem 0;
+  }
+
+  .guide-card-tagline {
+    font-family: 'Cormorant Garamond', serif;
+    font-style: italic;
+    font-size: 1.1rem;
+    color: var(--color-avf-cream);
+    margin: 0 0 1rem 0;
+    opacity: 0.9;
+  }
+
+  .guide-card-content > p:not(.guide-card-tagline):not(.guide-card-price) {
+    font-size: 0.95rem;
+    line-height: 1.7;
+    margin-bottom: 1.25rem;
+    opacity: 0.92;
+  }
+
+  .guide-card-meta {
+    margin-top: auto;
+  }
+
+  .guide-card-price {
+    font-size: 0.9rem;
+    font-weight: 600;
+    margin: 0 0 1rem 0;
+    opacity: 0.85;
+  }
+
+  .guide-card .cta-button.primary {
+    font-size: 0.9rem;
+    padding: 0.75rem 1.5rem;
+  }
+
+  .guide-series-note {
+    text-align: center;
+    font-style: italic;
+    font-size: 1rem;
+    opacity: 0.8;
+    margin-top: 2.5rem;
   }
 
   /* Learn Section */

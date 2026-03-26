@@ -24,6 +24,38 @@ const products = [
     status: 'live',
   },
   {
+    slug: 'avf-guide-essentials',
+    name: 'AVF Guide: The Essentials',
+    tagline: 'The entry point for singers and speakers',
+    description: 'The core of the Adaptive Voice Framework in a concise, accessible format. Covers the Five Pillars and Eight Dials, functional listening, troubleshooting, and the concept of one instrument with many dialects.',
+    price: '$4.99 – $14.95',
+    priceNote: 'Kindle $4.99 · Paperback $14.95',
+    type: 'Book',
+    image: '/images/avf-guide-essentials-cover.webp',
+    ctaLabel: 'Order on Amazon',
+    ctaUrl: 'https://www.amazon.com/AVF-Guide-Essentials-Ted-Chamberlain-ebook/dp/B0GTRZTB75',
+    ctaExternal: true,
+    internalPageUrl: '/avf',
+    internalPageLabel: 'Learn more about AVF',
+    status: 'live',
+  },
+  {
+    slug: 'avf-guide-barbershop',
+    name: 'AVF Singer\'s Guide: Barbershop Harmony',
+    tagline: 'For quartet and chorus singers',
+    description: 'Applies the Adaptive Voice Framework to barbershop singing — lock and ring, formant matching, vowel tuning, part-specific guidance for all four voice parts, and a coaching decoder that translates common barbershop directions into AVF language.',
+    price: '$4.99 – $14.95',
+    priceNote: 'Kindle $4.99 · Paperback $14.95',
+    type: 'Book',
+    image: '/images/avf-guide-barbershop-cover.webp',
+    ctaLabel: 'Order on Amazon',
+    ctaUrl: 'https://www.amazon.com/AVF-SINGERS-Barbershop-Adaptive-Framework-ebook/dp/B0GTRY4NDH',
+    ctaExternal: true,
+    internalPageUrl: '/avf',
+    internalPageLabel: 'Learn more about AVF',
+    status: 'live',
+  },
+  {
     slug: 'pass-profile',
     name: 'PASS Profile™',
     tagline: 'Discover how you naturally communicate',
@@ -213,7 +245,7 @@ const liveProducts = products.filter(p => p.status === 'live');
             )}
             <div class="product-card__image">
               {product.image ? (
-                <img src={product.image} alt={product.name} loading="lazy" decoding="async" />
+                <img src={product.image} alt={product.name} loading="lazy" decoding="async" width="400" height="300" />
               ) : (
                 <div class="product-card__placeholder">
                   {product.type === 'Download' ? (
