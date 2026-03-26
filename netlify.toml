@@ -9,6 +9,19 @@
 # Domain redirect handled by Netlify domain settings (bare domain is primary)
 # Do NOT add manual redirects between bare and www — they conflict with Netlify's built-in redirect
 
+# Redirect old tedsvoice.com domain to primary domain
+[[redirects]]
+  from = "https://tedsvoice.com/*"
+  to = "https://tedsvoiceacademy.com/:splat"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "https://www.tedsvoice.com/*"
+  to = "https://tedsvoiceacademy.com/:splat"
+  status = 301
+  force = true
+
 # NOTE: No catch-all redirect. Astro generates proper HTML files for all routes.
 # A catch-all /* -> /404 redirect was interfering with Netlify Forms POST handling.
 
