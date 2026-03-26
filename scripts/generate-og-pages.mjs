@@ -30,6 +30,9 @@ const pages = [
   { slug: 'shop', title: 'Shop', subtitle: 'Tools for every voice', accent: '#d4a84b' },
   { slug: 'blog', title: 'Blog', subtitle: 'Ideas, insights, and practical guidance', accent: '#d4a84b' },
   { slug: 'faq', title: 'FAQ', subtitle: 'Your questions answered', accent: '#d4a84b' },
+  { slug: 'homepage', title: "Ted's Voice Academy", subtitle: 'Singing · Speaking · Ensembles', accent: '#d4a84b' },
+  { slug: 'newsletter', title: 'Free Monthly Newsletter', subtitle: 'Voice tips, practice routines, and vocal science', accent: '#d4a84b' },
+  { slug: 'riser-chart', title: 'Riser Chart', subtitle: 'Drag-and-drop riser placement for directors', accent: '#d4a84b' },
 ];
 
 function escapeXml(str) {

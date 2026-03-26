@@ -81,7 +81,8 @@ Source content: Ted's gargle PDFs from `H:\OneDrive\Ted's Voice Academy\Vocal He
 - [x] **OG default image for social sharing** — DONE (Session 13). Generated `og-default.jpg` (1200x630px). BaseLayout updated with absolute URLs.
 - [x] **Per-page OG images** — DONE (Session 12). 14 branded OG images (1200x630) generated with sharp. All content pages wired with ogImage prop.
 - [ ] **Looker Studio weekly email** — Deferred until GA4 has data. Set up "TVA Website Weekly Performance Overview" report.
-- [ ] **Email newsletter system** — Buttondown recommended. Connects to existing newsletter signup forms.
+- [ ] **Expand CMS beyond blog** — Add editable sections (page text, pricing, FAQs, etc.) to Decap CMS so Ted can update more of the site through the admin interface without a dev session. Requires moving content from page files into CMS-managed data files. Ted requested this Feb 24, 2026.
+- [ ] **Email newsletter system** — Monthly newsletter, semi-automated (auto-pull content + AI-drafted copy, Ted reviews and sends). Ted has prior planning work on this — ask him for it when starting this task. Buttondown recommended. Connects to existing signup forms. Seed list via personal invites to current/former students and business contacts. (Discussed Feb 24, 2026.)
 - [ ] **Form notification email formatting** — Netlify form emails are plain/ugly. Needs serverless function or third-party integration.
 
 ---
