@@ -4,82 +4,112 @@ import Breadcrumb from '../components/Breadcrumb.astro';
 ---
 
 <Layout
-  title="Free Monthly Newsletter | Ted's Voice Academy"
-  description="Monthly voice tips, practice routines, vocal science, and teaching insights — delivered free from Ted's studio to your inbox."
+  title="Master Your Voice Monthly — Free Newsletter | Ted's Voice Academy"
+  description="Join 135+ singers, speakers, and directors getting monthly deep dives on vocal technique, practice routines, and voice science from Ted Chamberlain — free on the 1st of every month."
   ogImage="/images/og/og-newsletter.jpg"
 >
   <main id="main-content">
+
+    <!-- ==================== HERO ==================== -->
     <section class="newsletter-hero">
       <div class="container">
         <Breadcrumb items={[{ label: 'Newsletter' }]} />
-        <div class="newsletter-hero__content">
-          <p class="newsletter-hero__eyebrow">Free Monthly Newsletter</p>
-          <h1 class="newsletter-hero__title">Your Voice, Every Month</h1>
+        <div class="newsletter-hero__content reveal">
+          <p class="newsletter-hero__eyebrow">Master Your Voice Monthly</p>
+          <h1 class="newsletter-hero__title">One Email a Month.<br>A Stronger Voice for Life.</h1>
           <p class="newsletter-hero__subtitle">
-            Teaching insights, practice routines, and vocal science from four decades in the studio — delivered to your inbox on the first of every month.
+            Deep dives on singing technique, speaking skills, ensemble coaching, and vocal health — drawn from four decades in the studio and grounded in the Adaptive Voice Framework. Free on the 1st of every month.
           </p>
+          <p class="newsletter-hero__proof">Join 135+ singers, speakers, and directors already subscribed</p>
 
           <!-- Kit Signup Form -->
           <form id="kit-newsletter-form" class="newsletter-form" novalidate>
             <p class="hidden" aria-hidden="true">
               <label>Don't fill this out: <input name="bot-field" id="nl-bot"></label>
             </p>
-            <div class="newsletter-form__row">
-              <label for="nl-email" class="sr-only">Email address</label>
-              <input
-                type="email"
-                id="nl-email"
-                name="email"
-                placeholder="Your email address"
-                required
-                class="newsletter-form__input"
-              >
-              <button type="submit" class="newsletter-form__btn" id="nl-submit-btn">
-                Subscribe Free
-              </button>
+            <div class="newsletter-form__fields">
+              <div class="newsletter-form__row">
+                <label for="nl-fname" class="sr-only">First name</label>
+                <input
+                  type="text"
+                  id="nl-fname"
+                  name="first_name"
+                  placeholder="First name"
+                  class="newsletter-form__input newsletter-form__input--name"
+                >
+                <label for="nl-email" class="sr-only">Email address</label>
+                <input
+                  type="email"
+                  id="nl-email"
+                  name="email"
+                  placeholder="Your email address"
+                  required
+                  class="newsletter-form__input newsletter-form__input--email"
+                >
+                <button type="submit" class="newsletter-form__btn" id="nl-submit-btn">
+                  Subscribe Free
+                </button>
+              </div>
             </div>
             <p id="nl-form-message" class="newsletter-form__message" aria-live="polite"></p>
-            <p class="newsletter-form__note">No spam. Unsubscribe anytime. Sent once a month.</p>
+            <p class="newsletter-form__note">No spam. Unsubscribe anytime. One issue per month — that's it.</p>
           </form>
         </div>
       </div>
     </section>
 
-    <!-- What You'll Get -->
+    <!-- ==================== WHAT'S INSIDE ==================== -->
     <section class="newsletter-details">
       <div class="container">
-        <h2 class="newsletter-details__title">What's Inside Every Issue</h2>
-        <div class="newsletter-details__grid">
+        <h2 class="newsletter-details__title">What You Get Every Month</h2>
+        <p class="newsletter-details__intro">Each issue is a mini voice lesson — the same material I use in private coaching, structured so you can practice immediately.</p>
+        <div class="newsletter-details__grid reveal-stagger">
 
-          <div class="newsletter-card">
+          <div class="newsletter-card reveal">
             <div class="newsletter-card__icon" aria-hidden="true">&#127908;</div>
-            <h3 class="newsletter-card__title">Singing Technique Deep Dives</h3>
+            <h3 class="newsletter-card__title">Singing Deep Dives</h3>
             <p class="newsletter-card__text">
-              Monthly lessons drawn from The Adaptive Voice Framework™ — the same material Ted uses in private coaching. Five Core Pillars, Eight Adjustable Dials, real exercises you can practice immediately.
+              A full technique lesson each month — drawn from the Adaptive Voice Framework's Five Pillars and Eight Dials. Real vocal science, real exercises, real results.
             </p>
           </div>
 
-          <div class="newsletter-card">
+          <div class="newsletter-card reveal">
             <div class="newsletter-card__icon" aria-hidden="true">&#128483;&#65039;</div>
-            <h3 class="newsletter-card__title">Speaking & Communication Skills</h3>
+            <h3 class="newsletter-card__title">Speaking Skills</h3>
             <p class="newsletter-card__text">
-              Practical guidance for clear, confident speaking — combining vocal mechanics from AVF with communication patterns from the PASS Profile™ assessment.
+              How the same vocal mechanics that help singers also help speakers command a room, manage nerves, and communicate with confidence.
             </p>
           </div>
 
-          <div class="newsletter-card">
+          <div class="newsletter-card reveal">
             <div class="newsletter-card__icon" aria-hidden="true">&#127925;</div>
-            <h3 class="newsletter-card__title">Practice Routines & Quick Wins</h3>
+            <h3 class="newsletter-card__title">4-Week Practice Routines</h3>
             <p class="newsletter-card__text">
-              A structured 4-week practice routine each month, plus bite-sized tips you can use in 30 seconds. Real exercises, not vague advice.
+              A structured, week-by-week practice plan you can print out and tape to your music stand. Five minutes a day, four days a week.
             </p>
           </div>
 
-          <div class="newsletter-card">
-            <div class="newsletter-card__icon" aria-hidden="true">&#128240;</div>
-            <h3 class="newsletter-card__title">Voice News, Trivia & Fun</h3>
+          <div class="newsletter-card reveal">
+            <div class="newsletter-card__icon" aria-hidden="true">&#129657;</div>
+            <h3 class="newsletter-card__title">Ensemble Corner</h3>
             <p class="newsletter-card__text">
-              Curated voice science news with Ted's take, vocal health tips, trivia, and the occasional voice joke. Because learning should be enjoyable.
+              Directors and section leaders: insights on blend, balance, and the shared habits that make an ensemble lock — from barbershop quartets to community choirs.
+            </p>
+          </div>
+
+          <div class="newsletter-card reveal">
+            <div class="newsletter-card__icon" aria-hidden="true">&#129529;</div>
+            <h3 class="newsletter-card__title">Vocal Health</h3>
+            <p class="newsletter-card__text">
+              Seasonal care tips, hydration science, and red flags to watch for. Prevention-focused guidance for anyone who relies on their voice.
+            </p>
+          </div>
+
+          <div class="newsletter-card reveal">
+            <div class="newsletter-card__icon" aria-hidden="true">&#128240;</div>
+            <h3 class="newsletter-card__title">Voice News, Q&A & Fun</h3>
+            <p class="newsletter-card__text">
+              Curated voice science news, a reader question each month, trivia, and a voice joke — because learning should be enjoyable.
             </p>
           </div>
 
@@ -87,10 +117,87 @@ import Breadcrumb from '../components/Breadcrumb.astro';
       </div>
     </section>
 
-    <!-- About Ted -->
+    <!-- ==================== ISSUE PREVIEW ==================== -->
+    <section class="newsletter-preview">
+      <div class="container">
+        <div class="preview-header reveal">
+          <p class="preview-header__label">April 2026 Issue</p>
+          <h2 class="preview-header__title">Here's What the First Issue Covers</h2>
+          <p class="preview-header__sub">A preview of the debut issue of <em>Master Your Voice Monthly</em> — arriving April 1.</p>
+        </div>
+
+        <div class="preview-body reveal">
+          <div class="preview-excerpt">
+            <h3>Ted's Voice Note</h3>
+            <p>
+              "Recently I was working with a client — a long-time singer and performer — who was coming home from chorus rehearsals genuinely fatigued. We started looking at what was actually happening with her breath during singing, and pretty quickly we found it: she had internalized 'breath support' as something that should be constant and effortful. When we shifted her attention from 'apply support' to 'feel the balance,' something released. The following week she came back and said the strain after rehearsal was simply gone."
+            </p>
+            <p class="preview-excerpt__source">— from the April issue</p>
+          </div>
+
+          <div class="preview-toc">
+            <h3>In This Issue</h3>
+            <ul>
+              <li><strong>Deep Dive:</strong> The Truth About Breath Support — what it actually means, the two AVF dials involved, and common mistakes</li>
+              <li><strong>4-Week Practice Routine:</strong> Breath work progression from awareness to performance application</li>
+              <li><strong>Speaking Spotlight:</strong> How breath changes your pacing, pauses, and presence in a room</li>
+              <li><strong>Ensemble Corner:</strong> Breath as the ensemble's invisible conductor</li>
+              <li><strong>Vocal Health:</strong> April's transitional weather and your voice</li>
+              <li><strong>Voice News:</strong> Injectable gel for vocal cord injuries, World Voice Day, new research on singer-specific vocal hygiene</li>
+              <li><strong>Quick Wins:</strong> Five breath tips you can use today</li>
+              <li><strong>Reader Q&A, Did You Know, Quote & Joke of the Month</strong></li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="preview-cta reveal">
+          <p>The first issue drops <strong>April 1</strong>. Subscribe now so you don't miss it.</p>
+          <a href="#nl-email" class="preview-cta__btn">Get the April Issue Free</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================== WHAT'S NEW AT TVA ==================== -->
+    <section class="whats-new">
+      <div class="container">
+        <h2 class="whats-new__title reveal">What's New at Ted's Voice Academy</h2>
+        <div class="whats-new__grid reveal-stagger">
+
+          <div class="whats-new__item reveal">
+            <span class="whats-new__badge">New</span>
+            <h3 class="whats-new__item-title">Master Your Voice Monthly Launches April 1</h3>
+            <p class="whats-new__item-text">
+              The free monthly newsletter is here. Deep dives on technique, 4-week practice routines, voice science, ensemble tips, and more — delivered on the 1st of every month.
+            </p>
+            <a href="#nl-email" class="whats-new__link">Subscribe free &rarr;</a>
+          </div>
+
+          <div class="whats-new__item reveal">
+            <span class="whats-new__badge">New Book</span>
+            <h3 class="whats-new__item-title">AVF Guide: The Essentials</h3>
+            <p class="whats-new__item-text">
+              The entry-point guide for any singer or speaker. Covers the Five Pillars and Eight Dials in a concise format with practical exercises. No prior reading required.
+            </p>
+            <a href="/avf" class="whats-new__link">Learn more &rarr;</a>
+          </div>
+
+          <div class="whats-new__item reveal">
+            <span class="whats-new__badge">New Book</span>
+            <h3 class="whats-new__item-title">AVF Singer's Guide: Barbershop Harmony</h3>
+            <p class="whats-new__item-text">
+              Applies the framework to quartet and chorus singing — lock and ring, formant matching, vowel tuning, and a coaching decoder with part-specific guidance.
+            </p>
+            <a href="/avf" class="whats-new__link">Learn more &rarr;</a>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================== ABOUT TED ==================== -->
     <section class="newsletter-about">
       <div class="container">
-        <div class="newsletter-about__content">
+        <div class="newsletter-about__content reveal">
           <img
             src="/images/ted-headshot.webp"
             alt="Ted Chamberlain"
@@ -112,32 +219,44 @@ import Breadcrumb from '../components/Breadcrumb.astro';
       </div>
     </section>
 
-    <!-- Bottom CTA -->
+    <!-- ==================== BOTTOM CTA ==================== -->
     <section class="newsletter-bottom-cta">
-      <div class="container">
-        <h2>Ready to understand your voice better?</h2>
+      <div class="container reveal">
+        <h2>Master Your Voice Monthly — Free Forever</h2>
+        <p class="newsletter-bottom-cta__sub">One email. Once a month. Real voice lessons from a real voice teacher.</p>
         <form id="kit-newsletter-form-bottom" class="newsletter-form newsletter-form--centered" novalidate>
           <p class="hidden" aria-hidden="true">
             <label>Don't fill this out: <input name="bot-field" id="nl-bot-bottom"></label>
           </p>
-          <div class="newsletter-form__row">
-            <label for="nl-email-bottom" class="sr-only">Email address</label>
-            <input
-              type="email"
-              id="nl-email-bottom"
-              name="email"
-              placeholder="Your email address"
-              required
-              class="newsletter-form__input"
-            >
-            <button type="submit" class="newsletter-form__btn" id="nl-submit-btn-bottom">
-              Subscribe Free
-            </button>
+          <div class="newsletter-form__fields">
+            <div class="newsletter-form__row">
+              <label for="nl-fname-bottom" class="sr-only">First name</label>
+              <input
+                type="text"
+                id="nl-fname-bottom"
+                name="first_name"
+                placeholder="First name"
+                class="newsletter-form__input newsletter-form__input--name"
+              >
+              <label for="nl-email-bottom" class="sr-only">Email address</label>
+              <input
+                type="email"
+                id="nl-email-bottom"
+                name="email"
+                placeholder="Your email address"
+                required
+                class="newsletter-form__input newsletter-form__input--email"
+              >
+              <button type="submit" class="newsletter-form__btn" id="nl-submit-btn-bottom">
+                Subscribe Free
+              </button>
+            </div>
           </div>
           <p id="nl-form-message-bottom" class="newsletter-form__message" aria-live="polite"></p>
         </form>
       </div>
     </section>
+
   </main>
 </Layout>
 
@@ -155,41 +274,53 @@ import Breadcrumb from '../components/Breadcrumb.astro';
   }
   .newsletter-hero__eyebrow {
     font-family: var(--font-body);
-    font-size: 0.85rem;
+    font-size: 1.25rem;
+    font-weight: 600;
     text-transform: uppercase;
     letter-spacing: 0.15em;
     color: var(--color-gold-bright);
-    margin-bottom: 1rem;
+    margin-bottom: 0.75rem;
   }
   .newsletter-hero__title {
     font-family: var(--font-heading);
     font-size: clamp(2rem, 5vw, 3.2rem);
+    font-weight: 700;
     margin-bottom: 1.25rem;
     line-height: 1.2;
+    color: var(--color-white);
   }
   .newsletter-hero__subtitle {
     font-family: var(--font-body);
     font-size: 1.1rem;
     line-height: 1.7;
-    max-width: 600px;
-    margin: 0 auto 2.5rem;
+    max-width: 640px;
+    margin: 0 auto 1.25rem;
     opacity: 0.9;
+  }
+  .newsletter-hero__proof {
+    font-family: var(--font-body);
+    font-size: 0.9rem;
+    color: var(--color-gold-bright);
+    margin-bottom: 2rem;
+    font-weight: 500;
   }
 
   /* ========== Newsletter Form ========== */
   .newsletter-form {
-    max-width: 480px;
+    max-width: 560px;
     margin: 0 auto;
   }
   .newsletter-form--centered {
     text-align: center;
+  }
+  .newsletter-form__fields {
+    width: 100%;
   }
   .newsletter-form__row {
     display: flex;
     gap: 0.5rem;
   }
   .newsletter-form__input {
-    flex: 1;
     padding: 0.85rem 1rem;
     border: 2px solid rgba(212, 168, 75, 0.3);
     border-radius: 6px;
@@ -198,6 +329,14 @@ import Breadcrumb from '../components/Breadcrumb.astro';
     font-family: var(--font-body);
     font-size: 1rem;
     transition: border-color 0.2s ease;
+  }
+  .newsletter-form__input--name {
+    flex: 0 1 140px;
+    min-width: 100px;
+  }
+  .newsletter-form__input--email {
+    flex: 1;
+    min-width: 0;
   }
   .newsletter-form__input::placeholder {
     color: rgba(245, 240, 225, 0.5);
@@ -237,7 +376,7 @@ import Breadcrumb from '../components/Breadcrumb.astro';
     margin-top: 0.75rem;
   }
 
-  /* ========== What You'll Get ========== */
+  /* ========== What You Get ========== */
   .newsletter-details {
     padding: 4rem 1.5rem;
     background: var(--color-off-white);
@@ -246,14 +385,23 @@ import Breadcrumb from '../components/Breadcrumb.astro';
     font-family: var(--font-heading);
     font-size: 1.8rem;
     text-align: center;
-    margin-bottom: 2.5rem;
+    margin-bottom: 0.75rem;
     color: var(--color-navy-deep);
+  }
+  .newsletter-details__intro {
+    font-family: var(--font-body);
+    font-size: 1.05rem;
+    text-align: center;
+    max-width: 600px;
+    margin: 0 auto 2.5rem;
+    color: var(--color-charcoal);
+    line-height: 1.6;
   }
   .newsletter-details__grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
     gap: 1.5rem;
-    max-width: 900px;
+    max-width: 960px;
     margin: 0 auto;
   }
   .newsletter-card {
@@ -262,6 +410,11 @@ import Breadcrumb from '../components/Breadcrumb.astro';
     padding: 1.75rem;
     border-top: 3px solid var(--color-gold-bright);
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+  }
+  .newsletter-card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
   }
   .newsletter-card__icon {
     font-size: 1.8rem;
@@ -278,6 +431,198 @@ import Breadcrumb from '../components/Breadcrumb.astro';
     font-size: 0.92rem;
     line-height: 1.6;
     color: var(--color-charcoal);
+  }
+
+  /* ========== Issue Preview ========== */
+  .newsletter-preview {
+    padding: 4rem 1.5rem;
+    background:
+      url('/images/noise-texture.png') repeat,
+      linear-gradient(135deg, var(--color-navy-deep) 0%, var(--color-navy-medium) 100%);
+    background-size: 200px 200px, 100% 100%;
+    background-blend-mode: soft-light, normal;
+    color: var(--color-cream);
+  }
+  .preview-header {
+    text-align: center;
+    margin-bottom: 2.5rem;
+  }
+  .preview-header__label {
+    font-family: var(--font-body);
+    font-size: 0.85rem;
+    text-transform: uppercase;
+    letter-spacing: 0.15em;
+    color: var(--color-gold-bright);
+    margin-bottom: 0.75rem;
+    font-weight: 600;
+  }
+  .preview-header__title {
+    font-family: var(--font-heading);
+    font-size: clamp(1.5rem, 3vw, 2rem);
+    font-weight: 700;
+    color: var(--color-white);
+    margin-bottom: 0.75rem;
+  }
+  .preview-header__sub {
+    font-family: var(--font-body);
+    font-size: 1rem;
+    opacity: 0.85;
+    max-width: 500px;
+    margin: 0 auto;
+  }
+  .preview-body {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+    max-width: 900px;
+    margin: 0 auto 2.5rem;
+  }
+  .preview-excerpt {
+    background: rgba(255, 255, 255, 0.06);
+    border-left: 3px solid var(--color-gold-bright);
+    border-radius: 0 8px 8px 0;
+    padding: 1.75rem;
+  }
+  .preview-excerpt h3 {
+    font-family: var(--font-heading);
+    font-size: 1.15rem;
+    color: var(--color-gold-bright);
+    margin-bottom: 1rem;
+  }
+  .preview-excerpt p {
+    font-family: var(--font-body);
+    font-size: 0.92rem;
+    line-height: 1.7;
+    font-style: italic;
+    opacity: 0.9;
+  }
+  .preview-excerpt__source {
+    font-style: normal !important;
+    font-size: 0.8rem !important;
+    opacity: 0.6 !important;
+    margin-top: 1rem;
+  }
+  .preview-toc {
+    padding: 1.75rem;
+  }
+  .preview-toc h3 {
+    font-family: var(--font-heading);
+    font-size: 1.15rem;
+    color: var(--color-gold-bright);
+    margin-bottom: 1rem;
+  }
+  .preview-toc ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+  .preview-toc li {
+    font-family: var(--font-body);
+    font-size: 0.88rem;
+    line-height: 1.5;
+    padding: 0.5rem 0;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+    opacity: 0.9;
+  }
+  .preview-toc li:last-child {
+    border-bottom: none;
+  }
+  .preview-toc strong {
+    color: var(--color-gold-bright);
+    font-weight: 600;
+  }
+  .preview-cta {
+    text-align: center;
+  }
+  .preview-cta p {
+    font-family: var(--font-body);
+    font-size: 1.05rem;
+    margin-bottom: 1.25rem;
+  }
+  .preview-cta__btn {
+    display: inline-block;
+    padding: 0.85rem 2rem;
+    background: var(--color-gold-bright);
+    color: var(--color-navy-deep);
+    font-family: var(--font-body);
+    font-weight: 600;
+    font-size: 1rem;
+    border-radius: 6px;
+    text-decoration: none;
+    transition: background 0.2s ease, transform 0.1s ease;
+  }
+  .preview-cta__btn:hover {
+    background: var(--color-gold-hover);
+    transform: translateY(-1px);
+  }
+
+  /* ========== What's New ========== */
+  .whats-new {
+    padding: 4rem 1.5rem;
+    background: var(--color-off-white);
+  }
+  .whats-new__title {
+    font-family: var(--font-heading);
+    font-size: 1.8rem;
+    text-align: center;
+    margin-bottom: 2.5rem;
+    color: var(--color-navy-deep);
+  }
+  .whats-new__grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 1.5rem;
+    max-width: 960px;
+    margin: 0 auto;
+  }
+  .whats-new__item {
+    background: var(--color-white);
+    border-radius: 8px;
+    padding: 1.75rem;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
+    position: relative;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+  }
+  .whats-new__item:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
+  }
+  .whats-new__badge {
+    display: inline-block;
+    background: var(--color-gold-bright);
+    color: var(--color-navy-deep);
+    font-family: var(--font-body);
+    font-size: 0.7rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    padding: 0.25rem 0.6rem;
+    border-radius: 3px;
+    margin-bottom: 0.75rem;
+  }
+  .whats-new__item-title {
+    font-family: var(--font-heading);
+    font-size: 1.1rem;
+    margin-bottom: 0.6rem;
+    color: var(--color-navy-deep);
+  }
+  .whats-new__item-text {
+    font-family: var(--font-body);
+    font-size: 0.92rem;
+    line-height: 1.6;
+    color: var(--color-charcoal);
+    margin-bottom: 0.75rem;
+  }
+  .whats-new__link {
+    font-family: var(--font-body);
+    font-size: 0.9rem;
+    font-weight: 600;
+    color: var(--color-gold-bright);
+    text-decoration: none;
+    transition: color 0.2s ease;
+  }
+  .whats-new__link:hover {
+    color: var(--color-gold-hover);
   }
 
   /* ========== About Ted ========== */
@@ -328,13 +673,28 @@ import Breadcrumb from '../components/Breadcrumb.astro';
   .newsletter-bottom-cta h2 {
     font-family: var(--font-heading);
     font-size: 1.8rem;
+    margin-bottom: 0.75rem;
+    color: var(--color-white);
+  }
+  .newsletter-bottom-cta__sub {
+    font-family: var(--font-body);
+    font-size: 1.05rem;
+    opacity: 0.85;
     margin-bottom: 2rem;
   }
 
   /* ========== Responsive ========== */
+  @media (max-width: 768px) {
+    .preview-body {
+      grid-template-columns: 1fr;
+    }
+  }
   @media (max-width: 600px) {
     .newsletter-form__row {
       flex-direction: column;
+    }
+    .newsletter-form__input--name {
+      flex: 1;
     }
     .newsletter-form__btn {
       width: 100%;
@@ -343,6 +703,9 @@ import Breadcrumb from '../components/Breadcrumb.astro';
       flex-direction: column;
       align-items: center;
       text-align: center;
+    }
+    .newsletter-hero__title br {
+      display: none;
     }
   }
 
@@ -376,7 +739,7 @@ import Breadcrumb from '../components/Breadcrumb.astro';
   const KIT_API_KEY = 'hkCV7tQIRqI0-10OR2muAw';
   // =============================================
 
-  function setupKitForm(formId, emailId, botId, msgId, btnId) {
+  function setupKitForm(formId: string, emailId: string, fnameId: string, botId: string, msgId: string, btnId: string) {
     const form = document.getElementById(formId);
     const msg = document.getElementById(msgId);
     const btn = document.getElementById(btnId);
@@ -384,24 +747,26 @@ import Breadcrumb from '../components/Breadcrumb.astro';
 
     if (!form) return;
 
-    form.addEventListener('submit', async (e) => {
+    form.addEventListener('submit', async (e: Event) => {
       e.preventDefault();
 
-      if (bot && bot.value) return;
+      if (bot && (bot as HTMLInputElement).value) return;
 
-      const emailInput = document.getElementById(emailId);
+      const emailInput = document.getElementById(emailId) as HTMLInputElement;
+      const fnameInput = document.getElementById(fnameId) as HTMLInputElement;
       const email = emailInput.value.trim();
+      const firstName = fnameInput ? fnameInput.value.trim() : '';
       if (!email) return;
 
       if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) {
-        msg.textContent = 'Please enter a valid email address.';
-        msg.style.color = '#e74c3c';
+        msg!.textContent = 'Please enter a valid email address.';
+        msg!.style.color = '#e74c3c';
         return;
       }
 
-      btn.disabled = true;
-      btn.style.opacity = '0.6';
-      msg.textContent = '';
+      (btn as HTMLButtonElement).disabled = true;
+      btn!.style.opacity = '0.6';
+      msg!.textContent = '';
 
       // Also send to Notion CRM
       fetch('/.netlify/functions/submit-contact', {
@@ -410,41 +775,45 @@ import Breadcrumb from '../components/Breadcrumb.astro';
         body: JSON.stringify({
           channel: 'Newsletter Signup',
           email: email,
-          'first-name': '',
+          'first-name': firstName,
           source: 'newsletter-page'
         }),
         keepalive: true
       }).catch(() => {});
 
       try {
+        const body: Record<string, string> = { api_key: KIT_API_KEY, email };
+        if (firstName) body.first_name = firstName;
+
         const response = await fetch(
           `https://api.convertkit.com/v3/forms/${KIT_FORM_ID}/subscribe`,
           {
             method: 'POST',
             headers: { 'Content-Type': 'application/json' },
-            body: JSON.stringify({ api_key: KIT_API_KEY, email })
+            body: JSON.stringify(body)
           }
         );
 
         if (response.ok) {
-          msg.textContent = "You're in! Check your inbox to confirm.";
-          msg.style.color = '#d4a84b';
+          msg!.textContent = "You're in! Check your inbox to confirm.";
+          msg!.style.color = '#d4a84b';
           emailInput.value = '';
+          if (fnameInput) fnameInput.value = '';
         } else {
-          msg.textContent = 'Something went wrong. Please try again.';
-          msg.style.color = '#e74c3c';
+          msg!.textContent = 'Something went wrong. Please try again.';
+          msg!.style.color = '#e74c3c';
         }
       } catch (err) {
-        msg.textContent = 'Connection error. Please try again.';
-        msg.style.color = '#e74c3c';
+        msg!.textContent = 'Connection error. Please try again.';
+        msg!.style.color = '#e74c3c';
       }
 
-      btn.disabled = false;
-      btn.style.opacity = '1';
+      (btn as HTMLButtonElement).disabled = false;
+      btn!.style.opacity = '1';
     });
   }
 
   // Initialize both forms on this page
-  setupKitForm('kit-newsletter-form', 'nl-email', 'nl-bot', 'nl-form-message', 'nl-submit-btn');
-  setupKitForm('kit-newsletter-form-bottom', 'nl-email-bottom', 'nl-bot-bottom', 'nl-form-message-bottom', 'nl-submit-btn-bottom');
+  setupKitForm('kit-newsletter-form', 'nl-email', 'nl-fname', 'nl-bot', 'nl-form-message', 'nl-submit-btn');
+  setupKitForm('kit-newsletter-form-bottom', 'nl-email-bottom', 'nl-fname-bottom', 'nl-bot-bottom', 'nl-form-message-bottom', 'nl-submit-btn-bottom');
 </script>
