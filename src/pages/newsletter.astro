@@ -157,43 +157,6 @@ import Breadcrumb from '../components/Breadcrumb.astro';
       </div>
     </section>
 
-    <!-- ==================== WHAT'S NEW AT TVA ==================== -->
-    <section class="whats-new">
-      <div class="container">
-        <h2 class="whats-new__title reveal">What's New at Ted's Voice Academy</h2>
-        <div class="whats-new__grid reveal-stagger">
-
-          <div class="whats-new__item reveal">
-            <span class="whats-new__badge">New</span>
-            <h3 class="whats-new__item-title">Master Your Voice Monthly Launches April 1</h3>
-            <p class="whats-new__item-text">
-              The free monthly newsletter is here. Deep dives on technique, 4-week practice routines, voice science, ensemble tips, and more — delivered on the 1st of every month.
-            </p>
-            <a href="#nl-email" class="whats-new__link">Subscribe free &rarr;</a>
-          </div>
-
-          <div class="whats-new__item reveal">
-            <span class="whats-new__badge">New Book</span>
-            <h3 class="whats-new__item-title">AVF Guide: The Essentials</h3>
-            <p class="whats-new__item-text">
-              The entry-point guide for any singer or speaker. Covers the Five Pillars and Eight Dials in a concise format with practical exercises. No prior reading required.
-            </p>
-            <a href="/avf" class="whats-new__link">Learn more &rarr;</a>
-          </div>
-
-          <div class="whats-new__item reveal">
-            <span class="whats-new__badge">New Book</span>
-            <h3 class="whats-new__item-title">AVF Singer's Guide: Barbershop Harmony</h3>
-            <p class="whats-new__item-text">
-              Applies the framework to quartet and chorus singing — lock and ring, formant matching, vowel tuning, and a coaching decoder with part-specific guidance.
-            </p>
-            <a href="/avf" class="whats-new__link">Learn more &rarr;</a>
-          </div>
-
-        </div>
-      </div>
-    </section>
-
     <!-- ==================== ABOUT TED ==================== -->
     <section class="newsletter-about">
       <div class="container">
@@ -554,75 +517,6 @@ import Breadcrumb from '../components/Breadcrumb.astro';
   .preview-cta__btn:hover {
     background: var(--color-gold-hover);
     transform: translateY(-1px);
-  }
-
-  /* ========== What's New ========== */
-  .whats-new {
-    padding: 4rem 1.5rem;
-    background: var(--color-off-white);
-  }
-  .whats-new__title {
-    font-family: var(--font-heading);
-    font-size: 1.8rem;
-    text-align: center;
-    margin-bottom: 2.5rem;
-    color: var(--color-navy-deep);
-  }
-  .whats-new__grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-    gap: 1.5rem;
-    max-width: 960px;
-    margin: 0 auto;
-  }
-  .whats-new__item {
-    background: var(--color-white);
-    border-radius: 8px;
-    padding: 1.75rem;
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
-    position: relative;
-    transition: transform 0.2s ease, box-shadow 0.2s ease;
-  }
-  .whats-new__item:hover {
-    transform: translateY(-3px);
-    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
-  }
-  .whats-new__badge {
-    display: inline-block;
-    background: var(--color-gold-bright);
-    color: var(--color-navy-deep);
-    font-family: var(--font-body);
-    font-size: 0.7rem;
-    font-weight: 700;
-    text-transform: uppercase;
-    letter-spacing: 0.08em;
-    padding: 0.25rem 0.6rem;
-    border-radius: 3px;
-    margin-bottom: 0.75rem;
-  }
-  .whats-new__item-title {
-    font-family: var(--font-heading);
-    font-size: 1.1rem;
-    margin-bottom: 0.6rem;
-    color: var(--color-navy-deep);
-  }
-  .whats-new__item-text {
-    font-family: var(--font-body);
-    font-size: 0.92rem;
-    line-height: 1.6;
-    color: var(--color-charcoal);
-    margin-bottom: 0.75rem;
-  }
-  .whats-new__link {
-    font-family: var(--font-body);
-    font-size: 0.9rem;
-    font-weight: 600;
-    color: var(--color-gold-bright);
-    text-decoration: none;
-    transition: color 0.2s ease;
-  }
-  .whats-new__link:hover {
-    color: var(--color-gold-hover);
   }
 
   /* ========== About Ted ========== */
